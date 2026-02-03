@@ -1,0 +1,14 @@
+DESCRIPTION.rst
+LICENSE
+MANIFEST.in
+README.rst
+setup.cfg
+setup.py
+test_weakmethod.py
+weakrefmethod/__init__.py
+weakrefmethod/_version.py
+weakrefmethod/weakrefmethod.py
+weakrefmethod.egg-info/PKG-INFO
+weakrefmethod.egg-info/SOURCES.txt
+weakrefmethod.egg-info/dependency_links.txt
+weakrefmethod.egg-info/top_level.txt
