@@ -87,26 +87,21 @@ st.markdown(
 st.divider()
 
 # ========== SIDEBAR - FILE UPLOAD ==========
+# ========== SIDEBAR - FILE SOURCE ==========
 with st.sidebar:
-    st.markdown("### 📁 Upload STIX File")
-    uploaded_file = st.file_uploader(
-        "Choose a STIX file (JSON or XML)",
-        type=["json", "xml"],
-        accept_multiple_files=False,
-        help="Supports STIX 1.x (XML) and STIX 2.0/2.1 (JSON)"
-    )
-    
-    st.divider()
-    
-    if uploaded_file:
-        # Save uploaded file to session
-        file_path = FileManager.save_uploaded_file(uploaded_file)
-        st.session_state.file_path = file_path
-        
-        st.success(f"✅ File uploaded: `{uploaded_file.name}`")
-        st.info(f"File size: **{uploaded_file.size / 1024:.2f} KB**")
-        
-        # Action buttons
+    st.markdown("### 📁 STIX File Source")
+
+    # ✅ If Dashboard already uploaded a file, reuse it
+    if "shared_stix_bytes" in st.session_state and st.session_state.shared_stix_bytes:
+
+        st.success("✅ Using file uploaded in Dashboard")
+        st.caption(f"Shared file: {st.session_state.shared_stix_name}")
+
+        # Recreate temp file from shared bytes
+        with tempfile.NamedTemporaryFile(delete=False, suffix=Path(st.session_state.shared_stix_name).suffix) as tmp:
+            tmp.write(st.session_state.shared_stix_bytes)
+            st.session_state.file_path = tmp.name
+
         col1, col2 = st.columns(2)
         with col1:
             if st.button("🔎 Analyze", key="analyze_btn", use_container_width=True):
@@ -114,7 +109,44 @@ with st.sidebar:
         with col2:
             if st.button("🗑️ Clear", key="clear_btn", use_container_width=True):
                 reset_session_data()
+                st.session_state.shared_stix_bytes = None
+                st.session_state.shared_stix_name = None
                 st.rerun()
+
+    else:
+        st.info("No file from Dashboard yet. Upload here if needed.")
+
+        uploaded_file = st.file_uploader(
+            "Choose a STIX file (JSON or XML)",
+            type=["json", "xml"],
+            accept_multiple_files=False,
+            help="Supports STIX 1.x (XML) and STIX 2.0/2.1 (JSON)"
+        )
+
+        if uploaded_file:
+            file_bytes = uploaded_file.getvalue()
+            st.session_state.shared_stix_bytes = file_bytes
+            st.session_state.shared_stix_name = uploaded_file.name
+
+            with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_file.name).suffix) as tmp:
+                tmp.write(file_bytes)
+                st.session_state.file_path = tmp.name
+
+            st.success(f"✅ File uploaded: `{uploaded_file.name}`")
+            st.info(f"File size: **{uploaded_file.size / 1024:.2f} KB**")
+
+            col1, col2 = st.columns(2)
+            with col1:
+                if st.button("🔎 Analyze", key="analyze_btn", use_container_width=True):
+                    st.rerun()
+            with col2:
+                if st.button("🗑️ Clear", key="clear_btn", use_container_width=True):
+                    reset_session_data()
+                    st.session_state.shared_stix_bytes = None
+                    st.session_state.shared_stix_name = None
+                    st.rerun()
+
+
 
 # ========== MAIN CONTENT ==========
 if st.session_state.file_path and Path(st.session_state.file_path).exists():
