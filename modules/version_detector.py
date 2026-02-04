@@ -11,16 +11,6 @@ def detect_stix_version(file_path):
             return f"STIX {data['spec_version']}"
         elif data.get("type") == "bundle":
             return "STIX 2.0 (likely)"
-    except:
-        pass
-
-    # Try XML (STIX 1.x)
-    try:
-        tree = ET.parse(file_path)
-        root = tree.getroot()
-        if "STIX_Package" in root.tag:
-            return "STIX 1.x"
-    except:
-        pass
-
-    return "Unknown STIX Format"
+        # Check if it's a single STIX object
+        elif data.get("type") and data.get("id"):
+            return "STIX 2.1"  # Assume 2.1 for individual objects
