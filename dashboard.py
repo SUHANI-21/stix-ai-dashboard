@@ -7,7 +7,6 @@ from pyvis.network import Network
 import streamlit.components.v1 as components
 from stix.core import STIXPackage
 
-
 from modules.version_detector import detect_stix_version
 from modules.validator import validate_stix
 from modules.cti_converter import convert_to_common_cti
@@ -21,24 +20,18 @@ st.set_page_config(page_title="AI CTI Dashboard", layout="wide")
 st.markdown("""
 <style>
 .stApp { background: radial-gradient(circle at top left, #1a0b2e, #0d0d1a); color: #e0e0ff; }
-
 .card {
     background: linear-gradient(145deg, #1f1035, #140a24);
     padding: 20px; border-radius: 15px;
     box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
     text-align: center;
 }
-
 h1, h2, h3 { color: #c084fc; }
-
-/* 🎛 Filter label styling */
 label, .stMultiSelect label {
     color: #ff66ff !important;
     font-weight: bold !important;
     font-size: 21px !important;
 }
-
-/* 💾 Download button styling */
 div.stDownloadButton > button {
     background-color: #c084fc !important;
     color: black !important;
@@ -46,28 +39,22 @@ div.stDownloadButton > button {
     font-weight: bold !important;
     border-radius: 10px !important;
 }
-
-/* 📂 Detected STIX text */
 .detected-text {
     color: #00e5ff;
     font-size: 21px;
     font-weight: bold;
 }
-
-/* ✅ Validation success text */
 .validation-text {
     color: #00ff99;
     font-size: 21px;
     font-weight: bold;
 }
-/* 🧠 AI Explanation Styling */
 .ai-explain-title {
     color: #ff9ff3;
     font-size: 26px;
     font-weight: bold;
     margin-top: 20px;
 }
-
 .ai-explain-text {
     color: #f1c40f;
     font-size: 22px;
@@ -78,36 +65,50 @@ div.stDownloadButton > button {
 st.markdown("## AI-Powered Cyber Threat Intelligence Dashboard")
 st.markdown("---")
 
-uploaded_file = st.file_uploader("Upload STIX (JSON or XML)", type=["json", "xml"])
+# 🔄 SHARED FILE UPLOADER (used by all pages)
+# 🔄 SHARED FILE UPLOADER (used by all pages)
+if "shared_stix_bytes" not in st.session_state:
+    st.session_state.shared_stix_bytes = None
+if "shared_stix_name" not in st.session_state:
+    st.session_state.shared_stix_name = None
+
+uploaded_file = st.file_uploader(
+    "Upload STIX (JSON or XML)",
+    type=["json", "xml"],
+    key="shared_uploader"
+)
+
+if uploaded_file:
+    st.session_state.shared_stix_bytes = uploaded_file.getvalue()
+    st.session_state.shared_stix_name = uploaded_file.name
+
+if st.session_state.shared_stix_bytes:
+    uploaded_file = st.session_state.shared_stix_bytes
+    uploaded_filename = st.session_state.shared_stix_name
+else:
+    uploaded_file = None
+
 
 # ---------- SMART THREAT TYPE LOGIC ----------
 def derive_precise_threat_type(objects):
     types_present = {obj.get("type") for obj in objects}
-
-    if "malware" in types_present:
-        return "Malware Activity"
-    if "intrusion-set" in types_present:
-        return "Advanced Persistent Threat (APT)"
-    if "campaign" in types_present:
-        return "Coordinated Attack Campaign"
-    if "attack-pattern" in types_present:
-        return "Attack Technique Activity"
-    if "indicator" in types_present:
-        return "Suspicious Indicators Detected"
+    if "malware" in types_present: return "Malware Activity"
+    if "intrusion-set" in types_present: return "Advanced Persistent Threat (APT)"
+    if "campaign" in types_present: return "Coordinated Attack Campaign"
+    if "attack-pattern" in types_present: return "Attack Technique Activity"
+    if "indicator" in types_present: return "Suspicious Indicators Detected"
 
     full_text = json.dumps(objects).lower()
-    if "ransomware" in full_text:
-        return "Ransomware Attack"
-    if "phishing" in full_text:
-        return "Phishing Attack"
-
+    if "ransomware" in full_text: return "Ransomware Attack"
+    if "phishing" in full_text: return "Phishing Attack"
     return None
 
 
 if uploaded_file:
-    with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_file.name).suffix) as tmp:
-        tmp.write(uploaded_file.read())
-        file_path = tmp.name
+    with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_filename).suffix) as tmp:
+     tmp.write(uploaded_file)
+     file_path = tmp.name
+
 
     file_ext = Path(file_path).suffix.lower()
 
@@ -134,10 +135,8 @@ if uploaded_file:
 
         for ind in getattr(stix_package, "indicators", []):
             data["objects"].append({"id": ind.id_, "type": "indicator", "name": ind.title})
-
         for camp in getattr(stix_package, "campaigns", []):
             data["objects"].append({"id": camp.id_, "type": "campaign", "name": camp.title})
-
         for actor in getattr(stix_package, "threat_actors", []):
             data["objects"].append({"id": actor.id_, "type": "intrusion-set", "name": actor.title})
 
@@ -188,10 +187,8 @@ if uploaded_file:
         type_counts[t] = type_counts.get(t, 0) + 1
 
     header_col1, header_col2 = st.columns([2, 6])
-
     with header_col1:
         st.markdown("### Threat Relationship Graph")
-
     with header_col2:
         selected_types = st.multiselect(
             "Filter Node Types",
@@ -204,14 +201,7 @@ if uploaded_file:
 
     with graph_col:
         net = Network(height="750px", width="100%", bgcolor="#0d0d1a", font_color="white")
-
-        net.set_options("""
-        var options = {
-          "physics": { "barnesHut": { "gravitationalConstant": -4000, "springLength": 180 }},
-          "interaction": { "hover": true },
-          "edges": { "arrows": { "to": { "enabled": true } }, "smooth": { "type": "dynamic" } }
-        }
-        """)
+        net.set_options("""var options = {"physics":{"barnesHut":{"gravitationalConstant":-4000,"springLength":180}},"interaction":{"hover":true},"edges":{"arrows":{"to":{"enabled":true}},"smooth":{"type":"dynamic"}}}""")
 
         color_map = {
             "malware": "#ff9f43",
@@ -225,12 +215,7 @@ if uploaded_file:
 
         for obj in objects:
             if obj.get("type") in selected_types:
-                net.add_node(
-                    obj.get("id"),
-                    label=obj.get("name", obj.get("type"))[:20],
-                    title=json.dumps(obj, indent=2),
-                    color=color_map.get(obj.get("type"), "#cccccc")
-                )
+                net.add_node(obj.get("id"), label=obj.get("name", obj.get("type"))[:20], title=json.dumps(obj, indent=2), color=color_map.get(obj.get("type"), "#cccccc"))
 
         visible_node_ids = {obj.get("id") for obj in objects if obj.get("type") in selected_types}
 
@@ -238,7 +223,6 @@ if uploaded_file:
             if obj.get("type") == "relationship":
                 src = obj.get("source_ref")
                 tgt = obj.get("target_ref")
-
                 if src in visible_node_ids and tgt in visible_node_ids:
                     net.add_edge(src, tgt, label=obj.get("relationship_type", ""), arrows="to")
 
@@ -246,7 +230,6 @@ if uploaded_file:
         net.save_graph(graph_path)
         components.html(open(graph_path).read(), height=750)
 
-        # 💾 EXPORT BUTTON
         with open(graph_path, "r") as f:
             st.download_button("💾 Download Graph HTML", f.read(), "threat_graph.html")
 
@@ -259,5 +242,6 @@ if uploaded_file:
     st.markdown("<div class='ai-explain-text'>This graph shows how different cyber threat entities are connected through relationships like usage, targeting, or indication.</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='ai-explain-text'><b>Description:</b> {desc}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='ai-explain-text'><b>AI Assessment:</b> {threat_type} with {prob}% probability</div>", unsafe_allow_html=True)
+
 else:
     st.info("Upload a STIX file to begin.")
