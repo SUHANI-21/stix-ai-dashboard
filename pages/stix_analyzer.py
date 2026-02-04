@@ -4,6 +4,7 @@ A dedicated page for analyzing STIX bundles with detailed version detection and 
 """
 import streamlit as st
 import tempfile
+from uuid import uuid4
 from pathlib import Path
 
 # Import our custom modules
@@ -12,6 +13,7 @@ from modules.enhanced_validator import EnhancedValidator
 from modules.formatter import ResultFormatter
 from modules.utils import FileManager, ErrorHandler
 from modules.converter import STIXConverter
+from modules.storage import STIXStorage
 
 
 # ========== PAGE CONFIGURATION ==========
@@ -68,6 +70,10 @@ if "statistics" not in st.session_state:
     st.session_state.statistics = None
 if "converted_data" not in st.session_state:
     st.session_state.converted_data = None
+if "file_id" not in st.session_state:
+    st.session_state.file_id = None
+if "storage" not in st.session_state:
+    st.session_state.storage = STIXStorage()
 
 
 def reset_session_data():
@@ -77,6 +83,7 @@ def reset_session_data():
     st.session_state.validation_result = None
     st.session_state.statistics = None
     st.session_state.converted_data = None
+    st.session_state.file_id = None
 
 
 # ========== HEADER ==========
@@ -211,7 +218,28 @@ if st.session_state.file_path and Path(st.session_state.file_path).exists():
             
             if conversion_result["success"]:
                 st.session_state.converted_data = conversion_result["converted_data"]
+                
+                # Generate file ID first
+                file_id = str(uuid4())
+                
+                # Save original file
+                original_path = st.session_state.storage.save_original_file(uploaded_file, file_id)
+                
+                # Save converted data with original path
+                file_id = st.session_state.storage.save_converted_stix(
+                    stix_data=conversion_result["converted_data"],
+                    original_filename=uploaded_file.name,
+                    metadata={
+                        "original_version": st.session_state.detection_result.get("version"),
+                        "original_format": st.session_state.detection_result.get("format"),
+                        "file_size_kb": st.session_state.detection_result.get("file_size_kb"),
+                        "original_path": original_path
+                    }
+                )
+                st.session_state.file_id = file_id
+                
                 st.success(f"✅ {conversion_result['message']}")
+                st.info(f"💾 Saved with ID: {file_id}")
             else:
                 st.error(f"❌ {conversion_result['message']}")
     
@@ -299,12 +327,15 @@ if st.session_state.file_path and Path(st.session_state.file_path).exists():
         if st.session_state.converted_data:
             import json
             converted_json = json.dumps(st.session_state.converted_data, indent=2)
+            filename = f"converted_stix_2_1_{Path(st.session_state.file_path).stem}.json"
             st.download_button(
                 "📥 Download STIX 2.1 Converted",
                 converted_json,
-                file_name=f"converted_stix_2_1_{Path(st.session_state.file_path).stem}.json",
+                file_name=filename,
                 mime="application/json"
             )
+            if st.session_state.file_id:
+                st.caption(f"File ID: {st.session_state.file_id}")
         elif st.session_state.detection_result.get("format") == "json" and "2.1" in str(st.session_state.detection_result.get("version")):
             # File is already STIX 2.1, allow download of original
             try:
