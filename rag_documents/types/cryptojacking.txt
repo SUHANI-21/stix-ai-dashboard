@@ -1,0 +1,18 @@
+Cryptojacking malware hijacks computing resources to mine cryptocurrency without user knowledge.
+
+Key Characteristics:
+- Unauthorized CPU/GPU usage
+- Hidden mining processes
+- Browser-based or system-based
+
+Common Behaviors:
+- High CPU consumption
+- Persistent background miners
+- Exploits browser vulnerabilities
+- Injects JavaScript miners
+
+Indicators:
+- System overheating
+- Battery drain
+- Sluggish performance
+- Unknown mining processes

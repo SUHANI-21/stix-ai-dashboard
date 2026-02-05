@@ -1,0 +1,18 @@
+Trojans disguise themselves as legitimate software to gain unauthorized access.
+
+Key Characteristics:
+- Masquerading
+- Payload delivery
+- User deception
+
+Common Behaviors:
+- Backdoor installation
+- Keylogging
+- Data exfiltration
+- Remote control
+
+Indicators:
+- Unknown programs
+- Unauthorized access
+- Hidden connections
+- Unexpected crashes

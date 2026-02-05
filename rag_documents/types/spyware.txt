@@ -1,0 +1,18 @@
+Spyware secretly monitors and collects sensitive user information.
+
+Key Characteristics:
+- Covert monitoring
+- Data harvesting
+- Privacy invasion
+
+Common Behaviors:
+- Keystroke logging
+- Screenshot capture
+- Credential theft
+- Browser tracking
+
+Indicators:
+- Unknown monitoring tools
+- Data leakage
+- Performance slowdown
+- Suspicious network traffic

@@ -1,0 +1,18 @@
+Tech support scams use social engineering to trick victims into installing malware or paying fake support fees.
+
+Key Characteristics:
+- Fake warnings
+- Impersonation
+- Psychological manipulation
+
+Common Behaviors:
+- Pop-up alerts
+- Remote access tools
+- Payment requests
+- Malware installation
+
+Indicators:
+- Urgent warnings
+- Unknown callers
+- Suspicious software
+- Fake certificates

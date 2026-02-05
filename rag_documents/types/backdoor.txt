@@ -1,0 +1,18 @@
+Backdoors provide attackers with persistent unauthorized remote access.
+
+Key Characteristics:
+- Hidden access channels
+- Remote control
+- Persistence mechanisms
+
+Common Behaviors:
+- Opens hidden ports
+- Establishes C2 channels
+- Installs remote shells
+- Bypasses authentication
+
+Indicators:
+- Unknown open ports
+- Remote sessions
+- Hidden accounts
+- Unusual traffic
