@@ -1,0 +1,29 @@
+address,blockchain,currency,id,labels,type,summary
+BjVeAjPrSKFiingBn4vZvghsGj9KCE8AJVtbc9S8o8SC,,Solana,cryptocurrency-wallet--e556bdb7-bf08-4a19-8c75-36f9876f693d,,cryptocurrency-wallet,"The object contains a cryptocurrency wallet with specific details. The wallet is associated with the Solana blockchain and does not have any labels assigned to it. It is identified by its unique address, which appears to be a long string of characters."
+0x73625B6cdFECC81A4899D221C732E1f73e504a32,,ethereum,cryptocurrency-wallet--ecdba7dd-a187-4425-8bc9-abc454b95041,,cryptocurrency-wallet,"The object contains information about a cryptocurrency wallet. It has an address associated with it, which is specific to the Ethereum blockchain. The currency associated with this wallet is also Ethereum. The type of this wallet is designated as a cryptocurrency wallet."
+0x10ca9bE67D03917e9938a7c28601663B191E4413,,ethereum,cryptocurrency-wallet--daeda9c7-55ea-43e6-beb0-b7da2bd1ef0e,,cryptocurrency-wallet,"The object contains a cryptocurrency wallet, specifically identified by its Ethereum address. The address itself is located on the blockchain network, while the currency associated with this wallet is also Ethereum. No labels are assigned to this particular wallet, and it falls under the category of a cryptocurrency wallet."
+0xEc99D2C797Db6E0eBD664128EfED9265fBE54579,,ethereum,cryptocurrency-wallet--62bb010d-7b4e-433c-b83f-50ed19f7be08,,cryptocurrency-wallet,"The object contains a cryptocurrency wallet information. It is associated with Ethereum blockchain, which is currently unknown due to the given 'nan' value for this field. The specific Ethereum address linked to this wallet is 0xEc99D2C797Db6E0eBD664128EfED9265fBE54579."
+0xf11Cb0578EA61e2EDB8a4a12c02E3eF26E80fc36,,ethereum,cryptocurrency-wallet--5e4193b7-94d0-443d-b300-09ade2d6552f,,cryptocurrency-wallet,"The object contains information about a cryptocurrency wallet. 
+
+The cryptocurrency being used is Ethereum. The blockchain information is not available.
+
+The address associated with the wallet is 0xf11Cb0578EA61e2EDB8a4a12c02E3eF26E80fc36."
+0xdb8e8B0ef3ea1105A6D84b27Fc0bAA9845C66FD7,,ethereum,cryptocurrency-wallet--18d65462-fadb-4ed3-b9f7-61acd9eae150,,cryptocurrency-wallet,The object contains a cryptocurrency wallet with the address 0xdb8e8B0ef3ea1105A6D84b27Fc0bAA9845C66FD7. It is associated with the Ethereum blockchain. The wallet type is specified as a cryptocurrency wallet. There are no labels or other metadata fields present in this object.
+0x52221c293a21D8CA7AFD01Ac6bFAC7175D590A84,,ethereum,cryptocurrency-wallet--0340692c-aaf3-4dfa-b08b-a7a809d2b02f,,cryptocurrency-wallet,"The object contains a cryptocurrency wallet with the following characteristics:
+
+It is associated with an Ethereum blockchain. 
+
+The address of this wallet is 0x52221c293a21D8CA7AFD01Ac6bFAC7175D590A84.
+
+There are no labels or other metadata available for this object."
+0x46b0f9bA6F1fb89eb80347c92c9e91BDF1b9E8CC,,ethereum,cryptocurrency-wallet--ae70489f-b1b1-404c-abfd-e44076958f34,,cryptocurrency-wallet,"The object contains a cryptocurrency wallet information. The address of the wallet is 0x46b0f9bA6F1fb89eb80347c92c9e91BDF1b9E8CC and it belongs to the Ethereum blockchain. Additionally, the wallet uses no labels, but its type is cryptocurrency-wallet."
+45MinZ6ECgTgxn8gbm5gAsK9ATrEN6N95hbH3g4r5N4bKwH8QxuFygw3G7VwHwAusR9L35E4YjWYdTJaWDjbMGDCKYNz5X1,,monero,cryptocurrency-wallet--902ab215-cb8a-430e-a3e9-f83e6cc40d5a,,cryptocurrency-wallet,"The object contains a Monero wallet with the following attributes.
+
+It has an address that is a long string of characters. The blockchain associated with this wallet is not specified.
+
+This wallet uses the Monero cryptocurrency as its underlying currency. 
+
+The labels for this wallet are not provided."
+KrQtbtsrPTqSTzQwZZisiyJxgtcDMwrdVrQ,,zano,cryptocurrency-wallet--09a6bdba-d106-4574-9d24-d262d960043d,,cryptocurrency-wallet,"The object contains information about a cryptocurrency wallet. It has an address, which is a unique identifier for the wallet. The currency associated with this wallet is 'zano'. The object also specifies that it is a cryptocurrency wallet."
+0x8eac3198dd72f3e07108c4c7cff43108ad48a71c,BNB Smart Chain,,cryptocurrency-wallet--23824c64-e7e5-4611-90d6-233485b8214e,"[""smart contract"", ""malicious"", ""UNC5342"", ""JADESNOW payload host""]",cryptocurrency-wallet,"The object contains information about a cryptocurrency wallet on the BNB Smart Chain. The wallet address is 0x8eac3198dd72f3e07108c4c7cff43108ad48a71c and is classified as malicious due to its association with a smart contract labeled as UNC5342 and JADESNOW payload host, which suggests it may be involved in some form of nefarious activity. The currency associated with this wallet is not specified as it has been represented as nan."
+0x9bc1355344b54dedf3e44296916ed15653844509,BNB Smart Chain,,cryptocurrency-wallet--71eee08b-b17f-426b-8103-647b14658813,"[""attacker-controlled"", ""contract owner"", ""UNC5342""]",cryptocurrency-wallet,"The object contains information about a cryptocurrency wallet on the BNB Smart Chain. The wallet's address is 0x9bc1355344b54dedf3e44296916ed15653844509. This address is associated with an attacker-controlled, contract owner, and UNC5342 labels. The type of this wallet is ""cryptocurrency-wallet""."

@@ -1,0 +1,99 @@
+description,id,issuer,raw_certificate,serial_number,subject,type,validity_not_after,validity_not_before,x509_v3_extensions,x509_v3_thumbprint,summary
+,certificate--2218e596-cfec-4c48-92a7-f9d527f02bf2,Sectigo Public Code Signing CA EV R36,,,"Hefei Nudan Jukuang Network Technology Co., Ltd.",certificate,2026-09-09T00:00:00Z,2025-09-09T00:00:00Z,,A8BF7554363D27DEB374C4E2658AC05C60E3BAA7,"The object contains a certificate with the following attributes:
+
+It is issued by Sectigo Public Code Signing CA EV R36.
+The subject of the certificate is Hefei Nudan Jukuang Network Technology Co., Ltd.
+The validity period of the certificate spans from September 9, 2025 to September 9, 2026.
+Additionally, the object contains a unique thumbprint for this certificate."
+,certificate--d21ea41e-6c78-4f5c-b8ef-2f7a0d071fad,"Guangzhou Kingteller Technology Co., Ltd.",,08 01 CC 11 EB 4D 1D 33 1E 3D 54 0C 55 A4 9F 7F,,certificate,2015,2012-08,,,"The object contains a certificate with the following attributes:
+
+It is issued by Guangzhou Kingteller Technology Co., Ltd.
+
+The serial number of the certificate is 08 01 CC 11 EB 4D 1D 33 1E 3D 54 0C 55 A4 9F 7F.
+
+The certificate has a validity period that started in 2012 and will expire in 2015."
+,certificate--ecf6bbf5-34ee-43c1-9958-7b6ca973819f,SSL.com EV Code Signing Intermediate CA RSA R3,"-----BEGIN CERTIFICATE-----
+MIIF/DCCA+SgAwIBAgIQKa+42RPbhP2zYvT9knuFUzANBgkqhkiG9w0BAQsFADB7
+MQswCQYDVQQGEwJVUzEOMAwGA1UECAwFVGV4YXMxEDAOBgNVBAcMB0hvdXN0b24x
+ETAPBgNVBAoMCFNTTCBDb3JwMTcwNQYDVQQDDC5TU0wuY29tIEVWIENvZGUgU2ln
+bmluZyBJbnRlcm1lZGlhdGUgQ0EgUlNBIFIzMB4XDTI0MDYyODEwMDQ0OVoXDTI1
+MDYyODAzMjkzN1owgfkxCzAJBgNVBAYTAkNOMQ4wDAYDVQQIDAVIZWJlaTERMA8G
+A1UEBwwITGFuZ2ZhbmcxOjA4BgNVBAoMMUFvdGVuZyBJbmR1c3RyaWFsIEF1dG9t
+YXRpb24gKExhbmdmYW5nKSBDby4sIEx0ZC4xGzAZBgNVBAUTEjkxMTMxMDAwTUEw
+QTNIRjhYOTE6MDgGA1UEAwwxQW90ZW5nIEluZHVzdHJpYWwgQXV0b21hdGlvbiAo
+TGFuZ2ZhbmcpIENvLiwgTHRkLjEdMBsGA1UEDwwUUHJpdmF0ZSBPcmdhbml6YXRp
+b24xEzARBgsrBgEEAYI3PAIBAxMCQ04wdjAQBgcqhkjOPQIBBgUrgQQAIgNiAASf
+B2NdKWXwGa7DkmCA5NiX+kQh5JkYBjGKJgSRz5BflX/Bo+/pXKfN8fsUOe5J3k+y
+v/XX53ZiHRJMmpWSjEHXyDFHbBco1hksVLOoeaTFHx65sh5eysXxwD3bwn1IzSCj
+ggGpMIIBpTAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFDa9Sf8xLOuvakD+mcAW
+7br8SN1fMH0GCCsGAQUFBwEBBHEwbzBLBggrBgEFBQcwAoY/aHR0cDovL2NlcnQu
+c3NsLmNvbS9TU0xjb20tU3ViQ0EtRVYtQ29kZVNpZ25pbmctUlNBLTQwOTYtUjMu
+Y2VyMCAGCCsGAQUFBzABhhRodHRwOi8vb2NzcHMuc3NsLmNvbTBfBgNVHSAEWDBW
+MAcGBWeBDAEDMA0GCyqEaAGG9ncCBQEHMDwGDCsGAQQBgqkwAQMDAjAsMCoGCCsG
+AQUFBwIBFh5odHRwczovL3d3dy5zc2wuY29tL3JlcG9zaXRvcnkwEwYDVR0lBAww
+CgYIKwYBBQUHAwMwUAYDVR0fBEkwRzBFoEOgQYY/aHR0cDovL2NybHMuc3NsLmNv
+bS9TU0xjb20tU3ViQ0EtRVYtQ29kZVNpZ25pbmctUlNBLTQwOTYtUjMuY3JsMB0G
+A1UdDgQWBBQdt2jU+7Pr64QrUIvuU1nojIqttzAOBgNVHQ8BAf8EBAMCB4AwDQYJ
+KoZIhvcNAQELBQADggIBAMBeOg1geZaMToh9XVF2rrQQRXArYYQKi5svgEX6YcjC
+ZljQZzBo8wIyvyyeJ7x33ThTTbPpukggrKE2p019jGjlKQMjWoA1leRatuyrMPVT
+w5+Vs/RCEogg1X/n6wmvTUUNvLCv6iDgT3/ZFrm7jIJKrwMkt/HbuGE/AB3w/Hfk
+tnDcWbMii58+HmuDbPRtfvKe1p9IZ6EbxdAVRrOg/unECl4JC9gdzma0DbD6HhmY
+AgaCEoqBds59ghNjN2y/QpMiAvrUBpX6p4pJzIedj5cJ/WID0QgalIWpOI18rRfP
+Lkh6p02s5nmbSZKQQFtjPNCew65shUgCFdiV/mnFVPbI76o4N41c2z+AEqODk6fI
+QUEeCr8Ny/Ro6ijXhycFvcN/YS9mLeiZ43cyEx9iylGskYY7wbPUblzNAF5NzxuK
+jp/EBCUmCoj/q43D2u/ldB9ND4yaiaRmMMte8BVjSoU9xUUss7a5vft51ONTWtWS
+O8Hbs4pnGcPCjewTdrgDqKYcLOPFN4M04kQHaQqQyQaY9Sff6/2c16Sh4rmErluQ
+lIbNggl4sHlpMObqSqPnkJy8ClBFr7ah7AH8k6hzyQheh1rXUtmK0TSCbywsLFfH
+nGbFSa72+9mByBCUH3ckD+Nnv73dtRdH9/M7+Oq+71BJQmMwmuMXPi450vTM4HIP
+-----END CERTIFICATE-----",29afb8d913db84fdb362f4fd927b8553,"{""organization"": ""Aoteng Industrial Automation (Langfang) Co., Ltd."", ""locality"": ""Langfang"", ""state"": ""Hebei"", ""country"": ""CN""}",certificate,2025-06-28T03:29:37Z,2024-06-28T10:04:49Z,"{""revocation_date"": ""2024-06-28T10:14:00Z""}",,"The object contains a certificate that is tied to the SSL.com EV Code Signing Intermediate CA RSA R3 issuer. The certificate's raw data begins with a standard X.509 certificate format followed by its content:
+
+-----BEGIN CERTIFICATE-----
+MIIF/DCCA+SgAwIBAgIQKa+42RPbhP2zYvT9knuFUzANBgkqhkiG9w0BAQsFADB7
+MQswCQYDVQQGEwJVUzEOMAwGA1UECAwFVGV4YXMxEDAOBgNVBAcMB0hvdXN0b24x
+ETAPBgNVBAoMCFNTTCBDb3JwMTcwNQYDVQQDDC5TU0wuY29tIEVWIENvZGUgU2ln
+bmluZyBJbnRlcm1lZGlhdGUgQ0EgUlNBIFIzMB4XDTI0MDYyODEwMDQ0OVoXDTI1
+MDYyODAzMjkzN1owgfkxCzAJBgNVBAYTAkNOMQ4wDAYDVQQIDAVIZWJlaTERMA8G
+A1UEBwwITGFuZ2ZhbmcxOjA4BgNVBAoMMUFvdGVuZyBJbmR1c3RyaWFsIEF1dG9t
+YXRpb24gKExhbmdmYW5nKSBDby4sIEx0ZC4xGzAZBgNVBAUTEjkxMTMxMDAwTUEw
+QTNIRjhYOTE6MDgGA1UEAwwxQW90ZW5nIEluZHVzdHJpYWwgQXV0b21hdGlvbiAo
+TGFuZ2ZhbmcpIENvLiwgTHRkLjEdMBsGA1UEDwwUUHJpdmF0ZSBPcmdhbml6YXRp
+b24xEzARBgsrBgEEAYI3PAIBAxMCQ04wdjAQBgcqhkjOPQIBBgUrgQQAIgNiAASf
+B2NdKWXwGa7DkmCA5NiX+kQh5JkYBjGKJgSRz5BflX/Bo+/pXKfN8fsUOe5J3k+
+v/XX53ZiHRJMmpWSjEHXyDFHbBco1hksVLOoeaTFHx65sh5eysXxwD3bwn1IzSCj
+ggGpMIIBpTAMBgNVHRMBAf8EAjAAMB8GA1UdIwQYMBaAFDa9Sf8xLOuvakD+mcAW
+7br8SN1fMH0GCCsGAQUFBwEBBHEwbzBLBggrBgEFBqSwBTkwSBgNVHSAEwrNodHRw
+Oi8vb2NzcHMuc3NsLmNvbTBfBgNVHSAEWDBWMAcGBWeBDAEDMA0GCyqEaAGG9ncCB
+QEHMDwGDCsGAQQBgqkwAQMDAjAsMCoGCCsGAQUFBwIBFh5odHRwczovL3d3dy5z
+c2wuY29tL3JlcG9zaXRvcnkwEwYDVR0lBAwwCgYIKwYBBQUHAwMwUAYDVR0fBEk
+WOgQYY/aHR0cDovL2NybHMuc3NsLmNvbS9TU0xjb20tU3ViQ0EtRVYtQ29kZVNp
+Z25pbmctUlNBLTQwOTYtUjMuY3JsMB0G A1UdDgQWBBQdt2jU+7Pr64QrUIvuU1nojIqttzAOBgNVHQ8BAf8EBAMCB4Aw
+DQYJKoZIhvcNAQELBQADggIBAMBeOg1geZaMToh9XVF2rrQQRXArYYQKi5svgEX6
+YcjCZljQZzBo8wIyvyyeJ7x33ThTTbPpukggrKE2p019jGjlKQMjWoA1leRatuyr
+MPVTw5+Vs/RCEogg1X/n6wmvTUUNvLCv6iDgT3/ZFrm7jIJKrwMkt/HbuGE/AB3w/
+HfktnDcWbMii58+HmuDbPRtfvKe1p9IZ6EbxdAVRrOg/unECl4JC9gdzma0DbD6
+HhmYAgACEoqBds59ghNjN2y/QpMiAvrUBpX6p4pJzIedj5cJ/WID0QgalIWpOI
+18rRfPLkh6p02s5nmbSZKQQFtjPNCew65shUgCFdiV/mnFVPbI76o4N41c2z+AE
+qODk6fIEQUEeCr8Ny/Ro6ijXhycFvcN/YS9mLeiZ43cyEx9iylGskYY7wbPUblz
+NAF5NzxuKjp/EBCUmCoj/q43D2u/ldB9ND4yaiaRmMMte8BVjSoU9xUUss7a5v
+ft51ONTWtWSO8Hbs4pnGcPCjewTdrgDqKYcLOPFN4M04kQHaQqQyQaY9Sff6/2
+c16Sh4rmErluQlIbNggl4sHlpMObqSqPnkJy8ClBFr7ah7AH8k6hzyQheh1rXUtm
+K0TSCbywsLFfHnbFSa72+9mByBCUH3ckD+Nnv73dtRdH9/M7+Oq+71BJQmMwmu
+MXPi450vTM4HIP-----END CERTIFICATE-----
+
+The certificate's details are as follows:
+
+- ID: certificate--ecf6bbf5-34ee-43c1-9958-7b6ca973819f
+- Description: 
+- Issuer: SSL.com EV Code Signing Intermediate CA RSA R3
+- Raw Certificate:
+    - The provided raw certificate content.
+- Serial Number: 29afb8d913db84fdb362f4fd927b8553
+- Type: certificate
+
+Validity:
+
+- Validity Not After (N/A): June 28, 2025 03:29:37 UTC
+- Validity Not Before (NBF): June 28, 2024 10:04:49 UTC"
+"Certificate used to sign Airstalk .NET binaries, likely stolen and revoked 10 minutes after issuance.",certificate--385c22dd-1b51-4786-b33b-b6ba961f13ed,Unknown CA,,,"Aoteng Industrial Automation (Langfang) Co., Ltd.",certificate,2025-06-28T00:00:00Z,2024-06-28T00:00:00Z,,,"The object contains a certificate used to sign Airstalk .NET binaries. The certificate is likely stolen and has been revoked just 10 minutes after its issuance. 
+
+This certificate was issued by an unknown Certificate Authority (CA). Its subject is Aoteng Industrial Automation (Langfang) Co., Ltd. The type of the certificate is 'certificate'."

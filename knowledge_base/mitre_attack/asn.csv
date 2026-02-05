@@ -1,0 +1,18 @@
+id,number,type,summary
+asn--3c81e76b-cac5-4c93-a0cb-49f5b05b3ba2,MT-MPLS,asn,"The object contains a dictionary representing an Autonomous System Number (ASN) with the following details:
+
+The ASN has a unique identifier, which is a string consisting of letters and numbers. The number 'MT-MPLS' is assigned to this ASN.
+
+This ASN falls under two main categories: it belongs to the type 'asn', indicating that it is indeed an Autonomous System Number.
+
+No additional information about the network or its characteristics is available in the provided dictionary."
+asn--102e47c2-0a89-405d-8d17-97992eedb72c,ASMedi,asn,"The object contains information about a ASN (Autonomous System Number) entity. The identifier of this ASN is 'asn--102e47c2-0a89-405d-8d17-97992eedb72c'. 
+
+This ASN is assigned the number 'ASMedi', which is a unique identifier for the autonomous system network. The type of this ASN is specified as 'asn', indicating that it represents an Autonomous System Number.
+
+No additional information about this ASN is available, but it can be used to identify and manage this specific network entity in various contexts, such as internet routing or security."
+asn--51e1d39d-c729-4721-aafe-a714d3c01362,MAROCCONNECT,asn,"The object contains information about a Mobile Number Portability (MNP) request for an existing mobile number. The object's details are as follows:
+
+* The ASN (Autonomous System Number) associated with the MNP request is MAROCCONNECT, identified by the unique identifier 'asn--51e1d39d-c729-4721-aafe-a714d3c01362'.
+* The type of entity involved in this request is classified as an Autonomous System (ASN), further indicating its role in mobile network operations.
+* It is worth noting that MAROCCONNECT might be associated with a specific mobile network provider or service, given the context of mobile number portability."

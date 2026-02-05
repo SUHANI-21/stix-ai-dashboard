@@ -1,0 +1,116 @@
+account_login,account_type,description,display_name,id,type,summary
+,telegram-bot,,Fantasy Hub Subscription Bot,account--81e3c0f9-fa5f-4547-b221-068afdea3193,account,"The object contains information about a specific account on the platform. The account is identified by its unique identifier, which includes a timestamp (ignoring this field). 
+
+This account belongs to a Telegram bot, specifically designated as 'Fantasy Hub Subscription Bot'. There is no login credentials or description associated with this account. It can be categorized as an account type due to its specific function on the platform."
+7400917372:AAHuzyKxmWHc4L7jUOENK0BGNB0k1pI65lE,telegram-bot,,Blank Grabber Telegram Bot,account--1282b6c4-71c1-45a7-b62c-37f2f2ee126f,account,"The object contains information about a Telegram bot account. The account login is associated with the unique identifier '7400917372:AAHuzyKxmWHc4L7jUOENK0BGNB0k1pI65lE'. This identifier suggests that it is linked to a specific phone number, which is typical for Telegram bots.
+
+The account type is designated as 'telegram-bot', indicating its nature as a bot designed to interact with the Telegram messaging platform. Additionally, the description field remains blank (nan), implying that no additional details about the purpose or functionality of the bot are provided.
+
+The display name of the account reads 'Blank Grabber Telegram Bot', offering an insight into its intended function. This suggests that the bot might be used for scraping content from Telegram or other online sources, given its description does not appear to match a typical user account.
+
+Finally, the object's type is identified as 'account', further emphasizing its nature as a data entry about a specific Telegram bot profile."
+783432595,telegram-chat,,,account--9e5b4383-608c-40d4-bf45-cc9e52749ef4,account,"The object contains a dictionary representing an account information. The account type is identified as a telegram-chat account. 
+
+Further details about the account include its login number, which is 783432595, but unfortunately, description and display name fields are left blank."
+,github,,,account--414d1160-a703-4177-b86b-a86d82eac900,account,The object contains a single account entity.
+,npm,,,account--30c16725-e2cc-4dc0-9b29-86ab20ece659,account,"The object contains a single entry for an account. The account belongs to the npm type. However, some fields are not populated or are missing due to the presence of NaN values, which represent undefined or missing data."
+,aws,,,account--9d04c4c3-2bae-4866-bb63-0dda7fb68b23,account,"The object contains a dictionary representing an AWS account. The account details are as follows:
+
+It has an unknown login, indicating that the user's email address or username is not provided.
+
+The account type is specified as 'aws', confirming that this is indeed an AWS account.
+
+A description is available, but its content remains unspecified due to the presence of NaN values.
+
+There is no display name associated with this account.
+
+Lastly, it has a unique identifier, suggesting that there are multiple accounts created or managed through the system."
+,gcp,,,account--5904fc3c-8bc9-4b16-a748-d08a9929af9a,account,"The object contains data related to a Google Cloud Platform (GCP) account. The account login is not specified, as indicated by the presence of NaN values in this field. 
+
+The account type is identified as 'gcp', indicating that it belongs to the GCP platform. The description and display name fields are also blank or undefined, suggesting that they may be missing from the data.
+
+A unique identifier for the account is present, which appears to be a random string of characters."
+,azure,,,account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95,account,"The object contains a single account record with the following information:
+
+The account is of type azure, indicating that it belongs to Microsoft's Azure cloud computing platform. However, there is no detailed description provided about this account. 
+
+No display name was provided for this account. The unique identifier assigned to this account is 'account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95'."
+,oauth-token,,,account--67e148a1-a468-4f10-82e2-5ffc09e198c7,account,"The object contains an account entity with the following characteristics:
+
+It has a login for the account, but this information is not available due to NaN (not a number) values.
+The account type is oauth-token, indicating it uses an OAuth token for authentication.
+There is no description associated with this account.
+The display name for the account is unknown or not provided.
+The account's unique identifier is 'account--67e148a1-a468-4f10-82e2-5ffc09e198c7'.
+The type of account is specified as account."
+,aws-access-key,,,account--f4a58dae-29a3-4af9-b11b-dce46737b7a4,account,"The object contains a single account information entry. The account type is specified as 'aws-access-key', indicating that it is an AWS access key. However, the login details are not provided.
+
+Additional details about the account include its display name and description, which are currently empty or unspecified. It's worth noting that the account ID is unique and seems to be a random hexadecimal string.
+
+Overall, this entry provides limited information about the AWS account in question, mainly focusing on its type and lack of detailed credentials."
+,password,,,account--e03d1803-2789-437a-9db0-64a38db9477d,account,"The object contains a data structure representing an account, which has the following properties:
+
+* The account login is not available.
+* The account type is specified as password.
+* The description of the account is empty or missing.
+* The display name associated with the account is also not provided.
+* The ID field contains a unique identifier for the account, 'account--e03d1803-2789-437a-9db0-64a38db9477d'.
+* The type of the account is specified as 'account'."
+,admin,Admin accounts on Fortinet devices targeted via malicious single sign-on (SSO) logins.,,account--b4bd8389-c340-43bf-a2ba-3dbc0ad9d0ab,account,"The object contains information about a specific Fortinet account. This account is targeted via malicious single sign-on (SSO) logins, which are specifically aimed at admin accounts. The type of the account is 'account', indicating that it belongs to this category.
+
+No additional details about the account login or display name are provided in the given data, as both fields are represented by 'nan' which stands for Not A Number."
+Supportt,windows-local,,,account--859605b6-bdf8-4b15-a5b0-b9f271bcbab1,account,"The object contains a single account record with the following information:
+
+It is an account of type 'windows-local' associated with the login name 'Supportt'. The description and display name are currently empty."
+Administrator,windows-local,,,account--c4ea87ec-8650-49d1-bef1-a736954e2977,account,"The object contains information about an account with the following details:
+
+* The account login is set to 'Administrator', indicating that this account has administrative privileges.
+* The account type is specified as 'windows-local', suggesting that this account is related to a Windows-based local authentication system.
+* The description of the account is currently empty, with no available information provided.
+* The display name for the account is also missing any data or information.
+* The ID associated with this account is unique and has been assigned by the system.
+
+Please note that the lack of detail in certain fields such as 'description' and 'display_name' may indicate that further information about this account is not readily available."
+DOMAIN\admin-***,windows-domain,,,account--f5fa7755-a788-4303-8578-860d6d867280,account,"The object contains a single account entry with the following details:
+
+The account login is DOMAIN\admin-***, indicating that it is a Windows domain account.
+
+It is classified under the type 'account', further specifying its nature and category within the system's hierarchical structure.
+
+There is no information available for display_name and description fields."
+DOMAIN\da-backup-***,windows-domain,,,account--777e5c47-dc38-4187-9209-e0e6c3a03221,account,"The object contains a Windows Domain account with the login domain 'DOMAIN\da-backup-***'. The account type is Windows Domain, indicating that it belongs to an Active Directory system. There is no description or display name available for this account."
+svc-sql-***,windows-service,,,account--1f61bd4b-1dfe-492f-8ab0-fabb9faddbde,account,"The object contains a single account entry with the following details:
+
+* The account is named 'svc-sql-***' which appears to be related to a Windows Service.
+* This service does not have any description provided.
+* It also lacks a display name, suggesting that it may not require or utilize a user-friendly interface for interaction.
+* The account has an ID in the format 'account--XXXXX', where XXXXX is a unique identifier.
+
+Overall, this information suggests that the object represents a basic Windows Service account."
+DOMAIN\veeam-svc-***,windows-service,,,account--612c8995-6bb7-4f59-990e-b473860722d9,account,"The object contains an account information object with the following details:
+
+It is a Windows service account, specifically logged into the DOMAIN\veeam-svc-*** domain. The account type and login are fixed. There is no description or display name available for this account. It has been assigned an ID, but it appears to be irrelevant due to the metadata field being ignored in this summary."
+svc-exchange-***,windows-service,,,account--893d84f5-597f-46a4-9880-320236f4ca3a,account,"The object contains an account entity with the following attributes:
+
+* The login name of the account is 'svc-exchange-***'.
+* The type of account is a Windows service.
+* The description of the account is not available as it is marked as NaN (Not a Number).
+* The display name of the account is also not available.
+* The unique identifier for the account is 'account--893d84f5-597f-46a4-9880-320236f4ca3a'.
+* The type of this entity is an account."
+SERVER01\Administrator,windows-local,,,account--4c87784a-97ed-4d29-9aec-e8d0d4708165,account,"The object contains an account with the following details:
+
+* The login name is SERVER01\\Administrator, indicating that this account is associated with a Windows local machine.
+* The account type is windows-local, further confirming its connection to a local machine on a Windows operating system.
+* Unfortunately, there is no available description for this account.
+* Additionally, there is no display name provided for this account.
+
+This information suggests that the account in question belongs to an administrator with elevated privileges on the SERVER01 machine."
+SERVER02\localadmin,windows-local,,,account--d437f158-199f-47fc-8bd4-50893db79b29,account,"The object contains information about an Active Directory account. The account's login name is SERVER02\localadmin, indicating that it belongs to a Windows Local group. The account type is specified as windows-local, further confirming its connection to the Windows Local authentication mechanism.
+
+Additionally, the account has no description provided and does not have a display name assigned to it. It is identified by a unique identifier, but this information will be excluded from the summary for brevity.
+
+The account's purpose or function cannot be determined without further context, as such details are not included in the provided data."
+,microsoft,Victims are persuaded to divulge their Microsoft account credentials.,,account--553a21a7-e44a-4194-9caa-f69ef2010012,account,"The object contains information about a Microsoft account, which appears to be compromised. The victims of this compromise are persuaded to reveal their Microsoft account credentials. The exact login details of the compromised account are not specified.
+
+Unfortunately, some metadata fields such as timestamps and account type are not available due to missing values (nan)."

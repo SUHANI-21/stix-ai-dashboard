@@ -1,0 +1,123 @@
+brand,description,device_type,extensions,id,manufacturer,model,name,type,summary
+Android,,,"{""android"": {""sms_handler_role"": true, ""root_detection"": true}}",device--03ebc1af-8ccc-4e8f-ace5-69381546a0d2,,Generic,,device,"The object contains information about a device that runs on the Android operating system. The device type is not specified, but it is described as a generic model without any additional details.
+
+The device has extensions related to its functionality, specifically regarding SMS handling and root detection. These features are enabled, allowing the device to handle SMS messages effectively and detect potential rooting attempts.
+
+Unfortunately, there is no information available about the manufacturer of the device or its name, which may be due to the lack of data or specific details provided in this object."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--4ace29e4-02f7-4f51-a49d-6ce604efcb11,,,Beyerdynamic Amiron 300,device,"The object contains information about a Bluetooth headphone device. The brand of the device is not specified. 
+
+It is confirmed that the headphones are vulnerable to Airoha Bluetooth vulnerabilities. There is no additional information provided about the severity or specifics of these vulnerabilities.
+
+The device type and manufacturer of the Beyerdynamic Amiron 300 headphones are unknown."
+,Bluetooth earbuds; Classic pairing vulnerability present but unreliably exploitable; no GATT exposed.,,,device--9f9cf809-7e26-4c62-9a10-804dfe086160,,,Bose QuietComfort Earbuds,device,"The object contains information about a Bluetooth earbud device. The brand of the device is unknown.
+
+The earbuds have a classic pairing vulnerability that can be exploited, but this weakness is unreliable and not exposed through GATT (Generic Attribute Profile) protocol.
+
+The device type and manufacturer are not specified in the data provided.
+
+A model name for the device is given as ""Bose QuietComfort Earbuds"".
+
+The device falls under a specific category denoted by its 'type'."
+,Bluetooth audio sender confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--8fff906f-959c-4851-811e-6e8537cd80c9,,,EarisMax Bluetooth Auracast Sender,device,"The object contains information about a Bluetooth audio sender device. The device is referred to as the EarisMax Bluetooth Auracast Sender. Unfortunately, this device is confirmed vulnerable to Airoha Bluetooth vulnerabilities. Specifically, the vulnerability is related to its Bluetooth functionality rather than any hardware or software issues. This information was gathered from the provided data without additional context."
+,Bluetooth earbuds; not vulnerable to Classic pairing flaw due to enforced pairing; no GATT exposed.,,,device--f3de1b39-99b4-4a3e-acad-1d066df26ab9,,,Jabra Elite 8 Active,device,"The object contains information about a device model, specifically the Jabra Elite 8 Active. The Bluetooth earbuds are described as not vulnerable to the Classic pairing flaw due to enforced pairing. This indicates that the device has implemented a secure pairing mechanism to prevent this specific vulnerability.
+
+It is also noted that no GATT (Generic Attribute Profile) is exposed, suggesting that certain features or functionality may be limited or unavailable on these earbuds.
+
+Overall, the data provides a brief summary of the Jabra Elite 8 Active Bluetooth earbuds, highlighting their secure pairing mechanism and limitations in terms of GATT exposure."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--12b0c58d-e198-4758-ad22-aadbfe51e3a9,,,JBL Endurance Race 2,device,"The object contains information about a Bluetooth earbud device. The earbuds are confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. They belong to the JBL brand but the exact model number is not specified as it was not provided in the data.
+
+Unfortunately, the manufacturer and type of the device are unknown due to missing information. There isn't any information available on the specific features such as extensions or device type as that detail was also not given."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--aced309c-f882-4a8d-911c-8c1a498a91c3,,,JBL Live Buds 3,device,"The object contains information about a Bluetooth earbud device. The device is manufactured by JBL, but the brand name is not specified due to missing data. The model of the device is also unknown. 
+
+These earbuds are vulnerable to Airoha Bluetooth vulnerabilities, according to the provided description. There is no additional information available on the specific risks or consequences associated with these vulnerabilities.
+
+The type of the device is classified as a Bluetooth earbud."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--dbf403f4-232e-4ad0-b821-1c4094c1bb3d,,,Jlab Epic Air Sport ANC,device,"The object contains information about a Bluetooth earbud device. The brand of the earbuds is currently unknown. The description reveals that these earbuds are vulnerable to certain Airoha Bluetooth vulnerabilities. The device type and manufacturer cannot be determined from this data. However, the name of the product, Jlab Epic Air Sport ANC, suggests that it is a Bluetooth earbud with active noise cancellation features."
+,Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--d20572db-f570-4f8c-80df-fe1c616a6ef1,,,Marshall ACTON III,device,"The object contains information about a Bluetooth speaker model called the Marshall ACTON III. The device has been confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. There is no specific brand name provided, but it is mentioned that the vulnerability was related to Bluetooth technology."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--d3ec1c30-4ca1-43e3-a97b-979cdf732f67,,,Marshall MAJOR V,device,"The object contains information about a Bluetooth headphones device. The device is identified by the model name ""Marshall MAJOR V"". Unfortunately, the brand of this particular device cannot be determined due to missing data. Furthermore, the description provided indicates that these headphones are vulnerable to Airoha Bluetooth vulnerabilities, highlighting potential security concerns for users.
+
+The device type and manufacturer information are not available in this data set."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--3d96146f-2825-4ba5-a660-3345f3e3fadd,,,Marshall MINOR IV,device,"The object contains information about a Bluetooth earbud device. The brand is unknown due to missing data. 
+
+The earbuds are confirmed vulnerable to Airoha Bluetooth vulnerabilities, indicating potential security risks for users who use them. 
+
+No specific details are available regarding the type of the device, its manufacturer, or any additional extensions associated with it."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--1a166ce3-b7b6-44a4-9a1d-03fe2e14a887,,,Marshall MOTIF II,device,"The object contains a device with the name Marshall MOTIF II. The device is confirmed vulnerable to Airoha Bluetooth vulnerabilities. Its description highlights that it is a pair of Bluetooth earbuds. No specific brand, manufacturer, or model details are available due to missing information in the data set."
+,Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--dac2b539-3d74-4ee2-bf80-01ce11f213dc,,,Marshall STANMORE III,device,"The object contains information about a Bluetooth speaker device. The brand of the device is not specified. It has been identified as vulnerable to Airoha Bluetooth vulnerabilities. 
+
+Additionally, there is no information provided on its type or extensions available for this particular model. However, it can be described as a Bluetooth speaker and is categorized under a 'device'."
+,Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--10b0b90b-1f6b-4cd5-ab6f-191e8fa7f342,,,Marshall WOBURN III,device,"The object contains information about a Bluetooth speaker, specifically the Marshall WOBURN III. The device is confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. This indicates that the speaker may have security issues related to its Bluetooth connectivity."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--ff217d12-5e2e-4981-8484-972a2b53e122,,,MoerLabs EchoBeatz,device,"The object contains information about a device, specifically the MoerLabs EchoBeat Bluetooth headphones. The brand of the headphones is currently unknown, likely due to missing data. 
+
+These headphones are reported to be vulnerable to Airoha Bluetooth vulnerabilities, which means they may experience security issues related to their Bluetooth connectivity.
+
+There isn't enough information on other key fields such as manufacturer or device type, but it's clear that these headphones have a specific purpose: serving as portable audio devices for listening and communication."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--bc441140-58ea-412e-9e5c-63d0cf850b25,,,Sony Link Buds S,device,"The object contains information about a Bluetooth earbud device. The model of the earbuds is Sony Link Buds S. 
+
+It has been confirmed that these earbuds are vulnerable to Airoha Bluetooth vulnerabilities. This means that they may be susceptible to certain security issues related to their Bluetooth connectivity."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--67e53570-1b63-402b-badd-d245060643e9,,,Sony ULT Wear,device,"The object contains information about a Bluetooth headphones device. The brand of the device is not specified. The description provided suggests that the device has been confirmed vulnerable to Airoha Bluetooth vulnerabilities.
+
+Further details are lacking regarding the device type, extensions, and manufacturer. However, the name ""Sony ULT Wear"" indicates that it is a product from Sony."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--35d45993-963c-4d7e-89fa-6e25314903c1,,,Sony WF-1000XM3,device,"The object contains information about a Sony device, specifically the Sony WF-1000XM3 model. The device is confirmed to be Bluetooth earbuds and has been identified as vulnerable to Airoha Bluetooth vulnerabilities.
+
+Unfortunately, there is not enough information available in the provided data to determine the brand, device type, manufacturer, or other details about the device."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--5a0eaeed-96e4-4c94-9cd3-3a3eb9d52108,,,Sony WF-1000XM4,device,"The object contains information about a Sony device. The device is identified as the Sony WF-1000XM4 Bluetooth earbuds. These earbuds are confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. Additionally, the device lacks specific details regarding its brand, type, and manufacturer."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--08919e17-dd94-46c5-bdd3-2e46521370b6,,,Sony WF-1000XM5,device,"The object contains information about a Sony product, specifically the Sony WF-1000XM5 device. The device is Bluetooth earbuds with a confirmed vulnerability to Airoha Bluetooth vulnerabilities. Unfortunately, the brand, manufacturer, model, and other details are not available as they are marked as ""nan"" (not a number), indicating that this information is either missing or unknown at the time of data collection."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--70110c87-eebe-4b03-8e0e-817a811c1f9b,,,Sony WF-C500,device,"The object contains information about a device, specifically Sony WF-C500 Bluetooth earbuds. The earbuds have been confirmed to be vulnerable to Airoha Bluetooth vulnerabilities, indicating potential security risks for users. Unfortunately, the brand and model details are missing as they are represented by NaN (not a number) values."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--c7525e0f-1149-40d3-a3d4-b9db922aeee7,,,Sony WF-C510-GFP,device,"The object contains information about a device. The brand of the device is not specified.
+
+The description states that the Bluetooth earbuds are confirmed vulnerable to Airoha Bluetooth vulnerabilities. This suggests that the earbuds have security issues related to their Bluetooth connectivity.
+
+Unfortunately, no details about the type of device, its extensions, or manufacturer are available as they are represented by null values (nan)."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--8975a041-29d9-4383-99e6-9267b3332396,,,Sony WH-1000XM4,device,"The object contains information about a Bluetooth headphone device. The device is the Sony WH-1000XM4 model. Unfortunately, it appears that this particular device has been identified as vulnerable to certain Airoha Bluetooth vulnerabilities. Despite its security concerns, the device's name and type are known."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--6c52a1e1-9838-4f6b-a61f-bb26a01f9e04,,,Sony WH-1000XM5,device,The object contains information about a Bluetooth headphone device. The brand of the device is not specified. It appears to be Sony's WH-1000XM5 model. The headphones have been confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. They are classified as a type of device but no specific details regarding the category or function are provided.
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--f9283741-4ee3-440e-8f75-81a5fb02570b,,,Sony WH-1000XM6,device,The object contains information about a Bluetooth headphone device. The brand of the headphones is unknown due to missing data. The Sony WH-1000XM6 model is confirmed to be vulnerable to Airoha Bluetooth vulnerabilities.
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--971d7407-41c7-426d-bdc4-11dcd07fb0dc,,,Sony WH-CH520,device,"The object contains information about a specific Bluetooth headphones device. The brand is not specified, and the manufacturer of the device is also unknown.
+
+The description of the device reveals that it has been confirmed vulnerable to Airoha Bluetooth vulnerabilities. This implies that the device may have security concerns related to its Bluetooth connectivity.
+
+Unfortunately, no details are available regarding the type of device (device_type), extensions (extensions), or model number (model) of the headphones.
+
+However, some information about the device is provided, including its name (Sony WH-CH520)."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--41ea2845-8d6f-4aa7-a689-6c8265a83c8c,,,Sony WH-CH720N,device,"The object contains information about a device, specifically Bluetooth headphones. The model of the device is the Sony WH-CH720N. 
+
+The headphones are confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. This means that there is a known security issue related to the Bluetooth technology used in these headphones.
+
+Unfortunately, no information is available on the brand, manufacturer, or other details about the device."
+,Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--761decac-3439-4971-a50e-7e883251ec79,,,Sony WH-XB910N,device,"The object contains a device information summary for the Sony WH-XB910N. 
+
+The Bluetooth headphones are confirmed vulnerable to Airoha Bluetooth vulnerabilities.
+
+This information suggests that Sony WH-XB910N is not producing secure Bluetooth headphones and users should be aware of this security issue."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--87079a11-9b39-4601-970f-496a6d70e84b,,,Sony WI-C100,device,"The object contains information about a Bluetooth earbud device, specifically the Sony WI-C100 model. The earbuds are confirmed to be vulnerable to Airoha Bluetooth vulnerabilities. Unfortunately, the brand, device type, manufacturer, and model of the earbuds cannot be identified as this information is missing from the data."
+,Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities.,,,device--a5100c10-19be-429e-ac50-ce3e5274cde5,,,Teufel Tatws2,device,"The object contains information about a device, specifically Bluetooth earbuds. The model of the device is Teufel Tatws2. Unfortunately, the brand name of this specific device is not available due to missing metadata.
+
+It has been confirmed that these earbuds are vulnerable to Airoha Bluetooth vulnerabilities, making them susceptible to potential security issues. There isn't any additional information provided about the manufacturer or other specifications of the device."
+,Bluetooth Auracast transmitter used in research; vulnerable to RACE protocol issues.,,,device--9399aa88-b716-4874-ac33-7bfb39ef16f2,,,MoerLab Auracast transmitter,device,"The object contains information about a Bluetooth device. The device is a transmitter that uses the Auracast protocol for Bluetooth communication. It was used in research purposes but has been found to be vulnerable to issues related to the RACE protocol. Unfortunately, there is no information available on the brand of this device."
+,Bluetooth monitoring hardware used to discover Bluetooth Classic addresses for attack setup.,,,device--72671148-8268-435a-b397-e27b9cfcb72a,,,Ubertooth One,device,"The object contains information about a Bluetooth monitoring hardware device, specifically the Ubertooth One. This device is used for discovering Bluetooth Classic addresses, which can be useful for setting up an attack. The device has unique characteristics such as a specific description and model name. It does not appear to have any brand affiliation due to missing data.
+
+The object's type is classified as a ""device"", indicating that it falls under this category. However, the exact device type or manufacturer information is unknown due to missing data.
+
+In summary, the Ubertooth One is a Bluetooth monitoring hardware device used for discovering Classic addresses, lacking specific details about its brand and manufacturer."
+,"Unofficial Android TV boxes sold by third-party merchants on Amazon, BestBuy, Newegg, and Walmart, often pre-installed with residential proxy malware and shipped with ADB enabled by default.",,,device--9e6be463-cf80-4900-9dc1-89cff30af9e7,Various,Various,Android TV Box,device,"The object contains information about a specific Android TV box. The device is sold by various third-party merchants on online marketplaces such as Amazon, BestBuy, Newegg, and Walmart. It is often pre-installed with residential proxy malware, which can compromise the user's privacy and security.
+
+The device also has ADB (Android Debug Bridge) enabled by default, allowing for remote access and control over the Android operating system. This feature can be used to bypass security restrictions and potentially gain unauthorized access to the device.
+
+It is worth noting that this device is not an official product from a reputable manufacturer but rather an unofficial, third-party device sold through various channels. As such, its quality and reliability may vary, and users should exercise caution when purchasing and using it."
+,"Popular model of unsanctioned Android TV box, leaves Android Debug Mode running on localhost:5555 and frequently acts as a proxy node for IPIDEA.",,,device--d1021801-2e7b-4b10-b675-4e165a1d8262,Unknown,Superbox,Superbox,device,"The object contains information about a device, specifically an Android TV box known as the Superbox. The device is described as a popular model that lacks official sanctioning, leaving Android Debug Mode running on localhost:5555 and acting frequently as a proxy node for IPIDEA.
+
+Further details reveal that this device falls under the category of 'device', with no information available regarding its brand, device type, extensions, or manufacturer. It is worth noting that the provided data includes an ID ('device--d1021801-2e7b-4b10-b675-4e165a1d8262'), although it appears to be redundant as there are no other metadata fields present in the object.
+
+The device's name and model, Superbox, provide a clear indication of its identity."
+,"Android-based digital photo frames running the Uhale app, vulnerable to residential proxy malware and lacking security/authentication.",,,device--43eb0e9a-08ca-4025-be4f-5c50e02bf823,Various,Various,Digital Photo Frame,device,"The object contains a digital photo frame that runs on the Uhale app, an Android-based operating system. This device is vulnerable to residential proxy malware, which poses significant security risks. Furthermore, it lacks proper security features or authentication mechanisms, making it susceptible to unauthorized access and potential data breaches.
+
+The device does not provide any detailed information about its brand, model, or manufacturer. It is worth noting that the Uhale app is associated with these digital photo frames, highlighting a critical vulnerability in their security setup.
+
+Overall, this device appears to be compromised due to its lack of robust security measures, which raises concerns for users who rely on such devices to store and display personal photos."
+,"Fortinet devices with FortiCloud SSO enabled, exposed online and vulnerable to authentication bypass.",network device,,device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46,Fortinet,FortiCloud SSO,,device,"The object contains a vulnerability report detailing information about a Fortinet network device. The device is identified as the ""FortiCloud SSO"", which is a part of the Fortinet brand. 
+
+This device has been exposed online and is vulnerable to authentication bypass due to its FortiCloud Single Sign-On (SSO) feature being enabled. This means that unauthorized access can be obtained without proper verification, posing significant security risks.
+
+The reported details include the manufacturer as Fortinet, which further indicates the source of the vulnerability. The device type has been classified as a network device, categorizing it under devices used for communication and data exchange in computer networks.
+
+No other specific information such as extensions or additional model names are provided in the report."

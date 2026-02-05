@@ -1,0 +1,37 @@
+abstract,content,created,created_by_ref,external_references,id,labels,modified,object_marking_refs,type,summary
+List of confirmed vulnerable devices (Airoha-based headphones and earbuds),"Beyerdynamic Amiron 300, Bose QuietComfort Earbuds, EarisMax Bluetooth Auracast Sender, Jabra Elite 8 Active, JBL Endurance Race 2, JBL Live Buds 3, Jlab Epic Air Sport ANC, Marshall ACTON III, Marshall MAJOR V, Marshall MINOR IV, Marshall MOTIF II, Marshall STANMORE III, Marshall WOBURN III, MoerLabs EchoBeatz, Sony Link Buds S, Sony ULT Wear, Sony WF-1000XM3, Sony WF-1000XM4, Sony WF-1000XM5, Sony WF-C500, Sony WF-C510-GFP, Sony WH-1000XM4, Sony WH-1000XM5, Sony WH-1000XM6, Sony WH-CH520, Sony WH-CH720N, Sony WH-XB910N, Sony WI-C100, Teufel Tatws2. This list is not exhaustive.",,,,note--b89639ba-8db3-4107-8861-673965313a28,,,,note,"The object contains a list of confirmed vulnerable devices that are Airoha-based headphones and earbuds. These devices include various models from well-known brands such as Beyerdynamic, Bose, Jabra, JBL, Marshall, MoerLabs, Sony, and Teufel.
+
+Some specific examples of vulnerable devices mentioned in the list include:
+
+* Beyerdynamic Amiron 300
+* Bose QuietComfort Earbuds
+* EarisMax Bluetooth Auracast Sender
+* Jabra Elite 8 Active
+* JBL Endurance Race 2
+* JBL Live Buds 3
+* Jlab Epic Air Sport ANC
+* Marshall ACTON III
+* Marshall MAJOR V
+* Marshall MINOR IV
+* Marshall MOTIF II
+* Marshall STANMORE III
+* Marshall WOBURN III
+* MoerLabs EchoBeatz
+* Sony Link Buds S
+* Sony ULT Wear
+* Sony WF-1000XM3
+* Sony WF-1000XM4
+* Sony WF-1000XM5
+* Sony WF-C500
+* Sony WF-C510-GFP
+* Sony WH-1000XM4
+* Sony WH-1000XM5
+* Sony WH-1000XM6
+* Sony WH-CH520
+* Sony WH-CH720N
+* Sony WH-XB910N
+* Sony WI-C100
+* Teufel Tatws2
+
+Please note that this list is not exhaustive, as mentioned in the metadata."
+,"This cheat sheet provides guidance on CI/CD Pipeline Security Best Practices, walking through the OWASP Top 10 CI/CD security risks and offering actionable steps to reduce attack surface and strengthen delivery processes.",,,"[{""source_name"": ""The Hacker News"", ""url"": ""https://thehackernews.uk/pipeline-sec-tips""}]",note--c5b90d88-1157-4ef8-aca2-1724714dd682,"[""best-practices"", ""ci/cd-pipeline"", ""owasp-top-10""]",,[],note,"The object contains a detailed cheat sheet focused on CI/CD Pipeline Security Best Practices. The document guides users through the OWASP Top 10 CI/CD security risks, offering practical advice to minimize vulnerabilities and enhance delivery processes."

@@ -14,3 +14,20 @@ def detect_stix_version(file_path):
         # Check if it's a single STIX object
         elif data.get("type") and data.get("id"):
             return "STIX 2.1"  # Assume 2.1 for individual objects
+    except (json.JSONDecodeError, FileNotFoundError):
+        pass
+    
+    # Try XML (STIX 1.x)
+    try:
+        tree = ET.parse(file_path)
+        root = tree.getroot()
+        
+        # Check namespace for version
+        if "stix.mitre.org/stix-1" in str(root.tag):
+            return "STIX 1.x"
+        elif "stix" in root.tag.lower():
+            return "STIX 1.x (likely)"
+    except ET.ParseError:
+        pass
+    
+    return "Unknown format"

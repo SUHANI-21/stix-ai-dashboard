@@ -1,0 +1,192 @@
+description,id,name,type,value,summary
+"Three identical client fingerprints observed across multiple campaigns, indicating tooling continuity.",user-agent--166649e1-09bc-4471-b8e7-082cd546a79d,Recurring Client Fingerprints,user-agent,,"The object contains a data point related to user-agents, specifically fingerprints. It appears that there are three identical client fingerprints observed across multiple campaigns. This suggests that the same tooling is being used consistently across different initiatives, indicating continuity in the application or software being used.
+
+This finding is significant as it implies that the use of similar tools or technologies is prevalent, which may impact the performance and results of various campaigns or projects. It could also indicate a lack of diversity in the application or toolset used by clients, potentially leading to a predictable user experience.
+
+The data point does not provide any information about the specific applications or software being used, nor does it offer insights into how these fingerprints are related to the performance or outcomes of the campaigns. However, further analysis may be necessary to fully understand the implications of this finding and its potential impact on future campaigns or projects."
+,user-agent--1f10bd3b-03e4-415e-82a0-57f43041368e,,user-agent,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42","The object contains a user-agent string, which is used to identify the browser and its version that made the request.
+
+The user-agent string provided is: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42'
+
+This string indicates that the browser is Google Chrome version 107.0.0.0, which was used to make the request on a Windows 10 operating system with a 64-bit architecture. The presence of Safari and Edge browsers suggests that the user may have been using a Windows device with multiple web browsers installed."
+,user-agent--e0314c65-b6b6-4ec3-91d7-4e37a2129eeb,,user-agent,Go-http-client/1.1,"The object contains a user agent string that provides information about the client software used to make a request. The key details of this string are:
+
+*   The type is 'user-agent', indicating it pertains to the identity of a requesting application or browser.
+*   There's no description provided in the given data, which might be missing or not available.
+*   The name field does not contain any information since its value is 'nan' (short for ""not a number""), implying that this particular piece of data was either missing or not applicable in this instance.
+
+Given these details, the user agent string points to Go-http-client version 1.1 being used as the client software in the request."
+,user-agent--7838ea43-e75c-44f2-b109-70e18a511495,,user-agent,Assetnote/1.0.0,"The object contains a single entry of type 'user-agent' with the following details: The user agent is identified by its value, which is 'Assetnote/1.0.0'. There is no description associated with this user agent."
+,user-agent--d1fa70b4-b65c-47e7-9ca3-1c2df695510b,,user-agent,Safari/17.2.1,"The object contains a single entry representing a user agent string.
+
+The user agent string is associated with the type ""user-agent"" and provides information about a specific browser or device that generated the request.
+
+The name field is not present, indicating that this particular record does not contain any additional details beyond its ID, description, type, and value.
+
+The value of the user agent string is 'Safari/17.2.1', which identifies the version of the Safari web browser being used by a specific device or system."
+,user-agent--c98abe98-1b4d-4ed1-9903-e6c8799508c3,,user-agent,aiohttp,"The object contains a user agent string that identifies the software application or browser responsible for making the request. The details of this string are as follows:
+
+The user agent is 'aiohttp', which indicates that the request was made by an application using the aiohttp library, a popular Python library for making asynchronous HTTP requests."
+,user-agent--1ea75ed4-0c0e-4b13-af34-93ab2b23c46b,,user-agent,python-requests,"The object contains a user agent string with the following information:
+
+* Type: The data is classified as a user agent.
+* Description: Unfortunately, this field is left blank.
+* Name: Unavailable due to missing information.
+* Value: The actual value of the user agent string, which is ""python-requests"".
+
+This user agent string appears to be associated with Python's requests library."
+,user-agent--91987d81-7c39-4f31-a56c-cdaa206663c7,,user-agent,"Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36","The object contains a user-agent string that provides information about the browser used by a device to access the internet. The value of this string is ""Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"".
+
+This user-agent string indicates that the device is using a Windows operating system and is running Google Chrome version 79.0.3945.130. The browser is also utilizing Safari as its rendering engine."
+,user-agent--55072300-c5ac-44ee-939e-62021e1f3f4a,,user-agent,"Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.113+Safari/537.36+Assetnote/1.0.0","The object contains a user-agent entry, which provides information about the type of software or browser used to make a request or fetch data from a server. The specific details are as follows:
+
+This entry includes a description that is currently not available due to being represented by NaN (Not A Number). However, the core information provided in this user agent string can be broken down into key components.
+
+The type of this entry is specified as ""user-agent,"" which categorizes it under software or browser metadata. 
+
+Looking at the specific value of the 'value' field, we see that it represents a string identifying the browser and its version being used to access the server. The value contains details from multiple sources and versions, including:
+
+- The operating system used on the device: ""Windows NT 10.0; Win64; x64""
+- A webkit-based engine for rendering pages: ""AppleWebKit/537.36""
+- A specific browser that utilizes this engine: ""Chrome/60.0.3112.113""
+- Another browser with similar capabilities, but perhaps not directly Chrome-like in its usage due to the mention of Safari and Assetnote (indicating a unique version): ""Safari/537.36+Assetnote/1.0.0""
+
+In summary, this user-agent entry offers information about the software used by the client making the request or accessing data from the server, including operating system details, webkit-based engine, specific browser versions, and possibly additional metadata."
+,user-agent--1f9127bb-8277-4130-bbed-d414e63fe353,,user-agent,"Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50","The object contains a user-agent record with the following details:
+
+* The user-agent is identified by an ID, 'user-agent--1f9127bb-8277-4130-bbed-d414e63fe353'.
+* This record corresponds to a specific type of metadata, specifically a 'user-agent', which is a common identifier for browsers or software.
+* The user-agent itself is 'Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50'.
+* This particular user-agent string indicates that the device or software being represented uses an older version of the Safari browser on a Macintosh computer running Intel's Mac OS X 10_6_8 operating system.
+* Notably, the 'name' field is not filled in, implying that this user-agent record was perhaps not fully populated or documented."
+,user-agent--21bdd1b8-89ef-4e21-815b-3099c7c3f5ae,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/b,D,Z cfg/retry-mode#legacy botocore/1.40.4","The object contains information about a specific user-agent string.
+
+This string is associated with an AWS CLI command, which provides details about the operating system, architecture, and language used to execute the command.
+
+According to the string, the operating system being used is Linux version 5.15.0-151-generic. The architecture is x86_64, which indicates a 64-bit processor.
+
+The string also reveals that Python 3.10.12 is being used as the programming language for this operation. Additionally, it mentions the implementation of Python (CPython) and its respective modules (m/b,D,Z).
+
+Lastly, the string provides information about the botocore library version, which is 1.40.4, and the aws-cli command version, which is 1.42.4."
+,user-agent--4b5cb864-4e73-443b-b981-6ec9f0e03c16,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/Z,D,b cfg/retry-mode#legacy botocore/1.40.4","The object contains a user agent string that provides information about the device or application making a request to a server. The string is formatted in a hierarchical manner, with multiple levels of nesting to provide detailed information.
+
+The top-level identifier 'user-agent' indicates that this string belongs to a client-side application or a device. However, it appears to be incomplete as it contains 'nan' for the description and name fields.
+
+Moving down the hierarchy, we can see various categories of information such as architecture, operating system, implementation details, and more. The architecture is identified as 'x86_64', indicating that it's an x86-64 bit processor-based device. 
+
+The operating system is Linux, specifically the version '5.15.0-151-generic'. This suggests that the device is running a relatively modern version of Linux.
+
+Furthermore, the user agent string mentions 'md/Botocore#1.40.4', which appears to be related to Amazon's Botocore library used in the AWS CLI (Command-Line Interface). 
+
+Additionally, it includes details about the Python implementation being used ('lang/python#3.10.12') and some configuration options such as 'retry-mode#legacy'."
+,user-agent--f3742659-ae1c-476f-9dc1-6d1b3a04a2ad,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/D,b,Z cfg/retry-mode#legacy botocore/1.40.4","The object contains a user-agent string that provides information about the software or device that generated it. The string is as follows: aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/D,b,Z cfg/retry-mode#legacy botocore/1.40.4
+
+This string can be broken down into several parts, each providing details about the software or device:
+
+* aws-cli: This is a command-line interface tool for interacting with Amazon Web Services (AWS).
+* md/Botocore#1.40.4: This suggests that the Botocore library is used by the AWS CLI to handle requests and responses.
+* ua/2.1: This indicates that the version of the user-agent string is 2.1.
+* os/linux: The operating system is Linux, with a specific kernel version (5.15.0-151-generic).
+* md/arch#x86_64: This provides information about the architecture of the device, which is x86_64.
+* lang/python#3.10.12: The programming language used is Python, with a specific version (3.10.12).
+* md/pyimpl#CPython m/D,b,Z cfg/retry-mode#legacy: These details suggest that the implementation of Python on this device is CPython and are related to configuration settings.
+* botocore/1.40.4: The Botocore library version used by the AWS CLI is 1.40.4.
+
+In summary, the user-agent string provides information about the AWS CLI tool being used, its connection to the Botocore library, the operating system and architecture of the device, the programming language, and configuration settings."
+,user-agent--35db41df-35f5-4614-99cb-cb2a81325432,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/Z,b,D cfg/retry-mode#legacy botocore/1.40.4","The object contains a user agent string that provides information about the software or device making an HTTP request to a server. The string is comprised of various components, each providing insight into the characteristics of the system.
+
+The 'os' field indicates that the system running this user agent string is based on Linux, with a specific distribution version (5.15.0-151-generic). Additionally, it specifies that the architecture of the system is 64-bit (x86_64).
+
+Furthermore, the 'lang' component reveals that the primary programming language used by the system is Python 3.10.12. The string also mentions the implementation being used for Python, which is CPython.
+
+The presence of specific software versions in the 'value' field suggests that the system utilizes AWS CLI (version 1.42.4) and Botocore (version 1.40.4). These libraries are likely components of the larger application or service being accessed by the HTTP request."
+,user-agent--45f754f8-6415-4312-b0af-66b97ec49ac8,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/D,Z,b cfg/retry-mode#legacy botocore/1.40.4","The object contains a user-agent string, which is a standardized format for identifying the software application or system responsible for generating the request. The user-agent string provided is 'aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/D,Z,b cfg/retry-mode#legacy botocore/1.40.4'.
+
+This string can be broken down into several components that provide information about the software and its version, as well as the operating system on which it is running.
+
+The 'aws-cli' part of the string indicates that the application is an AWS CLI tool. The version number '1.42.4' suggests that this particular instance of the tool is up-to-date with the latest available updates.
+
+Further down the string, there are references to 'Botocore', which appears to be a library used by the AWS CLI for interacting with Amazon Web Services. The '#1.40.4' part indicates the version number of Botocore being used in conjunction with the AWS CLI.
+
+The next section 'ua/2.1' refers to the user agent, which is essentially a unique identifier assigned to each client. In this case, it appears that there are 2 instances of the same software application making requests at the same time.
+
+Moving on to the operating system information, we see 'os/linux#5.15.0-151-generic'. This indicates that the AWS CLI tool is running on a Linux-based system with a kernel version of 5.15.0-151 and a specific distribution (likely Ubuntu) due to the '#generic' part.
+
+The final sections of the string provide more technical details about the Python interpreter used ('lang/python#3.10.12') and some additional configuration options for the AWS CLI tool ('md/pyimpl#CPython m/D,Z,b cfg/retry-mode#legacy botocore/1.40.4'). The 'm/D,Z,b' part seems to be related to how retries are handled, with 'botocore/1.40.4' being the version of the Botocore library used in conjunction with AWS CLI."
+,user-agent--90c8f6ff-55a3-44e0-8874-9fba3cb387cb,,user-agent,"aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/b,Z,D cfg/retry-mode#legacy botocore/1.40.4","The object contains a user-agent string that provides information about the device or application making the request. 
+
+The value of this field is 'aws-cli/1.42.4 md/Botocore#1.40.4 ua/2.1 os/linux#5.15.0-151-generic md/arch#x86_64 lang/python#3.10.12 md/pyimpl#CPython m/b,Z,D cfg/retry-mode#legacy botocore/1.40.4'. 
+
+This string can be broken down into several components, each providing specific information about the device or application making the request. 
+
+The 'aws-cli' part indicates that this is a user-agent string for an AWS command-line interface (CLI) tool. The version number '1.42.4' specifies the specific version of the CLI being used. 
+
+The 'md/Botocore#1.40.4' and 'ua/2.1' parts are metadata fields that provide information about the underlying framework or library being used by the AWS CLI. 'Botocore' is a low-level HTTP client for AWS, and '1.40.4' specifies the version of this library being used. The 'ua/2.1' part indicates that the user-agent string is in format vX.X.X.
+
+The remaining parts of the string provide information about the operating system and device being used by the application. 'os/linux#5.15.0-151-generic' specifies that this is a Linux-based system, with a specific kernel version '5.15.0-151-generic'. The 'md/arch#x86_64' part indicates that the architecture of the system is x86-64. 
+
+The 'lang/python#3.10.12' and 'md/pyimpl#CPython m/b,Z,D cfg/retry-mode#legacy' parts provide information about the programming language being used by the application, which in this case is Python 3.10.12. The 'm/b,Z,D' part indicates that the user-agent string is encoded using a specific method or protocol. 
+
+Finally, the 'botocore/1.40.4' part specifies the version of the Botocore library being used by the application.
+
+Overall, this user-agent string provides detailed information about the device and application making the request, including operating system, architecture, programming language, and framework versions."
+,user-agent--27111878-70fc-4c27-b7ee-8bce682f5727,,user-agent,Boto3/1.36.3 md/Botocore#1.36.3 ua/2.0 os/linux#6.6.87.2-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.12.3 md/pyimpl#CPython cfg/retry-mode#legacy Botocore/1.36.3,"The object contains information about a user agent, which is a string that identifies the type of software or browser used by a system to access a network resource.
+
+The provided data includes various fields such as description, name, type, and value. However, since these fields are empty (indicated by 'nan' for description and name), they can be ignored in this summary.
+
+The relevant information is contained within the 'value' field, which provides details about the user agent's software components, operating system, and architecture. Here is a breakdown of the key elements:
+
+* The user agent string starts with ""Boto3/1.36.3"", indicating that it is running version 1.36.3 of the Boto3 library.
+* It also includes ""md/Botocore#1.36.3"", suggesting that Botocore, a AWS SDK for Python, is being used in conjunction with Boto3.
+* The string further specifies that it uses a retry mode of ""legacy"".
+* The user agent indicates that it is running on Linux (version 6.6.87.2) and is using the Microsoft Standard WSL2 architecture, which suggests that it is running on a Windows Subsystem for Linux 2.
+* Additionally, the string mentions that it uses Python version 3.12.3, with pyimpl being CPython, indicating that it is using the CPython implementation of Python.
+* The user agent also identifies the system's processor as x86-64.
+
+Overall, this information suggests that the object is a part of an AWS-related application or service that utilizes Boto3 and Botocore for interactions with Amazon Web Services."
+,user-agent--75e6aed8-a431-47e6-a171-6d6582200860,,user-agent,"aws-cli/2.27.57 md/awscrt#0.26.1 ua/2.1 os/linux#6.6.87.2-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.4 md/pyimpl#CPython m/Z,b,E cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 sid/2aa4051c3d17 md/prompt#off md/command#sesv2.create-email-identity","The object contains a user agent string that provides information about the client software used to interact with a system or service. The data is structured into several fields, but some of these are empty (nan) as indicated.
+
+The name and description fields are not populated, providing little context about the specific use case for this particular user agent string. However, the type field clearly indicates that this is a user agent string, used to identify the software or application that initiated the connection or interaction.
+
+The value field contains a lengthy string of information detailing various attributes of the client software. This breakdown includes:
+
+- 'aws-cli/2.27.57': The version number of the AWS Command Line Interface (CLI) tool.
+- 'md/awscrt#0.26.1': An identifier related to the AWS Cognito User Interface, specifically the version 0.26.1.
+- 'ua/2.1': A reference to the HTTP User-Agent header, indicating that this is a request made by an application or device identified as version 2.1.
+- 'os/linux#6.6.87.2-microsoft-standard-WSL2': Information about the operating system (Linux) and its distribution (6.6.87.2), further detailed with Microsoft Standard and WSL2 for Windows Subsystem for Linux 2, indicating that this application is run within a WSL environment.
+- 'md/arch#x86_64': Details on the architecture of the device or machine running the software, specifically identified as an x86_64 architecture.
+- 'lang/python#3.13.4': The programming language used (Python) and its version number (3.13.4), crucial for understanding how the application interacts with system resources or services.
+- 'md/pyimpl#CPython': A reference to the Python implementation being used, identified as CPython, a reference to the official implementation of Python 2.x series, but in this case indicating a Python interpreter that is not part of CPython.
+- 'm/Z,b,E': Attributes related to session management and email services (Z, b, E), though these specifics are less clear without additional context.
+- 'cfg/retry-mode#standard': Configuration settings for retries, specifically configured as standard.
+- 'md/installer#exe': Details about the installation method or package installer, confirmed to be an executable file.
+- 'md/distrib#ubuntu.24': Information about the distribution (Ubuntu) and version number (24), indicating this software is installed on Ubuntu 24.
+- 'sid/2aa4051c3d17': A unique identifier for the system or service instance associated with this user agent string, though not detailed further here.
+- 'md/prompt#off': Configuration settings regarding terminal prompts; the prompt is disabled in this case.
+- 'md/command#sesv2.create-email-identity': Details on command line execution and email identity management using SESv2.
+
+This breakdown of attributes suggests that the client software running on the system or device connected to it is an AWS CLI tool, leveraging the AWS Cognito User Interface for user authentication and interaction with AWS services."
+,user-agent--4ad458e7-162e-4a36-8172-579106b9b285,,user-agent,"aws-cli/2.27.57 md/awscrt#0.26.1 ua/2.1 os/linux#6.6.87.2-microsoft-standard-WSL2 md/arch#x86_64 lang/python#3.13.4 md/pyimpl#CPython m/E,b,Z cfg/retry-mode#standard md/installer#exe md/distrib#ubuntu.24 sid/f8b68673fee3 md/prompt#off md/command#sesv2.create-email-identity","The object contains a detailed description of a user agent string. The name field is empty, indicating that the device or application does not provide a meaningful name for its user agent. 
+
+It can be broken down into several components:
+
+- It appears to be related to an AWS CLI (Amazon Web Services Command Line Interface) interaction.
+
+- The version number '2.27.57' suggests that this particular instance of the AWS CLI is using a recent update, as specified by the major.minor.patch format commonly used in software releases.
+
+- The architecture component indicates that it runs on a Linux-based system specifically for Microsoft Standard WSL 2 (Windows Subsystem for Linux 2), which provides a more native Linux experience within Windows. This suggests the use of a modern distribution, given the version number '6.6.87.2'.
+
+- Further breaking down the architecture to the architecture level yields 'x86_64', denoting an x86-64 bit processor.
+
+- The language and Python implementation details ('lang/python#3.13.4' and 'md/pyimpl#CPython') further specify that this is a Python-based application running on an x86-64 CPU, utilizing the CPython interpreter, which is the default Python interpreter for standard C extensions.
+
+- There are also some additional metadata fields that suggest specific distributions (e.g., Ubuntu 24), installer types ('exe'), and retry modes ('standard'). These details can help in understanding how this user agent string was generated or used by AWS CLI."
+,user-agent--dc00a247-7871-46e7-8d33-78b69169d117,,user-agent,"Mozilla/5.0 (Windows; U; Windows NT 6.1; en-US; rv:1.9.2.13) Gecko/20101213 Opera/9.80 (Windows NT 6.1; U; zh-tw) Presto/2.7.62 Version/11.01 Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36","The object contains a user agent string that provides information about the browser used to access a website. The string is comprised of various details about the browser's version, operating system, language, and manufacturer.
+
+The browser identified by this user agent string is Chrome, which is currently running on Windows 10 (Win64; x64). The specific version of Chrome being used is 121.0.0.0. This version number indicates that the browser has undergone significant updates and improvements since its initial release.
+
+In addition to Chrome, the user agent string also mentions other browsers, including Opera and Mozilla. However, these are likely placeholders or redundant entries, as they do not seem to be actively being used by the browser.
+
+The language being used is English (en-US), which suggests that the website or application being accessed has been designed with international users in mind. The user agent string also includes a specific version number for Opera, 9.80, and Gecko, 20101213, which provides further insight into the browsers' history and development.
+
+Overall, this user agent string offers valuable information about the browser being used to access a website or application."

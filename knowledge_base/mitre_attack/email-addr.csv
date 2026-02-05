@@ -1,0 +1,79 @@
+display_name,id,type,value,summary
+,email-addr--9ce50b0a-c3b9-45eb-8ded-27617d227e0b,email-addr,sales@gmai.com,"The object contains a record that corresponds to an email address. The email address is associated with the type 'email-addr'. The value of this field is 'sales@gmai.com', which appears to be an incorrect or invalid email domain (it should be '@gmail' instead of '@gmai')."
+,email-addr--9a64da96-8419-4ce3-863e-9580195521f9,email-addr,unknown@outlook.com,"The object contains an email address record. The display name is not provided, but the email address itself is ""unknown@outlook.com"". This indicates that the sender's identity cannot be determined due to missing information."
+,email-addr--14d2e88d-8da6-4dcd-a1de-02c196047fe8,email-addr,contact@cyber.gc.ca,"The object contains an email address with a unique identifier. The display name is not provided, but the actual value of the email address is given as 'contact@cyber.gc.ca'. This appears to be a government-related email address, with the '.gc.ca' suffix indicating it is associated with the Government of Canada."
+,email-addr--61b42256-4d9b-4739-a3f4-f226c78a0cf2,email-addr,info@oligosecurity.io,"The object contains an email address with the following details: 
+
+It has a unique identifier 'email-addr--61b42256-4d9b-4739-a3f4-f226c78a0cf2'. 
+The display name is not provided as it is represented by NaN (Not a Number). 
+The type of this address is 'email-addr'. 
+Its corresponding value is 'info@oligosecurity.io', which appears to be the actual email address."
+,email-addr--824547c2-562c-4936-bb82-811b75bdf58a,email-addr,1305302314@qq.com,"The object contains a single entity with the following characteristics:
+
+It is an email address, identified by its unique type field.
+
+The value of this email address is '1305302314@qq.com'. 
+
+This appears to be a Chinese email address, as indicated by the qqq.com domain."
+,email-addr--e715e11e-c4fe-442f-b33b-840a7d5a2430,email-addr,mail@imba97.cn,"The object contains a single entry that represents an email address. The display name is not available as it is represented by 'nan'. 
+
+This email address corresponds to the value 'mail@imba97.cn' which appears to be a valid email domain. The type of this record is identified as 'email-addr'."
+,email-addr--cd98bce9-7c6e-4d25-8f46-60f328588fee,email-addr,achepeleva@iskra-svarka[.]ru,"The object contains a single record with email address information. The display name is not provided as it is represented by 'nan', indicating that the value is not available or has been set to not applicable.
+
+The email address belongs to an entity identified by 'email-addr--cd98bce9-7c6e-4d25-8f46-60f328588fee'. 
+
+The actual content of the email address, excluding the account identifier and in brackets, is 'achepeleva@iskra-svarka.ru'."
+Anton Vladimirovich Demyanenko,email-addr--a01f8b5f-7170-4b4a-8429-89dd5aa0b8b6,email-addr,agrariy@agroterminal[.]c,"The object contains information about an email address. The email address belongs to Anton Vladimirovich Demyanenko. It is identified by the ID 'email-addr--a01f8b5f-7170-4b4a-8429-89dd5aa0b8b6'. This email address has been categorized as a type of email address, denoted as 'email-addr'. The actual content of this email is specified by the value 'agrariy@agroterminal.c'."
+WordPress,email-addr--c17951c0-8c68-45fd-a307-bf07b147d881,email-addr,noreply@theyounginevitables.com,"The object contains an email address object associated with WordPress. The display name is not relevant to the email address itself. The email address value is noreply@theyounginevitables.com, which suggests that it may be a generic or automated email address used by WordPress for notifications and updates."
+,email-addr--a621c056-7c34-42fb-bfd9-20169561238a,email-addr,01Flip@proton.me,"The object contains an email address entry with the following details:
+
+* The display name is not specified.
+* The email address type is confirmed to be 'email-addr'.
+* The actual value of the email address is '01Flip@proton.me'."
+,email-addr--e5392c4a-f590-4a23-aaf0-5873fc749c9a,email-addr,mp@proton.me,"The object contains a single entry for an email address. The display name is not provided. The value of the email address is given as ""mp@proton.me"". It is classified as an email address type."
+,email-addr--206be0c7-4476-4d9f-bfa2-8c5bb958ecf5,email-addr,Didier Stevens <blog.DidierStevens.com>,"The object contains an email address with the following details:
+
+- The display name is not specified.
+- The email address type is confirmed to be 'email-addr'.
+- The value of the email address is 'Didier Stevens <blog.DidierStevens.com>'. This includes the sender's name, which appears to be ""Didier Stevens"", followed by a less-than symbol and the domain name ""blog.DidierStevens.com""."
+,email-addr--342c5be7-e959-4a8b-85ab-132c96bcebeb,email-addr,theknewone.com@gmail.com,The object contains a single entry that represents an email address. The email address itself is associated with the domain name 'theknewone.com'.
+,email-addr--3053bfc6-3ec3-4eaf-a653-69ff37b51800,email-addr,support@e-library[.]wiki,The object contains an email address field named 'support@e-library wiki' with a type of 'email-addr'. This is the value contained within the object.
+,email-addr--c6b03c3c-78db-49e6-9562-c1c47efbf26d,email-addr,Marc.Jordon@trust-text[.]com,"The object contains an email address with the following details:
+
+* The display name is not available due to being undefined (nan).
+* The email address type is specified as 'email-addr'.
+* The actual email address itself is Marc.Jordon@trust-text.com."
+,email-addr--a065da74-b016-4b37-b309-72408cf2bfe4,email-addr,cfinancial720@gmail[.]com,"The object contains a single email address record with the following attributes:
+
+It is an email address of type 'email-addr' which belongs to a specific user.
+The display name associated with this email address is not available due to missing data (represented by 'nan').
+The value of the email address is 'cfinancial720@gmail[.]com', where '[.]com' represents the top-level domain."
+,email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90,email-addr,hcc.loans@financier[.]com,The object contains an email address field. The displayed name is not provided. The email address itself is 'hcc.loans@financier.com'.
+,email-addr--a9e2fbeb-6c8c-4667-b38e-da59ce6388e9,email-addr,abuse@aurologic.com,"The object contains an email address record with the following details:
+
+* The email address itself is 'abuse@aurologic.com', which suggests that it might be associated with a complaint or abuse report.
+* There is no display name available for this record, indicating that it might not have been explicitly set by the user.
+* The type of record is specified as an email address ('email-addr'), suggesting that it has been used to send and receive emails."
+,email-addr--e85b47e9-c687-4afd-a2e6-3e0b6922a6bc,email-addr,cert@cert.org,The object contains a single data point for an email address. The email address is identified by the value 'cert@cert.org'.
+,email-addr--3d41af14-7995-446a-8fcc-00fb38583273,email-addr,terra.com.br,"The object contains a dictionary representing an email address. The dictionary has the following structure:
+
+* display_name: empty (represented by NaN)
+* type: email address
+* value: terra.com.br
+
+This indicates that the object is storing an email address as its primary attribute, and it does not have any additional information about the owner of the email address, such as their name."
+,email-addr--07aab53d-7421-4381-80ee-6248c24dad96,email-addr,uhjdclolkdn@gmail.com,"The object contains an email address record. The value of this record is 'uhjdclolkdn@gmail.com'. This appears to be a unique identifier for the record, but its purpose is unclear."
+,email-addr--92ede8ba-0c71-40e8-96af-4b28425aed26,email-addr,spoofed-internal@domain.com,"The object contains an email address record. The email address itself is spoofed-internal@domain.com, indicating that it is not a legitimate or external email address but rather appears to be an internal email address. The exact domain and intent behind this email address are unclear due to the lack of information about the 'display_name' field."
+,email-addr--da2e3371-21d5-4e82-bb7d-cfb863e447cd,email-addr,spoofed-finance@domain.com,"The object contains an email address record. The display name is not provided, but the email address itself is spoofed as ""spoofed-finance"" followed by ""@domain.com"". This suggests that the email address may be used for fraudulent or deceptive purposes, such as phishing or spamming. The actual domain of the email address is also provided, but it appears to be fictional and not a real internet domain."
+Victim (extortion note recipient),email-addr--05869ef5-ecb3-4dfd-a8ae-9d47f23fc433,email-addr,,"The object contains a single entry representing an email address. The email address belongs to a victim who received an extortion note. Unfortunately, the specific details about the content of the email are not provided."
+,email-addr--933b9118-37cb-4960-94ed-215ffc30f325,email-addr,[redacted]@proton.me,"The object contains an email address with a unique identifier. The display name is not provided as it is marked as 'nan'. 
+
+The email address itself is '[redacted]@proton.me' where the actual content has been removed for privacy reasons."
+,email-addr--3fa414d8-8062-46aa-a851-1637923fc379,email-addr,pomocit01@kanzensei.top,"The object contains an email address. The email address is 'pomocit01@kanzensei.top'. This appears to be a unique identifier for the email address, but its specific purpose is not specified."
+,email-addr--4ccf3068-5163-4f9f-a44d-444f1b2fc65b,email-addr,pomocit01@surakshaguardian.com,"The object contains an email address field with a unique identifier. The value of this field is 'pomocit01@surakshaguardian.com'. This appears to be a legitimate email address, possibly used for security or authentication purposes."
+,email-addr--76024f03-ac34-42dc-8d11-c229843b680e,email-addr,ithelp01@securitymy.name,"The object contains an email address that matches the format of an email address. The display name is not provided, but it appears to be missing due to a Not-a-Number (NaN) value. The email address itself is 'ithelp01@securitymy.name' and its type is classified as an email address."
+,email-addr--78feedb1-f300-4431-88fd-9e302be11e56,email-addr,ithelp01@yousheltered.com,"The object contains a single data entry with the following characteristics:
+
+It is an email address, identified by its unique type and value. The specific details of this entry are that it has a 'display_name' field with no information provided (as indicated by the 'nan' notation), and a unique identifier associated with it.
+
+If we were to extract just the relevant information without the metadata fields, we would say that the object contains an email address with the value ithelp01@yousheltered.com."

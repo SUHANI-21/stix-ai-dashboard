@@ -1,0 +1,24 @@
+additional_header_fields,body,id,is_multipart,subject,type,summary
+"{""archive"": ""ZIP"", ""attachment"": "".lnk""}",,email-message--dce06b75-1b3e-415c-be42-9f4cbfd1c3ee,False,,email-message,"The object contains a JSON data structure representing an email message. Here is a detailed summary of the provided information:
+
+The email message has two additional header fields:
+- 'archive': The archive type is set to ZIP.
+- 'attachment': The attachment type is a link (.lnk).
+
+However, there are missing values for several key fields in the JSON data structure:
+- 'subject' (the subject of the email).
+- 'body' (the content or body of the email).
+ 
+The message has a 'type' field set to 'email-message', indicating it's an email.
+It is not a multipart message, as indicated by the 'is_multipart' field being set to False."
+,"Phishing email lure related to job opportunities or recruitment efforts, aiming to trick recipients into downloading and running malware hidden in attachments or links.",email-message--9a27a371-ad6e-4c3c-bc19-0550657bdb0f,False,,email-message,"The object contains a phishing email that aims to trick recipients into downloading and running malware hidden in attachments or links. The email lure is related to job opportunities or recruitment efforts, indicating that the attackers are likely targeting individuals looking for employment or career advancement. This type of phishing attack is designed to capitalize on people's willingness to receive unsolicited job offers or recruitment emails, making it difficult to distinguish between legitimate and malicious communications."
+,Phishing email mimicking password reset requests and internal company password reset webpages.,email-message--709b5a8c-1225-4fb0-9841-6dac250f4c5d,False,,email-message,"The object contains a phishing email that mimics password reset requests and internal company password reset webpages. The email is not multipart in nature, meaning it appears as a single message. Unfortunately, the subject of the email is missing, which could potentially provide further context about its content or origin. Overall, the email's purpose seems to be deceptive, aiming to trick recipients into revealing sensitive information."
+,Invitation to Primakov Readings scientific and expert forum with personalized malicious link,email-message--49414c1f-e08c-4de5-bdcb-fb98f4ae3ff3,False,,email-message,"The object contains an email message with the following characteristics:
+
+The email is classified as a malicious link invitation to attend the Primakov Readings scientific and expert forum. The message includes personalized content.
+
+No additional information is available on the sender or recipient of the email, but it can be inferred that the purpose of the email is to deceive or mislead."
+,Phishing email with malicious attachment,email-message--56fc6880-9810-45dc-a739-54c8f789d172,False,,email-message,The object contains a phishing email with malicious attachment. The email does not have any additional header fields. It is composed of a single body that describes the nature of the email.
+,"Victims receive a seemingly legitimate email, complete with Microsoft’s official logo, claiming there is an important financial transaction or security alert requiring immediate attention. The message prompts recipients to click a link under the guise of confirming identity or resolving an urgent issue.",email-message--76b559f4-61df-40ba-a9bf-16e49b92e01d,False,,email-message,"The object contains a phishing email message that uses social engineering tactics to trick recipients into taking malicious action. The email is designed to appear legitimate by using Microsoft's official logo and claiming that there is an important financial transaction or security alert requiring immediate attention. 
+
+The message prompts the recipient to click on a link under the guise of confirming their identity or resolving an urgent issue, which in reality is likely to lead to further phishing attempts or malware installation."

@@ -1,0 +1,147 @@
+id,service_name,type,summary
+windows-service--4bf86ad5-c38f-4da6-a7fc-2c7915fe4d7f,vss,windows-service,"I don't see any data provided. Please paste the data you would like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I will generate a detailed summary in the format you requested:
+
+""The object contains an instance of a Windows service with the name 'vss'. It is identified by a unique ID, which has been excluded from the description. The type of this service is 'windows-service'."""
+windows-service--7bb265dd-b1a4-4deb-981f-960edaf92601,sql,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I can generate a detailed summary in the format you requested: starting with ""The object contains..."" and ignoring metadata fields such as timestamps and ID."
+windows-service--85eeee32-a480-4b39-b153-ff4670ccd4a2,svc$,windows-service,"I don't see any data provided. Please paste the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a summary starting with ""The object contains..."" in sentence form, excluding metadata fields such as timestamps and ID."
+windows-service--51545b46-743c-4906-800e-7ead4dd5e8c0,memtas,windows-service,The object contains a Windows service named memtas. It is classified under the type windows-service.
+windows-service--176c8f51-1ec1-4d96-92fc-f68de12b8d00,mepocs,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary of it in the format you requested: 
+
+""The object contains information about a Windows service named 'mepocs'."""
+windows-service--f4cbc919-0ce2-4638-945d-90815788a2aa,sophos,windows-service,"I don't see any data provided. Could you please provide the data you would like me to summarize? I'll create a detailed summary in the requested format.
+
+If you meant for me to generate dummy data, here it is:
+
+ {'id': 'windows-service--f4cbc919-0ce2-4638-945d-90815788a2aa', 'service_name': 'sophos', 'type': 'windows-service'}
+
+And here's the summary:
+
+The object contains information about a Sophos Windows Service."
+windows-service--1f5b8447-dd95-4f63-9252-975d964758ad,veeam,windows-service,"I don't see any data provided. Please paste the data you'd like me to summarize, and I'll be happy to help.
+
+Once you provide the data, I'll create a summary starting with ""The object contains..."" in sentence form, excluding metadata fields such as timestamps and ID."
+windows-service--07f788be-a34e-419c-b5f4-794f6dc9e35d,backup,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a detailed summary that meets your requirements:
+
+* The summary will exclude metadata fields such as timestamps and ID.
+* It will be written in sentence form.
+* Points or bullet points will not be used."
+windows-service--421bf03f-571d-4580-bede-f8228d783515,GxVss,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I'll generate a summary for you in the format you requested:
+
+""The object contains a Windows service named 'GxVss' with an unknown ID.""
+
+Please paste the data, and I'll get started!"
+windows-service--a8faf955-f853-4d2c-a0df-1d80101ed559,GxBlr,windows-service,"I'm ready to help. You haven't provided any data yet. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary in the format you requested."
+windows-service--fd172377-0bd6-4dcd-b670-73b9a46b61f5,GxFWD,windows-service,"I'm ready to help. You haven't provided any data for me to summarize. Please share the data you'd like me to work with, and I'll be happy to assist you."
+windows-service--499fc6cf-336b-4884-b03d-69bd0d94776a,GxCVD,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a detailed summary starting with ""The object contains..."""
+windows-service--309bd27a-6c0a-4885-83f8-d70e52022c6c,GxCIMgr,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I'll create a summary of it following your requested format:
+
+""The object contains information about a Windows service named 'GxCIMgr'. It is categorized as a type of windows-service."""
+windows-service--2a145c8d-3782-42c6-b0c9-77bc08ca180f,DefWatch,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I'll create a summary sentence that follows the requested format:
+
+""The object contains a windows-service named DefWatch."""
+windows-service--183dabe5-d778-4fd4-b6c2-8f3f0806f9fa,ccEvtMgr,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a detailed summary of it, starting with ""The object contains..."" and excluding metadata fields such as timestamps and ID, in sentence format."
+windows-service--ff3976fc-c128-4942-b558-142e199ac05e,ccSetMgr,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I can generate a detailed summary of it in the format you requested:
+
+""The object contains information about a Windows service named 'ccSetMgr'. The type of this service is 'windows-service'."""
+windows-service--de1094d7-a5e1-4460-a4d8-b4e534f456e1,SavRoam,windows-service,The object contains a Windows service named 'SavRoam'. It is of type windows-service.
+windows-service--f9dc5854-70d4-4991-8575-63bece75fad0,RTVscan,windows-service,The object contains a Windows service named RTVscan. It is classified under the type of services available on the system. No further details are available about this specific service.
+windows-service--ce18710f-1c51-4c8d-8c8e-78d11eb07104,QBFCService,windows-service,"I don't see any data provided. Please share the data you would like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary that starts with ""The object contains..."" and ignores metadata fields such as timestamps and ID."
+windows-service--34dd8bbd-785d-4854-996b-76fc9a959cf0,QBIDPService,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary starting with ""The object contains..."" and ignoring metadata fields such as timestamps and ID, in sentences, without points."
+windows-service--d13976b4-e068-4fb2-a74a-4ad772fa622f,Intuit.QuickBooks.FCS,windows-service,"I don't see any data provided for me to generate a summary from. Please provide the data, and I'll be happy to help!"
+windows-service--e7262a71-44cd-422a-b472-101ae51de941,QBCFMonitorService,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I will create a detailed summary in the format you requested. The summary will ignore metadata fields such as timestamps and IDs and be written in sentence form, without points."
+windows-service--6a067b88-71c9-4f9c-86b6-5b5e9b5a8862,YooBackup,windows-service,The object contains information about a Windows service named YooBackup. It is identified by the name 'YooBackup' which is associated with the description of the service type as 'windows-service'.
+windows-service--bf12314b-e118-4959-9933-7888e3d84f19,YooIT,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a summary sentence for it, following your requested format:
+
+""The object contains a 'windows-service' with the name 'YooIT'."""
+windows-service--64ad81bb-c4df-49ff-beaa-f0f3e8fc6613,zhudongfangyu,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a detailed summary in the format you requested:
+
+""The object contains information about a Windows service with the name 'zhudongfangyu'. It is classified as a type of Windows service.""
+
+Please paste the data, and I'll get started!"
+windows-service--08df7be9-f18e-47fc-88c6-e44e5657b28c,stc_raw_agent,windows-service,"I'm happy to help you with your request. However, I don't see any data provided for me to summarize. Could you please provide the data that needs summarization? I'll be more than happy to assist you once I receive it.
+
+Once you provide the data, I will generate a detailed summary of the object in sentences, excluding metadata fields such as timestamps and ID, starting with ""The object contains...""."
+windows-service--b5447a6e-3830-4066-afed-8d1baa08d01d,VSNAPVSS,windows-service,I don't see any data provided. Could you please provide the data you'd like me to summarize? I'll be happy to help once I have it.
+windows-service--ff96ef27-cb81-4d9d-a867-6301c0e1fb38,VeeamTransportSvc,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to help!"
+windows-service--831cd189-4d6a-4d05-8172-726f3ba0399e,VeeamDeploymentService,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I can generate a detailed summary of the object in the requested format:
+
+""The object contains information about a Windows service named VeeamDeploymentService. It is identified by a unique identifier and belongs to the 'windows-service' type."""
+windows-service--0605c7c7-8ed1-4a76-be19-c7c51bffdc0e,VeeamNFSSvc,windows-service,"The object contains information about a Windows service named VeeamNFSSvc. It is a type of service that runs on the system and can be managed by the operating system. The specific details provided include its name, which is VeeamNFSSvc, indicating it is related to Veeam software, and its type, which categorizes it as a Windows service."
+windows-service--0b19b07e-1e81-4464-ab94-a6541d860c64,PDVFSService,windows-service,"I don't see any data provided. Please paste the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a summary that meets your requirements:
+
+* It will ignore metadata fields such as timestamps and ID
+* The summary will be in sentence form only, without points or bullet points
+* It will start with ""The object contains..."""
+windows-service--6dc96b2a-30f4-4093-89bb-bba70d74265d,BackupExecVSSProvider,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I can generate a summary for you in the format you requested."
+windows-service--b670d7d2-10dc-4f7e-bdb0-7dd5a2705cff,BackupExecAgentAccelerator,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary that starts with ""The object contains..."" and excludes metadata fields such as timestamps and ID, presenting only the relevant information in sentence form."
+windows-service--33a052ba-48a7-4cc8-9583-094ec1cb7097,BackupExecAgentBrowser,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a detailed summary starting with the sentence: ""The object contains..."" and ignoring metadata fields such as timestamps and ID."
+windows-service--c520bc3d-3641-409a-b49e-110ac1101343,BackupExecDiveciMediaService,windows-service,The object contains a Windows service named 'BackupExecDiveciMediaService'. It is of type 'windows-service' and has an ID of 'c520bc3d-3641-409a-b49e-110ac1101343'. The service's metadata does not include any other relevant information beyond its name and type.
+windows-service--5c527090-65d0-4c2d-ad6c-fb38a634acd0,BackupExecJobEngine,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a summary for you in the format you requested:
+
+""The object contains information about a Windows service named 'BackupExecJobEngine'. This is a type of service that provides backup functionality."
+windows-service--85bfe022-8051-42da-a48a-150f9bb6de94,BackupExecManagementService,windows-service,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a summary that meets your requirements:
+
+* Ignore metadata fields such as timestamps and ID
+* Write in sentences only
+* Start with ""The object contains...""
+
+Please paste the data, and I'll get started!"
+windows-service--ba07e377-0e4c-465f-8b12-e5affeba6b50,BackupExecRPCService,windows-service,"I don't see any data provided. Please provide the data you would like me to summarize, and I will be happy to assist you.
+
+Once you provide the data, I'll generate a summary sentence starting with ""The object contains..."" that excludes metadata fields such as timestamps and ID, and presents the information in sentences."
+windows-service--fba3f7bc-c505-47d2-86c5-ec5ff8fb39e7,AcrSch2Svc,windows-service,The object contains a Windows service named 'AcrSch2Svc' with the type 'windows-service'. The service has been identified by its unique identifier.
+windows-service--35d59487-3a4a-4cf3-aa67-16827c658423,AcronisAgent,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary of it in the format you requested: starting with ""The object contains..."" and excluding metadata fields such as timestamps and ID, presented in sentences without points."
+windows-service--9c396bfa-0c7a-4261-a214-470e1bc72435,CASAD2DWebSvc,windows-service,The object contains information about a Windows service. The name of the service is CASAD2DWebSvc. It is identified as a Windows service type.
+windows-service--ac16653a-f589-4b68-a0c0-5ed8628733ee,CAARCUpdateSvc,windows-service,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary starting with the sentence: ""The object contains..."". I'll ignore metadata fields such as timestamps and ID in the summary."

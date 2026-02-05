@@ -1,0 +1,6 @@
+id,type,value,summary
+email-address--5ad7baa1-ed1b-4fae-a515-3290314fdf18,email-address,mailto:?subject=The%20Golden%20Scale:%20Notable%20Threat%20Updates%20and%20Looking%20Ahead&body=Check%20out%20this%20article%20https%3A%2F%2Funit42.paloaltonetworks.com%2Fscattered-lapsus-hunters-updates%2F,"The object contains an email address, which is a unique identifier used to store and retrieve emails. This type of data is typically used for sending and receiving emails. The value of this email address is a formatted string that includes various parameters such as subject and body text. 
+
+The subject line is set to ""The Golden Scale: Notable Threat Updates and Looking Ahead"", which likely indicates the content of an article or message being sent via email. 
+
+The body of the email contains a link to an article hosted on a website, specifically unit42.paloaltonetworks.com, with the title ""Scattered Lapsus Hunters - Updates""."

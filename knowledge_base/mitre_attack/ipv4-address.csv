@@ -1,0 +1,2 @@
+id,type,value,summary
+ipv4-address--18be41a3-04ed-44c1-b490-400d3d8c7f6c,ipv4-address,203.0.113.12,"The object contains an IPv4 address with a unique identifier. The value of this identifier is 203.0.113.12. This is classified as an IPv4 address type, indicating that it conforms to the standard format used for Internet Protocol version 4 addresses."

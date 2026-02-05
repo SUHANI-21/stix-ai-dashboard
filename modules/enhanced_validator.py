@@ -105,8 +105,18 @@ class EnhancedValidator:
                     }
                 except Exception as lenient_error:
                     error_msg = str(lenient_error)
+                    # If error is about time validation, treat as warning
+                    if "stop_time" in error_msg.lower() and "start_time" in error_msg.lower():
+                        return {
+                            "is_valid": True,
+                            "errors": [],
+                            "warnings": [{"type": "time_validation", "message": f"Time validation issue (treated as warning): {error_msg}"}],
+                            "error_count": 0,
+                            "warning_count": 1,
+                            "summary": "✅ VALID (with time validation warning)"
+                        }
                     # If error is about ID format/UUID pattern, suppress it as warning (not validation blocker)
-                    if "not a valid STIX identifier" in error_msg or "must match" in error_msg:
+                    elif "not a valid STIX identifier" in error_msg or "must match" in error_msg:
                         # ID format is not strict - allow it as warning
                         return {
                             "is_valid": True,

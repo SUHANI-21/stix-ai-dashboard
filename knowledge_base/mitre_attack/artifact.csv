@@ -1,0 +1,54 @@
+created_by_ref,description,id,mime_type,payload_bin,type,summary
+,HTTP multipart request containing malicious RSC path markers exploiting CVE-2025-55182.,artifact--2172b789-c6e0-4fbf-a4c5-e070aaae3377,application/http,,artifact,"The object contains an HTTP multipart request that has been crafted to exploit a specific vulnerability, CVE-2025-55182. The malicious request contains malicious RSC path markers that could potentially be used to compromise security.
+
+The request is classified as an artifact, indicating that it is a malicious file or payload that has been created by exploiting a vulnerability in software. The object's description provides further context about the nature of the threat, which suggests that it may have been designed to evade detection or cause harm when executed.
+
+It is worth noting that this object does not appear to be a traditional malware file, but rather an artifact generated as part of an exploit chain. This could suggest that it is being used for research purposes or by security professionals to analyze and understand the impact of the vulnerability."
+,,artifact--d3b035a1-2443-4633-8f72-d794cd175f11,application/x-dosexec,BeudtKgqnlm0Ruvf+VYxuw==,artifact,"The object contains a file descriptor for an executable binary artifact. The artifact is identified by its unique identifier, which remains classified due to potential security concerns. This data type is categorized under 'artifact' and falls under the application/x-dosexec mime type.
+
+The payload of this artifact includes a base64-encoded string, 'BeudtKgqnlm0Ruvf+VYxuw==', indicating that it contains executable code."
+identity--,"RAR archive containing staff record pdf.exe, used to deliver Guloader malware.",artifact--0923ceef-4e6d-4d1c-bd99-ba6796f3a713,application/x-rar-compressed,,artifact,"The object contains a RAR archive, identified by the mime type 'application/x-rar-compressed'. This archive serves as a delivery mechanism for malware, specifically Guloader. The malware is packaged within a PDF file named pdf.exe, which is contained within the staff record."
+,Observed request bodies include CSRF token handling and parameterized username/password fields,artifact--031d2e4d-4203-4cbd-a56b-538f89e00629,text/html,,artifact,"The object contains information about a specific artifact. The artifact is related to observed request bodies in CSRF token handling and parameterized username/password fields.
+
+Specific details of the artifact include:
+
+*   It does not have a creator associated with it.
+*   A description of the artifact explains that observed request bodies contain handling for CSRF tokens and parameterized username/password fields.
+*   The type of the artifact is specified as 'artifact'.
+*   No information is available about the payload binary data, or other metadata fields like timestamps."
+,,artifact--2c97f80d-cfc3-478a-8989-41d76c44bee2,,dc64c34ba92375f8dc8ae8cf90a1f535a0aa5a29fcf965af5ad4982cd16e9d71,artifact,"The object contains a unique artifact with the ID 'artifact--2c97f80d-cfc3-478a-8989-41d76c44bee2'. The artifact has a binary payload of 'dc64c34ba92375f8dc8ae8cf90a1f535a0aa5a29fcf965af5ad4982cd16e9d71', indicating that it is a digital file. However, no information is available about the creator of the artifact or its description."
+,,artifact--e3ec2201-2bf1-43ea-971d-608273a123ef,,8f8da8861c368e74b9b5c1c59e64ef00690c5eff4a95e1b4fcf386973895bef1,artifact,"The object contains a detailed artifact information. The created_by_ref field is not specified, indicating that the creator of the artifact is unknown or unspecified. 
+
+The description field also remains empty. Instead, the payload_bin field is provided, containing a large binary data '8f8da8861c368e74b9b5c1c59e64ef00690c5eff4a95e1b4fcf386973895bef1'."
+,,artifact--041c7226-a046-4bdb-96d5-726554ae76dd,,6347f46d77a47b90789a1209b8f573b2529a6084f858a27d977bf23ee8a79113,artifact,"The object contains a binary payload identified by the unique artifact identifier 'artifact--041c7226-a046-4bdb-96d5-726554ae76dd'. The payload itself is encoded in a format denoted as 'payload_bin', which is comprised of the hexadecimal string '6347f46d77a47b90789a1209b8f573b2529a6084f858a27d977bf23ee8a79113'."
+,,artifact--a921deb2-5a7c-4f3a-8986-567eaaa5ad21,,662890bb5baba4a7a9ba718bdedd6991fbf9867c83e676172f5527617e05cafa,artifact,"The object contains a specific type of data referred to as an artifact. This artifact has been identified by its unique identifier, which is a long string of characters. The description of this artifact is currently unknown due to missing metadata. 
+
+It's worth noting that the artifact's creation information, including who created it and when, are not available in the provided dataset."
+,,artifact--da4af697-3ad2-4baf-b0bb-f097327a64fb,,264d88624ec527458d4734eff6f1e534fcacb77e5616ae61abed94a941389232,artifact,"The object contains a detailed artifact metadata. 
+
+The artifact has an empty field for creation by reference. There is also no information provided about the description of this artifact. The type of the artifact itself is 'artifact'."
+,,artifact--d478021a-6f24-4f85-8f28-e06e8e6b34e8,,56260e90bba2c50af7c6d82e8656224ece23445f1d76e87a97c938ad9883005f,artifact,"The object contains a digital artifact with the following characteristics:
+
+It has been created by an unknown entity since there is no information available about who created it.
+The description of the artifact is not provided as it is set to NaN (Not a Number).
+The artifact's type is specified as 'artifact'.
+Its mime type cannot be determined due to the absence of data in this field, which is also set to NaN.
+A binary payload associated with the artifact contains a unique identifier and appears to be an encrypted or compressed file with the given hash value."
+,,artifact--88f8d3f4-70b3-492e-b13d-d3c82638bcdf,,499f16ed2def90b3d4c0de5ca22d8c8080c26a1a405b4078e262a0a34bcb1e31,artifact,"The object contains an artifact with a unique identifier of 'artifact--88f8d3f4-70b3-492e-b13d-d3c82638bcdf'. The description of the artifact is not provided as it is marked as NaN (Not a Number). 
+
+The artifact has a payload binary data associated with it, which is '499f16ed2def90b3d4c0de5ca22d8c8080c26a1a405b4078e262a0a34bcb1e31'. The type of the artifact is specified as 'artifact', indicating that it belongs to a specific category or class."
+,,artifact--9784cf93-0bc0-433b-a4d6-413171d861d2,,7a946339439eb678316a124b8d700b21de919c81ee5bef33e8cb848b7183927b,artifact,"The object contains a specific type of data related to an artifact. The details provided include its description, mime type, and payload bin. Unfortunately, the information available does not allow for a detailed analysis beyond these basic characteristics.
+
+The artifact's description is currently unknown due to the lack of relevant information. The same can be said for its mime type, which is also unspecified.
+
+However, examining the payload bin reveals it contains a specific set of bytes. The exact nature and purpose of this data cannot be discerned without further context or analysis."
+,,artifact--e1d29835-92ac-45a9-865d-5b31c2122dab,,10b54abba525686869c9da223250f70270a742b1a056424c943cfc438c40cc50,artifact,"The object contains a binary payload identified by the string '10b54abba525686869c9da223250f70270a742b1a056424c943cfc438c40cc50'. It belongs to an artifact, which is represented by the ID 'artifact--e1d29835-92ac-45a9-865d-5b31c2122dab'. The artifact does not have a creator or description associated with it."
+,,artifact--67b3eced-755b-496d-90a5-cccc7b571403,,ece1620e218f2c8b68312c874697c183f400c72a42855d885fc00865e0ccc1a1,artifact,"The object contains an artifact with a unique identifier of 'artifact--67b3eced-755b-496d-90a5-cccc7b571403'. This artifact does not have any clear description or creator associated with it. 
+
+It is categorized as a binary artifact, which suggests that its content or functionality is represented by a file or a piece of data rather than text. The exact nature of this artifact cannot be determined without further information.
+
+The object also lacks metadata regarding the mime type and payload bin, suggesting a lack of standardization or documentation for this specific artifact."
+,,artifact--442b937d-c4c3-40fe-94e3-651e848b2ad0,,ab85924ba95692995ac622172ed7f2ebc1997450d86f5245b03491422be2f3d6,artifact,"The object contains an artifact with a unique identifier. The artifact has a specific type of content, which is not explicitly stated but falls under the category of artifacts. Unfortunately, some essential details about this artifact remain unknown due to missing information."
+,,artifact--0d333b06-d12d-4ac6-bf1f-fcec072b98a3,,cf39bb998db59d3db92114d2235770a4a6c9cbf6354462cfedd1df09e60fe007,artifact,"The object contains an artifact with a unique identifier. The artifact has a payload bin containing a binary string of 64 characters. This string is likely the content or data associated with the artifact.
+
+The artifact was created by its creator but the identity of this person cannot be determined due to missing metadata information."

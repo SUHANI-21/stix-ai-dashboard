@@ -1,0 +1,6 @@
+address,id,type,summary
+0xE7E24F1A3D9C5B7E8A6D2F4C3B9A8E5F1D2C3B4,ethereum-smart-contract--9a4f5415-4ab9-46db-b095-1a09b2af6353,ethereum-smart-contract,"The object contains a smart contract with the specified unique identifier.
+
+The address associated with this smart contract is 0xE7E24F1A3D9C5B7E8A6D2F4C3B9A8E5F1D2C3B4, indicating that it exists on the Ethereum blockchain.
+
+This object represents a specific implementation of an Ethereum-based smart contract, which likely includes self-executing code written in Solidity that automates various operations."

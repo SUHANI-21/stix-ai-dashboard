@@ -1,0 +1,77 @@
+description,hashes,id,issuer,labels,serial_number,subject,type,validity_not_after,validity_not_before,x509_v3_thumbprint,summary
+Extended Validation certificate used to sign LeakyInjector and LeakyStealer samples. Reused across at least seven related samples.,,x509-certificate--b0ace1f6-eef5-42b6-bcb9-65b2eaceba39,Sectigo Public Code Signing CA EV R36,"[""malware signing"", ""LeakyStealer"", ""LeakyInjector""]",,"Hefei Nudan Jukuang Network Technology Co., Ltd.",x509-certificate,2026-09-09T00:00:00Z,2025-09-09T00:00:00Z,A8BF7554363D27DEB374C4E2658AC05C60E3BAA7,"The object contains a detailed representation of an Extended Validation certificate used for signing malicious software samples. This certificate is associated with 'LeakyInjector' and 'LeakyStealer', indicating its role in the distribution of malware.
+
+Key characteristics of this certificate include:
+
+- Its validity period, which spans from September 9th, 2025 to September 9th, 2026.
+- The issuer of the certificate, 'Sectigo Public Code Signing CA EV R36', is a trusted entity responsible for verifying the authenticity of digital signatures.
+- The subject of the certificate, 'Hefei Nudan Jukuang Network Technology Co., Ltd.', is identified as the entity holding the private key used to create the signature.
+
+The certificate holds significance in its reuse across multiple related samples, specifically at least seven distinct instances. This widespread use suggests a deliberate attempt to evade detection by employing multiple certificates with varying serial numbers."
+,,x509-certificate--b94dba78-c6a2-46cd-b90a-5d5eb3954322,CN=55554rac,,,CN=55554rac,x509-certificate,,,,"The object contains a certificate with the following attributes:
+
+* The issuer of the certificate is CN=55554rac.
+* The subject of the certificate matches the issuer's name.
+* The type of the certificate is x509-certificate.
+* The certificate has no valid expiration dates specified (validity_not_before and validity_not_after are both NaN).
+* There is no serial number provided for the certificate.
+* No labels are associated with the certificate.
+* A hash value, specifically an X.509 v3 thumbprint, is generated but not provided in a usable format due to it being NaN."
+,,x509-certificate--90a05c11-9c52-4c6e-8d41-393791ef3720,CN=MATRACHEDICIDGA,,,CN=MATRACHEDICIDGA,x509-certificate,,,,"The object contains a certificate entity with the following attributes:
+
+- The issuer of the certificate is specified as 'CN=MATRACHEDICIDGA'.
+- The subject of the certificate shares the same identifier as the issuer.
+- No labels or serial number are provided for this certificate.
+- The type of the certificate is identified as 'x509-certificate'."
+,,x509-certificate--75076b97-d89b-42a0-9671-e7f2d2cb5603,CN=WIN-7FUHAU7D2HV,,,CN=WIN-7FUHAU7D2HV,x509-certificate,,,,"The object contains a detailed certificate information, which includes:
+
+* The subject of the certificate is 'CN=WIN-7FUHAU7D2HV', indicating that it belongs to or is issued by this specific entity.
+* The issuer of the certificate is also 'CN=WIN-7FUHAU7D2HV', suggesting a self-signed certificate or one issued by a trusted root authority.
+* The type of certificate is x509-certificate, which is a widely used format for digital certificates.
+* The labels associated with the certificate are not provided.
+
+The certificate does not have any valid dates, as 'validity_not_before' and 'validity_not_after' fields are missing."
+,,x509-certificate--8c256619-beb2-4372-aad2-ebbd43976deb,CN=WIN-J9D866ESIJ2,,,CN=WIN-J9D866ESIJ2,x509-certificate,,,,"The object contains a certificate details that are relevant to its functionality. 
+
+It appears that the certificate is of type x509-certificate. The issuer name is 'CN=WIN-J9D866ESIJ2', which suggests that it was issued by a Windows operating system.
+
+The subject name matches the issuer name, indicating that the certificate and the issuing entity share the same name. This could imply that the certificate was generated internally within the Windows environment or that it is not being used for external purposes.
+
+There are no labels associated with the certificate, which might indicate that it has a specific purpose but this information is not available.
+
+The serial number is missing, so it cannot be determined what version of the system issued the certificate. 
+
+It is also unclear when the certificate will expire as both 'validity_not_before' and 'validity_not_after' fields are empty, indicating there is no current date range."
+,,x509-certificate--03df022a-cf30-4117-9b9d-327860669d67,CN=DESKTOP-TCRDU4C,,,CN=DESKTOP-TCRDU4C,x509-certificate,,,,"The object contains a certificate with the following attributes:
+
+The certificate has an issuer name of ""DESKTOP-TCRDU4C"" which is associated with the subject name. 
+
+It does not have a description or any labels. The serial number and type of the certificate are also unknown.
+
+The validity period of the certificate, from not before to not after, is undefined as they are represented by 'nan'."
+,"{""SHA-1"": ""d398f76c7ba0bbf79b1cac0620cdf4b42e505195"", ""MD5"": ""4a963519b4950845a8d76668d4d7dd29"", ""SHA-256"": ""918fb8af4998393f5195bafaead7c9ba28d8f9fb0853d5c2d75f10e35be8015a""}",x509-certificate--a8a68ec3-cb65-46fe-b53c-c2ce89a03294,"O=Internet Widgits Pty Ltd, S=Some-State, C=AU",,81bab2934ee32534,"O=Internet Widgits Pty Ltd, S=Some-State, C=AU",x509-certificate,2046-12-24T03:33:00Z,2019-08-08T03:33:00Z,,"The object contains a detailed description of an X509 certificate, which is a type of digital certificate used for security purposes. The certificate has the following properties:
+
+The certificate is issued by Internet Widgits Pty Ltd, a company based in some-state in Australia.
+
+The subject of the certificate matches the issuer's identity, indicating that it is likely a self-signed or internal certificate.
+
+The certificate has a serial number assigned to it, which is unique to this specific certificate. This serial number is '81bab2934ee32534'.
+
+The validity period of the certificate is specified by the timestamps for its not-before and not-after dates. The certificate becomes valid from August 8, 2019 at 03:33:00 UTC and expires on December 24, 2046 at 03:33:00 UTC.
+
+A SHA-1 hash, MD5 hash, and SHA-256 hash are provided for the certificate. These hashes can be used to verify the integrity of the certificate's contents.
+
+The X509 version 3 thumbprint is also present, which provides an additional layer of verification."
+,"{""SHA-1"": ""7e3f5ac90b8154af5070f01c05b6a4ce633c58ee""}",x509-certificate--1e210d7a-182d-4986-903d-ff44540cf9ef,CN=Zbtrprwgxex,,,CN=Zbtrprwgxex,x509-certificate,9999-12-31T23:59:00Z,2025-04-02T17:01:00Z,,"The object contains information about an X.509 certificate. The certificate details are as follows:
+
+- The issuer of the certificate is identified by its common name (CN) as 'Zbtrprwgxex'. 
+- The subject of the certificate, which is typically the entity that holds or is entitled to hold the certificate, also has a CN of 'Zbtrprwgxex'.
+- The type of this certificate is an X.509 certificate.
+- This certificate was issued with SHA-1 hashing, and its hash value is provided in hexadecimal format as ""7e3f5ac90b8154af5070f01c05b6a4ce633c58ee"".
+
+The validity period of the certificate has two specified dates: 'validity_not_before' which indicates when the certificate was issued (April 2, 2025), and 'validity_not_after', which signifies its expiration date (December 31, 9999)."
+,,x509-certificate--aeae9dd1-3351-447a-92fd-9ba467b7ef21,,,,lala.exe,x509-certificate,,,,"The object contains a certificate with the following characteristics:
+
+* The certificate is of type x509-certificate.
+* Its subject is identified as 'lala.exe', indicating it relates to a file or process named lala.exe.
+* It does not have any issued or generated by information available."
