@@ -36,7 +36,7 @@ def summarize_csv(csv_path):
     df = pd.read_csv(csv_path)
 
     csv_file=Path(csv_path).stem+".csv"
-    csv_file_path=Path("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/Summarized_files")/csv_file
+    csv_file_path=Path("E:/college/NITK Internship/stix_normalizer/stix_normalizer/stix_intelligence_analyzer/modules/Summarized_files")/csv_file
     csv_file_path.parent.mkdir(parents=True, exist_ok=True)
 
     rows = [row for _, row in df.iterrows()]

@@ -1,0 +1,132 @@
+summary,id,type
+"The object contains information about an identity threat actor named SEQRITE Labs. This identity is associated with the organization SQRITE Labs, which is a publisher of threat intelligence reports. The report has been STIXed by TI Mindmap HUB, indicating that it follows the STIX (Standard Threat Intelligence eXchange) format.
+
+SEQRITE Labs serves as an organization within the kill chain phases and has various attributes such as sophistication, primary motivation, tool types, malware types, and threat actor types. However, these values are currently unknown due to being represented by null or not applicable (nan).
+
+The object does provide a description of SEQRITE Labs as a publisher of this specific threat intelligence report. Additionally, it provides some external references but they are also null.",identity--5df7e8d9-d5c2-392a-f67d-511811817c4a,identity
+"The object contains information about an AI-powered threat intelligence platform called TI Mindmap HUB. This platform generates STIX bundles from Open-Source Intelligence (OSINT) sources, which suggests that it uses publicly available data to identify and analyze potential threats.
+
+TI Mindmap HUB is classified as a type of identity, indicating that it is an organization or entity that can be identified and tracked. However, the primary motivation for this platform is not explicitly stated, but rather categorized under ""primary_motivation"" which remains unknown at this point.
+
+The object also mentions several types of threats and attack vectors, including malware types, kill chain phases, threat actor types, and tool types. These categories suggest that TI Mindmap HUB can identify and analyze a wide range of potential threats to an organization's security, from malicious software (malware) to various stages of an attacker's kill chain.
+
+Additionally, the object contains information about the capabilities of TI Mindmap HUB, including its sophistication level, which is currently unknown. This suggests that the platform may be capable of advanced threat analysis and intelligence gathering, but more information would be needed to fully understand its capabilities.
+
+Overall, the object provides a general overview of TI Mindmap HUB's functionality and capabilities as an AI-powered threat intelligence platform, highlighting its potential to identify and analyze complex security threats.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439,identity
+"The object contains information about a sophisticated spear phishing attack. The threat actors have crafted a highly convincing government-themed lure document, written in Pashto, complete with official logos, formatting, reference numbers, and signatures, to deceive Afghan government employees. This decoy is specifically targeted at ministries and administrative offices.
+
+The document creates urgency by setting deadlines and mimics authentic communication from the Prime Minister's Office, aiming to trick recipients into opening attached malicious files. The use of culturally and contextually relevant details increases the likelihood of successful initial compromise by leveraging trust in official communications.
+
+This attack pattern has been identified as a technique used by threat actors, denoted as T1566/001 according to the Mitre-attack database, where it is listed under the category of email-based attacks.",attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6,attack-pattern
+"The object contains information about a malicious attack pattern that leverages an ISO file to deliver payload and evade security controls. Attackers use an ISO file named to resemble an official Afghan government document, which serves as the initial container for malicious files.
+
+The ISO file contains multiple components, including a decoy PDF, a shortcut (LNK) file, and a final payload disguised as an image file. By using this format, attackers can evade common security controls such as email and endpoint security measures.
+
+Specifically, Windows mounts ISO files as virtual drives, which often prevents embedded files from inheriting Mark-of-the-Web restrictions. This allows the malicious content to execute without triggering security warnings or sandboxing, increasing its chances of success.
+
+The attack pattern is categorized under the MITRE ATT&CK framework and corresponds to technique T1204.002. It falls under the initial access phase of the kill chain.
+
+There is no detailed information available on the goals, sophistication, primary motivation, malware types, or tool types associated with this attack pattern. However, it does demonstrate the use of mark-of-the-web evasion techniques to bypass security controls and deliver malicious payloads.",attack-pattern--263ad44e-f792-e4c1-48f7-22e854ade5fd,attack-pattern
+"The object contains a malicious attack pattern that uses a specially crafted LNK shortcut file to distract the victim while copying the payload to the C:\\ProgramData directory. The LNK file creates a hardlink in the Startup folder under the name 'searchmgr.exe' using the mklink command, ensuring the malware is executed upon system boot for persistence. This multi-step process allows for stealthy execution and persistence while maintaining the appearance of legitimacy.
+
+The attack pattern involves the creation of a decoy PDF that appears to be legitimate, which serves as a distraction for the victim. While the victim is focused on the decoy PDF, the LNK file executes the payload (FALSECUB) in the C:\\ProgramData directory.
+
+The attack pattern has been referenced by MITRE ATT&CK, with a technique ID of T1218/007, indicating that it falls under the category of using a malicious LNK file as part of an attack. The primary goal of this attack pattern is not explicitly stated, but its purpose appears to be to execute payload code and maintain persistence on the compromised system.
+
+The attack pattern's sophistication level is not known at this time, as this information was not provided in the data. However, it is clear that this technique requires a certain level of expertise and planning to execute effectively.",attack-pattern--ef21ccbe-3bdc-72fd-14d2-1492aca8aa1d,attack-pattern
+"The object contains information about an attack pattern identified as ""Payload Masquerading as Image File"". This attack pattern involves disguising a payload, specifically FALSECUB, by giving it a .jpg extension to make it appear as a harmless image file. The goal is to deceive both human users and automated security controls, thereby reducing the likelihood of the executable being flagged as suspicious during manual inspection or automated scanning.
+
+The masquerading technique used in this attack pattern is employed throughout the infection chain, from delivering the payload in an ISO file to its execution. This increases the stealth of the operation and reduces the risk of detection during various stages of the attack.
+
+The object also references external sources, including a link to the MITRE ATT&CK framework, which provides additional information about the technique used (T1036/008). However, no further details are provided in the metadata section of this object.",attack-pattern--a46b9ecc-e2b1-f551-c919-32f200f83765,attack-pattern
+"The object contains information about a specific attack pattern known as ""Persistence via Hardlink in Startup Folder."" This attack pattern involves creating a hardlink to the malware payload in the Windows Startup folder using the mklink command, mimicking a legitimate system process. The hardlink is named ""searchmgr.exe,"" which ensures that the malware is executed every time the system boots, providing persistence across reboots.
+
+The use of a hardlink rather than a simple shortcut or registry modification is a less common method for achieving persistence, potentially bypassing some security controls that monitor traditional persistence mechanisms. This approach allows the attacker to maintain control over the system even when other detection methods are not triggered.
+
+It's worth noting that this attack pattern falls under the Mitre Attack framework, specifically within the ""persistence"" phase. This indicates that the primary goal of the attack is to establish a persistent presence on the compromised system. The attack pattern does not specify any particular malware type or threat actor, but rather focuses on the method used to achieve persistence.",attack-pattern--0712f37a-86a9-9e1e-fbbd-f1c9435d4747,attack-pattern
+"The object contains information about a specific type of malware known as the FALSECUB malware. This malware incorporates multiple anti-analysis techniques to evade detection and hinder reverse engineering, making it more challenging for security analysts to analyze or detect.
+
+To achieve this, the malware uses various APIs such as GetTickCount64, GlobalMemoryStatusEx, and IsDebuggerPresent. The latter two checks are used to determine if the malware is running in an analysis environment, which often includes low physical memory typical of such environments. If any of these checks indicate that it is running in a debugger or an analysis environment, the malware employs Sleep APIs to delay execution or halt.
+
+This approach makes dynamic analysis more difficult and reduces the likelihood of successful sandboxing or automated detection by malicious analysts. The FALSECUB malware utilizes this strategy to evade detection and hinder reverse engineering efforts, making it a sophisticated threat.
+
+The object also provides additional context about the malware through external references, including a link from Mitre-Attack with an ID of T1497.001.",attack-pattern--76a1ccfa-0ced-79ea-a2fb-719aa5191bcb,attack-pattern
+"The object contains a detailed description of an attack pattern known as ""Command and Control via Embedded C2 Address."" This attack pattern involves the use of the FALSECUB implant, which connects to a command-and-control (C2) server using an embedded address in its code once anti-analysis checks are passed. The connection allows the threat actor to remotely control the infected machine, exfiltrate data, and potentially deliver additional payloads.
+
+The connection is established immediately after persistence is achieved, enabling ongoing communication and control over compromised systems within targeted Afghan government networks. This attack pattern falls under the kill chain phase of ""command-and-control"" as identified by the MITRE ATT&CK framework.
+
+It is worth noting that there is no information available about the goals, sophistication, primary motivation, or tool types associated with this attack pattern. However, it can be inferred that this attack pattern involves a sophisticated threat actor utilizing advanced tactics to compromise and control systems within targeted networks.",attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b,attack-pattern
+"The object contains a description of the FALSECUB malware, which is a C++ executable payload delivered via malicious ISO and LNK files. It appears to be designed to establish persistence in a system, evade analysis techniques, and connect to a command-and-control server for remote access and further malicious activities.
+
+Furthermore, FALSECUB is classified as a Trojan and a backdoor, indicating that it allows attackers to gain unauthorized access to a system while also providing a means of hiding their presence. The malware's sophistication level is unknown, but it is noted to use certain tactics such as persistence, anti-analysis, command-and-control, and remote-access capabilities.
+
+It is worth noting that the primary motivation behind the creation of FALSECUB is currently unclear, as this information is not provided in the data. Additionally, some other relevant details about the malware, including its tool types, threat actor types, and kill chain phases, are also unknown due to a lack of information in the given data.
+
+Overall, the provided data offers insight into the characteristics and functionality of the FALSECUB malware, providing context for understanding its behavior and potential impacts on compromised systems.",malware--835973ab-0257-9260-7968-93f90b13e03d,malware
+"The object contains information about an unidentified threat actor targeting Afghan government employees. This group is using a multi-stage infection chain involving ISO, LNK, and a custom payload named FALSECUB to compromise the Afghan government sector organizations.
+
+The primary motivation of this threat actor is espionage, with goals that include compromising Afghan government sector organizations, establishing persistence on victim machines, and exfiltrating sensitive government information. The sophistication level of this group is classified as intermediate.
+
+It's worth noting that the object contains operational security mistakes, which have led to some infrastructure exposure. However, these details are not further specified in the provided data.",threat-actor--2c400e9d-96e9-40d9-4e39-36c7e9a10e92,threat-actor
+"The object contains information about a malicious tool called ""mklink"" that is used by the LNK file to create a hardlink in the Startup folder, enabling persistence on the system. This persistence ensures that the malicious payload is executed whenever the system boots.
+
+The mklink tool is associated with several goals and kill chain phases, including persistence, which suggests that its primary purpose is to maintain the malicious presence of the LNK file on the system. The tool's sophistication level is not specified in this data.
+
+In terms of malware types, external references, and threat actor types, there is no information available for the mklink tool. However, it is categorized as a persistence tool, which falls under the ""exploitation"" and ""persistence"" categories.
+
+The mklink tool has a primary motivation that is not specified in this data.",tool--34837457-9cff-22c4-dcb9-03bd39bc1fd8,tool
+"The object contains information about a malicious tool called ""start"" that is used to execute a payload by mimicking legitimate application execution after persistence is established. The tool exploits the start command, which is abused by the LNK file, to achieve this goal.
+
+The purpose of the tool is not explicitly stated as a family or type, but it appears to be related to executing malicious implants. However, without further information about its characteristics and behavior, it's difficult to determine its exact purpose or classification.
+
+The tool does not have any known external references or relationships with other entities. Its sophistication level is also unknown, which makes it challenging to assess its capabilities and potential impact.
+
+The kill chain phase associated with this tool is only ""execution,"" which suggests that it is involved in the later stages of an attack where the payload is executed. The malware types and threat actor types are not specified, but the fact that the tool is used for execution implies that it may be related to specific types of malware or attackers.
+
+The primary motivation behind using this tool is unknown, as its sophistication level is unspecified. However, the fact that it can mimic legitimate application execution suggests that its primary goal may be to evade detection by mimicking benign behavior.
+
+In summary, while there is limited information available about this malicious tool, it appears to be used for executing a payload and mimicking legitimate application execution after persistence is established, suggesting a sophisticated attack capability.",tool--ea2b2676-c28c-0db2-6d39-331a336c6b92,tool
+"The object contains information about a type of malicious attack on Windows shortcut files. Legitimate Windows shortcut files are being exploited to open decoy documents simultaneously while executing malicious commands that copy, persist, and launch the malware payload.
+
+This attack involves deception, as legitimate shortcut files are being used to trick users into opening malware-laden documents. The attackers' goal is not explicitly stated in this data snippet, but it appears to be related to evading detection or creating a false sense of security by using familiar file types.
+
+The attack vector seems to focus on the ""execution"" phase, where the malicious commands are executed without the user's knowledge or consent. This suggests that the attackers are trying to achieve a specific goal through this type of activity, possibly related to data exfiltration, lateral movement, or other forms of cyber espionage.
+
+It is worth noting that the sophistication level and primary motivation behind this attack are not explicitly stated in this data snippet. However, it appears that the attack involves some level of social engineering or deception, as legitimate shortcut files are being used to trick users into engaging with malicious content.
+
+Overall, the object provides a general overview of a type of attack on Windows shortcut files, but further analysis would be needed to determine the specific goals and motivations behind this activity.",tool--bb574d1f-4a2b-811e-2ca3-882adc77fe6a,tool
+"The object contains information about a tool used by malware, specifically the GetTickCount64 API. This tool is utilized for anti-analysis purposes, allowing the malware to detect if it's running in a debugging or sandbox environment by measuring system uptime. The tool falls under the category of defense-evasion and information-gathering tactics.
+
+The primary function of this tool is to provide the malware with insights into its surroundings, enabling it to adapt and evade detection efforts. By leveraging the GetTickCount64 API, the malware can gather valuable information about its system environment, including the amount of time since the last reboot or system update.
+
+In terms of its sophistication level, the use of this tool suggests that the malware is capable of sophisticated evasion techniques, making it challenging for security analysts to detect and analyze. However, without further context, it's difficult to determine the exact sophistication level of this particular tool.
+
+The primary motivation behind using this tool appears to be defense-evasion, as it allows the malware to remain undetected while running its malicious payload. This is evident from its classification under the Mitre-Attack framework, which focuses on techniques used by attackers to evade detection and analysis.",tool--959b7969-cc5d-4e84-860a-a7330b1254a6,tool
+"The object contains information about a malicious tool, specifically the GlobalMemoryStatusEx API, which is used by malware to detect analysis environments. The primary purpose of this tool is to evade detection in low-memory sandboxes by checking the amount of physical memory.
+
+This tool falls under the category of defense-evasion tactics and information-gathering techniques. Its sophistication level is not specified, but it is classified as a threat actor type and a tool type that is associated with these activities.
+
+The GlobalMemoryStatusEx API is used to detect analysis environments, which suggests that the malware is trying to avoid being detected by security measures or analysts. The fact that this tool is mentioned in conjunction with the Mitre Attack framework's ""defense-evasion"" phase further supports this interpretation.
+
+It is worth noting that some information about the tool is missing, including its family classification and primary motivation, which might provide additional context about its intended use or goals. However, based on the available information, it can be concluded that the GlobalMemoryStatusEx API is a malicious tool used by malware to evade detection in low-memory environments.",tool--f61e486a-4618-5fc7-80c1-fc704290ed49,tool
+"The object contains information about a tool used by malware to determine if it is being debugged, thereby evading analysis and detection. This tool leverages the IsDebuggerPresent API to achieve its primary goal of defense evasion. The malware utilizes this technique to avoid detection and analysis, making it more difficult for security researchers to identify and understand the malicious activity.
+
+The tool is categorized as a defense-evasion tactic, which falls under the broader category of kill chain phases. In this specific case, the tool's defense-evasion phase is associated with the MITRE-ATTACK framework. The tool's primary motivation is not explicitly stated, but its purpose is to help malware evade detection.
+
+The tool types associated with this object are ""defense-evasion"" and ""information-gathering"", indicating that it can be used for both evasion techniques and gathering information about the system or environment it operates in. However, the specific threat actor types and sophistication level of the tool are not specified.
+
+Overall, the IsDebuggerPresent API is a tool designed to aid malware in evading detection and analysis by exploiting vulnerabilities related to debugging and system instrumentation.",tool--ce173db8-5211-3ba7-5e9d-1940255e9080,tool
+"The object contains information about a specific type of malware tool, known as the Sleep API. The primary function of this tool is to introduce delays into a system's execution, which can hinder automated analysis and sandbox detection by pausing execution for specified intervals. This tactic is used by the malware to evade detection methods.
+
+Additionally, the tool uses a technique called ""defense-evasion,"" which is classified under the kill chain phase ""mitre-attack"" as per the provided data. The use of this method suggests that the Sleep API is employed to deceive or mislead security systems, making it more difficult for them to detect and analyze the malware.
+
+The tool's sophistication level and primary motivation are not specified in the provided information, leaving these aspects unclear. However, the fact that it uses a defense-evasion tactic implies that the malware developers aim to evade detection rather than cause direct harm.
+
+In terms of classification, the Sleep API is categorized as a ""tool"" within the framework of threat actors and tool types. The tool's capabilities are primarily focused on defense evasion, making it useful for malware authors seeking to obscure their malicious activities from security systems.",tool--44f5ed64-7ec5-425e-c99c-64881ce48058,tool
+"The object contains information about a threat actor that exploits the GitHub platform to host and deliver malicious files to victims. This attack bypasses traditional security controls by leveraging the trustworthiness of the GitHub platform, making it a popular target for malicious activities.
+
+The primary mechanism of this attack involves using GitHub as a cloud-based resource to distribute the initial malicious ISO file. This allows the attackers to evade detection by security systems that are typically designed to block or detect specific types of malware.
+
+The tool used in this attack is associated with the MITRE ATT&CK framework, specifically the ""resource-development"" phase. This indicates that the primary goal of this threat actor is to develop resources and tools to facilitate their malicious activities.
+
+Furthermore, the GitHub platform is used for initial access, allowing attackers to gain a foothold on the victim's system and establish further attacks from within.",tool--bf215181-b514-0522-137b-3d4f6b73544a,tool
