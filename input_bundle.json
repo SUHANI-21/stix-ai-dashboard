@@ -1,0 +1,40 @@
+{
+  "type": "bundle",
+  "id": "bundle--a3f8c921-1d45-4b91-8a21-9e8c3d7a1111",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--91b2d7a4-6c5e-4d21-9b33-f8a99c221234",
+      "created": "2026-02-05T10:00:00Z",
+      "modified": "2026-02-05T10:00:00Z",
+      "name": "ShadowLock",
+      "description": "ShadowLock is a hybrid malware that encrypts victim files for ransom while maintaining a hidden backdoor for remote access. It records keystrokes to steal credentials and allows attackers to execute commands through a command-and-control server.",
+      "is_family": false,
+      "first_seen": "2025-11-20T00:00:00Z",
+      "last_seen": "2026-01-30T00:00:00Z",
+      "architecture_execution_envs": [
+        "x64"
+      ],
+      "operating_system_refs": [
+        "windows"
+      ],
+      "aliases": [
+        "ShadowCrypt",
+        "DarkLock"
+      ],
+      "capabilities": [
+        "file-encryption",
+        "remote-command-execution",
+        "credential-theft",
+        "keystroke-logging",
+        "persistence"
+      ],
+      "labels": [
+        "hybrid-malware",
+        "financial-motivation"
+      ]
+    }
+  ]
+}

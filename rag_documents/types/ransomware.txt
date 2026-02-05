@@ -1,0 +1,19 @@
+Ransomware encrypts or blocks access to files and demands payment for restoration.
+
+Key Characteristics:
+- Data encryption
+- Ransom notes
+- Payment demands
+- Double extortion
+
+Common Behaviors:
+- Deletes backups
+- Lateral movement
+- Credential theft
+- Data exfiltration
+
+Indicators:
+- Encrypted files
+- Changed extensions
+- Ransom messages
+- Disabled security tools

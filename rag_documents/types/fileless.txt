@@ -1,0 +1,18 @@
+Fileless malware operates in memory without writing files to disk.
+
+Key Characteristics:
+- Memory-resident
+- Uses legitimate tools
+- Avoids traditional detection
+
+Common Behaviors:
+- PowerShell abuse
+- Registry manipulation
+- WMI execution
+- Reflective DLL injection
+
+Indicators:
+- Suspicious scripts
+- Abnormal PowerShell usage
+- No malware files present
+- Registry persistence

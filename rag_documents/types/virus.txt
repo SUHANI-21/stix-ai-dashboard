@@ -1,0 +1,18 @@
+Viruses attach themselves to legitimate files and spread when executed.
+
+Key Characteristics:
+- File infection
+- Self-replication
+- Payload execution
+
+Common Behaviors:
+- Infects executables
+- Corrupts files
+- Displays payloads
+- Spreads via media
+
+Indicators:
+- Corrupted files
+- Unexpected behavior
+- Frequent crashes
+- Antivirus alerts

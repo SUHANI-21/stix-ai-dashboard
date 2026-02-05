@@ -1,0 +1,18 @@
+Rootkits hide malware by modifying operating system components.
+
+Key Characteristics:
+- Kernel-level access
+- Stealth persistence
+- Privilege escalation
+
+Common Behaviors:
+- Hooking system calls
+- Hiding processes
+- Tampering with drivers
+- Bypassing antivirus
+
+Indicators:
+- Hidden services
+- Unusual drivers
+- System instability
+- Tampered logs

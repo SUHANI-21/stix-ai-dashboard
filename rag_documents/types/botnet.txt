@@ -1,0 +1,19 @@
+A botnet is a network of compromised devices controlled remotely by attackers through command-and-control (C2) servers.
+
+Key Characteristics:
+- Centralized or decentralized control
+- Large-scale coordination
+- Remote command execution
+
+Common Behaviors:
+- DDoS attacks
+- Spam campaigns
+- Credential harvesting
+- Cryptomining
+- Data exfiltration
+
+Indicators:
+- Unusual outbound traffic
+- Periodic C2 connections
+- High network usage
+- Unknown background processes

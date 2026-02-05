@@ -1,0 +1,18 @@
+Supply chain malware compromises software vendors to distribute infected updates.
+
+Key Characteristics:
+- Trusted distribution abuse
+- Long-term infiltration
+- Wide-scale impact
+
+Common Behaviors:
+- Backdoored updates
+- Build system compromise
+- Code injection
+- Certificate abuse
+
+Indicators:
+- Compromised updates
+- Unknown code segments
+- Unexpected behaviors
+- Vendor breach reports

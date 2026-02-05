@@ -1,0 +1,18 @@
+Keyloggers record keystrokes to steal credentials and sensitive information.
+
+Key Characteristics:
+- Input monitoring
+- Credential theft
+- Stealth operation
+
+Common Behaviors:
+- Keyboard hooks
+- Screen capture
+- Clipboard monitoring
+- Data transmission
+
+Indicators:
+- Unknown drivers
+- Suspicious processes
+- Unauthorized logins
+- Data leaks

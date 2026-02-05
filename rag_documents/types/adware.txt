@@ -1,0 +1,20 @@
+Adware is malware that automatically displays, injects, or downloads advertisements without user consent.
+
+Key Characteristics:
+- Shows pop-ups, banners, or redirects
+- Modifies browser settings
+- Injects ads into websites
+- Tracks browsing behavior
+- Generates revenue via ad clicks
+
+Common Behaviors:
+- Installs browser extensions
+- Alters homepage/search engine
+- Collects user activity data
+- Slows system performance
+
+Indicators:
+- Excessive advertisements
+- Browser hijacking
+- Unknown extensions
+- Performance degradation

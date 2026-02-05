@@ -1,0 +1,18 @@
+Worms are self-replicating malware that spreads without user interaction.
+
+Key Characteristics:
+- Autonomous propagation
+- Network exploitation
+- Rapid spreading
+
+Common Behaviors:
+- Scans networks
+- Copies itself
+- Exploits vulnerabilities
+- Consumes bandwidth
+
+Indicators:
+- Network congestion
+- Multiple copies
+- Rapid spread
+- System slowdown
