@@ -6,7 +6,7 @@ import os
 from collections import defaultdict
 
 # ── Your modules ─────────────────────────────────────────────────────────────
-from modules.SDO_graphs import graph, get_ego_graph
+from modules.SDO_graphs import build_stix_graph, get_ego_graph
 
 # ── Pipeline odules ─────────────────────────────────────────────────────────
 from modules.bundles_2_csv import stix_json_to_csv
@@ -33,6 +33,12 @@ if "selectable_ids" not in st.session_state:
 
 if "pipeline_done" not in st.session_state:
     st.session_state.pipeline_done = False
+
+if "bundle_graph" not in st.session_state:
+    st.session_state.bundle_graph = None
+    
+if "bundle_path" not in st.session_state:
+    st.session_state.bundle_path = None
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PIPELINE WRAPPER
@@ -91,6 +97,11 @@ with st.sidebar:
                     st.session_state.similarity_map.keys()
                 )
                 st.session_state.pipeline_done = True
+                
+                # Build graph from the uploaded bundle
+                with st.spinner("Building graph from bundle…"):
+                    st.session_state.bundle_graph = build_stix_graph(os.path.dirname(bundle_path))
+                    st.session_state.bundle_path = bundle_path
 
                 st.success("Similarity data ready for visualization")
             else:
@@ -102,6 +113,11 @@ with st.sidebar:
             "Path to similarity JSON",
             value=default_path
         )
+        
+        bundle_json_path = st.text_input(
+            "Path to source STIX bundle (optional, for graph building)",
+            value=""
+        )
 
         if similarity_json_path and os.path.isfile(similarity_json_path):
             with open(similarity_json_path, encoding="utf-8") as f:
@@ -111,16 +127,25 @@ with st.sidebar:
                 st.session_state.similarity_map.keys()
             )
             st.session_state.pipeline_done = True
+            
+            # Build graph from bundle if provided
+            if bundle_json_path and os.path.isfile(bundle_json_path):
+                with st.spinner("Building graph from bundle…"):
+                    st.session_state.bundle_graph = build_stix_graph(os.path.dirname(bundle_json_path))
+                    st.session_state.bundle_path = bundle_json_path
 
 # ─────────────────────────────────────────────────────────────────────────────
 # HARD GATE
 # ─────────────────────────────────────────────────────────────────────────────
-if not st.session_state.pipeline_done:
-    st.info("Upload a bundle or load a similarity JSON to start.")
+if not st.session_state.pipeline_done or st.session_state.bundle_graph is None:
+    st.info("📤 Upload a STIX bundle to start the similarity pipeline.")
     st.stop()
 
 similarity_map = st.session_state.similarity_map
 selectable_ids = st.session_state.selectable_ids
+
+# Use bundle graph if available
+graph = st.session_state.bundle_graph
 
 # ─────────────────────────────────────────────────────────────────────────────
 # GROUP IDS BY TYPE
@@ -130,10 +155,19 @@ def group_by_type(ids):
     by_type = defaultdict(list)
     for obj_id in ids:
         if obj_id in graph:
-            by_type[graph.nodes[obj_id].get("type", "unknown")].append(obj_id)
-    return dict(by_type)
+            obj_type = graph.nodes[obj_id].get("type", "unknown")
+            by_type[obj_type].append(obj_id)
+        else:
+            # Fallback: try to extract type from ID if not in graph
+            try:
+                obj_type = obj_id.split("--")[0]  # Extract type from STIX ID
+                by_type[obj_type].append(obj_id)
+            except:
+                by_type["unknown"].append(obj_id)
+    return dict(by_type) if by_type else {"No types found": []}
 
 nodes_by_type = group_by_type(tuple(selectable_ids))
+st.write(f"DEBUG: nodes_by_type = {nodes_by_type}")
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PYVIS RENDER (CACHED)
@@ -198,7 +232,13 @@ html = render_cached(selected_id)
 st.components.v1.html(open(html, encoding="utf-8").read(), height=600, scrolling=True)
 
 with st.expander("Selected object JSON"):
-    st.json(graph.nodes[selected_id])
+    if selected_id in graph:
+        st.json(graph.nodes[selected_id])
+    else:
+        # If not in graph, try to get from similarity_map
+        st.warning(f"Object {selected_id} not in main graph. Showing from similarity data...")
+        if selected_id in similarity_map:
+            st.json(similarity_map[selected_id])
 
 st.divider()
 
