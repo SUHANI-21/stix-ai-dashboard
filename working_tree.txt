@@ -1,0 +1,52 @@
+* 2c4addbc (origin/malware_classifier, malware_classifier) Initial commit
+| * 09b30131 (origin/main, origin/HEAD) Merge feature/dashboard: conclude merge (resolved conflicts)
+|/| 
+| * cea12c77 (origin/feature/dashboard) Update dashboard
+| | *   927bc11e (HEAD -> feature/SDO_similarity_search, origin/feature/SDO_similarity_search) Merge pull request #3 from dsouzalwyn14120/feature/rag_agent
+| | |\  
+| | | * 1da3a3cf Add SDO summary CSVs; update .gitignore
+| | * | ec044dbf Merge pull request #2 from dsouzalwyn14120/feature/rag_agent
+| | |\| 
+| | | * 37e685b8 Add stix_bundle-18similar_ids.json
+| | * | 6d377533 Merge pull request #1 from dsouzalwyn14120/feature/rag_agent
+| |/| | 
+|/| |/  
+| | * a7071d6e Add SDO similarity search pipeline and UI
+| |/  
+|/|   
+* | 668fc0a6 (main, feature/rag_agent) add rag agent setup, not tested yet
+* |   5b0d49e6 Merge malware_mapping branch - added ML models and pipeline
+|\ \  
+| * | c18053a8 (origin/malware_mapping, malware_mapping) Initial Commit
+| | | * c598df06 (origin/feature/rag_agent) Configure Git LFS for large vector database files
+| | | * 86fce787 add rag agent
+| | | * 469a5fda add rag agent setup, not tested yet
+| | | *   e6910326 Merge malware_mapping branch - added ML models and pipeline
+| | | |\  
+| | | | * f9a66511 Initial Commit
+| | | * |   f1b5ce5e Merge branch 'feature/dashboard'
+| | | |\ \  
+| | | | * | 098731ea Add changes to dashboard and analyser
+| | | | * | 48987b37 Updated dashboard UI, graph filters, node counts, styling improvements
+| | | | |/  
+| | | * / d326cf98 add file based storage and file browser feature in Streamlit Web App
+| | | |/  
+| | | * e786c975 add version detection & converter
+| | | * 922f7452 Initial commit - AI CTI Dashboard
+| | | * 8a7e111a (refs/stash) WIP on main: c00011e4 Merge branch 'feature/dashboard'
+| |_|/| 
+|/| | | 
+| | | * 9c343b52 index on main: c00011e4 Merge branch 'feature/dashboard'
+| |_|/  
+|/| |   
+* | |   c00011e4 Merge branch 'feature/dashboard'
+|\ \ \  
+| | |/  
+| |/|   
+| * | 3a29c392 (feature/dashboard) Add changes to dashboard and analyser
+| * | 8c32d302 Updated dashboard UI, graph filters, node counts, styling improvements
+| |/  
+* / 25bba6b6 (origin/feature/addstorage, feature/addstorage) add file based storage and file browser feature in Streamlit Web App
+|/  
+* b776a624 add version detection & converter
+* bf0a137c Initial commit - AI CTI Dashboard

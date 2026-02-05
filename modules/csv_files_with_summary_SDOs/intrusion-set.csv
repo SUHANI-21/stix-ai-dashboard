@@ -1,0 +1,827 @@
+summary,id
+"The object contains information about a threat actor cluster known as the Chinese-speaking React2Shell Operators. This group leverages the React2Shell Proof of Concept (PoC) and exploits the CVE-2025-55182 vulnerability to carry out cryptojacking and persistence attacks.
+
+The attackers utilize simplified Chinese in their scripts, host staging servers on Alibaba platforms, and employ AI-assisted tooling to aid in their operations. The primary motivation behind these activities is financial gain.
+
+The group's objectives include cryptojacking, achieving persistence, and establishing remote access.",intrusion-set--40e2c9d2-5161-4cc2-aca2-9584ec0220b3
+"The object contains information about a cyber threat group, identified as DiceyF / EarthBerberoka / Jackpot Panda. This APT (Advanced Persistent Threat) group is reportedly associated with China and has been linked to exploiting the React2Shell vulnerability (CVE-2025-55182) for targeted attacks.
+
+The group's primary motivation appears to be financial gain, with their goals including targeted exploitation, persistence, and cryptojacking. They have been observed deploying a GamePlayerFramework in online casino development studios, according to reports from Securelist and TrendMicro.
+
+The external references provided suggest that DiceyF has been involved in exploiting gambling websites, with TrendMicro reporting on the group's tactics and Securelist detailing their involvement in an online casino development studio.
+
+The object also contains information about the group's aliases, which include ""DiceyF"", ""EarthBerberoka"", and ""Jackpot Panda"".",intrusion-set--097a64e4-2ab6-4e12-a45f-64b021142741
+"The object contains information about an intrusion set, a type of cyber threat actor. The intrusion set is identified by the recurring use of three unique client fingerprints and shifting infrastructure across several Autonomous System Numbers (ASNs). This indicates that the group employs advanced tactics to evade detection.
+
+The primary motivation behind this intrusion set appears to be credential-based attacks against specific targets, such as Palo Alto Networks GlobalProtect portals and SonicWall SonicOS API endpoints. The attackers seem to focus on exploiting vulnerabilities related to client credentials, which can provide unauthorized access to sensitive systems.
+
+Several key aspects of the intrusion set are notable:
+
+*   **Unique Client Fingerprints**: The group utilizes three distinct client fingerprints, suggesting they have gained intimate knowledge of their attack vectors.
+*   **Shifting Infrastructure**: By moving across different ASNs, the attackers make it challenging for defenders to identify and contain the threat.
+*   **Palo Alto Networks and SonicWall Targets**: These organizations are likely to be high-priority targets for this intrusion set due to their security solutions and reputation as robust defenses against cyber threats.
+
+The intrusion set's goals appear to be focused on exploiting vulnerabilities in client credentials, which can lead to significant consequences for the targeted organizations.",intrusion-set--159c3b8e-da39-4b25-8fe4-e239a9aa5081
+"The object contains information about a cybersecurity threat entity known as Tomiris, an APT group. 
+
+Tomiris is a group active since at least 2021, primarily targeting government, diplomatic, and intergovernmental organizations in Russia and Central Asia. The group employs various tactics, including multi-language malware, spear-phishing, and public services like Telegram and Discord for command and control (C2). 
+
+Tomiris is associated with specific tools such as JLORAT, reverse shells, file grabbers, and post-exploitation frameworks like AdaptixC2 and Havoc. These tools suggest the group's focus on espionage, remote access, persistence, and data exfiltration. 
+
+The primary motivation behind Tomiris' activities appears to be espionage, with a secondary motivation that remains unspecified. The group is known to utilize these tactics against various targets in Russia and Central Asia.",intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93
+"The object contains information about a group of threat actors known as the ""Fantasy Hub Operators"". These operators are based in Russia and operate under a Malware-as-a-Service model. 
+
+They advertise and sell Fantasy Hub, a malicious Android app, through various channels including Telegram bots. The primary method of distribution involves targeting financial institutions and general Android users. 
+
+The threat actors provide documentation, videos, and subscription management tools to facilitate the sale of Fantasy Hub. They utilize this platform for their malicious activities.
+
+The group's tactics and techniques are not fully disclosed in the provided metadata. However, it is clear that they are utilizing malware to gain unauthorized access to devices and steal sensitive information. 
+
+The Fantasy Hub Operators primarily target financial institutions and Android users, indicating a potential threat to personal data and financial security.",intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0
+"The object contains information about a malicious threat actor group known as FortiCloud SSO Exploitation Actors. This group is actively exploiting vulnerabilities in Fortinet products to gain administrative access and export device configurations.
+
+Fortinet products are being targeted due to authentication bypass vulnerabilities (CVE-2025-59718, CVE-2025-59719) in FortiCloud SSO. The threat actors are using unattributed exploits to gain unauthorized access, which allows them to manipulate device configurations.
+
+The group's primary motivation appears to be exploiting these vulnerabilities for malicious purposes. The specific goals of the exploiters are unclear, but their actions suggest a high level of sophistication and organization.
+
+There is limited information available about this threat actor group beyond the exploitation of Fortinet products. Arctic Wolf Security Bulletin provides some context, highlighting the disclosure of these vulnerabilities (CVE-2025-59718, CVE-2025-59719) and the associated security risks.
+
+It is essential for organizations using Fortinet products to be aware of these vulnerabilities and take necessary precautions to secure their systems against exploitation by this threat actor group.",intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f
+"The object contains information about a threat actor group known as the Kimwolf/Aisuru Group. This group is responsible for operating two notable botnets: Kimwolf and Aisuru.
+
+The group's activities have led to large-scale infections and DDoS attacks, indicating their ability to cause significant disruption to online systems. Moreover, they employ proxy monetization tactics to further amplify their reach.
+
+A distinguishing feature of the Kimwolf/Aisuru Group is their advanced infrastructure resilience and rapid evolutionary capability. This allows them to adapt quickly to changing security measures and evade detection.
+
+The group's primary motivation remains unclear, with no specific goals or objectives outlined in the provided data. However, it can be inferred that their actions are aimed at causing disruption and generating revenue through proxy monetization.
+
+While some metadata fields such as timestamps and IDs have been omitted, the overall description paints a picture of a sophisticated threat actor group with significant capabilities and a focus on disrupting online systems.",intrusion-set--1ef7a21d-761f-4ed9-b9ce-2d5ad22b7f1f
+"The object contains information about a sophisticated threat group known as Sandworm, which is a Russian state-sponsored entity assessed to be associated with Russia’s Main Intelligence Directorate (GRU). The group has demonstrated a sustained focus on Western critical infrastructure, particularly the energy sector, over the past four years.
+
+Sandworm's campaign involves a tactical pivot to targeting misconfigured customer network edge devices for initial access, credential harvesting, and lateral movement. This shift in tactics has reduced vulnerability exploitation activity, highlighting the group's adaptability and sophistication.
+
+The group's primary motivation is espionage, with goals that include persistent access to critical infrastructure networks, credential harvesting for accessing victim organizations' online services, and lateral movement within victim environments. Sandworm's activities are characterized by a focus on initial access, credential harvesting, and lateral movement, making it a highly effective threat actor.
+
+The group's subcluster, known as ""Curly COMrades,"" is tracked by Bitdefender and uses host-based tradecraft, including Hyper-V abuse and CurlyShell/CurlCat implants. This information highlights the group's use of advanced techniques to maintain persistence in compromised environments.
+
+Overall, Sandworm is a highly skilled and adaptable threat actor with a demonstrated track record of successful operations against Western critical infrastructure. Its sophistication and focus on espionage make it a significant concern for organizations and governments seeking to protect themselves from state-sponsored threats.",intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2
+"The object contains information on UAT-7290, a China-nexus Advanced Persistent Threat (APT) group. The group has been active since at least 2022 and primarily targets telecommunications and critical infrastructure in South Asia and Southeastern Europe.
+
+UAT-7290's primary goal is espionage, aiming to gather sensitive information from its targets. The group also conducts initial access operations and establishes Operational Relay Box (ORB) nodes for use by other China-nexus actors. This node setup allows UAT-7290 to expand its reach and influence the activities of other threat actors.
+
+The group shares tactics, techniques, and procedures (TTPs), victimology, infrastructure, and tooling with other China-nexus adversaries, including APT10. This shared knowledge enables them to coordinate their efforts and launch more effective attacks.
+
+External sources, such as Cisco Talos and Recorded Future, have linked UAT-7290 to the Chinese PLA Unit 69010. These connections highlight the group's ties to the Chinese government and its involvement in advanced cyber espionage operations.
+
+UAT-7290's motivations are primarily driven by espionage, with secondary motivations focused on initial access. The group's activities are concentrated in the Asia-Pacific region, where it targets critical infrastructure and telecommunications networks.",intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8
+"The object contains information about Storm-0249, a financially motivated initial access broker (IAB). This group has evolved from mass phishing to sophisticated post-exploitation tactics, specializing in stealth and persistence.
+
+Storm-0249 primarily aims to enable ransomware affiliates by selling pre-built access. They achieve this through various techniques, including abusing legitimate Endpoint Detection and Response (EDR) processes such as SentinelOne's SentinelAgentWorker.exe.
+
+Specifically, the group utilizes DLL sideloading, fileless execution, and domain spoofing to evade detection. These tactics allow Storm-0249 to maintain persistence on compromised systems while remaining undetected by traditional security measures.
+
+Storm-0249's primary motivation is financial gain, with secondary goals including establishing persistent access and evading detection. The group's tactics are tailored to facilitate the operation of ransomware affiliates, making them a significant threat in the cybersecurity landscape.",intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90
+"The object contains information about a threat cluster tracked by Google's Threat Intelligence Group (GTIG). The cluster is named UNC6485 and is responsible for exploiting a specific vulnerability (CVE-2025-12480) to conduct various malicious activities.
+
+This threat cluster is characterized by its ability to escalate privileges, evade defenses, and deploy remote access utilities. It appears to be a post-exploitation threat, indicating that it is designed to operate after an initial exploit has been successful.
+
+The primary function of this threat cluster is unclear, with both primary and secondary motivations mentioned. However, the fact that it targets multiple regions suggests a high level of sophistication and reach.
+
+In terms of its properties, the threat cluster does not specify any particular country of origin or external references for further information. Its labels are also missing, which may indicate a lack of specific categorization or classification.
+
+Overall, this threat cluster represents a significant concern due to its potential to conduct malicious activities and evade detection.",intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1
+"The object contains information about the Lazarus Group, a North Korean government-aligned advanced persistent threat (APT) group. The group is known for its involvement in various malicious activities, including cyberespionage, financial theft, and disruptive attacks.
+
+Lazarus Group has been identified as having multiple aliases, including ""Lazarus"", ""APT38"", and ""Hidden Cobra"". However, its country of origin remains unknown, as indicated by the 'country' field being marked as nan (not a number).
+
+The group's primary motivations are espionage and financial gain. According to external sources, such as ESET Research, Lazarus Group has targeted companies supplying UAV technology to Ukraine in an operation known as Operation DreamJob. This campaign utilized the ScoringMathTea RAT malware.
+
+Lazarus Group's goals include espionage and theft of knowledge related to UAV technology. The group's activities have been associated with financial gain, although this is not explicitly stated as its primary motivation.
+
+The object also contains information about Lazarus Group's methods and tactics. Its primary motivation for espionage has been identified as the desire to gather sensitive information, while financial gain is seen as a secondary benefit of certain operations.
+
+It is worth noting that Lazarus Group operates at a government level, indicating its ties to the North Korean regime. However, further details about this affiliation are not provided in the object's metadata.",intrusion-set--22077c0a-f82e-4dae-9446-6d13817e4fb5
+"The object contains information about an APT (Advanced Persistent Threat) group known as SideWinder. This group is specifically targeting South Asian governments, military, and tax agencies.
+
+SideWinder uses various tactics to deliver malware, including phishing emails themed around tax refunds, DLL side-loading, Living-off-the-Land binaries, and cloud storage for payload delivery. The group has been known to use fake tax department websites to trick their targets into divulging sensitive information.
+
+The primary motivations of SideWinder are espionage, data theft, and targeting government, military, and tax organizations. They employ a multi-stage approach to deliver payloads, using various techniques to evade detection.
+
+Some notable aspects of SideWinder's activities include:
+
+- Targeting Indian tax officials with fake tax department websites
+- Leveraging Living-off-the-Land binaries for payload delivery
+- Using cloud storage to distribute malware
+
+It is essential to note that SideWinder is considered an organization threat, and their primary motivation is espionage. However, the group also engages in data theft and targets government, military, and tax organizations as part of their operations.",intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f
+"The object contains information about an Advanced Persistent Threat (APT) group known as APT28, also referred to as Fancy Bear. This Russian state-sponsored threat group is associated with multiple cyber espionage campaigns.
+
+APT28 has been linked to various operations, including the NotDoor campaign, which was attributed to them by Lab52. 
+
+In terms of its attributes and characteristics, APT28 is described as a type of ""intrusion-set"", indicating that it represents a collection or set of tactics, techniques, and procedures (TTPs) used by the group for their malicious activities.
+
+The object's labels include several key classifications: Russian, state-sponsored, and categorized under the ""apt"" designation, which likely stands for Advanced Persistent Threat.",intrusion-set--c72280a5-84c7-40da-b63f-3f86dc204519
+"The object contains information about BO Team, a hacktivist group known for targeting Russian organizations. BO Team is notable for collaborating with other hacktivist clusters, such as the Ukrainian Cyber Alliance. The group's activities are linked to the use of specific tools, including Tuoni and Cobalt Strike, in attacks.
+
+It is also suspected that BO Team shares tools and knowledge with another group, Red Likho. The group has been identified by Kaspersky, a cybersecurity firm, and its activities have been documented online.
+
+BO Team's goals and motivations are not well understood, but it appears to be a key player in the cyber threat landscape, particularly in relation to Russia. However, more information is needed to fully understand the group's objectives and tactics.",intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2
+"The object contains information about MuddyWater, a suspected Iran-backed Advanced Persistent Threat (APT) group. The group is active since at least early 2017 and primarily targets the Middle East, Europe, and North America, focusing on government, military, telecommunications, and oil industries.
+
+MuddyWater is known for its sophisticated phishing attacks using highly obfuscated techniques and custom malware payloads, including the UDPGangster and Phoenix backdoors. The group's primary motivation is espionage, with secondary goals of data theft and long-term access.
+
+The MuddyWater APT group uses a range of tactics, including phishing, custom malware, and other advanced techniques to achieve its objectives. Its targets include government agencies, military organizations, telecommunications companies, and oil industry entities.
+
+The group's activities are focused on gaining long-term access to compromised networks, allowing for the theft of sensitive data and furthering the interests of Iran. MuddyWater's use of custom malware payloads and sophisticated phishing techniques makes it a highly effective and stealthy APT group.
+
+Overall, MuddyWater is considered a significant threat to national security and cybersecurity, as its activities have far-reaching implications for governments, industries, and individuals worldwide.",intrusion-set--79cea690-70be-4e26-a251-cc908f449271
+"The object contains information about a pro-Ukrainian hacktivist group called 4BID. The group is active since early 2025 and has been involved in attacks against Russian organizations in various sectors, including manufacturing, healthcare, and government.
+
+4BID primarily operates via Telegram and has demonstrated collaboration with other hacktivist groups such as BO Team and Red Likho. The group's goals include disrupting Russian organizations, encrypting and destroying data, and publicly disclosing compromised information.
+
+The primary motivation behind 4BID's actions is ideological, while their secondary motivation is political. This suggests that the group is driven by a desire to promote Ukrainian interests and challenge Russian influence.
+
+It is worth noting that 4BID's aliases are listed as [""4BID""], but the country of origin is not specified. The group's activities have been ongoing since early 2025, but the exact start date is unknown.",intrusion-set--c6dc22f0-66a4-4cfd-a2b5-c7b51a3532d4
+"The object contains information about BO Team, a hacktivist group known for conducting large-scale operations against Russian targets. They are associated with the ZeronetKit backdoor and have used ransomware such as Babuk. BO Team has also demonstrated collaboration with other hacktivist clusters.
+
+BO Team's primary motivation is not explicitly stated, but they are considered to be driven by a desire to disrupt the activities of Russian targets. They have been involved in various operations targeting Russia, although no specific goals or objectives are provided.
+
+The group's tactics and techniques are not fully disclosed, but it is known that they have used ransomware and other forms of cyber attacks. BO Team's methods are considered to be sophisticated, as evidenced by their association with the ZeronetKit backdoor.
+
+BO Team has also been linked to other malicious activities, including collaboration with other hacktivist groups. This suggests that they may be part of a larger network of cyber actors with shared goals and objectives.
+
+Overall, BO Team is considered to be a significant threat actor in the context of Russian-targeted cyber attacks, although more information would be needed to fully understand their motivations and methods.",intrusion-set--83a2cb67-383b-4e4d-95d9-35704d9e0098
+"The object contains information about a hacktivist group known as Red Likho. 
+
+Red Likho is associated with large-scale operations against Russian targets and has collaborated with other hacktivist groups like 4BID and BO Team. The group is also linked to the GoRed backdoor, indicating its involvement in sophisticated cyber activities.
+
+The primary motivation behind Red Likho's actions appears to be largely unknown, but it does not seem to have any specific or clear stated goals. Instead, the nature of their objectives seems to be somewhat ambiguous.
+
+Red Likho operates primarily against Russian targets, with information on other regions being unobtainable. Despite this, the full extent and scale of Red Likho's activities remain unclear due to lack of detailed information available.",intrusion-set--5cd406df-7087-4ed7-86f9-ce539239edf1
+"The object contains information about Qilin, a ransomware threat actor. Qilin is considered one of the more aggressive cartels in the ransomware space in 2025, boasting a very active dark web presence and being viewed as lucrative criminal cartel. According to external references, Talos Blog provides insight into Qilin's attack methods through multiple cases, further solidifying its position as a significant threat actor in this field.",intrusion-set--7bd79330-8304-461e-8ec5-1d813672cd1e
+"The object contains information about an intrusion set, specifically UAT-9686. This entity actively targets Cisco Secure Email Gateway and Secure Email and Web Manager appliances, primarily those with non-standard configurations.
+
+Key details about the threat actor include:
+
+- The primary motivation of this threat actor is not explicitly stated.
+- There are no known secondary motivations or types of threat actors associated with UAT-9686.
+
+The threat set was first mentioned in a Cisco Security Advisory document available at https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sma-attack-N9bf4",intrusion-set--2547b7cd-443f-4511-bb30-2359094e115d
+"The object contains information about an Android spyware campaign tracked by Unit 42. The campaign, identified as CL-UNK-1054, is associated with commercial spyware operations linked to private sector offensive actors (PSOAs). 
+
+It shares infrastructure and tradecraft patterns with other malicious campaigns, raising concerns about possible connections to Stealth Falcon and the Variston spyware framework.",intrusion-set--4e5c3c3d-968c-42b0-aa3b-6439a8e97992
+"The object contains information about an evolving cyber threat campaign known as WEBJACK. Here is a detailed summary of the data:
+
+The WEBJACK campaign is an IIS hijacking operation that leverages search engine optimization (SEO) tactics for fraudulent and monetization purposes. The attackers compromise IIS servers to deploy malicious modules, conduct SEO poisoning, redirect users to gambling sites, and generate revenue from traffic.
+
+The campaign utilizes Chinese red-team tools and primarily targets high-profile websites in Vietnam, Latin America, and Asia. WEBJACK is a financially motivated threat actor that employs tactics such as SEO poisoning, fraud, monetization, traffic redirection, and concealment.
+
+The campaign's goals include SEO poisoning, fraud, monetization, traffic redirection, and concealment, with financial gain being the primary motivation. WEBJACK operates at an organizational level and is categorized as an intrusion set threat.
+
+Key characteristics of the WEBJACK campaign include its use of Chinese red-team tools and targeting of high-profile sites in specific regions. The campaign's tactics are designed to exploit vulnerabilities in IIS servers, allowing attackers to deploy malicious modules and conduct SEO poisoning.",intrusion-set--4ef38d0f-eda5-4eee-a110-ec8dd88e3ddb
+"The object contains a detailed description of an intrusion set threat actor known as DragonRank. This organization is associated with various malicious activities, including SEO poisoning, fraud, and promoting services globally.
+
+DragonRank's primary motivation appears to be financial gain, driven by the promotion of services and exploitation of vulnerabilities for illicit purposes. The threat actor's methods include SEO poisoning, a technique used to manipulate search engine rankings and redirect users to malicious websites.
+
+The organization is linked to ttseo66[.]com and Telegram contact ggfa55, suggesting a presence in the dark web and social media platforms. DragonRank's activity cluster is distinct from WEBJACK but shares some similarities with other threat actors.
+
+Key characteristics of DragonRank include:
+
+- A focus on SEO poisoning and fraud
+- Promotion of services globally for financial gain
+- Association with ttseo66[.]com and Telegram contact ggfa55
+- Distinct activity cluster, separate from WEBJACK
+- Malicious activities driven by primary motivation of financial gain
+
+Overall, DragonRank represents a significant threat actor in the cyber security landscape, employing sophisticated tactics to manipulate online environments for malicious purposes.",intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6
+"The object contains information about a hacker group known as Cavalry Werewolf. The group is identified by various aliases, but the most commonly referred to name is Cavalry Werewolf.
+
+Cavalry Werewolf targets Russian government organizations and has been observed using open-source malware for its attacks. This includes backdoors, which are used for remote command execution and persistence in compromised networks. The group typically initiates its attacks through phishing emails with malicious attachments.
+
+Additionally, the group utilizes Telegram API for communication and control (C2) operations with infected systems. There is also a PDF report available from Dr.Web that provides more details about the group's activities, which can be found at https://st.drweb.com/static/new-www/news/2025/october/cavalry_werewolf/Cavalry_Werewolf_ru.pdf.
+
+The goals of Cavalry Werewolf include collecting confidential information, conducting network reconnaissance, and maintaining persistence in compromised networks. The primary motivation behind these actions is espionage, although the specific motivations are not fully specified.
+
+It is worth noting that there is limited information available about this particular group, as some fields such as first seen, last seen, and resource level are missing or not provided.",intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c
+"The object contains detailed information about an advanced persistent threat (APT) group known as Evasive Panda. The group has been active since at least 2012 and is recognized for its sophisticated and evolving tactics.
+
+Evasive Panda has conducted highly-targeted campaigns, utilizing various techniques such as adversary-in-the-middle (AitM) attacks, supply-chain compromise, and watering-hole attacks. They have also employed DNS poisoning, custom loaders, and the MgBot implant to achieve long-term persistence and defense evasion.
+
+The group's primary motivation for espionage is evident in their actions, which include targeting multiple industries. Their goals are categorized into three main objectives: long-term persistence, espionage, and targeting various sectors of industry.
+
+Evasive Panda has been observed to target victims in several countries, including Türkiye, China, and India. The group's tactics have resulted in significant damage and compromise to the security of its targets.
+
+In summary, Evasive Panda is a sophisticated APT group that has been active since 2012, conducting highly targeted campaigns using advanced techniques. Their primary motivation for espionage is evident in their actions, which aim to achieve long-term persistence, steal sensitive information, and disrupt the operations of various industries.",intrusion-set--322b3a4f-1ff8-4d6e-b37a-7cf1802211fe
+"The object contains information about an unattributed Android banking threat actor. The actor is suspected to be of Turkish-speaking origin and may have previously distributed Coper malware under the MaaS model.
+
+The threat actor's description states that the individual behind Frogblight, a malicious activity detected by Kaspersky Securelist, remains unidentified but is believed to have ties to Turkey and possibly engaged in distributing Coper malware in the past.
+
+A key takeaway from this data is that the unattributed Android banking threat actor is likely of Turkish-speaking origin and may be involved in distributed malware campaigns.",intrusion-set--023afe7a-aeff-4f28-bcfa-1d60905c6513
+"The object contains information about a threat actor known as UAC-0041. This actor is associated with the use of Snake Keylogger in conjunction with Formbook as a loader.
+
+The goals of this threat actor are primarily focused on credential theft and information gathering. These objectives suggest that the primary motivation behind UAC-0041's activities is to obtain sensitive information from its targets.
+
+Despite not having specific details about the regions or countries where UAC-0041 operates, it is clear that this threat actor has a targeted approach, focusing on organization-level attacks rather than broader geographic regions.
+
+There are no further details provided in the object about its primary motivation, secondary motivations, roles, resource level, threat actor types, targets, or labels.",intrusion-set--c6b6dd93-6783-43aa-afd9-ecb9854d9de8
+"The object contains information about a threat actor named TA558, which uses steganography and multiple malware families, including AgentTesla, FormBook, Remcos, LokiBot, GuLoader, XWorm, and Snake Keylogger. The primary goal of this threat actor is to achieve credential theft and information gathering.",intrusion-set--db3904b7-f4ea-4b2c-b4df-db90dcc33c26
+"The object contains information about the Lazarus Group, a North Korean state-sponsored threat actor. The group is known for its involvement in various cyber operations, including espionage, financial theft, and destructive attacks.
+
+The Lazarus Group's tactics and techniques include the use of evolving malware families, credential theft toolkits, and repeated infrastructure patterns such as FRP tunneling and certificate reuse. This approach allows the group to maintain a high level of persistence and adaptability in its cyber operations.
+
+The primary motivation behind the Lazarus Group's activities is organizational gain, although personal gain and ideological motivations may also play a role. The group's goals include espionage, financial gain, and destructive operations, which are carried out through various means such as hacking, phishing, and malware distribution.
+
+The Lazarus Group is considered a sophisticated threat actor due to its use of advanced techniques and its ability to evade detection by security measures. Its involvement in cyber operations has been linked to several high-profile incidents, including data breaches and financial losses suffered by organizations worldwide.",intrusion-set--43368410-79d3-46ba-8314-4bc498a33e1d
+"The object contains information about a North Korean state-sponsored threat actor group known as Kimsuky. The group is focused primarily on cyber espionage and shares infrastructure and toolkits with other DPRK groups, including Lazarus.
+
+Kimsuky's primary goal is espionage, and the group has been involved in credential harvesting and the use of open directories for staging tools. This suggests that the group's main motivation is organizational gain, as they aim to gather sensitive information from their targets for the benefit of their organization.
+
+The group's tactics and techniques are likely to involve sophisticated cyber attacks, but specific details about their methods are not provided in this data. Nevertheless, Kimsuky's activities demonstrate a clear commitment to espionage and cyber warfare.",intrusion-set--de7a2f8a-788a-4970-a922-4f8f198de419
+"The object contains information about the SwimSnake Group, a Chinese-speaking cybercriminal organization active since at least 2022. The group operates under various aliases, including ""游蛇团伙"", ""银狐"", and ""谷落大盗"". 
+
+This group primarily targets domestic Chinese users for fraud, credential theft, and data exfiltration through phishing emails, SEO poisoning, fake download sites, and social engineering via instant messaging platforms such as WeChat and QQ. One of the distinctive features of this organization is its Fraud-as-a-Service (FaaS) operations, where it sells or leases attack tools and infrastructure to other criminal affiliates. 
+
+Key goals of the SwimSnake Group include fraud, credential theft, and data exfiltration, with a primary motivation driven by financial gain. The group is classified under various labels, including ""游蛇团伙"", ""银狐"", ""谷落大盗"", ""FaaS"", and ""Fraud-as-a-Service"".",intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd
+"The object contains information about the LongNosedGoblin intrusion set, a China-aligned APT group. The group was discovered by ESET Research and is active since at least September 2023.
+
+The LongNosedGoblin group primarily engages in cyberespionage activities, targeting governmental entities in Southeast Asia and Japan for information theft. They use various tactics to achieve their objectives, including the use of Group Policy for malware deployment and lateral movement, as well as cloud services such as OneDrive and Google Drive for command and control (C&C) purposes.
+
+The group's activities are centered around espionage, with specific goals that include cyberespionage and information theft from governmental entities. They also utilize other tactics to further their objectives, which are not explicitly stated in the provided data.
+
+Overall, the LongNosedGoblin intrusion set is a sophisticated APT group that poses a significant threat to governmental entities in Southeast Asia and Japan due to its advanced techniques and targeted approach.",intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427
+"The object contains information about an Advanced Persistent Threat (APT) group known as ToddyCat. The group is recognized for its sophisticated techniques used to covertly access business correspondence and credentials from target organizations.
+
+ToddyCat has been identified as a threat actor that targets various Microsoft platforms, including Exchange Server, Microsoft 365, and Gmail. The group utilizes custom tools for stealing credentials, exfiltrating emails, and extracting access tokens.
+
+Additionally, ToddyCat has been linked to an incident reported by Securelist, which provides further insight into the group's activities.",intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5
+"The object contains information about an intrusion set tracked by Unit 42, specifically CL-CRI-1036. The group behind this intrusion set has been involved in financially motivated malicious activity, primarily targeting organizations in the Asia-Pacific region.
+
+The actors have utilized various tactics, including the deployment of 01flip ransomware and Sliver implants, to carry out their attacks. These operations have resulted in data leaks on dark web forums, manual exploitation of systems, and ransomware deployment against critical infrastructure.
+
+The primary motivation behind CL-CRI-1036's actions is financial gain, with secondary goals including data theft and ransomware deployment. The intrusion set has been associated with cybercrime, ransomware, and data leak activities in the Asia-Pacific region.
+
+Key characteristics of this intrusion set include its focus on financially motivated malicious activity, manual exploitation, and ransomware deployment. The group's tactics have been tracked by Unit 42, providing insight into their methods and motivations.",intrusion-set--d74dd6a1-f871-4530-9603-2d27e1b83fd4
+"The object contains information about Kimsuky, a North Korea-linked threat actor group. The group is known for targeting South Korean organizations and individuals with various malicious activities.
+
+Kimsuky has been consistently operating since at least the 2010s and is attributed to the development and deployment of KimJongRAT and related malware families. They employ sophisticated social engineering tactics, leverage cloud services, and use tailored spear-phishing campaigns using victims' personal information.
+
+The primary motivation of Kimsuky is espionage, with secondary goals including credential theft, data exfiltration, and targeting South Korean entities. The group's threat actor types are not explicitly stated in the provided metadata, but it is clear that they pose a significant threat to organizations and individuals in South Korea.
+
+It's worth noting that Kimsuky has been linked to other malicious activities, such as spear-phishing campaigns against US national security think tanks. This highlights the group's sophistication and willingness to target a wide range of victims across different regions.",intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28
+"The object contains information about APT41, a long-running Chinese espionage group. The group is believed to be composed of multiple sub-groups, including Blackfly, Grayfly, Redfly, and Earth Longzhi.
+
+APT41 has targeted various countries, specifically Taiwan, China, Thailand, Malaysia, Indonesia, Pakistan, Ukraine, and the United States. Their focus areas include espionage and monitoring foreign governments' attitudes and policies toward China.
+
+The primary motivations of APT41 are espionage, persistence, and credential access. They aim to gather sensitive information from their targets while maintaining a long-term presence in the compromised environments.
+
+Notable aliases associated with this group include Blackfly, Grayfly, Redfly, and Earth Longzhi. These aliases suggest the diversity and complexity within the group's structure.
+
+Overall, APT41 is considered a significant threat actor due to its extensive reach, sophisticated tactics, and persistent activities.",intrusion-set--1121b7e1-5f0f-4efc-b8c8-ab5385988017
+"The object contains information about Kelp, a China-linked threat group that gained prominence in 2024 for its involvement in compromising the networks of multiple US telecoms companies. The group is also known as Salt Typhoon and Earth Estries.
+
+Kelp's activities were particularly notable in the run-up to the 2024 US presidential election, where it intercepted communications of campaign staff. This espionage effort was part of a broader pattern of activity by Kelp, which shares tools with other Chinese actors and has targeted organizations in dozens of countries.
+
+The group's primary motivations are espionage and persistence, suggesting that its main goal is to gather sensitive information from its targets while also maintaining a long-term presence on their networks. The object does not provide further detail about the secondary motivations or actions attributed to Kelp.",intrusion-set--204f5aa5-18b6-4817-bc1d-b7b52f851917
+"The object contains information about the Space Pirates, a China-linked threat actor group. They are believed to have been active since at least 2017, indicating their malicious activities have spanned over five years.
+
+These actors are noted for carrying out attacks against Russian companies and sharing tools with other Chinese threat groups. This suggests they operate in collaboration with other nation-state actors, possibly as part of broader efforts by the People's Republic of China to expand its cyber espionage capabilities.
+
+The primary motivation of the Space Pirates is described as espionage. They seem to be driven primarily by the need for sensitive information from their adversaries' systems, likely using these resources to further Chinese national interests or acquire intelligence that could gain a strategic advantage in various areas such as technology and defense.
+
+While the space pirates are primarily motivated by espionage, some have noted collaboration with other malicious actors, indicating a broad scope of operations possibly including but not limited to, economic sabotage and intellectual property theft.",intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f
+"The object contains information about Medusa ransomware. The ransomware group is described as a service-based operation that became active in 2025. It primarily exploits vulnerabilities in the SimpleHelp RMM system to gain access to and encrypt victim systems, ultimately exfiltrating data.
+
+Medusa's tactics include double extortion methods, where both the encrypted files and backups are demanded for payment. Additionally, the group operates a dark web leak site, providing a platform for leaked data to be shared.
+
+The Medusa ransomware was identified by security firm ZenSec in their report available at https://zensec.co.uk/medusa-ransomware/.",intrusion-set--ed59cbae-8883-4606-90c7-a8f02575ae59
+"The object contains information about a ransomware-as-a-service (RaaS) group known as DragonForce. The group is active since 2023 and is primarily known for exploiting vulnerabilities in SimpleHelp RMM to infect systems.
+
+DragonForce uses double extortion tactics, which involve exfiltrating data from the victim's system before encrypting it. They also utilize a Restic tool to encrypt the encrypted data, making it even more difficult for victims to recover their files.
+
+The group operates public-facing blogs and data leak sites, where they publish stolen data to extort money from victims. This approach allows them to maintain an online presence while carrying out their malicious activities.
+
+DragonForce is considered a RaaS group, meaning that they provide pre-built ransomware tools to other attackers who can purchase or rent these tools to carry out attacks on their own.",intrusion-set--081b8c46-7594-4402-9850-4c76a692c69e
+"The object contains information about a cyber threat actor known as Calypso. Calypso is a China-linked APT (Advanced Persistent Threat) group that has been linked to various malicious activities.
+
+Calypso's primary goal is espionage, and they also engage in data theft. They are known for using PlugX and its variants, including Talisman and MetaRAT, in their attacks against government, telecom, and maritime organizations.
+
+The targets of Calypso's attacks include organizations in Japan, Russia, and other Asian countries. These threats have been observed across different regions, but the exact extent of their reach is not clear.
+
+Notably, Calypso has been linked to a specific report from lacwatch that provides additional information on their activities.",intrusion-set--d9fcf4c9-32a3-41f0-8a50-4ac6110a6db2
+"The object contains a detailed profile of the Space Pirates, a China-linked Advanced Persistent Threat (APT) group. The group is known for its malicious activities against Asian organizations, particularly those in Japan.
+
+Space Pirates uses malware such as Talisman and MetaRAT to carry out their attacks. Their primary motivations include espionage and data theft.",intrusion-set--f0295be5-d3b1-4871-a0ec-1ba7ee2101e3
+"The object contains information about a cyber threat actor known as RedFoxtrot. It is reported by Recorded Future to be a China-linked Advanced Persistent Threat (APT) group that utilizes Talisman malware in its attacks against government and enterprise organizations.
+
+RedFoxtrot's primary objectives include espionage and data theft, indicating that the group aims to compromise sensitive information and intellectual property from targeted entities. The threat actor's methods involve using tailored malware solutions to gain unauthorized access to systems.
+
+The threat actor has been identified through an external report by lacwatch, a reputable security monitoring source.",intrusion-set--13ff2fc8-53e7-435a-a01b-6a3b86f85c2d
+"The object contains a detailed description of the Mustang Panda APT group, a China-linked threat actor known for its targeted attacks utilizing PlugX and its variants. The group is recognized for carrying out espionage and data theft operations.
+
+Mustang Panda's primary activities involve using advanced tools such as PlugX and its variants in order to achieve their objectives. This indicates that the group relies heavily on sophisticated malware to execute their missions.",intrusion-set--df38821c-695b-4d10-aa55-5a05d668cf17
+"The object contains information about APT10, a China-linked Advanced Persistent Threat (APT) group. 
+
+APT10 is known for its use of PlugX and its variants in cyber espionage campaigns. The group's primary goal is espionage and data theft. 
+
+A key piece of evidence supporting the existence of APT10 can be found in a report from LacWatch, a cybersecurity news outlet, which provides details about various APT groups.",intrusion-set--4865f33b-920f-4d55-8fd2-6fb25869a0dd
+"The object contains information about a malicious Actor Profile (APT41) that is linked to China. APT41 is known for its involvement in cyber espionage and financially motivated attacks, primarily utilizing PlugX and its variants as tools of choice.
+
+APT41's objectives are centered around espionage and financial gain, with the group employing various tactics to achieve these goals. The profile does not provide specific details on the group's first or last encounters, suggesting that there is limited publicly available information on their activities.
+
+Notably, APT41 has been linked to a PlugX-based attack that was reported by LacWatch in 2025 as part of an assessment of known threat actor groups.",intrusion-set--431f285c-9b64-4191-bb3c-282e363fae60
+"The object contains information about a cyber threat actor group known as LuoYu. LuoYu is a China-linked APT (Advanced Persistent Threat) group that has been involved in targeted attacks. The group primarily uses PlugX and its variants in their malicious activities.
+
+LuoYu's goals include espionage and data theft, indicating that the group's primary motivation is to gather sensitive information from their targets while also stealing valuable data. 
+
+The object lacks certain metadata fields, including country of origin, creation date, first seen date, last seen date, modified date, labels, primary motivation, resource level, roles, secondary motivations, and targets.",intrusion-set--3df715d9-dba9-4c28-be0f-8ec2b3907d4a
+"The object contains information about an APT (Advanced Persistent Threat) group known as Naikon. The group is recognized for utilizing Remote Access Trojans (RATs) like Turian and RainyDay, which exhibit similarities in code to other well-known RATs such as MetaRAT and PlugX.
+
+Naikon's primary focus is espionage, with the group aiming to gain unauthorized access to sensitive information.",intrusion-set--66941beb-2761-4c09-9aa3-21a12addd0e5
+"The object contains information about an Advanced Persistent Threat (APT) group known as BackdoorDiplomacy. The group is associated with the use of Turian RAT, a type of remote access trojan that shares code similarities with other well-known APT tools such as MetaRAT and PlugX.
+
+BackdoorDiplomacy is recognized for its espionage activities, indicating that the primary goal of this APT group is to gather sensitive information from targeted organizations. The object does not provide further details on the specific methods or techniques used by BackdoorDiplomacy to achieve these goals, but it highlights the group's sophisticated and potentially malicious capabilities.
+
+The external reference provided in the metadata links back to a report on LacWatch, a Japanese cybersecurity news website, which provides more information about this APT group. However, the object does not delve into the details of this report or offer any additional insights beyond what is already mentioned.
+
+Overall, the object serves as a brief introduction to BackdoorDiplomacy, an APT group known for its sophisticated and espionage-focused activities.",intrusion-set--11df7e74-da8a-4b6c-921e-f5d0e157dc16
+"The object contains information about Kimsuky, a North Korean advanced persistent threat (APT) group. Kimsuky is known for targeting South Korean Android users with remote reset attacks and abusing the popular messaging app KakaoTalk.
+
+Kimsuky's primary goals include espionage and disruption. The group has been identified as a significant threat to South Korea, particularly in relation to mobile devices and online communications.
+
+The available information on Kimsuky is limited, but it appears that the group has been active since at least 2022, with evidence of their first campaign surfacing in that year. However, no specific date or time frame for when the group was first identified is available.
+
+Kimsuky's methods involve using remote reset attacks to compromise Android devices and then abusing them for espionage purposes. The group also exploits vulnerabilities in popular messaging apps like KakaoTalk to further their goals.
+
+In terms of its impact, Kimsuky has been linked to several high-profile incidents involving South Korean users, including remote reset attacks on Android devices. These attacks have resulted in significant disruptions to users' online activities and have raised concerns about the group's ability to carry out more sophisticated attacks in the future.
+
+Overall, Kimsuky is a significant threat actor that poses a risk to South Korea's national security and online safety.",intrusion-set--69df4c33-8bbf-4fac-8eb6-af72c733d4cd
+"The object contains information about a ransomware group known as Cl0p. The group lists major organizations as victims, including Logitech, The Washington Post, Cox Enterprises, Pan American Silver, LKQ Corporation, and Copeland. 
+
+Cl0p is known for targeting Oracle EBS systems and other high-profile organizations, demonstrating its expertise in compromising complex networks. The group's primary motivations are financial gain and extortion.",intrusion-set--614498c4-b3f4-4f27-a80d-0dbcfd247106
+"The object contains a detailed profile of Kimsuky, a North Korean threat actor. 
+
+Kimsuky is focused on cyber-espionage, credential theft, and information operations, often employing spearphishing and credential harvesting tools to achieve its objectives. The primary motivation behind Kimsuky's actions is intelligence gathering.
+
+Key aspects of the threat actor include:
+
+*   Goals: Espionage and Credential Access
+*   Primary Motivation: Intelligence Gathering
+
+Kimsuky's methods are centered around cyber-attacks, with a focus on spearphishing and credential harvesting. 
+
+The object does not contain information about Kimsuky's country of origin or specific regions targeted by the threat actor. However, it is classified as a nation-state threat.
+
+In summary, Kimsuky is a North Korean threat actor focused on intelligence gathering through cyber-espionage, credential theft, and information operations.",intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507
+"The object contains information about the Shai-Hulud threat actor, a group of actors responsible for compromising thousands of npm packages and exfiltrating secrets to public GitHub repositories. The primary motivation behind these attacks is financial gain.
+
+The Shai-Hulud threat actor has several aliases, including ""Sha1-Hulud"". However, their country of origin is currently unknown due to incomplete or missing data.
+
+The group's goals include exfiltrating secrets from CI/CD, cloud, and developer environments, as well as propagating malware via the npm supply chain. If these goals are not achieved, they also intend to cause destruction by deleting and wiping files.
+
+Threat actors behind Shai-Hulud have been identified through various external sources, including Wiz and Aikido blogs. These reports provide insights into the tactics, techniques, and procedures (TTPs) employed by this threat actor.
+
+The Shai-Hulud threat actor is characterized as having financial motivation and a range of targets across organizations. They are known to use different aliases and have been associated with npm supply chain attacks.",intrusion-set--332d44db-bc7b-40df-a3b7-ecba4151a240
+"The object contains information about PlushDaemon, a China-aligned threat actor. The group is active since at least 2018 and has been engaged in espionage operations against various targets worldwide, including individuals and entities in China, Taiwan, Hong Kong, Cambodia, South Korea, the United States, and New Zealand.
+
+PlushDaemon uses custom backdoors such as SlowStepper to gain unauthorized access to networks. The group also leverages adversary-in-the-middle attacks via network implants like EdgeStepper to hijack legitimate update mechanisms, compromising software updates and supply-chain attacks.
+
+The primary motivation behind PlushDaemon's activities is espionage, with a secondary motivation of financial gain. The group has been identified by ESET Research as being responsible for compromises on network devices for adversary-in-the-middle attacks.",intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24
+"The object contains information about Gamaredon, a Russian-aligned advanced persistent threat (APT) group. Gamaredon is believed to be part of Russia's Federal Security Service (FSB) 18th Information Security Center and has been active since at least 2013.
+
+The group primarily focuses on cyber espionage, with more than 5000 cyber-attacks conducted against Ukrainian government agencies and expanded operations targeting NATO member states. The aim of these operations is likely to disrupt military aid to Ukraine.
+
+Gamaredon's primary motivation is espionage, while their secondary motivation involves disruption. The group uses a toolset that includes various spyware tools, as highlighted in research by ESET. 
+
+The group has been identified by the Security Service of Ukraine and other sources, including ESET's analysis toolset used for spyware analysis on Ukraine in 2022-2023.
+
+Gamaredon is characterized as an advanced persistent threat (APT) group with a focus on cyber espionage and hybrid warfare, making it a significant concern for global security.",intrusion-set--b4e0033f-ebde-4785-b7a1-2e4cf9d0206a
+"The object contains information about the Lazarus Group, a state-sponsored threat actor believed to operate under North Korea's government. The group is active since 2009 and has undergone significant shifts in its operations over the years.
+
+Initially, the Lazarus Group focused on cyber espionage and destructive attacks, but later shifted towards financially motivated operations. This change in strategy is linked to the group's involvement with North Korea's Reconnaissance General Bureau (RGB). 
+
+The group has been responsible for high-profile cryptocurrency thefts and espionage campaigns. The FBI attributes several notable cases to Lazarus, including the theft of $41 million from Stake.com and the hacking of WazirX, resulting in losses worth over $235 million.
+
+Lazarus Group's primary motivations include cyber espionage and financial gain. While financial gain is a key motivation, sabotage is also seen as a secondary motivation.
+
+The object provides details on Lazarus Group's activities, including its aliases (""Lazarus"" and ""Hidden Cobra""), country of origin (North Korea), and the sources referencing the group's involvement in various operations.",intrusion-set--a9b884bb-d0a8-4d6e-b517-ecaa516ac209
+"The object contains information about Kimsuky, a North Korean Advanced Persistent Threat (APT) group. The group is believed to have been active since around 2012 and operates under the Reconnaissance General Bureau (RGB). 
+
+Kimsuky specializes in advanced cyber-espionage campaigns, primarily targeting government entities and consumer-facing organizations. Their primary motivation for these activities is espionage.
+
+The APT group's goals include conducting cyber espionage, with no indication of secondary motivations or roles.",intrusion-set--7da07726-91d8-4fcf-86c4-17cc7b7f1eb7
+"The object contains information about a state-sponsored Advanced Persistent Threat (APT) group called DoNot. DoNot is believed to have been active since 2013 and has ties to the Indian government, with its primary focus on cyber espionage.
+
+DoNot's goals include conducting cyber espionage, and it is considered a nation-state actor. The group's activities are monitored by external references such as Amnesty International, which reported on a targeted individual being spied upon by DoNot in 2021.
+
+The group's motivations and secondary motivations are not clearly defined, but its primary motivation is espionage. DoNot is classified as a threat actor that operates at the nation-state level, indicating its sophisticated and state-backed nature.
+
+Overall, DoNot is a significant APT group with ties to the Indian government, actively engaged in cyber espionage and other malicious activities.",intrusion-set--c7d42dee-b59c-4688-aea6-288dd97a6186
+"The object contains information about a state-sponsored Advanced Persistent Threat (APT) group known as SideWinder. The APT group is believed to have been active since 2012 and is primarily focused on cyber espionage.
+
+SideWinder has ties to the Indian government, indicating that it may be receiving support or guidance from the government itself. Its primary motivation for engaging in cyber activities is espionage, with a specific goal of gathering sensitive information.
+
+The APT group's activities have been documented by various sources, including AT&T Cybersecurity, which published a report on the group's tactics and techniques in 2020. The report provides valuable insights into SideWinder's operations and its methods for infiltrating computer systems.
+
+SideWinder is considered a nation-state actor, meaning that it is likely to be sponsored or supported by the Indian government. Its activities are focused on gathering sensitive information from various targets, including government agencies, businesses, and individuals.
+
+Overall, SideWinder is a sophisticated APT group that poses a significant threat to national security and individual privacy. Its ties to the Indian government make it even more concerning, as it may be receiving support or guidance from within the government itself.",intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528
+"The object contains information about Storm-2603, a financially motivated threat cluster identified by cybersecurity experts. 
+
+Storm-2603 is a threat cluster that exploits vulnerabilities in SharePoint to deliver web shells, loaders, and Warlock ransomware. This malicious activity has been tracked by Singapore government advisories, which have provided valuable insights into the tactics, techniques, and procedures (TTPs) used by this threat actor.
+
+The primary motivation behind Storm-2603's actions is financial gain, with the threat actors aiming to exploit vulnerabilities in SharePoint to deliver malware and extort money from victims. 
+
+However, it appears that Storm-2603 also has a secondary motivation or motivation, which is not explicitly stated in the provided metadata. Nevertheless, the fact that Singapore government advisories have taken notice of this threat cluster suggests that its activities are significant enough to warrant attention from cybersecurity experts.
+
+The other metadata fields, such as country, first_seen, last_seen, and regions, are not filled with specific information, which may be due to various reasons such as lack of data or the threat actor's attempts to conceal their activities.",intrusion-set--f682adc7-959b-4703-9e40-94983152d817
+"The object contains information about a sophisticated cyber threat actor known as ForumTroll. ForumTroll is an advanced persistent threat (APT) group that has been active since at least 2022, primarily targeting organizations and individuals in Russia and Belarus.
+
+The group's tactics, techniques, and procedures (TTPs) include spear phishing, malicious archives, and the use of custom and commercial malware implants. Notable tools used by ForumTroll include LeetAgent, Dante spyware, and the Tuoni framework. The group has also exploited vulnerabilities such as CVE-2025-2783 in Google Chrome to gain access to compromised systems.
+
+ForumTroll's primary motivation is espionage, with secondary goals of data theft and compromising targeted individuals and organizations. The group's activities have been linked to various malicious operations, including the exploitation of COM Hijacking for persistence.
+
+The group's tactics are characterized by the use of custom-made malware, spear phishing, and other advanced techniques designed to evade detection. ForumTroll has also been known to use legitimate software as a means of delivering malware, making it challenging to detect their activities.
+
+In terms of its threat actor type, ForumTroll is classified as an APT group, indicating that it is a sophisticated nation-state-sponsored threat actor. The group's primary motivation is espionage, with secondary goals of data theft and compromising targeted individuals and organizations.
+
+Overall, ForumTroll is considered a significant cyber threat actor due to its advanced TTPs, use of custom-made malware, and exploitation of vulnerabilities in popular software.",intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b
+"The object contains information about Scattered LAPSUS$ Hunters (SLH), a federated cybercriminal brand. 
+
+Scattered LAPSUS$ Hunters is a group that emerged in August 2025, appropriating reputational assets from other groups. The group operates primarily on Telegram and uses cycles of channel creation and removal to maintain public presence.
+
+This group blends technical signaling and social performance, focusing on data theft, extortion, and credential harvesting. They often use AI-automated vishing and spearphishing in their attacks. 
+
+SLH has announced an Extortion-as-a-Service (EaaS) model and claims capabilities in exploit development targeting SaaS, CRM, and database systems.
+
+The group is characterized by fluid collaboration, brand-sharing, and situational alliances with other The Com-adjacent clusters.",intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c
+"The object contains information about the Lazarus Group, a North Korean threat actor linked to various malicious activities. The group is also known by other aliases, including APT38, Hidden Cobra, and Labyrinth Chollima.
+
+The Lazarus Group has been involved in several notable campaigns, including the 'Contagious Interview' campaign and the development of the Tsunami-Framework for cryptocurrency theft. This framework has been used to steal cryptocurrencies from various targets.
+
+According to external references, the Lazarus Group's activities have been documented by HiSolutions Research Blog, which has published research on the group's involvement in the 'Tsunami' attacks.
+
+The primary motivation behind the Lazarus Group's actions is believed to be cryptocurrency theft, although it is worth noting that the group may also have other secondary motivations. The group's goals and targets are not explicitly stated, but it is known to target organizations and individuals involved in cryptocurrency transactions.
+
+In terms of its threat actor type, the Lazarus Group is considered an Advanced Persistent Threat (APT) group. It is also linked to North Korea, which suggests that the group may be associated with the country's government or military.
+
+Overall, the Lazarus Group is a sophisticated threat actor that has been involved in several high-profile malicious activities, including cryptocurrency theft and espionage.",intrusion-set--9e87d3ca-6eb2-4f61-ac73-79d5fd92cb13
+"The object contains information about APT41, a highly skilled threat actor group known for their prolific cyber espionage and financially motivated cybercrime activities. 
+
+APT41 has been active since at least 2007 and targets a wide range of sectors, including U.S. state governments, shipping, logistics, technology, and media. Their operations feature persistence, living off the land, multi-stage payload delivery, credential theft, and defense evasion through obfuscation and stealthy exfiltration to cloud services.
+
+The group is noted for its agility in weaponizing vulnerabilities, including rapid exploitation of newly disclosed flaws such as Log4Shell (CVE-2021-44228). They use both web-based and DNS-based C2 channels, proxies, and encrypted payloads to maintain resilient communication. 
+
+APT41's tactics, techniques, and procedures (TTPs) include:
+
+*   Living off the land: Using existing system tools and applications to carry out their operations.
+*   Multi-stage payload delivery: Delivering multiple stages of malware or other malicious payloads to achieve their goals.
+*   Credential theft: Stealing sensitive information such as login credentials and encryption keys.
+
+The group's primary motivation is espionage, with a secondary motivation of financial gain. APT41 has been linked to several notable cyber attacks and incidents in recent years, including the exploitation of Log4Shell and other vulnerabilities.
+
+In terms of their aliases, APT41 has been known by multiple names over the years, including Wicked Panda, Brass Typhoon, BARIUM, Amoeba, Bronze Atlas, Blackfly, Double Dragon, Earth Baku, G0044, Grayfly, HOODOO, LEAD, Leopard Typhoon, Red Kelpie, TA415, TG-2633, and Winnti.",intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b
+"The object contains information about a threat actor group known as Scattered Spider. The group is responsible for several high-profile attacks, including the Gainsight breach and the Salesloft Drift hack.
+
+Scattered Spider leverages supply chain attacks to target OAuth integrations and API keys, allowing them to exfiltrate sensitive data from their victims. This tactic enables the group to extort money from its targets in exchange for not releasing the stolen information publicly.
+
+The primary goals of Scattered Spider are to steal data, extort money from victims, and expose the stolen information publicly. The group's motivations appear to be primarily driven by financial gain, as they use their attacks to extort money from their targets.
+
+Scattered Spider is known under several aliases, including ""Scattered Lapsus$ Hunters"" and ""ShinyHunters."" This suggests that the group may have undergone a rebranding or have used different names for their operations. However, without further information, it is unclear whether these aliases refer to distinct groups or simply variations of the same threat actor.
+
+The object does not provide any additional details about Scattered Spider's tactics, techniques, and procedures (TTPs), but its use of supply chain attacks to target OAuth integrations and API keys suggests a sophisticated level of expertise.",intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242
+"The object contains information about a Chinese state-sponsored threat group known as Earth Lumia. This threat group has been observed exploiting the React2Shell vulnerability (CVE-2025-55182) to carry out its malicious activities.
+
+Earth Lumia is distinguished by its use of this specific vulnerability, which is noted in external references from reputable sources such as AWS. The primary method through which this threat group operates involves the exploitation of a particular vulnerability, indicating that it utilizes exploits and other forms of attack techniques related to this specific weakness.
+
+There are no further details available on Earth Lumia's goals, first seen date, last seen date, modified date, labels, or resource level.",intrusion-set--4eca8b12-cfca-48c2-9bad-7c23827815c7
+"The object contains a detailed description of the Jackpot Panda threat group, which is identified as a Chinese state-sponsored group. The primary exploit method used by this group is the React2Shell vulnerability (CVE-2025-55182). 
+
+According to external references, including AWS security blog post, the group has been rapidly exploiting the React2Shell vulnerability since its identification. 
+
+The Jackpot Panda threat actor's motivations and goals are not explicitly stated in the provided data.",intrusion-set--4eb3bf13-61b5-41c4-bc6b-c65f6fc89c0d
+"The object contains information about a threat group called BRONZE SNOWDROP. 
+
+BRONZE SNOWDROP is identified as a Chinese state-sponsored threat group that has been observed deploying specific types of malware, including SNOWLIGHT and VShell malware, during the React2Shell exploitation technique. This indicates that the primary motivation behind this threat group's activities may be to leverage compromised systems for malicious purposes.
+
+The only publicly available reference for BRONZE SNOWDROP is provided by Secureworks, with a link available on their website that can be accessed to learn more about this threat actor in greater detail.",intrusion-set--ee20d664-8abf-4597-b477-d0681222c3e6
+"The object contains information about an intrusion set called ""Contagious Interview"", associated with North Korean state-sponsored threat actors. This campaign is linked to the deployment of EtherRAT malware in React2Shell exploitation.
+
+There are various external references available for this intrusion set, including a blog post from Sysdig that discusses its connection to novel Ethereum implants used in these attacks.",intrusion-set--46e711cf-d3c1-4152-91ad-46f441dea281
+"The object contains information about an unattributed Chinese-origin threat actor, identified as ""Unattributed Chinese-origin Threat Actor"". Here is a detailed summary of the provided data:
+
+The threat actor is assessed to be of medium confidence and is believed to have Chinese origins. The primary motivation behind their activities is espionage, indicating that they are involved in gathering sensitive information.
+
+Their tactics, techniques, and procedures (TTPs) focus on spear-phishing and credential stealing campaigns targeting the Vietnamese IT and HR sectors. This suggests that the threat actor is attempting to obtain valuable credentials and sensitive information from these sectors.
+
+The identified goals of this threat actor include credential theft and information gathering. The scope of their operations appears to be limited to organizations, with no further information available on specific regions or targets.
+
+It is essential to note that attribution to state sponsorship has not been confirmed, indicating that the extent of their activities may be unclear or still being investigated.",intrusion-set--173dfa8c-93bc-4026-a4ef-b80328cb0572
+"The object contains information about a suspected threat group known as UNC1549. The group is believed to be based in Iran and primarily targets the aerospace, aviation, and defense industries in the Middle East and beyond.
+
+UNC1549 employs a dual approach for initial access, utilizing targeted phishing and exploitation of trusted third-party relationships. This tactic allows the group to gain an initial foothold within the organization before implementing more sophisticated lateral movement techniques.
+
+One of the notable characteristics of UNC1549 is its custom malware deployment and long-term persistence capabilities. The group's ability to maintain a persistent presence within compromised networks makes it difficult for organizations to detect and respond to the threat effectively.
+
+The primary motivation behind UNC1549's activities is espionage, although secondary motivations include credential access and defense evasion. The group's goals are centered around gathering sensitive information from targeted industries and evading detection by security measures.
+
+In terms of tactics, techniques, and procedures (TTPs), UNC1549 is known for its sophisticated approach to initial access, lateral movement, and persistence. The group's use of custom malware and exploitation of trusted third-party relationships makes it a significant threat to organizations in the aerospace, aviation, and defense sectors.",intrusion-set--90b2e287-669c-40ce-95d2-77e1ca06523f
+"The object contains information about a cyber-espionage group known as Volt Typhoon. The group is identified by its alias, which is ""Volt Typhoon"".
+
+The group's primary goal appears to be exploiting vulnerabilities in Fortinet software to compromise the security of government and military networks. This exploitation is specifically targeted at FortiOS SSL VPN flaws.
+
+Further research suggests that this cyber-espionage group has been active for several years, with evidence indicating that it has hidden in US infrastructure networks for five years.
+
+The group's motivations are not explicitly stated, but its actions suggest a primary motivation of financial gain through the theft and exploitation of sensitive information. The exact nature of this exploitation is unclear, but it is likely to be related to the collection and manipulation of valuable data from compromised networks.",intrusion-set--4c3a256e-f398-4a8b-9b1d-2d76fbefee46
+"The object contains information about a cyber threat group known as UNC5454 (Earth Lamia). The group is tracked by GTIG and reported by AWS as actively exploiting a specific vulnerability, CVE-2025-55182.
+
+The group's aliases include Earth Lamia. However, its country of origin is not specified.
+
+According to the description, China-nexus threat group is being monitored for its activities, which involve exploiting vulnerabilities. The exact motivations behind these actions are not clear.
+
+The object contains an external reference from AWS Security Blog, which provides more information about the China-nexus threat group and their exploitation of the React2Shell vulnerability.
+
+Unfortunately, there is no information available on the group's goals, first seen date, last seen date, or primary motivation.",intrusion-set--fd8aab9f-3db5-4a4c-9c39-fb9109a6bc92
+"The object contains information about a threat group known as ""Jackpot Panda"". The group is reported to be a China-nexus threat group that exploits the CVE-2025-55182 vulnerability. However, there are currently no public indicators available to assess the relationship between this group and other threat actors.
+
+According to AWS Security Blog, Jackpot Panda has been rapidly exploiting a React2Shell vulnerability (CVE-2025-55182) without any known public indicators. 
+
+The primary motivation behind this activity appears to be related to an intrusion set, but further information on the goals and motivations of Jackpot Panda is currently unavailable.
+
+As a result, there are limited details available about this threat group's activities or target regions.",intrusion-set--38b5cc06-4313-4131-93e1-2df019feb8c0
+"The object contains information about a specific intrusion set detected by Google Threat Intelligence Group. The details of the intrusion set are as follows:
+
+The intrusion set is named UNC6600 and is associated with an exploit of CVE-2025-55182, which allows for the delivery of a MINOCAT tunneler.
+
+It appears that this particular intrusions was created in order to take advantage of the vulnerability and deliver malware. The threat actor behind this is unknown however it is related to China-nexus espionage cluster",intrusion-set--285e63c6-cac3-4886-90f4-45438a2a8ed5
+"The object contains information about an intrusion set, identified as 'UNC6586', which is suspected to be a China-nexus actor. The actor was observed exploiting a known vulnerability, CVE-2025-55182, to deliver a SnowLight downloader.
+
+This threat actor's primary motivation appears to be related to the delivery of malware, with no clear stated goal. However, their actions are likely driven by secondary motivations that remain unknown at this time. 
+
+No specific regions or countries have been identified as being targeted by this intrusion set, despite its suspected China-nexus origin. 
+
+The threat actor's tactics, techniques, and procedures (TTPs) are not detailed in the provided information.",intrusion-set--79e8dfae-41e3-47be-b6bb-507aa0e86225
+"The object contains information about a threat actor known as UNC6588. 
+
+This entity is associated with exploiting the CVE-2025-55182 vulnerability to introduce a backdoor into systems, referred to as COMPOOD. The primary motivation behind this action appears to be malicious in nature.
+
+There are no publicly available aliases or details regarding the country of origin for this threat actor.",intrusion-set--3c52a7d7-29e8-496e-bdb1-981ad536673c
+"The object contains information about an intrusion set, identified as UNC6603. This intrusion set is associated with a China-nexus actor, who has been observed deploying an updated backdoor targeting cloud infrastructure in the Asia-Pacific (APAC) region.
+
+The backdoor, known as HISONIC, was detected and analyzed by the Google Threat Intelligence Group, which provided external reference information regarding its discovery.",intrusion-set--5e3eefdf-7c73-40e2-a306-02cef5c91168
+"The object contains information about an intrusion set, specifically UNC6595. This entity is a China-nexus actor who was observed exploiting the CVE-2025-55182 vulnerability to deploy ANGRYREBEL.LINUX, targeting international Virtual Private Server (VPS) infrastructure.
+
+The threat actor's primary goal appears to be deploying malware on these compromised VPS servers. However, no specific goals or motivations are mentioned in the provided data.
+
+It is worth noting that this intrusion set was first detected by the Google Threat Intelligence Group, as indicated by an external reference.",intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb
+"The object contains information about a threat campaign known as PassiveNeuron. The campaign targets high-profile organizations in government, industrial, and financial sectors across Asia, Africa, and Latin America.
+
+PassiveNeuron uses custom malware implants for cyber espionage, indicating that the primary motivation behind this threat campaign is espionage. This suggests that the attackers are seeking sensitive information or intellectual property from their targeted organizations.
+
+The campaign specifically aims to compromise these organizations' systems, likely by exploiting vulnerabilities in their networks or by tricking employees into installing malicious software. The use of custom malware implants implies a level of sophistication and potentially more advanced threat actors behind this campaign.
+
+While there is no clear indication of the attackers' secondary motivations or goals beyond espionage, it is worth noting that cyber espionage can often serve as a means to achieve broader strategic objectives, such as gaining a competitive edge over adversaries.",intrusion-set--5779b88a-6529-464e-bfc0-35080743952b
+"The object contains information about Jewelbug, a Chinese Advanced Persistent Threat (APT) group. The group has been active since mid-2023 and primarily targets organizations in South America, South Asia, Taiwan, Russia, and Southeast Asia.
+
+Jewelbug's tactics, techniques, and procedures (TTPs) include espionage, maintaining long-term stealthy presence on victim networks, and exploiting supply chain attacks to gain access. The group also uses credential dumping, persistence mechanisms, and exfiltration via legitimate cloud services to further its goals.
+
+The primary motivation behind Jewelbug's activities is espionage, with a focus on long-term persistence and supply chain compromise. The group's TTPs are designed to allow it to maintain a hidden presence within victim networks for extended periods, making it difficult to detect.
+
+The object also lists several key characteristics of Jewelbug, including its aliases, which include REF7707, CL-STA-0049, and Earth Alux. Additionally, the object notes that Jewelbug's goals are centered around espionage, long-term persistence, and supply chain compromise.
+
+Overall, Jewelbug is a sophisticated APT group with a range of tactics and techniques at its disposal, making it a significant security concern for organizations operating in targeted regions.",intrusion-set--f9736826-9b2d-4659-816e-8bd24c0bf588
+"The object contains information about an intrusion set known as Jingle Thief. This financially motivated group of actors from Morocco has been active since 2021 and targets global enterprises in the retail and consumer services sectors.
+
+Jingle Thief primarily focuses on cloud-based gift card fraud, using phishing and smishing to steal credentials, compromise organizations, and exploit Microsoft 365 capabilities for reconnaissance, persistence, and large-scale fraud. Their operations are characterized by tailored social engineering, stealthy inbox control, and rogue device registration.
+
+The group's primary motivation is financial gain, aiming to monetize stolen gift cards through resale and money laundering. They also seek to maintain long-term persistence in enterprise environments.
+
+In terms of their tactics, tactics, and procedures (TTPs), Jingle Thief uses a range of techniques, including phishing, smishing, and exploitation of Microsoft 365 capabilities. Their campaigns often involve tailored social engineering, stealthy inbox control, and rogue device registration.
+
+Jingle Thief has been linked to several external references, including reports from Unit 42, Microsoft, and Intel471. These sources provide insight into the group's activities, tactics, and motivations.
+
+The object contains information about Jingle Thief as an intrusion set, but it is essential to note that the data may not be comprehensive or up-to-date.",intrusion-set--85c4eea5-d5e9-4569-a295-14471285dce4
+"The object contains information about APT36, a threat group active in South Asia, known for its cyberespionage campaigns targeting government, military, and research organizations.
+
+APT36 is recognized for frequently using phishing emails with malicious attachments to execute its attacks. The group's infrastructure often mimics official government domains, adding to the authenticity of its phishing attempts.
+
+Recent campaigns have involved the delivery of StealthServer malware via .desktop files and Office documents. Additionally, APT36 has utilized C2 (command and control) infrastructure that uses domains such as modindia.serveminecraft.net and modgovindia.space.
+
+The group's tactics, techniques, and procedures (TTPs) are often linked to Pakistani threat actors. According to various reports from reputable sources, including Seqrite, Hunt.io, and CloudSEK, APT36 has been involved in several high-profile attacks targeting organizations in India.
+
+These attacks have focused on cyberespionage, data exfiltration, and persistent access, making them a significant concern for the targeted organizations. The primary motivation behind these attacks is espionage, while secondary motivations include intelligence collection.
+
+APT36's TTPs involve the use of phishing emails, malicious attachments, and the delivery of malware via various means. Its C2 infrastructure and use of mimicry tactics to deceive victims further add to its sophistication.
+
+In summary, APT36 is a sophisticated threat group that has been involved in several high-profile cyberespionage campaigns targeting organizations in South Asia. Its TTPs are characterized by the use of phishing emails, malicious attachments, and malware delivery via various means, making it a significant concern for the targeted organizations.",intrusion-set--53fb22f0-2a78-4c06-861f-fdc2bccf3831
+"The object contains information about an intrusion set attributed to a China-nexus threat actor. This threat actor actively exploited a vulnerability in F5 BIG-IP TMUI to create backdoor administrator accounts and gain command execution on compromised devices.
+
+The specific details of the exploitation include the use of CVE-2023-46747, which was a known vulnerability that allowed an attacker to create unauthorized administrator accounts and execute arbitrary commands on affected devices. 
+
+This intrusion set is also linked to an external reference from Mandiant, a reputable threat intelligence source, in support of the information provided.
+
+The primary motivation for this activity appears to be malicious, with no specified primary or secondary motivations listed.",intrusion-set--0208b146-d496-4fdc-869b-ee84c8e28855
+"The object contains information about a malicious state-sponsored group known as the Velvet Ant. The group used malicious software to exploit outdated F5 BIG-IP equipment, allowing them to gain persistent access and exfiltrate sensitive data from targeted organizations over a period of three years.
+
+The group's actions were documented in a report by Hive Pro, which provides details about the tactics, techniques, and procedures (TTPs) used by the Velvet Ant. According to the report, the group utilized malware to compromise vulnerable F5 BIG-IP equipment, granting them unauthorized access to the affected organizations' networks.
+
+The specific goals of the Velvet Ant remain unclear, although it is believed that their primary motivation was to exploit outdated technology and gain an upper hand in their attacks. The group's actions likely resulted in significant data breaches and compromised security for numerous targeted organizations.
+
+It is worth noting that the Velvet Ant is considered a state-sponsored group, indicating that they may have received support or backing from a government entity. However, further information about this is currently not available.",intrusion-set--6ef3268e-09a8-443a-833c-f6e1fa3b557e
+"The object contains information about an intrusion set, specifically a China-nexus group known as ""Fire Ant"". This group is associated with exploiting a vulnerability in F5 BIG-IP devices to deploy web shells, tunnel traffic, and execute arbitrary system commands. 
+
+Further details about the group are limited due to missing data points. However, it is stated that Fire Ant overlaps with another intrusion set called UNC3886. The group's primary motivation for these malicious activities remains unclear as there is no information available on this topic.
+
+In terms of their operations, Fire Ant utilized a vulnerability in F5 BIG-IP devices, CVE-2022-1388, to deploy web shells and execute arbitrary system commands. 
+
+The group was first mentioned in the context of Sygnia's report titled ""Fire-Ant: A Deep Dive into Hypervisor-Level Espionage"", which provides more information about their tactics, techniques, and procedures (TTPs).",intrusion-set--12487df0-5c4b-4805-8b27-3d0abf62f8fa
+"The object contains information about APT-C-56, a sophisticated threat group originating from South Asia. The group primarily targets India and neighboring countries, employing advanced tactics such as social engineering, spear-phishing attacks, and multi-platform attack techniques.
+
+APT-C-56's arsenal includes various malware families, including CrimsonRAT, Poseidon, DISGOMOJI, and newly developed Golang-based RATs for both Windows and Linux. The group's primary motivation is espionage, with secondary goals of data theft.",intrusion-set--09daf817-2ed0-4ae4-93c5-719b577bf595
+"The object contains information about the BRONZE BUTLER threat group, a Chinese state-sponsored threat actor. The group has been active since 2010, primarily focusing on exploiting zero-day vulnerabilities in Japanese asset management products.
+
+BRONZE BUTLER's primary method of operation involves targeting vulnerable software and systems, allowing them to steal confidential information. In 2025, the group exploited CVE-2025-61932 in Motex LANSCOPE Endpoint Manager to gain unauthorized access, while also previously targeting SKYSEA Client View in 2016.
+
+The threat actor's activities have been documented by reputable sources, including Secureworks and Sophos News. These organizations provide external references to support the presence and capabilities of BRONZE BUTLER.
+
+BRONZE BUTLER is considered an advanced threat actor due to its sophisticated tactics, which often involve exploiting zero-day vulnerabilities. Their primary motivation appears to be the theft of sensitive information, although additional motivations may exist.
+
+The regions targeted by BRONZE BUTLER are likely related to their focus on Japanese asset management products. However, more specific details regarding their operational targets and scope are not available in this dataset.",intrusion-set--7c65fbd7-e978-48f6-9a20-4e8605ea8051
+"The object contains information about a threat group referred to as EVALUSION Campaign. This campaign is notable for leveraging the NetSupport RAT (Remote Access Trojan) tool, which is used in conjunction with distinct licensee names and infrastructure spread across multiple countries.
+
+EVALUSION Campaign is known for utilizing various types of loaders, including PowerShell-based loaders, RunMRU deletion loaders, and batch file-based loaders. These loaders are designed to facilitate the execution and persistence of the RAT tool on compromised systems.
+
+The campaign's use of NetSupport RAT has been observed in conjunction with click-fix style payloads, which are delivered via infected software downloads or exploited vulnerabilities.
+
+In terms of its goals, EVALUSION Campaign appears to be motivated by a primary motivation that is not explicitly stated. However, secondary motivations may include the exploitation of licensee names and infrastructure spread across multiple countries for potential future attacks.
+
+EVALUSION Campaign has been identified through external references, with one notable example being an article published on the eSentire Blog, which discusses the campaign's use of NetSupport RAT loaders delivered via ClickFix payloads.",intrusion-set--a4e03f94-67b7-4525-80fd-dce90318b0ab
+"Here is a detailed summary of the data:
+
+The object contains information about a threat group identified by the aliases FSHGDREE32 and SGI. This group primarily uses NetSupport RAT (Remote Access Tool) and employs various tactics, including PowerShell-based loaders, similar to another campaign called EVALUSION.
+
+Specifically, this threat group is characterized by its connection with infrastructure, as well as its use of loader techniques reminiscent of the EVALUSION campaign. 
+
+Furthermore, there are references from an external source known as eSentire Blog which provides more details about how these threats are delivered via ClickFix.",intrusion-set--d547af36-5d9c-4d01-88f5-feeffd46ee70
+"The object contains information about a specific threat group known as XMLCTL Campaign (UAC-0050). The group is identified through various aliases, including XMLCTL and UAC-0050. 
+
+This threat group primarily targets Ukrainians using NetSupport RAT, a type of remote access tool. They utilize MSI-based loaders for their attacks and have been observed to employ distinct infrastructure patterns. Moreover, it has come to light that they use commercial US-based hosting services with unique configuration parameters.
+
+According to external references, such as those provided by ProofPoint, the XMLCTL Campaign (UAC-0050) threat group is an increasingly popular choice among attackers due to its efficiency in remote monitoring and management tooling. The use of these tools has become a primary tactic for this group, making it their first choice.
+
+The object does not provide explicit details regarding the group's goals or motivations; however, it is clear that they are utilizing these tools primarily for malicious purposes.",intrusion-set--747a6f5b-b382-4dc8-abf6-8665dcb2f6d5
+"The object contains information about Agenda, a ransomware group operating under a RaaS (Remote Access Service) model. The group is notable for its high operational tempo and global reach, targeting organizations in developed markets, particularly in manufacturing, technology, financial services, and healthcare sectors.
+
+Agenda's attacks are characterized by cross-platform capabilities and advanced defense evasion techniques. The group's primary motivation is financial gain through ransomware extortion, with secondary goals of data theft and disruption of backup and recovery capabilities.
+
+The group has been active since at least January 1, 2025, and was first detected in January 2025. According to external references, Agenda was identified by Trend Micro as a threat actor that deploys Linux variants on Windows systems through remote management tools and BYOVD (Bring Your Own Virtual Device) techniques.
+
+Agenda's tactics, techniques, and procedures (TTPs) are focused on exploiting vulnerabilities in software applications and networks to gain unauthorized access. The group uses various attack vectors, including phishing, exploit kits, and social engineering.
+
+The object contains information about Agenda's activities, including its targets, threat actor types, and regions of operation. However, some of this information is currently missing or not applicable due to data limitations.",intrusion-set--2e22ca86-c36b-417f-ada9-7d1cbcb6b1d4
+"The object contains information about Storm-2603, a financially motivated threat actor group known for deploying ransomware. 
+
+Storm-2603 is recognized for targeting organizations in Latin America and the APAC region during the first half of 2025. They exploit vulnerabilities in Microsoft SharePoint Server to gain initial access, execute malware, evade detection, discover their presence, establish command and control over compromised systems, and inflict impact.
+
+The primary motivation behind Storm-2603's operations is financial gain through ransomware extortion. Their tactics, techniques, and procedures (TTPs) are sophisticated and geared towards maximizing the efficiency of their attacks.
+
+Storm-2603 has been linked to deploying LockBit Black and WarLock/X2anylock ransomware. The group's activities have garnered attention from cybersecurity firms such as PicusSecurity, CheckPointResearch, and Microsoft SecurityBlog, who have published reports analyzing Storm-2603's operations and tactics.
+
+Storm-2603 was first observed in 2025, with their initial attacks targeting Microsoft SharePoint Server vulnerabilities.",intrusion-set--83c2fcee-a4a5-413c-8cbb-d2bba8b2139e
+"The object contains information about a sophisticated threat group known as Cavalry Werewolf. This group is active since at least May 2025 and specializes in highly targeted phishing attacks using custom multi-language malware. The primary target of this group is Russia's public sector, particularly key industries such as energy, mining, and manufacturing.
+
+Cavalry Werewolf has shown interest in expanding its operations to Tajikistan and the Middle East, leveraging trusted relationships and official-looking correspondence to compromise real government email accounts. Their methods are designed to appear legitimate, making them a formidable threat.
+
+The group's goals include espionage, data theft, and establishing persistence and lateral movement within their targets' networks. According to external references, Cavalry Werewolf is also motivated by financial gain, which serves as its secondary motivation.
+
+In terms of tactics, this group uses custom malware tailored for multi-language attacks, making them a unique threat in the cyber security landscape. Despite the efforts of organizations such as PicusSecurity to uncover their operations through Operation Trusted Horse, more needs to be done to counter this sophisticated actor and mitigate the risks posed by Cavalry Werewolf.",intrusion-set--10f3c4ec-bae3-47f6-acca-35d1afe1a43e
+"The object contains information about a threat actor known as BlueNoroff. It is primarily focused on financial gain and targets individuals in the Web3/blockchain industry, including blockchain developers, C-level executives, and managers.
+
+BlueNoroff uses advanced tactics such as social engineering, malware, and AI-driven techniques to achieve its goals. The group is known for its involvement in the SnatchCrypto operation, which includes GhostCall and GhostHire campaigns.
+
+The primary motivations of BlueNoroff are financial theft, credential harvesting, and supply chain compromise. These goals are driven by a desire for financial gain, with espionage being a secondary motivation.
+
+BlueNoroff operates as an organization, targeting specific regions and individuals within the Web3/blockchain industry. The group's activities are characterized by their use of advanced tactics and techniques to achieve their objectives.",intrusion-set--75c43a23-7786-41cb-b2e4-2c3c0fff23ca
+"The object contains information about the Lazarus Group, a North Korean state-sponsored cyber threat group. The group is known for its involvement in espionage, sabotage, and financial theft, and has been active since at least 2009.
+
+Lazarus Group employs advanced malware and exploits zero-day vulnerabilities to carry out its attacks. The group's tactics include spear-phishing, watering-hole attacks, supply chain compromises, and multi-stage malware delivery. High-profile targets of the group have included government agencies, financial institutions, healthcare organizations, media companies, defense contractors, aerospace firms, and cryptocurrency exchanges.
+
+Some notable attacks attributed to Lazarus Group include the Sony Pictures Entertainment hack in 2014, the Bangladesh Bank SWIFT fraud in 2016, the WannaCry ransomware attack in 2017, and the Ronin Bridge cryptocurrency theft in 2022. The group has also been linked to several other high-profile incidents, including the hacking of the New York Times in 2014 and the theft of sensitive data from the Office of Personnel Management (OPM) in 2015.
+
+Lazarus Group is associated with North Korea's Reconnaissance General Bureau and has targeted various sectors, including government, finance, healthcare, media, defense, aerospace, and cryptocurrency. The group's primary motivation appears to be financial gain, although it also engages in espionage and sabotage for its own sake.
+
+The group uses a range of aliases, including APT38, Hidden Cobra, Labyrinth Chollima, and Group 77, among others. Its activities have been tracked by various threat intelligence groups, including Picus Security, which has published detailed reports on the group's activities and tactics.",intrusion-set--c2776a1a-7204-44dd-8162-6ce0747cfe36
+"The object contains information about MuddyCoast, a group of Iranian hackers also known by their alias UNC3313. 
+
+MuddyCoast utilized the Gemini platform for malware development and debugging purposes, which led to an accidental exposure of command-and-control (C2) domains and keys. This incident occurred due to the misuse of AI tools on the Gemini platform.
+
+The primary motivation behind MuddyCoast's actions was espionage. They were primarily focused on using the Gemini platform as a means to develop malware and engage in debugging activities, with their ultimate goal being the exposure of sensitive information for malicious purposes.
+
+The group's goals included malware development and debugging, indicating that they aimed to utilize the Gemini platform for creating and refining malicious software before deploying it in the wild.",intrusion-set--bc6f8433-f0a0-4aec-a899-c63d2e86fe1d
+"The object contains information about a specific threat actor group known as APT42. The details of this group reveal its methods and activities related to cybercrime.
+
+APT42 is an Iranian group that utilizes Gemini for phishing and data analysis purposes. This indicates the group's reliance on advanced tools and platforms like Google's AI-powered Gemini to further their malicious goals. Specifically, they employ Gemini for creating lures, translating content, and developing a Data Processing Agent designed for personal-data mining.
+
+Furthermore, APT42's activities are motivated by espionage. The primary motivation of this threat actor is clearly outlined as espionage, signifying the group's focus on gathering sensitive information through illicit means.
+
+In terms of their goals, APT42 has identified three main objectives: phishing, data analysis, and personal-data mining. These targets suggest a concerted effort to compromise security systems, gather intelligence, and exploit sensitive information.
+
+This threat actor is categorized under organization level threats, implying that the group's activities span multiple aspects of a larger operation or entity.
+
+In summary, APT42's utilization of Gemini highlights their sophisticated approach to cybercrime, while their espionage-driven motivations underscore their intent to infiltrate security systems. The group's focus on phishing, data analysis, and personal-data mining further emphasize the scope and nature of their illicit activities.",intrusion-set--9b583de0-7f21-4505-8fe2-8efe17946f15
+"The object contains information about APT41, a threat actor associated with espionage. The description provided highlights the group's use of AI tools, specifically Gemini, to enhance its malicious capabilities.
+
+Gemini was leveraged by APT41 for code assistance, which allowed the group to improve its OSSTUN C2 framework and increase malware sophistication through obfuscation libraries. This suggests that APT41 is utilizing advanced technologies to further its espionage goals.
+
+The group's primary motivation is espionage, with secondary motivations potentially related to malware development and exploitation. However, specific details on these latter objectives are not provided in the available information.",intrusion-set--087a57ce-ff88-499d-8529-33cb006b117e
+"The object contains information about a North Korean threat group known as Masan, also referred to by the alias UNC1069. The group has been linked to various malicious activities, including crypto theft, multilingual phishing, and creating deepfake lures.
+
+Masan's primary motivation for engaging in these activities appears to be financial gain, with the ultimate goal of exploiting individuals and organizations for monetary benefit. 
+
+The threat actor's methods include utilizing the Gemini platform for their nefarious purposes.",intrusion-set--d84b6f81-a3f4-43c0-9f00-a9e8eeff4e56
+"The object contains information about a North Korean threat group known as Pukchong (UNC4899). The group was identified for employing Gemini, an AI tool, to develop code targeting edge devices and browsers. 
+
+Pukchong's primary motivations are espionage and developing malware. Their goals include targeting edge devices, browsers, and other malicious activities like this.",intrusion-set--c36d2d48-1d4d-4b2c-a19a-f40786a1251c
+"The object contains information about a threat actor known as UNC5142. This entity is associated with the financially motivated CLEARFAKE campaign and utilizes the EtherHiding technique to distribute malware through deceptive overlays and compromised websites.
+
+UNC5142 leverages this method to compromise websites and overlay malicious content, which can lead to the distribution of malware. The primary motivation behind this activity is financial gain.",intrusion-set--68b18acd-514a-44dc-8248-80ec3e995915
+"The object contains information about an intrusion set attributed to the threat actors suspected of being linked to the Russian FSB cluster known as COLDRIVER. This cluster is responsible for the PhantomCaptcha campaign, which targets Ukrainian humanitarian and government organizations.
+
+PhantomCaptcha is a malicious campaign that utilizes various tactics, including phishing and spear-phishing attacks, to gain unauthorized access to sensitive information and systems. The campaign's goals are not explicitly stated, but it appears to be primarily focused on stealing documents and other valuable data from its targets.
+
+The intrusion set in question is believed to be operated by actors suspected of being linked to COLDRIVER, a known Russian FSB cluster. While the exact motivations behind this campaign are unclear, it is likely that the primary motivation is to compromise the security of Ukrainian organizations and gain access to sensitive information.
+
+It is worth noting that there may be secondary motivations or motivations that are not immediately apparent. Additionally, the campaign's tactics and techniques are likely to evolve over time as the threat actors continue to adapt and improve their methods.
+
+The object contains various metadata fields, including external references from reputable sources such as SentinelOne, Zscaler, and Google. These references provide additional context and information about the campaign and its potential impact.
+
+Overall, the intrusion set attributed to COLDRIVER is a concerning development in the realm of cyber threats, particularly for Ukrainian organizations and individuals. It highlights the importance of robust cybersecurity measures and vigilance in detecting and responding to such threats.",intrusion-set--fafd4f1f-6804-4d67-947a-51e8f965d634
+"The object contains a threat activity cluster tracked as CL-STA-1009, which is linked to a nation-state actor operating through supply chain attack vectors. The actor utilizes the Airstalk malware family for persistent access and credential theft. 
+
+This intrusion-set is notable due to its association with medium confidence in linking it to a specific nation-state actor. The threat actor likely employs various tactics, including utilizing malware families, to achieve their goals.
+
+The primary source of information regarding this threat comes from Unit42 Palo Alto Networks, which provides an overview of the Airstalk malware family and its implications for national security.",intrusion-set--375f3696-8f16-416b-85eb-d749ccdea772
+"The object contains information about Qilin, a ransomware group operating under a Ransomware-as-a-Service (RaaS) model since July 2022. The group's primary goal is to achieve financial gain through ransom payments, while also engaging in data theft and extortion.
+
+Qilin has been identified as a threat actor with Eastern European or Russian-speaking origins. Their attack methods have been exposed through various cases, including those documented on the Talos Blog website. The group uses tools such as PsExec, WinRAR, Cyberduck, and credential theft utilities to carry out its attacks.
+
+The organization targets manufacturing, professional/scientific services, and wholesale trade sectors worldwide. Qilin's leak site is notable for its ability to expose sensitive information, while their double-extortion tactics make them a particularly formidable threat.
+
+The group's use of PsExec and WinRAR highlights the importance of robust cybersecurity measures in protecting against such threats. Additionally, the fact that Qilin's motivations are driven by financial gain underscores the need for organizations to prioritize security protocols and invest in threat intelligence.
+
+Overall, the Qilin ransomware group represents a significant threat to global cybersecurity, with its sophisticated tools and tactics making it a prime target for attack.",intrusion-set--0d8f5340-77cb-478a-917f-68d636a6d82b
+"The object contains information about Kimsuky, a North Korean threat group. Kimsuky is primarily active since 2012, focusing on espionage operations targeting government entities, think tanks, and subject matter experts.
+
+The group's goals and motivations are not explicitly stated, but it is mentioned that Kimsuky is responsible for carrying out these operations. The object also provides information about the group's activities, including targets and threat actor types, although these details are not fully specified.
+
+A notable source referencing Kimsuky can be found at https://pulsedive.com/threat/Kimsuky.",intrusion-set--33845c96-a224-4ad1-942a-69e11b30eeee
+"The object contains a detailed description of an intrusion set dubbed ""SkyCloak"", which is a multi-stage attack targeting Russian and Belarusian military personnel. 
+
+This campaign utilizes various tools including PowerShell stagers, OpenSSH, and Tor bridges to enable covert remote access and persistence. The attribution behind this malicious activity remains unknown but shows overlaps with Eastern European-linked espionage activities.
+
+The goals of SkyCloak include espionage against the Russian and Belarusian military and defense sectors as well as establishing covert remote access and lateral movement. 
+
+Key details about the targeted entities include the Russian Ministry of Defence and the Belarusian Special Forces, both identified as government organizations within their respective countries.",intrusion-set--c10da53c-7379-4e59-9bc6-989c4116888f
+"The object contains information about an Unidentified Asia-focused Threat Group, a hacker group tracked by FortiGuard Labs. The group is known for conducting shifting campaigns across China, Taiwan, Japan, and Malaysia.
+
+The primary motivation of the group is espionage, with goals that include information theft, persistence, and evasion. They are particularly skilled at evolving malware delivery tactics and reusing infrastructure.
+
+The group's activities have been documented in a Fortinet Blog article, which provides insight into their campaigns and methods. Despite being tracked, the exact nature and scope of the group's operations remain unclear.
+
+Overall, the Unidentified Asia-focused Threat Group represents a sophisticated threat actor with a strong focus on espionage and evasion, using advanced tactics to evade detection and persist in their targets.",intrusion-set--25458c81-e219-45a8-8fee-68fcd3dac597
+"The object contains information about a security team known as the ""Red Rain Drop Team"". The team's aliases include ""红雨滴团队"" and ""Red Rain Drop"", indicating that they operate under different names or codes. 
+
+Their focus is on counter-APT operations, particularly in Northeast Asia. This implies that their primary goal is to detect and mitigate cyber threats targeting mobile endpoints, specifically focusing on Chinese and North Korean users.
+
+The team's objectives include espionage, targeting mobile endpoints, and collecting sensitive data from these specific user groups. Their motivations are primarily driven by the need to counter APT (Advanced Persistent Threat) operations in Northeast Asia.
+
+Key details about the Red Rain Drop Team include their name, description, goals, and region of focus.",intrusion-set--3ac85642-e74f-41c2-a2b0-e84497349a79
+"The object contains information about an alleged intelligence operation known as ""Operation South Star"". The operation is suspected to be backed by the MSMT framework, a group commonly associated with Chinese cyber espionage. 
+
+The main goal of this operation was to target domestic mobile software via 0day vulnerabilities in order to gather intelligence and conduct counterintelligence activities in Northeast Asia. It focused specifically on espionage.
+
+Some key elements of this operation include targeting mobile endpoints as part of its espionage activities.",intrusion-set--19584df7-005c-4fed-8547-d6abbbc06529
+"The object contains information about a Chinese-speaking threat actor known as REF3927. The group is responsible for compromising Internet Information Services (IIS) servers worldwide by exploiting publicly disclosed ASP.NET machine keys.
+
+REF3927 deploys various tools and modules, including TOLLBOOTH IIS modules, Godzilla EKP webshells, GotoHTTP RMM tools, and HIDDENDRIVER rootkits. Their primary objective is to monetize compromised servers through search engine optimization (SEO) cloaking while maintaining persistent access.
+
+The threat actor's goals include:
+
+* Monetizing compromised IIS servers via SEO cloaking
+* Maintaining persistent access
+* Credential theft
+* Defense evasion
+
+REF3927 is a financially motivated threat actor, and their activities are documented by Elastic Security Labs. The object does not provide further details on the group's first seen date or last seen date due to missing information.
+
+Overall, REF3927 poses a significant threat to organizations with IIS servers, as they can exploit vulnerabilities in these systems to gain unauthorized access and maintain persistence.",intrusion-set--7acfb38d-3d72-4592-9415-0d8a2eddeaae
+"The object contains information about a highly active advanced persistent threat (APT) group known as Mysterious Elephant. The group was discovered by Kaspersky GReAT in 2023 and targets government entities and foreign affairs sectors in the Asia-Pacific region, primarily focusing on countries such as Pakistan, Bangladesh, Afghanistan, Nepal, and Sri Lanka.
+
+Mysterious Elephant employs a range of tactics to infiltrate and exfiltrate sensitive information, including spear phishing, custom-made tools, and WhatsApp-specific exfiltration modules. The group is known for its ability to evolve its tactics, techniques, and procedures to evade detection.
+
+The primary motivations of Mysterious Elephant are espionage, data theft, and targeted attacks on government and diplomatic sectors. The group's goals include stealing sensitive information and disrupting the operations of target organizations.
+
+Mysterious Elephant primarily targets government entities, foreign affairs sectors, and diplomatic institutions in the Asia-Pacific region. The group has been active since its discovery by Kaspersky GReAT in 2023 and continues to pose a significant threat to organizations in these regions.
+
+The object also contains information about Mysterious Elephant's tools and tactics, including custom-made and open-source tools used for spear phishing and exfiltration. Additionally, the group uses WhatsApp-specific modules to facilitate communication and data transfer.
+
+In conclusion, Mysterious Elephant is a highly active APT group that targets government entities and foreign affairs sectors in the Asia-Pacific region, using a range of tactics and techniques to infiltrate and exfiltrate sensitive information.",intrusion-set--811d629c-4459-4c86-97dd-71a5a22b9303

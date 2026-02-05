@@ -6,7 +6,6 @@ from pathlib import Path
 from pyvis.network import Network
 import streamlit.components.v1 as components
 from stix.core import STIXPackage
-from modules.rag_credibility import get_rag_credibility
 
 from modules.version_detector import detect_stix_version
 from modules.validator import validate_stix
@@ -17,8 +16,29 @@ from modules.credibility_assessor import assess_credibility
 # ---------- PAGE CONFIG ----------
 st.set_page_config(page_title="AI CTI Dashboard", layout="wide")
 
+# ---------- SIDEBAR NAVIGATION ----------
+st.sidebar.title("🔍 Navigation")
+page = st.sidebar.selectbox(
+    "Choose a page:",
+    ["STIX Analyzer", "RAG Chat", "File Browser", "Malware Inference", "Malware Mapping","SDO Similarity Search"]
+)
 
-
+if page == "RAG Chat":
+    exec(open("pages/rag_chat.py").read())
+    st.stop()
+elif page == "File Browser":
+    exec(open("pages/file_browser.py").read())
+    st.stop()
+elif page == "Malware Inference":
+    exec(open("pages/malware_inference.py").read())
+    st.stop()
+elif page == "Malware Mapping":
+    exec(open("pages/malware_mapping.py").read())
+    st.stop()
+elif page == "SDO Similarity Search":
+    exec(open("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/Threat_similarity_search_module/streamlit_complete_pipeline_2.py").read())
+    st.stop()
+    
 # If "STIX Analyzer" is selected, continue with main dashboard
 
 # ---------- THEME + CUSTOM UI STYLING ----------
@@ -154,22 +174,16 @@ if uploaded_file:
     objects = data.get("objects", [])
     precise_type = derive_precise_threat_type(objects)
 
-    if cti_data and isinstance(cti_data, list) and len(cti_data) > 0:
-        desc = cti_data[0].get("description", "")
-        conf = cti_data[0].get("confidence", 50)
-    else:
-        desc = "Unknown threat data from uploaded STIX file"
-        conf = 50
+    desc = cti_data[0].get("description", "")
+    conf = cti_data[0].get("confidence", 50)
+
     if precise_type:
         threat_type = precise_type
         prob = 90
     else:
         threat_type, prob = classify_threat(desc)
 
-    full_text = json.dumps(objects)[:3000]  # limit size for speed
-    score, level, rag_reason = get_rag_credibility(full_text)
-
-
+    score, level = assess_credibility(conf, prob)
 
     # ---------- OVERVIEW CARDS ----------
     st.markdown("## Threat Overview")
@@ -253,7 +267,6 @@ if uploaded_file:
     st.markdown("<div class='ai-explain-text'>This graph shows how different cyber threat entities are connected through relationships like usage, targeting, or indication.</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='ai-explain-text'><b>Description:</b> {desc}</div>", unsafe_allow_html=True)
     st.markdown(f"<div class='ai-explain-text'><b>AI Assessment:</b> {threat_type} with {prob}% probability</div>", unsafe_allow_html=True)
-    st.markdown(f"<div class='ai-explain-text'><b>Credibility Reason:</b> {rag_reason}</div>", unsafe_allow_html=True)
 
 else:
     st.info("Upload a STIX file to begin.")

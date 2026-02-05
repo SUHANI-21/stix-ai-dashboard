@@ -1,0 +1,779 @@
+summary,id
+"The object contains a malicious MD5 hash that was used in the Webrat campaign. Specifically, it refers to the primary malicious file rasmanesc.exe. The description of this indicator is that it is the MD5 hash of the mentioned malicious file. Additionally, it has been labeled as both 'malicious-file' and 'md5'.",indicator--a0df8c01-a5c7-4642-9140-cb4bb193a683
+"The object contains a threat intelligence indicator related to a malicious MD5 hash. The indicator is identified by the ID 'indicator--89f8c3c2-f163-41ae-9319-aa0730f097fe'. 
+
+This MD5 hash, denoted as '28a741e9fcd57bd607255d3a4690c82f', has been associated with a Webrat campaign. The indicator's labels include ""malicious-file"" and ""md5"", suggesting that it is related to a file with an MD5 hash value.
+
+The indicator's pattern, as described by the 'pattern' field, is represented in the format ""[file:hashes.MD5 = '28a741e9fcd57bd607255d3a4690c82f']"". This suggests that the indicator is used to detect files with an MD5 hash value matching this specific pattern.
+
+However, some metadata information about the indicator is missing or not applicable. For instance, there are no timestamps provided for 'created', 'modified', or any other relevant fields.",indicator--89f8c3c2-f163-41ae-9319-aa0730f097fe
+"The object contains a detailed profile of an MD5 hash indicator. Here's a summary of the key information:
+
+The indicator is associated with Webrat campaign and has a unique identifier of 'indicator--3d3e2e3a-4281-4223-acce-52a20ce550bb'. It belongs to two labels: ""malicious-file"" and ""md5"", which suggest that it is related to a malicious file with an MD5 hash.
+
+The indicator has a pattern of ""[file:hashes.MD5 = 'a13c3d863e8e2bd7596bac5d41581f6a']"". This suggests that the indicator is looking for files with this specific MD5 hash value.
+
+There are no timestamps or version numbers available for this indicator, which might indicate that it has not been updated recently. The 'spec_version' field is also missing, making it unclear if there have been any updates to the specification of this indicator.
+
+Overall, the object contains a detailed profile of an MD5 hash indicator, but some fields are missing or undefined, potentially indicating that the information is incomplete or outdated.",indicator--3d3e2e3a-4281-4223-acce-52a20ce550bb
+"The object contains information about a threat indicator related to malware. Specifically, it describes a command and control server used by Webrat malware. The details of the server include its name, which is 'Webrat C2: ezc5510min.temp.swtest.ru'. 
+
+It is categorized as a malicious URL due to being labeled with ['c2', 'malicious-url'] and matches a specific pattern indicated by '[url:value = 'http://ezc5510min.temp.swtest.ru']'. This information suggests that the server is used for malicious activities associated with Webrat malware.",indicator--ebfb1097-dc93-41b9-975f-a3b52b3c45b0
+"The object contains information about a cybersecurity threat indicator. Specifically, it describes a Command and Control (C2) server used by the Webrat malware.
+
+The C2 server is associated with the URL 'shopsleta.ru' and is categorized as malicious. The pattern that identifies this URL is [url:value = 'http://shopsleta.ru'], which suggests that this URL is likely to be used for communication between the malware and its command and control center.
+
+The indicator type is not specified, but it has been labeled as a c2 (command and control) and malicious-url. This labeling indicates that the threat actor intends to use this server to execute malicious activities, such as data exfiltration or lateral movement within a network.
+
+Overall, the object provides critical information about a known C2 server used by malware, which can be useful for cybersecurity professionals in identifying and mitigating threats associated with the Webrat malware.",indicator--ef58ec62-6f3b-40ca-842e-098d9b57f500
+"The object contains a detailed record of a malicious GitHub repository. The repository is identified by the name ""Malicious GitHub repository: RedFoxNxploits/CVE-2025-10294-Poc"" and is linked to Webrat malware that masquerades as an exploit.
+
+The repository was created using GitHub, with no information available on who created it or when it was created. The description provided suggests that the repository is being used to distribute malicious code disguised as a security vulnerability (CVE-2025-10294).
+
+The object includes information on a pattern associated with this malware, which is a URL pointing to the specific GitHub repository. This pattern is of type ""indicator"" and has a unique identifier.
+
+There is no available information on when the pattern was created or updated. However, it is worth noting that the object also contains metadata fields related to the pattern's versioning and specification.",indicator--924bbaf2-01c6-4e24-b122-5fee73f5293f
+"The object contains metadata from a GitHub repository used to distribute malware disguised as an exploit. The repository is identified by the name 'FixingPhantom/CVE-2025-10294' and is associated with a specific URL pattern that matches a malicious link.
+
+This pattern, indicated by '[url:value = ""https://github.com/FixingPhantom/CVE-2025-10294""]', suggests that the repository contains compromised content designed to deceive users into downloading malware. The repository's labels indicate its classification as both 'malicious-repository' and 'github'.",indicator--b119f050-cce6-4a18-8ef1-bbcfbfd47dd2
+"The object contains information about a specific GitHub repository that was identified as malicious. Here's a detailed summary of the data:
+
+The object is an indicator related to a malware distribution method, where Webrat malware was disguised as an exploit. The repository in question, 'h4xnz/CVE-2025-10294-POC', is hosted on GitHub and was found to be malicious.
+
+The pattern associated with this repository indicates that it follows the format [url:value = 'https://github.com/h4xnz/CVE-2025-10294-POC']. This suggests that the URL points to a specific repository, which is being used to distribute malware.
+
+The label assigned to this indicator includes two categories: ""malicious-repository"" and ""github"". These labels help identify the type of threat associated with the repository.",indicator--1b32fd00-fce4-404f-9739-88001dda0de0
+"The object contains information about a GitHub repository that was used to distribute malware disguised as an exploit. The repository is identified by the name 'usjnx72726w/CVE-2025-59295/tree/main' and is described as malicious. It is reported to be associated with a specific URL pattern, which is [url:value = 'https://github.com/usjnx72726w/CVE-2025-59295/tree/main'].
+
+This repository is classified under the category of 'indicator', which suggests that it may have been used or mentioned in some way related to cybersecurity incidents or threat intelligence. However, further information about its usage or context is not provided in this data snippet.",indicator--08786ab3-1387-438c-8715-97b350963548
+"The object contains a detailed description of a malicious GitHub repository. The repository, identified by the name 'Malicious GitHub repository: stalker110119/CVE-2025-59230/tree/main', is associated with malware disguised as an exploit for Webrat. It was created to distribute this malware, which is linked to a specific CVE (Common Vulnerabilities and Exposures) identifier. 
+
+The key characteristics of the repository include its description, labels (indicating it is both malicious and related to GitHub), and pattern type. However, crucial details such as when it was created or modified are not available due to missing information in the data set provided.",indicator--2384b097-db6d-48e0-91b6-5acb6c083929
+"The object contains a detailed description of a malicious GitHub repository used to distribute Webrat malware. The repository, named 'moegameka/CVE-2025-59230', was created to disguise the exploit and is classified as 'malicious-repository' due to its malicious nature. It has been linked to Webrat malware, which is a type of threat.",indicator--8a96a232-47e6-47fd-bde6-f8e5744eefc2
+"The object contains metadata about a malicious GitHub repository. Specifically, it refers to the indicator 'indicator--f8bf6694-40d0-4814-a706-0db3c62cceff'. The metadata includes details such as the description of the repository, which states that it is used to distribute Webrat malware disguised as an exploit.
+
+The repository's name is 'Malicious GitHub repository: DebugFrag/CVE-2025-12596-Exploit', and its label categorizes it as both 'malicious-repository' and 'github'. 
+
+Additionally, the metadata mentions a pattern associated with this repository. The pattern is defined as [url:value = 'https://github.com/DebugFrag/CVE-2025-12596-Exploit'], indicating that this URL contains potentially malicious content.
+
+Overall, the metadata provides context about the nature of this GitHub repository and its potential threat to security systems.",indicator--f8bf6694-40d0-4814-a706-0db3c62cceff
+"The object contains information about a malicious GitHub repository. The repository is identified by the name ""themaxlpalfaboy/CVE-2025-54897-LAB"" and is associated with a specific URL pattern: [url:value = 'https://github.com/themaxlpalfaboy/CVE-2025-54897-LAB']. This pattern suggests that the repository contains Webrat malware disguised as an exploit. The metadata fields indicate that the object was created, but no timestamp or date is available. Additionally, there are references to other indicators and labels such as ""malicious-repository"" and ""github"".",indicator--0947a7b8-34b3-4e7d-99cf-bffc29069c26
+"The object contains a detailed description of a specific type of indicator, which is a malicious GitHub repository. The repository, identified by the id 'indicator--acd20c1b-7e91-4faf-965f-7bfed0e5f18d', is used to distribute Webrat malware disguised as an exploit.
+
+The object's metadata indicates that it was created and modified at unspecified times, with no specific information available on the creation or modification process. The repository's description suggests that it contains a malicious payload, potentially used for malicious purposes such as distributing malware or exploiting vulnerabilities.
+
+The object includes several key pieces of information:
+
+- The repository's name is 'Malicious GitHub repository: DExplo1ted/CVE-2025-54106-POC'.
+- A pattern was detected in the repository, which matches a specific URL and value. This suggests that the repository contains a malicious link or code snippet.
+- The object belongs to the type 'indicator', indicating that it is a potential threat or security risk.
+- The object's labels include 'malicious-repository' and 'github', providing context about its nature and origin.
+
+In summary, this indicator describes a malicious GitHub repository that may be used to distribute malware or exploits.",indicator--acd20c1b-7e91-4faf-965f-7bfed0e5f18d
+"The object contains information about a malicious GitHub repository. 
+
+This repository is identified by the name ""h4xnz/CVE-2025-55234-POC"" and is classified under two labels: ""malicious-repository"" and ""github"". 
+
+The pattern associated with this repository is a URL pointing to the specific GitHub repository, which suggests that it may be used to distribute malware disguised as an exploit. 
+
+No information about the creator or modification dates of the repository are available due to missing data in the object.",indicator--7e87faea-7a90-43da-8eef-e89a93fbff7c
+"The object contains information about a malicious GitHub repository. The repository, titled ""Hazelooks/CVE-2025-11499-Exploit"", is used to distribute Webrat malware disguised as an exploit. This indicates that the repository is being utilized for nefarious purposes.
+
+It appears that the repository has been flagged or identified by some entity as containing malicious content. However, no further information is provided about who or what entity is responsible for this classification.
+
+The object also includes a pattern that matches the URL of the GitHub repository, suggesting that it may be used to track or identify repositories that are being used to distribute malware.
+
+In terms of metadata, the object does not provide any timestamps or other identifying information beyond the standard fields such as labels and type.",indicator--2bfc290e-c701-4d12-94f4-f0747a0a239c
+"The object contains a malicious GitHub repository that was used to distribute Webrat malware disguised as an exploit. The specific repository name is usjnx72726w/CVE-2025-11499-LAB, which is referenced in the pattern ""[url:value = 'https://github.com/usjnx72726w/CVE-2025-11499-LAB']"". This suggests that the malware was hidden within a legitimate GitHub repository and was designed to deceive users.",indicator--78e26392-7b36-40dc-acc2-d9d136a8301c
+"The object contains information about a malicious GitHub repository. The repository is identified by the URL ""https://github.com/modhopmarrow1973/CVE-2025-11833-LAB"" and is linked to a malware distribution platform known as Webrat.
+
+Webrat was disguised as an exploit, allowing it to spread undetected through vulnerable systems. The malicious repository was used to distribute this malware.
+
+The object includes metadata such as the creation date, which is currently unknown due to its absence in the data. It also includes labels indicating that the repository is both malicious and a GitHub repository.",indicator--4bead227-6fcd-4210-881f-293ad53976ab
+"The object contains metadata related to a specific GitHub repository that has been identified as malicious. The repository in question is 'rootreapers/CVE-2025-11499' on GitHub.
+
+This repository was found to be distributing Webrat malware, which is disguised as an exploit. 
+
+The pattern associated with this repository is '[url:value = ""https://github.com/rootreapers/CVE-2025-11499""]', indicating that the URL of the malicious repository has been identified as a potential indicator.
+
+No information is available on who created this object or when it was last modified, but it is known to be an 'indicator' type of metadata.",indicator--1dc69291-627c-45b0-8611-9eb1660c7276
+"The object contains metadata related to a malicious GitHub repository. The repository is identified by the name ""lagerhaker539/CVE-2025-12595-POC"" and is classified as a threat due to its association with Webrat malware.
+
+The repository's description states that it is used to distribute malware disguised as an exploit. This suggests that the repository contains malicious code or links to compromised repositories, posing a potential security risk to users who interact with them.
+
+The pattern associated with this repository matches URLs containing specific strings, indicating that the repository may contain links or references to compromised repositories or malicious software.",indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2
+"The object contains a detailed description of an indicator, specifically a malicious file hash associated with the React2Shell cryptojacking campaign. The hash values are extracted from SHA-256 files using the 'file:hashes' pattern.
+
+The indicator is identified by a unique identifier, but for simplicity, it will be referred to as 'Malicious File Hashes - React2Shell Cryptojacking Campaign'. This name accurately reflects the nature of the indicator, which consists of hashes of malicious files used in the React2Shell cryptojacking campaign.
+
+The pattern associated with this indicator is a list of hash values that are considered malicious. The hashes are separated by logical OR operators, indicating that the presence of any one of these hashes within a file indicates potential malware activity.
+
+The labels applied to this indicator include 'file-hash', 'cryptojacking', and 'react2shell', which provide context about the nature of the indicator. These labels can be useful for categorizing and filtering indicators in a threat intelligence system.
+
+Overall, this indicator provides valuable information about malicious file hashes associated with the React2Shell cryptojacking campaign, making it an important component of a threat intelligence system focused on identifying and mitigating malware threats.",indicator--640b002e-1992-4068-963c-b1e8131f39f0
+"The object contains a detailed description of an indicator related to the React2Shell cryptojacking campaign. The indicator is identified by the unique identifier 'indicator--ffa9de10-00bc-4632-aa0a-a436c3e3ee9e'.
+
+The indicator involves IP addresses that have been contacted or used in the campaign. Specifically, it includes a pattern of IP addresses that match certain values. This pattern is defined as follows:
+
+""The object contains a list of 18 specific IPv4 addresses that are associated with the React2Shell cryptojacking campaign.""
+
+These IP addresses include:
+
+* 154.89.152.168
+* 154.89.152.151
+* 154.89.152.170
+* 115.42.60.97
+* 115.42.60.126
+* 92.246.87.48
+* 45.144.55.111
+* 39.59.59.33
+* 23.27.143.210
+* 205.185.126.196
+* 178.63.67.153
+* 178.63.67.106
+* 149.248.44.88
+* 139.59.59.33
+* 128.199.194.97
+* 104.18.50.34
+* 64.79.148.161
+* 59.7.217.245
+* 37.114.37.94
+* 37.114.37.82
+
+These IP addresses are grouped into a single pattern using the 'OR' operator, which means that any of these addresses will match if they have the specified value.
+
+The indicator is classified as an ""indicator"" type and has no specific labels or descriptions beyond those provided by the object's metadata.
+
+In summary, this object contains a list of IP addresses associated with the React2Shell cryptojacking campaign, grouped into a single pattern for easy identification.",indicator--ffa9de10-00bc-4632-aa0a-a436c3e3ee9e
+"The object contains a detailed description of a malicious domain indicator related to the React2Shell cryptojacking campaign. The domains listed are associated with this specific threat, indicating potential involvement in cryptocurrency mining or other malicious activities.
+
+Here's a summary of the key information:
+
+- Malicious Domains: The object includes multiple domain names that have been identified as part of the React2Shell cryptojacking campaign. These domains may be used to host malware, conduct phishing attacks, or engage in other types of cybercrime.
+- Indicator Types: This indicator falls under the category of ""indicator,"" which suggests it is a piece of information used for threat detection and analysis.
+- Labels: The domains are labeled as ""domain"", ""cryptojacking"", and ""react2shell,"" providing context for their potential malicious activities.",indicator--4d336454-acb2-4d86-a31e-88a505ff0bba
+"The object contains a cybersecurity indicator that matches the description of an EdgeUpdateCore Registry Value created by LeakyStealer. The indicator is specifically tied to Windows registry keys and values, with a pattern of [windows-registry-key:value = 'EdgeUpdateCore'].
+
+The metadata surrounding this indicator does not provide additional context beyond its creation and modification timestamps. It remains unclear who originally created the value or when it was last modified, as these details are currently set to non-applicable (nan) values.
+
+The labels associated with the indicator specify that it falls under three categories: persistence, registry, and LeakyStealer.",indicator--0c0b8ad8-ddd8-426f-a535-be551ced22f5
+"The object contains a detailed summary of the provided data, excluding metadata fields. Here is the summary:
+
+The object refers to an indicator entity related to a malicious domain used by LeakyStealer. Specifically, it describes C2 (Command and Control) domains, which are used for malicious communication between attackers and their compromised systems.
+
+LeakyStealer is a known malware actor that has been associated with various malicious activities. The provided data indicates that this particular domain is being tracked as part of the investigation into LeakyStealer's operations.
+
+The pattern associated with this domain is [domain-name:value = 'everstead.group'], suggesting that this domain may be used for communication between attackers and their systems, potentially facilitating malware deployment or command execution.
+
+It is worth noting that this data does not provide any specific information on how to detect or mitigate the threat posed by LeakyStealer or its associated domains.",indicator--485c982b-7035-4d85-b513-9d545710db44
+"The object contains a detailed description of an indicator related to cybersecurity, specifically an IP address associated with the malware ""LeakyStealer"". The description is as follows:
+
+This IP address is identified as a C2 (Command and Control) IP used by LeakyStealer. It is also classified under the label ""C2"" and ""LeakyStealer"", indicating its connection to this specific malware. 
+
+The pattern associated with this indicator is an IPv4 address, with the value being '45.151.62.120'. This suggests that the IP address in question is a potential target for network attacks or malicious activities related to LeakyStealer.
+
+There appears to be no additional information about when the object was created or modified, as these fields are currently set to NaN (Not a Number), indicating missing or unknown data.",indicator--a0fea059-3a22-448e-88ad-c7bd88c422ae
+"The object contains a cyber threat intelligence indicator for the LeakyStealer C2 domain. The indicator is classified as a secondary C2 domain associated with this malware.
+
+Key details about the indicator include:
+
+- The description indicates its specific association with LeakyStealer, emphasizing it as part of the latter's command and control (C2) infrastructure.
+- The labels assigned to the indicator specify that it falls under categories of ""C2"" and ""LeakyStealer,"" suggesting its relevance in identifying or tracking this particular malware.
+- The pattern used by this indicator is based on domain-name patterns, where a specific domain name (`ip-ptr.tech`) is associated with an IP pointer value. This suggests the indicator can help identify malicious domains linked to LeakyStealer.
+- It is critical to note that the information provided does not include timestamps or other metadata due to their inclusion in the original data being ignored by this summary.
+
+In essence, this indicator provides a tool for identifying potential C2 domains related to LeakyStealer malware activity, aiding in cybersecurity efforts to detect and block such malicious communications.",indicator--167df441-aecb-45af-a45b-898b1277b0af
+"The object contains a detailed description of an indicator related to cybersecurity. It is identified as 'LeakyStealer Distribution Domain' and falls under the category of an 'indicator'. The information provided includes various metadata fields which are not relevant to the content of the indicator itself.
+
+Key details about the LeakyStealer Distribution Domain include:
+
+- The indicator is associated with a specific domain, 'paycnex.com', where it acts as a distribution point for the LeakyStealer malware installer.
+- The label assigned to this indicator categorizes it under two main categories: 'distribution' and 'LeakyStealer'.
+- This description does not specify when the creation or modification of the indicator occurred; both are marked as missing information (nan).
+- There is no explicit pattern version associated with this description, which might indicate that some information regarding how this domain is used to distribute LeakyStealer has been filtered out from this particular description.
+
+Overall, while specific details about its functionality and usage patterns in real-world scenarios are not provided, the indicator is noted for its connection to a malicious distribution mechanism linked to the LeakyStealer malware.",indicator--0d120af6-1944-4668-ad7e-142c1c1f7184
+"The object contains details about a security indicator related to device configuration exports. The indicator is named ""Export of Device Configuration Files"" and is associated with the exploitation of FortiCloud SSO vulnerabilities.
+
+According to the information provided, the exported configurations may contain hashed credentials, which suggests that there has been an attempt to steal sensitive information from devices connected to FortiCloud SSO.
+
+The pattern associated with this indicator is [file:name = 'config*' AND file:contains_hashes = true], which appears to search for files named ""config"" containing hashes. This pattern suggests that the indicator is designed to detect configuration export files that may contain stolen credentials.
+
+There are no timestamps or metadata fields included in the object, which could make it difficult to understand when this information was last updated or created. However, it does provide a clear description of what the indicator detects and how it works.
+
+Overall, the object appears to be a security indicator designed to help detect and alert on potential credential theft attempts related to FortiCloud SSO vulnerabilities.",indicator--c9bc649c-2c5e-43d8-85b9-92f0c872141a
+"The object contains a specific indicator related to the NSecRTS.exe RAT campaign, which is a type of malicious software. This indicator was identified by a unique identifier 'indicator--b2bc6545-07ec-4d3d-8847-8db438620da3'.
+
+The purpose of this indicator is to provide hashes and URLs associated with the NSecRTS.exe RAT campaign, aiming to help identify potential security threats. The hashes in question are MD5 values '4001854be1ae8e12b6dda124679a4077' and 'F00F824FCAFBA9B26675AE8242F0B6A0'. These hashes are used to track specific files that may be part of the malicious campaign.
+
+Furthermore, this indicator also identifies URLs ('hxxps://www.akjys.top/') and IP addresses ('154.91.84.3', '45.113.192.102', '103.235.46.102') as potential points of interest for the NSecRTS.exe RAT campaign. This data can be used to create alerts, monitor network traffic, or block malicious communications.
+
+Overall, this indicator is a crucial component in detecting and mitigating the threats posed by the NSecRTS.exe RAT campaign, especially against Indian businesses.",indicator--b2bc6545-07ec-4d3d-8847-8db438620da3
+"The object contains a detailed description of an ""Indicators of Compromise"" (IOC) associated with BlueDelta credential harvesting campaigns. This IOC includes various domains, IP addresses, and URLs that are considered malicious.
+
+Specifically, the IOC is related to the following entities:
+
+* Domains: These include several domain names, such as jkbfgkjdffghh.linkpc.net, kfghjerrlknsm.line.pm, ukraine.html-5.me, ukrainesafe.is-great.org, and others. The exact list includes multiple domain names with varying values.
+* IP Addresses: This IOC also mentions several IPv4 addresses associated with the campaigns, including 3.67.15.169, 5.135.199.21, 18.157.68.73, 51.161.109.50, and others.
+
+The IOC is categorized under the following labels:
+
+* Malicious-activity
+* BlueDelta
+* Credential-harvesting
+
+This information was gathered from an external source called Recorded Future, which provided a description of the indicators of compromise associated with the BlueDelta UKR.NET campaign.",indicator--1ae75bc5-b8d7-4787-a1b2-0c8a96623f48
+"The object contains a threat indicator related to MD5 hashes of files used in an attack chain. The specific indicator is named 'Health Checkup Attack File Hashes'. This indicator pertains to malware analysis and has been categorized under three distinct labels, including file hash, indicator, and malware.",indicator--83d7339d-b46a-4f4e-8bde-21071700530b
+"The object contains a detailed description of an indicator related to malware communication. The indicator is associated with the label ""C2"", which stands for Command and Control. It describes two types of indicators: domains and IP addresses.
+
+Specifically, the indicator highlights specific domain names that are used by malware for communication. These include:
+
+- load.samework.o-r.kr
+- attach.skycloud.o-r.kr
+- attach.skyline.r-e.kr
+- update.alzip.r-e.kr
+- mail.naverwork.r-e.kr
+- gwa.wooritg.o-r.kr
+- mail.naverwork.o-r.kr
+- image.secuwizvpn.r-e.kr
+- load.rwbcode.com
+- rwbcode.com
+
+Additionally, the indicator includes a specific IP address that is also used by malware for communication: 162.220.11.202.
+
+The pattern of this indicator is quite extensive and involves matching both domain names and IP addresses against specified values. This suggests that the indicator is designed to detect a wide range of malicious activities related to these domains and IP addresses.
+
+Overall, this indicator appears to be part of an effort to monitor and track malware communication networks. Its inclusion in a threat intelligence database likely serves as an early warning system for security teams, alerting them to potential malicious activity involving these specific domains and IP addresses.",indicator--59ce15d6-20f7-41b5-8b24-9d199db0627d
+"The object contains a detailed description of an indicator, specifically a type of malware C2 (Command and Control) URL pattern. Here is a summary of the key details:
+
+- The name of the indicator is 'Health Checkup Attack C2 URLs', indicating its connection to a malicious attack.
+- It belongs to two labels: ""C2"" (indicating it's related to Command and Control operations by malware), ""indicator"", and ""url"".
+- There are specific patterns identified for this indicator, which are regular expressions designed to identify malicious URLs. 
+- One pattern specifically matches the URLs 'http://load.samework.o-r.kr/index.php' or 'http://load.rwbcode.com/index.php'.
+- The type of the indicator is classified as a threat, indicating its potential danger.
+
+Overall, this data suggests that the Health Checkup Attack C2 URLs are part of an identified malicious pattern in cybersecurity, used to track and analyze attacks.",indicator--a24e37eb-409e-4931-91e9-a868d6e2ffa6
+"The object contains a detailed description of an indicator, specifically a malicious DLL file. The identifier is 'SSPICLI.dll file hash' and falls under the category of 'indicator'. 
+
+This particular indicator is linked to a NotDoor DLL sideloading attack, which suggests that it has been identified as part of a malicious activity involving the use of DLL files for exploitation purposes.
+
+Further details regarding this indicator include its pattern, which is based on a SHA-256 hash. The provided pattern allows users to verify if their system files match with the given hash in order to detect potential threats.
+
+It's worth noting that the type of the object is 'indicator', meaning it's used to represent suspicious data or activities.",indicator--6b91a9ec-d17c-4d95-9896-5defbd4337f3
+"The object contains a detailed summary of an indicator record. 
+
+This indicator is associated with a malicious macro file used in a NotDoor attack. The file type is identified by the labels 'malicious-file' and 'outlook-macro', indicating it is a potentially hazardous file.
+
+A pattern was found for this indicator, which specifically relates to SHA-256 hashes of file hashes. This pattern matches files that meet certain criteria related to hash values of '8f4bca3c62268fff0458322d111a511e0bcfba255d5ab78c45973bd293379901'.
+
+The relevant information for this indicator includes its name, which is 'testtemp.ini file hash', and the types of indicators it belongs to. 
+
+This data does not include any information that would help in understanding who created or modified this record; such details are missing as indicated by 'nan' (not a number).",indicator--b27656e6-8a0e-454a-b8b5-31ba4a4951c6
+"The object contains a detailed description of an indicator of compromise (IoC) related to Mirai and Rondo miner campaigns exploiting CVE-2025-55182. The IoC is identified by the label ""malicious-activity"", ""botnet"", and ""cryptocurrency-miner"". 
+
+It appears that this IoC is associated with specific IP addresses and URLs that are known to be used in these malicious campaigns. These include a total of eight unique IPv4 addresses and nine different URLs. The pattern used to identify this IoC involves an 'OR' statement, allowing for any of the specified IPv4 addresses or URLs to match.
+
+The exact nature of the malware campaigns associated with this IoC is not explicitly stated, but it can be inferred that they involve Mirai and Rondo miner payloads designed to exploit a specific CVE-2025-55182 vulnerability.",indicator--04a10532-6d19-4562-83aa-3d08511dd2f5
+"The object contains information about a malicious file hash indicator related to Mirai and Rondo miner payloads. The indicator is associated with React2Shell exploitation and consists of multiple MD5 hashes obtained from file hashes.
+
+These hashes were obtained from various sources, including but not limited to, Cryptocurrency miners and Botnets. They are related to malicious files that have been used in past attacks.
+
+The pattern for this indicator involves a series of ""OR"" conditions, which include the presence of specific MD5 hashes within file hashes. This allows users to identify potentially malicious files with these hashes.
+
+Overall, this indicator provides valuable information about the types of malicious files associated with Mirai and Rondo miner payloads, and can be used to help protect against similar attacks in the future.",indicator--b474c963-50f3-48b4-8821-c7fe506961bc
+"The object contains a detailed description of an indicator of compromise (IoC) for malicious activity related to Salesforce. The IoC is identified by the URL ""https://my.salesforce.com/services/data/v64.0/graphql"" and has a confidence level of medium.
+
+This IoC is used in attack scenarios to retrieve large volumes of records from Salesforce objects, bypassing standard UI record limits if permissions are misconfigured. This allows attackers to access sensitive data without being restricted by normal user interface limitations.
+
+The indicator's pattern matches the URL ""https://my.salesforce.com/services/data/v64.0/graphql"" and is classified as a STIX pattern with a version of 2.1. The IoC also has an external reference, but this value is currently undefined (nan).
+
+In terms of labels and metadata, the IoC does not have any defined labels or modified timestamps. However, it was created on January 13th, 2026, at 14:17:09 UTC, and both the creation and modification times are identical.
+
+Overall, this indicator of compromise highlights a potential vulnerability in Salesforce that could be exploited by attackers to access sensitive data without normal user interface restrictions.",indicator--344164e6-8af1-43f4-b390-34b6db5f2d18
+"The object contains a detailed description of an indicator related to malware analysis. Specifically, it pertains to the hashes of APK files associated with Frogblight malware.
+
+Frogblight is a type of malware that targets Android devices, and this particular indicator is designed to detect and flag the presence of these malicious APKs based on their MD5 hash values.
+
+The indicator includes multiple specific MD5 hash values as part of its pattern. These hashes are extracted from APK files associated with Frogblight malware, and the pattern checks if any of these hashes match within a given file or directory.
+
+Furthermore, this indicator is categorized under several labels, including ""malware"", ""android"", and ""frogblight"". This classification system enables analysts to quickly identify and track threats that may be related to Frogblight malware.
+
+In terms of external references, the object links back to Kaspersky OpenTip for further information on the topic. This suggests a potential source of additional context or insight into the nature and behavior of Frogblight malware.",indicator--0736e380-e99a-4dba-8245-f40195f2835a
+"The object contains a JSON object representing an indicator related to cybersecurity threats. Specifically, it appears to be a description of the command and control domains associated with the Frogblight threat actor.
+
+Here is a detailed summary of the key fields:
+
+* **Description**: The indicator describes command and control domains associated with the Frogblight threat actor.
+* **Pattern**: The pattern is a regular expression that matches two specific domain names: ""1249124fr1241og5121.sa.com"" and ""froglive.net"". This suggests that these domains may be used as command and control servers by the Frogblight group.
+* **Labels**: The indicator is labeled with three keywords: ""c2"", ""malware"", and ""frogblight"". These labels likely indicate the nature of the threat actor and its activities.
+
+Overall, this indicator provides a brief description of the Frogblight threat actor's command and control domains, which can be useful for researchers and analysts seeking to understand the tactics, techniques, and procedures (TTPs) used by this group.",indicator--c3fca31e-ae77-4324-bdb3-b5a8c9bf00c0
+"The object contains a detailed description of an indicator associated with the term ""Frogblight"". The key information about this indicator is as follows:
+
+- It is categorized under the type 'indicator' indicating that it is a specific piece of data used to identify or describe something.
+- The label assigned to it includes ""c2"", which stands for Command and Control, ""malware"", and ""frogblight"" - all three terms point towards its connection with malicious activity or a threat actor known as Frogblight.
+- A pattern has been defined for this indicator. In this case, the pattern is specified as [ipv4-addr:value = '45.138.16.208'], which essentially means that the IP address 45.138.16.208 should be matched to see if it relates to the Frogblight C2.
+- The label and pattern are specifically tailored towards identifying potential malicious IP addresses or network connections.",indicator--78049328-4ed7-4904-a5e7-8e1d19877d25
+"The object contains a detailed description of an indicator related to malware distribution, specifically Frogblight APK files. The indicator is identified by the ID 'indicator--e98488a1-f5da-4230-9bd2-7cfb707102a9'. 
+
+It appears that this indicator uses URLs as patterns to detect the distribution of Frogblight APK files, which are likely malicious. The URL patterns include multiple variations such as 'https://farketmez37.cfd/e-ifade.apk', 'https://farketmez36.sbs/e-ifade.apk', and 'https://e-ifade-app-5gheb8jc.devinapps.com/e-ifade.apk'. These patterns may be used to identify potential threats related to the Frogblight malware.
+
+The indicator has a label associated with it, which includes the keywords ""malware distribution"", ""android"", and ""frogblight"". This suggests that the indicator is designed to detect and alert on instances of Frogblight-related activity.",indicator--e98488a1-f5da-4230-9bd2-7cfb707102a9
+"The object contains information about a threat indicator related to the Frogblight phishing website. 
+
+Here's a detailed breakdown of the data:
+
+- The Frogblight phishing website is associated with GitHub repositories that contain its source code and APK files.
+- This threat indicator is categorized under malware, phishing, and specifically named ""Frogblight"".
+- A pattern has been identified to detect potential malicious activity involving the Frogblight website. 
+- The pattern involves checking for a specific URL or value in two different GitHub repositories: one by eraykarakaya0020/e-ifade-vercel and another by Chromeapk.
+- This information serves as a reference point for threat actors to identify potential phishing campaigns and to detect malicious activity related to the Frogblight website.",indicator--42c74676-c38e-4b6b-9e55-a6ca0975d55e
+"The object contains a detailed description of an indicator of compromise (IOCs) related to a specific vulnerability. The IOC is described as an encrypted GET request targeting the web.config file.
+
+This particular IOC is associated with three main entities: Gladinet CentreStack and Triofox, which are likely software applications or services that have been compromised. The IOC specifically mentions that it involves a web.config file, which is a configuration file used in web applications to store settings and data.
+
+The pattern associated with this IOC suggests that it involves network traffic related to HTTP requests. Specifically, the pattern matches any request where the request URI is '/storage/filesvr.dn' and the query string contains the value 't=vghpI7EToZUDIZDdprSubL3mTZ2'. This indicates that the IOC may be related to a specific type of malicious activity, such as data exfiltration or lateral movement in a network.
+
+The labels associated with this IOC include ""Gladinet"", ""CentreStack"", ""Triofox"", ""web.config"", and ""indicator-of-compromise"". These labels suggest that the IOC has been categorized based on its relevance to these specific entities, which may be of interest to threat hunters or incident responders.",indicator--575d6022-2cbe-49c5-b58f-b1ee786ddb91
+"The object contains a detailed description of an Indicator of Compromise (IOC) related to a threat actor's IP address. The IOC is specifically linked to the exploitation of vulnerabilities in the Gladinet CentreStack and Triofox systems.
+
+The indicator in question is identified by its unique ID, 'indicator--eed701ac-2367-4450-9acf-d507568d0dde', and is categorized as an IP address. This particular IP address was observed to be used in malicious activities against these vulnerable systems.
+
+The description of the IOC highlights the specific details of the indicator, including its label, which includes the names of the affected systems (Gladinet, CentreStack, and Triofox) and the type of threat actor involved (indicator-of-compromise and ip-address).
+
+To further characterize this IOC, it has a unique pattern associated with it. The pattern is specified as ""[network-traffic:src_ref.value = '147.124.216.205']"", which suggests that this IP address was detected in network traffic coming from or destined to the specified IP address.
+
+Overall, this IOC provides valuable information for threat actors and security professionals looking to identify and mitigate potential malicious activities involving IP addresses associated with vulnerable systems.",indicator--eed701ac-2367-4450-9acf-d507568d0dde
+"Here is a detailed summary of the data:
+
+The object contains information about SwimSnake malware hashes. These hashes are associated with specific file patterns that are indicative of the SwimSnake malware. The data includes a list of 18 different MD5 hashes, each corresponding to a unique file pattern.
+
+The labels for this indicator are ""malware hash"" and ""SwimSnake"", indicating its connection to the SwimSnake malware.
+
+There is no information available about the creator of this object or when it was created, as these fields have null values (nan).
+
+There is also no information available about the external references or pattern types associated with this data.",indicator--096a5ae4-a03c-4139-a368-63e5a094dd19
+"The object contains a detailed description of an indicator related to malware analysis. The indicator is identified as ""SwimSnake C2 Infrastructure"" and is associated with SwimSnake malware.
+
+The pattern for this indicator is complex, involving multiple URLs and IP addresses. It includes the following conditions:
+
+* A URL that equals 'https://www.bg-wps.com'
+* A URL that equals 'https://pub-3d7ecf8d8ed94374b9fb10d61138bd72.r2.dev/Wjfrpsl.zip'
+* An IP address that equals 154.86.0.40
+* A domain name that equals ydbao6.cyou
+
+This pattern is likely used to identify and flag potential SwimSnake malware communications.
+
+The indicator has been categorized with labels ""C2"", ""SwimSnake"", and ""infrastructure"", indicating its nature as a command and control (C2) infrastructure related to the SwimSnake malware.",indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a
+"The object contains an indicator of compromise associated with the LUMMA Stealer campaign. The indicator is labeled as malicious-URL and C2 (command and control). It uses a specific pattern to identify compromised URLs that are part of the LUMMA Stealer campaign.
+
+The pattern matches URLs that have a specific value, which includes a range of domain names such as ""astapowerproject[.]net"", ""eliteeyeview[.]co"", and others. These domains are likely used by the LUMMA Stealer campaign to host malicious content.
+
+The indicator is classified as an indicator type, which suggests that it is being used to identify potential security threats related to the LUMMA Stealer campaign. The pattern type and version are not specified, suggesting that this information may be missing or not available.
+
+In summary, the object contains a specific pattern that identifies compromised URLs associated with the LUMMA Stealer campaign, which is labeled as malicious-URL and C2. This indicator is likely being used to detect potential security threats related to the campaign.",indicator--f1a69e49-571c-4f67-adef-01a5f8ed1d09
+"The object contains a threat indicator known as the LUMMA Stealer File Hashes. This indicator is categorized under the type of 'indicator' and has been labeled as both 'malicious-file' and 'LUMMA'. 
+
+It appears that this indicator is based on specific SHA1 hashes related to files dropped or used by LUMMA Stealer, a malicious software. The indicator includes four distinct SHA1 hash patterns, each corresponding to a different file. These hashes are part of the pattern description provided, specifically:
+
+file:hashes.'SHA-1' = '7bca3ceb680ad8cb1f3cd0d24d106a28c813ce3b'
+
+OR
+
+file:hashes.'SHA-1' = 'cf290cd98b3779e1e6b58441505d4dd411cdb541'
+
+OR
+
+file:hashes.'SHA-1' = '3748ccd9f716e4668af8672e037b5729074e36c1'
+
+OR
+
+file:hashes.'SHA-1' = '5e5f646f6b1f67519cabff1451aa3427eb46989f'
+
+OR
+
+file:hashes.'SHA-1' = '5ceb5281b941699aacc2ea347494863cff583adf'
+
+These hashes are used to identify and flag potential malicious files associated with LUMMA Stealer. The pattern type, version, spec version, and other metadata fields such as creation date, modified date, creator reference, external references, and labels are currently undefined due to their presence of null or NaN values.",indicator--4a30a106-9811-4783-8d7f-4e1af75b73e3
+"The object contains a detailed description of an indicator related to phishing. The indicator is identified by the unique identifier 'indicator--401b2cde-bb61-44f1-b18c-8d8b9b1d9b14'. 
+
+It appears to be associated with a domain name, specifically 'soyfix.com', which is mentioned as a value in a pattern. The pattern is defined by the regular expression ""[domain-name:value = 'soyfix.com']"" and is related to malicious websites.
+
+The labels attached to this indicator are ""malicious-website"", indicating its nature. There are no timestamps or version numbers present in the provided metadata, suggesting that the indicator may be a static entity rather than an evolving pattern of behavior.
+
+In summary, the object represents a phishing domain identifier with a specific pattern and label, which is linked to malicious websites.",indicator--401b2cde-bb61-44f1-b18c-8d8b9b1d9b14
+"The object contains a detailed description of an indicator related to phishing emails. The indicator is identified by the label ""phishing-email"" and corresponds to a specific domain used in phishing emails impersonating WordPress.
+
+Key details about this indicator include:
+
+- A malicious sender domain is being impersonated as a legitimate one.
+- This impersonation occurs through emails sent using a specific pattern, which includes the phrase ""[email-message:sender_ref.value = 'theyounginevitables.com']"".
+- The exact domain used in the phishing emails is 'theyounginevitables.com'.
+
+Overall, this indicator aims to provide users with information about a malicious sender domain that has been associated with phishing activities.",indicator--f1f72b75-9016-45c2-9c15-d596b0d0c617
+"The object contains a detailed description of an indicator used to identify phishing campaign emails originating from a specific IP address. The key characteristics of this indicator are:
+
+*   It is specifically designed to detect phishing emails that originate from the IP address 217.160.125.42.
+*   This indicator falls under the category of ""phishing-email"" labels, indicating its purpose and application in identifying malicious emails.
+*   The pattern associated with this indicator is a specific IPv4 address value, which serves as a signature to identify the source of phishing emails.
+
+This information provides valuable context for cybersecurity professionals and researchers working to detect and mitigate phishing campaigns.",indicator--2ca7c6fd-101d-4ee7-8bb6-77537718fada
+"The object contains a detailed indicator related to phishing emails. The indicator is identified as 'Phishing Email Relay IP' and has the following characteristics:
+
+It was created for use in sending phishing emails via Alibaba Cloud.
+
+There is an external reference to this indicator, however its details are currently unknown due to missing data.
+
+This indicator falls under the category of phishing emails and is labeled with the specific label ""phishing-email"".
+
+The pattern associated with this indicator matches the IP address '8.219.25.220' within IPv4 addresses.
+
+No additional information such as pattern type or version is available for this indicator, but it does have a valid timestamp range.",indicator--5ab644eb-6639-4b79-9316-98e2774b1d64
+"The object contains information about a threat actor related indicator. The indicator is classified as an endpoint used for exfiltrating stolen credit card data. It is associated with phishing campaigns, specifically targeting the 'send_payment.php' script from the URL 'hxxps://soyfix.com/log/log/send_payment.php'.
+
+This endpoint appears to be part of a larger attack vector aimed at extracting sensitive information from compromised systems. The presence of this indicator suggests that the adversary may attempt to use it to send stolen credit card data to their command and control servers.
+
+The label assigned to this indicator is ""exfiltration"", indicating its primary function in facilitating the transfer of data out of an organization or system. However, without further analysis, it's unclear whether this endpoint is exclusively used for exfiltrating credit card information or if it serves other malicious purposes as well.",indicator--4c1135cf-5a5b-464c-afa3-ca40f9b71680
+"The object contains a detailed description of an endpoint used for exfiltrating stolen OTP codes. The endpoint is identified by the name ""Phishing Exfiltration Endpoint: send_sms.php"" and is associated with a specific URL pattern.
+
+The URL pattern, ""[url:value = 'hxxps://soyfix.com/log/log/send_sms.php']"", suggests that this endpoint is used for sending SMS notifications. However, it's worth noting that the presence of ""httpx"" in the URL may indicate that this endpoint is vulnerable to phishing attacks.
+
+This endpoint is categorized as an ""indicator"" and is labeled with the keyword ""exfiltration"". The absence of any timestamp or creation metadata indicates that this information may not be readily available.",indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8
+"The object contains a detailed description of an Indicator of Compromise (IOC) related to a malicious domain name.
+
+A domain name, goldenticketsshop.com, has been identified as being used for various malicious activities. The confidence level in this indicator is high, indicating that the association between the domain and the malicious activities is strong.
+
+Specifically, the domain is utilized for two primary purposes:
+
+1. Command-and-Control (C2) operations: This involves using the domain's DNS TXT records to deliver dynamic payloads.
+2. Exfiltration endpoints: The domain serves as an endpoint for exfiltrating sensitive data from compromised systems.
+
+There are no external references provided in this indicator, and it falls under the category of malicious-activity indicators. No labels or patterns are available beyond its name and description.
+
+The object also contains metadata information related to when it was created (January 13th, 2026) and last modified (same timestamp as creation), which serves as identifiers for the IOC but does not provide further context about its origins or purpose.",indicator--68ad7188-95c0-48d4-84e4-b4a6d24c3971
+"The object contains an indicator of compromise (IoC) associated with a specific IP address. The IoC is identified by the IP address 5.255.101.148, which has been linked to malicious activity.
+
+This IP address was used by Koi Stealer, a malware program, for command-and-control and exfiltration of stolen data from infected macOS systems. The confidence level in this association is high, indicating that there is strong evidence to support the link between the IP address and the malicious activity.
+
+The IoC has been documented with various details, including its description, external references (which are currently unknown), labels (which are not specified), pattern types, patterns, and version specifications. These details provide a comprehensive understanding of the IoC's characteristics and how it can be used to detect and mitigate potential threats.
+
+In summary, this indicator of compromise highlights an IP address associated with malicious activity by Koi Stealer malware, providing valuable insights for cybersecurity professionals and threat hunters to identify and respond to potential threats.",indicator--af59c588-84fa-4019-827f-f51623a33137
+"The object contains a detailed description of an Indicators of Compromise (IOC) entity. This IOC is associated with a domain name, function.undefined21.com, which is linked to malicious activities.
+
+According to the information provided, this IOC was created on January 13th, 2026, at 14:23:03 UTC. It is also worth noting that the domain has been used by Paradox Stealer for tracking initial infection and exfiltrating stolen data.
+
+The confidence level of this IOC is high, indicating a strong likelihood that it poses a security risk. This is further reinforced by the labels associated with it.",indicator--45764157-172a-4280-bbbc-83221e4dadcf
+"The object contains information about a malicious URL indicator, specifically a domain used by the backdoored Cursor extension to download the Paradox Stealer binary onto the victim's system. 
+
+This domain is classified as high-confidence and has been associated with malicious activity. The URL in question is ""https://function.undefined21.com/sss"". 
+
+The object contains metadata about this indicator, including its creation date and modified date, which are both set to the same timestamp of January 13th, 2026. Additionally, it includes information about the identity that created the indicator, as well as external references and labels, which are currently not available.
+
+In terms of pattern and classification, the object uses a standard STIX pattern syntax, with a specific version number (2.1) and pattern type (malicious-activity).",indicator--e7c93695-efa4-4947-84fa-0f449b58e051
+"The object contains information about a cybersecurity indicator that has been detected as malicious. The indicator is related to a URL used by the Paradox Stealer malware to upload compressed archives of stolen data from infected macOS systems.
+
+The confidence level associated with this indicator is high, suggesting that it is a reliable source of information. The description provides further context on the nature of the threat, highlighting its connection to the Paradox Stealer malware.
+
+In terms of pattern detection, this indicator can be represented by a specific regular expression pattern that matches URLs. This pattern is defined as ""[url:value = 'https://function.undefined21.com/upload']"", which allows for the identification of potentially malicious URLs.
+
+The object also contains metadata about its creation and modification, but these details are not relevant to the core information provided about the indicator itself.",indicator--2f21ab41-cea9-47e0-8b5c-f494086178ec
+"The object contains a detailed information about an Indicator of Compromise (IOC) related to malicious activity. Specifically, it pertains to a domain name associated with the Frigid Stealer threat actor.
+
+The IOC details reveal that the compromised domain, 'askforupdate.org', has been linked to data exfiltration from infected macOS systems. Furthermore, the confidence level in this indication is high, highlighting the reliability of the information provided.
+
+It's worth noting that there are no external references available for further verification or validation of this IOC. The only indicators of malicious activity associated with this domain are explicitly mentioned, emphasizing its connection to malicious activities.",indicator--819a3ebd-e646-45cd-895f-bb1567611f87
+"The object contains a detailed description of an Indicator of Compromise (IOC) that has been identified and tracked by the system. Here is a summary of the key information:
+
+* The IOC is related to a malicious URL, specifically https://brsp.meshsorterio.com.
+* The confidence level associated with this IOC is high, indicating that it is a significant threat.
+* The IOC was created on January 13th, 2026, and has been modified since then.
+* This IOC is linked to the MacSync backdoor component, which suggests that it may be related to a specific type of malicious activity.
+* The URL is used for registration and command polling purposes.
+* No external references are available for this IOC.
+* It falls under the category of ""malicious-activity"" indicators.
+
+In essence, this IOC highlights a specific threat related to a malicious URL, indicating potential security risks associated with it.",indicator--4482a66a-9e2e-423d-ae7a-cc34c35372bd
+"The object contains a detailed information about an Indicator of Compromise (IOC) related to malicious domain activity. Specifically, it highlights the 'support.us05web-zoom.biz' domain name that was used by BlueNoroff attackers as part of their malicious delivery mechanism for AppleScript payloads disguised as Zoom support.
+
+Key details about this IOC include:
+- The domain name 'support.us05web-zoom.biz' is marked with a high level of confidence, indicating its potential association with malicious activities.
+- This domain has been utilized by BlueNoroff attackers to distribute harmful content through seemingly legitimate means.
+- Furthermore, the information includes metadata such as creation and modification timestamps, but for the purpose of this summary, these are excluded.
+
+The IOC classification falls under the category of 'malicious-activity', emphasizing its nature as a threat or malicious behavior detected. The pattern associated with this indicator is specified in STIX format, which is designed to standardize data formats used by security and threat intelligence systems.",indicator--58737b08-493a-4682-8515-80d804b8aec3
+"The object contains a detailed information about an Indicator of Compromise (IOC) related to malware activity. Specifically, it describes the domain name 'web071zoom.us' which is associated with malicious activity.
+
+This domain was used by BlueNoroff attackers to host and deliver secondary stage payloads, such as the 'icloud_helper', to victims. The confidence level in this indicator is high, indicating that there is strong evidence supporting its accuracy.
+
+The IOC was created on January 13th, 2026, and has been validated from the same date onwards. It belongs to the category of 'malicious-activity' indicators, which are used to track and detect malicious activities related to cybersecurity threats.
+
+Key details about this IOC include:
+
+* Domain name: web071zoom.us
+* Created by reference: identity--49ce27ee-ff24-06eb-d426-59362685719b
+* Description: Used by BlueNoroff attackers for delivering secondary stage payloads
+* Confidence level: High
+* Type of indicator: Malicious activity
+
+This information can be useful for cybersecurity professionals and researchers looking to identify and track malicious domains related to BlueNoroff malware.",indicator--f4f0aa72-244d-4cb1-ae89-acfbdef3931b
+"The object contains a detailed description of an indicator of compromise (IOC) related to a domain name. Here's a summary of the key information:
+
+* The domain name associated with this IOC is safeupload.online.
+* This domain has been linked to malicious activity, specifically by BlueNoroff attackers who use it to deliver password-protected ZIP archives containing additional implants.
+* The confidence level in this indicator is high.
+* It was created on January 13, 2026, and there are no external references associated with it.
+
+In essence, safeupload.online has been identified as a domain name linked to malicious activity, making it a potential threat.",indicator--eb457de9-19a6-4e4c-b2a7-c29b94634bb7
+"The object contains a detailed description of an Indicator of Compromise (IOC) related to cybersecurity. The IOC is identified by the domain name 'firstfromsep.online', which was used by a malicious activity known as Nim backdoor for command-and-control communication via Websocket C2.
+
+This domain is flagged with high confidence and has been analyzed using a specific pattern that matches the domain name. The pattern is based on the STIX (Standardized Threat Information eXchange) format, version 2.1, which is used to represent threat intelligence data in a standardized way.
+
+The IOC is related to malicious activity and has been categorized accordingly. It does not have any external references or labels associated with it.",indicator--3fd3cd2d-3d82-4a99-8288-23008b01f909
+"The object contains an Indicator of Compromise (IOC) for a malicious domain, poseidon.cool. This domain is associated with the Odyssey Stealer (AMOS fork) threat actor, which is known to exfiltrate stolen data and execute command-and-control (C2) operations. The indicator has been classified as high-confidence, indicating its potential relevance to security threats.
+
+The IOC includes a pattern that matches the domain name ""poseidon.cool"", allowing for easy identification of this specific domain in security context. This pattern is based on STIX guidelines and follows version 2.1 specifications.",indicator--6f06ab26-76f0-45c2-a9a6-cd540595555d
+"The object contains a detailed information about an Indicator of Compromise (IoC) related to a malicious IPv4 address. 
+
+This IoC is identified as 'IPV4: 82.115.223.9' and it falls under the category of 'malicious-activity'. It has been confirmed with high confidence that this IP address serves as a C2 endpoint for a stealer delivered via a fake captcha infection vector.
+
+The reason behind its classification lies in the fact that the IP address was used to spread malware. The object provides no further details about how it's being utilized, but this is enough to classify it as a malicious indicator.",indicator--996e6609-9fb4-4cc1-873e-1d3232869bbe
+"The object contains information about a malicious domain indicator. The domain name in question is meshsorterio.com, which has been identified as being used by MacSync Stealer and its backdoor component for exfiltration and remote command polling purposes.
+
+This indicator is classified as high-confidence and falls under the category of malicious-activity. No external references are available to support this claim, but the domain's association with MacSync Stealer provides sufficient evidence of its malicious nature.
+
+The indicator's description highlights its potential use in compromising systems and facilitating malicious activities. It is worth noting that this indicator does not provide any additional information about the specific threats or vulnerabilities associated with meshsorterio.com, beyond its known involvement with MacSync Stealer.",indicator--cdbb4386-2a88-4ce5-95df-8434710dd67a
+"The object contains a detailed threat indicator related to a malicious domain name. The indicator is classified as 'malicious-activity' and has been linked to a specific domain name, https://dynamiclake.org.
+
+This domain name was identified as the source of a malicious disk image masquerading as a legitimate macOS utility. According to the threat intelligence report, victims were lured to download this malware from the mentioned website. The confidence level associated with this indicator is medium.
+
+The indicator includes additional information such as external references and labels, which are currently empty or undefined. However, the detailed description of the malicious activity and the domain name provide valuable insight into potential security risks.
+
+Key characteristics of this threat indicator include:
+
+- Type: Indicator
+- Pattern type: STIX
+- Pattern version: 2.1
+- Spec version: 2.1
+
+The object can be summarized as follows:
+
+* The domain name https://dynamiclake.org is associated with malicious activity.
+* The confidence level in this indicator is medium.
+* Victims were lured to download a malicious disk image masquerading as a legitimate macOS utility from this website.
+
+This threat indicator provides valuable information for security researchers and analysts to identify potential risks related to this specific domain name.",indicator--8412354d-0e1a-49ba-bae5-ace53bad6c83
+"The object contains information about a cyber threat indicator related to the DigitStealer malware, which is used to exfiltrate stolen user credentials from infected macOS systems. The URL associated with this indicator is https://goldenticketsshop.com/api/credentials, which was identified as being used by the malware.
+
+This indicator has been classified as having a medium level of confidence and notes that it was used for malicious activity. The label associated with this indicator is not provided. 
+
+In terms of pattern matching, the indicator uses a specific regular expression format defined in STIX (Security and Threat Intelligence Expression Language) version 2.1 to match URLs. This includes the keyword ""url"" followed by an equals sign, which is used to extract the value from the URL, in this case, https://goldenticketsshop.com/api/credentials.
+
+The threat indicator's metadata indicates that it was created on January 13th, 2026, at 2:23 PM UTC, and no external references are available.",indicator--6bc57940-8e76-46bd-b1e3-638c3b0bf472
+"The object contains a detailed description of an Indicator of Compromise (IoC) related to malicious activity. Specifically, it refers to a URL that is used by the DigitStealer malware to upload stolen files from victim machines.
+
+Here's a breakdown of the key information:
+
+* The IoC is associated with the website https://goldenticketsshop.com/api/grabber.
+* The confidence level in this indicator is medium.
+* Notes indicate that this URL is particularly concerning as it is used by DigitStealer to steal sensitive data such as documents, notes, and browser data from compromised machines.
+* There are no external references provided for this IoC.
+* It falls under the category of malicious activity, specifically related to indicators.
+* The object does not contain any additional labels beyond its description.
+
+In summary, the IoC in question is a URL that has been identified as being used by the DigitStealer malware to steal sensitive data from compromised machines. Its association with medium confidence level highlights the potential risk it poses.",indicator--12fc1b9a-3e51-4bbd-9dcc-27da197e1b64
+"The object contains a detailed description of an indicator of compromise (IoC) related to malicious activity. The IoC is linked to the URL 'https://goldenticketsshop.com/api/log', which was used by the JXA-based second-stage payload of DigitStealer to exfiltrate sensitive data such as browser, wallet, and keychain information.
+
+The confidence level in this indicator is medium, indicating that it has some degree of reliability but may also contain inaccuracies. The notes associated with this IoC highlight its potential use case in tracking the activity of malicious actors who utilize this specific URL for data exfiltration purposes.
+
+Key details about this indicator include:
+
+- The pattern type used to describe the IoC is 'stix', which is a standardized language for describing and sharing threat intelligence.
+- The pattern itself is defined as '[url:value = ""https://goldenticketsshop.com/api/log""]', suggesting that the indicator's description relies on this specific URL being associated with malicious activity.
+- The pattern version used in this indicator is 2.1, indicating compliance with a standard framework for describing IoCs.
+
+Overall, this indicator serves as an important resource for threat intelligence teams and researchers to identify and track malicious actors utilizing this particular URL for their nefarious activities.",indicator--20b2bd09-27ee-478b-8a48-9f3e7f60297d
+"The object contains a threat indicator for a malicious domain name that has been identified as an Indicator of Compromise (IOC). The domain name in question is 'sweetseedsbeep.com:8118'. 
+
+This IOC was introduced into the Ledger Live configuration via the DigitStealer malware, with the primary intention of exfiltrating wallet data and receiving commands from an attacker-controlled C2 server. 
+
+The confidence level associated with this indicator is medium, suggesting that while it may be a legitimate concern, further investigation is necessary to confirm its validity.",indicator--f813c193-295b-4da7-a38a-603ba1725eea
+"The object contains a security-related data snippet that describes an indicator of compromise (IOC) related to malicious activity. Specifically, it refers to a URL used by MacSync Stealer, a malware that uploads stolen credentials and wallet data from infected macOS systems.
+
+Here is a more detailed summary:
+
+* The IOC in question is linked to the domain ""https://meshsorterio.com/api/data/receive"".
+* This URL has been identified as a malicious link by security researchers.
+* The malware, MacSync Stealer, exploits vulnerabilities in macOS systems to infect users' devices.
+* Once infected, it steals sensitive user data, including login credentials and wallet information.
+* The IOC is classified with a medium level of confidence, indicating that while there are signs of malicious activity, further investigation is needed to confirm the severity.
+
+Overall, this data snippet serves as an example of how security researchers identify and document malicious URLs and other indicators of compromise.",indicator--88f49b7d-c8bb-4422-a4db-864d38e1166d
+"The object contains information about an Indicator of Compromise (IOC) in the format used by STIX, a standard for threat intelligence sharing. The IOC is related to a domain name, specifically 'telegram2.update.agent'.
+
+The indicator is classified as malicious activity and was identified using a pattern that matches a specific domain name value. The pattern type is STIX and follows version 2.1, indicating its relevance to the STIX specification.
+
+This IOC label is used in conjunction with BlueNoroff attacks, which utilize a Launch Daemon in order to launch the Telegram2 Nim loader. As such, this indicator serves as a persistent identification of the malicious activity associated with these types of attacks.",indicator--389c63ea-dceb-4921-9e79-3ddaad5f1d6a
+"The object contains a detailed description of a malware delivery URL observed in campaigns exploiting CVE-2025-55182. The indicator is categorized as malicious-url and consists of multiple URLs that are potential sources of malware.
+
+These URLs are used to deliver various types of malware, including but not limited to botnets, cryptocurrency miners, and other types of malicious software. The pattern is designed to match specific patterns in the URL that indicate a potential threat.
+
+The indicator is identified by an ID of 'indicator--7ffd7650-e08e-40bb-8849-75e8fae918da'. The external references field is currently blank, and there are no labels or specifications associated with this indicator.",indicator--7ffd7650-e08e-40bb-8849-75e8fae918da
+"The object contains a malware indicator related to the CVE-2025-55182 vulnerability. This indicator is based on MD5 file hashes associated with malware delivered through this vulnerability.
+
+The indicator includes five specific MD5 hashes that are suspected to be linked to malware. These hashes are:
+
+* 0450fe19cfb91660e9874c0ce7a121e0
+* 3ba4d5e0cf0557f03ee5a97a2de56511
+* 622f904bb82c8118da2966a957526a2b
+* 791f123b3aaff1b92873bd4b7a969387
+* c6381ebf8f0349b8d47c5e623bbcef6b
+
+These hashes are included in an OR pattern, which means that if any of these hashes is found in a file, the indicator is triggered.",indicator--7dab6c64-f0b0-4c78-b2f1-fb9a8209824b
+"The object contains information about a malicious domain indicator related to the threat actor behind a malicious Chrome extension. 
+
+This domain, swapsushi.net, is associated with the SwapSushi brand and promoted by the threat actor. It has been listed on anti-scam blocklists due to its involvement in cryptocurrency-related scams. Additionally, the infrastructure linked to this domain is connected to the same malicious actor responsible for the Chrome extension.
+
+The indicator is classified as ""malicious-activity"" and has a high confidence level. There are no external references provided for further verification. The label information is not available.",indicator--a9111411-5f7b-49c8-be68-5f6d2ccec094
+"The object contains a detailed description of an indicator, specifically a bioset ELF file. The file is labeled as 'malicious-elf' and 'EdgeStepper', indicating that it has been flagged for potential malicious activity. 
+
+Further information about the file includes its pattern, which is defined by a SHA1 hash ('8F569641691ECB3888CD4C11932A5B8E13F04B07'). This suggests that the file's contents have been analyzed and compared to known hashes of malicious files.
+
+Despite having specific details, there are certain metadata fields that remain unclear or unknown. These include information about who created the indicator (either through a reference or directly), any external references, and additional labels beyond what is currently stated ('indicator_types', 'modified', 'pattern_type', and 'spec_version' all contain NaN values).",indicator--59f479e1-dae3-495c-9748-86644a0f7bc2
+"The object contains a detailed specification for an ""indicator"" entity, which is a type of threat intelligence data. The indicator is related to a configuration file named ""bioset.conf"" that appears to be encrypted by the EdgeStepper malware.
+
+According to the metadata provided, this configuration file was created and modified on dates that are not specified due to missing values (represented as nan, or Not A Number). The file has an external reference to another indicator entity, but this information is also not available.
+
+The key aspect of this indicator is its pattern, which is a SHA-1 hash of a specific file identifier (""06177810D61A69F34091CC9689B813740D4C260F""). This pattern suggests that the bioset.conf configuration file contains sensitive information related to EdgeStepper malware.
+
+The labels associated with this indicator are ""malicious-config"" and ""EdgeStepper"", indicating its potential relevance to malware analysis. However, additional metadata such as timestamp and ID values are not available due to missing data.",indicator--58250ade-8b74-4ff2-ad7c-835fe448f228
+"The object contains a detailed description of a specific malware indicator. The key information includes:
+
+*   Name: popup_4.2.0.2246.dll
+*   Description: LittleDaemon DLL sample.
+*   Labels: malicious-dll, LittleDaemon
+*   Pattern: [file:sha1 = '69974455D8C13C5D57C1EE91E147FF9AED49AEBC']
+*   Type: indicator
+
+This pattern is unique and can be used to identify the specific malware.",indicator--97c03802-b1cf-469a-9155-fe5ccb07ee6f
+"The object contains information about a malicious executable file identified by the unique identifier 'indicator--aac97eb1-6f78-401d-a6dd-10301c119d60'. The file is named 'sogou_wubi_15.4.0.2508_0000.exe' and has a description of ""LittleDaemon executable sample."".
+
+The file's pattern is defined as ""[file:sha1 = '2857BC730952682D39F426D185769938E839A125']"", which suggests that the pattern is based on the SHA-1 hash of the file's digital signature. However, the specific details of this pattern are not fully specified.
+
+The object also includes metadata such as ""labels"" and ""indicator_types"". The labels include ""malicious-exe"" and ""LittleDaemon"", indicating that the file is both a malicious executable and a variant of LittleDaemon.",indicator--aac97eb1-6f78-401d-a6dd-10301c119d60
+"The object contains a malicious DNS/hijacking node domain known as 'ds20221202.dsc.wcsset[.]com'. This domain was used by PlushDaemon. The description of this domain indicates that it is associated with malicious activities, specifically DNS hijacking.
+
+Further analysis reveals that the domain is classified under two labels: ""malicious-domain"" and ""EdgeStepper"". These labels highlight the potential risks posed by this domain. 
+
+The pattern associated with this domain is [domain-name:value = 'ds20221202.dsc.wcsset.com'], which suggests that this domain is being monitored for potential malicious activity.
+
+In summary, the object contains a malicious DNS/hijacking node domain that poses significant security risks due to its association with PlushDaemon and its classification as ""malicious-domain"" and ""EdgeStepper"".",indicator--a18d0934-11cf-4fbb-bf45-05849f7da819
+"The object contains a detailed indicator related to malicious DNS/hijacking node domains. Specifically, the domain 'test.dsc.wcsset[.]com' is identified as a malicious entity associated with PlushDaemon.
+
+This indicator is classified under the category of 'indicator', and it appears to be related to domain name analysis, where a pattern has been defined to match suspicious domains. The pattern involves specifying a domain name value for an unknown variable, in this case, ['test.dsc.wcsset.com'].
+
+The labels associated with this indicator include 'malicious-domain' and 'EdgeStepper', which provide further context about the nature of the threat posed by this particular domain.",indicator--ab6f5436-8414-44fd-a438-4968b196e081
+"The object contains a detailed description of an indicator, which appears to be a malicious IP address. The key details include:
+
+- It is identified by the identifier 'indicator--97dd63ec-9468-4801-83c9-d4409ce28bd3', however this information has been omitted as per instructions.
+
+- The indicator is categorized under the type 'indicator', which suggests it is a relevant piece of data used for tracking or analysis, rather than being an actual threat in itself.
+
+- It is associated with two labels: ""malicious-ip"" and ""EdgeStepper"". These labels likely provide context about the nature of this IP address. The first indicates that it is considered malicious, while the second suggests a connection to an 'EdgeStepper' which could be a tool, system or service used in nefarious activities.
+
+- The indicator does not have any explicit external references provided; however, there is mention of an associated pattern. This pattern specifies the IP address as '8.212.132.120', and it is described using the 'ipv4-addr:value' syntax, suggesting that this pattern can be used to match or identify the IP address in various contexts.
+
+- The pattern type is currently unknown, which may indicate a need for further research or explanation of how this pattern is utilized or what its intended purpose is.",indicator--97dd63ec-9468-4801-83c9-d4409ce28bd3
+"The object contains a detailed description of an IP address indicator. The indicator is associated with the name ""47.242.198.250"" which is classified under the category of malicious IP addresses. 
+
+This IP address has been linked to a PlushDaemon DNS/hijacking node, suggesting that it might be used for nefarious purposes such as domain name spoofing or hijacking. 
+
+The description also mentions that this indicator has labels associated with it, including ""malicious-ip"" and ""EdgeStepper"", further reinforcing its potential use in malicious activities.
+
+In terms of its pattern, the IP address is described using a specific format [ipv4-addr:value = '47.242.198.250'] which suggests that it might be used to identify or block this particular IP address from accessing certain resources or systems.
+
+Overall, the object contains a comprehensive description of an IP address indicator that is likely to be used in security-related contexts to detect and prevent malicious activities.",indicator--b1bbb65c-d071-4c29-b9a0-974e841eaf46
+"The object contains a detailed description of an indicator related to IP addresses geolocated in Morocco. The key characteristics of this indicator include:
+
+*   Description: The indicator is attributed to the Jingle Thief campaign activity and involves IP addresses geolocated in Morocco.
+*   Labels: The labels associated with this indicator are infrastructure, Morocco, and Jingle Thief.
+*   Pattern: This pattern specifies a list of IP addresses that match certain criteria. The IP addresses are in the format 'ipv4-addr:value', where 'value' represents the specific IP address. These IP addresses fall under various networks, including IPv4 and public IPv4 networks (e.g., 41.141.201.19).
+
+Overall, this indicator provides information on a specific pattern related to Moroccan infrastructure IPs that are associated with Jingle Thief campaign activity.",indicator--53cc5455-2511-4d7e-91ec-2403d47016f7
+"The object contains a detailed description of an indicator related to Moroccan telecommunications providers and their involvement in the Jingle Thief activity. Here's a breakdown of the key information:
+
+- The indicator is labeled as 'Associated ASN Organizations', indicating that it pertains to Autonomous System Numbers (ASNs) linked to Moroccan telecommunications providers.
+- Specifically, the ASNs associated with 'MT-MPLS', 'ASMedi', and 'MAROCCONNECT' are of interest in this context.
+- This information is part of an ongoing investigation or surveillance related to the Jingle Thief activity, which seems to be a malicious cybercrime operation using Autonomous System Numbers (ASNs) linked to Moroccan telecommunications providers.
+
+Overall, this indicator provides critical insight into how ASNs linked to Moroccan telecom companies are being used in Jingle Thief activities, highlighting the potential scope of these malicious operations.",indicator--58ce0c27-b323-4954-8923-9b8b4646cd83
+"The object contains a detailed description of an cybersecurity indicator, specifically related to the ""U.S. Infrastructure IPs (Potential Proxy)"" threat. The indicator is classified as an ""infrastructure"" and a ""proxy"", suggesting that it may be used for malicious purposes such as proxying or compromising hosts.
+
+The indicator is based on two IP addresses: '70.187.192.236' and '72.49.91.23'. These IP addresses are located in the United States and are considered to be potentially compromised or used as proxies by threat actors involved in the ""Jingle Thief"" campaign.
+
+The label assigned to this indicator is [""infrastructure"", ""proxy"", ""Jingle Thief""], which provides context about its relevance and potential misuse.
+
+The pattern associated with this indicator is a specific IPv4 address pattern, which uses the 'IN' operator to match values within a specified list. This pattern suggests that the IP addresses in question are being used as part of a larger malicious campaign.
+
+It is worth noting that some metadata fields, such as timestamps and type, are not provided in the description, likely due to their irrelevance or lack of interest for this specific threat assessment.",indicator--d5ce1647-278c-4f65-ab2b-9de8f8898808
+"The object contains a detailed description of an indicator related to Kinsing attacks. Specifically, it outlines the characteristics of malware distribution infrastructure associated with these attacks.
+
+The indicator is identified as 'Kinsing Infrastructure Indicators', and its labels include terms such as 'Kinsing', 'indicator', and 'malware infrastructure'. This suggests that the indicator is designed to track and monitor specific patterns or components of Kinsing-related malware distributions.
+
+A critical aspect of this indicator is the pattern it describes. The pattern involves file hashes (in MD5 format) and URLs used for distributing malware. The list includes six unique file hashes, each corresponding to a specific MD5 value: '28fb07cf6dcd072c3d0b82c60ce30bef', '72a37a2fa588e013eafd695b8b5b0e61', 'a0c4c98a37562da3b94a9ac3f0dd56fb', 'b512bfd19bf46dd3e735c331d768ea42', 'bf17b21c8e9f34a209977e0f2dce92c4'. Furthermore, the pattern includes URLs that correspond to specific files or locations where malware distributions might take place: 'http://gloryweb.vip/lin/config.json', 'http://gloryweb.vip/lin/go.sh', 'http://gloryweb.vip/lin/javarunprocess', 'http://gloryweb.vip/mm46.msi', and 'http://gloryweb.vip:2086/'.
+
+This detailed pattern serves as a method for identifying potential malware distribution sources. It allows for the identification of suspicious files with specific hashes or URLs that could be used to distribute malware.
+
+While no further details are available on when this indicator was created, modified, or added, its content provides valuable information about how to recognize and investigate Kinsing-related threats in digital systems.",indicator--c2e8b7d2-304a-4b84-9328-5b170fa96043
+"The object contains a detailed description of a malicious domain indicator, which is a type of threat intelligence data. Here's a summary:
+
+This domain, identified by the unique identifier 'indicator--3185a083-db23-45af-af4f-6d7b8947cf0b', has been associated with Kinsing malware campaigns. The domain itself provides information on malicious activities, including the use of 'gloryweb.vip' as a specific pattern in its URL.
+
+The domain's label indicates that it is categorized under several key areas: ""Kinsing"", ""malware infrastructure"", and ""domain"". This categorization helps in understanding the scope and nature of this threat indicator.",indicator--3185a083-db23-45af-af4f-6d7b8947cf0b
+"The object contains a detailed description of an Indicators of Compromise (IoC) related to the exploitation of CVE-2025-59287 in WSUS environments. The IoC is identified by the indicator 'indicator--8e447ad9-757d-458e-b066-3375149630b0' and contains several key characteristics.
+
+The description explains that this IoC is related to indicators of exploitation of a specific vulnerability, CVE-2025-59287, in WSUS (Windows Server Update Services) environments. The indicators are labeled as ""exploit"", ""WSUS"", and ""CVE-2025-59287"".
+
+Furthermore, the IoC contains patterns to identify this exploit. These patterns include:
+
+- Network traffic patterns: Specifically, they look for destination ports 8530 and 8531, or reference values from '/ReportingWebService/ReportingWebService.asmx' in network traffic.
+- Process patterns: They examine specific processes such as 'w3wp.exe', where certain child processes are identified, including 'cmd.exe', 'powershell.exe', 'rundll32.exe', 'regsvr32.exe', and 'mshta.exe'.
+- HTTP request body patterns: The IoC also looks for specific keywords in the HTTP request bodies related to SOAP envelopes.
+
+These patterns suggest that the IoC is designed to detect signs of exploitation or abuse associated with this particular vulnerability.",indicator--8e447ad9-757d-458e-b066-3375149630b0
+"The object contains information about an indicator related to a specific Binance Smart Chain Testnet RPC endpoint. This endpoint is used by the SharkStealer tool for an EtherHiding technique.
+
+The endpoint in question is a malicious activity indicator, classified under both blockchain abuse and malicious activity labels. It is specifically designed to detect network traffic from a known source - 'https://data-seed-prebsc-1-s1.binance.org:8545' - which suggests that the SharkStealer tool may be used to hide malicious activities on this specific testnet.
+
+The pattern associated with this endpoint involves matching network traffic destinations to match the specified URL. This is a crucial piece of information for threat actors seeking to hide their malicious activities within the testnet.
+
+Overall, the object provides valuable insight into the detection and mitigation strategies for identifying potentially malicious activity related to the Binance Smart Chain Testnet.",indicator--6a76fa8e-b593-40c3-b37e-8b5f7dbdd712
+"The object contains a detailed description of an indicator, specifically 'SharkStealer Smart Contract Address', which is categorized under 'malicious-activity' and 'blockchain-abuse'. This indicator involves a smart contract address on the Binance Smart Chain Testnet that stores encrypted C2 details.
+
+Key aspects of this indicator include:
+
+1. **Smart Contract Address**: The specified address, '0xE7E24F1A3D9C5B7E8A6D2F4C3B9A8E5F1D2C3B4', is associated with SharkStealer on the Binance Smart Chain Testnet.
+
+2. **Indicator Type**: The object is identified as an 'indicator' and falls under the category of 'malicious-activity' and 'blockchain-abuse'.
+
+3. **Pattern Identification**: The indicator uses a specific pattern, defined by '[blockchain-transaction:to = \'0xE7E24F1A3D9C5B7E8A6D2F4C3B9A8E5F1D2C3B4\']', which is used to identify transactions involving the SharkStealer smart contract address.
+
+This indicator provides a critical piece of information related to malicious activities on blockchain networks.",indicator--8c20d8ce-63f5-4391-b216-d1803d03d69c
+"The object contains a detailed description of an indicator related to malware analysis. The indicator is identified as the 'SharkStealer Embedded AES Key'. 
+
+This key was found within SharkStealer binaries, which are used for decrypting C2 payloads. It is noted that the key is hardcoded in hexadecimal format.
+
+According to the metadata provided, this key falls under two categories of indicators: malware-signature and crypto-key. This categorization suggests that it can be utilized as a reference point for identifying suspicious patterns within SharkStealer binaries or related malicious activities involving encrypted communications.
+
+The pattern associated with this key includes regular expressions matching hexadecimal sequences starting with '0123456789ABCDEF0123456789ABCDEF'. However, the full extent of how this pattern is used to identify and analyze malware activity requires further investigation.
+
+Overall, the information presented suggests a specific indicator that can aid in the analysis of SharkStealer binaries, particularly concerning encryption patterns related to C2 communications.",indicator--345706de-02da-4ae3-a524-0376f0ececbf
+"The object contains a threat intelligence indicator that describes a command-and-control domain used by the SharkStealer malware. The domain name is 'attacker-c2.example.com' and it is part of a pattern used to identify malicious activity.
+
+The indicator is labeled as 'malicious-activity' and 'c2', indicating that it pertains to both malicious actions and command and control communication. It does not have any specific external references associated with it, and the pattern type and version are currently unknown.
+
+This threat intelligence object is stored in a system for tracking indicators of malicious activity, which can help in monitoring and detecting threats associated with SharkStealer malware and similar malicious activities.",indicator--944914b8-2cfd-49ef-9b4e-840213b6e7bd
+"The object contains a threat intelligence indicator for a command-and-control (C2) IP address used by the malware known as SharkStealer. The indicator is labeled as ""malicious-activity"" and ""c2"", indicating its potential danger.
+
+The indicator describes the C2 IP address '198.51.100.23' in a specific pattern, which suggests that this IP address was identified as suspicious or malicious. This information may be useful for security analysts, researchers, or law enforcement agencies to investigate potential cyber threats related to SharkStealer malware.
+
+It is worth noting that the indicator's metadata fields do not contain any relevant information, such as when it was created or modified.",indicator--6126f304-5659-4004-ba77-8db86986a660
