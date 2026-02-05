@@ -1,0 +1,2044 @@
+{
+    "type": "bundle",
+    "id": "bundle--86948b4e-51af-4554-873a-60ee314c0918",
+    "objects": [
+        {
+            "id": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "spec_version": "2.1",
+            "identity_class": "organization",
+            "name": "The MITRE Corporation",
+            "created": "2017-06-01T00:00:00.000Z",
+            "modified": "2026-01-19T10:39:55.739Z",
+            "x_opencti_id": "0be3dd99-1cc6-4e01-8228-cfe3f9eb8e48",
+            "x_opencti_type": "Organization",
+            "type": "identity"
+        },
+        {
+            "type": "marking-definition",
+            "spec_version": "2.1",
+            "id": "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd",
+            "created": "2017-06-01T00:00:00.000Z",
+            "definition_type": "statement",
+            "name": "Copyright 2015-2025, The MITRE Corporation. MITRE ATT&CK and ATT&CK are registered trademarks of The MITRE Corporation.",
+            "definition": {
+                "statement": "copyright 2015-2025, the mitre corporation. mitre att&ck and att&ck are registered trademarks of the mitre corporation."
+            }
+        },
+        {
+            "id": "campaign--285694c9-56c9-5293-b409-0f1e70d71830",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-20T20:53:14.373Z",
+            "modified": "2026-01-19T10:39:05.900Z",
+            "name": "Oldsmar Treatment Plant Intrusion",
+            "description": "[Oldsmar Treatment Plant Intrusion](https://attack.mitre.org/campaigns/C0009) was a cyber incident involving a water treatment facility in Florida. During this incident, unidentified threat actors leveraged features of the system to access and modify setpoints for a specific chemical required in the treatment process. The incident was detected immediately and prevented before it could cause any harm to the public.(Citation: Pinellas County Sheriffs Office February 2021)(Citation: CISA AA21-042A Water Treatment Intrusion Feb 2021)(Citation: Dragos Oldsmar Feb 2021)",
+            "first_seen": "2021-02-01T05:00:00.000Z",
+            "last_seen": "2021-02-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Pinellas County Sheriffs Office February 2021",
+                    "description": "Pinellas County Sheriffs Office 2021, February 8 Treatment Plant Intrusion Press Conference Retrieved. 2021/10/08",
+                    "url": "https://www.youtube.com/watch?v=MkXDSOgLQ6M"
+                },
+                {
+                    "source_name": "Dragos Oldsmar Feb 2021",
+                    "description": "Serino, G., et al . (2021, February 8). Recommendations Following the Oldsmar Water Treatment Facility Cyber Attack. Retrieved October 21, 2022.",
+                    "url": "https://www.dragos.com/blog/industry-news/recommendations-following-the-oldsmar-water-treatment-facility-cyber-attack/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0009",
+                    "external_id": "C0009"
+                },
+                {
+                    "source_name": "CISA AA21-042A Water Treatment Intrusion Feb 2021",
+                    "description": "CISA. (2021, February 11). Compromise of U.S. Water Treatment Facility . Retrieved October 18, 2022.",
+                    "url": "https://www.cisa.gov/uscert/ncas/alerts/aa21-042a"
+                }
+            ],
+            "x_opencti_id": "f0e1b3c9-27c1-46f4-bb53-8fc2550e9210",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--6a96dd4a-1b5a-5e3e-b7a5-bcfd02356d93",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-25T19:58:53.090Z",
+            "modified": "2026-01-19T10:39:05.562Z",
+            "name": "Unitronics Defacement Campaign",
+            "description": "The [Unitronics Defacement Campaign](https://attack.mitre.org/campaigns/C0031) was a collection of intrusions across multiple sectors by the [CyberAv3ngers](https://attack.mitre.org/groups/G1027), where threat actors engaged in a seemingly opportunistic and global targeting and defacement of Unitronics Vision Series [Programmable Logic Controller (PLC)](https://attack.mitre.org/assets/A0003) with [Human-Machine Interface (HMI)](https://attack.mitre.org/assets/A0002). The sectors that these PLCs can be commonly found in are water and wastewater, energy, food and beverage manufacturing, and healthcare. The most notable feature of this attack was the defacement of the PLCs' HMIs.(Citation: CISA AA23-335A IRGC-Affiliated December 2023)(Citation: Frank Bajak and Marc Levy December 2023)",
+            "first_seen": "2023-11-01T04:00:00.000Z",
+            "last_seen": "2023-11-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Lisa Zahner December 2023",
+                    "description": "Lisa Zahner. (2023, December 15). Hackers in Iran attack computer at Vero Utilities. Retrieved March 25, 2024.",
+                    "url": "https://veronews.com/2023/12/15/hackers-in-iran-attack-computer-at-vero-utilities/"
+                },
+                {
+                    "source_name": "CISA AA23-335A IRGC-Affiliated December 2023",
+                    "description": "DHS/CISA. (2023, December 1). IRGC-Affiliated Cyber Actors Exploit PLCs in Multiple Sectors, Including U.S. Water and Wastewater Systems Facilities. Retrieved March 25, 2024.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa23-335a"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0031",
+                    "external_id": "C0031"
+                },
+                {
+                    "source_name": "Frank Bajak and Marc Levy December 2023",
+                    "description": "Frank Bajak and Marc Levy. (2023, December 2). Breaches by Iran-affiliated hackers spanned multiple U.S. states, federal agencies say. Retrieved March 25, 2024.",
+                    "url": "https://apnews.com/article/hackers-iran-israel-water-utilities-critical-infrastructure-cisa-554b2aa969c8220016ab2ef94bd7635b"
+                }
+            ],
+            "x_opencti_id": "256dfc50-959d-4b83-9dff-00cadb62ef9b",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--48d47a82-0334-59ec-a6dd-ca89f118ee67",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-10T20:01:08.133Z",
+            "modified": "2026-01-19T10:39:05.401Z",
+            "name": "Maroochy Water Breach",
+            "description": "[Maroochy Water Breach](https://attack.mitre.org/campaigns/C0020) was an incident in 2000 where an adversary leveraged the local government\u2019s wastewater control system and stolen engineering equipment to disrupt and eventually release 800,000 liters of raw sewage into the local community.(Citation: Marshall Abrams July 2008)",
+            "first_seen": "2000-02-01T05:00:00.000Z",
+            "last_seen": "2000-04-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0020",
+                    "external_id": "C0020"
+                },
+                {
+                    "source_name": "Marshall Abrams July 2008",
+                    "description": "Marshall Abrams 2008, July 23 Malicious Control System Cyber Security Attack Case Study Maroochy Water Services, Australia Retrieved. 2018/03/27",
+                    "url": "https://www.mitre.org/sites/default/files/pdf/08_1145.pdf"
+                }
+            ],
+            "x_opencti_id": "2bd7ad4a-17fb-4698-b60c-61edea5b89a1",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--6238fc6e-7fc7-59d3-aef9-ffdf3b23c030",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-03-28T14:45:30.132Z",
+            "modified": "2026-01-19T09:54:46.512Z",
+            "name": "Operation Triangulation",
+            "description": "[Operation Triangulation](https://attack.mitre.org/campaigns/C0054) is a mobile campaign targeting iOS devices.(Citation: SecureList OpTriangulation 01Jun2023) The unidentified actors used zero-click exploits in iMessage attachments to gain [Initial Access](https://attack.mitre.org/tactics/TA0027), then executed exploits and validators, such as [Binary Validator](https://attack.mitre.org/software/S1215) before finally executing the [TriangleDB](https://attack.mitre.org/software/S1216) implant.",
+            "first_seen": "2019-01-01T08:00:00.000Z",
+            "last_seen": "2023-06-01T07:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0054",
+                    "external_id": "C0054"
+                },
+                {
+                    "source_name": "SecureList OpTriangulation 01Jun2023",
+                    "description": "Kuznetsov, I., et al. (2023, June 1). Operation Triangulation: iOS devices targeted with previously unknown malware. Retrieved April 18, 2024.",
+                    "url": "https://securelist.com/operation-triangulation/109842/"
+                }
+            ],
+            "x_opencti_id": "c05b3d60-3a08-47ed-bb26-1360478a7d61",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--edaebe53-bb32-5a81-a0d0-bb20d472da10",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-28T18:00:04.123Z",
+            "modified": "2026-01-19T09:32:46.886Z",
+            "name": "C0033",
+            "description": "[C0033](https://attack.mitre.org/campaigns/C0033) was a [PROMETHIUM](https://attack.mitre.org/groups/G0056) campaign during which they used [StrongPity](https://attack.mitre.org/software/S0491) to target Android users. [C0033](https://attack.mitre.org/campaigns/C0033) was the first publicly documented mobile campaign for [PROMETHIUM](https://attack.mitre.org/groups/G0056), who previously used Windows-based techniques.(Citation: welivesec_strongpity)",
+            "first_seen": "2016-05-01T07:00:00.000Z",
+            "last_seen": "2023-01-01T08:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0033",
+                    "external_id": "C0033"
+                },
+                {
+                    "source_name": "securelist_strongpity",
+                    "description": "Baumgartner, K. (2016, October 3). On the StrongPity Waterhole Attacks Targeting Italian and Belgian Encryption Users. Retrieved March 28, 2024.",
+                    "url": "https://securelist.com/on-the-strongpity-waterhole-attacks-targeting-italian-and-belgian-encryption-users/76147/"
+                },
+                {
+                    "source_name": "welivesec_strongpity",
+                    "description": "Stefanko, L. (2023, January 10). StrongPity espionage campaign targeting Android users. Retrieved January 31, 2023.",
+                    "url": "https://www.welivesecurity.com/2023/01/10/strongpity-espionage-campaign-targeting-android-users/"
+                }
+            ],
+            "x_opencti_id": "6fff026f-440c-4f53-a95b-95b5c7a9a01e",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--79fc394a-eabe-5e39-9be8-13426d0438b7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-07-17T19:42:07.269Z",
+            "modified": "2026-01-19T09:32:46.735Z",
+            "name": "Pikabot Distribution February 2024",
+            "description": "[Pikabot](https://attack.mitre.org/software/S1145) was distributed in [Pikabot Distribution February 2024](https://attack.mitre.org/campaigns/C0036) using malicious emails with embedded links leading to malicious ZIP archives requiring user interaction for follow-on infection. The version of [Pikabot](https://attack.mitre.org/software/S1145) distributed featured significant changes over the 2023 variant, including reduced code complexity and simplified obfuscation mechanisms.(Citation: Elastic Pikabot 2024)(Citation: Zscaler Pikabot 2024)",
+            "first_seen": "2024-02-01T05:00:00.000Z",
+            "last_seen": "2024-02-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Zscaler Pikabot 2024",
+                    "description": "Nikolaos Pantazopoulos. (2024, February 12). The (D)Evolution of Pikabot. Retrieved July 17, 2024.",
+                    "url": "https://www.zscaler.com/blogs/security-research/d-evolution-pikabot"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0036",
+                    "external_id": "C0036"
+                },
+                {
+                    "source_name": "Elastic Pikabot 2024",
+                    "description": "Daniel Stepanic & Salim Bitam. (2024, February 23). PIKABOT, I choose you!. Retrieved July 12, 2024.",
+                    "url": "https://www.elastic.co/security-labs/pikabot-i-choose-you"
+                }
+            ],
+            "x_opencti_id": "5d5cd45d-4f42-4312-9cc7-cca161cf8eaa",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--bb165e57-2fa1-5616-b486-2678fe02d27c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-03-25T22:32:28.946Z",
+            "modified": "2026-01-19T09:32:46.532Z",
+            "name": "SPACEHOP Activity",
+            "description": "[SPACEHOP Activity](https://attack.mitre.org/campaigns/C0052) is conducted through commercially leased Virtual Private Servers (VPS), otherwise known as provisioned Operational Relay Box (ORB) networks. The network leveraged for SPACEHOP Activity enabled China-nexus cyber threat actors \u2013 such as [APT5](https://attack.mitre.org/groups/G1023) and [Ke3chang](https://attack.mitre.org/groups/G0004) \u2013 to perform network reconnaissance scanning and vulnerability exploitation. SPACEHOP Activity has historically targeted entities in North America, Europe, and the Middle East.(Citation: ORB Mandiant)",
+            "first_seen": "2019-01-01T05:00:00.000Z",
+            "last_seen": "2024-05-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0052",
+                    "external_id": "C0052"
+                },
+                {
+                    "source_name": "ORB Mandiant",
+                    "description": "Raggi, Michael. (2024, May 22). IOC Extinction? China-Nexus Cyber Espionage Actors Use ORB Networks to Raise Cost on Defenders. Retrieved July 8, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks"
+                }
+            ],
+            "x_opencti_id": "84a4cdec-573a-4d66-9e87-83cfaaea62c0",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--e064d1bf-a189-5e3e-99a3-ba7f42779f78",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-05-15T19:17:48.880Z",
+            "modified": "2026-01-19T09:32:46.034Z",
+            "name": "C0026",
+            "description": "[C0026](https://attack.mitre.org/campaigns/C0026) was a campaign identified in September 2022 that included the selective distribution of [KOPILUWAK](https://attack.mitre.org/software/S1075) and [QUIETCANARY](https://attack.mitre.org/software/S1076) malware to previous [ANDROMEDA](https://attack.mitre.org/software/S1074) malware victims in Ukraine through re-registered [ANDROMEDA](https://attack.mitre.org/software/S1074) C2 domains. Several tools and tactics used during [C0026](https://attack.mitre.org/campaigns/C0026) were consistent with historic [Turla](https://attack.mitre.org/groups/G0010) operations.(Citation: Mandiant Suspected Turla Campaign February 2023)",
+            "first_seen": "2022-08-01T05:00:00.000Z",
+            "last_seen": "2022-09-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0026",
+                    "external_id": "C0026"
+                },
+                {
+                    "source_name": "Mandiant Suspected Turla Campaign February 2023",
+                    "description": "Hawley, S. et al. (2023, February 2). Turla: A Galaxy of Opportunity. Retrieved May 15, 2023.",
+                    "url": "https://www.mandiant.com/resources/blog/turla-galaxy-opportunity"
+                }
+            ],
+            "x_opencti_id": "c4079e2f-aa0f-4971-b21c-8719d324f62b",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--55f9e298-bd28-5d14-a6dc-124040787100",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-06-10T18:57:09.920Z",
+            "modified": "2026-01-19T09:32:45.604Z",
+            "name": "KV Botnet Activity",
+            "description": "[KV Botnet Activity](https://attack.mitre.org/campaigns/C0035) consisted of exploitation of primarily \u201cend-of-life\u201d small office-home office (SOHO) equipment from manufacturers such as Cisco, NETGEAR, and DrayTek. [KV Botnet Activity](https://attack.mitre.org/campaigns/C0035) was used by [Volt Typhoon](https://attack.mitre.org/groups/G1017) to obfuscate connectivity to victims in multiple critical infrastructure segments, including energy and telecommunication companies and entities based on the US territory of Guam. While the KV Botnet is the most prominent element of this campaign, it overlaps with another botnet cluster referred to as the JDY cluster.(Citation: Lumen KVBotnet 2023) This botnet was disrupted by US law enforcement entities in early 2024 after periods of activity from October 2022 through January 2024.(Citation: DOJ KVBotnet 2024)",
+            "first_seen": "2022-10-01T04:00:00.000Z",
+            "last_seen": "2024-01-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Lumen KVBotnet 2023",
+                    "description": "Black Lotus Labs. (2023, December 13). Routers Roasting On An Open Firewall: The KV-Botnet Investigation. Retrieved June 10, 2024.",
+                    "url": "https://blog.lumen.com/routers-roasting-on-an-open-firewall-the-kv-botnet-investigation/"
+                },
+                {
+                    "source_name": "DOJ KVBotnet 2024",
+                    "description": "US Department of Justice. (2024, January 31). U.S. Government Disrupts Botnet People\u2019s Republic of China Used to Conceal Hacking of Critical Infrastructure. Retrieved June 10, 2024.",
+                    "url": "https://www.justice.gov/opa/pr/us-government-disrupts-botnet-peoples-republic-china-used-conceal-hacking-critical"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0035",
+                    "external_id": "C0035"
+                }
+            ],
+            "x_opencti_id": "b07d59ad-f5ef-4389-9428-bdfd0bbbe8a3",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--9ed9bf5c-42c1-5672-a3e6-328065063d07",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-11-20T23:15:36.728Z",
+            "modified": "2026-01-19T09:32:45.480Z",
+            "name": "FrostyGoop Incident",
+            "description": "[FrostyGoop Incident](https://attack.mitre.org/campaigns/C0041) took place in January 2024 against a municipal district heating company in Ukraine. Following initial access via likely exploitation of external facing services, [FrostyGoop](https://attack.mitre.org/software/S1165) was used to manipulate ENCO control systems via legitimate Modbus commands to impact the delivery of heating services to Ukrainian civilians.(Citation: Dragos FROSTYGOOP 2024)(Citation: Nozomi BUSTLEBERM 2024)",
+            "first_seen": "2024-01-01T07:00:00.000Z",
+            "last_seen": "2024-01-01T07:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Dragos FROSTYGOOP 2024",
+                    "description": "Mark Graham, Carolyn Ahlers, Kyle O'Meara; Dragos. (2024, July). Impact of FrostyGoop ICS Malware on Connected OT Systems. Retrieved November 20, 2024.",
+                    "url": "https://hub.dragos.com/hubfs/Reports/Dragos-FrostyGoop-ICS-Malware-Intel-Brief-0724_r2.pdf"
+                },
+                {
+                    "source_name": "Nozomi BUSTLEBERM 2024",
+                    "description": "Nozomi Networks Labs. (2024, July 24). Cyberwarfare Targeting OT: Protecting Against FrostyGoop/BUSTLEBERM Malware. Retrieved November 20, 2024.",
+                    "url": "https://www.nozominetworks.com/blog/protecting-against-frostygoop-bustleberm-malware"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0041",
+                    "external_id": "C0041"
+                }
+            ],
+            "x_opencti_id": "38ed5f01-bc97-4cd6-ad39-23db88af3149",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--b22813e3-47f0-56cc-8079-844b5ca8a1b6",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-25T17:47:37.619Z",
+            "modified": "2026-01-19T09:32:45.426Z",
+            "name": "Triton Safety Instrumented System Attack",
+            "description": "[Triton Safety Instrumented System Attack](https://attack.mitre.org/campaigns/C0030) was a campaign employed by [TEMP.Veles](https://attack.mitre.org/groups/G0088) which leveraged the [Triton](https://attack.mitre.org/software/S1009) malware framework against a petrochemical organization.(Citation: Triton-EENews-2017) The malware and techniques used within this campaign targeted specific Triconex [Safety Controller](https://attack.mitre.org/assets/A0010)s within the environment.(Citation: FireEye TRITON 2018) The incident was eventually discovered due to a safety trip that occurred as a result of an issue in the malware.(Citation: FireEye TRITON 2017)",
+            "first_seen": "2017-06-01T04:00:00.000Z",
+            "last_seen": "2017-08-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0030",
+                    "external_id": "C0030"
+                },
+                {
+                    "source_name": "FireEye TRITON 2018",
+                    "description": "Miller, S. Reese, E. (2018, June 7). A Totally Tubular Treatise on TRITON and TriStation. Retrieved November 17, 2024.",
+                    "url": "https://web.archive.org/web/20200618231942/https://www.fireeye.com/blog/threat-research/2018/06/totally-tubular-treatise-on-triton-and-tristation.html"
+                },
+                {
+                    "source_name": "FireEye TRITON 2017",
+                    "description": "Blake Johnson, Dan Caban, Marina Krotofil, Dan Scali, Nathan Brubaker, Christopher Glyer 2017, December 14 Attackers Deploy New ICS Attack Framework TRITON and Cause Operational Disruption to Critical Infrastructure Retrieved. 2018/01/12",
+                    "url": "https://www.fireeye.com/blog/threat-research/2017/12/attackers-deploy-new-ics-attack-framework-triton.html"
+                },
+                {
+                    "source_name": "Triton-EENews-2017",
+                    "description": "Blake Sobczak. (2019, March 7). The inside story of the world\u2019s most dangerous malware. Retrieved March 25, 2024.",
+                    "url": "https://www.eenews.net/articles/the-inside-story-of-the-worlds-most-dangerous-malware/"
+                }
+            ],
+            "x_opencti_id": "a8880412-231a-49ef-a7fa-94d46ddad42f",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--007d8b84-de7e-5b58-b7b3-0df4baf0494a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-02-18T16:00:42.489Z",
+            "modified": "2026-01-19T09:32:45.332Z",
+            "name": "J-magic Campaign",
+            "description": "The [J-magic Campaign](https://attack.mitre.org/campaigns/C0050) was active from mid-2023 to at least mid-2024 and featured the use of the [J-magic](https://attack.mitre.org/software/S1203) backdoor, a custom cd00r variant tailored for use against Juniper routers. The [J-magic Campaign](https://attack.mitre.org/campaigns/C0050) targeted Junos OS routers serving as VPN gateways primarily in the semiconductor, energy, manufacturing, and IT sectors. (Citation: Lumen J-Magic JAN 2025)",
+            "first_seen": "2023-06-01T04:00:00.000Z",
+            "last_seen": "2024-06-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0050",
+                    "external_id": "C0050"
+                },
+                {
+                    "source_name": "Lumen J-Magic JAN 2025",
+                    "description": "Black Lotus Labs. (2025, January 23). The J-Magic Show: Magic Packets and Where to find them. Retrieved February 17, 2025.",
+                    "url": "https://blog.lumen.com/the-j-magic-show-magic-packets-and-where-to-find-them/"
+                }
+            ],
+            "x_opencti_id": "ad45a933-9a91-40dd-a7b2-5ca22cac0aff",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--023421f1-f2aa-5c66-a468-d4894806fa5f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-22T17:12:02.893Z",
+            "modified": "2026-01-19T09:32:45.053Z",
+            "name": "C0011",
+            "description": "[C0011](https://attack.mitre.org/campaigns/C0011) was a suspected cyber espionage campaign conducted by [Transparent Tribe](https://attack.mitre.org/groups/G0134) that targeted students at universities and colleges in India. Security researchers noted this campaign against students was a significant shift from [Transparent Tribe](https://attack.mitre.org/groups/G0134)'s historic targeting Indian government, military, and think tank personnel, and assessed it was still ongoing as of July 2022.(Citation: Cisco Talos Transparent Tribe Education Campaign July 2022)",
+            "first_seen": "2021-12-01T06:00:00.000Z",
+            "last_seen": "2022-07-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0011",
+                    "external_id": "C0011"
+                },
+                {
+                    "source_name": "Cisco Talos Transparent Tribe Education Campaign July 2022",
+                    "description": "N. Baisini. (2022, July 13). Transparent Tribe begins targeting education sector in latest campaign. Retrieved September 22, 2022.",
+                    "url": "https://blog.talosintelligence.com/2022/07/transparent-tribe-targets-education.html"
+                }
+            ],
+            "x_opencti_id": "388d5855-fba2-4baf-ba6e-2886920c99f2",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--38f50bf2-49df-5226-9f91-08fbb536d84a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-08-25T22:00:39.072Z",
+            "modified": "2026-01-19T09:32:45.049Z",
+            "name": "3CX Supply Chain Attack",
+            "description": "The [3CX Supply Chain Attack](https://attack.mitre.org/campaigns/C0057) was the first publicly reported case of one supply chain compromise triggering another, leading to a cascading, two-stage intrusion. The initial supply chain attack began when a 3CX employee downloaded and executed a trojanized, end-of-life version of the X_Trader trading software from Trading Technologies. This provided UNC4736, a threat cluster associated with [AppleJeus](https://attack.mitre.org/groups/G1049), access to the 3CX environment. From there UNC4736 compromised the Windows and macOS build environments used to distribute the 3CX desktop application to their customers.(Citation: Mandiant 3cx UNC4736 2023) While 3CX serves more than 600,000 customers and 12 million users, only a subset of systems were affected. Subsequent targeting focused on victims in the defense and cryptocurrency sectors, where attackers deployed secondary payloads such as Gopuram for credential theft and persistence.(Citation: Kaspersky 3CX Gopuram 2023) The campaign began in late 2022 and was disrupted after security vendors publicly reported the compromise in March 2023.(Citation: 3cx official statement 2023)(Citation: Krebs 3cx overview 2023)",
+            "first_seen": "2022-11-01T06:00:00.000Z",
+            "last_seen": "2023-03-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Kaspersky 3CX Gopuram 2023",
+                    "description": "Georgy Kucherin, Vasily Berdnikov, Vilen Kamalov. (2023, April 3). Not just an infostealer: Gopuram backdoor deployed through 3CX supply chain attack. Retrieved August 25, 2025.",
+                    "url": "https://securelist.com/gopuram-backdoor-deployed-through-3cx-supply-chain-attack/109344/"
+                },
+                {
+                    "source_name": "Krebs 3cx overview 2023",
+                    "description": "Brian Krebs. (2023, April 20). 3CX Breach Was a Double Supply Chain Compromise. Retrieved May 22, 2025.",
+                    "url": "https://krebsonsecurity.com/2023/04/3cx-breach-was-a-double-supply-chain-compromise/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0057",
+                    "external_id": "C0057"
+                },
+                {
+                    "source_name": "3cx official statement 2023",
+                    "description": "Agathocles Prodromou. (2023, April 20). Security Update Thursday 20 April 2023 \u2013 Initial Intrusion Vector Found. Retrieved August 25, 2025.",
+                    "url": "https://www.3cx.com/blog/news/mandiant-security-update2/"
+                },
+                {
+                    "source_name": "Mandiant 3cx UNC4736 2023",
+                    "description": "Jeff Johnson, Fred Plan, Adrian Sanchez, Renato Fontana, Jake Nicastro, Dimiter Andonov, Marius Fodoreanu, Daniel Scott. (2023, April 20). 3CX Software Supply Chain Compromise Initiated by a Prior Software Supply Chain Compromise; Suspected North Korean Actor Responsible. Retrieved August 25, 2025.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/3cx-software-supply-chain-compromise/"
+                }
+            ],
+            "x_opencti_id": "bf57ba69-8172-4624-978a-4fdd1e4ce274",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--0f9a95a6-d8c0-5fff-8966-ac34d9e6d7af",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-27T19:43:25.703Z",
+            "modified": "2026-01-19T09:32:44.719Z",
+            "name": "2022 Ukraine Electric Power Attack",
+            "description": "The [2022 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0034) was a [Sandworm Team](https://attack.mitre.org/groups/G0034) campaign that used a combination of GOGETTER, Neo-REGEORG, [CaddyWiper](https://attack.mitre.org/software/S0693), and living of the land (LotL) techniques to gain access to a Ukrainian electric utility to send unauthorized commands from their SCADA system.(Citation: Mandiant-Sandworm-Ukraine-2022)(Citation: Dragos-Sandworm-Ukraine-2022)",
+            "first_seen": "2022-06-01T04:00:00.000Z",
+            "last_seen": "2022-10-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Dragos-Sandworm-Ukraine-2022",
+                    "description": "Dragos, Inc.. (2023, December 11). ELECTRUM Targeted Ukrainian Electric Entity Using Custom Tools and CaddyWiper Malware, October 2022. Retrieved March 28, 2024.",
+                    "url": "https://www.dragos.com/blog/new-details-electrum-ukraine-electric-sector-compromise-2022/"
+                },
+                {
+                    "source_name": "Mandiant-Sandworm-Ukraine-2022",
+                    "description": "Ken Proska, John Wolfram, Jared Wilson, Dan Black, Keith Lunden, Daniel Kapellmann Zafra, Nathan Brubaker, Tyler Mclellan, Chris Sistrunk. (2023, November 9). Sandworm Disrupts Power in Ukraine Using a Novel Attack Against Operational Technology. Retrieved March 28, 2024.",
+                    "url": "https://www.mandiant.com/resources/blog/sandworm-disrupts-power-ukraine-operational-technology"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0034",
+                    "external_id": "C0034"
+                }
+            ],
+            "x_opencti_id": "9ecaefa8-d67e-4cfe-a58b-5ab4d9eaaca3",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--d8a62138-ea99-5df7-ac74-32e611017de2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-01T18:21:04.698Z",
+            "modified": "2026-01-19T09:32:44.331Z",
+            "name": "Cutting Edge",
+            "description": "[Cutting Edge](https://attack.mitre.org/campaigns/C0029) was a campaign conducted by suspected China-nexus espionage actors, variously identified as UNC5221/UTA0178 and UNC5325, that began as early as December 2023 with the exploitation of zero-day vulnerabilities in Ivanti Connect Secure (previously Pulse Secure) VPN appliances. [Cutting Edge](https://attack.mitre.org/campaigns/C0029) targeted the U.S. defense industrial base and multiple sectors globally including  telecommunications, financial, aerospace, and technology. [Cutting Edge](https://attack.mitre.org/campaigns/C0029) featured the use of defense evasion and living-off-the-land (LoTL) techniques along with the deployment of web shells and other custom malware.(Citation: Mandiant Cutting Edge January 2024)(Citation: Volexity Ivanti Zero-Day Exploitation January 2024)(Citation: Volexity Ivanti Global Exploitation January 2024)(Citation: Mandiant Cutting Edge Part 2 January 2024)(Citation: Mandiant Cutting Edge Part 3 February 2024)",
+            "first_seen": "2023-12-01T05:00:00.000Z",
+            "last_seen": "2024-02-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Mandiant Cutting Edge Part 2 January 2024",
+                    "description": "Lin, M. et al. (2024, January 31). Cutting Edge, Part 2: Investigating Ivanti Connect Secure VPN Zero-Day Exploitation. Retrieved February 27, 2024.",
+                    "url": "https://www.mandiant.com/resources/blog/investigating-ivanti-zero-day-exploitation"
+                },
+                {
+                    "source_name": "Volexity Ivanti Zero-Day Exploitation January 2024",
+                    "description": "Meltzer, M. et al. (2024, January 10). Active Exploitation of Two Zero-Day Vulnerabilities in Ivanti Connect Secure VPN. Retrieved February 27, 2024.",
+                    "url": "https://www.volexity.com/blog/2024/01/10/active-exploitation-of-two-zero-day-vulnerabilities-in-ivanti-connect-secure-vpn/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0029",
+                    "external_id": "C0029"
+                },
+                {
+                    "source_name": "Mandiant Cutting Edge January 2024",
+                    "description": "McLellan, T. et al. (2024, January 12). Cutting Edge: Suspected APT Targets Ivanti Connect Secure VPN in New Zero-Day Exploitation. Retrieved February 27, 2024.",
+                    "url": "https://www.mandiant.com/resources/blog/suspected-apt-targets-ivanti-zero-day"
+                },
+                {
+                    "source_name": "Mandiant Cutting Edge Part 3 February 2024",
+                    "description": "Lin, M. et al. (2024, February 27). Cutting Edge, Part 3: Investigating Ivanti Connect Secure VPN Exploitation and Persistence Attempts. Retrieved March 1, 2024.",
+                    "url": "https://www.mandiant.com/resources/blog/investigating-ivanti-exploitation-persistence"
+                },
+                {
+                    "source_name": "Volexity Ivanti Global Exploitation January 2024",
+                    "description": "Gurkok, C. et al. (2024, January 15). Ivanti Connect Secure VPN Exploitation Goes Global. Retrieved February 27, 2024.",
+                    "url": "https://www.volexity.com/blog/2024/01/15/ivanti-connect-secure-vpn-exploitation-goes-global/"
+                }
+            ],
+            "x_opencti_id": "e528ab05-a235-4eb5-ad43-649e6c6f95b5",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--835ed206-0cd7-5ad4-8ad6-655f5dbe77a3",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-26T21:18:34.075Z",
+            "modified": "2026-01-19T09:32:44.259Z",
+            "name": "Operation Sharpshooter",
+            "description": "[Operation Sharpshooter](https://attack.mitre.org/campaigns/C0013) was a global cyber espionage campaign that targeted nuclear, defense, government, energy, and financial companies, with many located in Germany, Turkey, the United Kingdom, and the United States. Security researchers noted the campaign shared many similarities with previous [Lazarus Group](https://attack.mitre.org/groups/G0032) operations, including fake job recruitment lures and shared malware code.(Citation: McAfee Sharpshooter December 2018)(Citation: Bleeping Computer Op Sharpshooter March 2019)(Citation: Threatpost New Op Sharpshooter Data March 2019)",
+            "first_seen": "2017-09-01T05:00:00.000Z",
+            "last_seen": "2019-03-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "McAfee Sharpshooter December 2018",
+                    "description": "Sherstobitoff, R., Malhotra, A., et. al.. (2018, December 18). Operation Sharpshooter Campaign Targets Global Defense, Critical Infrastructure. Retrieved May 14, 2020.",
+                    "url": "https://www.mcafee.com/enterprise/en-us/assets/reports/rp-operation-sharpshooter.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0013",
+                    "external_id": "C0013"
+                },
+                {
+                    "source_name": "Threatpost New Op Sharpshooter Data March 2019",
+                    "description": "L. O'Donnell. (2019, March 3). RSAC 2019: New Operation Sharpshooter Data Reveals Higher Complexity, Scope. Retrieved September 26, 2022.",
+                    "url": "https://threatpost.com/sharpshooter-complexity-scope/142359/"
+                },
+                {
+                    "source_name": "Bleeping Computer Op Sharpshooter March 2019",
+                    "description": "I. Ilascu. (2019, March 3). Op 'Sharpshooter' Connected to North Korea's Lazarus Group. Retrieved September 26, 2022.",
+                    "url": "https://www.bleepingcomputer.com/news/security/op-sharpshooter-connected-to-north-koreas-lazarus-group/"
+                }
+            ],
+            "x_opencti_id": "37433d56-f4a2-41d3-9d81-16be00f75cd7",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--56bbab7a-985b-507c-a235-3661599c11e8",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-16T15:32:41.893Z",
+            "modified": "2026-01-19T09:32:44.102Z",
+            "name": "Operation Spalax",
+            "description": "[Operation Spalax](https://attack.mitre.org/campaigns/C0005) was a campaign that primarily targeted Colombian government organizations and private companies, particularly those associated with the energy and metallurgical industries. The [Operation Spalax](https://attack.mitre.org/campaigns/C0005) threat actors distributed commodity malware and tools using generic phishing topics related to COVID-19, banking, and law enforcement action. Security researchers noted indicators of compromise and some infrastructure overlaps with other campaigns dating back to April 2018, including at least one separately attributed to [APT-C-36](https://attack.mitre.org/groups/G0099), however identified enough differences to report this as separate, unattributed activity.(Citation: ESET Operation Spalax Jan 2021)",
+            "first_seen": "2019-11-01T05:00:00.000Z",
+            "last_seen": "2021-01-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "ESET Operation Spalax Jan 2021",
+                    "description": "M. Porolli. (2021, January 21). Operation Spalax: Targeted malware attacks in Colombia. Retrieved September 16, 2022.",
+                    "url": "https://www.welivesecurity.com/2021/01/12/operation-spalax-targeted-malware-attacks-colombia/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0005",
+                    "external_id": "C0005"
+                }
+            ],
+            "x_opencti_id": "873bf750-67a8-4c5c-b06a-434abb0997bf",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--aba31500-ece2-5a1a-9f41-f38f319a2539",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-10-15T19:31:55.608Z",
+            "modified": "2026-01-19T09:32:43.922Z",
+            "name": "SharePoint ToolShell Exploitation",
+            "description": "The [SharePoint ToolShell Exploitation](https://attack.mitre.org/campaigns/C0058) campaign was conducted in July 2025 and encompassed the first waves of exploitation against incompletely patched spoofing (CVE-2025-49706) and remote code execution (CVE-2025-49704) vulnerabilities affecting on-premises Microsoft SharePoint servers. Later patched and updated as CVE-2025-53770 and CVE-2025-53771, the ToolShell vulnerabilities were widely exploited including by China-based ransomware actor Storm-2603 and espionage actors [Threat Group-3390](https://attack.mitre.org/groups/G0027) and [ZIRCONIUM](https://attack.mitre.org/groups/G0128). [SharePoint ToolShell Exploitation](https://attack.mitre.org/campaigns/C0058) targeted multiple regions and industries including finance, education, energy, and healthcare across Asia, Europe, and the United States.(Citation: Microsoft SharePoint Exploit JUL 2025)(Citation: Palo Alto SharePoint Vulnerabilities JUL 2025)(Citation: Eye Research ToolShell JUL 2025)(Citation: ESET ToolShell JUL 2025)(Citation: Trend Micro SharePoint Attacks JUL 2025)",
+            "first_seen": "2025-07-01T04:00:00.000Z",
+            "last_seen": "2025-07-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Microsoft SharePoint Exploit JUL 2025",
+                    "description": "Microsoft Threat Intelligence. (2025, July 22). Disrupting active exploitation of on-premises SharePoint vulnerabilities. Retrieved October 15, 2025.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2025/07/22/disrupting-active-exploitation-of-on-premises-sharepoint-vulnerabilities/#storm-2603"
+                },
+                {
+                    "source_name": "Eye Research ToolShell JUL 2025",
+                    "description": "Eye Security. (2025, July 19). SharePoint Under Siege: ToolShell Exploit (CVE-2025-49706 & CVE-2025-49704). Retrieved October 15, 2025.",
+                    "url": "https://research.eye.security/sharepoint-under-siege/"
+                },
+                {
+                    "source_name": "Palo Alto SharePoint Vulnerabilities JUL 2025",
+                    "description": "Unit 42. (2025, July 31). Active Exploitation of Microsoft SharePoint Vulnerabilities: Threat Brief (Updated). Retrieved October 15, 2025.",
+                    "url": "https://unit42.paloaltonetworks.com/microsoft-sharepoint-cve-2025-49704-cve-2025-49706-cve-2025-53770/"
+                },
+                {
+                    "source_name": "Trend Micro SharePoint Attacks JUL 2025",
+                    "description": "Trend Micro Research. (2022, July 22). Proactive Security Insights for SharePoint Attacks (CVE-2025-53770 and CVE-2025-53771). Retrieved October 15, 2025.",
+                    "url": "https://www.trendmicro.com/en_us/research/25/g/cve-2025-53770-and-cve-2025-53771-sharepoint-attacks.html"
+                },
+                {
+                    "source_name": "ESET ToolShell JUL 2025",
+                    "description": "ESET Research. (2025, July 24). ToolShell: An all-you-can-eat buffet for threat actors. Retrieved October 15, 2025.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/toolshell-an-all-you-can-eat-buffet-for-threat-actors/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0058",
+                    "external_id": "C0058"
+                }
+            ],
+            "x_opencti_id": "a349efc1-2a9e-4a78-be65-4c48bada8cfa",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--dc47ffec-31f5-5377-841b-4b33f41f2e94",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-10-22T14:02:44.965Z",
+            "modified": "2026-01-19T09:32:43.848Z",
+            "name": "Salesforce Data Exfiltration",
+            "description": "The [Salesforce Data Exfiltration](https://attack.mitre.org/campaigns/C0059) campaign began in October 2024 with financially-motivated threat actor UNC6040 using [Spearphishing Voice](https://attack.mitre.org/techniques/T1598/004) (vishing) to compromise corporate Salesforce instances for large-scale data theft and extortion. Following the initial data theft, victim organizations received extortion demands from a separate threat actor, UNC6240, who claimed to be the \u201cShinyHunters\u201d group. The observed infrastructure and TTPs used during the [Salesforce Data Exfiltration](https://attack.mitre.org/campaigns/C0059) campaign overlap with those used by threat groups with suspected ties to the broader collective known as \"The Com.\u201d These overlaps could plausibly be the result of associated actors operating within the same communities and are not necessarily an indication of a direct operational relationship.(Citation: FBI Salesforce Data Theft SEP 2025)(Citation: Google Salesforce JUN 2025)",
+            "first_seen": "2004-10-01T04:00:00.000Z",
+            "last_seen": "2025-09-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0059",
+                    "external_id": "C0059"
+                },
+                {
+                    "source_name": "Google Salesforce JUN 2025",
+                    "description": "Google Threat Intelligence Group. (2025, June 4). The Cost of a Call: From Voice Phishing to Data Extortion. Retrieved October 22, 2025.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/voice-phishing-data-extortion"
+                },
+                {
+                    "source_name": "FBI Salesforce Data Theft SEP 2025",
+                    "description": "FBI Cyber Division. (2025, September 12). Cyber Criminal Groups UNC6040 and UNC6395 Compromising Salesforce Instances for Data Theft and Extortion. Retrieved October 22, 2025.",
+                    "url": "https://www.ic3.gov/CSA/2025/250912.pdf"
+                }
+            ],
+            "x_opencti_id": "4579c3d4-44f7-4642-8ae6-63e3773528a9",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--8c46c68e-4786-58b1-8eab-72243345bf6a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-12-01T15:40:34.011Z",
+            "modified": "2026-01-19T09:32:43.837Z",
+            "name": "C0017",
+            "description": "[C0017](https://attack.mitre.org/campaigns/C0017) was an [APT41](https://attack.mitre.org/groups/G0096) campaign conducted between May 2021 and February 2022 that successfully compromised at least six U.S. state government networks through the exploitation of vulnerable Internet facing web applications. During [C0017](https://attack.mitre.org/campaigns/C0017), [APT41](https://attack.mitre.org/groups/G0096) was quick to adapt and use publicly-disclosed as well as zero-day vulnerabilities for initial access, and in at least two cases re-compromised victims following remediation efforts. The goals of [C0017](https://attack.mitre.org/campaigns/C0017) are unknown, however [APT41](https://attack.mitre.org/groups/G0096) was observed exfiltrating Personal Identifiable Information (PII).(Citation: Mandiant APT41)",
+            "first_seen": "2021-05-01T04:00:00.000Z",
+            "last_seen": "2022-02-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Mandiant APT41",
+                    "description": "Rufus Brown, Van Ta, Douglas Bienstock, Geoff Ackerman, John Wolfram. (2022, March 8). Does This Look Infected? A Summary of APT41 Targeting U.S. State Governments. Retrieved July 8, 2022.",
+                    "url": "https://www.mandiant.com/resources/apt41-us-state-governments"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0017",
+                    "external_id": "C0017"
+                }
+            ],
+            "x_opencti_id": "87323d7b-8739-4d61-8798-99eb45d5ab37",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--774fedf1-4d87-5a6e-9be4-5f6b22dca125",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-06-04T16:03:15.537Z",
+            "modified": "2026-01-19T09:32:43.705Z",
+            "name": "Quad7 Activity",
+            "description": "Quad7 Activity, also known as CovertNetwork-1658 or the 7777 Botnet, is a network of compromised small office/home office (SOHO) routers. (Citation: Bitsight 7777 Botnet) (Citation: Microsoft Storm-0940) The botnet was initially composed primarily of TP-Link routers and was named Quad7 due to compromised devices exposing TCP port 7777 with the distinctive banner `xlogin`. Later activity showed a significant increase in compromised Asus routers and the addition of new ports and banners, including TCP port 63256 displaying `alogin`. Quad7 infrastructure functions as a collection of egress IPs that various China-affiliated threat actors have used to conduct password-spraying and brute-force operations. (Citation: Bitsight 7777 Botnet)(Citation: Medium 777-Botnet) Microsoft has reported that Storm-0940 leveraged credentials obtained through Quad7 Activity to target organizations in North America and Europe, including government agencies, non-governmental organizations, think tanks, law firms, energy firms, IT providers, and defense industrial base entities. (Citation: Microsoft Storm-0940)",
+            "first_seen": "2023-08-01T04:00:00.000Z",
+            "last_seen": "2025-08-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0055",
+                    "external_id": "C0055"
+                },
+                {
+                    "source_name": "Microsoft Storm-0940",
+                    "description": "Microsoft Threat Intelligence. (2024, October 31). Chinese threat actor Storm-0940 uses credentials from password spray attacks from a covert network. Retrieved June 4, 2025.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2024/10/31/chinese-threat-actor-storm-0940-uses-credentials-from-password-spray-attacks-from-a-covert-network/"
+                },
+                {
+                    "source_name": "TP-Link Quad 7 AUG 2025",
+                    "description": "TP-Link . (2025, August 29). Technical News and Reports about Quad 7 (7777) Botnet aka CovertNetwork-1658. Retrieved October 10, 2025.",
+                    "url": "https://www.tp-link.com/us/support/faq/4365/"
+                },
+                {
+                    "source_name": "Medium 777-Botnet",
+                    "description": "Gi7w0rm. (2023, October 19). The curious case of the 7777-Botnet. Retrieved June 5, 2025.",
+                    "url": "https://gi7w0rm.medium.com/the-curious-case-of-the-7777-botnet-86e3464c3ffd"
+                },
+                {
+                    "source_name": "Bitsight 7777 Botnet",
+                    "description": "Batista, Jo\u00e3o.  Gi7w0rm. (2024, August 27). Retrieved June 5, 2025.",
+                    "url": "https://www.bitsight.com/blog/7777-botnet-insights-multi-target-botnet"
+                }
+            ],
+            "x_opencti_id": "95067e6b-8284-4d8b-aead-6541e9973e62",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--3362c5a4-02f6-5263-97f5-d381b5a3dd3a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-08-06T20:52:19.002Z",
+            "modified": "2026-01-19T09:32:43.697Z",
+            "name": "HomeLand Justice",
+            "description": "[HomeLand Justice](https://attack.mitre.org/campaigns/C0038) was a disruptive campaign involving the use of ransomware, wiper malware, and sensitive information leaks conducted by Iranian state cyber actors against Albanian government networks in July and September 2022. Initial access for [HomeLand Justice](https://attack.mitre.org/campaigns/C0038) was established in May 2021 as threat actors subsequently moved laterally, exfiltrated sensitive information, and maintained persistence for approximately 14 months prior to the attacks. Responsibility was claimed by the \"HomeLand Justice\" front whose messaging indicated targeting of the Mujahedeen-e Khalq (MEK), an Iranian opposition group who maintain a refugee camp in Albania, and were formerly designated a terrorist organization by the US State Department.(Citation: Mandiant ROADSWEEP August 2022)(Citation: Microsoft Albanian Government Attacks September 2022)(Citation: CISA Iran Albanian Attacks September 2022) A second wave of attacks was launched in September 2022 using similar tactics after public attribution of the previous activity to Iran and the severing of diplomatic ties between Iran and Albania.(Citation: CISA Iran Albanian Attacks September 2022)",
+            "first_seen": "2021-05-01T04:00:00.000Z",
+            "last_seen": "2022-09-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0038",
+                    "external_id": "C0038"
+                },
+                {
+                    "source_name": "Microsoft Albanian Government Attacks September 2022",
+                    "description": "MSTIC. (2022, September 8). Microsoft investigates Iranian attacks against the Albanian government. Retrieved August 6, 2024.",
+                    "url": "https://www.microsoft.com/en-us/security/blog/2022/09/08/microsoft-investigates-iranian-attacks-against-the-albanian-government/"
+                },
+                {
+                    "source_name": "Mandiant ROADSWEEP August 2022",
+                    "description": "Jenkins, L. at al. (2022, August 4). ROADSWEEP Ransomware - Likely Iranian Threat Actor Conducts Politically Motivated Disruptive Activity Against Albanian Government Organizations. Retrieved August 6, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/likely-iranian-threat-actor-conducts-politically-motivated-disruptive-activity-against/"
+                },
+                {
+                    "source_name": "CISA Iran Albanian Attacks September 2022",
+                    "description": "CISA. (2022, September 23). AA22-264A Iranian State Actors Conduct Cyber Operations Against the Government of Albania. Retrieved August 6, 2024.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa22-264a"
+                }
+            ],
+            "x_opencti_id": "d39b959a-01ae-481a-a5a4-6e86901a991c",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--f27d19e3-d32c-5b59-a888-67614d93a803",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-03-28T15:22:19.075Z",
+            "modified": "2026-01-19T09:32:43.244Z",
+            "name": "C0032",
+            "description": "[C0032](https://attack.mitre.org/campaigns/C0032) was an extended campaign suspected to involve the [Triton](https://attack.mitre.org/software/S1009) adversaries with related capabilities and techniques focused on gaining a foothold within IT environments. This campaign occurred in 2019 and was distinctly different from the [Triton Safety Instrumented System Attack](https://attack.mitre.org/campaigns/C0030).(Citation: FireEye TRITON 2019)",
+            "first_seen": "2014-10-01T04:00:00.000Z",
+            "last_seen": "2017-01-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0032",
+                    "external_id": "C0032"
+                },
+                {
+                    "source_name": "FireEye TRITON 2019",
+                    "description": "Miller, S, et al. (2019, April 10). TRITON Actor TTP Profile, Custom Attack Tools, Detections, and ATT&CK Mapping. Retrieved April 16, 2019.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2019/04/triton-actor-ttp-profile-custom-attack-tools-detections.html"
+                }
+            ],
+            "x_opencti_id": "93873f59-97a5-4064-a0a0-62c205d53df6",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--76958cf2-dba8-5dee-838b-f541e3939075",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-01-15T19:56:55.070Z",
+            "modified": "2026-01-19T09:32:43.244Z",
+            "name": "Operation MidnightEclipse",
+            "description": "[Operation MidnightEclipse](https://attack.mitre.org/campaigns/C0048) was a campaign conducted in March and April 2024 that involved initial exploit of zero-day vulnerability CVE-2024-3400, a critical command injection vulnerability in the GlobalProtect feature of Palo Alto Networks PAN-OS.(Citation: Volexity UPSTYLE 2024)(Citation: Palo Alto MidnightEclipse APR 2024)",
+            "first_seen": "2024-03-01T05:00:00.000Z",
+            "last_seen": "2024-04-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0048",
+                    "external_id": "C0048"
+                },
+                {
+                    "source_name": "Palo Alto MidnightEclipse APR 2024",
+                    "description": "Unit 42. (2024, April 12). Threat Brief: Operation MidnightEclipse, Post-Exploitation Activity Related to CVE-2024-3400 . Retrieved January 15, 2025.",
+                    "url": "https://unit42.paloaltonetworks.com/cve-2024-3400/"
+                },
+                {
+                    "source_name": "Volexity UPSTYLE 2024",
+                    "description": "Volexity Threat Research. (2024, April 12). Zero-Day Exploitation of Unauthenticated Remote Code Execution Vulnerability in GlobalProtect (CVE-2024-3400). Retrieved November 20, 2024.",
+                    "url": "https://www.volexity.com/blog/2024/04/12/zero-day-exploitation-of-unauthenticated-remote-code-execution-vulnerability-in-globalprotect-cve-2024-3400/"
+                }
+            ],
+            "x_opencti_id": "774dcc54-5c56-4f3d-b00e-fc8f3c51ae68",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--79876076-d3f3-5f0d-86cf-0f18c707dbcb",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-12-02T19:35:14.473Z",
+            "modified": "2026-01-19T09:32:42.748Z",
+            "name": "ShadowRay",
+            "description": "[ShadowRay](https://attack.mitre.org/campaigns/C0045) was a campaign that began in late 2023 targeting the education, cryptocurrency, biopharma, and other sectors through a vulnerability (CVE-2023-48022) in the Ray AI framework named ShadowRay. According to security researchers [ShadowRay](https://attack.mitre.org/campaigns/C0045) was the first known instance of AI workloads being activley exploited in the wild through vulnerabilities in AI infrastructure. CVE-2023-48022, which allows access to compute resources and sensitive data for exposed instances, remains unpatched and has been disputed by the vendor as they maintain that Ray is not intended for use outside of a strictly controlled network environment.(Citation: Oligo ShadowRay Campaign MAR 2024)",
+            "first_seen": "2023-09-01T04:00:00.000Z",
+            "last_seen": "2024-03-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0045",
+                    "external_id": "C0045"
+                },
+                {
+                    "source_name": "Oligo ShadowRay Campaign MAR 2024",
+                    "description": "Lumelsly, A. et al. (2024, March 26). ShadowRay: First Known Attack Campaign Targeting AI Workloads Actively Exploited In The Wild. Retrieved December 2, 2024.",
+                    "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+                }
+            ],
+            "x_opencti_id": "956652af-4e82-4f7b-a28c-7cd9eb7dcf28",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--773e62a4-ea3d-5333-9ea4-91c07b3181a2",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-07-17T20:23:22.945Z",
+            "modified": "2026-01-19T09:32:42.532Z",
+            "name": "Water Curupira Pikabot Distribution",
+            "description": "[Pikabot](https://attack.mitre.org/software/S1145) was distributed in [Water Curupira Pikabot Distribution](https://attack.mitre.org/campaigns/C0037) throughout 2023 by an entity linked to BlackBasta ransomware deployment via email attachments. This activity followed the take-down of [QakBot](https://attack.mitre.org/software/S0650), with several technical overlaps and similarities with [QakBot](https://attack.mitre.org/software/S0650), indicating a possible connection. The identified activity led to the deployment of tools such as [Cobalt Strike](https://attack.mitre.org/software/S0154), while coinciding with campaigns delivering [DarkGate](https://attack.mitre.org/software/S1111) and [IcedID](https://attack.mitre.org/software/S0483) en route to ransomware deployment.(Citation: TrendMicro Pikabot 2024)",
+            "first_seen": "2023-01-01T05:00:00.000Z",
+            "last_seen": "2023-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "TrendMicro Pikabot 2024",
+                    "description": "Shinji Robert Arasawa, Joshua Aquino, Charles Steven Derion, Juhn Emmanuel Atanque, Francisrey Joshua Castillo, John Carlo Marquez, Henry Salcedo, John Rainier Navato, Arianne Dela Cruz, Raymart Yambot & Ian Kenefick. (2024, January 9). Black Basta-Affiliated Water Curupira\u2019s Pikabot Spam Campaign. Retrieved July 17, 2024.",
+                    "url": "https://www.trendmicro.com/en_us/research/24/a/a-look-into-pikabot-spam-wave-campaign.html"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0037",
+                    "external_id": "C0037"
+                }
+            ],
+            "x_opencti_id": "9c566a3e-aa94-4394-8c5d-921c9ea3e237",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--ef59ee7e-2118-5f88-b7f8-bcf8fa3fe7ac",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-02-03T19:41:59.392Z",
+            "modified": "2026-01-19T09:32:42.295Z",
+            "name": "Leviathan Australian Intrusions",
+            "description": "[Leviathan Australian Intrusions](https://attack.mitre.org/campaigns/C0049) consisted of at least two long-term intrusions against victims in Australia by [Leviathan](https://attack.mitre.org/groups/G0065), relying on similar tradecraft such as external service exploitation followed by extensive credential capture and re-use to enable privilege escalation and lateral movement. [Leviathan Australian Intrusions](https://attack.mitre.org/campaigns/C0049) were focused on exfiltrating sensitive data including valid credentials for the victim organizations.(Citation: CISA Leviathan 2024)",
+            "first_seen": "2022-04-01T06:00:00.000Z",
+            "last_seen": "2022-09-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "CISA Leviathan 2024",
+                    "description": "CISA et al. (2024, July 8). People\u2019s Republic of China (PRC) Ministry of State Security APT40 Tradecraft in Action. Retrieved February 3, 2025.",
+                    "url": "https://www.cisa.gov/news-events/cybersecurity-advisories/aa24-190a"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0049",
+                    "external_id": "C0049"
+                }
+            ],
+            "x_opencti_id": "272da757-cd5e-42a2-a314-8ef2e73e4340",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--c3da42f7-bdf9-59c3-a778-4aac5b473f38",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-11-21T22:45:01.292Z",
+            "modified": "2026-01-19T09:32:42.107Z",
+            "name": "Indian Critical Infrastructure Intrusions",
+            "description": "[Indian Critical Infrastructure Intrusions](https://attack.mitre.org/campaigns/C0043) is a sequence of intrusions from 2021 through early 2022 linked to People\u2019s Republic of China (PRC) threat actors, particularly [RedEcho](https://attack.mitre.org/groups/G1042) and Threat Activity Group 38 (TAG38). The intrusions appear focused on IT system breach in Indian electric utility entities and logistics firms, as well as potentially managed service providers operating within India. Although focused on OT-operating entities, there is no evidence this campaign was able to progress beyond IT breach and information gathering to OT environment access.(Citation: RecordedFuture RedEcho 2021)(Citation: RecordedFuture RedEcho 2022)",
+            "first_seen": "2021-01-01T07:00:00.000Z",
+            "last_seen": "2022-04-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0043",
+                    "external_id": "C0043"
+                },
+                {
+                    "source_name": "Recorded Future RedEcho Feb 2021",
+                    "description": "Insikt Group. (2021, February 28). China-Linked Group RedEcho Targets the Indian Power Sector Amid Heightened Border Tensions. Retrieved March 22, 2021.",
+                    "url": "https://go.recordedfuture.com/hubfs/reports/cta-2021-0228.pdf"
+                },
+                {
+                    "source_name": "RecordedFuture RedEcho 2022",
+                    "description": "Recorded Future Insikt Group. (2022, April 6). Continued Targeting of Indian Power Grid Assets by Chinese State-Sponsored Activity Group. Retrieved November 21, 2024.",
+                    "url": "https://go.recordedfuture.com/hubfs/reports/ta-2022-0406.pdf"
+                }
+            ],
+            "x_opencti_id": "9871b0cb-77f0-4d5c-bf34-226f3d4a7ff1",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--932c1fa7-82b3-5188-9516-7a1c206f1781",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-23T17:51:58.539Z",
+            "modified": "2026-01-19T09:32:41.862Z",
+            "name": "Operation Ghost",
+            "description": "[Operation Ghost](https://attack.mitre.org/campaigns/C0023) was an [APT29](https://attack.mitre.org/groups/G0016) campaign starting in 2013 that included operations against ministries of foreign affairs in Europe and the Washington, D.C. embassy of a European Union country. During [Operation Ghost](https://attack.mitre.org/campaigns/C0023), [APT29](https://attack.mitre.org/groups/G0016) used new families of malware and leveraged web services, steganography, and unique C2 infrastructure for each victim.(Citation: ESET Dukes October 2019)",
+            "first_seen": "2013-09-01T04:00:00.000Z",
+            "last_seen": "2019-10-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0023",
+                    "external_id": "C0023"
+                },
+                {
+                    "source_name": "ESET Dukes October 2019",
+                    "description": "Faou, M., Tartare, M., Dupuy, T. (2019, October). OPERATION GHOST. Retrieved September 23, 2020.",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2019/10/ESET_Operation_Ghost_Dukes.pdf"
+                }
+            ],
+            "x_opencti_id": "b003599e-5f20-43ed-980d-b0aeef100c85",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--ae4e3bd7-99ec-5d71-bfdc-39c34404e469",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-08T13:31:37.391Z",
+            "modified": "2026-01-19T09:32:41.721Z",
+            "name": "Night Dragon",
+            "description": "[Night Dragon](https://attack.mitre.org/campaigns/C0002) was a cyber espionage campaign that targeted oil, energy, and petrochemical companies, along with individuals and executives in Kazakhstan, Taiwan, Greece, and the United States. The unidentified threat actors searched for information related to oil and gas field production systems, financials, and collected data from SCADA systems. Based on the observed techniques, tools, and network activities, security researchers assessed the campaign involved a threat group based in China.(Citation: McAfee Night Dragon)",
+            "first_seen": "2009-11-01T04:00:00.000Z",
+            "last_seen": "2011-02-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "McAfee Night Dragon",
+                    "description": "McAfee\u00ae Foundstone\u00ae Professional Services and McAfee Labs\u2122. (2011, February 10). Global Energy Cyberattacks: \u201cNight Dragon\u201d. Retrieved February 19, 2018.",
+                    "url": "https://scadahacker.com/library/Documents/Cyber_Events/McAfee%20-%20Night%20Dragon%20-%20Global%20Energy%20Cyberattacks.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0002",
+                    "external_id": "C0002"
+                }
+            ],
+            "x_opencti_id": "ced5af4a-e56f-4ea7-8afd-e34cc4d8b6b1",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--597a8aa8-d027-53ec-a6ad-0306029ca1d5",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-02-25T17:11:53.066Z",
+            "modified": "2026-01-19T09:32:41.424Z",
+            "name": "APT28 Nearest Neighbor Campaign",
+            "description": "[APT28 Nearest Neighbor Campaign](https://attack.mitre.org/campaigns/C0051) was conducted by [APT28](https://attack.mitre.org/groups/G0007) from early February 2022 to November 2024 against organizations and individuals with expertise on Ukraine. APT28 primarily leveraged living-off-the-land techniques, while leveraging the zero-day exploitation of CVE-2022-38028. Notably, APT28 leveraged Wi-Fi networks in close proximity to the intended target to gain initial access to the victim environment. By daisy-chaining multiple compromised organizations nearby the intended target, APT28 discovered dual-homed systems (with both a wired and wireless network connection) to enable Wi-Fi and use compromised credentials to connect to the victim network.(Citation: Nearest Neighbor Volexity)",
+            "first_seen": "2022-02-01T05:00:00.000Z",
+            "last_seen": "2024-11-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Nearest Neighbor Volexity",
+                    "description": "Koessel, Sean. Adair, Steven. Lancaster, Tom. (2024, November 22). The Nearest Neighbor Attack: How A Russian APT Weaponized Nearby Wi-Fi Networks for Covert Access. Retrieved February 25, 2025.",
+                    "url": "https://www.volexity.com/blog/2024/11/22/the-nearest-neighbor-attack-how-a-russian-apt-weaponized-nearby-wi-fi-networks-for-covert-access/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0051",
+                    "external_id": "C0051"
+                }
+            ],
+            "x_opencti_id": "13309d0c-d637-4f2b-b5c1-01bec24fa739",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--5feb54cb-4b68-50b6-a3ba-eebb1effef60",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-11-21T21:08:27.153Z",
+            "modified": "2026-01-19T09:32:40.992Z",
+            "name": "Outer Space",
+            "description": "[Outer Space](https://attack.mitre.org/campaigns/C0042) was a campaign conducted by [OilRig](https://attack.mitre.org/groups/G0049) throughout 2021 that used the [SampleCheck5000](https://attack.mitre.org/software/S1168) downloader and [Solar](https://attack.mitre.org/software/S1166) backdoor to target Israeli organizations.(Citation: ESET OilRig Campaigns Sep 2023)",
+            "first_seen": "2021-01-01T05:00:00.000Z",
+            "last_seen": "2021-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0042",
+                    "external_id": "C0042"
+                },
+                {
+                    "source_name": "ESET OilRig Campaigns Sep 2023",
+                    "description": "Hromcova, Z. and Burgher, A. (2023, September 21). OilRig\u2019s Outer Space and Juicy Mix: Same ol\u2019 rig, new drill pipes. Retrieved November 21, 2024.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/oilrigs-outer-space-juicy-mix-same-ol-rig-new-drill-pipes/"
+                }
+            ],
+            "x_opencti_id": "b35553c3-1cdd-4569-9f5f-fb1205b06981",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--6326e619-4ce5-5191-b3b0-1f70cec60e3d",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-07T13:40:09.750Z",
+            "modified": "2026-01-19T09:32:40.875Z",
+            "name": "Frankenstein",
+            "description": "[Frankenstein](https://attack.mitre.org/campaigns/C0001) was described by security researchers as a highly-targeted campaign conducted by moderately sophisticated and highly resourceful threat actors in early 2019. The unidentified actors primarily relied on open source tools, including [Empire](https://attack.mitre.org/software/S0363). The campaign name refers to the actors' ability to piece together several unrelated open-source tool components.(Citation: Talos Frankenstein June 2019)",
+            "first_seen": "2019-01-01T06:00:00.000Z",
+            "last_seen": "2019-04-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0001",
+                    "external_id": "C0001"
+                },
+                {
+                    "source_name": "Talos Frankenstein June 2019",
+                    "description": "Adamitis, D. et al. (2019, June 4). It's alive: Threat actors cobble together open-source pieces into monstrous Frankenstein campaign. Retrieved May 11, 2020.",
+                    "url": "https://blog.talosintelligence.com/2019/06/frankenstein-campaign.html"
+                }
+            ],
+            "x_opencti_id": "cdc532c4-e043-47a6-9a6f-95c4e32b36f9",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--67062b77-03f1-52f8-8362-03b7b1e03ada",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-15T19:23:36.696Z",
+            "modified": "2026-01-19T09:32:40.795Z",
+            "name": "C0021",
+            "description": "[C0021](https://attack.mitre.org/campaigns/C0021) was a spearphishing campaign conducted in November 2018 that targeted public sector institutions, non-governmental organizations (NGOs), educational institutions, and private-sector corporations in the oil and gas, chemical, and hospitality industries. The majority of targets were located in the US, particularly in and around Washington D.C., with other targets located in Europe, Hong Kong, India, and Canada. [C0021](https://attack.mitre.org/campaigns/C0021)'s technical artifacts, tactics, techniques, and procedures (TTPs), and targeting overlap with previous suspected [APT29](https://attack.mitre.org/groups/G0016) activity.(Citation: Microsoft Unidentified Dec 2018)(Citation: FireEye APT29 Nov 2018)",
+            "first_seen": "2018-11-01T05:00:00.000Z",
+            "last_seen": "2018-11-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "FireEye APT29 Nov 2018",
+                    "description": "Dunwoody, M., et al. (2018, November 19). Not So Cozy: An Uncomfortable Examination of a Suspected APT29 Phishing Campaign. Retrieved November 27, 2018.",
+                    "url": "https://www.fireeye.com/blog/threat-research/2018/11/not-so-cozy-an-uncomfortable-examination-of-a-suspected-apt29-phishing-campaign.html"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0021",
+                    "external_id": "C0021"
+                },
+                {
+                    "source_name": "Microsoft Unidentified Dec 2018",
+                    "description": "Microsoft Defender Research Team. (2018, December 3). Analysis of cyberattack on U.S. think tanks, non-profits, public sector by unidentified attackers. Retrieved April 15, 2019.",
+                    "url": "https://www.microsoft.com/security/blog/2018/12/03/analysis-of-cyberattack-on-u-s-think-tanks-non-profits-public-sector-by-unidentified-attackers/"
+                }
+            ],
+            "x_opencti_id": "e3187919-ec65-4754-8b39-e6d7a5d3e8f4",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--ca00a6d0-5121-5015-8973-6572d4065f32",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-08-27T18:34:35.056Z",
+            "modified": "2026-01-19T09:32:40.667Z",
+            "name": "Versa Director Zero Day Exploitation",
+            "description": "[Versa Director Zero Day Exploitation](https://attack.mitre.org/campaigns/C0039) was conducted by [Volt Typhoon](https://attack.mitre.org/groups/G1017) from early June through August 2024 as zero-day exploitation of Versa Director servers controlling software-defined wide area network (SD-WAN) applications. Since tracked as CVE-2024-39717, exploitation focused on credential capture from compromised Versa Director servers at managed service providers (MSPs) and internet service providers (ISPs) to enable follow-on access to service provider clients. [Versa Director Zero Day Exploitation](https://attack.mitre.org/campaigns/C0039) was followed by the delivery of the [VersaMem](https://attack.mitre.org/software/S1154) web shell for both credential theft and follow-on code execution.(Citation: Lumen Versa 2024)",
+            "first_seen": "2024-06-01T06:00:00.000Z",
+            "last_seen": "2024-08-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0039",
+                    "external_id": "C0039"
+                },
+                {
+                    "source_name": "Lumen Versa 2024",
+                    "description": "Black Lotus Labs. (2024, August 27). Taking The Crossroads: The Versa Director Zero-Day Exploitaiton. Retrieved August 27, 2024.",
+                    "url": "https://blog.lumen.com/taking-the-crossroads-the-versa-director-zero-day-exploitation/"
+                }
+            ],
+            "x_opencti_id": "6131cad3-15c1-4314-bebf-e4e4df37249e",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--35d7e50e-a6e3-56ea-9775-d35bc6fb661f",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-06-24T15:14:52.789Z",
+            "modified": "2026-01-19T09:32:40.490Z",
+            "name": "RedPenguin",
+            "description": "The [RedPenguin](https://attack.mitre.org/campaigns/C0056) project was launched by Juniper in July 2024 to investigate reported malware infections of Juniper MX Series routers. [RedPenguin](https://attack.mitre.org/campaigns/C0056) activity was separately attributed to [UNC3886](https://attack.mitre.org/groups/G1048) and included the deployment of multiple custom versions of the publicly-available TINYSHELL backdoor on Juniper routers.(Citation: Juniper RedPenguin MAR 2025)(Citation: Mandiant UNC3886 Juniper Routers MAR 2025)",
+            "first_seen": "2024-07-01T04:00:00.000Z",
+            "last_seen": "2025-03-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Mandiant UNC3886 Juniper Routers MAR 2025",
+                    "description": "Lamparski, L. et al. (2025, March 11). Ghost in the Router: China-Nexus Espionage Actor UNC3886 Targets Juniper Routers. Retrieved June 24, 2025.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-targets-juniper-routers"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0056",
+                    "external_id": "C0056"
+                },
+                {
+                    "source_name": "Juniper RedPenguin MAR 2025",
+                    "description": "Juniper Networks, Cybersecurity R&D. (2025, March 11). The RedPenguin Malware Incident. Retrieved June 24, 2025.",
+                    "url": "https://supportportal.juniper.net/sfc/servlet.shepherd/document/download/069Dp00000FzdmIIAR?operationContext=S1"
+                }
+            ],
+            "x_opencti_id": "ea59cc84-7e48-48f6-8b97-882840b64466",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--becca266-3455-5337-94d3-5fe9fc45c6ba",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-29T16:42:29.364Z",
+            "modified": "2026-01-19T09:32:39.873Z",
+            "name": "C0015",
+            "description": "[C0015](https://attack.mitre.org/campaigns/C0015) was a ransomware intrusion during which the unidentified attackers used [Bazar](https://attack.mitre.org/software/S0534), [Cobalt Strike](https://attack.mitre.org/software/S0154), and [Conti](https://attack.mitre.org/software/S0575), along with other tools, over a 5 day period. Security researchers assessed the actors likely used the widely-circulated [Conti](https://attack.mitre.org/software/S0575) ransomware playbook based on the observed pattern of activity and operator errors.(Citation: DFIR Conti Bazar Nov 2021)",
+            "first_seen": "2021-08-01T05:00:00.000Z",
+            "last_seen": "2021-08-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "DFIR Conti Bazar Nov 2021",
+                    "description": "DFIR Report. (2021, November 29). CONTInuing the Bazar Ransomware Story. Retrieved September 29, 2022.",
+                    "url": "https://thedfirreport.com/2021/11/29/continuing-the-bazar-ransomware-story/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0015",
+                    "external_id": "C0015"
+                }
+            ],
+            "x_opencti_id": "b9bd4e15-5135-4636-8461-5dfe1f4093ea",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--d034da95-5d50-5384-8e2a-0bc989654e3c",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-17T13:37:42.596Z",
+            "modified": "2026-01-19T09:32:39.262Z",
+            "name": "Operation Dream Job",
+            "description": "[Operation Dream Job](https://attack.mitre.org/campaigns/C0022) was a cyber espionage operation likely conducted by [Lazarus Group](https://attack.mitre.org/groups/G0032) that targeted the defense, aerospace, government, and other sectors in the United States, Israel, Australia, Russia, and India. In at least one case, the cyber actors tried to monetize their network access to conduct a business email compromise (BEC) operation. In 2020, security researchers noted overlapping TTPs, to include fake job lures and code similarities, between [Operation Dream Job](https://attack.mitre.org/campaigns/C0022), Operation North Star, and Operation Interception; by 2022 security researchers described [Operation Dream Job](https://attack.mitre.org/campaigns/C0022) as an umbrella term covering both Operation Interception and Operation North Star.(Citation: ClearSky Lazarus Aug 2020)(Citation: McAfee Lazarus Jul 2020)(Citation: ESET Lazarus Jun 2020)(Citation: The Hacker News Lazarus Aug 2022)",
+            "aliases": [
+                "Operation North Star",
+                "Operation Interception"
+            ],
+            "first_seen": "2019-09-01T04:00:00.000Z",
+            "last_seen": "2020-08-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "ESET Lazarus Jun 2020",
+                    "description": "Breitenbacher, D and Osis, K. (2020, June 17). OPERATION IN(TER)CEPTION: Targeted Attacks Against European Aerospace and Military Companies. Retrieved December 20, 2021.",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2020/06/ESET_Operation_Interception.pdf"
+                },
+                {
+                    "source_name": "ClearSky Lazarus Aug 2020",
+                    "description": "ClearSky Research Team. (2020, August 13). Operation 'Dream Job' Widespread North Korean Espionage Campaign. Retrieved December 20, 2021.",
+                    "url": "https://www.clearskysec.com/wp-content/uploads/2020/08/Dream-Job-Campaign.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0022",
+                    "external_id": "C0022"
+                },
+                {
+                    "source_name": "The Hacker News Lazarus Aug 2022",
+                    "description": "Lakshmanan, R. (2022, August 17). North Korea Hackers Spotted Targeting Job Seekers with macOS Malware. Retrieved April 10, 2023.",
+                    "url": "https://thehackernews.com/2022/08/north-korea-hackers-spotted-targeting.html"
+                },
+                {
+                    "source_name": "McAfee Lazarus Nov 2020",
+                    "description": "Beek, C. (2020, November 5). Operation North Star: Behind The Scenes. Retrieved December 20, 2021.",
+                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/operation-north-star-behind-the-scenes/"
+                },
+                {
+                    "source_name": "McAfee Lazarus Jul 2020",
+                    "description": "Cashman, M. (2020, July 29). Operation North Star Campaign. Retrieved December 20, 2021.",
+                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/operation-north-star-a-job-offer-thats-too-good-to-be-true/?hilite=%27Operation%27%2C%27North%27%2C%27Star%27"
+                }
+            ],
+            "x_opencti_id": "3113dfbd-8f57-47d7-a0d6-55d0c49f28eb",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--aec85c1e-4b5d-582f-af37-f95bb18cd519",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-03-25T22:45:13.091Z",
+            "modified": "2026-01-19T09:32:39.172Z",
+            "name": "FLORAHOX Activity",
+            "description": "[FLORAHOX Activity](https://attack.mitre.org/campaigns/C0053) is conducted using a hybrid operational relay box (ORB) network, which combines two types of infrastructure: compromised devices and leased Virtual Private Servers (VPS). The compromised devices include end-of-life routers and IoT devices, while VPS space is commercially leased and managed by ORB network administrators. This hybrid ORB network allows adversaries to proxy and obscure malicious traffic, making the source of the traffic more difficult to trace.\n\nThe FLORAHOX ORB network has been leveraged by multiple cyber threat actors, including China-nexus actors like [ZIRCONIUM](https://attack.mitre.org/groups/G0128). These adversaries conduct espionage campaigns through [FLORAHOX Activity](https://attack.mitre.org/campaigns/C0053), relying on the ORB network's ability to funnel traffic through [Tor](https://attack.mitre.org/software/S0183) nodes, provisioned VPS servers, and compromised routers to obfuscate malicious traffic.(Citation: ORB Mandiant)",
+            "first_seen": "2019-01-01T05:00:00.000Z",
+            "last_seen": "2024-05-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "ORB Mandiant",
+                    "description": "Raggi, Michael. (2024, May 22). IOC Extinction? China-Nexus Cyber Espionage Actors Use ORB Networks to Raise Cost on Defenders. Retrieved July 8, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/china-nexus-espionage-orb-networks"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0053",
+                    "external_id": "C0053"
+                }
+            ],
+            "x_opencti_id": "5089ccfe-b09e-4df5-89f2-ee26c61d85bb",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--90d425d1-11f2-5252-a8b3-afe5b92ec394",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-29T20:00:38.136Z",
+            "modified": "2026-01-19T09:32:39.043Z",
+            "name": "Operation Dust Storm",
+            "description": "[Operation Dust Storm](https://attack.mitre.org/campaigns/C0016) was a long-standing persistent cyber espionage campaign that targeted multiple industries in Japan, South Korea, the United States, Europe, and several Southeast Asian countries. By 2015, the [Operation Dust Storm](https://attack.mitre.org/campaigns/C0016) threat actors shifted from government and defense-related intelligence targets to Japanese companies or Japanese subdivisions of larger foreign organizations supporting Japan's critical infrastructure, including electricity generation, oil and natural gas, finance, transportation, and construction.(Citation: Cylance Dust Storm)\n\n[Operation Dust Storm](https://attack.mitre.org/campaigns/C0016) threat actors also began to use Android backdoors in their operations by 2015, with all identified victims at the time residing in Japan or South Korea.(Citation: Cylance Dust Storm)",
+            "first_seen": "2010-01-01T07:00:00.000Z",
+            "last_seen": "2016-02-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0016",
+                    "external_id": "C0016"
+                },
+                {
+                    "source_name": "Cylance Dust Storm",
+                    "description": "Gross, J. (2016, February 23). Operation Dust Storm. Retrieved December 22, 2021.",
+                    "url": "https://s7d2.scene7.com/is/content/cylance/prod/cylance-web/en-us/resources/knowledge-center/resource-library/reports/Op_Dust_Storm_Report.pdf"
+                }
+            ],
+            "x_opencti_id": "0d3d9855-9052-41ad-9a0c-1fd56d2df7e9",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--9112487a-2496-5204-aa20-bd121b452d0a",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-01-17T21:42:34.998Z",
+            "modified": "2026-01-19T09:32:38.902Z",
+            "name": "C0018",
+            "description": "[C0018](https://attack.mitre.org/campaigns/C0018) was a month-long ransomware intrusion that successfully deployed [AvosLocker](https://attack.mitre.org/software/S1053) onto a compromised network. The unidentified actors gained initial access to the victim network through an exposed server and used a variety of open-source tools prior to executing [AvosLocker](https://attack.mitre.org/software/S1053).(Citation: Costa AvosLocker May 2022)(Citation: Cisco Talos Avos Jun 2022)",
+            "first_seen": "2022-02-01T05:00:00.000Z",
+            "last_seen": "2022-03-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Costa AvosLocker May 2022",
+                    "description": "Costa, F. (2022, May 1). RaaS AvosLocker Incident Response Analysis. Retrieved January 11, 2023.",
+                    "url": "https://www.linkedin.com/pulse/raas-avoslocker-incident-response-analysis-fl%C3%A1vio-costa?trk=articles_directory"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0018",
+                    "external_id": "C0018"
+                },
+                {
+                    "source_name": "Cisco Talos Avos Jun 2022",
+                    "description": "Venere, G. Neal, C. (2022, June 21). Avos ransomware group expands with new attack arsenal. Retrieved January 11, 2023.",
+                    "url": "https://blog.talosintelligence.com/avoslocker-new-arsenal/"
+                }
+            ],
+            "x_opencti_id": "2f8c4492-1507-4b70-921d-e34d3a6e5076",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--f0b99281-fbe4-533f-bb4b-cdfff00499d9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-09-27T13:11:52.340Z",
+            "modified": "2026-01-19T09:32:38.737Z",
+            "name": "2015 Ukraine Electric Power Attack",
+            "description": "[2015 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0028) was a [Sandworm Team](https://attack.mitre.org/groups/G0034) campaign during which they used [BlackEnergy](https://attack.mitre.org/software/S0089) (specifically BlackEnergy3) and [KillDisk](https://attack.mitre.org/software/S0607) to target and disrupt transmission and distribution substations within the Ukrainian power grid. This campaign was the first major public attack conducted against the Ukrainian power grid by Sandworm Team.",
+            "first_seen": "2015-12-01T05:00:00.000Z",
+            "last_seen": "2016-01-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0028",
+                    "external_id": "C0028"
+                },
+                {
+                    "source_name": "Booz Allen Hamilton",
+                    "description": "Booz Allen Hamilton. (2016). When The Lights Went Out. Retrieved December 18, 2024.",
+                    "url": "https://www.boozallen.com/content/dam/boozallen/documents/2016/09/ukraine-report-when-the-lights-went-out.pdf"
+                }
+            ],
+            "x_opencti_id": "86a3e540-1940-446d-a76a-351a9edeeba9",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--d12f4292-f838-5383-ae51-42a5a4b106ba",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-01-14T22:38:27.986Z",
+            "modified": "2026-01-19T09:32:37.921Z",
+            "name": "RedDelta Modified PlugX Infection Chain Operations",
+            "description": "[RedDelta Modified PlugX Infection Chain Operations](https://attack.mitre.org/campaigns/C0047) was executed by [Mustang Panda](https://attack.mitre.org/groups/G0129) from mid-2023 through the end of 2024 against multiple entities in East and Southeast Asia. [RedDelta Modified PlugX Infection Chain Operations](https://attack.mitre.org/campaigns/C0047) involved phishing to deliver malicious files or links to users prompting follow-on installer downloads to load [PlugX](https://attack.mitre.org/software/S0013) on victim machines in a persistent state.(Citation: Recorded Future RedDelta 2025)",
+            "first_seen": "2023-07-01T06:00:00.000Z",
+            "last_seen": "2024-12-01T07:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Recorded Future RedDelta 2025",
+                    "description": "Insikt Group. (2025, January 9). Chinese State-Sponsored RedDelta Targeted Taiwan, Mongolia, and Southeast Asia with Adapted PlugX Infection Chain. Retrieved January 14, 2025.",
+                    "url": "https://go.recordedfuture.com/hubfs/reports/cta-cn-2025-0109.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0047",
+                    "external_id": "C0047"
+                }
+            ],
+            "x_opencti_id": "8258fe0a-bf3d-44f2-9ff2-af41748f0808",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--c3d527ff-6c82-5420-b1db-156323468421",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-31T17:22:23.567Z",
+            "modified": "2026-01-19T09:32:35.987Z",
+            "name": "2016 Ukraine Electric Power Attack",
+            "description": "[2016 Ukraine Electric Power Attack](https://attack.mitre.org/campaigns/C0025) was a [Sandworm Team](https://attack.mitre.org/groups/G0034) campaign during which they used [Industroyer](https://attack.mitre.org/software/S0604) malware to target and disrupt distribution substations within the Ukrainian power grid. This campaign was the second major public attack conducted against Ukraine by [Sandworm Team](https://attack.mitre.org/groups/G0034).(Citation: ESET Industroyer)(Citation: Dragos Crashoverride 2018)",
+            "first_seen": "2016-12-01T05:00:00.000Z",
+            "last_seen": "2016-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0025",
+                    "external_id": "C0025"
+                },
+                {
+                    "source_name": "ESET Industroyer",
+                    "description": "Anton Cherepanov, ESET 2017, June 12 Win32/Industroyer: A new threat for industrial control systems Retrieved. 2017/09/15",
+                    "url": "https://www.welivesecurity.com/wp-content/uploads/2017/06/Win32_Industroyer.pdf"
+                },
+                {
+                    "source_name": "Dragos Crashoverride 2018",
+                    "description": "Joe Slowik. (2018, October 12). Anatomy of an Attack: Detecting and Defeating CRASHOVERRIDE. Retrieved December 18, 2020.",
+                    "url": "https://www.dragos.com/wp-content/uploads/CRASHOVERRIDE2018.pdf"
+                }
+            ],
+            "x_opencti_id": "9380b8d5-bcab-40c1-9669-6f8d5012f986",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--37d9b708-676b-5ed0-9f45-c70c724aebd9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-16T21:08:54.358Z",
+            "modified": "2026-01-19T09:32:35.848Z",
+            "name": "Operation Honeybee",
+            "description": "[Operation Honeybee](https://attack.mitre.org/campaigns/C0006) was a campaign that targeted humanitarian aid and inter-Korean affairs organizations from at least late 2017 through early 2018. [Operation Honeybee](https://attack.mitre.org/campaigns/C0006) initially targeted South Korea, but expanded to include Vietnam, Singapore, Japan, Indonesia, Argentina, and Canada. Security researchers assessed the threat actors were likely Korean speakers based on metadata used in both lure documents and executables, and named the campaign \"Honeybee\" after the author name discovered in malicious Word documents.(Citation: McAfee Honeybee)",
+            "first_seen": "2017-08-01T05:00:00.000Z",
+            "last_seen": "2018-02-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "McAfee Honeybee",
+                    "description": "Sherstobitoff, R. (2018, March 02). McAfee Uncovers Operation Honeybee, a Malicious Document Campaign Targeting Humanitarian Aid Groups. Retrieved May 16, 2018.",
+                    "url": "https://www.mcafee.com/blogs/other-blogs/mcafee-labs/mcafee-uncovers-operation-honeybee-malicious-document-campaign-targeting-humanitarian-aid-groups/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0006",
+                    "external_id": "C0006"
+                }
+            ],
+            "x_opencti_id": "1fe65972-2c2f-41af-8d04-73ec5dae5a67",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--d517ebbf-10c7-52bf-84aa-03fbf19b3c55",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-15T17:25:38.020Z",
+            "modified": "2026-01-19T09:32:34.425Z",
+            "name": "CostaRicto",
+            "description": "[CostaRicto](https://attack.mitre.org/campaigns/C0004) was a suspected hacker-for-hire cyber espionage campaign that targeted multiple industries worldwide, with a large number being financial institutions. [CostaRicto](https://attack.mitre.org/campaigns/C0004) actors targeted organizations in Europe, the Americas, Asia, Australia, and Africa, with a large concentration in South Asia (especially India, Bangladesh, and Singapore), using custom malware, open source tools, and a complex network of proxies and SSH tunnels.(Citation: BlackBerry CostaRicto November 2020)",
+            "first_seen": "2019-10-01T04:00:00.000Z",
+            "last_seen": "2020-11-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0004",
+                    "external_id": "C0004"
+                },
+                {
+                    "source_name": "BlackBerry CostaRicto November 2020",
+                    "description": "The BlackBerry Research and Intelligence Team. (2020, November 12). The CostaRicto Campaign: Cyber-Espionage Outsourced. Retrieved May 24, 2021.",
+                    "url": "https://blogs.blackberry.com/en/2020/11/the-costaricto-campaign-cyber-espionage-outsourced"
+                }
+            ],
+            "x_opencti_id": "cc4d41af-0720-46ae-95ac-fe7390298bc6",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--31c206b4-32f3-59ba-ad66-0cac073b3cd9",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-11-25T20:35:10.872Z",
+            "modified": "2026-01-19T09:32:33.864Z",
+            "name": "Juicy Mix",
+            "description": "[Juicy Mix](https://attack.mitre.org/campaigns/C0044) was a campaign conducted by [OilRig](https://attack.mitre.org/groups/G0049) throughout 2022 that targeted Israeli organizations with the [Mango](https://attack.mitre.org/software/S1169) backdoor.(Citation: ESET OilRig Campaigns Sep 2023)",
+            "first_seen": "2022-01-01T05:00:00.000Z",
+            "last_seen": "2022-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0044",
+                    "external_id": "C0044"
+                },
+                {
+                    "source_name": "ESET OilRig Campaigns Sep 2023",
+                    "description": "Hromcova, Z. and Burgher, A. (2023, September 21). OilRig\u2019s Outer Space and Juicy Mix: Same ol\u2019 rig, new drill pipes. Retrieved November 21, 2024.",
+                    "url": "https://www.welivesecurity.com/en/eset-research/oilrigs-outer-space-juicy-mix-same-ol-rig-new-drill-pipes/"
+                }
+            ],
+            "x_opencti_id": "690b7790-832a-4edc-81f4-77153118614c",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--dd963e03-e85f-51de-8906-4cf8287938d7",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-22T20:07:47.208Z",
+            "modified": "2026-01-19T09:32:33.846Z",
+            "name": "Operation CuckooBees",
+            "description": "[Operation CuckooBees](https://attack.mitre.org/campaigns/C0012) was a cyber espionage campaign targeting technology and manufacturing companies in East Asia, Western Europe, and North America since at least 2019. Security researchers noted the goal of [Operation CuckooBees](https://attack.mitre.org/campaigns/C0012), which was still ongoing as of May 2022, was likely the theft of proprietary information, research and development documents, source code, and blueprints for various technologies. Researchers assessed [Operation CuckooBees](https://attack.mitre.org/campaigns/C0012) was conducted by actors affiliated with [Winnti Group](https://attack.mitre.org/groups/G0044), [APT41](https://attack.mitre.org/groups/G0096), and BARIUM.(Citation: Cybereason OperationCuckooBees May 2022)",
+            "first_seen": "2019-12-01T07:00:00.000Z",
+            "last_seen": "2022-05-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0012",
+                    "external_id": "C0012"
+                },
+                {
+                    "source_name": "Cybereason OperationCuckooBees May 2022",
+                    "description": "Cybereason Nocturnus. (2022, May 4). Operation CuckooBees: Deep-Dive into Stealthy Winnti Techniques. Retrieved September 22, 2022.",
+                    "url": "https://www.cybereason.com/blog/operation-cuckoobees-deep-dive-into-stealthy-winnti-techniques"
+                }
+            ],
+            "x_opencti_id": "8807b1ae-80b6-4edc-a710-1863a2168e77",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--2dc0f7b5-ae9b-5a62-a092-b1824d4c38b0",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-21T22:16:42.003Z",
+            "modified": "2026-01-19T09:32:33.370Z",
+            "name": "C0010",
+            "description": "[C0010](https://attack.mitre.org/campaigns/C0010) was a cyber espionage campaign conducted by UNC3890 that targeted Israeli shipping, government, aviation, energy, and healthcare organizations. Security researcher assess UNC3890 conducts operations in support of Iranian interests, and noted several limited technical connections to Iran, including PDB strings and Farsi language artifacts. [C0010](https://attack.mitre.org/campaigns/C0010) began by at least late 2020, and was still ongoing as of mid-2022.(Citation: Mandiant UNC3890 Aug 2022)",
+            "first_seen": "2020-12-01T07:00:00.000Z",
+            "last_seen": "2022-08-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Mandiant UNC3890 Aug 2022",
+                    "description": "Mandiant Israel Research Team. (2022, August 17). Suspected Iranian Actor Targeting Israeli Shipping, Healthcare, Government and Energy Sectors. Retrieved September 21, 2022.",
+                    "url": "https://www.mandiant.com/resources/blog/suspected-iranian-actor-targeting-israeli-shipping"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0010",
+                    "external_id": "C0010"
+                }
+            ],
+            "x_opencti_id": "70eac7a9-cdce-47ce-ae93-19baa5475cab",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--14361ccf-effe-579d-b1a4-ed5bf5ed2a62",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-03-24T14:59:26.744Z",
+            "modified": "2026-01-19T09:32:33.278Z",
+            "name": "SolarWinds Compromise",
+            "description": "The [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024) was a sophisticated supply chain cyber operation conducted by [APT29](https://attack.mitre.org/groups/G0016) that was discovered in mid-December 2020. [APT29](https://attack.mitre.org/groups/G0016) used customized malware to inject malicious code into the SolarWinds Orion software build process that was later distributed through a normal software update; they also used password spraying, token theft, API abuse, spear phishing, and other supply chain attacks to compromise user accounts and leverage their associated access. Victims of this campaign included government, consulting, technology, telecom, and other organizations in North America, Europe, Asia, and the Middle East. This activity has been labled the StellarParticle campaign in industry reporting.(Citation: CrowdStrike StellarParticle January 2022) Industry reporting also initially referred to the actors involved in this campaign as UNC2452, NOBELIUM, Dark Halo, and SolarStorm.(Citation: SolarWinds Advisory Dec 2020)(Citation: SolarWinds Sunburst Sunspot Update January 2021)(Citation: FireEye SUNBURST Backdoor December 2020)(Citation: Volexity SolarWinds)(Citation: CrowdStrike StellarParticle January 2022)(Citation: Unit 42 SolarStorm December 2020)(Citation: Microsoft Analyzing Solorigate Dec 2020)(Citation: Microsoft Internal Solorigate Investigation Blog) \n\nIn April 2021, the US and UK governments attributed the [SolarWinds Compromise](https://attack.mitre.org/campaigns/C0024) to Russia's Foreign Intelligence Service (SVR); public statements included citations to [APT29](https://attack.mitre.org/groups/G0016), Cozy Bear, and The Dukes.(Citation: NSA Joint Advisory SVR SolarWinds April 2021)(Citation: UK NSCS Russia SolarWinds April 2021)(Citation: Mandiant UNC2452 APT29 April 2022) The US government assessed that of the approximately 18,000 affected public and private sector customers of Solar Winds\u2019 Orion product, a much smaller number were compromised by follow-on [APT29](https://attack.mitre.org/groups/G0016) activity on their systems.(Citation: USG Joint Statement SolarWinds January 2021)",
+            "first_seen": "2019-08-01T05:00:00.000Z",
+            "last_seen": "2021-01-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "FireEye SUNBURST Backdoor December 2020",
+                    "description": "Highly Evasive Attacker Leverages SolarWinds Supply Chain to Compromise Multiple Global Victims With SUNBURST Backdoor, 2020--12---13, Schneier on Security",
+                    "url": "https://www.fireeye.com/blog/threat-research/2020/12/evasive-attacker-leverages-solarwinds-supply-chain-compromises-with-sunburst-backdoor.html",
+                    "external_id": "REF-667"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0024",
+                    "external_id": "C0024"
+                },
+                {
+                    "source_name": "Unit 42 SolarStorm December 2020",
+                    "description": "Unit 42. (2020, December 23). SolarStorm Supply Chain Attack Timeline. Retrieved March 24, 2023.",
+                    "url": "https://unit42.paloaltonetworks.com/solarstorm-supply-chain-attack-timeline/"
+                },
+                {
+                    "source_name": "Mandiant UNC2452 APT29 April 2022",
+                    "description": "Mandiant. (2022, April 27). Assembling the Russian Nesting Doll: UNC2452 Merged into APT29. Retrieved March 26, 2023.",
+                    "url": "https://www.mandiant.com/resources/blog/unc2452-merged-into-apt29"
+                },
+                {
+                    "source_name": "NSA Joint Advisory SVR SolarWinds April 2021",
+                    "description": "NSA, FBI, DHS. (2021, April 15). Russian SVR Targets U.S. and Allied Networks. Retrieved April 16, 2021.",
+                    "url": "https://media.defense.gov/2021/Apr/15/2002621240/-1/-1/0/CSA_SVR_TARGETS_US_ALLIES_UOO13234021.PDF/CSA_SVR_TARGETS_US_ALLIES_UOO13234021.PDF"
+                },
+                {
+                    "source_name": "MSTIC NOBELIUM May 2021",
+                    "description": "Microsoft Threat Intelligence Center (MSTIC). (2021, May 27). New sophisticated email-based attack from NOBELIUM. Retrieved May 28, 2021.",
+                    "url": "https://www.microsoft.com/security/blog/2021/05/27/new-sophisticated-email-based-attack-from-nobelium/"
+                },
+                {
+                    "source_name": "Microsoft Analyzing Solorigate Dec 2020",
+                    "description": "MSTIC. (2020, December 18). Analyzing Solorigate, the compromised DLL file that started a sophisticated cyberattack, and how Microsoft Defender helps protect customers . Retrieved January 5, 2021.",
+                    "url": "https://www.microsoft.com/security/blog/2020/12/18/analyzing-solorigate-the-compromised-dll-file-that-started-a-sophisticated-cyberattack-and-how-microsoft-defender-helps-protect/"
+                },
+                {
+                    "source_name": "SolarWinds Advisory Dec 2020",
+                    "description": "SolarWinds. (2020, December 24). SolarWinds Security Advisory. Retrieved February 22, 2021.",
+                    "url": "https://www.solarwinds.com/sa-overview/securityadvisory"
+                },
+                {
+                    "source_name": "Volexity SolarWinds",
+                    "description": "Cash, D. et al. (2020, December 14). Dark Halo Leverages SolarWinds Compromise to Breach Organizations. Retrieved December 29, 2020.",
+                    "url": "https://www.volexity.com/blog/2020/12/14/dark-halo-leverages-solarwinds-compromise-to-breach-organizations/"
+                },
+                {
+                    "source_name": "USG Joint Statement SolarWinds January 2021",
+                    "description": "FBI, CISA, ODNI, NSA. (2022, January 5). Joint Statement by the Federal Bureau of Investigation (FBI), the Cybersecurity and Infrastructure Security Agency (CISA), the Office of the Director of National Intelligence (ODNI), and the National Security Agency (NSA). Retrieved March 26, 2023.",
+                    "url": "https://www.cisa.gov/news-events/news/joint-statement-federal-bureau-investigation-fbi-cybersecurity-and-infrastructure"
+                },
+                {
+                    "source_name": "CrowdStrike StellarParticle January 2022",
+                    "description": "CrowdStrike. (2022, January 27). Early Bird Catches the Wormhole: Observations from the StellarParticle Campaign. Retrieved February 7, 2022.",
+                    "url": "https://www.crowdstrike.com/blog/observations-from-the-stellarparticle-campaign/"
+                },
+                {
+                    "source_name": "SolarWinds Sunburst Sunspot Update January 2021",
+                    "description": "Sudhakar Ramakrishna . (2021, January 11). New Findings From Our Investigation of SUNBURST. Retrieved January 13, 2021.",
+                    "url": "https://orangematter.solarwinds.com/2021/01/11/new-findings-from-our-investigation-of-sunburst/"
+                },
+                {
+                    "source_name": "Microsoft Internal Solorigate Investigation Blog",
+                    "description": "MSRC Team. (2021, February 18). Microsoft Internal Solorigate Investigation \u2013 Final Update. Retrieved May 14, 2021.",
+                    "url": "https://msrc-blog.microsoft.com/2021/02/18/microsoft-internal-solorigate-investigation-final-update/"
+                },
+                {
+                    "source_name": "UK NSCS Russia SolarWinds April 2021",
+                    "description": "UK NCSC. (2021, April 15). UK and US call out Russia for SolarWinds compromise. Retrieved April 16, 2021.",
+                    "url": "https://www.ncsc.gov.uk/news/uk-and-us-call-out-russia-for-solarwinds-compromise"
+                }
+            ],
+            "x_opencti_id": "270457ed-b7a6-4b35-8891-1afba87ddf17",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--9a4f551f-3de3-575b-a989-6498dc7b51ee",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2025-01-06T15:59:57.952Z",
+            "modified": "2026-01-19T09:32:32.576Z",
+            "name": "ArcaneDoor",
+            "description": "[ArcaneDoor](https://attack.mitre.org/campaigns/C0046) is a campaign targeting networking devices from Cisco and other vendors between July 2023 and April 2024, primarily focused on government and critical infrastructure networks. [ArcaneDoor](https://attack.mitre.org/campaigns/C0046) is associated with the deployment of the custom backdoors [Line Runner](https://attack.mitre.org/software/S1188) and [Line Dancer](https://attack.mitre.org/software/S1186). [ArcaneDoor](https://attack.mitre.org/campaigns/C0046) is attributed to a group referred to as UAT4356 or STORM-1849, and is assessed to be a state-sponsored campaign.(Citation: Cisco ArcaneDoor 2024)(Citation: CCCS ArcaneDoor 2024)",
+            "first_seen": "2023-07-01T06:00:00.000Z",
+            "last_seen": "2024-04-01T06:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Cisco ArcaneDoor 2024",
+                    "description": "Cisco Talos. (2024, April 24). ArcaneDoor - New espionage-focused campaign found targeting perimeter network devices. Retrieved January 6, 2025.",
+                    "url": "https://blog.talosintelligence.com/arcanedoor-new-espionage-focused-campaign-found-targeting-perimeter-network-devices/"
+                },
+                {
+                    "source_name": "CCCS ArcaneDoor 2024",
+                    "description": "Canadian Centre for Cyber Security. (2024, April 24). Cyber Activity Impacting CISCO ASA VPNs. Retrieved January 6, 2025.",
+                    "url": "https://www.cyber.gc.ca/en/news-events/cyber-activity-impacting-cisco-asa-vpns"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0046",
+                    "external_id": "C0046"
+                }
+            ],
+            "x_opencti_id": "0a412717-551e-469b-8287-1db59c3ffb5b",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--72f944df-f124-5d12-ac52-8b146e28a174",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-20T17:29:09.547Z",
+            "modified": "2026-01-19T09:32:32.530Z",
+            "name": "FunnyDream",
+            "description": "[FunnyDream](https://attack.mitre.org/campaigns/C0007) was a suspected Chinese cyber espionage campaign that targeted government and foreign organizations in Malaysia, the Philippines, Taiwan, Vietnam, and other parts of Southeast Asia. Security researchers linked the [FunnyDream](https://attack.mitre.org/campaigns/C0007) campaign to possible Chinese-speaking threat actors through the use of the [Chinoxy](https://attack.mitre.org/software/S1041) backdoor and noted infrastructure overlap with the TAG-16 threat group.(Citation: Bitdefender FunnyDream Campaign November 2020)(Citation: Kaspersky APT Trends Q1 2020)(Citation: Recorded Future Chinese Activity in Southeast Asia December 2021)",
+            "first_seen": "2018-07-01T05:00:00.000Z",
+            "last_seen": "2020-11-01T04:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Kaspersky APT Trends Q1 2020",
+                    "description": "Global Research and Analysis Team. (2020, April 30). APT trends report Q1 2020. Retrieved September 19, 2022.",
+                    "url": "https://securelist.com/apt-trends-report-q1-2020/96826/"
+                },
+                {
+                    "source_name": "Recorded Future Chinese Activity in Southeast Asia December 2021",
+                    "description": "Insikt Group. (2021, December 8). Chinese State-Sponsored Cyber Espionage Activity Supports Expansion of Regional Power and Influence in Southeast Asia. Retrieved September 19, 2022.",
+                    "url": "https://go.recordedfuture.com/hubfs/reports/cta-2021-1208.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0007",
+                    "external_id": "C0007"
+                },
+                {
+                    "source_name": "Bitdefender FunnyDream Campaign November 2020",
+                    "description": "Vrabie, V. (2020, November). Dissecting a Chinese APT Targeting South Eastern Asian Government Institutions. Retrieved September 19, 2022.",
+                    "url": "https://www.bitdefender.com/files/News/CaseStudies/study/379/Bitdefender-Whitepaper-Chinese-APT.pdf"
+                }
+            ],
+            "x_opencti_id": "016534f7-0ffc-439a-812c-e2be7ce0a320",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--b7b2b550-2e56-5680-8863-c0fd4050ad76",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2024-09-16T09:05:01.249Z",
+            "modified": "2026-01-19T09:32:32.254Z",
+            "name": "APT41 DUST",
+            "description": "[APT41 DUST](https://attack.mitre.org/campaigns/C0040) was conducted by [APT41](https://attack.mitre.org/groups/G0096) from 2023 to July 2024 against entities in Europe, Asia, and the Middle East. [APT41 DUST](https://attack.mitre.org/campaigns/C0040) targeted sectors such as shipping, logistics, and media for information gathering purposes. [APT41](https://attack.mitre.org/groups/G0096) used previously-observed malware such as [DUSTPAN](https://attack.mitre.org/software/S1158) as well as newly observed tools such as [DUSTTRAP](https://attack.mitre.org/software/S1159) in [APT41 DUST](https://attack.mitre.org/campaigns/C0040).(Citation: Google Cloud APT41 2024)",
+            "first_seen": "2023-01-31T23:00:00.000Z",
+            "last_seen": "2024-06-30T22:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0040",
+                    "external_id": "C0040"
+                },
+                {
+                    "source_name": "Google Cloud APT41 2024",
+                    "description": "Mike Stokkel et al. (2024, July 18). APT41 Has Arisen From the DUST. Retrieved September 16, 2024.",
+                    "url": "https://cloud.google.com/blog/topics/threat-intelligence/apt41-arisen-from-dust"
+                }
+            ],
+            "x_opencti_id": "58ef0853-5daf-4785-89b5-483b3dbc3a50",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--5381e73a-a4e9-5801-988b-ebf9dbac6158",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2022-09-27T14:15:23.984Z",
+            "modified": "2026-01-19T09:32:31.682Z",
+            "name": "Operation Wocao",
+            "description": "[Operation Wocao](https://attack.mitre.org/campaigns/C0014) was a cyber espionage campaign that targeted organizations around the world, including in Brazil, China, France, Germany, Italy, Mexico, Portugal, Spain, the United Kingdom, and the United States. The suspected China-based actors compromised government organizations and managed service providers, as well as aviation, construction, energy, finance, health care, insurance, offshore engineering, software development, and transportation companies.(Citation: FoxIT Wocao December 2019)\n\nSecurity researchers assessed the [Operation Wocao](https://attack.mitre.org/campaigns/C0014) actors used similar TTPs and tools as APT20, suggesting a possible overlap. [Operation Wocao](https://attack.mitre.org/campaigns/C0014) was named after an observed command line entry by one of the threat actors, possibly out of frustration from losing webshell access.(Citation: FoxIT Wocao December 2019)",
+            "first_seen": "2017-12-01T05:00:00.000Z",
+            "last_seen": "2019-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "FoxIT Wocao December 2019",
+                    "description": "Dantzig, M. v., Schamper, E. (2019, December 19). Operation Wocao: Shining a light on one of China\u2019s hidden hacking groups. Retrieved October 8, 2020.",
+                    "url": "https://www.fox-it.com/media/kadlze5c/201912_report_operation_wocao.pdf"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0014",
+                    "external_id": "C0014"
+                }
+            ],
+            "x_opencti_id": "245193f7-1eda-4633-8d90-f8160581b66f",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        },
+        {
+            "id": "campaign--49133773-794f-524d-a32a-8947c4b5ee94",
+            "spec_version": "2.1",
+            "revoked": false,
+            "confidence": 75,
+            "created": "2023-06-30T19:28:30.616Z",
+            "modified": "2026-01-19T09:32:31.385Z",
+            "name": "C0027",
+            "description": "[C0027](https://attack.mitre.org/campaigns/C0027) was a financially-motivated campaign linked to [Scattered Spider](https://attack.mitre.org/groups/G1015) that targeted telecommunications and business process outsourcing (BPO) companies from at least June through December of 2022. During [C0027](https://attack.mitre.org/campaigns/C0027) [Scattered Spider](https://attack.mitre.org/groups/G1015) used various forms of social engineering, performed SIM swapping, and attempted to leverage access from victim environments to mobile carrier networks.(Citation: Crowdstrike TELCO BPO Campaign December 2022)",
+            "first_seen": "2022-06-01T04:00:00.000Z",
+            "last_seen": "2022-12-01T05:00:00.000Z",
+            "external_references": [
+                {
+                    "source_name": "Crowdstrike TELCO BPO Campaign December 2022",
+                    "description": "Parisi, T. (2022, December 2). Not a SIMulation: CrowdStrike Investigations Reveal Intrusion Campaign Targeting Telco and BPO Companies. Retrieved June 30, 2023.",
+                    "url": "https://www.crowdstrike.com/blog/analysis-of-intrusion-campaign-targeting-telecom-and-bpo-companies/"
+                },
+                {
+                    "source_name": "mitre-attack",
+                    "url": "https://attack.mitre.org/campaigns/C0027",
+                    "external_id": "C0027"
+                }
+            ],
+            "x_opencti_id": "4998bbb5-107d-48ff-8cac-a20b10c1fc87",
+            "x_opencti_type": "Campaign",
+            "type": "campaign",
+            "created_by_ref": "identity--f11b0831-e7e6-5214-9431-ccf054e53e94",
+            "object_marking_refs": [
+                "marking-definition--608d7dcb-0237-5e3e-9fb0-8d879f80f5dd"
+            ]
+        }
+    ]
+}
