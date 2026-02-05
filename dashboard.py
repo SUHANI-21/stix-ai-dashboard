@@ -17,25 +17,8 @@ from modules.credibility_assessor import assess_credibility
 # ---------- PAGE CONFIG ----------
 st.set_page_config(page_title="AI CTI Dashboard", layout="wide")
 
-# ---------- SIDEBAR NAVIGATION ----------
-st.sidebar.title("🔍 Navigation")
-page = st.sidebar.selectbox(
-    "Choose a page:",
-    ["STIX Analyzer", "RAG Chat", "File Browser", "Malware Inference", "Malware Mapping"]
-)
 
-if page == "RAG Chat":
-    exec(open("pages/rag_chat.py").read())
-    st.stop()
-elif page == "File Browser":
-    exec(open("pages/file_browser.py").read())
-    st.stop()
-elif page == "Malware Inference":
-    exec(open("pages/malware_inference.py").read())
-    st.stop()
-elif page == "Malware Mapping":
-    exec(open("pages/malware_mapping.py").read())
-    st.stop()
+
 # If "STIX Analyzer" is selected, continue with main dashboard
 
 # ---------- THEME + CUSTOM UI STYLING ----------
