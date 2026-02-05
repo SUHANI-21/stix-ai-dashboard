@@ -2,6 +2,6 @@
 .venv2*
 .html
 *.pyc
-*.csv
+.csv
 *.json
 .DS_Store
