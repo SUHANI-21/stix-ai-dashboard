@@ -97,7 +97,7 @@ with st.sidebar:
                 st.error("Pipeline failed")
 
     else:
-        default_path = "/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/stix_bundle-18similar_ids.json"
+        default_path = r"E:\college\NITK Internship\stix_normalizer\stix_normalizer\stix_intelligence_analyzer\modules\stix_bundle-18similar_ids.json"
         similarity_json_path = st.text_input(
             "Path to similarity JSON",
             value=default_path
@@ -160,8 +160,9 @@ def render_cached(node_id):
     for s, t, d in ego.edges(data=True):
         net.add_edge(s, t, title=d.get("relationship", ""))
 
-    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
-    net.write_html(tmp.name)
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html", mode="w", encoding="utf-8")
+    tmp.write(net.generate_html())
+    tmp.close()
     return tmp.name
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -194,7 +195,7 @@ if not selected_id:
 st.subheader(f"Selected: {selected_id}")
 
 html = render_cached(selected_id)
-st.components.v1.html(open(html).read(), height=600, scrolling=True)
+st.components.v1.html(open(html, encoding="utf-8").read(), height=600, scrolling=True)
 
 with st.expander("Selected object JSON"):
     st.json(graph.nodes[selected_id])
@@ -209,7 +210,7 @@ for i, sim_id in enumerate(similarity_map.get(selected_id, []), 1):
 
     st.markdown(f"### {i}. {sim_id}")
     sim_html = render_cached(sim_id)
-    st.components.v1.html(open(sim_html).read(), height=500, scrolling=True)
+    st.components.v1.html(open(sim_html, encoding="utf-8").read(), height=500, scrolling=True)
 
     with st.expander(f"JSON – {sim_id}"):
         st.json(graph.nodes[sim_id])

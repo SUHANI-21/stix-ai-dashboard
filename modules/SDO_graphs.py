@@ -129,17 +129,21 @@ def draw_interactive_graph(G, output_file="stix_graph.html"):
     print(f"[+] Graph written to {output_file}")
 
 #testing
-graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
+# graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
+# print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
+
+# Build graph from the data/converted directory
+graph = build_stix_graph(r"E:\college\NITK Internship\stix_normalizer\stix_normalizer\stix_intelligence_analyzer\data\converted")
 print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
 
-# from collections import Counter
+from collections import Counter
 
-# types = Counter(
-#     data.get("type", "unknown")
-#     for _, data in graph.nodes(data=True)
-# )
+types = Counter(
+    data.get("type", "unknown")
+    for _, data in graph.nodes(data=True)
+)
 
-# print(types)
+print(types)
 
 import networkx as nx
 
@@ -167,6 +171,6 @@ def get_ego_graph(graph, id, radius=1):
 
 
 
-ego_graph= get_ego_graph(graph,"malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae")
-draw_interactive_graph(ego_graph)
+# ego_graph= get_ego_graph(graph,"malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae")
+# draw_interactive_graph(ego_graph)
 

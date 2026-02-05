@@ -25,7 +25,7 @@ def generate_similarity_json(
     df = pd.read_csv(csv_path)
 
     json_file=Path(csv_path).stem+"similar_ids.json"
-    json_path=Path("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/similarity_jsons")/json_file
+    json_path=Path("E:/college/NITK Internship/stix_normalizer/stix_normalizer/stix_intelligence_analyzer/modules/similarity_jsons")/json_file
     json_path.parent.mkdir(parents=True, exist_ok=True)
 
     similarity_map = {}
@@ -77,9 +77,10 @@ embedder = OllamaEmbeddings(model="mxbai-embed-large:latest")
 # =========================
 @lru_cache(maxsize=32)
 def load_index(stix_type):
-    index = faiss.read_index(f"/Users/alwyndsouza/Documents/GitHub/stix_normalizer/Threat_similarity_search_module/indexes/{stix_type}.faiss")
+    index = faiss.read_index(f"E:/college/NITK Internship/stix_normalizer/stix_normalizer/stix_intelligence_analyzer/modules/indexes/{stix_type}.faiss")
     loader = CSVLoader(
-        f"/Users/alwyndsouza/Documents/GitHub/stix_normalizer/Threat_similarity_search_module/csv_files_with_summary_SDOs/{stix_type}.csv"
+        f"E:/college/NITK Internship/stix_normalizer/stix_normalizer/stix_intelligence_analyzer/modules/csv_files_with_summary_SDOs/{stix_type}.csv",
+        encoding="utf-8"
     )
     docs = loader.load()
     return index, docs
@@ -166,6 +167,6 @@ def process_csv(csv_path, top_k=3):
 
 
 # #testing 
-process_csv("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/cleaned_files/stix_bundle-17.csv")
+# process_csv("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/cleaned_files/stix_bundle-17.csv")
 
 # generate_similarity_json("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/cosine_sim/stix_bundle-18.csv")
