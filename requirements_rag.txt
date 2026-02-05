@@ -1,6 +1,22 @@
-chromadb==0.4.18
-sentence-transformers==2.2.2
-beautifulsoup4==4.12.2
-pandas==2.1.4
-requests==2.31.0
-ollama==0.1.7
+# RAG System Requirements (Compatible with requirements_complete.txt)
+# Install with: pip install -r requirements_rag.txt
+
+# Core RAG Dependencies (already in requirements_complete.txt - versions aligned)
+chromadb>=0.4.18
+sentence-transformers>=2.2.2
+beautifulsoup4>=4.12.2
+ollama>=0.1.7
+
+# UI & Utilities (aligned with main app)
+streamlit>=1.28.0
+pandas>=2.1.4
+requests>=2.31.0
+
+# Supporting ML dependencies (if not already installed)
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# Additional RAG-specific utilities
+python-dateutil>=2.8.0
+pyyaml>=6.0
+lxml>=4.9.0
