@@ -20,10 +20,13 @@ st.set_page_config(page_title="AI CTI Dashboard", layout="wide")
 st.sidebar.title("🔍 Navigation")
 page = st.sidebar.selectbox(
     "Choose a page:",
-    ["STIX Analyzer", "RAG Chat", "File Browser", "Malware Inference", "Malware Mapping", "SDO Similarity Search", "Malware Classifier"]
+    ["STIX Analyzer", "Threat Assessment", "RAG Chat", "File Browser", "Malware Inference", "Malware Mapping", "SDO Similarity Search", "Malware Classifier"]
 )
 
-if page == "RAG Chat":
+if page == "Threat Assessment":
+    exec(open("pages/threat_assessment.py").read())
+    st.stop()
+elif page == "RAG Chat":
     exec(open("pages/rag_chat.py").read())
     st.stop()
 elif page == "File Browser":
