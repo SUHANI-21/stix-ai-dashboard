@@ -41,12 +41,9 @@ elif page == "Malware Mapping":
 elif page == "SDO Similarity Search":
     exec(open("pages/SD0_similarity_search.py").read())
     st.stop()
-<<<<<<< HEAD
 elif page == "Malware Classifier":
     exec(open("pages/malware_classifier.py").read())
     st.stop()
-=======
->>>>>>> 830896b8889cd14f7c1824bd60b418db2a2ff183
 
 # If "STIX Analyzer" is selected, continue with main dashboard
 
