@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+
+# Virtual environment
+venv/
+
+# Streamlit temp / generated files
+stix_graph.html
+
+# OS files
+.DS_Store
+Thumbs.db
