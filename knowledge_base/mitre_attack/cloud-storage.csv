@@ -1,0 +1,6 @@
+bucket,cloud_provider,id,region,service,type,summary
+,aws,cloud-storage--afffbf97-2cad-45fd-97b4-27bd0eab709f,,S3,cloud-storage,"The object contains the following data about a cloud storage service:
+
+It is a cloud-based storage service provided by Amazon Web Services (AWS).
+The type of service is S3.
+The purpose of this service is to store and manage large amounts of data."

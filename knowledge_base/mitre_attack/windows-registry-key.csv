@@ -1,0 +1,73 @@
+description,id,key,type,values,summary
+,windows-registry-key--d32f9529-2b84-4cd3-b607-61d36b58176e,HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\EdgeUpdateCore,windows-registry-key,,"The object contains a Windows Registry Key.
+
+This key is located at the following path: HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run\EdgeUpdateCore.
+
+The key's purpose appears to be related to the update core of Microsoft Edge, suggesting that it controls or manages updates to the browser."
+,windows-registry-key--809bef32-e9d2-4d4c-8126-5bc00b33c87f,HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU,windows-registry-key,,"The object contains a Windows Registry Key named 'HKCU\Software\Microsoft\Windows\CurrentVersion\Explorer\RunMRU'. It is a part of the Windows operating system's registry structure. The key appears to be related to the Most Recently Used (MRU) list in Windows, which stores the paths of recently opened files and applications.
+
+The presence of this key suggests that the system has the ability to track and record the MRU list for future reference or troubleshooting purposes. However, without further information about its values or the context in which it is used, the exact purpose and functionality of this key cannot be determined."
+,windows-registry-key--6d558f11-eff7-4ac2-bedf-5f6abc79d4fd,HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run,windows-registry-key,"[{""name"": ""SystemHealthCheck"", ""data"": ""cmstp.exe /s c:\\programdata\\DefenderService.inf"", ""data_type"": ""REG_EXPAND_SZ""}]",The object contains a Windows registry key named 'HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run' which holds a single value named 'SystemHealthCheck'. This value is of type REG_EXPAND_SZ and has the following data: 'cmstp.exe /s c:\\\\\\\\programdata\\\\DefenderService.inf'.
+,windows-registry-key--4dede35d-5241-4f72-b837-53c141ef6ee7,HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ABYSSWORKER,windows-registry-key,,"The object contains a Windows Registry key with the name HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\ABYSSWORKER. This key appears to be related to a service running on the system, but its exact function or purpose is not specified in the provided data. The registry key itself does not contain any values or descriptions."
+,windows-registry-key--a45abb36-aab7-48f6-a594-a6ab49ccfbfc,HKCR\CLSID\{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}\InProcServer32,windows-registry-key,,"The object contains a Windows Registry Key with the following characteristics:
+
+It is identified by the key 'HKCR\CLSID\{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}\InProcServer32'. This key appears to be part of the Windows registry hierarchy, specifically within the CLSID (Class ID) and InProcServer32 sections.
+
+The type of this registry key is 'windows-registry-key', indicating that it stores settings and configuration data for a specific application or system component."
+,windows-registry-key--e02cb07f-5456-4c01-8f3e-f689199d32ab,HKLM\SYSTEM\CurrentControlSet\Services\Spooler,windows-registry-key,,The object contains a Windows Registry Key named 'HKLM\\SYSTEM\\CurrentControlSet\\Services\\Spooler'. It falls under the category of 'windows-registry-key' with an empty value. The actual values associated with this key are not provided in the given data.
+,windows-registry-key--adbc02c4-3a18-48cc-875b-1df636c87a6c,HKLM\SYSTEM\CurrentControlSet\Services\EFSRPC,windows-registry-key,,"The object contains a Windows Registry Key named 'HKLM\SYSTEM\CurrentControlSet\Services\EFSRPC'. This key is associated with the EFSRPC service, which appears to be related to the Encrypting File System (EFS) in Windows operating systems. The exact purpose of this service and its configuration can be determined by analyzing its values further."
+,windows-registry-key--62a7c558-0c2e-4853-8f90-03ec729a4563,HKLM\SYSTEM\CurrentControlSet\Services\FssagentRpc,windows-registry-key,,"The object contains a Windows Registry Key named Fssagent Rpc located at HKLM\SYSTEM\CurrentControlSet\Services. This key is categorized under the type of 'Windows-Registry-Key'. Unfortunately, there are no available values for this registry key, as specified in the given data."
+,windows-registry-key--49b07691-d858-43a0-833d-4b7a6747b1dc,HKLM\SYSTEM\CurrentControlSet\Services\EventLog,windows-registry-key,,"The object contains a Windows Registry Key named EventLog. It is located at the following path: HKLM\\SYSTEM\\CurrentControlSet\\Services\\EventLog.
+
+This registry key appears to be related to the system's event logging service, which tracks and logs various events on the computer. The exact description of this key is currently unknown as it is marked as Not Available (NaN)."
+,windows-registry-key--14f5fdbc-2d28-44ab-a38a-d0b4cc6f3a08,HKLM\SYSTEM\CurrentControlSet\Services\netdfs,windows-registry-key,,The object contains a Windows Registry Key named netdfs under the SYSTEM branch of the CurrentControlSet. The key is located at HKLM\\SYSTEM\\CurrentControlSet\\Services\\netdfs. This registry key seems to be related to Network File System (NFS) services on Windows systems.
+,windows-registry-key--76b8e2aa-9d8c-437e-9fb5-f979cf61c892,HKLM\SYSTEM\CurrentControlSet\Services\samr,windows-registry-key,,"The object contains a Windows Registry Key named 'HKLM\SYSTEM\CurrentControlSet\Services\samr'. This key is associated with the System Management Convenience Feature Service. The service is responsible for providing system management tools and utilities to help manage and maintain the system. 
+
+The primary function of this service is to provide access to various system management features, such as the Windows Management Instrumentation (WMI) interface and the Windows Performance Monitoring tool. These features enable administrators to monitor and analyze system performance, manage user accounts, and perform other administrative tasks.
+
+It's worth noting that this key is part of the System Registry and plays a crucial role in maintaining the stability and security of the operating system."
+,windows-registry-key--0af4b786-1ad1-466a-9bbd-0acdf71058ba,HKLM\SYSTEM\CurrentControlSet\Services\lsarpc,windows-registry-key,,"The object contains a Windows Registry Key entry. 
+
+This key is located at the following path: HKLM\SYSTEM\CurrentControlSet\Services\lsarpc.
+
+It appears to be related to the Server Service of the Local Security Authority Provider for Windows (LSA). The exact purpose and functionality of this key can only be determined by examining its associated values, which are currently unknown due to missing data."
+,windows-registry-key--cfde53e8-93a9-439a-b076-c23eaf4c265e,HKLM\SYSTEM\CurrentControlSet\Services\lsass,windows-registry-key,,"The object contains a Windows registry key with the following properties:
+
+It is located at HKLM\SYSTEM\CurrentControlSet\Services\lsass.
+ The type of the registry key is 'windows-registry-key'.
+ It has a unique identifier associated with it."
+,windows-registry-key--be761b00-cbb9-4e9a-b477-042d7d714207,HKLM\SYSTEM\CurrentControlSet\Services\netlogon,windows-registry-key,,The object contains a Windows Registry Key named 'HKLM\SYSTEM\CurrentControlSet\Services\netlogon'. It is identified by the key 'windows-registry-key--be761b00-cbb9-4e9a-b477-042d7d714207'. This key falls under the category of 'Windows Registry Key' with no associated description. The value stored in this key is unknown as it is represented by nan.
+,windows-registry-key--8ad4de05-103c-4207-96e6-832f9d9c7830,C:\Windows\System32\Tasks\Windows\WindowsDefenderUpdate\Windows Defender Updater,windows-registry-key,,"The object contains a Windows Registry Key. 
+
+It is located at the path C:\Windows\System32\Tasks\Windows\Windows DefenderUpdate\Windows Defender Updater. 
+
+This key is of type 'windows-registry-key'."
+,windows-registry-key--f901e289-8db0-4f5a-819c-8b81252f6483,C:\Windows\System32\Tasks\Windows\WindowsServicesUpdate\Windows Services Updater,windows-registry-key,,"The object contains a Windows registry key with the path C:\\Windows\\System32\\Tasks\\Windows\\WindowsServicesUpdate. This key is related to the Windows Services Updater. It appears to be a system-level task responsible for updating various services on the system, likely as part of a routine maintenance or update process."
+,windows-registry-key--83b3f6fa-c73e-4a0b-8bca-3483982df5d0,C:\Windows\System32\Tasks\Automatic Windows Update,windows-registry-key,,"The object contains a Windows Registry Key named Automatic Windows Update located at the path C:\\Windows\\System32\\Tasks. This key is part of the Windows operating system's registry, which stores settings and configurations for various system components.
+
+The purpose of this registry key is to manage automatic updates for the operating system. When enabled, it will automatically download and install updates for Windows without requiring user intervention.
+
+This specific registry key is a task scheduler key, indicating that it is used to schedule tasks or actions to run at specific times or intervals. In this case, it appears to be related to automatic Windows update processes."
+,windows-registry-key--1e495b39-63a7-4edb-99fe-12b77f2345f9,SOFTWARE\Microsoft\Windows\CurrentVersion\Run,windows-registry-key,"[{""name"": ""Q-X64""}]","The object contains a Windows Registry Key named 'SOFTWARE\Microsoft\Windows\CurrentVersion\Run'. This key is used to store executable files that are run automatically when a user logs into the system. In this specific case, there is only one value associated with this key, which is the string 'Q-X64'."
+,windows-registry-key--9bc3b019-89a8-4d54-ac87-4d02e807d31a,HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\ProgramData,windows-registry-key,,"The object contains a Windows registry key with the description field being empty. The specific location of this key within the Windows Registry is HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\Shell Folders\ProgramData. This particular key falls under the category of windows-registry-key, indicating that it holds configuration information for the operating system's user interface and user experience settings. However, there are no values associated with this key in the given data set."
+WinSCP session registry key targeted by Vidar Stealer.,windows-registry-key--860a80d3-a8e7-400c-87e6-2a4f920f50fc,Software\Martin Prikryl\WinSCP 2\Sessions,windows-registry-key,,"The object contains a Windows Registry Key named 'Software\Martin Prikryl\WinSCP 2\Sessions' which is targeted by the Vidar Stealer malware. This key appears to be used for storing and managing WinSCP session information, but its malicious intent suggests it may be exploited by threat actors to gain unauthorized access or control over affected systems."
+WinSCP configuration registry key targeted by Vidar Stealer.,windows-registry-key--8465a313-613c-4b87-9772-9827448ede84,Software\Martin Prikryl\WinSCP 2\Configuration,windows-registry-key,,"The object contains a Windows registry key configuration targeted by the Vidar Stealer malware. The registry key is named 'Software\Martin Prikryl\WinSCP 2\Configuration'. This key is likely used to store settings and preferences for the WinSCP software, specifically version 2."
+eHome_0cx通过修改注册表InprocServer32键值实现自启动，劫持系统正常服务。,windows-registry-key--2d322d9b-e32e-4945-88c9-4cc61f75fe2d,HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\<随机ID>\InProcServer32,windows-registry-key,"[{""name"": ""InProcServer32"", ""data"": ""<eHome_0cx路径>""}]","The object contains a Windows registry key that allows the eHome software to autostart and hijack legitimate system services. 
+
+This key, located under HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID, is associated with a random ID that varies each time it's created. The key points to an InProcServer32 value, which contains the path to the eHome executable file.
+
+In essence, this registry key modification enables the eHome software to run automatically when Windows starts and potentially interfere with legitimate system processes."
+,windows-registry-key--b99b2738-26a5-46c5-b5ab-517377eccf8d,HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run,windows-registry-key,,"The object contains a Windows Registry Key named 'HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Run'. It is used to store the run entries for the current user on Windows operating systems. The key contains a single value, which is not specified in the provided data."
+,windows-registry-key--b30154e4-58dc-4216-94a2-7c1051c9e4f0,HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run,windows-registry-key,,"The object contains a Windows Registry Key with the name HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Run. This key is used to store commands that are executed when certain applications are launched.
+
+The registry key itself does not contain any values, as indicated by the 'values' field being empty (nan). 
+
+Overall, this registry key appears to be a configuration setting for running specific programs or commands when Windows starts up."
+,windows-registry-key--3db7bf36-5ab1-4ce4-bbc5-c8104e748172,ROOT\SecurityCenter2,windows-registry-key,,"The object contains a Windows Registry key named 'ROOT\SecurityCenter2' which is classified as a type of Windows Registry Key. Unfortunately, there are some missing values present in the data, particularly for description and values. The registry key itself seems to be related to security center functionality within the Windows operating system."
+,windows-registry-key--8f98c49f-4363-4f50-a413-ae925ffe7f49,HKCU\Console\CodePage,windows-registry-key,"[{""name"": """", ""data"": ""65001"", ""data_type"": ""REG_DWORD""}]","The object contains a Windows registry key named Console CodePage. It is located under the HKCU branch of the registry tree. This key is used to set the default code page for console applications on Windows systems. The value associated with this key is set to 65001, which corresponds to the Windows-1252 character encoding standard."
+,windows-registry-key--5735b488-28a3-471a-9576-f6bdbd76e793,HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Tasks\MicrosoftEdgeUpdateTaskMachineCore,windows-registry-key,,"The object contains a Windows Registry Key. 
+
+This key is located under the following path: 
+Software\Microsoft\Windows\CurrentVersion\Tasks\MicrosoftEdgeUpdateTaskMachineCore 
+
+It appears to be related to the Microsoft Edge update task, specifically for the machine-level core settings."

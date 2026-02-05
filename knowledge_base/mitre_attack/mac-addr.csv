@@ -1,0 +1,9 @@
+id,type,value,summary
+mac-addr--ce5e4e2b-31fd-4959-81ed-42b0251b649d,mac-addr,00:0C:29,"The object contains a MAC address identifier. This identifier is used to uniquely identify devices on a network or in a system. The value of this identifier is '00:0C:29', which is the standard format for representing MAC addresses."
+mac-addr--78b7cd28-9b42-49f0-a8a8-635883581d3f,mac-addr,00:50:56,The object contains a MAC address value of '00:50:56' which consists of six groups of two hexadecimal digits.
+mac-addr--bb5fdd51-b1a3-4ae6-895c-71c27b91ae02,mac-addr,00:05:69,"The object contains a mac-address object with the following details:
+
+It is identified by a unique identifier.
+Its type is classified as a MAC address.
+The actual value of this MAC address is '00:05:69'."
+mac-addr--4f2c053a-1d59-40c6-8119-ef2377850575,mac-addr,08:00:27,"The object contains a MAC address entry with the identifier 'mac-addr--4f2c053a-1d59-40c6-8119-ef2377850575'. The type of this entry is specified as 'mac-addr', and its value is '08:00:27'."

@@ -1,0 +1,6 @@
+description,id,name,type,summary
+PeerBlight DHT node ID prefix (hex: 4c4f4c6c6f6c4c4f4c),x-unknown--9ab177fa-cfa2-4523-9f5e-fd421ebf3f52,LOLlolLOL,x-unknown,"The object contains a DHT node's metadata, specifically the PeerBlight identifier. 
+
+It appears to be a unique identifier for a DHT (Directed Acyclic Graph) node, which is used in distributed systems and peer-to-peer networks. The hexadecimal prefix '4c4f4c6c6f6c4c4f4c' likely represents this identifier.
+
+The metadata also includes the name of the node, 'LOLlolLOL', and its type, classified as 'x-unknown'. This classification suggests that the DHT node's specific purpose or functionality is currently unknown."

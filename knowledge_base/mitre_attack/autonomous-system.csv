@@ -1,0 +1,42 @@
+id,location,name,number,organization,type,summary
+autonomous-system--145d8444-0435-441f-a38a-bbc4b365eabc,,NForce Entertainment B.V.,43350,,autonomous-system,"The object contains information about an autonomous system. The autonomous system is named NForce Entertainment B.V. and has a number assigned to it, which is 43350. This number likely refers to the Autonomous System Number (ASN) of the autonomous system. 
+
+There is no specific location associated with this autonomous system as indicated by the 'location' field being set to nan (Not a Number). The organization that operates this autonomous system could not be found in the given data, but it was likely omitted for security reasons."
+autonomous-system--f9a4a444-248a-47f7-8b5b-43d1d9dcc6fb,,Data Campus Limited,215929,,autonomous-system,"The object contains information about an Autonomous System (AS) named Data Campus Limited. The AS has a unique identifier of 'Data Campus Limited', which is associated with the number 215929. This number is part of the autonomous system's designation, indicating its position within the global network topology.
+
+The location of this autonomous system is currently unknown, as it is represented by nan (not available). However, the organization behind this AS is also not specified in the provided data. 
+
+The AS itself is categorized under a specific type known as an 'autonomous-system'."
+autonomous-system--9556c8e2-fe39-4a78-a864-f4c5bf633531,,Flyservers S.A.,209588,,autonomous-system,"The object contains information about an autonomous system named Flyservers S.A. The organization behind this autonomous system is not specified.
+
+The autonomous system is associated with a specific number, 209588, which indicates its unique identifier within the global internet infrastructure.
+
+There is no available location data for this autonomous system, suggesting that it operates globally without any specific geographical limitations.
+
+Flyservers S.A. is identified as an autonomous system of type 'autonomous-system'."
+autonomous-system--f2c401bc-8403-4a8f-a38f-78c24a0f67b2,,Internet Solutions & Innovations LTD.,211632,,autonomous-system,"The object contains information about an autonomous system named Internet Solutions & Innovations LTD. It is associated with a unique identifier number 211632. The organization responsible for this autonomous system is not specified. The location of the autonomous system is currently unknown, as indicated by 'nan' in the data field."
+autonomous-system--c9ae8ecd-d604-45e2-9e66-df6086ee8ed6,,HostVDS,56971,,autonomous-system,"The object contains information about an autonomous system named HostVDS. The system is associated with a unique identifier that can be used to identify its presence within the network infrastructure.
+
+This autonomous system has a specific number, 56971, which corresponds to its designation and placement in the global topology of networks.
+
+There is no available data regarding the location of this autonomous system or the organization responsible for managing it. The 'organization' field contains null values indicating that this information is not currently accessible or up-to-date.
+
+The type of this autonomous system is specified as 'autonomous-system', which categorizes it under a specific subset of network configurations in the global internet."
+autonomous-system--6e24ec91-18d9-4ac6-a7dc-a77654fcad0b,"Langen, Germany",aurologic GmbH,30823,aurologic GmbH,autonomous-system,"The object contains information about an autonomous system. The autonomous system is named aurologic GmbH and is located in Langen, Germany. It has a unique number assigned to it, which is 30823. This number identifies the autonomous system and distinguishes it from others. Aurologic GmbH is also referred to as the organization responsible for this autonomous system."
+autonomous-system--fbed6043-0620-4779-87af-4bed7644cf95,United Kingdom,Aeza International Ltd,210644,Aeza International Ltd,autonomous-system,"The object contains information about an autonomous system. The autonomous system is associated with Aeza International Ltd, a company based in the United Kingdom. This autonomous system has a unique identifier and is part of the organization's infrastructure. It operates under the name 'Aeza International Ltd' which coincides with its organizational structure."
+autonomous-system--0ca1ad41-7651-4224-918d-a7fcb06285ad,United States,Railnet LLC,214943,Railnet LLC,autonomous-system,"The object contains information about an Autonomous System. The autonomous system is operated by Railnet LLC, a company based in the United States. It has been assigned a unique identifier and is recognized by the organization's name as well. The number associated with this autonomous system is 214943. This information suggests that Railnet LLC is involved in managing and operating a network of routers that operate independently of each other, allowing for more efficient routing and management of internet traffic within its designated geographic region."
+autonomous-system--22391106-845e-4ca6-a5f8-c2a948bcdc3b,Switzerland,Global-Data System IT Corporation,42624,Global-Data System IT Corporation (SWISSNETWORK02),autonomous-system,"The object contains information about an autonomous system. The location of this autonomous system is Switzerland. It belongs to the Global-Data System IT Corporation, which is also known as SWISSNETWORK02. This autonomous system has a number assigned to it, 42624, and its type is classified as an autonomous system."
+autonomous-system--36259a1d-a58d-46a8-af06-929a0a9e4e8c,United Kingdom,Femo IT Solutions Limited,214351,Femo IT Solutions Limited,autonomous-system,"The object contains information about an autonomous system. 
+
+It is managed by Femo IT Solutions Limited, a company based in the United Kingdom. The organization is also known as 'Femo IT Solutions Limited'. 
+
+The autonomous system has a specific number assigned to it, 214351. It falls under the category of 'autonomous-system'."
+autonomous-system--b19eb2c4-d4ce-4464-a874-4acee030cf92,Germany,metaspinner net GmbH,209800,metaspinner net GmbH,autonomous-system,"The object contains a detailed profile of an autonomous system, identified by the organization name ""Metaspinner Net GmbH"". This entity is located in Germany. The number associated with this autonomous system is 209800. It falls under the category of autonomous systems, which are used for routing and other network functions."
+autonomous-system--a7531327-f70b-442a-8196-949276d34693,Netherlands,VSVK Onderhoud B.V.,213511,VSVK Onderhoud B.V.,autonomous-system,"The object contains information about an autonomous system. It is named VSVK Onderhoud B.V., which operates under the umbrella of the same organization. The location associated with this autonomous system is the Netherlands.
+
+Furthermore, it has been assigned a unique identifier, number 213511. This particular autonomous system falls under the category of autonomous systems due to its organizational structure and operational scope."
+autonomous-system--676a5ac4-a77a-489f-9761-45ff0e004f89,Serbia,Smart Digital Ideas DOO,215829,Smart Digital Ideas DOO,autonomous-system,"The object contains information about an autonomous system, which is a self-contained network that operates independently of other networks. The autonomous system is identified by the unique identifier 'Smart Digital Ideas DOO', and its location is specified as Serbia. This autonomous system has been assigned a number, 215829, indicating its uniqueness within the global internet infrastructure.
+
+The organization behind this autonomous system is also Smart Digital Ideas DOO, which suggests that it is owned or managed by this entity. The type of autonomous system is explicitly stated as 'autonomous-system', further confirming its status as an independent network.
+
+Overall, the object provides a snapshot of an autonomous system in operation, providing essential details about its identity, location, and organizational affiliation."

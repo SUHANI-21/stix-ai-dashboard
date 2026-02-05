@@ -1,0 +1,10 @@
+account_id,account_type,cloud_provider,cloud_service,id,type,summary
+axisfiles,,,Azure Storage,cloud-account--5302167a-81fc-483e-aef4-423a7b68645a,cloud-account,The object contains information about a cloud account. The cloud service associated with this account is Azure Storage. No information is available on the account type or cloud provider.
+axiscontentfiles,,,Azure Storage,cloud-account--d26d3354-89ff-48c9-b5fd-87d902031218,cloud-account,"The object contains a cloud account named axiscontentfiles. The type of this account is cloud-account, indicating it is an Azure Storage service provider account."
+axisapphelpfiles,,,Azure Storage,cloud-account--669b9a51-b501-43a1-9394-9479fea951d5,cloud-account,"The object contains a cloud account information with the following details:
+
+* The account belongs to Azure Storage.
+* The account type is not specified.
+* The cloud provider for this account is also unknown.
+* A unique identifier '669b9a51-b501-43a1-9394-9479fea951d5' is associated with this cloud account."
+,IAM user,aws,,cloud-account--eb587a2b-528e-4fdc-89da-91b046bdce2d,cloud-account,"The object contains a single entry that represents a cloud account. The account is associated with an IAM user, specifically an 'account_type' of 'IAM user'. It is located within the AWS cloud provider ecosystem, but the specific cloud service it pertains to is not specified."

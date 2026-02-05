@@ -1,0 +1,3948 @@
+<html>
+
+<head>
+<base href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html">
+<meta name="description" content="Part 3 defines concepts that apply across all of STIX Cyber Observables">
+<meta http-equiv=Content-Type content="text/html; charset=windows-1252">
+<meta name=Generator content="Microsoft Word 15 (filtered)">
+<title>STIX Version 2.0. Part 3: Cyber Observable Core Concepts</title>
+<style>
+<!--
+ /* Font Definitions */
+ @font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:"Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Consolas;
+	panose-1:2 11 6 9 2 2 4 3 2 4;}
+@font-face
+	{font-family:"\@MS Mincho";
+	panose-1:2 2 6 9 4 2 5 8 3 4;}
+@font-face
+	{font-family:"\@Arial Unicode MS";
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+ /* Style Definitions */
+ p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+h1
+	{margin-top:24.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	border:none;
+	padding:0in;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+h2
+	{mso-style-name:"Heading 2\,H2";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+h3
+	{mso-style-name:"Heading 3\,H3";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+h4
+	{mso-style-name:"Heading 4\,H4";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+h5
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+h6
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.MsoHeading7, li.MsoHeading7, div.MsoHeading7
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.MsoHeading8, li.MsoHeading8, div.MsoHeading8
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoHeading9, li.MsoHeading9, div.MsoHeading9
+	{margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:11.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;
+	font-style:italic;}
+p.MsoToc1, li.MsoToc1, div.MsoToc1
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc2, li.MsoToc2, div.MsoToc2
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:12.0pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc3, li.MsoToc3, div.MsoToc3
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:24.0pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc4, li.MsoToc4, div.MsoToc4
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:.5in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc5, li.MsoToc5, div.MsoToc5
+	{margin-top:3.0pt;
+	margin-right:0in;
+	margin-bottom:3.0pt;
+	margin-left:48.0pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc6, li.MsoToc6, div.MsoToc6
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:60.0pt;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoToc7, li.MsoToc7, div.MsoToc7
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:1.0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFootnoteText, li.MsoFootnoteText, div.MsoFootnoteText
+	{mso-style-link:"Footnote Text Char";
+	margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoFooter, li.MsoFooter, div.MsoFooter
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoCaption, li.MsoCaption, div.MsoCaption
+	{margin-top:6.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	font-size:9.0pt;
+	font-family:"Arial",sans-serif;
+	font-style:italic;}
+span.MsoFootnoteReference
+	{vertical-align:super;}
+span.MsoEndnoteReference
+	{vertical-align:super;}
+p.MsoEndnoteText, li.MsoEndnoteText, div.MsoEndnoteText
+	{mso-style-link:"Endnote Text Char";
+	margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListBullet, li.MsoListBullet, div.MsoListBullet
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.25in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListBullet2, li.MsoListBullet2, div.MsoListBullet2
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoTitle, li.MsoTitle, div.MsoTitle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:24.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.MsoSubtitle, li.MsoSubtitle, div.MsoSubtitle
+	{mso-style-link:"Subtitle Char";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	border:none;
+	padding:0in;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.MsoNoteHeading, li.MsoNoteHeading, div.MsoNoteHeading
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+a:link, span.MsoHyperlink
+	{color:#0000EE;
+	text-decoration:none;}
+a:visited, span.MsoHyperlinkFollowed
+	{color:purple;
+	text-decoration:underline;}
+p.MsoDocumentMap, li.MsoDocumentMap, div.MsoDocumentMap
+	{mso-style-link:"Document Map Char";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;
+	color:black;}
+p
+	{margin-right:0in;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial Unicode MS",sans-serif;}
+pre
+	{margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial Unicode MS",sans-serif;}
+tt
+	{font-family:"Arial Unicode MS",sans-serif;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpFirst, li.MsoListParagraphCxSpFirst, div.MsoListParagraphCxSpFirst
+	{margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpMiddle, li.MsoListParagraphCxSpMiddle, div.MsoListParagraphCxSpMiddle
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.MsoListParagraphCxSpLast, li.MsoListParagraphCxSpLast, div.MsoListParagraphCxSpLast
+	{margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Titlepageinfo, li.Titlepageinfo, div.Titlepageinfo
+	{mso-style-name:"Title page info";
+	margin:0in;
+	margin-bottom:.0001pt;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.Titlepageinfodescription, li.Titlepageinfodescription, div.Titlepageinfodescription
+	{mso-style-name:"Title page info description";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.TitlepageinfodescriptionCxSpFirst, li.TitlepageinfodescriptionCxSpFirst, div.TitlepageinfodescriptionCxSpFirst
+	{mso-style-name:"Title page info descriptionCxSpFirst";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.TitlepageinfodescriptionCxSpMiddle, li.TitlepageinfodescriptionCxSpMiddle, div.TitlepageinfodescriptionCxSpMiddle
+	{mso-style-name:"Title page info descriptionCxSpMiddle";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.TitlepageinfodescriptionCxSpLast, li.TitlepageinfodescriptionCxSpLast, div.TitlepageinfodescriptionCxSpLast
+	{mso-style-name:"Title page info descriptionCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Contributor, li.Contributor, div.Contributor
+	{mso-style-name:Contributor;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.ContributorCxSpFirst, li.ContributorCxSpFirst, div.ContributorCxSpFirst
+	{mso-style-name:ContributorCxSpFirst;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.ContributorCxSpMiddle, li.ContributorCxSpMiddle, div.ContributorCxSpMiddle
+	{mso-style-name:ContributorCxSpMiddle;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.5in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.ContributorCxSpLast, li.ContributorCxSpLast, div.ContributorCxSpLast
+	{mso-style-name:ContributorCxSpLast;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Legalnotice, li.Legalnotice, div.Legalnotice
+	{mso-style-name:"Legal notice";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.LegalnoticeCxSpFirst, li.LegalnoticeCxSpFirst, div.LegalnoticeCxSpFirst
+	{mso-style-name:"Legal noticeCxSpFirst";
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.LegalnoticeCxSpMiddle, li.LegalnoticeCxSpMiddle, div.LegalnoticeCxSpMiddle
+	{mso-style-name:"Legal noticeCxSpMiddle";
+	margin:0in;
+	margin-bottom:.0001pt;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.LegalnoticeCxSpLast, li.LegalnoticeCxSpLast, div.LegalnoticeCxSpLast
+	{mso-style-name:"Legal noticeCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+span.Datatype
+	{mso-style-name:Datatype;
+	font-family:"Courier New";}
+p.Code, li.Code, div.Code
+	{mso-style-name:Code;
+	margin-top:0in;
+	margin-right:.3in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	background:#D9D9D9;
+	border:none;
+	padding:0in;
+	font-size:9.0pt;
+	font-family:"Courier New";}
+p.AppendixHeading2, li.AppendixHeading2, div.AppendixHeading2
+	{mso-style-name:AppendixHeading2;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+span.Element
+	{mso-style-name:Element;
+	font-family:"Courier New";}
+span.Attribute
+	{mso-style-name:Attribute;
+	font-family:"Courier New";}
+span.Keyword
+	{mso-style-name:Keyword;
+	font-family:"Courier New";}
+p.Note, li.Note, div.Note
+	{mso-style-name:Note;
+	margin-top:6.0pt;
+	margin-right:.5in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Definitionterm, li.Definitionterm, div.Definitionterm
+	{mso-style-name:"Definition term";
+	margin-top:4.0pt;
+	margin-right:2.0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	font-weight:bold;}
+p.Definition, li.Definition, div.Definition
+	{mso-style-name:Definition;
+	margin-top:4.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Ref, li.Ref, div.Ref
+	{mso-style-name:Ref;
+	margin-top:2.0pt;
+	margin-right:0in;
+	margin-bottom:2.0pt;
+	margin-left:1.5in;
+	text-indent:-1.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:black;}
+p.AppendixHeading1, li.AppendixHeading1, div.AppendixHeading1
+	{mso-style-name:AppendixHeading1;
+	margin-right:0in;
+	margin-left:0in;
+	page-break-before:always;
+	page-break-after:avoid;
+	border:none;
+	padding:0in;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+span.Refterm
+	{mso-style-name:"Ref term";
+	font-weight:bold;}
+p.Example, li.Example, div.Example
+	{mso-style-name:Example;
+	margin-top:0in;
+	margin-right:.3in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	background:#E6E6E6;
+	font-size:9.0pt;
+	font-family:"Courier New";}
+span.CODEtemp
+	{mso-style-name:"CODE temp";
+	font-family:"Courier New";}
+p.Codesmall, li.Codesmall, div.Codesmall
+	{mso-style-name:"Code small";
+	margin-top:0in;
+	margin-right:.3in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	background:#E6E6E6;
+	border:none;
+	padding:0in;
+	font-size:8.0pt;
+	font-family:"Courier New";}
+p.Examplesmall, li.Examplesmall, div.Examplesmall
+	{mso-style-name:"Example small";
+	margin-top:0in;
+	margin-right:.3in;
+	margin-bottom:0in;
+	margin-left:.3in;
+	margin-bottom:.0001pt;
+	background:#E6E6E6;
+	font-size:8.0pt;
+	font-family:"Courier New";}
+span.Variable
+	{mso-style-name:Variable;
+	font-style:italic;}
+span.FootnoteTextChar
+	{mso-style-name:"Footnote Text Char";
+	mso-style-link:"Footnote Text";
+	font-family:"Arial",sans-serif;}
+p.RelatedWork, li.RelatedWork, div.RelatedWork
+	{mso-style-name:"Related Work";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.RelatedWorkCxSpFirst, li.RelatedWorkCxSpFirst, div.RelatedWorkCxSpFirst
+	{mso-style-name:"Related WorkCxSpFirst";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.RelatedWorkCxSpMiddle, li.RelatedWorkCxSpMiddle, div.RelatedWorkCxSpMiddle
+	{mso-style-name:"Related WorkCxSpMiddle";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:0in;
+	margin-left:.75in;
+	margin-bottom:.0001pt;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.RelatedWorkCxSpLast, li.RelatedWorkCxSpLast, div.RelatedWorkCxSpLast
+	{mso-style-name:"Related WorkCxSpLast";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.75in;
+	text-indent:-.25in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Abstract, li.Abstract, div.Abstract
+	{mso-style-name:Abstract;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:.5in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.Notices, li.Notices, div.Notices
+	{mso-style-name:Notices;
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:12.0pt;
+	margin-left:0in;
+	page-break-before:always;
+	border:none;
+	padding:0in;
+	font-size:18.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.TextBody, li.TextBody, div.TextBody
+	{mso-style-name:"Text Body";
+	margin-top:0in;
+	margin-right:0in;
+	margin-bottom:4.0pt;
+	margin-left:0in;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;}
+p.AppendixHeading3, li.AppendixHeading3, div.AppendixHeading3
+	{mso-style-name:AppendixHeading3;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:0in;
+	page-break-after:avoid;
+	font-size:13.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+span.EndnoteTextChar
+	{mso-style-name:"Endnote Text Char";
+	mso-style-link:"Endnote Text";
+	font-family:"Arial",sans-serif;}
+p.AppendixHeading4, li.AppendixHeading4, div.AppendixHeading4
+	{mso-style-name:AppendixHeading4;
+	margin-top:12.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	page-break-after:avoid;
+	font-size:12.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+p.AppendixHeading5, li.AppendixHeading5, div.AppendixHeading5
+	{mso-style-name:AppendixHeading5;
+	margin-top:10.0pt;
+	margin-right:0in;
+	margin-bottom:6.0pt;
+	margin-left:.25in;
+	page-break-after:avoid;
+	font-size:10.0pt;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;
+	font-style:italic;}
+span.SubtitleChar
+	{mso-style-name:"Subtitle Char";
+	mso-style-link:Subtitle;
+	font-family:"Arial",sans-serif;
+	color:#3B006F;
+	font-weight:bold;}
+span.DocumentMapChar
+	{mso-style-name:"Document Map Char";
+	mso-style-link:"Document Map";
+	font-family:"Arial",sans-serif;
+	color:black;}
+.MsoChpDefault
+	{font-size:10.0pt;}
+ /* Page Definitions */
+ @page WordSection1
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in .5in 1.0in;}
+div.WordSection1
+	{page:WordSection1;}
+@page WordSection2
+	{size:8.5in 11.0in;
+	margin:1.0in 1.0in .5in 1.0in;}
+div.WordSection2
+	{page:WordSection2;}
+ /* List Definitions */
+ ol
+	{margin-bottom:0in;}
+ul
+	{margin-bottom:0in;}
+-->
+</style>
+
+</head>
+
+<body lang=EN-US link="#0000EE" vlink=purple>
+
+<div class=WordSection1>
+
+<p class=MsoHeader><a href="https://www.oasis-open.org/"><span
+style='color:windowtext'><img border=0 width=204 height=53 id="Picture 1"
+src="stix-v2.0-cs01-part3-cyber-observable-core_files/image001.jpg" alt=oasis></span></a></p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:1.0pt 0in 0in 0in'>
+
+<p class=MsoTitle>STIX<sup>™</sup> Version 2.0. Part 3: Cyber Observable Core
+Concepts</p>
+
+<p class=MsoSubtitle>Committee Specification 01</p>
+
+<p class=MsoSubtitle>19 July 2017</p>
+
+</div>
+
+<p class=Titlepageinfo><span style='font-size:12.0pt'>Specification URIs</span></p>
+
+<p class=Titlepageinfo>This version:</p>
+
+<p class=TitlepageinfodescriptionCxSpFirst><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.docx">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.docx</a><span
+class=MsoHyperlink><span style='color:windowtext'> (Authoritative)</span></span></p>
+
+<p class=TitlepageinfodescriptionCxSpMiddle><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html</a></p>
+
+<p class=TitlepageinfodescriptionCxSpLast><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.pdf">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.pdf</a></p>
+
+<p class=Titlepageinfo>Previous version:</p>
+
+<p class=TitlepageinfodescriptionCxSpFirst><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.docx">http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.docx</a><span
+class=MsoHyperlink><span style='color:windowtext'> (Authoritative)</span></span></p>
+
+<p class=TitlepageinfodescriptionCxSpMiddle><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.html</a></p>
+
+<p class=TitlepageinfodescriptionCxSpLast><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.pdf">http://docs.oasis-open.org/cti/stix/v2.0/csprd02/part3-cyber-observable-core/stix-v2.0-csprd02-part3-cyber-observable-core.pdf</a></p>
+
+<p class=Titlepageinfo>Latest version:</p>
+
+<p class=TitlepageinfodescriptionCxSpFirst><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.docx">http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.docx</a><span
+class=MsoHyperlink><span style='color:windowtext'> (Authoritative)</span></span></p>
+
+<p class=TitlepageinfodescriptionCxSpMiddle><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.html</a></p>
+
+<p class=TitlepageinfodescriptionCxSpLast><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.pdf">http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.pdf</a></p>
+
+<p class=Titlepageinfo>Technical Committee:</p>
+
+<p class=Titlepageinfodescription><a
+href="https://www.oasis-open.org/committees/cti/">OASIS Cyber Threat
+Intelligence (CTI) TC</a></p>
+
+<p class=Titlepageinfo>Chair:</p>
+
+<p class=Contributor>Richard Struse (<a href="mailto:Richard.Struse@HQ.DHS.GOV">Richard.Struse@HQ.DHS.GOV</a>),
+<a href="http://www.dhs.gov/office-cybersecurity-and-communications">DHS Office
+of Cybersecurity and Communications (CS&amp;C)</a></p>
+
+<p class=Titlepageinfo>Editors:</p>
+
+<p class=ContributorCxSpFirst>Trey Darley (<a
+href="mailto:trey@kingfisherops.com">trey@kingfisherops.com</a>), <a
+href="https://kingfisherops.com/">Kingfisher Operations, sprl</a></p>
+
+<p class=ContributorCxSpLast>Ivan Kirillov (<a href="mailto:ikirillov@mitre.org">ikirillov@mitre.org</a>),
+<a href="http://www.mitre.org/">MITRE Corporation</a></p>
+
+<p class=Titlepageinfo><a name=AdditionalArtifacts>Additional artifacts</a>:</p>
+
+<p class=RelatedWorkCxSpFirst style='margin-left:.5in;text-indent:0in'>This
+prose specification is one component of a Work Product that also includes:</p>
+
+<p class=RelatedWorkCxSpMiddle><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>STIX</i><i><sup>™</sup> Version 2.0. Part 1: STIX Core
+Concepts</i>.<i> </i><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part1-stix-core/stix-v2.0-cs01-part1-stix-core.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part1-stix-core/stix-v2.0-cs01-part1-stix-core.html</a><i>.</i></p>
+
+<p class=RelatedWorkCxSpMiddle><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>STIX</i><i><sup>™</sup> Version 2.0. Part 2: STIX Objects. </i><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part2-stix-objects/stix-v2.0-cs01-part2-stix-objects.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part2-stix-objects/stix-v2.0-cs01-part2-stix-objects.html</a><i>.</i></p>
+
+<p class=RelatedWorkCxSpMiddle><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span>(this document) <i>STIX</i><i><sup>™</sup> Version 2.0. Part 3:
+Cyber Observable Core Concepts. </i><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html</a><span
+class=MsoHyperlink>.</span></p>
+
+<p class=RelatedWorkCxSpMiddle><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>STIX</i><i><sup>™</sup> Version 2.0. Part 4: Cyber Observable
+Objects. </i><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part4-cyber-observable-objects/stix-v2.0-cs01-part4-cyber-observable-objects.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part4-cyber-observable-objects/stix-v2.0-cs01-part4-cyber-observable-objects.html</a><i>.</i></p>
+
+<p class=RelatedWorkCxSpLast><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>STIX</i><i><sup>™</sup> Version 2.0. Part 5: STIX Patterning. </i><a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part5-stix-patterning/stix-v2.0-cs01-part5-stix-patterning.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part5-stix-patterning/stix-v2.0-cs01-part5-stix-patterning.html</a><i>.</i></p>
+
+<p class=Titlepageinfo><a name=RelatedWork>Related work</a>:</p>
+
+<p class=Titlepageinfodescription>This specification replaces or supersedes:</p>
+
+<p class=RelatedWorkCxSpFirst><span class=MsoHyperlink><span style='font-family:
+Symbol;color:windowtext'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><i>STIX</i><i><sup>™</sup> Version 1.2.1. Part 1:
+Overview. </i>Edited by Sean Barnum, Desiree Beck, Aharon Chernin, and Rich
+Piazza. Latest version: <a
+href="http://docs.oasis-open.org/cti/stix/v1.2.1/stix-v1.2.1-part1-overview.html">http://docs.oasis-open.org/cti/stix/v1.2.1/stix-v1.2.1-part1-overview.html</a><span
+class=MsoHyperlink>.</span></p>
+
+<p class=RelatedWorkCxSpLast><span style='font-family:Symbol'>·<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i>CybOX</i><i><sup>™</sup> Version 2.1.1. Part 01: Overview. </i>Edited
+by Trey Darley, Ivan Kirillov, Rich Piazza, and Desiree Beck. <span
+class=MsoHyperlink>Latest version: </span><a
+href="http://docs.oasis-open.org/cti/cybox/v2.1.1/cybox-v2.1.1-part01-overview.html">http://docs.oasis-open.org/cti/cybox/v2.1.1/cybox-v2.1.1-part01-overview.html</a><span
+class=MsoHyperlink>.</span></p>
+
+<p class=Titlepageinfodescription>This specification is related to:</p>
+
+<p class=MsoListParagraph style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.75in;margin-bottom:.0001pt;text-indent:-.25in'><span
+style='font-family:Symbol'>·<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span><i><span style='color:black'>TAXII</span></i><i><sup>™</sup></i><i><span
+style='color:black'> Version 2.0.</span></i><span style='color:black'> Edited
+by John Wunder, Mark Davidson, and Bret Jordan. Latest version: </span><a
+href="http://docs.oasis-open.org/cti/taxii/v2.0/taxii-v2.0.html">http://docs.oasis-open.org/cti/taxii/v2.0/taxii-v2.0.html</a><span
+style='color:black'>.</span></p>
+
+<p class=Titlepageinfo>Abstract:</p>
+
+<p class=Abstract>Structured Threat Information Expression (STIX<sup>™</sup>)
+is a language for expressing cyber threat and observable information. STIX
+Cyber Observables are defined in two documents. This document defines concepts
+that apply across all of STIX Cyber Observables.</p>
+
+<p class=Titlepageinfo>Status:</p>
+
+<p class=Abstract>This document was last revised or approved by the OASIS Cyber
+Threat Intelligence (CTI) TC on the above date. The level of approval is also
+listed above. Check the “Latest version” location noted above for possible
+later revisions of this document. Any other numbered Versions and other
+technical work produced by the Technical Committee (TC) are listed at <a
+href="https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti#technical">https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cti#technical</a>.</p>
+
+<p class=Abstract>TC members should send comments on this specification to the
+TC’s email list. Others should send comments to the TC’s public comment list,
+after subscribing to it by following the instructions at the “<a
+href="https://www.oasis-open.org/committees/comments/index.php?wg_abbrev=cti">Send
+A Comment</a>” button on the TC’s web page at <a
+href="https://www.oasis-open.org/committees/cti/">https://www.oasis-open.org/committees/cti/</a><span
+class=MsoHyperlink><span style='color:black'>.</span></span></p>
+
+<p class=Abstract>This Committee Specification is provided under the <a
+href="https://www.oasis-open.org/policies-guidelines/ipr#Non-Assertion-Mode">Non-Assertion</a>
+Mode of the <a href="https://www.oasis-open.org/policies-guidelines/ipr">OASIS
+IPR Policy</a>, the mode chosen when the Technical Committee was established. For
+information on whether any patents have been disclosed that may be essential to
+implementing this specification, and any offers of patent licensing terms,
+please refer to the Intellectual Property Rights section of the TC’s web page (<a
+href="https://www.oasis-open.org/committees/cti/ipr.php">https://www.oasis-open.org/committees/cti/ipr.php</a><span
+class=MsoHyperlink><span style='color:black'>).</span></span></p>
+
+<p class=Abstract>Note that any machine-readable content (<a
+href="https://www.oasis-open.org/policies-guidelines/tc-process#wpComponentsCompLang">Computer
+Language Definitions</a>) declared Normative for this Work Product is provided
+in separate plain text files. In the event of a discrepancy between any such
+plain text file and display content in the Work Product's prose narrative
+document(s), the content in the separate plain text file prevails.</p>
+
+<p class=Titlepageinfo>Citation format:</p>
+
+<p class=Abstract>When referencing this specification the following citation
+format should be used:</p>
+
+<p class=Abstract><span class=Refterm>[STIX-v2.0-Pt3-Cyb-Core]</span></p>
+
+<p class=Abstract><i>STIX™ Version 2.0. Part 3: Cyber Observable Core Concepts</i>.
+Edited by Trey Darley and Ivan Kirillov. 19 July 2017. OASIS Committee
+Specification 01. <a
+href="http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/cs01/part3-cyber-observable-core/stix-v2.0-cs01-part3-cyber-observable-core.html</a>.
+Latest version: <a
+href="http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.html">http://docs.oasis-open.org/cti/stix/v2.0/stix-v2.0-part3-cyber-observable-core.html</a>.</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:1.0pt 0in 0in 0in'>
+
+<p class=Notices>Notices</p>
+
+</div>
+
+<p class=MsoNormal>Copyright © OASIS Open 2017. All Rights Reserved.</p>
+
+<p class=MsoNormal>All capitalized terms in the following text have the
+meanings assigned to them in the OASIS Intellectual Property Rights Policy (the
+&quot;OASIS IPR Policy&quot;). The full <a
+href="https://www.oasis-open.org/policies-guidelines/ipr">Policy</a> may be
+found at the OASIS website.</p>
+
+<p class=MsoNormal>This document and translations of it may be copied and
+furnished to others, and derivative works that comment on or otherwise explain
+it or assist in its implementation may be prepared, copied, published, and
+distributed, in whole or in part, without restriction of any kind, provided
+that the above copyright notice and this section are included on all such
+copies and derivative works. However, this document itself may not be modified in
+any way, including by removing the copyright notice or references to OASIS,
+except as needed for the purpose of developing any document or deliverable
+produced by an OASIS Technical Committee (in which case the rules applicable to
+copyrights, as set forth in the OASIS IPR Policy, must be followed) or as
+required to translate it into languages other than English.</p>
+
+<p class=MsoNormal>The limited permissions granted above are perpetual and will
+not be revoked by OASIS or its successors or assigns.</p>
+
+<p class=MsoNormal>This document and the information contained herein is
+provided on an &quot;AS IS&quot; basis and OASIS DISCLAIMS ALL WARRANTIES,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTY THAT THE USE OF
+THE INFORMATION HEREIN WILL NOT INFRINGE ANY OWNERSHIP RIGHTS OR ANY IMPLIED
+WARRANTIES OF MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE.</p>
+
+<p class=MsoNormal>OASIS requests that any OASIS Party or any other party that
+believes it has patent claims that would necessarily be infringed by
+implementations of this OASIS Committee Specification or OASIS Standard, to
+notify OASIS TC Administrator and provide an indication of its willingness to
+grant patent licenses to such patent claims in a manner consistent with the IPR
+Mode of the OASIS Technical Committee that produced this specification.</p>
+
+<p class=MsoNormal>OASIS invites any party to contact the OASIS TC
+Administrator if it is aware of a claim of ownership of any patent claims that
+would necessarily be infringed by implementations of this specification by a
+patent holder that is not willing to provide a license to such patent claims in
+a manner consistent with the IPR Mode of the OASIS Technical Committee that
+produced this specification. OASIS may include such claims on its website, but
+disclaims any obligation to do so.</p>
+
+<p class=MsoNormal>OASIS takes no position regarding the validity or scope of any
+intellectual property or other rights that might be claimed to pertain to the
+implementation or use of the technology described in this document or the
+extent to which any license under such rights might or might not be available;
+neither does it represent that it has made any effort to identify any such
+rights. Information on OASIS' procedures with respect to rights in any document
+or deliverable produced by an OASIS Technical Committee can be found on the
+OASIS website. Copies of claims of rights made available for publication and
+any assurances of licenses to be made available, or the result of an attempt
+made to obtain a general license or permission for the use of such proprietary
+rights by implementers or users of this OASIS Committee Specification or OASIS
+Standard, can be obtained from the OASIS TC Administrator. OASIS makes no
+representation that any information or list of intellectual property rights
+will at any time be complete, or that any claims in such list are, in fact,
+Essential Claims.</p>
+
+<p class=MsoNormal>The name &quot;OASIS&quot; is a trademark of <a
+href="https://www.oasis-open.org/">OASIS</a>, the owner and developer of this
+specification, and should be used only to refer to the organization and its
+official outputs. OASIS welcomes reference to, and implementation and use of,
+specifications, while reserving the right to enforce its marks against
+misleading uses. Please see <a
+href="https://www.oasis-open.org/policies-guidelines/trademark">https://www.oasis-open.org/policies-guidelines/trademark</a>
+for above guidance.</p>
+
+<p class=MsoNormal>Portions copyright © United States Government 2012-2017. 
+All Rights Reserved.</p>
+
+<p class=MsoNormal>STIX™, CYBOX™, AND TAXII™ (STANDARD OR STANDARDS) AND THEIR
+COMPONENT PARTS ARE PROVIDED &quot;AS IS&quot; WITHOUT ANY WARRANTY OF ANY
+KIND, EITHER EXPRESSED, IMPLIED, OR STATUTORY, INCLUDING, BUT NOT LIMITED TO,
+ANY WARRANTY THAT THESE STANDARDS OR ANY OF THEIR COMPONENT PARTS WILL CONFORM
+TO SPECIFICATIONS, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A
+PARTICULAR PURPOSE, OR FREEDOM FROM INFRINGEMENT, ANY WARRANTY THAT THE
+STANDARDS OR THEIR COMPONENT PARTS WILL BE ERROR FREE, OR ANY WARRANTY THAT THE
+DOCUMENTATION, IF PROVIDED, WILL CONFORM TO THE STANDARDS OR THEIR COMPONENT
+PARTS.  IN NO EVENT SHALL THE UNITED STATES GOVERNMENT OR ITS CONTRACTORS OR
+SUBCONTRACTORS BE LIABLE FOR ANY DAMAGES, INCLUDING, BUT NOT LIMITED TO,
+DIRECT, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, ARISING OUT OF, RESULTING
+FROM, OR IN ANY WAY CONNECTED WITH THESE STANDARDS OR THEIR COMPONENT PARTS OR
+ANY PROVIDED DOCUMENTATION, WHETHER OR NOT BASED UPON WARRANTY, CONTRACT, TORT,
+OR OTHERWISE, WHETHER OR NOT INJURY WAS SUSTAINED BY PERSONS OR PROPERTY OR
+OTHERWISE, AND WHETHER OR NOT LOSS WAS SUSTAINED FROM, OR AROSE OUT OF THE
+RESULTS OF, OR USE OF, THE STANDARDS, THEIR COMPONENT PARTS, AND ANY PROVIDED
+DOCUMENTATION. THE UNITED STATES GOVERNMENT DISCLAIMS ALL WARRANTIES AND
+LIABILITIES REGARDING THE STANDARDS OR THEIR COMPONENT PARTS ATTRIBUTABLE TO
+ANY THIRD PARTY, IF PRESENT IN THE STANDARDS OR THEIR COMPONENT PARTS AND
+DISTRIBUTES IT OR THEM &quot;AS IS.&quot;</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:1.0pt 0in 0in 0in'>
+
+<p class=Notices>Table of Contents</p>
+
+</div>
+
+<p class=MsoToc1><a href="#_Toc496715354">&#8203;1&#8203;&nbsp;Introduction<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>7</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715355">&#8203;1.0&#8203;&nbsp;IPR Policy<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>7</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715356">&#8203;1.1&#8203;&nbsp;Terminology<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>7</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715357">&#8203;1.2&#8203;&nbsp;Normative
+References<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>7</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715358">&#8203;1.3&#8203;&nbsp;Non-Normative
+References<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>9</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715359">&#8203;1.4&#8203;&nbsp;Overview<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>10</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715360">&#8203;1.4.1&#8203;&nbsp;Cyber
+Observable Objects<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>10</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715361">&#8203;1.4.2&#8203;&nbsp;Cyber
+Observable Relationships<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>10</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715362">&#8203;1.4.3&#8203;&nbsp;Cyber
+Observable Extensions<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>10</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715363">&#8203;1.4.4&#8203;&nbsp;Vocabularies
+&amp; Enumerations<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>10</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715364">&#8203;1.5&#8203;&nbsp;Naming
+Requirements<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715365">&#8203;1.5.1&#8203;&nbsp;Property
+Names and String Literals<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715366">&#8203;1.5.2&#8203;&nbsp;Reserved
+Names<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715367">&#8203;1.6&#8203;&nbsp;Document
+Conventions<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715368">&#8203;1.6.1&#8203;&nbsp;Naming
+Conventions<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715369">&#8203;1.6.2&#8203;&nbsp;Font Colors
+and Style<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>11</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715370">&#8203;2&#8203;&nbsp;Cyber Observable
+Specific Data Types<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>12</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715371">&#8203;2.1&#8203;&nbsp;Binary<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715372">&#8203;2.2&#8203;&nbsp;Hexadecimal<span
+style='color:windowtext;display:none'> </span><span
+style='color:windowtext;display:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715373">&#8203;2.3&#8203;&nbsp;Dictionary<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715374">&#8203;2.4&#8203;&nbsp;Object
+Reference<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>13</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715375">&#8203;2.5&#8203;&nbsp;Observable
+Objects<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>14</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715376">&#8203;3&#8203;&nbsp;Cyber Observable
+Objects<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>15</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715377">&#8203;3.1&#8203;&nbsp;Common
+Properties<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>15</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715378">&#8203;3.2&#8203;&nbsp;Object References<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>15</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715379">&#8203;3.3&#8203;&nbsp;Object
+Property Metadata<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>15</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715380">&#8203;3.3.1&#8203;&nbsp;String
+Encoding<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>15</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715381">&#8203;3.4&#8203;&nbsp;Object
+Relationships<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>16</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715382">&#8203;3.5&#8203;&nbsp;Predefined
+Object Extensions<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>17</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715383">&#8203;4&#8203;&nbsp;Common
+Vocabularies<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>18</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715384">&#8203;4.1&#8203;&nbsp;Encryption
+Algorithm Vocabulary<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>18</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715385">&#8203;5&#8203;&nbsp;Customizing
+Cyber Observables<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>20</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715386">&#8203;5.1&#8203;&nbsp;Custom
+Observable Objects<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>20</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715387">&#8203;5.1.1&#8203;&nbsp;Requirements<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>20</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715388">&#8203;5.2&#8203;&nbsp;Custom Object
+Extensions<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>21</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715389">&#8203;5.2.1&#8203;&nbsp;Requirements<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>21</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715390">&#8203;5.3&#8203;&nbsp;Custom Object
+Properties<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>22</span></a></p>
+
+<p class=MsoToc3><a href="#_Toc496715391">&#8203;5.3.1&#8203;&nbsp;Requirements<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>22</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715392">&#8203;6&#8203;&nbsp;Reserved Names<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>23</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715393">&#8203;7&#8203;&nbsp;Conformance<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>24</span></a></p>
+
+<p class=MsoToc2><a href="#_Toc496715394">&#8203;7.1&#8203;&nbsp;Producers and
+Consumers<span style='color:windowtext;display:none'>. </span><span style='color:windowtext;display:none'>24</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715395">&#8203;Appendix A. Glossary<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>25</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715396">&#8203;Appendix B. Acknowledgments<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>26</span></a></p>
+
+<p class=MsoToc1><a href="#_Toc496715397">&#8203;Appendix C. Revision History<span
+style='color:windowtext;display:none'>. </span><span
+style='color:windowtext;display:none'>32</span></a></p>
+
+<p class=TextBody>&nbsp;</p>
+
+</div>
+
+<span style='font-size:10.0pt;font-family:"Arial",sans-serif'><br clear=all
+style='page-break-before:always'>
+</span>
+
+<div class=WordSection2>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715354">&#8203;1&#8203;&nbsp;Introduction</a></h1>
+
+</div>
+
+<p class=MsoNormal>The STIX 2.0 specification defines structured
+representations for observable objects and their properties in the cyber
+domain. These can be used to describe data in many different functional
+domains, including but not limited to:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Malware
+characterization</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Intrusion
+detection</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Incident
+response &amp; management</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Digital
+forensics</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>STIX Cyber Observables document the facts concerning <b>what</b>
+happened on a network or host, but not necessarily the who or when, and never
+the why. For example, information about a file that existed, a process that was
+observed running, or that network traffic occurred between two IPs can all be
+captured as Cyber Observable data.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>STIX Cyber Observables are used by various STIX Domain Objects
+(SDOs) to provide additional context to the data that they characterize. The
+Observed Data SDO, for example, indicates that the raw data was observed at a
+particular time and by a particular party.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Cyber Observable Objects chosen for inclusion in STIX
+2.0 represent a minimally viable product (MVP) that fulfills basic consumer and
+producer requirements. Objects and properties not included in STIX 2.0, but
+deemed necessary by the community, will be included in future releases.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>This document (<i>STIX™ Version 2.0. Part 3: Cyber
+Observable Core Concepts</i>) in the STIX specification describes Cyber
+Observable Core Concepts. <a href="#jearcn1kyp98"><i><u><span style='color:
+#1155CC'>STIX™ Version 2.0. Part 4: Cyber Observable Objects</span></u></i></a>
+contains the definitions for the Cyber Observable Objects.</p>
+
+<h2><a name="_Toc496715355">&#8203;1.0&#8203;&nbsp;IPR Policy</a></h2>
+
+<p class=MsoNormal>This Committee Specification is provided under the <a
+href="https://www.oasis-open.org/policies-guidelines/ipr#Non-Assertion-Mode">Non-Assertion</a>
+Mode of the <a href="https://www.oasis-open.org/policies-guidelines/ipr">OASIS
+IPR Policy</a>, the mode chosen when the Technical Committee was established. For
+information on whether any patents have been disclosed that may be essential to
+implementing this specification, and any offers of patent licensing terms,
+please refer to the Intellectual Property Rights section of the TC’s web page (<a
+href="https://www.oasis-open.org/committees/cti/ipr.php">https://www.oasis-open.org/committees/cti/ipr.php</a><span
+class=MsoHyperlink><span style='color:black'>).</span></span></p>
+
+<h2><a name="_Toc496715356"></a><a name="_Toc496714637">&#8203;1.1&#8203;&nbsp;Terminology</a></h2>
+
+<p class=MsoNormal>The key words “<b>MUST</b>”, “<b>MUST NOT</b>”, “<b>REQUIRED</b>”,
+“<b>SHALL</b>”, “<b>SHALL NOT</b>”, “<b>SHOULD</b>”, “<b>SHOULD NOT</b>”, “<b>RECOMMENDED</b>”,
+“<b>MAY</b>”, and “<b>OPTIONAL</b>” in this document are to be interpreted as
+described in [<a href="#4jpnvk8gc1gd"><u><span style='color:#1155CC'>RFC2119</span></u></a>].</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='color:#333333;background:white'>All text is
+normative except for examples, the overview (section </span><a
+href="#_fom6s0811sz9"><u><span style='color:#1155CC;background:white'>1.4</span></u></a><span
+style='color:#333333;background:white'>), and any text marked non-normative.</span></p>
+
+<h2><a name="_Toc496715357"></a><a name="_Toc496714638">&#8203;1.2&#8203;&nbsp;Normative
+References</a></h2>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=gtskbkc1qpsv></a><b>[Character
+Sets]           </b>&quot;N. Freed and M. Dürst, “Character Sets”, IANA,
+December 2013, [Online]. Available<b>:</b><a
+href="http://www.iana.org/assignments/character-sets/character-sets.xhtml"><b><span
+style='color:windowtext'> </span></b></a><a
+href="http://www.iana.org/assignments/character-sets/character-sets.xhtml"><u><span
+style='color:#1155CC'>http://www.iana.org/assignments/character-sets/character-sets.xhtml</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=3464v1trxfx7></a><b>[IEEE
+754-2008]            </b>&quot;IEEE Standard for Floating-Point
+Arithmetic&quot;, IEEE 754-2008, August 2008. [Online] Available: <a
+href="http://ieeexplore.ieee.org/document/4610935/"><u><span style='color:#1155CC'>http://ieeexplore.ieee.org/document/4610935/</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=6ul3noxcslj0></a><b>[ISO10118]       
+           “</b>ISO/IEC 10118-3:2004 Information technology -- Security
+techniques -- Hash-functions -- Part 3: Dedicated hash-functions”, 2004. 
+[Online]. Available:<a
+href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=39876"><span
+style='color:windowtext'> </span></a><a
+href="http://www.iso.org/iso/catalogue_detail.htm?csnumber=39876"><u><span
+style='color:#1155CC'>http://www.iso.org/iso/catalogue_detail.htm?csnumber=39876</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=py4ci9cnh6ud></a><b>[FIPS81]           
+            </b>“DES MODES OF OPERATION”, FIPS PUB 81, December 1980, National
+Institute of Standards and Technology (NIST). [Online]. Available:<a
+href="http://csrc.nist.gov/publications/fips/fips81/fips81.htm"><span
+style='color:windowtext'> </span></a><a
+href="http://csrc.nist.gov/publications/fips/fips81/fips81.htm"><u><span
+style='color:#1155CC'>http://csrc.nist.gov/publications/fips/fips81/fips81.htm</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=xa9i66gjhthh></a><b>[FIPS186-4]      
+           </b>“Digital Signature Standard (DSS)”, FIPS PUB 186-4, July 2013,
+Information Technology Laboratory, National Institute of Standards and
+Technology (NIST). [Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=y8jfdgcxb19y></a><b>[FIPS202]         
+            </b>“SHA-3 Standard: Permutation-Based Hash and Extendable-Output
+Functions”, FIPS PUB 202, August 2015, Information Technology Laboratory,
+National Institute of Standards and Technology (NIST). [Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.202.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=ahsjx3k7n8kz></a><b>[MD6]                
+           </b>Rivest, R. et. al, &quot;The MD6 hash function - A proposal to
+NIST for SHA-3”, October 2008. [Online]. Available:<a
+href="http://groups.csail.mit.edu/cis/md6/submitted-2008-10-27/Supporting_Documentation/md6_report.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://groups.csail.mit.edu/cis/md6/submitted-2008-10-27/Supporting_Documentation/md6_report.pdf"><u><span
+style='color:#1155CC'>http://groups.csail.mit.edu/cis/md6/submitted-2008-10-27/Supporting_Documentation/md6_report.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=7jvmiq6gn641></a><b>[NIST
+800-38A]             </b>M. Dworkin, “Recommendation for Block Cipher Modes of
+Operation Methods and Techniques”, NIST Special Publication 800-38A, 2001.
+[Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38a.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=rm5qqgs9kz1i></a><b>[NIST
+800-38D]             </b>M. Dworkin, “Recommendation for Block Cipher Modes of
+Operation:Galois/Counter Mode (GCM) and GMAC”, NIST Special Publication
+800-38D, November 2007. [Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38d.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=vbhdkokiwt1e></a><b>[NIST
+800-38E]             </b>M. Dworkin, “Recommendation for Block Cipher Modes of
+Operation: The XTS-AES Mode for Confidentiality on Storage Devices”, NIST Special
+Publication 800-38E, January 2010. [Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38e.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38e.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-38e.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=60n8t8dnq6w1></a><b>[NIST
+800-67]               </b>W. Barker and E. Barker, “Recommendation for the
+Triple Data Encryption Algorithm (TDEA) Block Cipher”, NIST Special Publication
+800-67, January 2012. [Online]. Available:<a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-67r1.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-67r1.pdf"><u><span
+style='color:#1155CC'>http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-67r1.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=dgq7d1e2jg2c></a><b>[RFC1321]</b>        
+           Rivest, R., &quot;The MD5 Message-Digest Algorithm&quot;, RFC 1321,
+DOI 10.17487/RFC1321, April 1992,<a
+href="http://www.rfc-editor.org/info/rfc1321"><span style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc1321"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc1321</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=4jpnvk8gc1gd></a><b>[RFC2119]
+</b>                   Bradner, S., “&quot;Key words for use in RFCs to
+Indicate Requirement Levels&quot;, BCP 14, RFC 2119, DOI 10.17487/RFC2119,
+March 1997, <a href="http://www.rfc-editor.org/info/rfc2119"><u><span
+style='color:#1155CC'>http://www.rfc-editor.org/info/rfc2119</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=95srtptb0mym></a><b>[RFC2144]</b>        
+           Adams, C., &quot;The CAST-128 Encryption Algorithm&quot;, RFC 2144,
+DOI 10.17487/RFC2144, May 1997,<a href="http://www.rfc-editor.org/info/rfc2144"><span
+style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc2144"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc2144</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=5hopylsr3b5x></a><b>[RFC2612]</b>        
+           Adams, C. and J. Gilchrist, &quot;The CAST-256 Encryption
+Algorithm&quot;, RFC 2612, DOI 10.17487/RFC2612, June 1999,<a
+href="http://www.rfc-editor.org/info/rfc2612"><span style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc2612"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc2612</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=ovfkgozaoa2b></a><b>[RFC3174]</b>        
+           Eastlake 3rd, D. and P. Jones, &quot;US Secure Hash Algorithm 1
+(SHA1)&quot;, RFC 3174, DOI 10.17487/RFC3174, September 2001,<a
+href="http://www.rfc-editor.org/info/rfc3174"><span style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc3174"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc3174</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=mhotul1qafc0></a><b>[RFC6234]</b>        
+           Eastlake 3rd, D. and T. Hansen, &quot;US Secure Hash Algorithms (SHA
+and SHA-based HMAC and HKDF)&quot;, RFC 6234, DOI 10.17487/RFC6234, May 2011,<a
+href="http://www.rfc-editor.org/info/rfc6234"><span style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc6234"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc6234</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=fuu4oznlc9vh></a><b>[RFC7539]</b>        
+           Nir, Y. and A. Langley, &quot;ChaCha20 and Poly1305 for IETF
+Protocols&quot;, RFC 7539, DOI 10.17487/RFC7539, May 2015,<a
+href="http://www.rfc-editor.org/info/rfc7539"><span style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc7539"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc7539</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=1kx5o4qawswk></a><b>[RFC8017]</b>        
+           Moriarty, K., Ed., Kaliski, B., Jonsson, J., and A. Rusch,
+&quot;PKCS #1: RSA Cryptography Specifications Version 2.2&quot;, RFC 8017, DOI
+10.17487/RFC8017, November 2016,<a href="http://www.rfc-editor.org/info/rfc8017"><span
+style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc8017"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc8017</span></u></a>.</p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=l7immdwc2u0e></a><b>[RIPEND-160]   
+           </b>H. Dobbertin, A. Bosselaers, and B. Preneel, “RIPEMD-160:A
+Strengthened Version of RIPEMD”, April 1996, [Online]. Available:<a
+href="http://homes.esat.kuleuven.be/~bosselae/ripemd160/pdf/AB-9601/AB-9601.pdf"><span
+style='color:windowtext'> </span></a><a
+href="http://homes.esat.kuleuven.be/~bosselae/ripemd160/pdf/AB-9601/AB-9601.pdf"><u><span
+style='color:#1155CC'>http://homes.esat.kuleuven.be/~bosselae/ripemd160/pdf/AB-9601/AB-9601.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=gpxrdnh1qpkq></a><b>[Salsa20]          
+           </b>D. Bernstein, “Salsa20 specification” (n.d.). [Online].
+Available:<a href="https://cr.yp.to/snuffle/spec.pdf"><span style='color:windowtext'>
+</span></a><a href="https://cr.yp.to/snuffle/spec.pdf"><u><span
+style='color:#1155CC'>https://cr.yp.to/snuffle/spec.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=nlukzmcxney1></a><b>[Salsa20/8
+20/12]          </b>D. Bernstein, “Salsa20/8 and Salsa20/12” (n.d.). [Online].
+Available:<a href="https://cr.yp.to/snuffle/812.pdf"><span style='color:windowtext'>
+</span></a><a href="https://cr.yp.to/snuffle/812.pdf"><u><span
+style='color:#1155CC'>https://cr.yp.to/snuffle/812.pdf</span></u></a></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in'><a name=bnb0wnn4wm4f></a><b>[SSDEEP]         
+           </b>J. Kornblum, “Identifying Almost Identical Files Using Context
+Triggered Piecewise Hashing”, Proceedings of The Digital Forensic Research
+Conference (DFRWS) 2006. [Online]. Available: <a
+href="http://dfrws.org/sites/default/files/session-files/paper-identifying_almost_identical_files_using_context_triggered_piecewise_hashing.pdf"><u><span
+style='color:#1155CC'>http://dfrws.org/sites/default/files/session-files/paper-identifying_almost_identical_files_using_context_triggered_piecewise_hashing.pdf</span></u></a></p>
+
+<h2><a name="_Toc496715358"></a><a name="_Toc496714639">&#8203;1.3&#8203;&nbsp;Non-Normative
+References</a></h2>
+
+<p class=MsoNormal style='margin-top:2.0pt;margin-right:0in;margin-bottom:2.0pt;
+margin-left:1.5in;text-indent:-1.5in'><a name=tonlvgxl49sn></a><b>[RFC7159]</b>        
+           Bray, T., Ed., &quot;The JavaScript Object Notation (JSON) Data
+Interchange Format&quot;, RFC 7159, DOI 10.17487/RFC7159, March 2014. <a
+href="http://www.rfc-editor.org/info/rfc7159"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc7159.txt</span></u></a><b>.</b></p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal style='margin-left:1.5in;text-indent:-1.5in'><a
+name=w5obc8apb1tn></a><b>[RFC4648]</b>                    Josefsson, S.,
+&quot;The Base16, Base32, and Base64 Data Encodings&quot;, RFC 4648, DOI
+10.17487/RFC4648, October 2006,<a href="http://www.rfc-editor.org/info/rfc4648"><span
+style='color:windowtext'> </span></a><a
+href="http://www.rfc-editor.org/info/rfc4648"><u><span style='color:#1155CC'>http://www.rfc-editor.org/info/rfc4648</span></u></a>.</p>
+
+<h2><a name="_Toc496715359"></a><a name="_Toc496714640">&#8203;1.4&#8203;&nbsp;Overview</a></h2>
+
+<h3><a name="_Toc496715360"></a><a name="_Toc496714641">&#8203;1.4.1&#8203;&nbsp;Cyber
+Observable Objects</a></h3>
+
+<p class=MsoNormal>STIX 2.0 defines a set of Cyber Observable Objects for
+characterizing host-based, network, and related entities. Each of these objects
+correspond to a data point commonly represented in CTI and digital forensics.
+Using the building blocks of Cyber Observable Objects, in conjunction with
+relationships between these objects, individuals can create, document, and
+share comprehensive information about computer systems and their state.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Throughout this document, Cyber Observable Objects are
+referred to simply as &quot;Observable Objects&quot;. These should not be
+confused with STIX Domain Objects (SDOs), as defined in <a href="#jearcn1kyp98"><i><u><span
+style='color:#1155CC'>STIX™ Version 2.0. Part 1: STIX Core Concepts</span></u></i></a>
+and <a href="#jearcn1kyp98"><i><u><span style='color:#1155CC'>STIX™ Version
+2.0. Part 2: STIX Objects</span></u></i></a>.</p>
+
+<h3><a name="_Toc496715361"></a><a name="_Toc496714642">&#8203;1.4.2&#8203;&nbsp;Cyber
+Observable Relationships</a></h3>
+
+<p class=MsoNormal>A Cyber Observable Relationship is a reference linking two
+(or more) related Cyber Observable Objects. Cyber Observable Relationships are
+only resolvable within the same <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>observable-objects</span> container. References are a property
+on Cyber Observable Objects that contain the ID of a different Cyber Observable
+Object. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Throughout this document, Cyber Observable Relationships are
+referred to simply as &quot;Relationships&quot;. These should not be confused
+with STIX Relationship Objects (SROs), as defined in <a href="#jearcn1kyp98"><i><u><span
+style='color:#1155CC'>STIX™ Version 2.0. Part 1: STIX Core Concepts</span></u></i></a>
+and <a href="#jearcn1kyp98"><i><u><span style='color:#1155CC'>STIX™ Version
+2.0. Part 2: STIX Objects</span></u></i></a>.</p>
+
+<h3><a name="_Toc496715362"></a><a name="_Toc496714643">&#8203;1.4.3&#8203;&nbsp;Cyber
+Observable Extensions</a></h3>
+
+<p class=MsoNormal>Each Observable Object defines a set of base properties that
+are generally applicable across any instance of the Object. However, there is
+also a need to encode additional data beyond the base definition of the Object
+data models. To enable this, STIX permits the specification of such additional
+properties through the set of Predefined Cyber Observable Object Extensions.
+Where applicable, Predefined Object Extensions are included in the definitions
+of Objects. For example, the File Object includes Predefined Object Extensions
+for characterizing PDF files, raster image files, archive files, NTFS files,
+and Windows PE binary files. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Producers may also define and include their own Custom
+Object Extensions. For further information, refer to section <a
+href="#_h3ayfcipgxlh"><u><span style='color:#1155CC'>5</span></u></a> (Customizing
+Cyber Observable Objects.)</p>
+
+<h3><a name="_Toc496715363"></a><a name="_Toc496714644">&#8203;1.4.4&#8203;&nbsp;Vocabularies
+&amp; Enumerations</a></h3>
+
+<p class=MsoNormal>Many Cyber Observable Objects contain properties whose
+values are constrained by a predefined enumeration or open vocabulary. In the
+case of enumerations, this is a requirement that producers must use the values
+in the enumeration and cannot use any outside values. In the case of open
+vocabularies, this is a suggestion for producers that permits the use of values
+outside of the suggested vocabulary.<b> </b>If used consistently, vocabularies
+make it less likely that, for example, one entity refers to the md5 hashing
+algorithm as &quot;MD5&quot; and another as &quot;md-5-hash&quot;, thereby
+making comparison and correlation easier. </p>
+
+<h2><a name="_Toc496715364"></a><a name="_Toc496714645">&#8203;1.5&#8203;&nbsp;Naming
+Requirements</a></h2>
+
+<h3><a name="_Toc496715365"></a><a name="_Toc496714646">&#8203;1.5.1&#8203;&nbsp;Property
+Names and String Literals</a></h3>
+
+<p class=MsoNormal>In the JSON serialization all property names and string
+literals <b>MUST</b> be exactly the same, including case, as the names listed
+in the property tables in this specification. For example, the SDO common
+property <b><span style='font-family:Consolas'>created_by_ref</span></b> must
+result in the JSON key name &quot;created_by_ref&quot;. Properties marked
+required in the property tables <b>MUST</b> be present in the JSON
+serialization.</p>
+
+<h3><a name="_Toc496715366"></a><a name="_Toc496714647">&#8203;1.5.2&#8203;&nbsp;Reserved
+Names</a></h3>
+
+<p class=MsoNormal>Reserved property names are marked with a type called <span
+style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>RESERVED</span>
+and a description text of “RESERVED FOR FUTURE USE”. Any property name that is
+marked as <span style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>RESERVED</span>
+<b>MUST NOT</b> be present in STIX content conforming to this version of the
+specification.</p>
+
+<h2><a name="_Toc496715367"></a><a name="_Toc496714648">&#8203;1.6&#8203;&nbsp;Document
+Conventions</a> </h2>
+
+<h3><a name="_Toc496715368"></a><a name="_Toc496714649">&#8203;1.6.1&#8203;&nbsp;Naming
+Conventions</a></h3>
+
+<p class=MsoNormal>All type names, property names, and literals are in
+lowercase, except when referencing canonical names defined in another standard
+(e.g., literal values from an IANA registry). Words in property names are
+separated with an underscore(_), while words in type names and string
+enumerations are separated with a hyphen (-). All type names, property names,
+object names, and vocabulary terms are between three and 250 characters long.</p>
+
+<h3><a name="_Toc496715369"></a><a name="_Toc496714650">&#8203;1.6.2&#8203;&nbsp;Font
+Colors and Style</a></h3>
+
+<p class=MsoNormal style='margin-bottom:12.0pt'>The following color, font and
+font style conventions are used in this document:</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:.5in;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The <span
+style='font-family:Consolas'>Consolas</span> font is used for all type names,
+property names and literals.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:1.0in;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>type
+names are in red with a light red background - <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>hashes</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:1.0in;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>property
+names are in bold style - <b><span style='font-family:Consolas'>protocols</span></b></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:1.0in;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>literals
+(values) are in blue with a blue background - <span style='font-family:Consolas;
+color:#073763;background:#CFE2F3'>SHA-256</span></p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+12.0pt;margin-left:.5in;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>In
+an object's property table, if a common property is being redefined in some
+way, then the background is dark gray.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;line-height:115%;
+border:none'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>All examples in this document are expressed in JSON. They are in <span
+style='font-family:Consolas'>Consolas</span> 9-point font, with straight
+quotes, black text and a <span style='font-size:9.0pt;line-height:115%;
+font-family:Consolas;background:#EFEFEF'>light grey background</span>, and
+2-space indentation. </p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;line-height:115%;
+border:none'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>Parts of the example may be omitted for conciseness and clarity. These
+omitted parts are denoted with the ellipses (...).</p>
+
+<p class=MsoNormalCxSpLast style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;line-height:115%;
+border:none'>&#9679;<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span>The term “hyphen” is used throughout this document to refer to the ASCII
+hyphen or minus character, which in Unicode is “hyphen-minus”, U+002D.</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715370"></a><a name="_Toc496714651">&#8203;2&#8203;&nbsp;Cyber
+Observable Specific Data Types</a></h1>
+
+</div>
+
+<p class=MsoNormal>The Cyber Observable specification within STIX makes use of
+many common types that are defined in <span style='color:#545454;background:
+white'>section 2</span> of <a href="#jearcn1kyp98"><i><u><span
+style='color:#1155CC'>STIX™ Version 2.0. Part 2: STIX Objects</span></u></i></a>.
+In addition, data types specific to` the representation of Cyber Observables
+are defined in this section. The table below lists common data types from STIX
+Core with a <span style='background:#D9D9D9'>gray background</span> and the
+Cyber Observable specific types with a white background.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=623
+ style='width:467.25pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='line-height:120%'><b><span style='color:white;
+  background:#073763'>Type</span></b></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border:solid black 1.0pt;
+  border-left:none;background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='line-height:120%'><b><span style='color:white;
+  background:#073763'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>boolean</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A value of <span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>true</span> or <span style='font-family:Consolas;
+  color:#073763;background:#CFE2F3'>false</span>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>float</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>An IEEE 754 [<a href="#3464v1trxfx7"><u><span
+  style='color:#1155CC'>IEEE 754-2008</span></u></a>] double-precision number.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='line-height:137%'><span style='font-family:Consolas;
+  color:#C7254E;background:#F9F2F4'>hashes</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>One or more cryptographic hashes.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='line-height:137%'><span style='font-family:Consolas;
+  color:#C7254E;background:#F9F2F4'>integer</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A whole number.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>list</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>An ordered sequence of values. The phrasing “<span
+  style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>list</span> of
+  type <span style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>&lt;type&gt;</span>”
+  is used to indicate that all values within the list <b>MUST</b> conform to
+  the specified type.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal style='line-height:137%'><span style='font-family:Consolas;
+  color:#C7254E;background:#F9F2F4'>open-vocab</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A value from a STIX open (<span style='font-family:Consolas;
+  color:#C7254E;background:#F9F2F4'>open-vocab</span>) or suggested vocabulary.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>string</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A series of Unicode characters.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>timestamp</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A time value (date and time).</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>binary</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A sequence of bytes.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>hex</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>An array of octets as hexadecimal.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>dictionary</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A set of key/value pairs.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>object-ref</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>A local reference to a Cyber Observable Object.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=178 valign=top style='width:133.5pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>observable-objects</span></p>
+  </td>
+  <td width=445 valign=top style='width:333.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>One or more Cyber Observable Objects.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc496715371"></a><a name="_Toc496714652">&#8203;2.1&#8203;&nbsp;Binary</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>binary</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>binary</span> data type represents a sequence of bytes. In
+order to allow pattern matching on custom objects, for all properties that use
+the binary type, the property name <b>MUST</b> end with '_bin'.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The JSON MTI serialization represents this as a
+base64-­encoded string as specified in </p>
+
+<p class=MsoNormal>[<a href="#w5obc8apb1tn"><u><span style='color:#1155CC'>RFC4648</span></u></a>]&#8203;.
+Other serializations <b>SHOULD</b> use a native binary type, if available.</p>
+
+<h2><a name="_Toc496715372"></a><a name="_Toc496714653">&#8203;2.2&#8203;&nbsp;Hexadecimal</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>hex</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>hex</span> data type encodes an array of octets (8-bit
+bytes) as hexadecimal. The string <b>MUST</b> consist of an even number of
+hexadecimal characters, which are the digits '0' through '9' and the letters
+'a' through 'f'.  In order to allow pattern matching on custom objects, for all
+properties that use the <span style='font-size:11.0pt;font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>hex</span> type, the property name <b>MUST</b>
+end with '_hex'.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>...</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>   &quot;src_flags_hex&quot;: &quot;00000002&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>...&#8203;</span></p>
+
+<h2><a name="_Toc496715373"></a><a name="_Toc496714654">&#8203;2.3&#8203;&nbsp;Dictionary</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>dictionary</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>dictionary</span> captures an arbitrary set of key/value
+pairs. <span style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>dictionary</span>
+keys <b>MUST</b> be unique in each dictionary, <b>MUST</b> be in ASCII, and are
+limited to the characters a-z (lowercase ASCII), A-Z (uppercase ASCII),
+numerals 0-9, hyphen (-), and underscore (_). <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>dictionary</span> keys <b>SHOULD</b> be no
+longer than 30 ASCII characters in length, <b>MUST</b> have a minimum length of
+3 ASCII characters, <b>MUST</b> be no longer than 256 ASCII characters in
+length, and <b>SHOULD </b>be lowercase. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;background:
+#F9F2F4'>dictionary</span> values <b>MUST</b> be valid property base types.</p>
+
+<h2><a name="_Toc496715374"></a><a name="_Toc496714655">&#8203;2.4&#8203;&nbsp;Object
+Reference</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>object-ref</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Object Reference data type specifies a local reference
+to an Observable Object, that is, one which <b>MUST</b> be valid within the
+local scope of the Observable Objects (<span style='font-size:11.0pt;
+font-family:Consolas;color:#C7254E;background:#F9F2F4'>observable-objects</span>)
+container that holds both the source Observable Object and the Observable
+Object that it references. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal>The following example demonstrates how a Network Traffic
+Object specifies its destination via a reference to an IPv4 Address Object.</p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;ipv4-addr&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;value&quot;: &quot;198.51.100.2&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;1&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;network-traffic&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;dst_ref&quot;: &quot;0&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc496715375"></a><a name="_Toc496714656">&#8203;2.5&#8203;&nbsp;Observable
+Objects</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>observable-objects</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The Observable Objects type represents 1 or more Observable
+Objects as a special set of key/value pairs. The keys in the dictionary are
+references used to refer to the values, which are objects. Each key in the
+dictionary <b>SHOULD</b> be a non-negative monotonically increasing integer,
+incrementing by 1 from a starting value of 0, and represented as a string
+within the JSON MTI serialization. However, implementers <b>MAY</b> elect to
+use an alternate key format if necessary.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;type&quot;: &quot;email-addr&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;value&quot;: &quot;jdoe@example.com&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;display_name&quot;: &quot;John Doe&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;1&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;type&quot;: &quot;email-addr&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;value&quot;: &quot;mary@example.com&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;display_name&quot;: &quot;Mary Smith&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;2&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;type&quot;: &quot;email-message&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;from_ref&quot;: &quot;0&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;to_refs&quot;: [&quot;1&quot;],</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;date&quot;: &quot;1997-11-21T15:55:06Z&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;subject&quot;: &quot;Saying Hello&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715376"></a><a name="_Toc496714657">&#8203;3&#8203;&nbsp;Cyber
+Observable Objects</a></h1>
+
+</div>
+
+<p class=MsoNormal>This section outlines the common properties and behavior
+across all Cyber Observable Objects.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The JSON MTI serialization uses the JSON object type [<a
+href="#tonlvgxl49sn"><u><span style='color:#1155CC'>RFC7159</span></u></a>]
+when representing Objects.</p>
+
+<h2><a name="_Toc496715377"></a><a name="_Toc496714658">&#8203;3.1&#8203;&nbsp;Common
+Properties</a></h2>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=624
+ style='width:6.5in;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=172 valign=top style='width:129.0pt;border:solid black 1.0pt;
+  background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='color:whitesmoke'>Property Name</span></b></p>
+  </td>
+  <td width=91 valign=top style='width:68.25pt;border:solid black 1.0pt;
+  border-left:none;background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='color:whitesmoke'>Type</span></b></p>
+  </td>
+  <td width=361 valign=top style='width:270.75pt;border:solid black 1.0pt;
+  border-left:none;background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='color:whitesmoke'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=172 valign=top style='width:129.0pt;border:solid black 1.0pt;
+  border-top:none;background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='font-family:Consolas'>type</span></b>
+  (required)</p>
+  </td>
+  <td width=91 valign=top style='width:68.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>string</span></p>
+  </td>
+  <td width=361 valign=top style='width:270.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  background:#D9D9D9;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Indicates that this object is an Observable Object. The
+  value of this property <b>MUST</b> be a valid Observable Object type name.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=172 valign=top style='width:129.0pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='font-family:Consolas'>extensions </span></b>(optional)</p>
+  </td>
+  <td width=91 valign=top style='width:68.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#C7254E;
+  background:#F9F2F4'>dictionary</span></p>
+  </td>
+  <td width=361 valign=top style='width:270.75pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies any extensions of the object, as a dictionary. </p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>Dictionary keys <b>MUST</b> identify the extension type by
+  name.</p>
+  <p class=MsoNormal>&nbsp;</p>
+  <p class=MsoNormal>The corresponding dictionary values <b>MUST</b> contain
+  the contents of the extension instance.</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<h2><a name="_Toc496715378"></a><a name="_Toc496714659">&#8203;3.2&#8203;&nbsp;Object
+References</a></h2>
+
+<p class=MsoNormal>Identifiers on Observable Objects are specified as keys in
+the <span style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>observable-objects</span>
+type. For more information on how such keys may be defined, see section <a
+href="#_9vl9htq4amdc"><u><span style='color:#1155CC'>2.6</span></u></a>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>object-ref</span> type is used to define Observable Object
+properties that are <i>references</i> to other Observable Objects (such as the <b><span
+style='font-family:Consolas'>src_ref</span></b> property on the Network Traffic
+Object). <i>Resolving</i> a reference is the process of identifying and
+obtaining the actual Observable Object referred to by the reference property.
+References resolve to an object when the value of the property (e.g., <b><span
+style='font-family:Consolas'>src_ref</span></b>) is an exact match with the <span
+style='font-family:Consolas'>key</span> of another Observable Object that
+resides in the same parent container as the Observable Object that specifies
+the reference. This specification does not address the implementation of
+reference resolution.</p>
+
+<h2><a name="_Toc496715379"></a><a name="_Toc496714660">&#8203;3.3&#8203;&nbsp;Object
+Property Metadata</a></h2>
+
+<h3><a name="_Toc496715380"></a><a name="_Toc496714661">&#8203;3.3.1&#8203;&nbsp;String
+Encoding</a></h3>
+
+<p class=MsoNormal>Capturing the observed encoding of a particular Observable
+Object string is useful for attribution, the creation of indicators, and
+related use cases.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Certain string properties in Observable Objects may contain
+an additional sibling property with the same base name and a suffix of <b><span
+style='font-family:Consolas'>_enc</span></b> that captures the name of the
+original observed encoding of the property value. All <b><span
+style='font-family:Consolas'>_enc </span></b>properties <b>MUST</b> specify
+their encoding using the corresponding name from the the<a
+href="http://www.iana.org/assignments/character-sets/character-sets.xhtml"><span
+style='color:windowtext'> </span></a>IANA character set registry [<a
+href="#gtskbkc1qpsv"><u><span style='color:#1155CC'>Character Sets</span></u></a>]
+. If the preferred MIME name for a character set is defined, this value <b>MUST</b>
+be used; if it is not defined, then the Name value from the registry <b>MUST</b>
+be used instead.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>As an example of how this capability may be used in an
+Object, the <b><span style='font-family:Consolas'>name</span></b> property in
+the File Object has the sibling property <b><span style='font-family:Consolas'>name_enc</span></b>,
+for capturing the observed encoding of the file name string.&#8203;</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>File with Unicode representation of the filename and a
+corresponding encoding specification</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;file&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;hashes&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;SHA-256&quot;:
+&quot;effb46bba03f6c8aea5c653f9cf984f170dcdd3bbbe2ff6843c3e5da0e698766&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;name&quot;: &quot;quêry.dll&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;name_enc&quot;: &quot;windows-1252&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<h2><a name="_Toc496715381"></a><a name="_Toc496714662">&#8203;3.4&#8203;&nbsp;Object
+Relationships</a></h2>
+
+<p class=MsoNormal>A Cyber Observable Relationship is a connection between two
+or more Cyber Observable Objects within the scope of a given Observable Objects
+dictionary. Cyber Observable relationships are references that are represented
+as properties of a Cyber Observable Object, containing the keys of the target
+Cyber Observable Object(s).</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Cyber Observable Object relationships are implemented in
+Object properties as either singletons or lists. In the case of singleton
+relationships, the name of their Object property <b>MUST</b> end in <b><span
+style='font-family:Consolas'>_ref</span></b>, whereas for lists of
+relationships the name of their Object property <b>MUST </b>end in <b><span
+style='font-family:Consolas'>_refs</span></b>.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The target(s) of Cyber Observable relationships may be
+restricted to a subset of Cyber Observable Object types, as specified in the
+description of the Observable Object property that defines the relationship.
+For example, the <b><span style='font-family:Consolas'>belongs_to_refs</span> </b>property
+on the IPv4 Address Object specifies that the <i>only</i> valid target of the
+relationship is one or more AS Objects.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>Network Traffic with Source/Destination IPv4 Addresses
+and AS</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;ipv4-addr&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;value&quot;: &quot;1.2.3.4&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;belongs_to_refs&quot;: [&quot;3&quot;]</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;1&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;ipv4-addr&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;value&quot;: &quot;2.3.4.5&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;2&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;network-traffic&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;src_ref&quot;: &quot;0&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;dst_ref&quot;: &quot;1&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;3&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;as&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;number&quot;: 42</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<h2><a name="_Toc496715382"></a><a name="_Toc496714663">&#8203;3.5&#8203;&nbsp;Predefined
+Object Extensions</a></h2>
+
+<p class=MsoNormal>Predefined Object Extensions have a specific purpose in
+Cyber Observable Objects: defining coherent sets of properties beyond the base,
+e.g., HTTP request information for a Network Traffic object. Accordingly, each
+Cyber Observable Object may include one or more Predefined Object Extensions.</p>
+
+<p class=MsoNormal><span style='font-size:14.0pt;color:#434343'>&nbsp;</span></p>
+
+<p class=MsoNormal>Each Predefined Object Extension can be defined at most once
+on a given Observable Object. In an Observable Object instance, each extension
+is specified under the <b><span style='font-family:Consolas'>extensions</span></b>
+property, which is of type <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>dictionary</span>. Note that this means that each extension
+is specified through a corresponding key in the <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>extensions</span> property. For example, when
+specified in a File Object instance, the NTFS extension would be specified
+using the key value of <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>ntfs-ext</span>. </p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>Basic File with NTFS Extension</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;file&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;hashes&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;MD5&quot;: &quot;3773a88f65a5e780c8dff9cdc3a056f3&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;size&quot;: 25537,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;extensions&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;ntfs-ext&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>        &quot;sid&quot;: &quot;1234567&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715383"></a><a name="_Toc496714664">&#8203;4&#8203;&nbsp;Common
+Vocabularies</a></h1>
+
+</div>
+
+<h2><a name="_Toc496715384"></a><a name="_Toc496714665">&#8203;4.1&#8203;&nbsp;Encryption
+Algorithm Vocabulary</a></h2>
+
+<p class=MsoNormal><b>Type Name:</b> <span style='font-family:Consolas;
+color:#C7254E;background:#F9F2F4'>encryption-algo-ov</span></p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>An open vocabulary of encryption algorithms.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>When specifying an encryption algorithm not already defined
+within the <span style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>encryption-algo-ov</span>,
+wherever an authoritative name for an encryption algorithm name is defined, it
+should be used as the value. In cases where no authoritative name exists and/or
+there is variance in the naming of a particular encryption algorithm, producers
+should exercise their best judgement.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=633
+ style='width:474.75pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='color:white'>Vocabulary Value</span></b></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border:solid black 1.0pt;
+  border-left:none;background:#073763;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b><span style='color:white'>Description</span></b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-ECB</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  Electronic Codebook (ECB) mode, as a defined in [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a><a
+  href="https://www.google.co.th/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwirzpzvvfbNAhVGNo8KHbcXBo4QFggqMAE&amp;url=http%3A%2F%2Fcsrc.nist.gov%2Fpublications%2Fnistpubs%2F800-38a%2Fsp800-38a.pdf&amp;usg=AFQjCNFhZcY208pEskgMzKMk89BIqj9vUw"><span
+  style='color:windowtext'>]</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-CBC</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  Cipher Block Chaining (CBC) mode, as a defined in [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a><a
+  href="https://www.google.co.th/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwirzpzvvfbNAhVGNo8KHbcXBo4QFggqMAE&amp;url=http%3A%2F%2Fcsrc.nist.gov%2Fpublications%2Fnistpubs%2F800-38a%2Fsp800-38a.pdf&amp;usg=AFQjCNFhZcY208pEskgMzKMk89BIqj9vUw"><span
+  style='color:windowtext'>]</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-CFB</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  Cipher Feedback (CFB) mode, as a defined in [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a><a
+  href="https://www.google.co.th/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwirzpzvvfbNAhVGNo8KHbcXBo4QFggqMAE&amp;url=http%3A%2F%2Fcsrc.nist.gov%2Fpublications%2Fnistpubs%2F800-38a%2Fsp800-38a.pdf&amp;usg=AFQjCNFhZcY208pEskgMzKMk89BIqj9vUw"><span
+  style='color:windowtext'>]</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-OFB</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  Output Feedback (OFB) mode, as a defined in [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a><a
+  href="https://www.google.co.th/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwirzpzvvfbNAhVGNo8KHbcXBo4QFggqMAE&amp;url=http%3A%2F%2Fcsrc.nist.gov%2Fpublications%2Fnistpubs%2F800-38a%2Fsp800-38a.pdf&amp;usg=AFQjCNFhZcY208pEskgMzKMk89BIqj9vUw"><span
+  style='color:windowtext'>]</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-CTR</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  counter (CTR) mode, as a defined in [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a><a
+  href="https://www.google.co.th/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0ahUKEwirzpzvvfbNAhVGNo8KHbcXBo4QFggqMAE&amp;url=http%3A%2F%2Fcsrc.nist.gov%2Fpublications%2Fnistpubs%2F800-38a%2Fsp800-38a.pdf&amp;usg=AFQjCNFhZcY208pEskgMzKMk89BIqj9vUw"><span
+  style='color:windowtext'>]</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-XTS</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with XEX
+  Tweakable Block Cipher with Ciphertext Stealing (XTS) mode, as a defined in [<a
+  href="#vbhdkokiwt1e"><u><span style='color:#1155CC'>NIST 800-38E</span></u></a><a
+  href="http://csrc.nist.gov/publications/nistpubs/800-38E/nist-sp-800-38E.pdf"><u><span
+  style='color:#1155CC'>]</span></u></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>AES128-GCM</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Advanced Encryption Standard (AES) with
+  Galois/Counter (GCM) mode, as a defined in <a
+  href="http://csrc.nist.gov/publications/nistpubs/800-38D/SP-800-38D.pdf"><span
+  style='color:windowtext'>N</span></a><a
+  href="http://csrc.nist.gov/publications/nistpubs/800-38D/SP-800-38D.pdf"><span
+  style='color:windowtext'>I</span></a><a
+  href="http://csrc.nist.gov/publications/nistpubs/800-38D/SP-800-38D.pdf"><span
+  style='color:windowtext'>ST SP 8I00-38D</span></a>. </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>Salsa20</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Salsa20 stream cipher, as defined in the [<a
+  href="#gpxrdnh1qpkq"><u><span style='color:#1155CC'>Salsa20</span></u></a>]
+  specification.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>Salsa12</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Salsa20/12 stream cipher as defined in the [<a
+  href="#nlukzmcxney1"><u><span style='color:#1155CC'>Salsa20/8</span></u></a><a
+  href="#nlukzmcxney1"><u><span style='color:#1155CC'> </span></u></a><a
+  href="#nlukzmcxney1"><u><span style='color:#1155CC'>20/12</span></u></a>]
+  specification.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>Salsa8</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Salsa20/8 stream cipher as defined in the  [<a
+  href="#nlukzmcxney1"><u><span style='color:#1155CC'>Salsa20/8 20/12</span></u></a>]
+  specification.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>ChaCha20-Poly1305</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the ChaCha20-Poly1305 stream cipher, as defined
+  in [<a href="#fuu4oznlc9vh"><u><span style='color:#1155CC'>RFC 7539</span></u></a><a
+  href="https://tools.ietf.org/html/rfc7539"><u><span style='color:#1155CC'>]</span></u></a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>ChaCha20</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the ChaCha20 stream cipher (without poly1305
+  authentication), as defined in [<a href="#fuu4oznlc9vh"><u><span
+  style='color:#1155CC'>RFC 7539</span></u></a><a
+  href="https://tools.ietf.org/html/rfc7539"><u><span style='color:#1155CC'>]</span></u></a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>DES-CBC</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Data Encryption Standard algorithm with Cipher
+  Block Chaining (CBC) mode, as defined in [<a href="#py4ci9cnh6ud"><u><span
+  style='color:#1155CC'>FIPS81</span></u></a><a
+  href="http://csrc.nist.gov/publications/fips/fips81/fips81.htm"><u><span
+  style='color:#1155CC'>]</span></u></a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>3DES-CBC</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Triple Data Encryption Standard algorithm
+  with Cipher Block Chaining (CBC) mode, as defined in [<a href="#60n8t8dnq6w1"><u><span
+  style='color:#1155CC'>NIST 800-67</span></u></a>] and [<a href="#7jvmiq6gn641"><u><span
+  style='color:#1155CC'>NIST 800-38A</span></u></a>].</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>DES-ECB</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Data Encryption Standard algorithm with
+  Electronic Codebook (ECB) mode, as defined in [<a href="#py4ci9cnh6ud"><u><span
+  style='color:#1155CC'>FIPS81</span></u></a><a
+  href="http://csrc.nist.gov/publications/fips/fips81/fips81.htm"><u><span
+  style='color:#1155CC'>]</span></u></a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>3DES-ECB</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Triple Data Encryption Standard algorithm
+  with Electronic Codebook (ECB) mode, as defined in [<a href="#60n8t8dnq6w1"><u><span
+  style='color:#1155CC'>NIST 800-67</span></u></a><a
+  href="http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-67r1.pdf"><u><span
+  style='color:#1155CC'>]</span></u></a>.</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>CAST128-CBC</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the CAST-128 algorithm with Cipher Block
+  Chaining (CBC) mode, as defined in [<a href="#95srtptb0mym"><u><span
+  style='color:#1155CC'>RFC 2144</span></u></a><a
+  href="https://tools.ietf.org/html/rfc2144"><u><span style='color:#1155CC'>]</span></u></a>.
+  </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>CAST256-CBC</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the CAST-256 algorithm with Cipher Block
+  Chaining (CBC) mode, as defined in [<a href="#5hopylsr3b5x"><u><span
+  style='color:#1155CC'>RFC 2612</span></u></a><a
+  href="https://tools.ietf.org/html/rfc2612"><u><span style='color:#1155CC'>]</span></u></a>.
+  </p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>RSA</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the RSA symmetric encryption algorithm, as
+  defined by [<a href="#1kx5o4qawswk"><u><span style='color:#1155CC'>RFC </span></u></a><a
+  href="#1kx5o4qawswk"><u><span style='color:#1155CC'>8017</span></u></a>]</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=143 valign=top style='width:107.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><span style='font-family:Consolas;color:#073763;
+  background:#CFE2F3'>DSA</span></p>
+  </td>
+  <td width=490 valign=top style='width:367.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Specifies the Digital Signature Algorithm, as defined by [<a
+  href="#xa9i66gjhthh"><u><span style='color:#1155CC;background:white'>FIPS186-4</span></u></a><a
+  href="http://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.186-4.pdf"><span
+  style='color:#252525;background:white'>]</span></a><span style='color:#252525;
+  background:white'>.</span></p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715385"></a><a name="_Toc496714666">&#8203;5&#8203;&nbsp;Customizing
+Cyber Observables</a></h1>
+
+</div>
+
+<p class=MsoNormal>There are three means to customize Cyber Observable Objects:
+custom object extensions, custom observable objects, and custom properties.
+Custom object extensions provide a mechanism and requirements for the
+specification of extensions not defined by this specification (including
+relationships) on Observable Objects. Custom Observable Objects provide a
+mechanism and requirements to create Observable Objects not defined by this
+specification. Custom properties, as in the rest of STIX, provide a mechanism
+to add individual properties anywhere in the data model.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>Custom Observable Object properties <b>SHOULD</b> be used
+for cases where it is necessary to add one or more simple additional properties
+(i.e. key/value pairs) on an Observable Object. On the other hand, Custom
+Observable Object extensions <b>SHOULD</b> be used for cases where it is
+necessary to describe more complex additional properties (i.e., those with
+potentially multiple levels of hierarchy). As an example, a vendor-specific
+property that expresses some custom threat score for a File Object should be
+added directly to the Observable Object as a custom property, whereas a set of
+properties that represent metadata around a new file system to the File Object
+should be done as a custom extension.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>A consumer that receives a STIX document containing Custom
+Cyber Observable Properties, Extensions, or Objects it does not understand <b>MAY</b>
+refuse to process the document or <b>MAY</b> ignore those properties or objects
+and continue processing the document.</p>
+
+<h2><a name="_Toc496715386"></a><a name="_Toc496714667">&#8203;5.1&#8203;&nbsp;Custom
+Observable Objects</a></h2>
+
+<p class=MsoNormal>There will be cases where certain information exchanges can
+be improved by adding objects that are not specified nor reserved in this
+document; these objects are called Custom Observable Objects. This section
+provides guidance and requirements for how producers can use Custom Observable
+Objects and how consumers should interpret them in order to extend STIX in an
+interoperable manner.</p>
+
+<h3><a name="_Toc496715387"></a><a name="_Toc496714668">&#8203;5.1.1&#8203;&nbsp;Requirements</a></h3>
+
+<p class=MsoNormalCxSpFirst style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Producers
+<b>MAY</b> include any number of Custom Observable Objects in an Observable
+Objects entity.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+type property in a Custom Observable Object <b>MUST</b> be in ASCII and <b>MUST</b>
+only contain the characters a-z (lowercase ASCII), 0-9, and hyphen (-).</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+type property <b>MUST NOT</b> contain a hyphen (-) character immediately
+following another hyphen (-) character.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Observable Object names <b>MUST</b> have a minimum length of 3 ASCII
+characters.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Observable Object names <b>MUST</b> be no longer than 250 ASCII characters in
+length.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>The
+value of the <b><span style='font-family:Consolas'>type</span></b> property in
+a Custom Observable Object <b>SHOULD</b> start with “x-” followed by a source
+unique identifier (like a domain name with dots replaced by hyphens), a hyphen and
+then the name. For example: <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>x-example-com-customobject</span>.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A
+Custom Observable Object whose name is not prefixed with “x-” <b>MAY</b> be
+used in a future version of the specification with a different meaning.
+Therefore, if compatibility with future versions of this specification is
+required, the “x-” prefix <b>MUST</b> be used.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A
+Custom Observable Object <b>MUST</b> have one or more Custom Properties:</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be in ASCII and <b>MUST</b> only contain the
+characters a–z (lowercase ASCII), 0–9, and underscore (_).</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> have a minimum length of 3 ASCII characters.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be no longer than 250 ASCII characters in length.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Observable Objects <b>SHOULD</b> only be used when there is no existing
+Observable Object defined by the STIX specification that fulfills that need.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Observable Object property values <b>MUST</b> be a valid primitive, type, or a
+homogenous list of types.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>Simple Custom Observable Object</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;x-example&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;foo&quot;: &quot;bar&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;vals&quot;: [&quot;this&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>             &quot;is&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>             &quot;an&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>             &quot;example&quot;]</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<h2><a name="_Toc496715388"></a><a name="_Toc496714669">&#8203;5.2&#8203;&nbsp;Custom
+Object Extensions</a></h2>
+
+<p class=MsoNormal>In addition to the Predefined Cyber Observable Object
+extensions specified in <a href="#jearcn1kyp98"><i><u><span style='color:#1155CC'>STIX™
+Version 2.0. Part 4: Cyber Observable Objects</span></u></i></a>, STIX supports
+user-defined custom extensions for Cyber Observable Objects. As with Predefined
+Object Extensions, custom extension data <b>MUST</b> be conveyed under the <b><span
+style='font-family:Consolas'>extensions</span></b> property. </p>
+
+<h3><a name="_Toc496715389"></a><a name="_Toc496714670">&#8203;5.2.1&#8203;&nbsp;Requirements</a></h3>
+
+<p class=MsoNormalCxSpFirst style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>An
+Observable Object <b>MAY</b> have any number of Custom Extensions.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extension names <b>MUST</b> be in ASCII and are limited to characters a-z
+(lowercase ASCII), 0-9, and hyphen (-).</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extension names <b>SHOULD</b> start with “x-” followed by a source unique
+identifier (like a domain name), a hyphen and then the name. For example: <span
+style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>x-example-com-customextension</span>.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extension names <b>MUST</b> have a minimum length of 3 ASCII characters.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extension names <b>MUST</b> be no longer than 250 ASCII characters in length.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extension names that are not prefixed with “x-” may be used in a future version
+of the specification for a different meaning. If compatibility with future
+versions of this specification is required, the “x-” prefix <b>MUST</b> be
+used.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Extensions <b>SHOULD</b> only be used when there is no existing extension
+defined by the STIX 2.0 specification that fulfills that need.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A
+Custom Extension <b>MUST</b> have one or more Custom Properties:</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be in ASCII and <b>MUST</b> only contain the
+characters a–z (lowercase ASCII), 0–9, and underscore (_).</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> have a minimum length of 3 ASCII characters.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:1.0in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9675;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be no longer than 250 ASCII characters in length.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>Custom File Object Extension</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;file&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;hashes&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;SHA-256&quot;:
+&quot;effb46bba03f6c8aea5c653f9cf984f170dcdd3bbbe2ff6843c3e5da0e698766&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;extensions&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;x-example-com-foo&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>        &quot;foo_val&quot;: &quot;foo&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>        &quot;bar_val&quot;: &quot;bar&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<h2><a name="_Toc496715390"></a><a name="_Toc496714671">&#8203;5.3&#8203;&nbsp;Custom
+Object Properties</a></h2>
+
+<p class=MsoNormal>There will be cases where certain information exchanges can
+be improved by adding properties to Observable Objects that are neither
+specified nor reserved in this document; these properties are called Custom
+Object Properties. This section provides guidance and requirements for how
+producers can use Custom Object Properties and how consumers should interpret
+them in order to extend Cyber Observable Objects in an interoperable manner.</p>
+
+<h3><a name="_Toc496715391"></a><a name="_Toc496714672">&#8203;5.3.1&#8203;&nbsp;Requirements</a></h3>
+
+<p class=MsoNormalCxSpFirst style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>A
+Cyber Observable Object <b>MAY</b> have any number of Custom Properties.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be in ASCII and MUST only contain the characters a–z
+(lowercase ASCII), 0–9, and underscore (_).</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>SHOULD</b> start with “x_” followed by a source unique
+identifier (such as a domain name with dots replaced by underscores), an
+underscore and then the name. For example, <b><span style='font-family:Consolas'>x_example_com_customfield</span></b>.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> have a minimum length of 3 ASCII characters.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names <b>MUST</b> be no longer than 250 ASCII characters in length.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Property names that do not start with “x_” may be used in a future version of
+the specification for a different meaning. If compatibility with future
+versions of this specification is required, the “x_” prefix <b>MUST</b> be
+used.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Properties <b>SHOULD</b> only be used when there are no existing properties
+defined by the STIX 2.0 specification that fulfils that need.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>Custom
+Properties <b>SHOULD</b> only be used to define simple properties (e.g., those
+of string or integer type)</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>For
+Custom Properties that use the <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>hex</span> type, the property name <b>MUST</b> end with
+'_hex'.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>For
+Custom Properties that use the <span style='font-family:Consolas;color:#C7254E;
+background:#F9F2F4'>binary</span> type, the property name <b>MUST</b> end with
+'_bin'.</p>
+
+<p class=MsoNormal><b>&nbsp;</b></p>
+
+<p class=MsoNormal><b>Examples</b></p>
+
+<p class=MsoNormal><i>File Object with Custom Properties</i></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>{</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  &quot;0&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;type&quot;: &quot;file&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;hashes&quot;: {</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>      &quot;SHA-256&quot;:
+&quot;effb46bba03f6c8aea5c653f9cf984f170dcdd3bbbe2ff6843c3e5da0e698766&quot;</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    },</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;x_example_com_foo&quot;: &quot;bar&quot;,</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>    &quot;x_example_com_bar&quot;: 27</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>  }</span></p>
+
+<p class=MsoNormal><span style='font-size:9.0pt;font-family:Consolas;
+background:#EFEFEF'>}</span></p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715392"></a><a name="_Toc496714673">&#8203;6&#8203;&nbsp;Reserved
+Names</a></h1>
+
+</div>
+
+<p class=MsoNormal>This section defines names that are reserved for future use
+in revisions of this document. The names defined in this section <b>MUST NOT</b>
+be used for the name of any Custom Cyber Observable Object or Property.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal>The following object names are reserved:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormalCxSpLast style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>&#9679;<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span><span
+style='font-family:Consolas;color:#C7254E;background:#F9F2F4'>action</span></p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715393"></a><a name="_Toc496714674">&#8203;7&#8203;&nbsp;Conformance</a></h1>
+
+</div>
+
+<h2><a name="_Toc496715394"></a><a name="_Toc496714675">&#8203;7.1&#8203;&nbsp;Producers
+and Consumers</a></h2>
+
+<p class=MsoNormal>A &quot;Cyber Observable Producer&quot; is any software that
+creates Cyber Observable content and conforms to the following normative
+requirements:</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>It <b>MUST</b>
+be able to create content encoded as JSON.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;line-height:115%;
+border:none'>2.<span style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp;
+</span>All properties marked required in the property table for the Cyber
+Observable Object or type <b>MUST </b>be present in the created content.</p>
+
+<p class=MsoNormalCxSpMiddle style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>3.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>All
+properties <b>MUST</b> conform to the specified data type and normative
+requirements.</p>
+
+<p class=MsoNormalCxSpLast style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>4.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>It <b>MUST</b>
+support at least one defined Cyber Observable Object per the Conformance
+section in <a href="#jearcn1kyp98"><i><u><span style='color:#1155CC'>STIX™
+Version 2.0. Part 4: Cyber Observable Objects</span></u></i></a>.</p>
+
+<h2 style='margin:0in;margin-bottom:.0001pt;page-break-after:auto'><a
+name="_reilk7ggfrr4"></a><span style='font-size:11.0pt'>&nbsp;</span></h2>
+
+<p class=MsoNormal>A &quot;Cyber Observable Consumer&quot; is any software that
+consumes Cyber Observable content and conforms to the following normative
+requirements:</p>
+
+<p class=MsoNormalCxSpLast style='margin-top:0in;margin-right:0in;margin-bottom:
+0in;margin-left:.5in;margin-bottom:.0001pt;text-indent:-.25in;border:none'>1.<span
+style='font:7.0pt "Times New Roman"'>&nbsp;&nbsp;&nbsp;&nbsp; </span>It <b>MUST</b>
+support parsing all required properties for the content that it consumes.</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715395"></a><a name="_Toc496714676">&#8203;Appendix A.
+Glossary</a></h1>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b>CAPEC</b> - Common Attack Pattern Enumeration and
+Classification</p>
+
+<p class=MsoNormal><b>Consumer</b> - Any entity that receives STIX content</p>
+
+<p class=MsoNormal><b>CTI</b> - Cyber Threat Intelligence</p>
+
+<p class=MsoNormal><b>Embedded Relationship</b> - A link (an &quot;edge&quot;
+in a graph) between one STIX Object and another represented as a property on
+one object containing the ID of another object</p>
+
+<p class=MsoNormal><b>Entity</b> - Anything that has a separately identifiable
+existence (e.g., organization, person, group, etc.)</p>
+
+<p class=MsoNormal><b>IEP</b> - FIRST (Forum of Incident Response and Security
+Teams) Information Exchange Policy</p>
+
+<p class=MsoNormal><b>Instance</b> - <span style='color:#222222;background:
+white'>A single occurrence of a STIX object version</span></p>
+
+<p class=MsoNormal><b>MTI</b> - Mandatory To Implement</p>
+
+<p class=MsoNormal><b>MVP</b> - Minimally Viable Product</p>
+
+<p class=MsoNormal><b>Object Creator </b>- The entity that created or updated a
+STIX object (see section 3.3 of <a href="#jearcn1kyp98"><i><u><span
+style='color:#1155CC'>STIX™ Version 2.0. Part 1: STIX Core Concepts</span></u></i></a>).</p>
+
+<p class=MsoNormal><b>Object Representation</b> - An instance of an object
+version that is serialized as STIX</p>
+
+<p class=MsoNormal><b>Producer </b>- Any entity that distributes STIX content,
+including object creators as well as those passing along existing content</p>
+
+<p class=MsoNormal><b>SDO - </b>STIX Domain Object (a &quot;node&quot; in a
+graph)</p>
+
+<p class=MsoNormal><b>SRO</b> - STIX Relationship Object (one mechanism to
+represent an &quot;edge&quot; in a graph)</p>
+
+<p class=MsoNormal><b>STIX</b> - Structured Threat Information Expression</p>
+
+<p class=MsoNormal><b>STIX Content </b>- STIX documents, including STIX
+Objects, STIX Objects grouped as bundles, etc.</p>
+
+<p class=MsoNormal><b>STIX Object</b> - A STIX Domain Object (SDO) or STIX
+Relationship Object (SRO)</p>
+
+<p class=MsoNormal><b>STIX Relationship</b> - A link (an &quot;edge&quot; in a
+graph) between two STIX Objects represented by either an SRO or an embedded
+relationship</p>
+
+<p class=MsoNormal><b>TAXII</b> - An application layer protocol for the
+communication of cyber threat information</p>
+
+<p class=MsoNormal><b>TLP</b> - Traffic Light Protocol</p>
+
+<p class=MsoNormal><b>TTP</b> - Tactic, technique, or procedure; behaviors and
+resources that attackers use to carry out their attacks</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715396"></a><a name="_Toc496714677">&#8203;Appendix B.
+Acknowledgments</a></h1>
+
+</div>
+
+<p class=MsoNormal><b><span style='color:#3B0070'>Cyber Observable Subcommittee
+Chairs:</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Trey Darley, Kingfisher Operations,
+sprl</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ivan Kirillov, MITRE Corporation</p>
+
+<p class=MsoNormal><b><span style='color:#3B0070'>&nbsp;</span></b></p>
+
+<p class=MsoNormal><b><span style='color:#3B0070'>STIX Subcommittee Chairs:</span></b></p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sarah Kelley, Center for Internet
+Security (CIS)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Wunder, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'> </p>
+
+<p class=MsoNormal><b><span style='color:#3B0070'>Special Thanks:</span></b></p>
+
+<p class=MsoNormal>Substantial contributions to this specification from the
+following individuals are gratefully acknowledged:</p>
+
+<p class=MsoNormal style='margin-left:.5in'>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sarah Kelley, Center for Internet
+Security (CIS)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Terry MacDonald, Cosive</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jane Ginn, Cyber Threat
+Intelligence Network, Inc. (CTIN)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Richard Struse, DHS Office of
+Cybersecurity and Communications</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Iain Brown, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jason Keirstead, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Tim Casey, Intel</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Trey Darley, Kingfisher Operations,
+sprl</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Allan Thomson, LookingGlass Cyber</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Greg Back, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ivan Kirillov, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jon Baker, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Wunder, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sean Barnum, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Richard Piazza, MITRE Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Christian Hunt, New Context Services,
+Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John-Mark Gurney, New Context
+Services, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Aharon Chernin, Perch</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Dave Cridland, Surevine</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Bret Jordan, Symantec Corp.</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal><b><span style='color:#3B0070'>Participants:</span></b></p>
+
+<p class=MsoNormal>The following individuals were members of the OASIS CTI
+Technical Committee during the creation of this specification and their
+contributions are gratefully acknowledged:</p>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<p class=MsoNormal style='margin-left:.5in'>David Crawford, Aetna</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Marcos Orallo, Airbus Group SAS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Roman Fiedler, AIT Austrian
+Institute of Technology</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Florian Skopik, AIT Austrian
+Institute of Technology</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Russell Spitler, AlienVault</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ryan Clough, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Nicholas Hayden, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Wei Huang, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Angela Nichols, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Hugh Njemanze, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Katie Pelusi, Anomali</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Dean Thompson, Australia and New
+Zealand Banking Group (ANZ Bank)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alexander Foley, Bank of America</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sounil Yu, Bank of America</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Vicky Laurens, Bank of Montreal</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Humphrey Christian, Bay Dynamics</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ryan Stolte, Bay Dynamics</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alexandre Dulaunoy, CIRCL</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Andras Iklody, CIRCL</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Rapha‘l Vinot, CIRCL</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sarah Kelley, CIS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Syam Appala, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ted Bedwell, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>David McGrew, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark-David McLaughlin, Cisco
+Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Pavan Reddy, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Omar Santos, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jyoti Verma, Cisco Systems</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Doug DePeppe, Cyber Threat
+Intelligence Network, Inc. (CTIN)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jane Ginn, Cyber Threat
+Intelligence Network, Inc. (CTIN)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ben Othman, Cyber Threat
+Intelligence Network, Inc. (CTIN)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jeff Odom, Dell</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sreejith Padmajadevi, Dell</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ravi Sharda, Dell</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Will Urbanski, Dell</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sean Sobieraj, DHS Office of
+Cybersecurity and Communications (CS&amp;C)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Richard Struse, DHS Office of
+Cybersecurity and Communications (CS&amp;C)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Marlon Taylor, DHS Office of
+Cybersecurity and Communications (CS&amp;C)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jens Aabol, Difi-Agency for Public
+Management and eGovernment</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Wouter Bolsterlee, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Marko Dragoljevic, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Oliver Gheorghe, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Joep Gommers, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sergey Polzunov, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Rutger Prins, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Andrei S”rghi, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Raymon van der Velde, EclecticIQ</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ben Sooter, Electric Power Research
+Institute (EPRI)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris Ricard, Financial Services
+Information Sharing and Analysis Center (FS-ISAC)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Phillip Boles, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Prasad Gaikwad, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Rajeev Jha, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Anuj Kumar, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Shyamal Pandya, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Paul Patrick, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Scott Shreve, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jon Warren, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Remko Weterings, FireEye, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Gavin Chow, Fortinet Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Steve Fossen, Fortinet Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Kenichi Terashita, Fortinet Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ryusuke Masuoka, Fujitsu Limited</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Daisuke Murabayashi, Fujitsu
+Limited</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Derek Northrope, Fujitsu Limited</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jonathan Algar, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Iain Brown, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Adam Cooper, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mike McLellan, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Tyrone Nembhard, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris O'Brien, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>James Penman, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Howard Staple, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris Taylor, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Laurie Thomson, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alastair Treharne, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Julian White, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Bethany Yates, GDS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Robert van Engelen, Genivia</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Eric Burger, Georgetown University</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Allison Miller, Google Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Risher, Google Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Yoshihide Kawada, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jun Nakanishi, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Kazuo Noguchi, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Akihito Sawada, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Yutaka Takami, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Masato Terada, Hitachi, Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Peter Allor, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Eldan Ben-Haim, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Allen Hadden, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sandra Hernandez, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jason Keirstead, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Morris, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Laura Rusu, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ron Williams, IBM</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Paul Martini, iboss, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jerome Athias, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Peter Brown, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Joerg Eschweiler, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Stefan Hagen, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Elysa Jones, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sanjiv Kalkar, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Terry MacDonald, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alex Pinto, Individual</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Tim Casey, Intel Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Kent Landfield, Intel Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Karin Marr, Johns Hopkins
+University Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Julie Modlin, Johns Hopkins
+University Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Moss, Johns Hopkins University
+Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Munoz, Johns Hopkins
+University Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Nathan Reller, Johns Hopkins
+University Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Pamela Smith, Johns Hopkins
+University Applied Physics Laboratory</p>
+
+<p class=MsoNormal style='margin-left:.5in'>David Laurance, JPMorgan Chase
+Bank, N.A.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Russell Culpepper, Kaiser
+Permanente</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Beth Pumo, Kaiser Permanente</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Michael Slavick, Kaiser Permanente</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Trey Darley, Kingfisher Operations,
+sprl</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Gus Creedon, Logistics Management
+Institute</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Wesley Brown, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jamison Day, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Kinshuk Pahare, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Allan Thomson, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ian Truslove, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris Wood, LookingGlass</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Greg Back, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jonathan Baker, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sean Barnum, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Desiree Beck, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Michael Chisholm, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Nicole Gong, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ivan Kirillov, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Michael Kouremetis, Mitre
+Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris Lenk, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Richard Piazza, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Larry Rodrigues, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jon Salwen, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Charles Schmidt, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alex Tweed, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Emmanuelle Vargas-Gonzalez, Mitre
+Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Wunder, Mitre Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>James Cabral, MTG Management
+Consultants, LLC.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Scott Algeier, National Council of
+ISACs (NCI)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Denise Anderson, National Council
+of ISACs (NCI)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Josh Poster, National Council of
+ISACs (NCI)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mike Boyle, National Security
+Agency</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Joe Brule, National Security Agency</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jessica Fitzgerald-McKay, National
+Security Agency</p>
+
+<p class=MsoNormal style='margin-left:.5in'>David Kemp, National Security
+Agency</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Shaun McCullough, National Security
+Agency</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Anderson, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Michael Butt, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Davidson, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Daniel Dye, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Angelo Mendonca, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Michael Pepin, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Natalie Suarez, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Benjamin Yates, NC4</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Daichi Hasumi, NEC Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Takahiro Kakumaru, NEC Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Lauri Korts-P_rn, NEC Corporation</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John-Mark Gurney, New Context
+Services, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Christian Hunt, New Context
+Services, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Daniel Riedel, New Context
+Services, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Andrew Storms, New Context
+Services, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Stephen Banghart, NIST</p>
+
+<p class=MsoNormal style='margin-left:.5in'>David Darnell, North American
+Energy Standards Board</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Cory Casanave, Object Management
+Group</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Aharon Chernin, Perch</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Dave Eilken, Perch</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Sourabh Satish, Phantom</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Josh Larkins, PhishMe Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>John Tolbert, Queralt Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ted Julian, Resilient Systems,
+Inc..</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Igor Baikalov, Securonix</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Joseph Brand, Semper Fortis
+Solutions</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Duncan Sparrell, sFractal
+Consulting LLC</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Thomas Schreck, Siemens AG</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Rob Roel, Southern California
+Edison</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Dave Cridland, Surevine Ltd.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Bret Jordan, Symantec Corp.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Curtis Kostrosky, Symantec Corp.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Juha Haaga, Synopsys</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Masood Nasir, TELUS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Greg Reaume, TELUS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Alan Steer, TELUS</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Crystal Hayes, The Boeing Company</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Wade Baker, ThreatConnect, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Cole Iliff, ThreatConnect, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Andrew Pendergast, ThreatConnect,
+Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ben Schmoker, ThreatConnect, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jason Spies, ThreatConnect, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Ryan Trost, ThreatQuotient, Inc.</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Patrick Coughlin, TruSTAR
+Technology</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Chris Roblee, TruSTAR Technology</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Angel, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Brian Fay, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Joseph Frazier, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mark Heidrick, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Mona Magathan, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Yevgen Sautin, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Richard Shok, U.S. Bank</p>
+
+<p class=MsoNormal style='margin-left:.5in'>James Bohling, US Department of
+Defense (DoD)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Eoghan Casey, US Department of
+Defense (DoD)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Gary Katz, US Department of Defense
+(DoD)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Jeffrey Mates, US Department of
+Defense (DoD)</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Evette Maynard-Noel, US Department
+of Homeland Security</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Robert Coderre, VeriSign</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Kyle Maxwell, VeriSign</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Eric Osterweil, VeriSign</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Patrick Maroney, Wapack Labs LLC</p>
+
+<p class=MsoNormal style='margin-left:.5in'>Anthony Rutkowski, Yanna
+Technologies LLC</p>
+
+<div style='border:none;border-top:solid gray 1.0pt;padding:6.0pt 0in 0in 0in'>
+
+<h1><a name="_Toc496715397"></a><a name="_Toc496714678">&#8203;Appendix C.
+Revision History</a></h1>
+
+</div>
+
+<p class=MsoNormal>&nbsp;</p>
+
+<table class=MsoNormalTable border=1 cellspacing=0 cellpadding=0 width=608
+ style='width:456.0pt;border-collapse:collapse;border:none'>
+ <tr>
+  <td width=107 valign=top style='width:80.25pt;border:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Revision</b></p>
+  </td>
+  <td width=99 valign=top style='width:74.25pt;border:solid black 1.0pt;
+  border-left:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Date</b></p>
+  </td>
+  <td width=140 valign=top style='width:105.0pt;border:solid black 1.0pt;
+  border-left:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal align=center style='text-align:center'><b>Editor</b></p>
+  </td>
+  <td width=262 valign=top style='width:196.5pt;border:solid black 1.0pt;
+  border-left:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal><b>Changes Made</b></p>
+  </td>
+ </tr>
+ <tr>
+  <td width=107 valign=top style='width:80.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>01</p>
+  </td>
+  <td width=99 valign=top style='width:74.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>2017-01-20</p>
+  </td>
+  <td width=140 valign=top style='width:105.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Bret Jordan,</p>
+  <p class=MsoNormal>John Wunder,</p>
+  <p class=MsoNormal>Rich Piazza,</p>
+  <p class=MsoNormal>Ivan Kirillov,</p>
+  <p class=MsoNormal>Trey Darley</p>
+  </td>
+  <td width=262 valign=top style='width:196.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Initial Version</p>
+  </td>
+ </tr>
+ <tr>
+  <td width=107 valign=top style='width:80.25pt;border:solid black 1.0pt;
+  border-top:none;padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>02</p>
+  </td>
+  <td width=99 valign=top style='width:74.25pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>2017-04-24</p>
+  </td>
+  <td width=140 valign=top style='width:105.0pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Bret Jordan,</p>
+  <p class=MsoNormal>John Wunder,</p>
+  <p class=MsoNormal>Rich Piazza,</p>
+  <p class=MsoNormal>Ivan Kirillov,</p>
+  <p class=MsoNormal>Trey Darley</p>
+  </td>
+  <td width=262 valign=top style='width:196.5pt;border-top:none;border-left:
+  none;border-bottom:solid black 1.0pt;border-right:solid black 1.0pt;
+  padding:5.0pt 5.0pt 5.0pt 5.0pt'>
+  <p class=MsoNormal>Changes made from first public review</p>
+  </td>
+ </tr>
+</table>
+
+<p class=MsoNormal>&nbsp;</p>
+
+</div>
+
+</body>
+
+</html>

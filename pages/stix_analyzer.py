@@ -254,13 +254,18 @@ if st.session_state.file_path and Path(st.session_state.file_path).exists():
                 # Generate file ID first
                 file_id = str(uuid4())
                 
+                # Get filename from session state
+                filename = st.session_state.shared_stix_name or "unknown_file"
+                
                 # Save original file
-                original_path = st.session_state.storage.save_original_file(uploaded_file, file_id)
+                original_path = st.session_state.storage.save_original_file_bytes(
+                    st.session_state.shared_stix_bytes, filename, file_id
+                )
                 
                 # Save converted data with original path
                 file_id = st.session_state.storage.save_converted_stix(
                     stix_data=conversion_result["converted_data"],
-                    original_filename=uploaded_file.name,
+                    original_filename=filename,
                     metadata={
                         "original_version": st.session_state.detection_result.get("version"),
                         "original_format": st.session_state.detection_result.get("format"),

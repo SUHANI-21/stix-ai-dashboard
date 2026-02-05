@@ -1,0 +1,9 @@
+address,id,type,summary
+0x48c9f537f3f1a2c95c46891332E05dA0D268869B,ethereum-account--f68af7c1-7bce-4330-bc3e-72f6d78d3eb9,ethereum-account,"The object contains a detailed information about an Ethereum account. 
+
+It has a unique address associated with it, which is 0x48c9f537f3f1a2c95c46891332E05dA0D268869B. This address is likely used to interact with the Ethereum blockchain.
+
+Additionally, there is a type label indicating that this object represents an Ethereum account."
+0xf3BA0D57129Efd8111E14e78c674c7c10254acAE,ethereum-account--7bac4599-3ea2-4e25-9955-2fc89bddc2a2,ethereum-account,"The object contains a detailed account information of an Ethereum wallet. The address associated with this account is 0xf3BA0D57129Efd8111E14e78c674c7c10254acAE, which represents the unique identifier for this specific wallet.
+
+This Ethereum wallet has a unique identification number, ethereum-account--7bac4599-3ea2-4e25-9955-2fc89bddc2a2, that distinguishes it from other accounts."

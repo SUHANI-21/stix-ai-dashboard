@@ -1,0 +1,84 @@
+created,definition,definition_type,id,name,spec_version,type,summary
+2026-01-16T09:31:18.941038Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition named TLP:CLEAR, which is defined by a specific type of data known as Threat Level Protocol (TLP). The TLP defines the level of sensitivity and security clearance required for handling sensitive information. In this case, the TLP:CLEAR definition indicates that the information is clear and does not require any special access controls or security measures.
+
+The marking definition itself is stored in a JSON format with version 2.1 of the specification. The description provided by the marking definition states that it should display as ""clear""."
+2026-01-14T10:11:25.353199Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the following attributes:
+
+It is based on a definition that specifies a 'TLP:CLEAR' level, which corresponds to a transparent level of information disclosure. This definition type uses a specific format denoted as 'tlp', implying it adheres to a standardized protocol for describing transparency levels in sensitive information handling.
+
+The definition itself contains only the attribute 'tlp' with the value ""clear"", indicating that the defined level is clear or transparent, and there are no additional attributes or details provided."
+2026-01-17T16:24:52.125929Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the following characteristics:
+
+It has a clear type level classification (TLP) defined by the TLP:CLEAR specification, which is version 2.1 of the specification. The definition itself is contained within a JSON structure that specifies the TLP classification."
+2026-01-17T20:51:24.989715Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a TLP ( Threat Level Protocol) definition document with the following details:
+
+*   The name of this TLP definition is 'TLP:CLEAR', which corresponds to the standard threat level protocol used for sharing sensitive information.
+*   The specification version of this TLP definition is 2.1, indicating that it adheres to the latest guidelines outlined in the Threat Level Protocol document series.
+*   This TLP definition revolves around a single concept, 'clear'."
+2026-01-14T20:20:00.663983Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a TLP (Threat Level Profile) definition named 'TLP:CLEAR'. This marking definition is part of a larger system that categorizes information based on its potential threat level. The 'tlp' field within the definition specifies that the threat level is 'clear', indicating that the information contained does not pose an immediate threat."
+2026-01-17T07:29:02.273828Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a TLP (Threat Level Profile) definition named 'TLP:CLEAR' which is used to categorize sensitive information. The definition is provided in the TLP format and has a version of 2.1 as specified by the Open Information Environment (OIE). This marking-definition adheres to a standard that allows for clear communication of threat levels across organizations, making it easier to prioritize and manage risk-related information securely."
+2026-01-17T20:53:33.355015Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for the TLP (Threat Level Protocol) standard, specifically ""TLP:CLEAR"". The definition indicates that the threat level is clear, implying that there are no significant threats or risks associated with the information being marked. 
+
+This marking definition follows the TLP standard version 2.1 and has a unique identifier. It can be used to categorize information in accordance with industry standards for threat levels."
+2026-01-13T14:17:07.427400Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for TLP:CLEAR. The definition is stored in the form of a JSON string, which specifies the Traffic Light Protocol (TLP) level as 'clear'. This indicates that the content associated with this definition meets the lowest level of security and confidentiality requirements. The spec version of the definition is 2.1, indicating its compatibility with the latest specifications of TLP."
+2026-01-14T06:19:43.036423Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for TLP:CLEAR, which is a type of color marking standard. The definition itself is stored in JSON format within the 'definition' field and has a version number of 2.1.
+
+According to the provided information, the marking definition is based on the ""clear"" tlp (transparency level protocol) which indicates a clear or visible color specification."
+2026-01-14T06:17:06.910078Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the name TLP:CLEAR, which is defined by the following JSON object: '{""tlp"": ""clear""}'. This definition type is 'tlp' (which stands for Threat Level Protocol), indicating that it follows a standardized format for threat level information. The definition version is 2.1, providing an indication of the standard's evolution over time."
+2026-01-13T14:09:15.382619Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for the TLP (Threat Level Protocol) category named ""CLEAR"". 
+
+This definition specifies that the threat level is set to ""clear"", indicating low risk or minimal impact. The TLP protocol provides a standardized way to categorize and communicate threat levels, with different categories ranging from "" CLEAR"" (low risk) to more severe levels such as ""RED"" (high risk)."
+2026-01-18T18:51:00.049154Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the name 'TLP:CLEAR'. This definition is part of a Threat Level Protocol (TLP) and is defined as follows:
+
+The TLP:CLEAR definition indicates that it is at the lowest level of severity, indicating no known risk to the organization. The term ""clear"" implies that there are no existing security threats or risks associated with this marking.
+
+In essence, the 'TLP:CLEAR' marking defines a status where there are no security concerns, and the system or data can be considered safe from all potential threats."
+2026-01-18T20:26:41.535765Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition named 'TLP:CLEAR' with the following characteristics:
+
+- The definition type is 'tlp'.
+- It uses a TLP (Targeted Risk Level) classification system.
+- The risk level assigned to this definition is 'clear', as indicated by the JSON object containing only this value.
+
+This definition appears to be part of a larger system for categorizing information based on its potential risks, and it provides a standardized way to label data with a specific risk level."
+2026-01-13T14:23:00.997993Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the name ""TLP:CLEAR"". The definition type is specified as 'tlp' and is associated with a specific version number of 2.1."
+2026-01-14T06:12:19.793702Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for the Threat Level Profile (TLP) of 'clear'. This specific TLP level is indicated by the 'tlp' field within its JSON representation. The definition itself is specified as 'clear', and it falls under a classification type known as 'marking-definition', further denoting that this is not a numerical threat level but rather a categorization system used to convey information about data sensitivity. This marking definition is identified by an unique identifier for tracking purposes, but for the purpose of description, its specific details are omitted."
+2026-01-14T06:15:05.631319Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the following details:
+
+The definition is categorized under 'TLP:CLEAR', which falls under the type of marking definitions. 
+
+This particular definition has a specification version of 2.1. The definition itself is encoded as a JSON object with a specific structure, containing only one key-value pair with the key 'tlp' and a value indicating that it is clear."
+2026-01-13T14:19:01.104176Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the following characteristics:
+
+- The definition type is TLP (Threat Level Protocol), specifically defined as CLEAR.
+- This definition is part of a set of predefined markings that categorize information based on its threat level, in this case, classified as clear or low risk."
+2026-01-18T20:27:32.586507Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the name 'TLP:CLEAR'. This definition is associated with a Traffic Light Protocol (TLP) value of ""clear"". The definition type is specified as 'tlp' and has a specification version of 2.1. Overall, this marking definition indicates that information can be shared openly and without restrictions."
+2026-01-19T21:44:25.854030Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition for TLP:CLEAR, which is a standard used to define the level of sensitivity or confidentiality associated with a piece of information. 
+
+This marking definition has a specific format defined by the TLP (Traffic Light Protocol) specification, version 2.1. The 'definition' field contains a JSON object that includes a single key-value pair: 'tlp', which is set to ""clear"". This indicates that the marked information does not contain sensitive data and can be shared openly.
+
+The definition_type field specifies that this marking definition conforms to the TLP standard, indicating its compatibility with other systems and tools that rely on this protocol."
+2026-01-14T21:50:59.819822Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the name ""TLP:CLEAR"". This definition has a unique identifier and belongs to the TLP (Traffic Light Programming) format. The specification version is 2.1.
+
+The definition itself consists of a single key-value pair, where the key is ""tlp"" and the value is ""clear"", indicating that this marking definition corresponds to the clear traffic light level."
+2026-01-17T16:20:18.129233Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a detailed definition of a marking definition named TLP:CLEAR, which belongs to the type marking-definition.
+
+This definition is related to the Transport Layer Protocol (TLP) specification version 2.1 and follows a clear set of guidelines. 
+
+Key details include that the TLP:CLEAR marking is used for indicating that information has no sensitive data or security implications. The object does not contain any additional information about the creation date, as it is considered metadata."
+2026-01-17T16:22:53.202304Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition named TLP:CLEAR. This definition falls under the category of Threat Level Protocol (TLP) definitions. The TLP is used to categorize and communicate sensitive information regarding threat levels associated with projects or data.
+
+TLP:CLEAR is assigned a specification version of 2.1, which indicates that it adheres to the latest guidelines set forth by the organization handling this protocol.
+
+The definition type for this marking definition is 'tlp', reflecting its relation to the Threat Level Protocol."
+2026-01-19T21:46:24.295687Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a marking definition with the following characteristics:
+
+It has a type of ""marking-definition"" and is specifically identified by its name as ""TLP:CLEAR"". This indicates that it is a standard used to categorize information related to security.
+
+The definition itself is in the form of a JSON string, which is further nested under the key 'tlp'. The value of this key is simply the word ""clear"".
+
+This marking definition seems to be part of a larger system for managing and classifying sensitive information. The version number associated with this definition is 2.1.
+
+Overall, this object appears to represent a standardized way of labeling or categorizing information as being free from sensitive or security-related concerns."
+2026-01-16T06:20:00.570004Z,"{""tlp"": ""clear""}",tlp,marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487,TLP:CLEAR,2.1,marking-definition,"The object contains a TLP (Threshold Level Protocol) definition for the level ""CLEAR"". This definition is stored within a JSON object that adheres to version 2.1 of the specification. The purpose of this marking definition is to provide clarity and transparency in handling sensitive information by categorizing it into distinct levels.
+
+TLP: CLEAR is designated as a low-risk threshold, indicating that the information contained within does not pose a significant threat to confidentiality or security."

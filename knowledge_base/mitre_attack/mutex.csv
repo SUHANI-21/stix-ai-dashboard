@@ -1,0 +1,15 @@
+id,name,type,summary
+mutex--7d4eb11a-0d24-4215-82af-d86582144e37,Global\VanHelsing,mutex,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a detailed summary of it, starting with the sentence ""The object contains..."" and ignoring metadata fields such as timestamps and IDs."
+mutex--677feefb-cc4b-4925-94b2-7234721e3b3e,fnjiuygredfgbbgfcvhutrv,mutex,The object contains a mutex named 'fnjiuygredfgbbgfcvhutrv' of type 'mutex'.
+mutex--ad5ad007-76e8-40e1-816e-e396f9954d74,Q-X64,mutex,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a summary in the format you requested:
+
+""The object contains information about a mutex (mutual exclusion) lock named Q-X64 of type mutex.""
+
+Please paste the data, and I'll get started!"
+mutex--d139e830-474a-4246-ab6e-1bafa3c75537,TEST,mutex,"I don't see any data provided. Please share the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll create a summary sentence starting with ""The object contains..."" and excluding metadata fields such as timestamps and IDs."

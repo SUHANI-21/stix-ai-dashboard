@@ -1,0 +1,30 @@
+algorithm,description,id,key_type,public_key,salt,type,value,summary
+,TEA/XTEA symmetric key used for C2 payload encryption in CBC mode.,cryptographic-key--c812b78a-5ba1-4e51-95e5-e73cbb1dd381,,,,cryptographic-key,,"The object contains a data structure representing a cryptographic key, specifically a TEA/XTEA symmetric key used for encrypting C2 payloads in CBC mode. Unfortunately, the values provided for certain attributes are represented as Not-a-Number (NaN), indicating that they are not numerical or quantifiable.
+
+More information about the actual encryption process is unavailable due to these missing numerical values."
+,AES-256 CBC key used in Amatera Stealer C2 communications; 32-byte key stored in payload as a byte array on the stack.,cryptographic-key--d12b6f25-0e27-42d1-b1ce-76f8c7c2140b,,,,cryptographic-key,,"The object contains information about a cryptographic key used in Amatera Stealer C2 communications. Specifically, the key is of type AES-256 CBC and is stored in the payload as a 32-byte byte array on the stack.
+
+The key is identified by its unique identifier 'cryptographic-key--d12b6f25-0e27-42d1-b1ce-76f8c7c2140b' but unfortunately no information was provided about it. The value of this cryptographic key appears to be a byte array, however the actual contents of this array are not specified.
+
+The data suggests that the key is used for encryption purposes and is associated with Amatera Stealer C2 communications, which implies that this key may have been stolen or leaked in a data breach or other security incident."
+,RC2 key used to decrypt encrypted payloads downloaded by the .NET-based downloader packed with Agile.net.,cryptographic-key--2d1a61d2-a4b2-4679-899e-3e732cedc30e,,,,cryptographic-key,,"The object contains a cryptographic key object with the following attributes:
+
+It has been identified as an RC2 key used to decrypt encrypted payloads downloaded by a .NET-based downloader that was packaged with Agile.net. The specific purpose of this key is related to decryption, but further information on how it is used or its exact context within the larger system are not provided."
+RSA,,cryptographic-key--dc68adf8-caa2-4c1a-a76a-dc563aca5978,,"-----BEGIN PUBLIC KEY-----
+...
+-----END PUBLIC KEY-----",,cryptographic-key,,"The object contains a detailed description of a cryptographic key generated using the RSA algorithm. Unfortunately, some parts of the data are missing due to non-applicable information.
+
+A complete description is not fully available, but it can be inferred that the key is for public use and includes a key value within its structure. The lack of any key type or specific details regarding how this key was generated hinders full comprehension, as RSA keys typically come with a specified number of bits for security standards to follow.
+
+The provided data also shows the standard format for public keys in RSA encryption. Normally, these would be used for exchanging and verifying information securely between parties."
+,,cryptographic-key--a696ed31-0638-46e7-9304-e0f31e99b52a,master key,,s@1tValue,cryptographic-key,5c5e2c554f4f644b54383127495b356d7b36714e4b214a6967492657290123a0,"The object contains a 'cryptographic-key' entity with the following properties: 
+
+It is categorized as a master key, meaning it holds primary access to the system. 
+Its value is set to '5c5e2c554f4f644b54383127495b356d7b36714e4b214a6967492657290123a0', which appears to be a hexadecimal string used for encryption purposes. 
+The key is also associated with a salt value of 's@1tValue'."
+,"Threat actor's public key encoded within Gentlemen ransomware, used for X25519 ECDH operation.",cryptographic-key--e0bf718f-e3bc-4523-a675-d71fdf484db6,,,,cryptographic-key,,"The object contains a JSON-like structure representing a cryptographic key. The key is related to Gentlemen ransomware and specifically refers to the X25519 ECDH operation. Unfortunately, the provided data has missing values for various fields such as algorithm, key type, public key, salt, and value, which are likely placeholders or not available due to the nature of the data.
+
+It appears that the primary information stored in this object is the description of the cryptographic key, indicating that it contains a threat actor's public key encoded within Gentlemen ransomware. The exact details of the key and its usage remain unclear due to the missing values."
+,,cryptographic-key--51a49149-dae6-4373-bffe-9431eeaed377,AES,,,cryptographic-key,0123456789ABCDEF0123456789ABCDEF,"The object contains a cryptographic key with the following properties. It uses the AES algorithm for encryption, which is considered to be a widely used and secure method for data protection. The key type is specified as 'AES', indicating that this is an Advanced Encryption Standard-based cryptographic key.
+
+The key's value is a 32-character hexadecimal string: '0123456789ABCDEF0123456789ABCDEF'. This string can be used to derive the actual encryption key using various methods, such as hashing or base conversion."

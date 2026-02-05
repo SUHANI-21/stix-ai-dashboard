@@ -1,0 +1,11 @@
+id,type,value,summary
+ipv6-address--0a9964dd-53c4-4f80-a603-1596da758673,ipv6-address,64:ff9b::cb00:710c,"The object contains a unique identifier for an IPv6 address, which is 'ipv6-address--0a9964dd-53c4-4f80-a603-1596da758673'. This identifier is likely used to track and manage the various instances of this specific type of address.
+
+The object's type is specified as 'ipv6-address', indicating that it represents a globally unique identifier for an IPv6 network interface.
+
+The actual value of the object is a string representation of an IPv6 address, which is '64:ff9b::cb00:710c'. This value is in the format of an IPv6 address, consisting of eight groups separated by colons."
+ipv6-address--184c6014-de93-474e-b237-8a090f2ae647,ipv6-address,64:ff9b::/96,"I don't see any data provided. Please provide the data you'd like me to summarize, and I'll be happy to assist you.
+
+Once you provide the data, I'll generate a summary following your requested format:
+
+""The object contains an IPv6 address, specifically '64:ff9b::/96', which indicates the IP address belongs to the IPv6 address family and has a prefix length of 96."""

@@ -1,0 +1,3 @@
+id,name,type,value,summary
+hostname--e03f92be-abff-459f-a051-f654e256bf5f,DESKTOP-C1N9M,hostname,,"The object contains a hostname named 'DESKTOP-C1N9M' that belongs to the category of hostnames. The specific details about this hostname include its type as 'hostname', which signifies it is a reference to a computer system or device within a network. Unfortunately, there is no data available for the 'value' field, indicated by 'nan', meaning it is not numerically defined and does not provide any numerical information about the hostname."
+hostname--ed4d5e0b-a70a-410c-b145-45e503c4c686,,hostname,DESKTOP-BUL6K1U,The object contains a hostname with the value 'DESKTOP-BUL6K1U'. It is classified as a desktop computer.

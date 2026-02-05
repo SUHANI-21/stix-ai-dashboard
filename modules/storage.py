@@ -34,6 +34,13 @@ class STIXStorage:
             f.write(uploaded_file.getbuffer())
         return str(original_path)
     
+    def save_original_file_bytes(self, file_bytes, filename, file_id):
+        """Save original file from bytes"""
+        original_path = self.original_dir / f"{file_id}_{filename}"
+        with open(original_path, 'wb') as f:
+            f.write(file_bytes)
+        return str(original_path)
+    
     def save_converted_stix(self, stix_data, original_filename, metadata=None):
         """
         Save converted STIX 2.1 data to file

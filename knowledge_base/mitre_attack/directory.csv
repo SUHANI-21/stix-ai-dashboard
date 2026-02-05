@@ -1,0 +1,140 @@
+description,id,labels,name,path,type,summary
+,directory--6c719a59-92e9-4dd9-bf9d-2e4b7bfcec8a,,,/data/user/0/<malware_package>/files/overlays/,directory,"The object contains a directory named 'directory--6c719a59-92e9-4dd9-bf9d-2e4b7bfcec8a' located at the path '/data/user/0/<malware_package>/files/overlays/'. This directory serves as an overlay, indicating it is being used to modify or extend another file or set of files."
+,directory--30966ec0-0745-4e5a-8671-0369f444fcf9,,,C:\Program Files\Common Files\NSEC,directory,The object contains a directory named 'NSEC' located at the path 'C:\\Program Files\\Common Files'. The directory is part of a larger structure.
+,directory--9d1daae4-f835-45a9-813c-535d7b7d6a4e,,,C:\Program Files (x86)\Common Files\NSEC\Data,directory,The object contains a directory named 'directory--9d1daae4-f835-45a9-813c-535d7b7d6a4e'. The directory is located at the path 'C:\\Program Files (x86)\\Common Files\\NSEC\\Data' and has a type classification.
+,directory--760c4a62-69e4-4585-99ca-c1470cb4c256,,,.pkgdb,directory,"The object contains a directory named 'directory--760c4a62-69e4-4585-99ca-c1470cb4c256' with the following characteristics:
+
+It is located at path '.pkgdb'.
+The type of the object is 'directory'."
+,directory--7c57aaae-1967-4150-92a1-76d820b7951f,,,/tmp,directory,The object contains a directory.
+,directory--49e408ca-c38e-4f67-a638-5bbec4c4424c,,,%TMP%,directory,"Here is a detailed summary of the provided data:
+
+The object contains a directory. The path to this directory is '%TMP%'. It appears to be some kind of temporary or system directory, given its name and the presence of the '%TMP%' placeholder. No additional information about the contents or purpose of this directory can be determined based on the available metadata."
+,directory--2ca7ed1f-e47b-4014-b353-9e9242750ce1,,,icon-theme-materiall.5.29.1/extension/dist/extension/desktop/,directory,"The object contains a directory with the following characteristics: its path is located at 'icon-theme-materiall.5.29.1/extension/dist/extension/desktop/'. This directory seems to be part of an extension, possibly for a desktop application, given its name and location. However, there isn't any additional information provided about what's inside this directory or the labels associated with it."
+,directory--eb951973-0dd8-41e5-b319-049ba04187c8,,,/Users/davidioasd/Downloads/rust_implant/,directory,"The object contains a directory with the path '/Users/davidioasd/Downloads/rust_implant/'. The detailed information about this directory is as follows:
+
+- It has been downloaded from a location indicated by the 'path' field.
+- This directory was created in the ' Downloads' folder on the user's computer, specifically located within the '/Users/' hierarchy."
+,directory--eae856eb-c95e-4d7e-8072-3fbffec88948,,,%TEMP%\Test,directory,"The object contains a directory with the path '%TEMP%\\Test' that belongs to a specific type. However, details about its description, labels, or name are not available due to missing metadata fields."
+Directory on Samsung Android devices where unexpected processes related to LANDFALL spyware may appear.,directory--2a1abd02-664b-4881-ab1d-5fad423cd68c,,,/data/data/com.samsung.ipservice/files/,directory,"The object contains a directory on Samsung Android devices where unexpected processes related to LANDFALL spyware may appear. This directory is located at the path '/data/data/com.samsung.ipservice/files/'. The directory's purpose is unclear, but it seems to be associated with an issue of spyware, specifically LANDFALL."
+FortiWeb API endpoint targeted for path traversal and authentication bypass in CVE-2025-64446 exploitation.,directory--8a637c86-9fad-4fd9-a31a-4429b919ddd7,,,/api/v2.0/cmd/system/admin%3F/../../../cgi-bin/fwbcgi,directory,"The object contains a vulnerability report related to the FortiWeb API endpoint. Specifically, the report is targeting a directory traversal issue (CVE-2025-64446) that can be exploited for authentication bypass.
+
+The vulnerable endpoint is located at '/api/v2.0/cmd/system/admin%3F/../../../cgi-bin/fwbcgi', which appears to be an intentionally crafted path designed to manipulate the API's behavior. The exact nature of this vulnerability is not detailed in the report, but it is suggested that it can be exploited for malicious purposes.
+
+It is worth noting that the object does not provide any additional information about the impact or severity of the vulnerability, nor does it offer any guidance on mitigating or patching the issue."
+,directory--6c4a9c26-68e9-431e-b701-eb771ae37195,,,c:\programdata\microsoft\AppV\app,directory,"The object contains information about a directory on a system. The details provided include:
+
+- Path: The location of the directory is specified as 'c:\\programdata\\microsoft\\AppV\\app'. This indicates that the directory is located within the AppV application directory on the system.
+
+- Type: It is identified as a directory, suggesting that it serves as a container for files or subdirectories."
+,directory--2713eb6c-1be4-463c-94fe-57bf5c0c5d62,,,c:\Windows\ps1,directory,The object contains a directory with the specified path. The directory's location is at C:\Windows\ps1. It falls under the category of directories due to its 'type' being 'directory'.
+,directory--bd4942fa-9ed2-42ce-8732-e7f818ffe9d4,,,/root/.ssh,directory,The object contains a directory named 'directory--bd4942fa-9ed2-42ce-8732-e7f818ffe9d4' located at the path '/root/.ssh'. The directory has a unique identifier.
+,directory--7cc4a6f9-2c0d-4e2d-9c6f-37f42951e251,,,/etc,directory,"The object contains a directory located at the path '/etc'. It is identified by the unique identifier 'directory--7cc4a6f9-2c0d-4e2d-9c6f-37f42951e251', but this metadata field can be ignored. The directory itself does not have any descriptive information or labels associated with it, only a name which appears to be 'directory'."
+,directory--a4710686-7cd5-4634-aa67-45a02e1fe58a,,,/bin,directory,"The object contains a directory named 'directory--a4710686-7cd5-4634-aa67-45a02e1fe58a' located at the path '/bin'. It is of type 'directory', and its content or details are not available due to missing metadata fields."
+,directory--cfdfae26-085d-4189-8766-a23ad516e2ff,,,/root,directory,The object contains a directory named 'directory--cfdfae26-085d-4189-8766-a23ad516e2ff'. It is located at the root path '/root'. The directory has been categorized as a directory under a certain naming convention.
+,directory--2619d379-cb56-4bd1-b595-439d28efce7e,,,/etc/crontabs,directory,The object contains a directory named /etc/crontabs with the ID '2619d379-cb56-4bd1-b595-439d28efce7e'. This directory has been assigned labels but their details are not provided. The name of this directory is also unknown as it appears to be missing.
+,directory--842c8627-4eb5-44ad-97df-3d664decde70,,,/etc/hosts,directory,"The object contains a directory named 'directory--842c8627-4eb5-44ad-97df-3d664decde70' with the following characteristics:
+
+It is located at path '/etc/hosts'.
+ The directory has no description.
+ It does not have any labels associated with it."
+,directory--a4b8178e-3ce5-4383-8bd8-9dfa803d97c1,,,/etc/resolv.conf,directory,"The object contains a file system entity that corresponds to the contents of the ""/etc/resolv.conf"" directory. This is a type of directory within the file system hierarchy. The path indicates its location on the system."
+,directory--24f55f5e-1188-4d58-a89d-dddca6b7570a,,,c:\program files\WinRAR,directory,The object contains a directory with the path 'c:\program files\WinRAR'.
+,directory--279024a0-7ea9-4321-9ca6-49427e769699,,,\\<domain>\NETLOGON\GPO test\Scripts,directory,"The object contains a directory with the following characteristics:
+
+It is located at a path of '\\<domain>\\NETLOGON\\GPO test\\Scripts'. This indicates that it is situated within the NETLOGON folder on a specific domain, and its parent directory is labeled as 'GPO test', suggesting it might be part of an Group Policy Object (GPO) configuration.
+
+The object itself is identified by a unique ID, but this information has been omitted from the summary for brevity's sake. 
+
+No additional metadata such as timestamps or labels have been included in the description to keep the output concise and easy to read."
+,directory--fbc85ed7-12e0-4cfb-bc81-8530b95c338a,,,Assets/,directory,"The object contains a directory named 'Assets/'. This directory is classified as the type of a file system element, specifically categorized under directories."
+,directory--f8df8052-2c49-4f70-a23d-cfbf18c7b844,,,VFS/,directory,"The object contains a directory named 'directory--f8df8052-2c49-4f70-a23d-cfbf18c7b844' which has the following characteristics:
+
+It is located at path 'VFS/' and is of type 'directory'."
+,directory--e7cd0542-c126-4774-8742-862cb247d67e,,,VFS/ProgramFilesX64/,directory,"The object contains a directory with the path 'VFS/ProgramFilesX64/'. It is identified by an ID of 'directory--e7cd0542-c126-4774-8742-862cb247d67e' and has no description, labels, or timestamp. The directory's type is classified as 'directory'."
+,directory--dbab8978-d0ed-4bdc-8f1a-0750215c49e7,,,/tmp/ijewf/,directory,The object contains a directory named 'directory--dbab8978-d0ed-4bdc-8f1a-0750215c49e7'. The directory has the path '/tmp/ijewf/' and is classified as a type of directory.
+,directory--31aa7887-7879-4214-a633-9c930713e4e5,,,~/.ssh,directory,"The object contains a directory with the name of ""~/.ssh""."
+,directory--45068891-1ee1-4df6-a700-5ac5a5b6777e,,,C:\Users\<username>\AppData\Roaming\DATA,directory,The object contains a directory named 'C:\\Users\\<username>\\AppData\\Roaming\\DATA'.
+,directory--e26ae3d2-2f69-47c1-8680-2c6001dfb006,,,C:\programdata\temp\,directory,The object contains a directory with the path 'C:\\programdata\\temp\\'.
+,directory--1211b7d7-b100-46b6-ac63-8536fe68a987,,,\AppData\Roaming\Microsoft\Protect,directory,"The object contains a directory with the name 'directory--1211b7d7-b100-46b6-ac63-8536fe68a987'. This directory is located within the 'AppData' folder, specifically in the 'Microsoft' subfolder. The path of this directory is '\\AppData\\Roaming\\Microsoft\\Protect'. It has a type classification as a directory."
+,directory--91b8a027-6d67-4a52-9361-f15ff9ad9817,,,\AppData\Local\Microsoft\Credentials,directory,The object contains a directory named 'directory--91b8a027-6d67-4a52-9361-f15ff9ad9817'. The directory is located at the path '\\AppData\\Local\\Microsoft\\Credentials'. It is classified as a type of directory.
+,directory--2ff6e24b-fc08-491a-82c4-c671d6a2e58d,,,/etc,directory,The object contains a directory named 'directory--2ff6e24b-fc08-491a-82c4-c671d6a2e58d'. It is located at the path '/etc' and has been classified as a type of directory.
+,directory--c5a75bd4-3777-4cb4-b178-8b553a4b5ee2,,,%USERPROFILE%,directory,"The object contains a directory with the following characteristics:
+
+* The directory is located at %USERPROFILE%, which suggests that it is stored on the user's local computer.
+* It has been assigned an identifier 'directory--c5a75bd4-3777-4cb4-b178-8b553a4b5ee2', but this information can be ignored as it is metadata and not relevant to the directory itself.
+* The directory does not have any labels or description associated with it, indicating that it may be a generic or unnamed directory.
+* Its type is classified as 'directory', which confirms that it is indeed a folder on the local computer."
+,directory--141bfb6b-ff90-44b9-ab46-4be416307685,,,/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws/node_modules/@postman/tunnel-agent,directory,"The object contains a directory with the following characteristics:
+
+It has an ID of 'directory--141bfb6b-ff90-44b9-ab46-4be416307685', but this information is not relevant to its contents or functionality.
+ 
+The path of the directory is '/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws/node_modules/@postman/tunnel-agent'.
+ 
+It appears to be a node module, as indicated by its type, which is 'directory'."
+,directory--818068e9-6bdb-4e0d-a720-4cd3defd45c9,,,/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws,directory,"The object contains a directory named 'directory--818068e9-6bdb-4e0d-a720-4cd3defd45c9' with a path of '/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws'. It falls under the category of directories as indicated by its type, which is 'directory'."
+,directory--2d31efc4-df1e-4ab3-9b5c-c2ad45aeec60,,,/tmp/.system-update/,directory,"The object contains information about a directory. Unfortunately, the provided data is incomplete due to missing values for certain fields. The description, labels, name, and timestamps of the file are all blank (represented by 'nan'). However, we can gather some relevant details from the remaining fields.
+
+The directory's ID is 'directory--2d31efc4-df1e-4ab3-9b5c-c2ad45aeec60' but this information will be ignored as per request. 
+
+The path of the directory is '/tmp/.system-update/', indicating that it is located in a temporary file system or an area reserved for system files.
+
+No further details can be extracted from the provided data, and thus we cannot draw more conclusions about the contents or properties of the directory."
+,directory--e5b8722b-9806-4947-a79f-a4ded03f390c,,,.Thumbs,directory,"The object contains a directory named after the unique identifier provided. This directory is located at the path specified, which includes the file name '.Thumbs' indicating it's a subfolder within a larger structure. The type of this object is explicitly stated as 'directory', confirming its nature."
+,directory--8e692807-6368-4c6f-b080-04794a4f4350,,,.github/workflows/,directory,"The object contains a GitHub workflow directory with the following characteristics:
+
+*   It is identified by its unique identifier, which ends in '-8e692807-6368-4c6f-b080-04794a4f4350'.
+*   The directory's purpose and function are unknown due to the absence of metadata fields.
+*   There is no information available about its labels or name, suggesting that this aspect may be irrelevant to its primary functionality.
+*   Its path is located within '.github/workflows/', indicating that it serves as a workflow directory on the GitHub platform."
+,directory--062f4b98-6223-44a4-94ca-690d06479fea,,,.dev-env/,directory,"The object contains a directory with the specified path. Unfortunately, some metadata fields are missing or not available. The directory is located at '.dev-env/'."
+Directory containing system binaries such as am (Activity Manager) used to launch the DOOM APK.,directory--a6b594d6-0522-4ad0-b49e-9f9f7f3f9080,,,/system/bin/,directory,"The object contains a directory named 'system binaries' which includes essential system binaries. This directory is particularly significant as it houses the 'am' (Activity Manager) application used to launch the DOOM APK. Notably, this directory is located at '/system/bin/'. The absence of labels and name for this directory suggests that it does not require any additional identification or categorization beyond its function within the system's file structure."
+,directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e,,,%APPDATA%\Local\NodeJS,directory,"The object contains a directory named 'directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e'. It is located at the path '%APPDATA%\\Local\\NodeJS', which corresponds to the local application data directory of Node.js."
+,directory--cbec26ed-3661-4144-afe6-41f1c76d3820,,,/etc/cron.hourly/,directory,"The object contains a directory with the path '/etc/cron.hourly/'. The directory type indicates that it is a hierarchical file system structure, where files and subdirectories are organized within it. There is no information available about the contents or ownership of the directory, as 'labels' field is empty."
+,directory--67c4d5ea-7827-48ba-8555-187144304b3f,,,/usr/infju/,directory,"The object contains a directory named '/usr/infju/'. It is of type directory. The path to this directory is provided, indicating its location on the system."
+,directory--7dee5809-0b7c-46cb-8333-147a661aa008,,,/var/log/,directory,The object contains a directory with the path '/var/log/'. This is classified as a file system entity. The specific characteristics of this directory include its location within the root directory hierarchy and its designation as a directory rather than another type of file system entry.
+,directory--e0617c9a-2d10-42c0-8f7c-194ea9216283,,,C:\ProgramData,directory,The object contains a directory with the path 'C:\\ProgramData'. The directory's type is specified as 'directory'. This information provides details about an object that exists on the system.
+,directory--b418ed3b-64d7-4d9b-aff3-257a750fb937,,,~/.ssh,directory,"The object contains a directory named ""~/.ssh"". It is located at the specified path."
+Dropbox folder used to store uploaded information from infected machines.,directory--a1669892-4fbe-4e77-a9cb-3eaf8418dc64,"[""dropbox"", ""c2"", ""data-exfiltration""]",,/AS,directory,"The object contains a Dropbox folder used to store uploaded information from infected machines. The folder has the label 'dropbox' indicating its origin, along with additional labels 'c2' which is short for Command and Control, and 'data-exfiltration', suggesting that this folder is related to malicious activities involving data exfiltration.
+
+This specific folder does not have a name but instead exists under a parent path '/AS'."
+"Dropbox folder containing command files for ShellClient RAT to fetch, parse, and delete before execution.",directory--75b695dd-1078-49bd-8cb2-1331df952d03,"[""dropbox"", ""c2"", ""command-repository""]",,/CS,directory,"The object contains a Dropbox folder that serves as a repository for command files related to the ShellClient RAT. The folder has been identified by the label ""c2"" and is classified under the categories of ""dropbox"" and ""command-repository"". It does not have a specific name, but it is located in the path ""/CS""."
+Dropbox folder storing outputs/results generated by victim machines after command execution.,directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc,"[""dropbox"", ""c2"", ""results""]",,/RS,directory,"The object contains a Dropbox folder named 'directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc' that is used to store the outputs/results generated by victim machines after command execution. This folder belongs to the category of 'dropbox', 'c2', and 'results'. It is identified as a directory located at '/RS'."
+,directory--50238d5d-da7f-47b9-8cf6-f679c512866f,,,C:\DragonAntivirus,directory,The object contains a directory named 'C:\DragonAntivirus' with the label of 'directory'.
+,directory--b451a6f3-cc05-49c0-8531-b2f21f50005e,,,C:\Users\Public\WindowsSecurityA\,directory,The object contains a directory located at 'C:\Users\Public\WindowsSecurityA/'. This directory does not have any descriptive name or label associated with it. It is identified by its unique identifier. The path to this directory is provided as 'C:\Users\Public\WindowsSecurityA/'.
+Telegram Desktop data directory targeted by Vidar Stealer.,directory--f6a83205-f79b-40e2-a275-82dabce66a3f,,,\Telegram Desktop\,directory,"The object contains a malicious data directory specifically targeted by the Vidar Stealer malware. This malicious activity is associated with the Telegram Desktop application, which has been compromised to steal sensitive information from users.
+
+The specific location of this malicious activity is found within the 'Telegram Desktop' directory, indicating that the attackers have gained access to this area in order to carry out their malicious intentions.
+
+This compromise highlights a vulnerability in the Telegram Desktop application and underscores the importance of maintaining proper security measures when using such software."
+,directory--7e676692-6755-4143-a3fe-d336858bfe16,,,C:\temp,directory,The object contains a directory with the path C:\temp. The directory itself does not have any additional information or attributes beyond its name and type.
+,directory--063bb15f-0f89-4900-bd5a-cc84962ef50d,,,C:\ProgramData\WindowsManager\,directory,The object contains a Windows directory.
+,directory--392a7ea0-f6e5-43fd-816a-47949627e288,,,windows-cache,directory,The object contains a directory named 'windows-cache' with an identifier. This is the key piece of information from the given data.
+,directory--68ec7353-c493-4487-837c-7b1e71d8a1f0,,,C:\Users\Public\Libraries,directory,The object contains a directory with the path C:\Users\Public\Libraries. It is of type directory.
+,directory--504dcea6-94d5-4b4a-b15c-52cd3ebb5f0e,,,%LocalAppData%\Microsoft\Windows\INetCache\Content.Outlook,directory,"The object contains a directory named 'directory--504dcea6-94d5-4b4a-b15c-52cd3ebb5f0e' located at '%LocalAppData%\\Microsoft\\Windows\\INetCache\\Content.Outlook'. This directory has no description, labels, or name."
+,directory--a2d3b634-1a41-443f-8f98-c5e727f2bd8c,,,%TEMP%,directory,The object contains a directory with the path %TEMP%. The description and labels of this directory are not specified. It is categorized under directories rather than files or other types of data objects.
+,directory--05107a71-d9cb-426e-b41e-4a5b24e24cb7,,,Windows Startup folder,directory,The object contains a directory with the name Windows Startup folder. It is located at path 'Windows Startup folder'. The type of this object is a directory.
+,directory--6bcfaf4e-1397-45a2-9083-2f2c9f31b795,,,deceptively named folder,directory,The object contains a directory with the name 'deceptively named folder'. It is classified as a type of directory.
+,directory--80268c34-7d9f-4ec7-8b65-798420c50d0f,,,logical drives,directory,"The object contains a directory with the name 'logical drives'. It is categorized under a specific type, but the details of this classification are not provided. The path to this directory leads directly to it without any further branching or sub-divisions."
+,directory--c31a79ee-fa76-4e92-af52-460c4db93e04,,,filesystem metadata region,directory,"Here is a detailed summary of the data:
+
+The object contains metadata for a specific directory. Unfortunately, some information is missing, including its description, labels, name, and timestamp, which suggests that this data might be incomplete or not available.
+
+However, what is provided is enough to determine that the directory falls under the 'filesystem metadata region' category, specifically categorized as a type of ""directory""."
+,directory--293f94d6-68ac-4f5d-87f3-793fc8539cae,,,%LocalAppData%/<8-byte-base64-string>,directory,The object contains a directory with the ID 'directory--293f94d6-68ac-4f5d-87f3-793fc8539cae'. The path to this directory is located at '%LocalAppData%/<8-byte-base64-string>'. It is classified as a directory type.
+,directory--3379ed62-9901-4a10-96d7-8054499a974c,,,C:\Users\PC\AppData\Local\errorlx\error.log,directory,"The object contains a directory named 'error.log' located at the specified path: C:\\Users\\PC\\AppData\\Local\\errorlx. This directory appears to be an error log file, possibly used for recording and managing errors or issues that have occurred during system operation. The exact content of the directory is not specified, but its name suggests a connection to error handling and logging functionality."
+,directory--4ef1299c-7877-41ad-808c-fcf6da9dbc38,,,%APPDATA%\Microsoft\Windows\Start Menu\Programs\Startup,directory,"The object contains a directory named 'directory--4ef1299c-7877-41ad-808c-fcf6da9dbc38' located at the path '%APPDATA%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup'. This directory is categorized as a type of 'directory', which implies it is a container for storing files and subdirectories."
+,directory--42895014-2ec3-4027-8abe-9dbc1f919249,,,%APPDATA%\Security,directory,The object contains a directory named 'Security' located within the 'AppData' folder of the system.
+,directory--29b6daf8-a0b1-4f09-9463-d288e4175d72,,,C:\Users\<user>\AppData\Roaming\Security,directory,The object contains a directory with the path: C:\\Users\\<user>\\AppData\\Roaming\\Security.
+,directory--bccd5683-0ec1-4c2b-9e4f-d791eecdd263,,,%TEMP%\QLOG,directory,"The object contains a directory named 'directory--bccd5683-0ec1-4c2b-9e4f-d791eecdd263' within the path '%TEMP%\\QLOG'. This directory has been categorized as 'directory' under its respective label, which remains unknown due to empty metadata fields."
+,directory--fb8cd424-d12b-4e49-b743-b4e36d5a15bf,,,ClusterStorage,directory,"The object contains a directory named ""ClusterStorage"". It is of type ""directory"" and has a path indicating its location. The specific details about the directory itself are not provided due to missing metadata values for 'description', 'labels', and 'name'."
+,directory--5dc69a94-0c78-4dff-a4f6-3122ef7fd3b2,,,C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs\,directory,"The object contains a Windows directory with the path C:\Users\<user>\AppData\Roaming\Microsoft\Windows\Start Menu\Programs. The directory has a specific structure and organization, likely used to store shortcuts or files for the Start menu of the Windows operating system."
+,directory--42901bd6-c2bd-4a54-b0e2-74e363482bc1,,,C:\Users,directory,The object contains a directory named 'C:\\Users' with type 'directory'. The path of the directory is provided as 'C:\\Users'.
+,directory--13265212-c9cd-4538-9330-36856a6e7757,,,%APPDATA%\Microsoft\Windows\Themes,directory,"The object contains a Windows directory named %APPDATA%\Microsoft\Windows\Themes. This directory is used to store various theme-related files for the operating system. The path indicates that it is located within the user's application data folder, which suggests that this directory is intended for storing personal or user-specific themes rather than global or system-wide themes."
+,directory--61400d23-a96e-4bb7-945e-cab99eac6b19,,,%TEMP%,directory,The object contains a directory with the path '%TEMP%'.
+,directory--c429aa52-e41b-4c00-8410-4eb694b89cfa,,,%Public%,directory,"The object contains a directory named 'directory--c429aa52-e41b-4c00-8410-4eb694b89cfa' which has the following characteristics:
+
+* The directory is located at path '%Public%' and is of type 'directory'.
+* It does not have any labels or description."
+,directory--57e0ac47-c9a4-466a-a28c-6887dae343d8,,Notepad TabState Directory,%LOCALAPPDATA%\Packages\Microsoft.WindowsNotepad_8wekyb3d8bbwe\LocalState\TabState,directory,The object contains a directory named 'Notepad TabState Directory' located at '%LOCALAPPDATA%\\Packages\\Microsoft.WindowsNotepad_8wekyb3d8bbwe\\LocalState\\TabState'. This directory appears to be associated with the Microsoft Windows Notepad application. The path provided suggests that this directory is stored within a package and is used as the local state for the notepad's tab management system.
+,directory--55d442e1-c937-442e-b228-cd001068349a,,Notepad WindowsState Directory,%LOCALAPPDATA%\Packages\Microsoft.WindowsNotepad_8wekyb3d8bbwe\LocalState\WindowsState,directory,"The object contains a directory named 'Notepad WindowsState Directory'. The directory is located at '%LOCALAPPDATA%\\Packages\\Microsoft.WindowsNotepad_8wekyb3d8bbwe\\LocalState\\WindowsState' on the system. This directory falls under the category of type 'directory', which signifies that it stores and manages settings, configuration data, or other file-related information for the Notepad Windows application."
