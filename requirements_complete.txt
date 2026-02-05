@@ -29,3 +29,8 @@ ollama>=0.1.7
 # ML/AI Dependencies
 numpy>=1.24.0
 scikit-learn>=1.3.0
+
+#threat similarity search Dependencies
+faiss-cpu
+langchain_ollama
+langchain_community
