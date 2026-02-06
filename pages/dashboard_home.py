@@ -13,36 +13,6 @@ from modules.cti_converter import convert_to_common_cti
 from modules.threat_classifier import classify_threat
 from modules.credibility_assessor import assess_credibility
 
-# ---------- PAGE CONFIG ----------
-st.set_page_config(page_title="Dashboard", layout="wide")
-
-# ---------- CUSTOM NAVIGATION ----------
-pg = st.navigation({
-    "Main": [
-        st.Page("dashboard.py", title="Dashboard"),
-        st.Page("pages/Version_Detector_and_Validator.py", title="Version Detector and Validator"),
-    ],
-    "Threat Analysis": [
-        st.Page("pages/SDO_Similarity_Search.py", title="SDO Similarity Search"),
-        st.Page("pages/Attack_Mapping.py", title="Attack Mapping"),
-        st.Page("pages/malware_classifier.py", title="Malware Classifier"),
-    ],
-    "Assessment & Chat": [
-        st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment Module"),
-        st.Page("pages/STIX_Chat.py", title="STIX Chat"),
-    ],
-    "Tools": [
-        st.Page("pages/file_browser.py", title="File Browser"),
-        st.Page("pages/bundle_analyzer.py", title="Bundle Analyzer"),
-    ]
-})
-pg.run()
-
-# Only show dashboard content on the Dashboard page
-if st.session_state.get("current_page", "Dashboard") != "Dashboard":
-    st.stop()
-
-
 # ---------- THEME + CUSTOM UI STYLING ----------
 st.markdown("""
 <style>
@@ -93,7 +63,6 @@ st.markdown("## AI-Powered Cyber Threat Intelligence Dashboard")
 st.markdown("---")
 
 # 🔄 SHARED FILE UPLOADER (used by all pages)
-# 🔄 SHARED FILE UPLOADER (used by all pages)
 if "shared_stix_bytes" not in st.session_state:
     st.session_state.shared_stix_bytes = None
 if "shared_stix_name" not in st.session_state:
@@ -135,7 +104,6 @@ if uploaded_file:
     with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_filename).suffix) as tmp:
      tmp.write(uploaded_file)
      file_path = tmp.name
-
 
     file_ext = Path(file_path).suffix.lower()
 
