@@ -1,0 +1,49 @@
+[[pages]]
+path = "pages/1_Version_Detector_and_Validator.py"
+name = "Version Detector and Validator"
+icon = ":material/verified:"
+
+[[pages]]
+name = "Threat Analysis"
+icon = ":material/security:"
+
+[[pages]]
+path = "pages/2_1_SDO_Similarity_Search.py"
+name = "SDO Similarity Search"
+icon = ":material/search:"
+is_section = false
+parent = "Threat Analysis"
+
+[[pages]]
+path = "pages/2_2_Attack_Mapping.py"
+name = "Attack Mapping"
+icon = ":material/map:"
+is_section = false
+parent = "Threat Analysis"
+
+[[pages]]
+path = "pages/2_3_Malware_Classifier.py"
+name = "Malware Classifier"
+icon = ":material/bug_report:"
+is_section = false
+parent = "Threat Analysis"
+
+[[pages]]
+path = "pages/3_Credibility_Assessment_Module.py"
+name = "Credibility Assessment Module"
+icon = ":material/assessment:"
+
+[[pages]]
+path = "pages/4_STIX_Chat.py"
+name = "STIX Chat"
+icon = ":material/chat:"
+
+[[pages]]
+path = "pages/5_File_Browser.py"
+name = "File Browser"
+icon = ":material/folder:"
+
+[[pages]]
+path = "pages/6_Bundle_Analyzer.py"
+name = "Bundle Analyzer"
+icon = ":material/analytics:"

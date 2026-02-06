@@ -128,22 +128,9 @@ def draw_interactive_graph(G, output_file="stix_graph.html"):
     net.write_html(output_file)
     print(f"[+] Graph written to {output_file}")
 
-#testing
-# graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
-# print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
-
-# Build graph from the data/converted directory
-graph = build_stix_graph(r"E:\college\NITK Internship\stix_normalizer\stix_normalizer\stix_intelligence_analyzer\data\converted")
+# Initialize empty graph - will be populated when bundles are processed
+graph = nx.DiGraph()
 print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
-
-from collections import Counter
-
-types = Counter(
-    data.get("type", "unknown")
-    for _, data in graph.nodes(data=True)
-)
-
-print(types)
 
 import networkx as nx
 

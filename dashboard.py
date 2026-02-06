@@ -14,38 +14,49 @@ from modules.threat_classifier import classify_threat
 from modules.credibility_assessor import assess_credibility
 
 # ---------- PAGE CONFIG ----------
-st.set_page_config(page_title="AI CTI Dashboard", layout="wide")
+st.set_page_config(page_title="Dashboard", layout="wide")
 
-# ---------- SIDEBAR NAVIGATION ----------
+# ---------- CUSTOM NAVIGATION ----------
 st.sidebar.title("🔍 Navigation")
-page = st.sidebar.selectbox(
-    "Choose a page:",
-    ["STIX Analyzer", "Threat Assessment", "RAG Chat", "File Browser", "Malware Inference", "Malware Mapping", "SDO Similarity Search", "Malware Classifier"]
+
+# Create expandable sections
+page = st.sidebar.radio(
+    "Main Pages",
+    ["Dashboard", "Version Detector and Validator", "Threat Analysis", "Credibility Assessment Module", "STIX Chat", "File Browser", "Bundle Analyzer"],
+    label_visibility="collapsed"
 )
 
-if page == "Threat Assessment":
-    exec(open("pages/threat_assessment.py").read())
+if page == "Dashboard":
+    pass  # Continue to dashboard
+elif page == "Version Detector and Validator":
+    exec(open("pages/Version_Detector_and_Validator.py").read())
     st.stop()
-elif page == "RAG Chat":
-    exec(open("pages/rag_chat.py").read())
+elif page == "Threat Analysis":
+    threat_page = st.sidebar.radio(
+        "Threat Analysis",
+        ["SDO Similarity Search", "Attack Mapping", "Malware Classifier"]
+    )
+    if threat_page == "SDO Similarity Search":
+        exec(open("pages/SDO_Similarity_Search.py").read())
+    elif threat_page == "Attack Mapping":
+        exec(open("pages/Attack_Mapping.py").read())
+    elif threat_page == "Malware Classifier":
+        exec(open("pages/Malware_Classifier.py").read())
+    st.stop()
+elif page == "Credibility Assessment Module":
+    exec(open("pages/Credibility_Assessment_Module.py").read())
+    st.stop()
+elif page == "STIX Chat":
+    exec(open("pages/STIX_Chat.py").read())
     st.stop()
 elif page == "File Browser":
-    exec(open("pages/file_browser.py").read())
+    exec(open("pages/File_Browser.py").read())
     st.stop()
-elif page == "Malware Inference":
-    exec(open("pages/malware_inference.py").read())
-    st.stop()
-elif page == "Malware Mapping":
-    exec(open("pages/malware_mapping.py").read())
-    st.stop()
-elif page == "SDO Similarity Search":
-    exec(open("pages/SD0_similarity_search.py").read())
-    st.stop()
-elif page == "Malware Classifier":
-    exec(open("pages/malware_classifier.py").read())
+elif page == "Bundle Analyzer":
+    exec(open("pages/Bundle_Analyzer.py").read())
     st.stop()
 
-# If "STIX Analyzer" is selected, continue with main dashboard
+# Continue with main dashboard
 
 # ---------- THEME + CUSTOM UI STYLING ----------
 st.markdown("""
