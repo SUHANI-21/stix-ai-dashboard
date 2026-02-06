@@ -17,46 +17,28 @@ from modules.credibility_assessor import assess_credibility
 st.set_page_config(page_title="Dashboard", layout="wide")
 
 # ---------- CUSTOM NAVIGATION ----------
-st.sidebar.title("🔍 Navigation")
+pg = st.navigation({
+    "Main": [
+        st.Page("dashboard.py", title="Dashboard"),
+        st.Page("pages/Version_Detector_and_Validator.py", title="Version Detector and Validator"),
+    ],
+    "Threat Analysis": [
+        st.Page("pages/SDO_Similarity_Search.py", title="SDO Similarity Search"),
+        st.Page("pages/Attack_Mapping.py", title="Attack Mapping"),
+        st.Page("pages/Malware_Classifier.py", title="Malware Classifier"),
+    ],
+    "Assessment & Chat": [
+        st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment Module"),
+        st.Page("pages/STIX_Chat.py", title="STIX Chat"),
+    ],
+    "Tools": [
+        st.Page("pages/File_Browser.py", title="File Browser"),
+        st.Page("pages/Bundle_Analyzer.py", title="Bundle Analyzer"),
+    ]
+})
+pg.run()
 
-# Create expandable sections
-page = st.sidebar.radio(
-    "Main Pages",
-    ["Dashboard", "Version Detector and Validator", "Threat Analysis", "Credibility Assessment Module", "STIX Chat", "File Browser", "Bundle Analyzer"],
-    label_visibility="collapsed"
-)
 
-if page == "Dashboard":
-    pass  # Continue to dashboard
-elif page == "Version Detector and Validator":
-    exec(open("pages/Version_Detector_and_Validator.py").read())
-    st.stop()
-elif page == "Threat Analysis":
-    threat_page = st.sidebar.radio(
-        "Threat Analysis",
-        ["SDO Similarity Search", "Attack Mapping", "Malware Classifier"]
-    )
-    if threat_page == "SDO Similarity Search":
-        exec(open("pages/SDO_Similarity_Search.py").read())
-    elif threat_page == "Attack Mapping":
-        exec(open("pages/Attack_Mapping.py").read())
-    elif threat_page == "Malware Classifier":
-        exec(open("pages/Malware_Classifier.py").read())
-    st.stop()
-elif page == "Credibility Assessment Module":
-    exec(open("pages/Credibility_Assessment_Module.py").read())
-    st.stop()
-elif page == "STIX Chat":
-    exec(open("pages/STIX_Chat.py").read())
-    st.stop()
-elif page == "File Browser":
-    exec(open("pages/File_Browser.py").read())
-    st.stop()
-elif page == "Bundle Analyzer":
-    exec(open("pages/Bundle_Analyzer.py").read())
-    st.stop()
-
-# Continue with main dashboard
 
 # ---------- THEME + CUSTOM UI STYLING ----------
 st.markdown("""
