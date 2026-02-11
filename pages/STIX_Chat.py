@@ -34,6 +34,27 @@ def display_sources(sources):
                 """)
 
 def main():
+    st.set_page_config(page_title="STIX Chat", layout="wide")
+    
+    # Custom CSS for white background and black text
+    st.markdown("""
+    <style>
+        .stApp {
+            background-color: white;
+            color: black;
+        }
+        .stSidebar {
+            background-color: #f8f9fa;
+        }
+        .stSelectbox label, .stTextInput label, .stNumberInput label {
+            color: black !important;
+        }
+        .stMarkdown {
+            color: black;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
     st.title("🤖 STIX Intelligence RAG Chat")
     st.markdown("Ask questions about STIX formats, MITRE ATT&CK, threat intelligence, and more!")
     

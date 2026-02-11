@@ -1,7 +1,7 @@
 import json
 
 def convert_to_common_cti(file_path):
-    with open(file_path) as f:
+    with open(file_path, encoding='utf-8') as f:
         data = json.load(f)
 
     common_cti = []

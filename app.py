@@ -22,9 +22,9 @@ pg = st.navigation({
         st.Page("pages/Attack_Mapping.py", title="Attack Mapping"),
         st.Page("pages/malware_classifier.py", title="Malware Classifier"),
     ],
-    "Assessment & Chat": [
+    "Assessment ": [
         st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment"),
-        st.Page("pages/STIX_Chat.py", title="STIX Chat"),
+        #st.Page("pages/STIX_Chat.py", title="STIX Chat"),
     ],
     "Tools": [
         st.Page("pages/file_browser.py", title="File Browser"),

@@ -16,44 +16,57 @@ from modules.credibility_assessor import assess_credibility
 # ---------- THEME + CUSTOM UI STYLING ----------
 st.markdown("""
 <style>
-.stApp { background: radial-gradient(circle at top left, #1a0b2e, #0d0d1a); color: #e0e0ff; }
-.card {
-    background: linear-gradient(145deg, #1f1035, #140a24);
-    padding: 20px; border-radius: 15px;
-    box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
-    text-align: center;
+.stApp {
+    background-color: white;
+    color: black;
 }
-h1, h2, h3 { color: #c084fc; }
+.stSidebar {
+    background-color: #f8f9fa;
+}
+.stSelectbox label, .stTextInput label, .stNumberInput label, .stMultiSelect label {
+    color: black !important;
+}
+.stMarkdown {
+    color: black;
+}
+.card {
+    background: #f8f9fa;
+    padding: 20px; border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    border: 1px solid #dee2e6;
+}
+h1, h2, h3 { color: black; }
 label, .stMultiSelect label {
-    color: #ff66ff !important;
+    color: black !important;
     font-weight: bold !important;
     font-size: 21px !important;
 }
 div.stDownloadButton > button {
-    background-color: #c084fc !important;
-    color: black !important;
+    background-color: #007bff !important;
+    color: white !important;
     font-size: 25px !important;
     font-weight: bold !important;
     border-radius: 10px !important;
 }
 .detected-text {
-    color: #00e5ff;
+    color: #007bff;
     font-size: 21px;
     font-weight: bold;
 }
 .validation-text {
-    color: #00ff99;
+    color: #28a745;
     font-size: 21px;
     font-weight: bold;
 }
 .ai-explain-title {
-    color: #ff9ff3;
+    color: #6f42c1;
     font-size: 26px;
     font-weight: bold;
     margin-top: 20px;
 }
 .ai-explain-text {
-    color: #f1c40f;
+    color: #495057;
     font-size: 22px;
 }
 </style>
@@ -195,7 +208,7 @@ if uploaded_file:
     graph_col, side_col = st.columns([5, 1])
 
     with graph_col:
-        net = Network(height="750px", width="100%", bgcolor="#0d0d1a", font_color="white")
+        net = Network(height="750px", width="100%", bgcolor="white", font_color="black")
         net.set_options("""var options = {"physics":{"barnesHut":{"gravitationalConstant":-4000,"springLength":180}},"interaction":{"hover":true},"edges":{"arrows":{"to":{"enabled":true}},"smooth":{"type":"dynamic"}}}""")
 
         color_map = {

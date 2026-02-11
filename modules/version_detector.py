@@ -4,7 +4,7 @@ import xml.etree.ElementTree as ET
 def detect_stix_version(file_path):
     # Try JSON first (STIX 2.x)
     try:
-        with open(file_path) as f:
+        with open(file_path, encoding='utf-8') as f:
             data = json.load(f)
 
         if "spec_version" in data:

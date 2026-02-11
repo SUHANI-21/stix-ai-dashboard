@@ -1,0 +1,112 @@
+summary,id,type
+"The object contains a description of the Amazon Web Services (AWS) threat intelligence report. The publisher of this report is Amazon Web Services, who have STIXed the report to make it more compatible with other systems. Additionally, the report has been labeled as an organizational identity.
+
+According to the information available, there are no specific external references provided for this report. However, the primary motivation behind the creation of this report and its sophistication level are not specified.
+
+The report is categorized under the threat intelligence report's type and class, with a specification version of 2.1. Furthermore, the object contains several fields that specify the capabilities of this report, including tool types, threat actor types, malware types, kill chain phases, family status, and more.",identity--4de913b3-0851-4c36-8b48-c92ac094087d,identity
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. This AI-powered platform is used to generate STIX bundles from Open-Source Intelligence (OSINT) sources. The primary function of the TI Mindmap HUB is to provide a centralized hub for threat intelligence, allowing users to access and analyze various types of threats in one place.
+
+The platform's capabilities include generating STIX bundles, which are standardized formats for representing cyber threats. These bundles can be used by various stakeholders, including security analysts, incident responders, and threat hunters, to improve their threat detection and mitigation efforts.
+
+The TI Mindmap HUB is an organization-based identity, indicating that it represents a single entity or group rather than an individual. However, the platform's sophistication level and primary motivation are currently unknown, as this information is not provided in the data.
+
+The TI Mindmap HUB uses various tools and techniques to support its threat intelligence capabilities, including malware type analysis and kill chain phase identification. These features enable users to better understand the tactics, techniques, and procedures (TTPs) used by adversaries to launch cyber attacks.
+
+Overall, the TI Mindmap HUB is a powerful tool for organizations looking to improve their threat detection and mitigation efforts in today's complex cybersecurity landscape.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439,identity
+"The object contains information about an attack pattern known as OAST Callback Endpoint Provisioning. This threat actor set up out-of-band application security testing callback endpoints as part of their operational infrastructure, which are used to verify successful exploitation of vulnerabilities on target systems via separate communication channels.
+
+These endpoints effectively bypass traditional detection mechanisms and are triggered when a vulnerable target interacts with malicious input, confirming the presence of a vulnerability. The OAST callback domains are embedded in exploit payloads and serve as an additional layer of deception for attackers.
+
+The MadPot honeypots detect this infrastructure when attackers use it against decoy systems, allowing AWS active threat defense to rapidly identify and block these endpoints. This attack pattern is associated with a specific phase in the kill chain, which is ""initial-access"" according to the MITRE-Attack framework.
+
+Additionally, this attack pattern involves exploiting vulnerabilities in target systems using malicious inputs, indicating that it may be related to various types of malware or tools used by attackers. However, no specific information is available on the types of malware or tools associated with this attack pattern.",attack-pattern--77c48f40-b775-0ebb-ea8c-b4906a70448d,attack-pattern
+"The object contains a description of an attack pattern known as Automated Internet-wide Reconnaissance Scanning. This type of attack involves threat actors conducting large-scale, automated scans of the internet to identify potential targets. The scans are designed to look for exposed services, vulnerable software, and common misconfigurations in cloud workloads.
+
+To attract reconnaissance activity and capture patterns of scanning behavior, MadPot honeypots mimic vulnerable systems, thereby enabling threat actors to compile lists of viable targets for subsequent exploitation. This reconnaissance phase is critical for the attackers as it allows them to gather valuable information about their potential victims.
+
+The active threat defense system utilizes the visibility from MadPot to disrupt later stages of the attack lifecycle. The attack pattern falls under the ""reconnaissance"" phase of the MITRE Attack Matrix, which is a widely used framework for categorizing and analyzing cyber threats.",attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384,attack-pattern
+"The object contains information about an attack pattern known as ""Malware Distribution Server Provisioning"". Prior to launching attacks, threat actors establish dedicated servers to host malware payloads intended for delivery to victim systems. These servers are provisioned as part of the attackers' operational infrastructure and are used to distribute malicious files during exploitation attempts.
+
+MadPot honeypots detect interactions with these servers, enabling AWS active threat defense to extract indicators such as malicious domains and IP addresses, which are then used to create firewall rules to block future malware downloads. The attack pattern is classified under the MITRE-attack framework, specifically Technique T1583.006, indicating that it involves the use of dedicated servers for malware distribution.
+
+The primary goal of this attack pattern appears to be to establish a foothold in the victim system by distributing malicious files through these provisioned servers. However, the sophistication level and motivation behind this technique are currently unknown as this information is not provided in the data.
+
+It's worth noting that the Malware Distribution Server Provisioning attack pattern falls under the initial-access phase of the MITRE-attack framework, suggesting that it is an early-stage tactic used by threat actors to gain initial access to a system. The attack pattern does not specify any particular malware types or tools used in its execution.
+
+Overall, the object provides valuable insights into the tactics and techniques used by threat actors to distribute malicious files through dedicated servers, highlighting the importance of active threat defense measures such as MadPot honeypots and firewall rules to block future malware downloads.",attack-pattern--f13c2230-67f0-459d-d38e-2bb0fcec9a66,attack-pattern
+"The object contains information about a specific threat actor tactic, known as ""Command-and-Control Server Rotation"". This tactic involves threat actors frequently rotating their command-and-control (C2) infrastructure, changing IP addresses, domains, and URLs to evade detection. MadPot, a security solution, monitors these changes in real-time, and actively updates protection rules to block new C2 endpoints as they are identified.
+
+This dynamic adaptation is crucial in disrupting network communications between compromised systems and operators, even as attackers shift their infrastructure. The tactic is documented under the Mitre-Attack framework, which assigns a specific ID (T1583.001) to this technique.",attack-pattern--e40242aa-8d8d-a78d-8778-976a668a162a,attack-pattern
+"The object contains a description of an attack pattern related to embedding OAST callback URLs into exploit payloads. During the vulnerability confirmation phase, threat actors embed these URLs into various input fields on target systems, such as web forms, HTTP headers, API parameters, and other input fields. When the exploit is successful, the target system makes a request to the OAST callback endpoint, confirming the vulnerability to the attacker.
+
+The MadPot honeypots capture these interactions, allowing AWS active threat defense to identify and block malicious domains and URLs associated with OAST callbacks. This information highlights the importance of monitoring and blocking suspicious activity related to OAST callback URLs in order to prevent potential attacks.
+
+The attack pattern is categorized under the Mitre-Attack framework and specifically involves the ""initial-access"" phase. It does not provide further details on malware types, primary motivation, sophistication, or tool types associated with this attack pattern.",attack-pattern--2363e2a2-bf7b-1c66-e5c6-ae7008a7b7eb,attack-pattern
+"The object contains information about a type of attack pattern known as Multi-layered Network Blocking, which employs a multi-layered approach to block malicious network activity. This approach is inspired by the Swiss cheese model, where a malicious domain or IP is identified and rules are created to block various types of queries and connections, such as DNS, HTTP host headers, TLS connections using SNI, and direct IP connections.
+
+This system ensures that even if an attacker bypasses one layer, other layers can still detect and block the threat. The implementation is dynamic, with rules automatically updated as threat actor infrastructure evolves, allowing it to stay effective against changing threats.
+
+The attack pattern does not specify its primary motivation or sophistication level, but it is classified under a specific spec version and threat actor types are not provided. Additionally, there is no information available on the tool types used in this type of attack.",attack-pattern--f4ece66d-d622-b820-f424-daa4a876ddb5,attack-pattern
+"The object contains information about an attack pattern known as Malware Behavioral Analysis for Indicator Extraction. When malware payloads are delivered to MadPot honeypots, AWS executes the malicious code in isolated environments to observe its behavior. This analysis extracts indicators of compromise such as contacted domains, dropped files, and abused protocols. The extracted indicators are then rapidly validated and converted into firewall rules, which are deployed globally to block further malicious activity. This real-time behavioral analysis enables the defense system to keep pace with evolving malware variants and attack techniques.
+
+The attack pattern utilizes a technique from Mitre-Attack called T1059, which involves executing malicious code in isolated environments. The primary goal of this attack pattern is to extract indicators of compromise and use them to block further malicious activity. However, the specific motivation behind this attack pattern is not explicitly stated in the provided information.
+
+The object does not contain any additional information about the sophistication level or primary motivation of this attack pattern. It also does not provide any details about the tools or threat actors involved in executing this attack pattern.",attack-pattern--db30751c-a277-d520-b73f-502732bb8de9,attack-pattern
+"The object contains information about an attack pattern named ""Automated Threat Intelligence to Firewall Rule Conversion"". This attack pattern involves active threat defense that automatically translates threat intelligence gathered from MadPot honeypots into actionable firewall rules within 30 minutes. The process includes validation of indicators, performance testing, and global deployment to AWS Network Firewall.
+
+The automation ensures that newly identified threats are quickly blocked across all protected workloads, minimizing the window of opportunity for attackers to exploit vulnerabilities. This attack pattern is part of a more complex security framework that uses machine learning to identify potential threats in real-time.
+
+The kill chain phases associated with this attack pattern indicate that it is focused on defense-evasion tactics, suggesting that the primary goal is to evade detection by traditional security measures. The specific tools and techniques used are not explicitly stated, but the mention of threat intelligence gathering from honeypots suggests that advanced technologies are involved in identifying potential threats.
+
+Overall, this attack pattern represents a sophisticated approach to threat defense that leverages machine learning and automation to identify and block emerging threats quickly and efficiently.",attack-pattern--9cf78de1-140d-309d-7fb4-ef865026e87c,attack-pattern
+"The object contains information about an attack pattern known as ""Blocking Reconnaissance Scans"". This threat defense disrupts attacks at the reconnaissance stage by blocking network scans detected by MadPot honeypots. When scanning activity is observed, indicators such as source IP addresses and scanning patterns are used to create firewall rules that prevent further reconnaissance attempts. The early disruption of this type reduces the likelihood of attackers identifying vulnerable targets within the protected environment.
+
+This attack pattern belongs to the MITRE ATT&CK framework, specifically falling under the ""Reconnaissance"" phase. It utilizes indicators such as source IP addresses and scanning patterns to identify potential threats and take preventive measures to block further reconnaissance attempts.
+
+The primary goal of this attack pattern is not explicitly stated, but it serves as a crucial step in defending against attacks by disrupting reconnaissance efforts. The sophistication level of this attack pattern is not provided, making it challenging to assess its complexity or the level of expertise required to execute it.
+
+In terms of the tools used for execution, their specific types are also not specified, although they likely involve network scanning detection and response capabilities, such as those offered by MadPot honeypots.",attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384,attack-pattern
+"The object contains information about an attack pattern identified by AWS, which involves the use of threat actor infrastructure with similar fingerprints through wider internet scans. This technique maps attacker infrastructure, detects related domains, IP addresses, and other indicators that share behavioral or configuration similarities, and proactively blocks these related entities to extend protection beyond the initially observed attack vectors.
+
+The system uses a method called Automatic Infrastructure Fingerprinting and Similarity Detection, which is used to identify threat actor infrastructure with similar fingerprints. This technique involves mapping attacker infrastructure, detecting related domains, IP addresses, and other indicators that share behavioral or configuration similarities, and proactively blocking these related entities.
+
+The primary goal of this attack pattern is to extend protection beyond the initially observed attack vectors by identifying and blocking related entities that may be involved in future attacks. The sophistication level of this attack pattern is not specified in the provided information.
+
+The tool types used for this attack pattern are not mentioned in the provided data, but it can be inferred that AWS tools are likely involved in this process.
+
+Overall, the object contains details about an attack pattern that uses a specific technique to identify and block threat actor infrastructure with similar fingerprints.",attack-pattern--98249440-484b-45fd-82e6-f72b34d2067e,attack-pattern
+"The object contains information about a type of malware known as the OAST Callback Malware. This malware leverages out-of-band application security testing callback endpoints to verify successful exploitation and establish communication channels with threat actors, primarily for reconnaissance purposes. The malware is used to confirm vulnerabilities in targeted workloads. It falls under the category of trojan and remote-access Trojan (RAT) types.
+
+The primary function of this malware is to facilitate communication between the attacker's system and the compromised workload, allowing the threat actor to execute malicious commands or access sensitive information remotely. This malware is characterized by its ability to establish command-and-control (C2) channels and provide remote access capabilities, making it a sophisticated threat.
+
+It's worth noting that no specific motivation or sophistication level of the malware has been identified in this data, which could be due to limited information available.",malware--a3392e58-da1b-1b2b-4213-5b76194e6f32,malware
+"The object contains information about a generic threat actor group known as 'Generic Threat Actors'. This group is characterized by their rapid evolution of attack methodologies, which includes exploiting vulnerabilities, rotating infrastructure, and launching attacks against cloud workloads. The entities responsible for these actions are referred to as ""threat actors"" and are said to engage in reconnaissance, malware delivery, and command-and-control operations.
+
+The goals of the threat actor group include compromising cloud workloads, exploiting vulnerabilities, establishing persistent control via malware and C2 infrastructure, and evading detection through infrastructure rotation. The sophistication level of these threats is classified as advanced.
+
+It's worth noting that the primary motivation behind these actions is currently unknown.",threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5,threat-actor
+"The object contains information about a threat actor that attempts to bypass or evade AWS Network Firewall controls by rotating domains, shifting IP addresses, and modifying tactics to avoid detection and blocking of malicious communications. The primary goal is to evade detection and blocking of their malicious communications.
+
+The tool uses various techniques such as rotation of domains, shifting of IP addresses, and modification of tactics to achieve this goal. These techniques are used in the defense-evasion phase of the MITRE-attack kill chain.
+
+The tool types associated with this threat actor include information-gathering, exploitation, and defense-evasion. This suggests that the threat actor uses various methods to gather information about their targets, exploit vulnerabilities, and evade detection by the AWS Network Firewall.
+
+Unfortunately, no specific malware types are mentioned in the object, which could provide further insight into the tactics used by this threat actor.
+
+Overall, the object provides a general overview of the tactics used by this threat actor to evade detection and blocking by the AWS Network Firewall.",tool--48c89ec9-4003-cac0-0daa-bd3b5f5aa99c,tool
+"The object contains information about a threat detection service called Amazon GuardDuty. It is used to detect the activities of threat actors, but attackers may attempt to evade its monitoring or exploit its detection gaps during their operations.
+
+The tool's primary function is to identify potential security threats by analyzing network traffic and system logs. It uses various techniques, including machine learning algorithms and rule-based systems, to detect anomalies and alert users to potential security issues.
+
+Amazon GuardDuty can be used for information gathering and defense-evasion tactics. It can provide valuable insights into the behavior of threat actors and help organizations improve their overall security posture.
+
+The object does not contain any specific details about the malware types associated with this tool. However, it is clear that Amazon GuardDutymakes an effort to detect a wide range of potential threats, including those that may be attempting to evade its monitoring or exploit its detection gaps.
+
+Overall, the object provides valuable information about a threat detection service that can help organizations improve their security posture and stay one step ahead of potential threats.",tool--a588fbbe-d69a-2a1e-1b02-e7dd4caa0c2d,tool
+"The object contains a description of the OAST (Out-of-Band Application Security Testing) endpoints, which were set up by threat actors to verify successful exploitation through separate communication channels. These endpoints are typically used by legitimate security scanners for verification purposes but are being abused by malicious actors for reconnaissance and exploitation.
+
+The tool's primary use is not explicitly stated, but it seems that its intended purpose has been hijacked by attackers. The OAST endpoints are being exploited to gather information about the victim's systems and potentially launch further attacks.
+
+The tool's capabilities include information-gathering, exploitation, and vulnerability-scanning, indicating that it can be used for a variety of malicious purposes. However, the primary motivation behind its use is not clear from the available information.
+
+It is worth noting that the threat actor types associated with this tool are not specified in the provided data, which may indicate that the intelligence on this particular threat actor is limited or that it is still being investigated.",tool--9a71caa1-bc58-368f-483c-fdd15e5b131c,tool

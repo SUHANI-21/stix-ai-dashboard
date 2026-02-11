@@ -76,6 +76,27 @@ def extract_malware_context(bundle_data):
     return "\n".join(context_parts[:10])  # Limit context size
 
 def main():
+    st.set_page_config(page_title="STIX Bundle Analyzer", layout="wide")
+    
+    # Custom CSS for white background and black text
+    st.markdown("""
+    <style>
+        .stApp {
+            background-color: white;
+            color: black;
+        }
+        .stSidebar {
+            background-color: #f8f9fa;
+        }
+        .stSelectbox label, .stTextInput label, .stNumberInput label {
+            color: black !important;
+        }
+        .stMarkdown {
+            color: black;
+        }
+    </style>
+    """, unsafe_allow_html=True)
+    
     st.title("🔍 STIX Bundle Malware Analyzer")
     st.markdown("Upload any STIX bundle version and get AI-powered malware analysis")
     

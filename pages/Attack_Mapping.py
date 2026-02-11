@@ -19,19 +19,32 @@ st.set_page_config(page_title="Malware Inference Pipeline", layout="wide")
 # Style
 st.markdown("""
 <style>
-.stApp { background: radial-gradient(circle at top left, #1a0b2e, #0d0d1a); color: #e0e0ff; }
-.metric-card {
-    background: linear-gradient(145deg, #1f1035, #140a24);
-    padding: 20px; border-radius: 15px;
-    box-shadow: 0 0 15px rgba(155, 89, 182, 0.4);
+.stApp {
+    background-color: white;
+    color: black;
 }
-h1, h2, h3 { color: #c084fc; }
-.success { color: #2ecc71; }
-.warning { color: #f39c12; }
+.stSidebar {
+    background-color: #f8f9fa;
+}
+.stSelectbox label, .stTextInput label, .stNumberInput label {
+    color: black !important;
+}
+.stMarkdown {
+    color: black;
+}
+.metric-card {
+    background: #f8f9fa;
+    padding: 20px; border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border: 1px solid #dee2e6;
+}
+h1, h2, h3 { color: black; }
+.success { color: #28a745; }
+.warning { color: #ffc107; }
 .inference-box {
-    background: linear-gradient(145deg, #2d1b4e, #1a0f2e);
+    background: #f8f9fa;
     padding: 15px; border-radius: 10px;
-    border-left: 4px solid #c084fc;
+    border-left: 4px solid #007bff;
     margin: 10px 0;
 }
 </style>
@@ -41,13 +54,34 @@ st.markdown("# 🔬 Malware Technique Inference Pipeline")
 st.markdown("Convert STIX → Extract Malware → LLM Profile → Predict Techniques")
 st.markdown("---")
 
-# File uploader
-uploaded_file = st.file_uploader("Upload STIX file (JSON or XML)", type=["json", "xml"])
+# Check if file shared from dashboard
+if "shared_stix_bytes" in st.session_state and st.session_state.shared_stix_bytes:
+    st.success("✅ Using file from Dashboard")
+    st.caption(f"File: {st.session_state.shared_stix_name}")
+    
+    # Add button to upload different file
+    if st.button("📁 Upload Different File"):
+        st.session_state.shared_stix_bytes = None
+        st.session_state.shared_stix_name = None
+        st.rerun()
+    
+    with tempfile.NamedTemporaryFile(delete=False, suffix=Path(st.session_state.shared_stix_name).suffix) as tmp:
+        tmp.write(st.session_state.shared_stix_bytes)
+        file_path = tmp.name
+    
+    uploaded_file = type('obj', (object,), {'name': st.session_state.shared_stix_name})()
+else:
+    # File uploader
+    uploaded_file = st.file_uploader("Upload STIX file (JSON or XML)", type=["json", "xml"])
+    
+    if uploaded_file:
+        with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_file.name).suffix) as tmp:
+            tmp.write(uploaded_file.read())
+            file_path = tmp.name
+    else:
+        uploaded_file = None
 
 if uploaded_file:
-    with tempfile.NamedTemporaryFile(delete=False, suffix=Path(uploaded_file.name).suffix) as tmp:
-        tmp.write(uploaded_file.read())
-        file_path = tmp.name
     
     # Run pipeline
     with st.spinner("🔄 Running pipeline..."):
@@ -57,6 +91,21 @@ if uploaded_file:
             # Success message
             st.success("✅ Pipeline completed successfully!")
             
+            # Save analysis results to storage
+            if "storage" not in st.session_state:
+                from modules.storage import STIXStorage
+                st.session_state.storage = STIXStorage()
+            
+            files = st.session_state.storage.list_files()
+            file_id = None
+            for file_meta in files:
+                if file_meta.get('original_filename') == uploaded_file.name:
+                    file_id = file_meta.get('file_id')
+                    break
+            
+            if file_id:
+                st.session_state.storage.save_analysis_result(file_id, "attack_mapping", result)
+            
             # Tabs for different views
             tab1, tab2, tab3, tab4 = st.tabs(["📊 Summary", "🎯 Inference", "📦 Bundle", "📄 Original"])
             
@@ -65,16 +114,20 @@ if uploaded_file:
                 col1, col2, col3, col4 = st.columns(4)
                 
                 with col1:
-                    st.metric("STIX Version", result["formatted"]["Version"])
+                    version = result.get("formatted", {}).get("Version", "Unknown")
+                    st.metric("STIX Version", version)
                 
                 with col2:
-                    st.metric("Total Objects", result["formatted"]["Object Count"])
+                    obj_count = result.get("formatted", {}).get("Object Count", 0)
+                    st.metric("Total Objects", obj_count)
                 
                 with col3:
-                    st.metric("File Size", result["formatted"]["File Size (KB)"])
+                    file_size = result.get("formatted", {}).get("File Size (KB)", "Unknown")
+                    st.metric("File Size", file_size)
                 
                 with col4:
-                    st.metric("Status", result["formatted"]["Status"])
+                    status = result.get("formatted", {}).get("Status", "Unknown")
+                    st.metric("Status", status)
             
             with tab2:
                 st.markdown("### 🎯 Inference Results")

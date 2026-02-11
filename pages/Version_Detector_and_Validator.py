@@ -24,71 +24,69 @@ st.set_page_config(
 )
 
 # ========== STYLING ==========
-# ========== STYLING ==========
 st.markdown("""
 <style>
-    .stApp { 
-        background: radial-gradient(circle at top left, #1a0b2e, #0d0d1a); 
-        color: #e0e0ff; 
+    .stApp {
+        background-color: white;
+        color: black;
     }
-
+    .stSidebar {
+        background-color: #f8f9fa;
+    }
+    .stSelectbox label, .stTextInput label, .stNumberInput label {
+        color: black !important;
+    }
+    .stMarkdown {
+        color: black;
+    }
     .metric-card {
-        background: linear-gradient(145deg, #1f1035, #140a24);
+        background: #f8f9fa;
         padding: 20px;
         border-radius: 10px;
-        box-shadow: 0 0 15px rgba(155, 89, 182, 0.3);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
         margin: 10px 0;
+        border: 1px solid #dee2e6;
     }
-
     .success-card {
-        background: linear-gradient(145deg, #0d2818, #0a1810);
+        background: #d4edda;
         padding: 15px;
         border-radius: 10px;
-        border-left: 5px solid #2ecc71;
+        border-left: 5px solid #28a745;
         margin: 10px 0;
     }
-
     .error-card {
-        background: linear-gradient(145deg, #2d0d0d, #1a0808);
+        background: #f8d7da;
         padding: 15px;
         border-radius: 10px;
-        border-left: 5px solid #e74c3c;
+        border-left: 5px solid #dc3545;
         margin: 10px 0;
     }
-
     .warning-card {
-        background: linear-gradient(145deg, #2d1f0d, #1a1208);
+        background: #fff3cd;
         padding: 15px;
         border-radius: 10px;
-        border-left: 5px solid #f39c12;
+        border-left: 5px solid #ffc107;
         margin: 10px 0;
     }
-
-    h1, h2, h3 { color: #c084fc; }
-
+    h1, h2, h3 { color: black; }
     .stButton>button { 
-        background-color: #7c3aed; 
+        background-color: #007bff; 
         color: white; 
         font-weight: bold;
     }
-
-    /* 🔥 METRIC FIXES */
     div[data-testid="stMetricLabel"] {
-        color: #c084fc !important;
+        color: black !important;
         font-weight: 600;
     }
-
     div[data-testid="stMetricValue"] {
-        color: #ffffff !important;
+        color: black !important;
         font-size: 34px !important;
         font-weight: 800 !important;
     }
-
     div[data-testid="stMetricDelta"] {
-        color: #00ffcc !important;
+        color: #007bff !important;
         font-weight: 600;
     }
-
 </style>
 """, unsafe_allow_html=True)
 
@@ -311,6 +309,15 @@ if st.session_state.file_path and Path(st.session_state.file_path).exists():
                 
                 st.success(f"{conversion_result['message']}")
                 st.info(f"Saved with ID: {file_id}")
+                
+                # Save analysis results to storage
+                analysis_results = {
+                    "detection_result": st.session_state.detection_result,
+                    "validation_result": st.session_state.validation_result,
+                    "statistics": st.session_state.statistics,
+                    "conversion_result": conversion_result
+                }
+                st.session_state.storage.save_analysis_result(file_id, "version_validation", analysis_results)
             else:
                 st.error(f"{conversion_result['message']}")
     

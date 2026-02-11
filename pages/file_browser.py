@@ -12,6 +12,25 @@ from modules.storage import STIXStorage
 
 st.set_page_config(page_title="STIX File Browser", layout="wide")
 
+# Custom CSS for white background and black text
+st.markdown("""
+<style>
+    .stApp {
+        background-color: white;
+        color: black;
+    }
+    .stSidebar {
+        background-color: #f8f9fa;
+    }
+    .stSelectbox label, .stTextInput label, .stNumberInput label {
+        color: black !important;
+    }
+    .stMarkdown {
+        color: black;
+    }
+</style>
+""", unsafe_allow_html=True)
+
 # Initialize storage
 if "storage" not in st.session_state:
     st.session_state.storage = STIXStorage()

@@ -33,55 +33,41 @@ def generate_similarity_json(
     processed_count = 0
     found_similarities = 0
 
-    # Group by type for internal similarity search
-    type_groups = df.groupby('type')
-    
-    for stix_type, group_df in type_groups:
-        if len(group_df) < 2:
+    for _, row in tqdm(df.iterrows(), total=len(df), desc="Processing objects"):
+        incoming_id = row["id"]
+        stix_type = row["type"]
+        query_text = row["summary"]
+        processed_count += 1
+
+        if pd.isna(query_text) or pd.isna(stix_type):
+            print(f"[DEBUG] Skipping {incoming_id}: missing summary or type")
             continue
-            
-        print(f"[DEBUG] Processing {len(group_df)} objects of type {stix_type}")
-        
-        # Get embeddings for all summaries in this type
-        summaries = group_df['summary'].fillna('').tolist()
-        if not any(summaries):
-            continue
-            
-        embeddings = []
-        for summary in summaries:
-            if summary.strip():
-                embedding = embedder.embed_query(summary)
-                embeddings.append(embedding)
-            else:
-                embeddings.append([0.0] * 1024)  # Zero vector for empty summaries
-        
-        embeddings = np.array(embeddings, dtype="float32")
-        
-        # Normalize embeddings
-        faiss.normalize_L2(embeddings)
-        
-        # Calculate cosine similarity
-        similarity_matrix = np.dot(embeddings, embeddings.T)
-        
-        for i, (_, row) in enumerate(group_df.iterrows()):
-            obj_id = row['id']
-            similarities = similarity_matrix[i]
-            
-            # Get top similar objects (excluding self)
-            similar_indices = np.argsort(similarities)[::-1][1:top_k+1]
-            similar_scores = similarities[similar_indices]
-            
+
+        try:
+            matches = search_similar_objects(
+                query_text=query_text,
+                stix_type=stix_type,
+                top_k=top_k,
+                threshold=threshold
+            )
+
             similar_ids = []
-            for idx, score in zip(similar_indices, similar_scores):
-                if score > threshold:
-                    similar_ids.append(group_df.iloc[idx]['id'])
-            
+            for m in matches:
+                sid = extract_id(m["document"])
+                if sid and sid != incoming_id:
+                    similar_ids.append(sid)
+
             if similar_ids:
-                similarity_map[obj_id] = similar_ids
+                similarity_map[incoming_id] = list(set(similar_ids))
                 found_similarities += 1
-                print(f"[DEBUG] Found {len(similar_ids)} similar objects for {obj_id}")
-        
-        processed_count += len(group_df)
+                print(f"[DEBUG] Found {len(similar_ids)} similar objects for {incoming_id}")
+
+        except FileNotFoundError as e:
+            print(f"[DEBUG] No index found for type {stix_type}: {e}")
+            continue
+        except Exception as e:
+            print(f"[DEBUG] Error processing {incoming_id}: {e}")
+            continue
 
     with open(json_path, "w") as f:
         json.dump(similarity_map, f, separators=(",", ":"))
@@ -103,22 +89,16 @@ embedder = OllamaEmbeddings(model="mxbai-embed-large:latest")
 # =========================
 @lru_cache(maxsize=32)
 def load_index(stix_type):
-    # Try both possible paths
-    paths_to_try = [
-        ("indexes/{}.faiss".format(stix_type), "csv_files_with_summary_SDOs/{}.csv".format(stix_type)),
-        ("modules/indexes/{}.faiss".format(stix_type), "modules/csv_files_with_summary_SDOs/{}.csv".format(stix_type))
-    ]
-    
-    for index_path, csv_path in paths_to_try:
-        try:
-            index = faiss.read_index(index_path)
-            loader = CSVLoader(csv_path, encoding="utf-8")
-            docs = loader.load()
-            return index, docs
-        except (FileNotFoundError, RuntimeError):
-            continue
-    
-    raise FileNotFoundError(f"Index or CSV file not found for {stix_type}")
+    try:
+        index = faiss.read_index(f"indexes/{stix_type}.faiss")
+        loader = CSVLoader(
+            f"csv_files_with_summary_SDOs/{stix_type}.csv",
+            encoding="utf-8"
+        )
+        docs = loader.load()
+        return index, docs
+    except (FileNotFoundError, RuntimeError):
+        raise FileNotFoundError(f"Index or CSV file not found for {stix_type}")
 
 # =========================
 # SEARCH FUNCTION
@@ -151,7 +131,7 @@ def search_similar_objects(
     query_text: str,
     stix_type: str,
     top_k: int = 3,
-    threshold: float = 0.3   # Lowered default threshold
+    threshold: float = 0.3  # Lower threshold for better results
 ):
     try:
         index, docs = load_index(stix_type)
@@ -172,7 +152,7 @@ def search_similar_objects(
         print(f"[DEBUG] Match {rank+1}: score={score:.4f}, threshold={threshold}")
         if score < threshold:
             print(f"[DEBUG] Skipping match {rank+1}: score {score:.4f} < threshold {threshold}")
-            continue   # 👈 FILTER HERE
+            continue
 
         results.append({
             "rank": rank + 1,

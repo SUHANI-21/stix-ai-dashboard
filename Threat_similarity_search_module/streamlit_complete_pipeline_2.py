@@ -48,7 +48,7 @@ class BundleToSummaryPipeline:
         cleaned_csv = clean_csv(summary_csv)
         if cleaned_csv is None:
             return None
-        return generate_similarity_json(cleaned_csv, top_k=top_k)
+        return generate_similarity_json(cleaned_csv, top_k=top_k, threshold=0.3)
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SIDEBAR – INPUT
@@ -98,7 +98,7 @@ with st.sidebar:
                 st.error("Pipeline failed")
 
     else:
-        default_path = "/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/stix_bundle-18.csv"
+        default_path = "similarity_jsons/stix_bundle-18similar_ids.json"
         similarity_json_path = st.text_input(
             "Path to similarity JSON",
             value=default_path

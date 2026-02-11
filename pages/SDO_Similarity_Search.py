@@ -98,6 +98,26 @@ with st.sidebar:
                 st.session_state.pipeline_done = True
 
                 st.success("Similarity data ready for visualization")
+                
+                # Save analysis results to storage
+                if "storage" not in st.session_state:
+                    from modules.storage import STIXStorage
+                    st.session_state.storage = STIXStorage()
+                
+                files = st.session_state.storage.list_files()
+                file_id = None
+                for file_meta in files:
+                    if file_meta.get('original_filename') == bundle_file.name:
+                        file_id = file_meta.get('file_id')
+                        break
+                
+                if file_id:
+                    similarity_results = {
+                        "similarity_map": st.session_state.similarity_map,
+                        "top_k": top_k,
+                        "total_objects": len(st.session_state.selectable_ids)
+                    }
+                    st.session_state.storage.save_analysis_result(file_id, "similarity_search", similarity_results)
             else:
                 st.error("Pipeline failed")
 
