@@ -1,0 +1,113 @@
+summary
+"The object contains information about a phishing campaign attributed to Erudite Mogwai targeting Russia. 
+
+Erudite Mogwai is the name of the entity behind the phishing campaign, also known by another alias (""Erudite Mogwai""). The objective of this campaign is phishing.
+
+The description provided highlights that the phishing campaign is specifically targeted towards Russia and attributes it to Erudite Mogwai."
+"The object contains information about a malicious campaign involving high-volume login and bruteforce attempts targeting specific network infrastructure. The campaign, titled ""Recurring Credential-Based Attacks Targeting Palo Alto and SonicWall"", is characterized by the use of identical client fingerprints across multiple events and infrastructure, indicating continuity with tooling.
+
+The campaign was first observed in late September 2025, with activity resurging in December 2025. It appears to be a coordinated effort aimed at harvesting credentials and gaining unauthorized access to network infrastructure.
+
+The targeted locations and sectors are not specified, but the campaign primarily focuses on Palo Alto Networks GlobalProtect portals and SonicWall SonicOS API endpoints. The objective of this malicious activity is to exploit vulnerabilities in these systems, potentially leading to unauthorized access and compromise of sensitive data.
+
+It's worth noting that there are no explicit references to malware associated with this campaign, suggesting that the primary goal may be to manipulate user credentials rather than delivering malware directly."
+"The object contains information about a malicious campaign known as the ""Fantasy Hub MaaS Campaign"". This campaign involves the distribution of Fantasy Hub Android RAT via fake Google Play pages and phishing overlays. The primary targets of this campaign are financial institutions such as Alfa, PSB, Tbank, and Sber, as well as general Android users.
+
+The campaign leverages Telegram bot subscriptions and utilizes social engineering tactics to infect devices. This suggests that the attackers employed sophisticated tactics to evade detection and successfully spread malware among their targets.
+
+An external reference from Zimperium provides additional insight into this campaign, offering a detailed description of the Fantasy Hub Android RAT malware."
+"The object contains information about a multi-stage phishing and malware campaign targeting Indian businesses during the Income Tax Return (ITR) filing season. The attackers impersonate the Income Tax Department to deliver malicious content, including spear-phishing emails, fake portals, and malicious PDFs that install the NSecRTS.exe RAT.
+
+The objective of this campaign is to compromise Indian business endpoints for remote access, data exfiltration, and persistent control. This campaign utilizes a variety of tactics, including phishing and malware delivery, to achieve its goals."
+"The object contains information about a cyberespionage campaign attributed to the Lazarus APT group, known as Operation DreamJob - Gotta Fly. This campaign specifically targets companies involved in the production of Unmanned Aerial Vehicles (UAVs) for Ukraine.
+
+Gotta Fly leverages the ScoringMathTea RAT (Remote Access Trojan) for espionage and theft of sensitive technology related to UAV production. The exact nature of this theft is not specified, but it is clear that the campaign aims to steal valuable information from companies supplying UAVs to Ukraine.
+
+The campaign has been linked to ESET Research, with a relevant article available on their website providing further details about the operation."
+"The object contains information about a server-side request forgery (SSRF) campaign targeting large language model (LLM) infrastructure. The campaign was carried out by exploiting vulnerabilities in the deployment of LLMs, including Ollama's model pull functionality and Twilio SMS webhook integrations.
+
+Attackers injected malicious registry URLs and manipulated MediaUrl parameters to force servers to make outbound connections to attacker-controlled infrastructure. This allowed them to gain unauthorized access to the victim servers.
+
+The campaign used ProjectDiscovery's OAST infrastructure to confirm successful exploitation via callback validation. The attack took place over a period of several months, from October 2025 through January 2026, with a significant spike in activity during Christmas.
+
+Despite the campaign being relatively short-lived, it highlights the importance of securing LLM deployments against SSRF vulnerabilities. This can involve implementing robust security measures to prevent malicious registry URLs and MediaUrl manipulations."
+"The object contains information about a cyber attack campaign targeting Large Language Models (LLMs). The campaign, named ""LLM Enumeration campaign"", began on December 28, 2025, and involved the systematic probing of over 73 LLM model endpoints to build target lists for future exploitation.
+
+The attackers used innocuous queries to fingerprint exposed endpoints and generated over 80,000 sessions in eleven days. They targeted major model families that are compatible with OpenAI formats as well as Google Gemini API formats.
+
+The campaign's objective was to enumerate and fingerprint exposed LLM endpoints for future exploitation. The infrastructure used in this campaign overlaps with previous operations related to CVE scanning.
+
+Overall, the LLM Enumeration campaign highlights the growing threat landscape of Large Language Models and their potential vulnerabilities to cyber attacks."
+"The object contains a malicious campaign attributed to Kimsuky, which was active from 2024 through 2025. The campaign involved the distribution of KimJongRAT variants via spear-phishing, credential phishing, and cloud infrastructure attacks.
+
+The targeted entities included South Korean institutions and individuals, with evidence suggesting that the attackers exploited personal information for broad targeting. Specifically, the campaign featured merged PE and PowerShell workflows, as well as credential theft and data exfiltration.
+
+The objective of the campaign was espionage, credential theft, and data exfiltration against South Korean entities, indicating a malicious intent to compromise sensitive information."
+"The object contains information regarding a malicious campaign known as the Shai-Hulud v2 NPM Supply Chain Attack. This attack began in late November 2025 and involved compromising numerous npm packages, including those from prominent companies such as Zapier, ENS Domains, PostHog, and Postman.
+
+As a result of this compromise, massive amounts of data were exfiltrated, resulting in the creation of over 22,000 public GitHub repositories. Furthermore, destructive actions were taken on infected hosts, demonstrating the severity of the attack.
+
+The objectives of the Shai-Hulud v2 campaign were to exfiltrate sensitive information and propagate the malware through the npm supply chain, with a contingency plan to destroy files if propagation failed. The use of compromised npm packages as a vector for this attack highlights the vulnerability of software supply chains to cyber threats.
+
+In conclusion, the Shai-Hulud v2 NPM Supply Chain Attack is a significant example of a targeted campaign that leverages vulnerabilities in software supply chains to achieve malicious goals."
+"The object contains a detailed description of an ongoing phishing campaign attributed to North Korea. The campaign, titled 'Contagious Interview', is focused on targeting software developers for cryptocurrency theft. It leverages LinkedIn to carry out its nefarious activities through phishing and the deployment of the Tsunami-Framework."
+"The object contains information about a coordinated, automated campaign targeting enterprise VPN authentication infrastructure. This campaign involved large-scale scripted credential-based login attempts against Cisco SSL VPN and Palo Alto Networks GlobalProtect services.
+
+The attackers utilized centralized, cloud-hosted infrastructure primarily using the 3xK GmbH IP space. Notably, the campaign employed uniform request patterns and reused credentials, which suggests that it likely involved automated password spraying or credential stuffing.
+
+This malicious activity was first observed on December 11th, 2023, and was last seen on December 12th, 2023. The objective of this campaign appears to be identifying and exploiting exposed or weakly protected VPN authentication endpoints via automated credential-based attacks.
+
+It is essential for organizations to review their VPN authentication infrastructure and implement robust security measures to prevent such campaigns from succeeding in the future."
+"The object contains information about a malicious cybersecurity campaign known as Campaign Trio. The attackers were active from February to March 2025 and employed a sophisticated tactic of mass impersonation of three software brands: i4tools, Youdao, and DeepSeek.
+
+To achieve their objective, the attackers created over 2,000 domains using more than three IP addresses, with all domains hosted on these three IPs. This aggressive infrastructure deployment allowed them to deliver trojanized MSI installers to Chinese-speaking users, effectively compromising their systems.
+
+The malware delivered in this campaign is Gh0st RAT, a type of remote access Trojan (RAT) that enables attackers to remotely control compromised systems. The attackers used the impersonation tactic to gain the trust of their victims and avoid detection.
+
+According to external references, including Unit 42, Campaign Trio was identified as part of a larger impersonation campaign that delivers Gh0st RAT to users."
+"The object contains information about a malware campaign known as ""Campaign Chorus"". Launched in May 2025, this campaign expanded the use of impersonation to over 40 applications. It utilized wave-based domain registration and cloud-hosted payloads to achieve its goals.
+
+The campaign featured advanced multi-stage infection chains and DLL sideloading techniques to evade detection. Despite efforts to avoid detection, Campaign Chorus continued to target Chinese-speaking users.
+
+According to external references, the campaign has been documented by Unit 42, a cybersecurity organization that tracks malicious activities."
+"The object contains a detailed description of a SaaS supply chain attack, specifically targeting Gainsight-published applications integrated with Salesforce. The attackers maintained access for nearly three months by leveraging compromised OAuth tokens and stolen data from previous campaigns (Salesloft Drift) to exfiltrate sensitive information from hundreds of organizations."
+"The object contains information about a cybersecurity incident known as the Salesloft Drift Hack (2025). This campaign was identified as a precursor to the Gainsight breach. Attackers compromised Salesloft Drift, gaining access to stolen data which they then used to breach additional systems. As a result, this led to a supply chain compromise that affected multiple organizations.
+
+The objective of the hack was for the attackers to initially gain access and steal data, with the intention of using it in subsequent supply chain attacks."
+"The object contains a spear-phishing campaign attributed to a Chinese-origin threat actor, dubbed ""Operation Hanoi Thief"". The campaign specifically targets Vietnamese IT departments and HR recruiters using fake resume documents that pose as pseudo-polyglot types. 
+
+These fake resumes are part of a multi-stage infection chain that ultimately delivers the malicious LOTUSHARVEST DLL stealer malware. The objective of this campaign is to harvest browser credentials and history from targeted professionals, implying a significant threat to sensitive information.
+
+The campaign's focus areas include Vietnam as a primary target location for IT departments and recruitment firms. This indicates a sophisticated threat actor seeking to exploit specific vulnerabilities within these sectors."
+"The object contains information about a coordinated cyber campaign targeting macOS developers. The campaign is characterized by the distribution of malware, specifically Odyssey Stealer and AMOS, through fake download portals, clipboard manipulation, and command obfuscation. Notably, the operation impersonates trusted platforms such as Homebrew, TradingView, and LogMeIn to trick users into installing the malware.
+
+The campaign's infrastructure includes reuse of overlapping domains and SSL certificates, which suggests a level of sophistication and organization behind the attack. Furthermore, the use of fake download portals and command obfuscation techniques indicates that the attackers are attempting to remain stealthy and avoid detection.
+
+The primary objective of this campaign appears to be harvesting sensitive information from macOS users, particularly developers. The attackers seek to obtain system information, browser data, and cryptocurrency credentials, which can be used for malicious purposes such as identity theft or financial gain."
+"The object contains a detailed description of a coordinated campaign by Morocco-based threat actors. The campaign, dubbed the ""Jingle Thief Cloud-Based Gift Card Fraud Campaign,"" exploits cloud environments and Microsoft 365 to conduct gift card fraud through various tactics such as phishing, smishing, internal phishing, inbox manipulation, and rogue device registration.
+
+The campaign specifically targets global retail and consumer services enterprises, aiming to compromise cloud-based gift card issuance systems for financial gain. Threat actors have been using cloud environments and Microsoft 365 to launch their attacks, making it challenging for victims to detect and respond to the threat.
+
+The campaign is notable for its use of a range of tactics, including phishing, smishing, and internal phishing, which are designed to trick users into divulging sensitive information or downloading malicious software. Additionally, threat actors have been using rogue device registration to bypass security controls and gain unauthorized access to cloud-based systems.
+
+The campaign has been active since January 2021, with the first recorded incident occurring on that date. It has continued to evolve and adapt over time, with the last known incident occurring in May 2025."
+"The object contains information about a spearphishing campaign targeted at NGOs and Ukrainian government organizations. The campaign, known as ""PhantomCaptcha 2025"", was primarily active on October 8, 2025, although infrastructure preparation began as early as March 2025.
+
+The campaign's objective is to collect intelligence across various sectors in Ukraine, including humanitarian operations, reconstruction planning, and international coordination efforts. To achieve this goal, the attackers used a spearphishing tactic, delivering a remote access trojan (RAT) via weaponized PDFs and fake Cloudflare captcha pages.
+
+It appears that the campaign was designed to target organizations involved in humanitarian efforts and international coordination, suggesting that the attackers were trying to exploit vulnerabilities in these areas for malicious purposes."
+"The object contains information about a malicious campaign, specifically a type of Android spyware. 
+
+This campaign, known as Princess.apk Android Data Collection, is designed to distribute its malware via adult-themed lure sites. The primary objective of the campaign is to collect sensitive device and user data from victims in Ukraine.
+
+The campaign's operation started on October 9, 2025, but no specific details about its creation or modification are available. 
+
+In terms of detection, this campaign has been documented by SentinelOne, a cybersecurity company that tracks various types of malware and threats. The information provided is based on SentinelOne's documentation of the campaign."
+"The object contains information about a malware campaign named ""Herodotus Italy Device-Takeover Campaign"". This campaign is specifically designed to target Italian banking customers by utilizing the application name 'Banca Sicura' and connecting to the subdomain 'af45kfx.google-firebase.digital'. The threat actor, Herodotus, uses this method to gain unauthorized access to devices in Italy.
+
+The primary objective of this campaign is to achieve a device takeover and steal credentials from the affected users. The malware used in this campaign is referred to as ""Herodotus"" and has been linked to another malware instance by ThreatFabric."
+"The object contains information about a cyber threat campaign dubbed 'Herodotus'. This campaign primarily targets users in Brazil. 
+
+It is observed that the attackers employ the application name 'Modulo Seguranca Stone', masquerading as a security module for a payment acquirer, and connect to the subdomain 'g24j5jgkid.google-firebase.digital' to establish their presence. The threat actors' primary intention appears to be device takeover and credential theft with a focus on Brazilian banking customers.
+
+The malware associated with this campaign is referred to as 'Herodotus', with reference numbers including 'malware--'."

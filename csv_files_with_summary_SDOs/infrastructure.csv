@@ -1,0 +1,762 @@
+summary
+"The object contains information about a name server infrastructure associated with the domain torresdns[.]com. The infrastructure is used by a domain portfolio holder to serve nearly three thousand lookalike domains, including scotaibank[.]com and gmai[.]com. This service allows for visitor profiling and selective redirection.
+
+The infrastructure consists of a DNS type, indicating its primary function as a domain name resolution service. It does not appear to have any external references or connections to other systems beyond its association with the torresdns[.]com domain portfolio holder.
+
+It is worth noting that the object also contains information about potential lookalike domains and ports, but this data has not been verified or confirmed."
+"The object contains information about a domain portfolio actor's implementation of double fast flux DNS for parked domains. Specifically, it mentions the use of name servers such as koaladns[.]com, weaponizedcow[.]com, numbatdns[.]com, and others.
+
+These name servers are used in conjunction with other domain names to facilitate the parking of malicious domains, including ic3[.]org. The actor's use of fast flux DNS allows them to rapidly rotate between different IP addresses, making it difficult for security systems to track and block the malicious traffic.
+
+The object does not provide any detailed information about the organization or individual behind this activity, nor does it mention specific IP addresses or ports that are being used. However, it does highlight the importance of monitoring and tracking domain name changes and DNS activity in order to detect and prevent malicious activity.
+
+In summary, the object provides a general overview of the domain portfolio actor's tactics and techniques, but does not provide enough information to pinpoint specific actors, organizations, or IP addresses."
+"The object contains information about a malicious domain named Domaincntrol[.]com. This domain is a typosquat of GoDaddy's domaincontrol[.]com and serves to capture DNS traffic from misconfigured domains. Its primary function is to target Cloudflare DNS users for device fingerprinting and redirection to malicious content.
+
+The domain has been identified as an infrastructure type, specifically in the realm of DNS (Domain Name System). This indicates that Domaincntrol[.]com plays a role in manipulating DNS requests and responses.
+
+Furthermore, the object provides detailed information about the domain's characteristics, including its labels, ports, and type. However, some essential details such as IP addresses and location are missing from the data.
+
+Notably, the domain appears to be used for malicious purposes, indicating that it may pose a risk to users who interact with it. As such, it is crucial to exercise caution when dealing with this domain and take necessary precautions to protect against potential threats.
+
+Overall, the object provides valuable insights into Domaincntrol[.]com's functionality and behavior as a malicious domain, emphasizing the importance of monitoring and mitigating its activities."
+"The object contains information about Traffic Distribution Systems (TDS), which are used to funnel traffic from parked domains to malicious content. The TDSs mentioned include Zeropark, Trillion Direct Search, ExplorAds, AdventureFeeds, and several other third-party advertising platforms and services.
+
+These systems are categorized as part of the ""advertising-network"" type of infrastructure, indicating their role in facilitating online advertising and content distribution. The described infrastructure is associated with malicious activities, such as redirecting users to malicious content through parked domains.
+
+The detailed breakdown includes descriptions and specifics about the entities involved, but most of the metadata fields (e.g., timestamps, domain names, IP addresses) are not provided due to their values being missing or unspecified (NaN)."
+"The object contains information about Malicious Parked Domains, which are used to deliver scams, malware, and unwanted content to users. These domains are parked at various locations, including scotaibank[.]com, ic3[.]org, gmai[.]com, domaincntrol[.]com, and others.
+
+The specific domains mentioned include chatterjamtagbirdfile[.]monster, sportswear[.]homes, and many more. These domains are used to host malicious content, such as scams and malware, and are often associated with phishing attacks or other types of cyber threats.
+
+The object notes that these parked domains are not legitimate and are instead used by attackers to spread unwanted content and engage in malicious activities. The information provided serves as a warning to users about the potential risks associated with these domains.
+
+Overall, the object contains valuable insights into the tactics used by cyber attackers to spread malware and engage in other types of malicious activity."
+"The object contains information about a specific hosting infrastructure operated by 3xK GmbH. The description of this infrastructure is that it was used as the source of credential-based attacks on Palo Alto Networks GlobalProtect portals in December 2025. No further details are available regarding the origins or nature of these attacks, and no additional information has been provided."
+"The object contains information about an Autonomous System Number (ASN) called NForce Entertainment B.V. (AS43350). This ASN was used as part of credential-based attacks targeting GlobalProtect portals between late September and mid-October 2025.
+
+The ASN is associated with a specific organization, but the exact name of the organization is not specified in the provided data. However, it is mentioned that the ASN was used for malicious purposes, specifically for credential-based attacks on GlobalProtect portals.
+
+There is no information available about the physical location or IP addresses associated with this ASN, as they are listed as ""nan"" (not a number). The object also does not provide any external references or links to additional information about this ASN."
+"The object contains information about an Autonomous System Number (ASN) that was used in credential-based attacks targeting GlobalProtect portals. The ASN is identified by the unique identifier 'AS215929'. This specific ASN was utilized as part of a malicious campaign from late September to mid-October 2025.
+
+According to the provided details, this ASN falls under the organization ""Data Campus Limited"". However, no additional information about the organization is available in the given data."
+"The object contains information about an Autonomous System Number (ASN) associated with a credential-based attack targeting GlobalProtect portals. The ASN is identified as AS209588, which is used by Flyservers S.A. The object provides context about the incident, indicating that it occurred in late September to mid-October 2025.
+
+Unfortunately, no specific details are available on the location, infrastructure types, or external references related to this ASN. However, it's noted that the object is categorized as an ""infrastructure"" type, suggesting a connection to network or system infrastructure."
+"The object contains information about an Autonomous System Number (ASN) used as part of credential-based attacks targeting GlobalProtect portals. 
+
+This ASN, identified by the code 'AS211632', is associated with a company called Internet Solutions & Innovations LTD. 
+
+The ASN was first observed in late September to mid-October 2025, and it is linked to malicious activities aimed at exploiting vulnerabilities in the GlobalProtect portal system."
+The object contains a Solana blockchain wallet address that functions as a command and control channel for Rust implants. This address is utilized to facilitate communication between the implants and the attacker's infrastructure. The address itself is utilized as part of various operations related to command and control channels in Rust-based attacks.
+"The object contains a command and control server that is used to deliver next-stage payloads and encrypted JavaScript blobs. This server has the following characteristics:
+
+It uses an IP address of 217.69.11.60 as its primary point of entry.
+
+The domain name associated with this server is unknown, but there are three external references listed, which include URLs such as http://217.69.11.60/uVK7ZJefmiIoJkIP6lxWXw== and http://217.69.11.60/get_arhive_npm/karMkkT87qcssRoaHL1zYQ==.
+
+The server is classified as a command and control (C2) server, which suggests that it is used for malicious purposes such as controlling infected devices or delivering malware payloads.
+
+There are no other details available about the location of this server, but it has been previously seen in action."
+"The object contains information about a specific Google Calendar event that has been identified as a potential Command-and-Control (C2) channel. The event is used as a fallback C2 channel, which means it can be relied upon to receive malicious communications.
+
+The event's title contains invisible Unicode characters that are designed to hide the C2 address associated with the event. This makes the event appear legitimate and innocuous at first glance.
+
+The object's attributes indicate that the Google Calendar event is classified as a command-and-control infrastructure, which suggests that it is being used for malicious purposes. The event's infrastructure types include a single category: ""command-and-control"".
+
+There are no associated IP addresses or ports linked to this event, which may indicate that the C2 channel operates by relying on legitimate network traffic or by using alternative communication protocols.
+
+The object does not contain any external references or links to other malicious actors, which suggests that it is an isolated incident. However, its classification as a command-and-control infrastructure indicates that it should be monitored and investigated further."
+"The object contains a C2 (Command and Control) infrastructure for the LeakyStealer malware. The infrastructure is composed of IP address 45.151.62.120, which communicates on ports 22, 80, and 443.
+
+The domains associated with this infrastructure are everstead.group and ip-ptr.tech. These domains are used to host the LeakyStealer C2 server.
+
+External references to this infrastructure can be found on Shodan, a platform that provides real-time information on publicly accessible devices and services. The URL for the host is https://www.shodan.io/host/45.151.62.120.
+
+The labels assigned to this object are ""C2"" and ""LeakyStealer"", indicating its nature as a Command and Control infrastructure for the LeakyStealer malware.
+
+No information is available on the location of this infrastructure, and no details are provided about other relevant infrastructure types or hosts."
+"The object contains information about a distribution infrastructure associated with the LeakyStealer malware. The infrastructure includes the paycnex.com domain and an MSI installer file named dynatrc.php.
+
+The labels applied to this infrastructure suggest that it is related to the distribution of the LeakyStealer malware, which is considered a threat actor.
+
+There is no additional information available about the infrastructure itself, such as its IP address or ports used. The x-infrastructure domains and other relevant fields are empty, indicating a lack of information about the specific components of this infrastructure.
+
+Overall, the primary takeaway from this object's metadata is that it represents a distribution point for LeakyStealer malware, without providing further details on the infrastructure's configuration or functionality."
+"The object contains information about an infrastructure used by SmartApeSG, a command and control server previously hosted on Stark Industries. The infrastructure was later transitioned to Hivelocity and HostZealot.
+
+It appears that the object's description highlights its historical background, indicating that it was initially associated with Stark Industries before being relocated to other hosting services. This suggests that the infrastructure has undergone changes in its operational settings and potential purposes over time.
+
+The provided information does not include specific details about the type of infrastructure or its functions; however, it provides a general context for understanding the object's role and background within SmartApeSG's operations."
+"The object contains a cluster of command and control servers for NetSupport RAT (Remote Access Trojan) that serve as the central infrastructure for malicious communications between infected devices and the attackers' servers. 
+
+These C2 (command and control) servers are identified across multiple IP addresses and domains, with some remaining active for over a year. The presence of these servers indicates ongoing malicious activity, as they continue to receive victim communications.
+
+The NetSupport RAT C2 Cluster is comprised of various infrastructure types, although the specific types are not explicitly stated in the data provided. The cluster also appears to utilize ports, suggesting that communication between infected devices and the attackers' servers occurs through established network connections.
+
+Furthermore, this object contains information about its domains, IP addresses, and locations, which may aid in tracking and identifying malicious activities conducted by the NetSupport RAT threat actors."
+"The object contains information about a Command and Control (C2) server infrastructure associated with the Quasar RAT. The infrastructure is composed of servers that communicate over specific ports using TCP protocols.
+
+The infrastructure includes 193.107.109.76 and other associated hosts, suggesting a network communication between these devices. However, the exact nature of this communication and how it relates to the Quasar RAT's operations are not specified in the provided data.
+
+A description of the C2 server is provided, but no further details about its functionality or purpose are given. It is unclear what specific tasks the servers perform on behalf of the Quasar RAT.
+
+There is limited information available about the infrastructure's location and organization, suggesting that these aspects may be considered sensitive or classified."
+"The object contains information about a set of Moldovan IP addresses used for Command and Control (C2) management activities. These IPs are hosted by MivoCloud and are utilized to establish connections to SmartApeSG and NetSupport RAT clusters. The purpose of these C2 management hosts is to facilitate communication between the attackers and their command and control infrastructure.
+
+The host's description is attributed to an 'identity--' entity, indicating that it was created or managed through a system or process referred to as ""Identity"". Unfortunately, the majority of the fields in this object are not filled in, providing little further detail about the scope or nature of these C2 management hosts."
+"The object contains information about a malicious infrastructure used for cryptocurrency scams and impersonation of legitimate companies. It is associated with several domain names, including ubsglobalmarkets.com, k-trades.com, and rivosgroup.com. These domains were likely used to create fake services that imitated those of reputable companies.
+
+The infrastructure in question appears to be related to the creation of phishing sites or other types of scams aimed at tricking individuals into divulging sensitive information or sending money. The presence of this malicious infrastructure suggests a sophisticated level of planning and execution on the part of the perpetrators.
+
+It is worth noting that the specific details of the infrastructure, such as its IP addresses and ports, are not provided in this summary. However, it is clear that this object represents a significant threat to individuals and organizations who may be targeted by these scams."
+"The object contains information about compromised legitimate servers used by the Sandworm threat actor for proxying traffic, exfiltrating data, and reconnaissance. These servers were observed accessing router management interfaces and attempting authentication to online services.
+
+These compromised servers are part of an infrastructure that includes multiple IP addresses, with some being used as proxies for threat actor traffic, while others were used for staging purposes, such as exfiltrating WatchGuard configuration files. One of the long-term infrastructure components was observed being targeted for reconnaissance and targeting operations.
+
+The compromised servers are described as legitimate, meaning they were previously used by a reputable organization or individual, but have since been exploited by the Sandworm threat actor for malicious purposes. The compromised servers' annotations provide context on their usage, including their first seen date and last seen date, which indicates when they were initially detected and most recently observed.
+
+The information about these compromised servers can be useful for tracking and understanding the activities of the Sandworm threat actor, as well as identifying potential vulnerabilities in networks that may have been targeted by this group."
+"The object contains information about a Command-and-Control (C2) infrastructure associated with the ToneShell backdoor. This infrastructure is used for remote access and data exfiltration by malicious actors.
+
+The infrastructure has been observed to have connections to various domains, including avocadomechanism.com and potherbreference.com. It is also mentioned that this C2 server uses a kernel-mode rootkit developed by Honeymyte, which was discovered by Kaspersky Securelist.
+
+The infrastructure is categorized as a command-and-control server, indicating its role in facilitating malicious activities such as remote access and data exfiltration."
+"The object contains information about a compromised website infrastructure that uses fake Cloudflare Turnstile pages to deliver phishing lures. The websites employ conditional loading and bot protection to evade detection.
+
+The compromise is achieved by injecting legitimate websites with malicious content, which allows them to selectively target victims and distribute ConsentFix phishing lures. This type of attack takes advantage of the trust placed in these websites by their users, making it difficult to detect.
+
+Some key characteristics of this compromised infrastructure include:
+
+- It uses fake Cloudflare Turnstile pages to deliver phishing lures
+- It employs conditional loading and bot protection to evade detection
+- It selectively targets victims with legitimate-looking websites
+
+Overall, this compromised website infrastructure poses a significant threat to online security, particularly for individuals who may unknowingly interact with these malicious sites."
+"The object contains information about a set of domains used in GhostPairing attacks to host fake Facebook-style viewer pages. These domains are used to proxy pairing requests and display lure messages. Examples of these domains include photobox[.]life, postsphoto[.]life, yourphoto[.]life, photopost[.]live, yourphoto[.]world, top-foto[.]life, and fotoface[.]top.
+
+These domains are part of a larger attack vector known as GhostPairing, which is used to trick users into installing malicious software. The domains listed above are specifically designed to mimic the look and feel of real Facebook-style viewer pages, but in reality, they are fake and are being used to steal user data or spread malware.
+
+The domain names were identified through external references, including a blog post from Gen Digital that details information about GhostPairing attacks on WhatsApp."
+"The object contains information about a command and control server used by the HijackLoader malware for remote control and data exfiltration. The server is identified by its domain name, which is associated with the malware's operations.
+
+The server is categorized as a command-and-control infrastructure type, indicating that it serves as a central hub for malicious activities. It has been linked to data exfiltration, suggesting that it is used to transfer sensitive information out of the compromised network or system.
+
+The server is accessible through specific ports, with port 4448 being the primary entry point. This port number is commonly associated with command-and-control communications in malware operations.
+
+The object also contains information about its location, which could potentially provide insights into the geographical distribution of HijackLoader infections. However, this information is currently not available due to missing data.
+
+In summary, the object represents a command and control server used by the HijackLoader malware for remote control and data exfiltration. It has been identified through its domain name and port number, and it falls under the category of command-and-control infrastructure types."
+"The object contains information about a set of Command-and-Control (C2) servers used by the MgBot implant to maintain communication and control over compromised systems. The infrastructure includes multiple long-lived IP addresses.
+
+The infrastructure is categorized as C2 in nature, indicating its use for malicious purposes such as remote command and control over compromised systems.
+
+There is no information available on the domain name associated with this infrastructure, nor are there any external references linking to it.
+
+The first sighting of this infrastructure occurred on November 1st, 2022, while the most recent sighting was on November 30th, 2024. The object's labels and organization remain unknown.
+
+There is no information available on the ports used by this infrastructure or its location."
+"The object contains information about a Command and Control (C2) infrastructure used by the Evasive Panda adversary group for adversary-in-the-middle attacks. The infrastructure is comprised of servers used for DNS poisoning and payload delivery.
+
+This C2 infrastructure is categorized as a command-and-control type, indicating its primary function is to receive commands from attackers and execute malicious actions. It has been associated with DNS poisoning and payload delivery activities, which are common techniques used by adversary groups to compromise networks and steal sensitive information.
+
+The infrastructure is likely to be operated by Evasive Panda, an adversary group known for its sophisticated cyberattacks against organizations in the US, Europe, and Asia. The use of C2 infrastructures like this one enables the adversary group to maintain control over compromised systems and carry out malicious activities without being detected.
+
+Overall, this information provides valuable insights into the tactics, techniques, and procedures (TTPs) used by Evasive Panda and other adversary groups in their cyberattacks."
+"The object contains information about a Command and Control (C2) server infrastructure associated with the SantaStealer malware family. This C2 server serves as a central hub for exfiltrating stolen data. The data is transmitted in compressed 10 MB chunks over unencrypted HTTP to a hardcoded /upload endpoint.
+
+The servers are operated by an unknown entity, but an advertisement on underground forums suggests that they are being offered for sale by the creators of SantaStealer. As a result, the malware family has gained significant attention from cybersecurity researchers, who have documented their activities in various reports and blog posts.
+
+One such report comes from Rapid7, which highlights the emergence of SantaStealer as a new and ambitious infostealer. This report provides context to the SantaStealer C2 servers, indicating that they are an integral part of the malware's operation.
+
+In terms of technical details, the servers use specific ports (6767) and are associated with IP addresses such as 31.57.38.244 and 80.76.49.114. These IP addresses have been linked to the SantaStealer C2 servers through various sources, including observable references and external reports.
+
+Overall, the object provides valuable insights into the operational dynamics of the SantaStealer malware family and their associated Command and Control servers."
+"The object contains information about a specific infrastructure node used by the Lazarus Group to host various malicious tools and systems. The node is referred to as 'Lazarus Open Directory Staging Infrastructure' and is classified as an 'infrastructure'.
+
+This infrastructure node has been utilized for hosting credential theft toolkits, remote access Trojans (RATs), and other offensive tools in open directories, allowing for rapid deployment. It appears that the Lazarus Group has used this infrastructure to stage their malicious activities.
+
+The specific characteristics of this infrastructure include its type, which is identified as 'hosting-target-listener'. Additionally, it is mentioned that the node's aliases are 'Tool Staging Nodes', suggesting that it serves a purpose related to the staging and deployment of tools.
+
+It is worth noting that the Lazarus Group is known for their involvement in various cybercrime activities, including ransomware attacks and data breaches. The use of this infrastructure by the group highlights the importance of monitoring and tracking such malicious activity.
+
+Overall, the information provided about this infrastructure node offers insights into the tactics and techniques used by the Lazarus Group to facilitate their nefarious activities."
+"The object contains information about a cluster of virtual private server (VPS) hosts provisioned by the Lazarus Group. These hosts are used to deploy identical Fast Reverse Proxy (FRP) binaries for covert command and control purposes.
+
+The FRP nodes, as they are also known, serve as part of a larger infrastructure designed to facilitate malicious activities. The specific purpose of these nodes is to enable covert communication between attackers and their commands, making it difficult to detect and track the malicious activity.
+
+The nodes are provisioned by Lazarus Group, a notorious cybercrime organization known for its involvement in various types of malicious activities, including ransomware attacks and cryptocurrency thefts."
+"The object contains information about a Certificate Cluster infrastructure, which utilizes the same TLS certificate for RDP and HTTP(S) operations. The cluster is designated for operator access and staging purposes.
+
+The infrastructure is categorized under two types: hosting-target-listener, indicating its role in facilitating communication between hosts and target systems.
+
+Key features of this Certificate Cluster include:
+
+- It uses a shared TLS certificate with a subject common name of 'hwc-hwp-7779700', enabling secure connections for RDP and HTTP(S) operations.
+- Operator access and staging are enabled through the utilization of this certificate cluster.
+
+Notable attributes include:
+
+- Domain names associated with the Certificate Cluster are not specified, but it is mentioned that they share a common TLS certificate.
+- IP addresses and ports linked to the infrastructure are also not provided in the given information."
+"The object contains information about a malicious infrastructure associated with the domain name ""jsonkeeper.com"". 
+
+The domain name has been identified by threat actors to be used for hosting and delivering obfuscated malware payloads. 
+
+This legitimate JSON storage service has been exploited for malicious purposes, posing a risk to users who may unknowingly download or interact with infected files."
+"The object contains information about a threat actor's use of the legitimate JSON storage service ""JSONsilo"" for malicious activities. Specifically, it was discovered that ""JSONsilo"" is being abused by threat actors for malware hosting and delivery.
+
+Additionally, the infrastructure type associated with this incident is identified as ""hosting-middleware""."
+"The object contains information about an infrastructure entity related to the npoint.io service. The entity is described as a legitimate JSON storage service, but it has been used for malicious purposes in the Contagious Interview campaign.
+
+Specifically, the infrastructure is categorized under the type of hosting-middleware, indicating that it provides services related to middleware functions. However, its primary use case appears to be hosting malicious payloads, which raises concerns about potential security risks.
+
+The service is not explicitly linked to any autonomous system or organization, and its domain name is currently unknown. There are no known external references or labels associated with this infrastructure entity.
+
+Overall, the object provides a general overview of the npoint.io service, highlighting its dual nature as both a legitimate storage service and a potential vector for malicious activities."
+"The object contains information about a Pastebin URL used by InvisibleFerret for retrieving additional payloads and encoded messages. 
+
+Pastebin is a hosting-middleware infrastructure that was identified based on its aliases, which include pastebin.com. The domain name associated with this infrastructure is not available.
+
+This infrastructure is believed to be created by the entity referred to as ""identity--"", but more information about the creator is not provided. 
+
+The object description provides context about the purpose of Pastebin in relation to InvisibleFerret's activities, indicating that it serves a specific function for payload and message retrieval.
+
+No information is available regarding external references, location, or organization related to this infrastructure.
+
+Additionally, no details are available on ports, labels, or other attributes of this infrastructure."
+"The object contains information about a cloud hosting service used for hosting additional payloads during the Contagious Interview campaign. The service is named ""Railway"". It belongs to the category of cloud services.
+
+The main details of this infrastructure are as follows:
+
+- Railway is a cloud hosting service.
+- It was created by a reference identified as 'identity--'.
+- The primary purpose of this service is for serving additional payloads during the Contagious Interview campaign.
+
+Other key aspects include its type and labels, which both classify it under infrastructure. However, there seems to be a lack of information regarding its autonomous system number, confidence level, creation date, domain names or addresses, external references, first seen timestamp, IP address or port details, last seen timestamp, organization, location, or onion details.
+
+Overall, the available data suggests that Railway is an essential component in hosting and serving additional payloads for a specific campaign, but it lacks comprehensive information on its operational specifics."
+"The object contains information about a TOR hidden service address used by TsunamiInstaller for downloading additional payloads. The address is identified as 'n34nr3z26f3jzp4ckmwuv5ipqyatumdxhgjgsmucc65jac56khdy5zqd.onion'. This particular address falls under the category of anonymization.
+
+It appears that this TOR hidden service was first discovered and documented by a specific entity referred to as 'identity--', although the exact nature of their involvement is unclear. The object does not provide any additional information about its creation, modification, or last observed instance.
+
+In terms of external references, the object includes links to various sources that may be relevant for further study or analysis. However, these details are not explicitly stated within the provided metadata."
+"The object contains information about a malicious infrastructure used by the BeaverTail and InvisibleFerret malware. 
+
+It appears to be a collection of IP addresses used as command and control servers for these malware campaigns. The infrastructure type is specifically classified as a command-and-control server. 
+
+The origin of this infrastructure is unknown, but it has been identified as part of a larger network of malicious activity."
+"The object contains information about malicious repositories hosted on GitLab and GitHub. These repositories are found to be hosting trojanized code projects used in the Contagious Interview campaign.
+
+The specific details of these malicious repositories include:
+
+- They use GitLab.com and Github.com as their aliases.
+- The infrastructure type associated with them is hosting-middleware.
+- There is no information available on the autonomous system, domain name, or external references related to this infrastructure."
+"The object contains information about a malicious infrastructure used by the GlassWorm malware family. Specifically, it refers to command and control servers and blockchain wallets utilized for payload delivery and exfiltration purposes.
+
+The observed domains associated with this infrastructure are not explicitly mentioned in the provided data, although the x_infrastructure_hosts list includes IP addresses that can be linked back to these domains (e.g., 45.32.151.157)."
+"The object contains information about a cyber threat infrastructure known as AuraStealer C2 Infrastructure. This infrastructure serves as the command and control (C2) server for an infamous malware campaign that has been linked to a set of dedicated servers for configuration retrieval, data exfiltration, and other malicious activities.
+
+The web-based panel of this infrastructure is built on the Tabler template, supporting both Russian and English interfaces. Notably, it appears that the developers of AuraStealer utilized a unique approach in their design, using a combination of specific domain names to facilitate data collection and transmission.
+
+Some key details about this cyber threat include:
+
+- The use of a distinct set of command and control servers for configuration retrieval, data exfiltration, and other malicious activities.
+- A web-based panel built on the Tabler template with support for both Russian and English interfaces.
+- Utilization of specific domain names to facilitate data collection and transmission.
+- Association with malware campaigns, highlighting its potential role in supporting cyber threats.
+
+In terms of the infrastructure's attributes, it is classified under the type 'infrastructure', with labels such as 'c2' (command-and-control) and 'malware-infrastructure'. It does not have any autonomous system number and lacks external references to independent sources."
+"The object contains information about a command and control (C2) infrastructure used by the ShadowV2 malware. 
+
+The C2 infrastructure is comprised of a domain named silverpath.shadowstresser.info and an IP address 81.88.18.108. The latter is associated with the malware's malicious activities.
+
+FortiGuard Labs has identified this infrastructure as part of their threat research, highlighting its connection to ShadowV2 attacks on IoT devices.
+
+The C2 infrastructure falls under the category of command-and-control type of threats.
+
+No additional information regarding locations or organizations are available at this time."
+"The object contains information about a command and control (C2) infrastructure used by UAT-9686. This infrastructure is utilized for various malicious activities, including reverse SSH tunnels and HTTP-based backdoor communications.
+
+The infrastructure consists of multiple IP addresses, which are known to be associated with this C2 activity: 172.233.67.176, 172.237.29.147, and 38.54.56.95. These IP addresses are utilized for establishing communication between the command and control servers and the compromised devices.
+
+The infrastructure is categorized as a type of ""infrastructure"" and is labeled with various tags such as ""c2"", ""reverse-ssh"", and ""http"". This categorization suggests that this C2 infrastructure is used to facilitate malicious activities involving reverse SSH tunnels and HTTP-based backdoor communications.
+
+The object also contains references to external sources, including a report by Cisco Talos."
+"The object contains detailed information about an infrastructure related to the Albiriox malware. Specifically, it describes a Command-and-Control (C2) server used by the malware.
+
+The C2 server is based on persistent TCP socket connections for communication with its command and control center. This information suggests that the server operates as part of a larger network of infected systems controlled remotely through these connections.
+
+Further details indicate that there is only one known domain name associated with this infrastructure, which has been linked to Cleafy in an external reference."
+"The object contains information about a phishing and malware delivery infrastructure that impersonates the Google Play Store to distribute dropper APKs. The domain names used for this purpose include:
+
+* google-app-download.download
+* google-get.download
+* google-aplication.download
+* play.google-get.store
+* google-app-get.com
+* google-get-app.com
+* google-app-install.com
+
+These domains are being used to deliver malware, with the infrastructure being referred to as ""Albiriox Delivery Infrastructure"". The infrastructure type is specifically classified as a malware-distribution system."
+"The object contains information about a Command-and-Control (C2) infrastructure associated with the MastaStealer campaign. The domain names used by these servers follow randomized naming conventions to evade detection methods. 
+
+These domains are utilized for evading reputation filtering and DNS-based threat intelligence systems. A specific example of this can be seen in the provided external reference from GBHackers, which links to exploits for Windows operating systems related to MastaStealer."
+"The object contains information about AI-powered platforms used to create and host scam and phishing websites. These platforms offer automated design, localization, hosting, and APIs for streamlined webpage creation.
+
+Notable providers of these platforms include Lovable, Elementor, Flazio, Softr, Webflow, and WebWave. The platforms are used to create and host malicious websites that can be used for scams and phishing attacks.
+
+The platforms provide various features such as automated design, localization, hosting, and APIs, which make it easier for attackers to create and deploy these malicious websites. This information is sourced from Avast VibeScams Research and is available on the GitHub repository."
+"The object contains information about a malicious infrastructure related to the Badcall backdoor. Specifically, it is a host serving this backdoor on port 8080 at IP address 23.27.140.49.
+
+This Linux variant is considered new and autonomous in nature, with no clear parent AS associated with it. However, its impact on security systems has not been extensively studied or documented.
+
+The object's name is Lazarus Badcall Host, which indicates a connection to the backdoor. The description provided details the host's functionality, further highlighting the potential risks associated with this infrastructure type.
+
+In terms of threat categorization, the presence of a new Linux variant like Badcall suggests a potentially significant security risk due to its novelty and possible lack of detection mechanisms."
+"The object contains information about a Command-and-Control (C2) server used by the Badcall backdoor. The C2 server is identified by two IP addresses: 23.27.177.183 and 23.254.211.230. These IP addresses are observed to be associated with the C2 server, which is described as a key component of the Badcall backdoor.
+
+The object provides details about the infrastructure type, specifically stating that it falls under the category of ""command-and-control"". This information highlights the malicious nature of the C2 server, indicating its role in facilitating unauthorized access and control over compromised systems.
+
+Unfortunately, no additional specific information is available regarding the organization or domain associated with this C2 server."
+"The object contains information about an infrastructure object, specifically a server. The server is identified as a ""Mythic C2 server"" which is used for staging credential theft kits and other offensive tools.
+
+The object belongs to MacStadium, a company located in Dublin, Ireland. It appears that the server is part of a directory at the IP address 207.254.22.248:8800, which is an open source service provided by Mythic.
+
+Further information about the infrastructure types associated with this object is available. These include staging and server, indicating that the object serves as a platform for testing and deploying malicious tools.
+
+No specific ports or services are mentioned in relation to the object, apart from its use of port 8800."
+"The object contains information about a vulnerable infrastructure, specifically an open directory hosted on 149.28.139.62:8080. This directory is known to host various malicious tools and utilities, including Quasar RAT (Remote Access Trojan), credential theft tools, and exfiltration utilities.
+
+The infrastructure is categorized as both ""staging"" and ""server"", suggesting that it may be used for testing or production purposes. However, its presence on the public internet raises concerns about potential security breaches and malicious activities.
+
+The object's location is not specified, but it is reported to be hosted in Singapore, indicating that the vulnerability may be attributed to a local organization. The infrastructure type, labels, and other metadata are not available due to incomplete data.
+
+It is essential to note that this open directory has been identified as a potential threat, and its existence poses risks to individuals and organizations accessing the internet."
+"The object contains information about an open directory at a specific IP address that is associated with various malicious activities. The directory, which belongs to LARUS Limited, a Hong Kong-based organization, has over 10,000 files, including offensive security tools, password stealers, and operator artifacts.
+
+The directory is accessible through the IP address 154.216.177.215:8080, which suggests that it may be used for malicious purposes such as data exfiltration or exploitation. The presence of ""staging"" and ""server"" infrastructure types further indicates that this is likely a malicious or compromised server.
+
+Unfortunately, there is no information available on the domain name associated with this IP address, making it difficult to determine its full hostname. Additionally, there are no external references provided for this object, which could provide additional context or insight into its nature and potential uses.
+
+Overall, the contents of this open directory suggest that it may be a malicious or compromised server that is being used to host various types of malicious payloads."
+"The object contains information about a Lazarus FRP Infrastructure cluster of VPS hosts. The infrastructure is characterized by running identical FRP binaries for tunneling and C2 communication. It has been observed at multiple IP addresses, including 182.136.123.102:9999, 119.6.56.194:9999, 182.136.120.52:9999, 118.123.54.71:9999, 61.139.89.11:9999, 125.67.171.158:9999, 125.65.88.195:9999, and 119.6.121.143:9999.
+
+The infrastructure is categorized as a proxy and command-and-control (C2) system. It does not appear to have any external references or domain names associated with it. The IP addresses used by the infrastructure are from various regions, suggesting that the cluster is geographically dispersed.
+
+The object also includes information about the labels, location, and organization of the infrastructure. However, these fields are currently empty or marked as nan (not a number), indicating that they may not be available or up-to-date.
+
+Overall, the Lazarus FRP Infrastructure appears to be a significant threat actor with multiple locations and IP addresses, operating a sophisticated proxy and C2 system for malicious activities."
+"The object contains a cluster of IP addresses tied to a certificate subject 'hwc-hwp-7779700', which appears to be linked to Lazarus. This infrastructure includes several exposed ports, with RDP (3389) and HTTPS (443) being prominent, indicating possible access points for operator use and C2 communication.
+
+The IP addresses associated with this cluster are: 23.254.128.114, 104.168.198.145, 23.254.164.50, 192.236.146.20, 142.11.209.109, 192.236.233.162, 192.236.176.164, 192.236.236.100, 192.236.146.22, 192.236.233.165, 192.119.116.231, and 104.168.151.116.
+
+The identified infrastructure types include servers and command-and-control (C2) systems. The domain names associated with this cluster are not explicitly mentioned in the data. It is worth noting that no explicit labels or locations were provided for this object."
+"The object contains information about a Lazarus-linked infrastructure domain. The domain name is secondshop.store, which has been used as a pivot to identify suspicious activity. The purpose of this domain appears to be related to malicious activities, such as evading detection or hiding malicious assets.
+
+According to the data, this domain belongs to one type: domain. It does not have any associated IP addresses, but it is linked to other infrastructure types through its aliases, which include secondshop.store."
+"The object contains information about a threat actor's primary infrastructure used for malicious activities. This infrastructure is primarily hosted by CTG Server Limited, a Hong Kong-registered provider known for its history of abuse, phishing, and poor network hygiene.
+
+The primary infrastructure consists of two main IP addresses: 134.122.136.119 and 134.122.136.96. Both IPs are under the autonomous system (AS) number 152194, which is a common indicator of a malicious provider. The use of this AS by the threat actor suggests that they have compromised or coerced CTG Server Limited to host their infrastructure.
+
+The threat actor's primary infrastructure falls under the category of ""hosting"" and is associated with poor network hygiene, phishing, and abuse. This suggests that the threat actor has likely compromised or manipulated the hosting services provided by CTG Server Limited to conduct malicious activities.
+
+Unfortunately, no further information was available regarding this threat actor's specific methods or targets. However, the use of a compromised hosting provider like CTG Server Limited highlights the importance of monitoring for suspicious activity and addressing potential security vulnerabilities in infrastructure providers."
+"The object contains information about an Out-of-Band Application Security Testing (OAST) platform used for callback verification during exploitation. The platform is associated with the alias ""Interactsh"" and belongs to the infrastructure category.
+
+The domains managed by this OAST platform include oast.pro, oast.site, oast.me, oast.online, oast.fun, and oast.live. These domains are likely used to host interactive applications for testing and verification purposes.
+
+This platform is also categorized as a command-and-control (C2) infrastructure type, indicating that it may be used for malicious activities such as exploiting vulnerabilities in software or systems.
+
+No specific IP addresses or location information are available for this OAST platform. However, the organization associated with this platform is not specified.
+
+In summary, the object contains information about an OAST platform used for callback verification during exploitation, which is categorized as a command-and-control infrastructure type and managed by various domains."
+"The object contains information about a malicious domain related to phishing campaigns, payload delivery, and hosting decoy documents. The domain name is e-library.wiki. It is used for ForumTroll's activities and has been linked to Securelist in an external reference.
+
+This infrastructure type includes hosting, phishing, and command-and-control operations. The specific activities of this domain are not specified in the data provided."
+"The object contains information about a malicious infrastructure used by ForumTroll for remote access and payload delivery. The infrastructure is associated with the domain fastly.net, which is used to host various subdomains, including perf-service-clients2.global.ssl.fastly.net, bus-pod-tenant.global.ssl.fastly.net, and status-portal-api.global.ssl.fastly.net.
+
+The infrastructure has been identified as a command-and-control (C2) server, indicating its purpose of facilitating remote access and data transmission. The information suggests that the domain fastly.net is being used by ForumTroll to establish connections with potential victims, potentially for malicious activities such as data exfiltration or malware delivery.
+
+Furthermore, the object contains an external reference from Securelist, a reputable cybersecurity publication, which provides additional context about the operation and details of the malicious infrastructure."
+"The object contains information about VPN services used by threat actors to obscure their true origins. These VPNs are categorized under the infrastructure type ""anonymizing network"", making attribution more challenging for investigators and researchers.
+
+The specific service being referred to is called ""Anonymizing VPN Networks"". This term describes the functionality provided by these VPNs, which enable threat actors to route traffic through multiple networks while concealing their actual locations.
+
+The use of such anonymizing VPN networks complicates efforts to track down the perpetrators behind malicious activities. By using these services, threat actors can mask their IP addresses and make it difficult for law enforcement agencies to identify their sources and motivations.
+
+Overall, this infrastructure is categorized as a type of ""infrastructure"" with a focus on providing anonymity to users. Its primary function is to obscure the true origins of network traffic, making attribution more challenging in the process."
+"The object contains information about a type of infrastructure used by threat actors to facilitate persistent access and command-and-control capabilities. This infrastructure is comprised of dedicated servers provisioned by the actors for ongoing operations.
+
+The specific infrastructure type mentioned in the data is classified as ""command and control"", indicating its primary function is related to executing malicious commands or controlling infected devices.
+
+This type of infrastructure is typically used to establish a persistent presence on a network, allowing attackers to maintain access even after initial entry points have been removed. By using these servers, threat actors can also host command-and-control (C2) servers, which enable them to issue instructions to compromised devices and monitor their activity in real-time.
+
+The use of this infrastructure by threat actors highlights the evolving nature of cyber threats and the importance of monitoring and mitigating such activities to protect against malicious operations."
+"The object contains information about compromised enterprise systems, specifically targeting critical infrastructure like CCTV systems and maritime platforms. The purpose of the compromise is to gather intelligence for kinetic operations, indicating a potential threat to national security or public safety. 
+
+The system in question appears to be an infrastructure type, encompassing targeted enterprise systems that have been compromised by malicious actors. This suggests that the object is focused on understanding and analyzing the impact of such breaches on organizational networks.
+
+Without specific details about the compromised systems, it's difficult to determine the exact nature or extent of the breach. However, the overall description implies a serious security incident with potential implications for critical infrastructure and national security.
+
+In terms of metadata, some fields are missing or not applicable (e.g., timestamps and organization), which may limit the depth of analysis possible from this object alone."
+"The object contains information about a real-time data streaming infrastructure used by threat actors. This infrastructure utilizes compromised cameras and sensors to provide actionable intelligence for adjusting kinetic targeting in near real time.
+
+The object is categorized under the 'data streaming' type of infrastructure, indicating that it deals with the transmission and processing of data related to this field. 
+
+Unfortunately, some details about the infrastructure are not available due to lack of information on its autonomous system, domain name, external references, IP address, location, organization, and labels."
+"The object contains a detailed description of a cyber threat entity, specifically a domain name. Here is a summary of the key information:
+
+The domain name 'nonnida.com' was identified during an investigation into a malicious campaign known as the Shamus campaign. This domain served as a conduit for initial payload delivery and malware download.
+
+Further research revealed that the domain was associated with malware downloads, including an entry point referred to as ""wallet"" and a URL update for cryptocurrency functions.
+
+The origin of this threat entity is attributed to an individual using the Twitter handle 'Miguel', who posted information about malware downloaded from the site nonnida.com/cleangpt."
+"The object contains information about a malicious C2 server used for data exfiltration purposes. The server's domain name is not provided, but its IP address is 45.94.47.205. 
+
+This infrastructure type has been identified as a command-and-control server due to its suspicious characteristics and behavior. It is believed to be part of the Shamus campaign.
+
+The only external reference available for this infrastructure is from Miguel Twitter, which provides details about a data exfiltration endpoint."
+"The object contains information about a malicious cloud-hosted infrastructure used to launch coordinated automated credential-based attacks against VPN authentication endpoints. The majority of traffic originated from IP space associated with 3xK GmbH (Germany). This centralized infrastructure is classified as both a hosting-provider and command-and-control type.
+
+The attack was attributed to 3xK GmbH Cloud Hosting, which suggests that the company's cloud services were exploited for malicious purposes. No specific details are available about the individuals or organizations responsible for the attacks.
+
+The IP addresses used by this infrastructure are associated with German IP space, indicating a potential connection to the country of origin. However, no additional information is available regarding the organization or individuals involved in these activities.
+
+In summary, the object contains details about a malicious cloud-hosted infrastructure linked to 3xK GmbH (Germany), used for launching coordinated automated attacks against VPN endpoints."
+"The object contains information about a hosting provider called Railnet LLC, which is also known under the alias Virtualine. 
+
+Railnet LLC is a legal front for Virtualine, a Russia-based company that specializes in bulletproof hosting services. The infrastructure provided by Virtualine was used to facilitate unauthorized Remote Desktop Protocol (RDP) connections during an intrusion incident.
+
+The data indicates that Railnet LLC/Virtualine is associated with various malicious activities and has been linked to the infiltration of computer networks for cyber espionage and psychological operations (PsyOps). 
+
+Intrinsec, a cybersecurity firm, reported on Virtualine in their research, highlighting its role as a ""bulletproof provider"" used by adversaries to maintain persistence and facilitate unauthorized access.
+
+The infrastructure types associated with Railnet LLC/Virtualine include hosting services, which were compromised for malicious purposes."
+"The object contains information about a Command and Control server associated with Supershell malware. This infrastructure is described as a type of command-and-control server, which is typically used by malicious actors to communicate with infected devices or host other types of malware.
+
+The domain name of this server is not provided, but it is mentioned that the server has an alias of 119.45.176.196. The location and organization associated with this server are also unknown.
+
+The infrastructure type is specifically categorized as a command-and-control server, indicating its role in facilitating malicious activities. It is essential to note that this server is associated with Supershell malware, which suggests that it may be involved in distributed denial-of-service (DDoS) attacks or other types of cyber threats.
+
+Given the lack of information on the organization and location associated with this server, it is challenging to determine its exact origin or any potential connections to specific malicious groups."
+"The object contains information about a malware-related infrastructure component known as the ""Payload Server"". This infrastructure was utilized within the scope of the Gogs exploitation campaign. It is classified under the category of hosting services.
+
+Key details regarding this infrastructure include its IP addresses, which were identified as 106.53.108.81 and 119.91.42.53. Furthermore, it has been categorized under two primary types of infrastructure: hosting.
+
+It's worth noting that this component does not have any associated autonomous system, confidence level, organization, or ports."
+"The object contains detailed information about BlueDelta's credential-harvesting infrastructure. This infrastructure includes domains, IP addresses, and URLs hosted on free services such as InfinityFree, Byet Internet Services, Webhook.site, and ngrok.
+
+The harvested credentials are stored in various locations, including multiple domain names, IP addresses, and URLs. The domain names associated with this infrastructure include account-security-googie.my-board.org, account-security-googie.rf.gd, account-settings-shsvchx.wuaze.com, config-settings.kesug.com, and enmrgkf41bifd.x.pipedream.net.
+
+The corresponding IP addresses are 172.111.206.103 and 185.27.134.125. Additionally, the infrastructure includes various URLs hosted on different services, such as account-settings-shsvchx.wuaze.com/uzdfbdhyzxjc, config-settings.kesug.com/sogfdshxncvsad/npp.php, d3ef-2804-37f8-400-2cbf-4996-e46a-4802-5c08.ngrok-free.app, and webhook.site URLs.
+
+The infrastructure types are not specified in the provided data. However, it is clear that this object contains information about a specific type of threat actor's credential-harvesting activities.
+
+Some notable sources referencing BlueDelta's campaigns include Recorded Future, which provides indicators of compromise associated with these campaigns."
+"The object contains information about a German hosting provider called Aurologic GmbH. The organization provides upstream transit and data center services to networks associated with malicious infrastructure, indicating its role as a central nexus for high-risk hosting networks and threat activity enablers (TAEs). 
+
+Aurologic GmbH has been identified by Recorded Future and other sources, including its official website and Tornado Datacenter GmbH & Co. KG's site. The organization operates from Langen, Germany. Its infrastructure types include hosting provider, data center, and internet backbone.
+
+According to the data, Aurologic GmbH was first seen in 2023 and has a confidence level of 80%. The organization is associated with various malicious activity related to its services."
+"The object contains information about Aeza Group, a Russian hosting provider that enables cybercriminal and state-aligned operations. The group is also known by various aliases, including Aeza International Ltd, Cloud Solutions LLC, and AS210644.
+
+Aeza Group is described as a prominent threat activity enabler (TAE) that has been repeatedly cited for hosting malicious infrastructure, ransomware, infostealers, and supporting Russian disinformation campaigns. They are a UK-registered branch and have a resilient, abuse-tolerant infrastructure that allows them to enable cybercriminal activities.
+
+The group's external references include mentions from the US Office of Foreign Assets Control (OFAC), the UK Government Sanctions website, and the LowEndTalk Forum. These references highlight Aeza Group's involvement in illegal activities, including sanctions evasion and supporting Russian disinformation campaigns.
+
+Aeza Group is categorized as a hosting provider and bulletproof hosting, indicating that they provide services to support malicious activities. Their infrastructure types and labels are not explicitly stated, but their reputation as a threat activity enabler suggests that they may be involved in various malicious activities.
+
+The object also mentions Aeza Group's location as Russia; UK, indicating their dual presence in both countries. However, no specific information is provided about their organization or leadership structure.
+
+Overall, the data highlights Aeza Group's involvement in enabling cybercriminal and state-aligned operations through their hosting services, and their reputation as a prominent threat activity enabler."
+"The object contains information about a UK-incorporated organization called Femo IT Solutions Limited. The organization is identified by its unique identifier (AS214351) and has been assessed to be under the control of Defhost.
+
+The organization displays high concentrations of validated malicious infrastructure, including C2 servers for various malware such as Cobalt Strike, DcRat, Rhadamanthys Stealer, TinyLoader, THC Hydra, and more. This suggests that Femo IT Solutions Limited is involved in hosting or providing services to malicious actors.
+
+According to publicly available data, the organization was registered at UK Companies House with the registration number 15885164. Additionally, information about the organization can also be found on bgp.tools, a website that provides details about autonomous systems (AS) and their associated IP addresses.
+
+Femo IT Solutions Limited is categorized as both a hosting provider and bulletproof hosting service. This indicates that the organization offers services to support malicious activities.
+
+Geographically, the organization is located in the United Kingdom."
+"The object contains information about an infrastructure entity, specifically a bulletproof hosting provider known as Defhost. The provider is assessed to be controlled by Femo IT Solutions Limited and advertises resilience against takedown efforts and uninterrupted operations.
+
+Defhost's description highlights its ability to withstand disruption attempts and maintain continuous functionality. Additionally, the provider's identity has been verified through an external reference, which cites Telegram as a source of information.
+
+The infrastructure entity is categorized under the ""bulletproof-hosting"" type, indicating that it is a specialized service designed to offer robust security features and protection against malicious activities.
+
+No specific IP addresses or domain names are associated with Defhost in the provided data. However, external references indicate that there may be additional information available through third-party sources."
+"The object contains information about a malicious infrastructure, specifically a hosting provider based in Switzerland. The entity is known by several aliases, including Global-Data System IT Corporation and SWISSNETWORK02.
+
+This infrastructure is associated with high concentrations of malicious activity, hosting a range of malware families, including DDoSIA, Socks5Systemz, and other commodity malware ecosystems. It supports various types of malware, posing a significant threat to online security.
+
+The organization operates under the autonomous system number AS42624, which indicates its involvement in the global internet infrastructure. Despite the high risk posed by this entity, it is worth noting that the provided confidence level is moderate at 70%.
+
+The location of this malicious infrastructure is identified as Switzerland, highlighting the global reach of such threats and the need for international cooperation to combat them."
+"The object contains information about an offshore privacy-centric hosting provider called PrivateAlps. The provider is registered in Switzerland and is closely tied to Global-Data System IT Corporation.
+
+PrivateAlps offers a range of services that prioritize user anonymity, including no KYC (Know Your Customer) requirements, DMCA-ignored hosting, and Tor-friendly infrastructure. This suggests that the provider caters to individuals seeking privacy and security online.
+
+The company's description emphasizes its adherence to a bulletproof-hosting model, which implies a focus on secrecy and data protection. Given this information, PrivateAlps appears to be an attractive option for those seeking private and secure online hosting solutions."
+"The object contains information about a malicious infrastructure entity identified by the alias ""metaspinner net GmbH"" (AS209800). The entity was first seen on April 25, 2025. 
+
+It is registered to metaspinner net GmbH and has been associated with substantial malicious activity, including hosting loaders, stealers, Remote Access Trojans (RATs), and botnets. This infrastructure is controlled by threat actors affiliated with Virtualine Technologies.
+
+The entity was discovered exclusively through aurologic and has been assessed based on this information. It is categorized as being of type ""infrastructure"" and is specifically classified as a hosting provider and bulletproof hosting service.
+
+The malicious activity associated with this entity includes substantial accumulated malicious footprint. The location of the infrastructure is Germany, but the exact address or IP addresses are not available due to privacy concerns."
+"The object contains information about a bulletproof hosting provider called Virtualine Technologies. It is linked to Russia and has a presence in the UK. The company's infrastructure is associated with several other entities, including metaspinner net GmbH and Railnet LLC.
+
+Virtualine Technologies controls its own domains and uses London-based virtual office addresses to advertise on Russian-language forums. This suggests that the company operates primarily for a Russian-speaking audience, despite having a physical presence in the UK.
+
+The object's classification as an infrastructure entity indicates that it provides some form of underlying service or support for other systems or applications. In this case, Virtualine Technologies is specifically categorized as a bulletproof hosting provider, which implies that its services are designed to provide anonymity and security for users' online activities.
+
+Overall, the data suggests that Virtualine Technologies operates primarily in the Russian-speaking market, but has some connections to international audiences through its use of virtual office addresses."
+"The object contains information about the Lanedo Datacenter, a hosting provider located in Amsterdam, Netherlands. The datacenter was registered on October 16, 2025, and is associated with the domain lanedo[.]net, which presents as a German ISP.
+
+The datacenter is linked to metaspinner net GmbH, which has been known for peak malicious activity. The object provides a description of the datacenter, highlighting its connection to this organization and its location in the Netherlands.
+
+Furthermore, the object includes information about the datacenter's type, which is classified as a hosting provider. It also lists the domain name and other related information such as IP addresses and ports."
+"The object contains information about a company called Lanedo GmbH. The company is registered in Germany and operates as a software consultancy. However, it has been assessed to be impersonated by threat actors for its bulletproof hosting services.
+
+Lanedo GmbH's domain name is lanedo.com, which is the only legitimate domain associated with the company. The other aliases mentioned include lanedo.net and lanedo[.]net, which are likely used by threat actors to impersonate the company.
+
+The confidence level in this assessment is 70.0%. The object does not provide any external references or information about its infrastructure types, IP addresses, ports, or locations beyond what is related to the domain name."
+"The object contains information about a hosting provider company called Railnet LLC. Railnet LLC is a US-incorporated entity that has emerged as one of the most abuse-heavy networks on the internet. The company hosts infrastructure for over 30 different malware families, indicating its role in facilitating malicious activities.
+
+Furthermore, Railnet LLC acts as the backbone for several bulletproof hosting brands, including Virtualine Technologies, DripHosting (DiorHost), and RetryHost. These brands use Railnet LLC's services to provide their customers with secure and private hosting options, despite being categorized as ""bulletproof"" and often associated with malicious activities.
+
+The company's infrastructure is comprised of multiple IP addresses, domains, and hosts, which are all interconnected in a way that enables the dissemination of malware across various platforms. As such, Railnet LLC poses a significant threat to global cybersecurity, particularly in terms of its involvement in facilitating the spread of malware.
+
+It is worth noting that the confidence level associated with this data is 80%, indicating that while the information is considered reliable, there may be some uncertainty or inconsistencies in the details provided."
+"The object contains information about DripHosting (DiorHost), a bulletproof hosting provider operating infrastructure via Railnet LLC. The description highlights that the provider is branded under two names: DripHosting and DiorHost, with the latter being listed in a slightly modified format due to its presence on the dark web. The service utilizes rail network infrastructure.
+
+The object's classification falls under the category of ""infrastructure"" and is further specified as ""bulletproof-hosting."" This categorization suggests that the hosting provider offers secure and private services to users, possibly catering to those seeking anonymity online.
+
+In terms of its external references, DripHosting (DiorHost) has been mentioned in several sources, although no specific details are provided. The information available on this object is currently limited, with a confidence level of 70% indicating the reliability of the data."
+"The object contains information about a network infrastructure entity known as ""RetryHost"". This entity is identified by the alias ""RetryHost"" and is categorized under the type of ""infrastructure"".
+
+The details provided suggest that RetryHost is a hosting provider offering Virtual Private Server (VPS) and Remote Desktop Protocol (RDP) services. Additionally, it originates a single IP range through Railnet LLC.
+
+Furthermore, the object's description indicates that it operates in the domain of bulletproof hosting, a type of hosting service known for its security features.
+
+The confidence level associated with this entity is 70%, suggesting a moderate level of accuracy or reliability. However, the specific timestamp when the entity was first discovered (first_seen) and modified (modified) are not provided."
+"The object contains information about a malicious infrastructure used for exfiltration and command and control operations. The infrastructure is identified as the ""Operation Hanoi Thief C2 Infrastructure"" and is linked to two domains: pipedream.net and requestrepo.com.
+
+The infrastructure types associated with this threat actor are command-and-control (C2) and exfiltration, indicating that it is used for communication and data transfer between attackers and their compromised systems or other attackers. 
+
+An external reference from Seqrite mentions that the Operation Hanoi Thief has been targeting Vietnamese IT professionals and recruitment teams.
+
+The infrastructure's domains are observable, with pipedream.net being a domain host (eol4hkm8mfoeevs.m.pipedream.net) and requestrepo.com being an IP address (uuhlswlx.requestrepo.com).
+
+This threat actor is considered autonomous as no autonomous system information was available."
+"The object contains information about a multi-purpose infrastructure supporting various malicious activities, including phishing, payload delivery, and command-and-control for specific campaigns. This infrastructure is named Odyssey/AMOS Phishing and Payload Infrastructure.
+
+The infrastructure includes IP addresses 93.152.230.79 and 195.82.147.38, as well as reused SSL certificates from the domain trading.example.com. It offers active web, SSH, FTP, and email services, along with centralized payload hosting capabilities.
+
+This infrastructure is categorized under three types: hosting, command-and-control, and phishing."
+"The object contains information about a cybersecurity threat, specifically a type of malicious infrastructure used by an individual known as TigerJack. The infrastructure in question is described as C2 (Command and Control) infrastructure that has been utilized for code exfiltration and remote code execution backdoors.
+
+This infrastructure is categorized under the types ""command-and-control"" and ""exfiltration"", indicating its primary function is to facilitate communication between an attacker's system and a remote server, allowing for the theft of sensitive information. Additionally, it enables the deployment of malicious code on a victim's system, leading to potential backdoors.
+
+The domain associated with this infrastructure is 'ab498.pythonanywhere.com', which appears to be a service provided by PythonAnywhere, a web-based platform offering various services including hosting and collaboration tools for developers. The fact that this domain is being used as C2 infrastructure highlights the malicious intent behind its adoption.
+
+TigerJack's use of this infrastructure suggests an organized approach to cybercrime. Furthermore, references to external sources such as Koi Research provide additional context, indicating a level of sophistication and organization in the attack vectors employed by TigerJack.
+
+Overall, this infrastructure serves as a critical component in facilitating malicious activities on the internet, representing a significant threat to cybersecurity."
+"The object contains information about a specific exfiltration endpoint used by TigerJack's C++ Playground extension to receive stolen source code. The domain name associated with this endpoint is api.codex.jaagrav.in. 
+
+This endpoint falls under the category of exfiltration, which is one of its listed infrastructure types. Exfiltration refers to the process of transferring sensitive information out of an organization or a network. In this case, the endpoint seems to be a part of TigerJack's extension and has been identified as such by Koi Research.
+
+The endpoint was first seen on  - Unfortunately, no data is available for 'first_seen'. 
+
+The object is associated with several labels, but it appears that none of them have been specified. Additionally, there are no known external references to this object beyond the one provided by Koi Research. 
+
+Overall, the object contains critical information about an exfiltration endpoint linked to a malicious extension, and its classification as a security threat highlights the importance of monitoring such activity."
+"The object contains information about an infrastructure entity related to cryptocurrency mining. The specific entity is coinimp.com, which appears to be a service leveraged by TigerJack's HTTP Format extension for unauthorized mining operations.
+
+Coinimp.com is categorized under the infrastructure type of ""cryptocurrency-mining"". This suggests that the service is likely used for illicit activities such as exploiting vulnerabilities in software or hardware to mine cryptocurrencies without permission.
+
+The provided information does not provide clear details on the actual functionality or mechanics of coinimp.com, but it highlights the potential risks associated with this entity. It is essential to note that coinimp.com may have legitimate uses, but based on its association with TigerJack's HTTP Format extension and unauthorized mining operations, its primary purpose appears to be related to illicit activities.
+
+The metadata fields present in the object are mostly empty or contain placeholder values, indicating a lack of concrete information on this specific entity."
+"The object contains information about a Command-and-Control (C2) infrastructure used by the StealthServer malware. The infrastructure consists of domains that mimic government or official tools, which have short lifetimes and frequent changes. These domains include modindia.serveminecraft.net, modgovindia.space, kavach.space, seemysitelive.store, sinjita.store, and others.
+
+The domain names associated with this C2 infrastructure are listed as [""modindia.serveminecraft.net"", ""modgovindia.space"", ""seemysitelive.store"", ""solarwindturbine.site"", ""sinjita.store"", ""sinjita.space"", ""seeconnectionalive.website"", ""windturbine.website"", ""kavach.space"", ""zahcomputers.pk.modpersonnel.support"", ""discoverlive.site"", ""cloudstore.cam""]. It is worth noting that some of these domains may have already expired or been taken down.
+
+The C2 infrastructure is likely used to facilitate communication between the StealthServer malware and its command and control servers. The presence of this infrastructure suggests that the StealthServer malware is actively being used in malicious activities, such as data exfiltration or lateral movement.
+
+It is also worth noting that the domain names associated with this C2 infrastructure are often fake or misleading, making it difficult to distinguish them from legitimate government or official websites. This tactic is commonly used by cyber threat actors to avoid detection and create a false sense of legitimacy for their malicious activities."
+"The object contains information about a Command-and-Control (C2) infrastructure used by APT-C-56. The C2 infrastructure consists of various domains and IP addresses that are used to communicate with infected devices. 
+
+The list of observed domain names includes sinjita.store, modindia.serveminecraft.net, solarwindturbine.site, trmm.space, modgovindia.space, securestore.cv, seemysitelive.store, and filestore.space. These domains are believed to be used by the threat actor to distribute malicious payloads or communicate with compromised devices.
+
+The observed IP addresses include 45.155.54.28:8080, 101.99.94.109:8080, and 45.155.54.122:8080. These IP addresses are associated with ports that use for communication between the C2 infrastructure and infected devices.
+
+Additionally, the object contains URLs of various files hosted on different domains. These files appear to contain malicious payloads or instructions for the threat actor's operations. The domain names and URLs include trmm.space, solarwindturbine.site, securestore.cv, modgovindia.space, seemysitelive.store, filestore.space, drive.google.com, and others.
+
+The object also provides information about the infrastructure types used by APT-C-56, which includes command-and-control. This type of infrastructure is commonly used by threat actors to remotely control infected devices.
+
+In summary, the object contains detailed information about a C2 infrastructure used by APT-C-56, including observed domains, IP addresses, and URLs of malicious files hosted on these domains."
+"The object contains information about a specific GitHub repository used to host configuration images for Astaroth malware. The repository enables resilient updates and C2 (command-and-control) fallback capabilities.
+
+This infrastructure is categorized under two types: hosting and command-and-control. It appears to be related to the Astaroth banking Trojan, which has been known to abuse GitHub for its resilience.
+
+The external reference provided by McAfee Labs highlights the exploitation of GitHub by Astaroth malware, providing an insight into the tactics used by attackers to maintain their operations.
+
+It is essential to note that the repository's details, such as IP addresses and domain names associated with it, are currently not available in this data snippet. However, understanding the role of GitHub repositories in hosting configuration images for malicious software can aid in identifying potential security risks and vulnerabilities."
+"The object contains information about an infrastructure related to a cyber threat, specifically a command-and-control (C2) system used by Astaroth. The system utilizes Ngrok for establishing secure connections. 
+
+Astaroth is described as a banking Trojan that exploits GitHub for resilience purposes. McAfee Labs has documented this threat in their research.
+
+The infrastructure's primary function appears to be the exfiltration of stolen credentials, making it an essential component of the C2 system. The specific characteristics and behavior of this system suggest its potential use by malicious actors for unauthorized access and data theft."
+"The object contains information about a Solana blockchain-based command and control infrastructure. The primary wallet address associated with this infrastructure is 28PKnu7RzizxBzFPoLp69HLXp9bJL3JFtT2s5QzHsEA2. Transactions from this wallet contain payload URLs, indicating that the blockchain is being used for malicious purposes.
+
+The infrastructure's description highlights its use as a command and control system, with the Solana blockchain serving as the primary infrastructure. The external reference provided by Solana Explorer provides additional context about the wallet address in question.
+
+In terms of classification, the object is categorized as a command-and-control infrastructure type. No specific location or organization is associated with this infrastructure."
+"The object contains information about an infrastructure-related entity that has been identified as a command-and-control (C2) system. This system is linked to Google Calendar events, specifically one event titled 'Google Calendar C2'. The purpose of this system appears to be distributing payload URLs via the title of the event."
+"The object contains information about a cyber threat entity identified as C2 and Exfiltration Servers. This infrastructure type is associated with two primary functions: command-and-control (C2) servers and exfiltration endpoints.
+
+These servers are located at IP addresses 217.69.3.218 and 199.247.10.166, which are used for primary operations. Additionally, there are exfiltration endpoints at IP addresses 140.82.52.31:80/wall and 199.247.13.106:80/wall.
+
+The purpose of these servers is to deliver payloads and facilitate the data exfiltration process. It's worth noting that the infrastructure type ""C2 and Exfiltration Servers"" encompasses both functions, indicating a comprehensive approach to these malicious operations.
+
+No additional information is provided in the object about its origin or affiliation with any specific organization."
+"The object contains information about a persistence mechanism used by attackers to maintain their presence on an infected system. This mechanism is achieved by creating entries in the Windows Registry, specifically in the HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run and HKLM\\Software\\Microsoft\\Windows\\CurrentVersion\\Run registry keys.
+
+The persistence mechanism relies on the Windows operating system's built-in functionality to automatically run the malicious code at startup. By adding entries to these registry keys, attackers can ensure that their malware is executed every time the system boots up, allowing them to maintain control over the infected system.
+
+This technique exploits a vulnerability in the Windows operating system, which allows attackers to modify the registry without the user's knowledge or consent. The persistence mechanism is designed to evade detection by traditional security software and allows attackers to remain stealthy on the compromised system.
+
+In summary, the object contains information about a type of malicious infrastructure used by attackers to maintain persistence on an infected system, exploiting vulnerabilities in the Windows operating system to automatically execute their malware at startup."
+"The object contains information about a Command and Control (C2) infrastructure used by the BeaverTail and OtterCookie malware. This infrastructure includes multiple IP addresses and custom TCP ports for data exfiltration and remote access.
+
+The infrastructure is categorized as command-and-control, indicating its role in facilitating communication between the malware and its handlers. It does not appear to be autonomous, with no evidence of independent operation or self-management provided.
+
+Unfortunately, there are no specific details available about the creation of this C2 infrastructure, including the identity of the creator or the exact date it was created. However, it is attributed to a 'identity--' reference, suggesting that the originator's information is not publicly available or has been anonymized.
+
+The described infrastructure is used for malicious purposes by malware, indicating its potential threat to cybersecurity and network security."
+"The object contains information about a cloud-based infrastructure known as TruffleNet. It is a dedicated system used for credential testing and reconnaissance in AWS environments.
+
+TruffleNet consists of over 800 unique hosts distributed across 57 Class C networks. The network is characterized by open ports, including 5432 and 3389, and utilizes Portainer orchestration. The majority of the hosting takes place within WS Telecom Inc. (AS209372) and Hivelocity LLC (AS61317).
+
+The TruffleNet Attack Infrastructure is a type of infrastructure that falls under the category of cloud abuse. It has been identified by FortiGuard Labs as an example of cloud abuse at scale, which refers to the use of cloud services for malicious purposes.
+
+Overall, the object provides detailed information about TruffleNet and its characteristics, highlighting its potential for misuse in AWS environments."
+"The object contains information about compromised MikroTik RouterOS devices that were observed as source hosts for Business Email Compromise (BEC) activity. These devices are likely to be used by attackers to carry out malicious operations.
+
+The affected devices have IP addresses 175.103.36.74 and 43.252.9.253, which were identified as the source hosts for the BEC activity. This suggests that these devices may have been compromised and are being utilized by malicious actors to execute fraudulent activities.
+
+Further details about the infrastructure, such as its location and organization, are not available in this data set. However, it is clear that these compromised MikroTik RouterOS devices pose a significant threat to security and should be investigated further to mitigate potential risks.
+
+It is worth noting that the affected devices were identified through BEC activity, which typically involves fraudulent emails or messages designed to trick recipients into transferring funds or revealing sensitive information. The compromise of these devices may have been carried out through various means, such as exploiting vulnerabilities or using social engineering tactics."
+"The object contains information about a Malicious Command and Control Server infrastructure. It is described as being used by a trojanized installer to receive exfiltrated VPN credentials, specifically from Microsoft Azure infrastructure.
+
+This server appears to be involved in malicious activities related to command-and-control operations. The infrastructure types associated with this server are limited to ""command-and-control"" labels.
+
+The primary function of the server seems to be related to receiving and processing sensitive information, in this case, VPN credentials. It is essential to note that the data available does not provide detailed insights into the exact nature or scope of the malicious activities conducted by this server.
+
+Furthermore, the object references an external source for additional context regarding a search-click steal hidden threat spoofed IVanti VPN client sites on Zscaler Blog."
+"The object contains information about a malicious infrastructure linked to the Stealit malware campaign. The Stealit C2 Infrastructure is associated with command-and-control servers and commercial panels, indicating its role in payload distribution, victim management, and remote control.
+
+The infrastructure is hosted on domains such as iloveanimals[.]shop and stealituptaded[.]lol, which suggests a level of sophistication in the attackers' attempts to evade detection. The presence of these domains highlights the malicious actors' use of legitimate-looking websites to serve malicious purposes.
+
+FortiGuard Labs has identified this campaign as an abuse of Node.js single-executable-application, indicating that the malware uses this technology to deliver its payload. This information provides valuable insights into the tactics, techniques, and procedures (TTPs) employed by the attackers.
+
+The Stealit C2 Infrastructure is categorized under two infrastructure types: command-and-control and malware-distribution. This classification emphasizes the dual functionality of the infrastructure in serving both as a hub for remote control and payload distribution.
+
+The information provided on this malicious infrastructure serves as a warning to organizations and individuals about the risks associated with Stealit malware. It highlights the importance of being vigilant and proactive in detecting and mitigating such threats to prevent potential security breaches."
+"The object contains a detailed description of a distributed command-and-control infrastructure used by UNC6384. This infrastructure is notable for its use of legitimate-looking domains to evade detection and takedown efforts. The infrastructure relies on HTTPS protocols and employs various tactics to remain hidden.
+
+Specifically, the infrastructure is associated with several domains, including racineupci[.]org, dorareco[.]net, and naturadeco[.]net. These domains are used to facilitate communication between the infrastructure and its potential command-and-control (C2) servers.
+
+The infrastructure types identified include a single type: command-and-control. No IP addresses or ports have been observed in this infrastructure.
+
+It's worth noting that this infrastructure is linked to an organization based in China, as indicated by the labels associated with it. The use of HTTPS and legitimate-looking domains suggests that the infrastructure is designed to avoid being detected or taken down by security measures."
+"The object contains information about a Command and Control (C2) server used by threat actors Operation Silk Lure and ValleyRAT for data exfiltration and remote control. This C2 server is associated with the IP address 206.119.175.16, which is identified as a key component of the infrastructure used to facilitate malicious activities.
+
+The C2 server's primary function appears to be as a command center, where operators can remotely access and control compromised devices. The server is described as a critical element in the operations of Operation Silk Lure and ValleyRAT, indicating its significance in facilitating cybercrime activities.
+
+It is worth noting that the infrastructure types associated with this C2 server are limited to command-and-control, which suggests that it is primarily used for remote control and data exfiltration purposes. The lack of information on other infrastructure types or components suggests that the threat actors may have employed a more streamlined approach in their operations.
+
+Overall, the object provides valuable insights into the tactics, techniques, and procedures (TTPs) employed by Operation Silk Lure and ValleyRAT, highlighting the importance of monitoring C2 servers and IP addresses to detect and disrupt malicious activities."
+"The object contains information about a malicious domain named pan.tenire.com. The domain is associated with the operation called Operation Silk Lure, which was used to deliver initial artifacts and malware payloads.
+
+The domain's primary purpose is related to delivery of malicious content. No additional information is available regarding its usage or context within the operation."
+"The object contains a C2 (Command and Control) infrastructure spanning over 20 domains under the .work TLD cluster. This infrastructure is designed to mimic job portals and has been created by SonderCloud Limited based in Hong Kong.
+
+The infrastructure types include command-and-control, indicating its primary function of managing and executing malicious activities. It is an instance of an infrastructure type, with no visible IP addresses or ports associated with it.
+
+This object also contains a description that highlights its operational resilience and ability to mimic job portals, suggesting that it may be used for various malicious purposes. The location of the infrastructure is Hong Kong, indicating the country where it was created or detected.
+
+The organization behind this infrastructure is SonderCloud Limited, a company based in Hong Kong. This suggests that the infrastructure is likely associated with a legitimate business entity, but its primary function is likely for malicious activities.
+
+Overall, the object represents an instance of a C2 infrastructure designed to mimic job portals and bolster operational resilience, indicating potential malicious activities."
+"The object contains information about a cyber threat entity identified as 'casadecampoamazonas.com'. This domain name is associated with the Maverick banking Trojan, which utilizes SSL encryption over port 443 for secure communication. Notably, the entity requires authentication through a hardcoded password to function.
+
+Further details on this infrastructure include its classification as a command-and-control server, where it was first detected in October of 2025. While there are no external references provided that link directly to the threat actor behind 'casadecampoamazonas.com', Kaspersky Securelist offers insights into the domain through their OpenTip service.
+
+The entity is labeled primarily under the category of ""infrastructure"", though its exact nature and functionalities remain within the realm of speculation given the lack of direct information. The object does not offer any information on specific IP addresses or locations associated with 'casadecampoamazonas.com'."
+"The object contains information about a C2 (Command and Control) server used by the malware group Maverick. The server is identified as sorvetenopote.com and serves as a platform for distributing payloads and shellcode via API endpoints. Access to these endpoints requires validation of User-Agent and API key.
+
+The server is classified under two main infrastructure types: command-and-control and malware distribution. It has been observed and tracked since 2025, with the most recent sighting in October 2025. The information about this C2 server was first documented by Kaspersky Securelist, who noted its significance in their Open-Tip service.
+
+There is no concrete evidence of the server's physical location or any direct connections to a specific organization. However, its designation as a key component in Maverick's malware distribution infrastructure makes it an important target for security researchers and analysts tracking this particular threat actor."
+"The object contains information about a Tor hidden service and bridge infrastructure used for command and control (C2) communication and exposing remote services. This infrastructure is named SkyCloak C2 Infrastructure.
+
+The infrastructure types include command-and-control and proxy servers, which are used to facilitate malicious activities such as espionage and cybercrime. 
+
+It has been observed that this infrastructure uses multiple IP addresses, including 77.20.116.133:8080, 156.67.24.239:33333, 146.59.116.226:50845, and 142.189.114.119:443.
+
+Additionally, it is noted that the infrastructure has multiple onion addresses associated with it, which are used for secure communication. 
+
+The object contains links to external references, including a blog post by Seqrite SkyCloak, which provides more information on the use of Tor hidden services and bridge infrastructure in malicious activities."
+"The object contains information about a type of infrastructure used in tech support scam campaigns. Specifically, it refers to domains that are utilized to redirect victims through CAPTCHA and overlay stages.
+
+These domains are classified as a type of ""redirector"" infrastructure, which is an essential component in the operation of such scams. The provided list of domain names associated with this infrastructure includes 'alphadogprinting.com' and 'amormc.com'.
+
+It's worth noting that the object also contains references to external sources, including Cybersecurity News, which provide additional information on the topic.
+
+Overall, the object serves as a key component in understanding the tactics, techniques, and procedures (TTPs) employed by scammers in their tech support scams."
+"The object contains information about a specific type of infrastructure, which appears to be related to hosting domains that display counterfeit security alerts. The domain names associated with this infrastructure are 'my.toruftuiov.com' and 'deprivy.stified.sbs'.
+
+This infrastructure is categorized under the ""hosting"" type and is identified by the name ""Payload Hosting Domains"". It has several observable characteristics, including:
+
+* Domain names: 'my.toruftuiov.com', 'deprivy.stified.sbs'
+* External references: Cybersecurity News
+* Description: Domains hosting scripted overlays that manipulate the DOM and display counterfeit security alerts to victims.
+
+The infrastructure is likely used for malicious purposes, such as spreading false security alerts or other types of cyber threats."
+"The object contains information about a malicious infrastructure entity, specifically a fake job posting website. 
+
+This website is associated with UNC6229, which was set up to lure victims and deliver malware or phishing pages. The website's domain name is not specified.
+
+The website falls under the category of ""hosting-malicious-sites"" and has been observed in the past. It also contains references to a Google Threat Intelligence Group report, which highlights the threat posed by Vietnamese actors using fake job posting campaigns.
+
+In terms of its infrastructure, the website is hosted on various IP addresses, but no specific ones are provided. No other notable information about its hosting or infrastructure is available.
+
+The most relevant details about this entity are that it poses a threat to individuals and organizations who may encounter malicious links or attachments masquerading as legitimate job postings."
+"The object contains information about a sophisticated network infrastructure belonging to the cyber threat group known as Vault Viper. The infrastructure is used for command-and-control, proxy, and DNS operations.
+
+Vault Viper maintains a vast network of assets, including ASN WOODSNET-PH (AS55547), which hosts unregulated online gambling websites and C2 servers. The organization utilizes various cloud providers such as Alibaba, Amazon Web Services, and Google Cloud to host its infrastructure.
+
+The infrastructure is equipped with elaborate DNS and domain generation algorithms to ensure resilience and evasion from detection. It also employs proxy and key distribution domains to facilitate communication between its assets.
+
+The network infrastructure of Vault Viper includes command-and-control, proxy, and DNS capabilities, making it a significant threat to cybersecurity."
+"The object contains information about a shared hosting infrastructure (ASN AS138915) used for deploying multilingual phishing pages and payloads across Asia. This infrastructure is associated with the organization Kaopu Cloud HK Limited.
+
+The domains linked to this infrastructure include zxp0010w.vip, gjqygs.cn, jpjpz1.cc, among others. These domains are part of a larger network designed to facilitate the deployment of phishing pages and payloads across multiple regions in Asia.
+
+According to external references, there is a mention of this infrastructure being featured on Hunt.io as an example of an attack capture scenario. 
+
+This infrastructure falls under two categories: hosting and command-and-control. It does not have specific IP addresses or ports assigned to it; however, it utilizes various domain names for its operations. The labels associated with this object are currently undefined.
+
+The last time the infrastructure was observed was in 2025. Its location is currently undetermined, but it is known to be used for nefarious purposes related to phishing activities across Asia."
+"The object contains information about a malicious infrastructure used by PhantomRaven for hosting malicious npm dependencies and exfiltrating stolen credentials and system information. This infrastructure is associated with the domain packages.storeartifact.com, an IP address of 54.173.15.59, and an exfiltration endpoint at jpd.php.
+
+The specific details of this infrastructure include its description as a command and control (C2) component that facilitates exfiltration of sensitive data. It appears to be part of a larger malicious campaign, with evidence pointing to its use in invisible dependencies within npm packages.
+
+This information was first documented on the Koi Security Blog, which reported on the discovery of PhantomRaven's malware hidden in these dependencies. The details of this infrastructure, including its creation and location, are currently unknown due to the absence of specific timestamps and coordinates."

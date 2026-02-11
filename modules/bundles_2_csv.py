@@ -44,7 +44,7 @@ def stix_json_to_csv(json_file: str):
     
 
     csv_file=Path(json_file).stem+".csv"
-    csv_path=Path("E:/college/NITK Internship/stix_normalizer/stix_normalizer/stix_intelligence_analyzer/modules/json_2_csv_files")/csv_file
+    csv_path=Path("json_2_csv_files")/csv_file
     csv_path.parent.mkdir(parents=True, exist_ok=True)
 
 

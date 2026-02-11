@@ -1,11 +1,21 @@
 import streamlit as st
 
-st.set_page_config(page_title="Dashboard", layout="wide")
+# ---------- PAGE CONFIG ----------
+# This must be the first Streamlit command.
+st.set_page_config(
+    page_title="AI-Powered CTI Dashboard",
+    page_icon="📊",
+    layout="wide"
+)
 
+# ---------- CUSTOM NAVIGATION ----------
+# This defines the structure of your app's sidebar navigation.
+# It points to the pages located in your 'pages/' directory.
 pg = st.navigation({
     "Main": [
-        st.Page("pages/dashboard_home.py", title="Dashboard"),
-        st.Page("pages/Version_Detector_and_Validator.py", title="Version Detector and Validator"),
+        # This now points to the new dashboard file inside the pages folder.
+        st.Page("pages/1_Dashboard.py", title="Dashboard", default=True),
+        st.Page("pages/Version_Detector_and_Validator.py", title="Version Detector & Validator"),
     ],
     "Threat Analysis": [
         st.Page("pages/SDO_Similarity_Search.py", title="SDO Similarity Search"),
@@ -13,10 +23,13 @@ pg = st.navigation({
         st.Page("pages/malware_classifier.py", title="Malware Classifier"),
     ],
     "Assessment & Chat": [
-        st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment Module"),
+        st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment"),
+        st.Page("pages/STIX_Chat.py", title="STIX Chat"),
     ],
     "Tools": [
         st.Page("pages/file_browser.py", title="File Browser"),
     ]
 })
+
+# Run the navigation
 pg.run()

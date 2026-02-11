@@ -1,0 +1,15 @@
+summary
+"The object contains a course of action titled ""Disable FortiCloud SSO Login"" which is aimed at mitigating authentication bypass vulnerabilities. 
+
+This workaround disables the FortiCloud SSO login feature via GUI or CLI to prevent administrative access through this compromised method. By setting the 'Allow administrative login using FortiCloud SSO' option to 'Off', users can protect their system from potential security risks associated with weak authentication protocols.
+
+Furthermore, it is recommended to reset all firewall credentials if there's suspicion of a compromise to further enhance the security posture of the affected system. This step helps in preventing unauthorized access and maintaining the overall integrity of the network."
+"The object contains a detailed course of action to address the known vulnerability (CVE-2025-59287) on Windows Server versions. The recommended steps are designed to quickly contain and patch the issue.
+
+Firstly, Microsoft out-of-band updates (KB5070881, KB5070879, KB5070884, KB5070883, KB5070882, KB5070886, KB5070887) need to be applied to affected Windows Server versions. It is crucial to reboot the servers after patching to ensure all changes take effect.
+
+If patching is not feasible, a backup plan must be implemented. Inbound ports 8530/8531 should be blocked, and WSUS (Windows Server Update Services) access restricted to trusted ranges. Additionally, the WSUS Server Role is temporarily disabled, which may require adjustments in the organization's update management strategy.
+
+Furthermore, HTTPS enforcement will enhance security by directing users to a secure protocol for communication with the WSUS server. Monitoring for suspicious processes can help prevent any potential attempts to bypass the containment measures or exploit the vulnerability further.
+
+Overall, this course of action focuses on immediate patching and containment of CVE-2025-59287 vulnerabilities in Windows Server versions."

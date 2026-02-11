@@ -1,5 +1,4 @@
 from stix2 import parse
-from stix2 import parse
 import json
 
 def validate_stix(file_path):

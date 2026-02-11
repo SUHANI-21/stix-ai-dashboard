@@ -5,6 +5,7 @@ __pycache__/
 .venv*
 .venv2*
 venv/
+venv_py39/
 
 # Streamlit temp / generated files
 .html
