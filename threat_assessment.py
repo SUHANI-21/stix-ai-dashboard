@@ -171,7 +171,7 @@ def check_url(url):
 # MAIN ANALYZER
 # ==================================================
 
-def analyze_bundle(bundle):
+def analyze_bundle(bundle, skip_external_checks=False):
 
     score = 0
     reasons = []
@@ -340,16 +340,17 @@ def analyze_bundle(bundle):
 
     vt_hits = 0
 
-    for ind in indicators:
+    if not skip_external_checks:
+        for ind in indicators:
 
-        patt = ind.get("pattern", "")
+            patt = ind.get("pattern", "")
 
-        iocs = re.findall(r"'([^']+)'", patt)
+            iocs = re.findall(r"'([^']+)'", patt)
 
-        for ioc in iocs:
+            for ioc in iocs:
 
-            if check_virustotal(ioc):
-                vt_hits += 1
+                if check_virustotal(ioc):
+                    vt_hits += 1
 
 
     if vt_hits:
@@ -357,7 +358,8 @@ def analyze_bundle(bundle):
         reasons.append(f"✔ {vt_hits} IOC confirmed by VirusTotal")
 
     elif indicators or malware:
-        reasons.append("⚠ No IOC confirmed")
+        if not skip_external_checks:
+            reasons.append("⚠ No IOC confirmed")
 
 
     # ----------------------------------------------
@@ -366,10 +368,11 @@ def analyze_bundle(bundle):
 
     valid_urls = 0
 
-    for url in external_urls:
+    if not skip_external_checks:
+        for url in external_urls:
 
-        if check_url(url):
-            valid_urls += 1
+            if check_url(url):
+                valid_urls += 1
 
 
     if valid_urls:
@@ -377,7 +380,8 @@ def analyze_bundle(bundle):
         reasons.append("✔ Referenced URLs reachable")
 
     elif external_urls:
-        reasons.append("⚠ Referenced URLs unreachable")
+        if not skip_external_checks:
+            reasons.append("⚠ Referenced URLs unreachable")
 
 
     # ----------------------------------------------
