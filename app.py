@@ -28,6 +28,7 @@ pg = st.navigation({
     ],
     "Tools": [
         st.Page("pages/file_browser.py", title="File Browser"),
+        st.Page("pages/Canonical_Output.py", title="Canonical Output Generator"),
     ]
 })
 
