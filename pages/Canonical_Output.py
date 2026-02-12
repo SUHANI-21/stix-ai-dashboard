@@ -93,9 +93,21 @@ if uploaded_file:
                         attack_result = run_pipeline(file_path)
                         st.write("✅ Attack mapping completed")
                         status.update(label="✅ Attack mapping complete", state="complete")
+                        
+                        # Extract only inference object, not the full bundle
+                        attack_mapping_data = None
+                        if attack_result and attack_result.get('bundle'):
+                            for obj in attack_result['bundle'].get('objects', []):
+                                if obj.get('type') == 'x-malware-technique-inference':
+                                    attack_mapping_data = obj
+                                    break
+                        
+                        if not attack_mapping_data:
+                            attack_mapping_data = {"status": "no_inference", "message": "No malware found for technique inference"}
                     except Exception as e:
                         st.warning(f"⚠️ Attack mapping failed: {str(e)}")
                         attack_result = None
+                        attack_mapping_data = {"status": "failed", "message": str(e)}
                         status.update(label="⚠️ Attack mapping skipped", state="complete")
                 
                 # Step 5: Placeholder for Malware Classifier
@@ -133,7 +145,7 @@ if uploaded_file:
                         "reasons": credibility_result['reasons'],
                         "summary": credibility_result['summary']
                     },
-                    "attack_mapping": attack_result if attack_result else {"status": "failed", "message": "Attack mapping unavailable"},
+                    "attack_mapping": attack_mapping_data,
                     "malware_classifier": malware_classifier_result,
                     "sdo_similarity_search": sdo_similarity_result
                 }
