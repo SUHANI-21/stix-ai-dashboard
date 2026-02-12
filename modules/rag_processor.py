@@ -5,6 +5,12 @@ from bs4 import BeautifulSoup
 from typing import List, Dict, Any
 import logging
 
+try:
+    import PyPDF2
+    PDF_AVAILABLE = True
+except ImportError:
+    PDF_AVAILABLE = False
+
 class RAGDocumentProcessor:
     def __init__(self, knowledge_base_path: str):
         self.knowledge_base_path = knowledge_base_path
@@ -14,18 +20,34 @@ class RAGDocumentProcessor:
         """Process all documents in knowledge base and return chunks"""
         documents = []
         
+        # Process PDF chunks if available
+        pdf_chunks_path = os.path.join(self.knowledge_base_path, "pdf_chunks", "pdf_chunks.json")
+        if os.path.exists(pdf_chunks_path):
+            documents.extend(self._load_pdf_chunks(pdf_chunks_path))
+        
         # Process MITRE ATT&CK data
         mitre_path = os.path.join(self.knowledge_base_path, "mitre_attack")
         if os.path.exists(mitre_path):
             documents.extend(self._process_mitre_data(mitre_path))
             
-        # Process STIX schemas
+        # Process STIX schemas (HTML fallback)
         schema_path = os.path.join(self.knowledge_base_path, "stix_schemas")
-        if os.path.exists(schema_path):
+        if os.path.exists(schema_path) and not os.path.exists(pdf_chunks_path):
             documents.extend(self._process_stix_schemas(schema_path))
             
         self.logger.info(f"Processed {len(documents)} document chunks")
         return documents
+    
+    def _load_pdf_chunks(self, filepath: str) -> List[Dict[str, Any]]:
+        """Load pre-processed PDF chunks"""
+        try:
+            with open(filepath, 'r', encoding='utf-8') as f:
+                chunks = json.load(f)
+            self.logger.info(f"Loaded {len(chunks)} PDF chunks")
+            return chunks
+        except Exception as e:
+            self.logger.error(f"Error loading PDF chunks: {e}")
+            return []
     
     def _process_mitre_data(self, mitre_path: str) -> List[Dict[str, Any]]:
         """Process JSON and CSV files from MITRE data"""
@@ -111,8 +133,17 @@ class RAGDocumentProcessor:
         documents = []
         
         try:
-            with open(filepath, 'r', encoding='utf-8') as f:
-                soup = BeautifulSoup(f.read(), 'html.parser')
+            # Try multiple encodings
+            for encoding in ['utf-8', 'latin-1', 'cp1252']:
+                try:
+                    with open(filepath, 'r', encoding=encoding) as f:
+                        soup = BeautifulSoup(f.read(), 'html.parser')
+                    break
+                except UnicodeDecodeError:
+                    continue
+            else:
+                self.logger.warning(f"Could not decode {filepath}, skipping")
+                return documents
             
             # Extract text from sections
             sections = soup.find_all(['h1', 'h2', 'h3', 'h4', 'section', 'div'])

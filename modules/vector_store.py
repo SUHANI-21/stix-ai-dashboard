@@ -1,7 +1,8 @@
-import chromadb
-from chromadb.config import Settings
-from sentence_transformers import SentenceTransformer
+import faiss
+import numpy as np
+import pickle
 import os
+from sentence_transformers import SentenceTransformer
 from typing import List, Dict, Any
 import logging
 
@@ -9,90 +10,81 @@ class VectorStoreManager:
     def __init__(self, persist_directory: str = "knowledge_base/embeddings"):
         self.persist_directory = persist_directory
         self.logger = logging.getLogger(__name__)
-        
-        # Initialize ChromaDB
         os.makedirs(persist_directory, exist_ok=True)
-        self.client = chromadb.PersistentClient(path=persist_directory)
         
         # Initialize embedding model
         self.embedding_model = SentenceTransformer('all-MiniLM-L6-v2')
+        self.dimension = 384  # all-MiniLM-L6-v2 dimension
         
-        # Get or create collection
-        self.collection = self.client.get_or_create_collection(
-            name="stix_knowledge_base",
-            metadata={"description": "STIX and MITRE ATT&CK knowledge base"}
-        )
+        # Load or create index
+        self.index_path = os.path.join(persist_directory, "faiss.index")
+        self.metadata_path = os.path.join(persist_directory, "metadata.pkl")
+        
+        if os.path.exists(self.index_path):
+            self.index = faiss.read_index(self.index_path)
+            with open(self.metadata_path, 'rb') as f:
+                self.documents = pickle.load(f)
+        else:
+            self.index = faiss.IndexFlatL2(self.dimension)
+            self.documents = []
         
     def add_documents(self, documents: List[Dict[str, Any]]):
         """Add documents to vector store"""
         if not documents:
             self.logger.warning("No documents to add")
             return
-            
-        # Prepare data for ChromaDB
-        texts = []
-        metadatas = []
-        ids = []
         
-        for i, doc in enumerate(documents):
-            texts.append(doc['content'])
-            metadatas.append(doc['metadata'])
-            ids.append(f"doc_{i}")
-            
-        # Generate embeddings
+        texts = [doc['content'] for doc in documents]
+        
         self.logger.info(f"Generating embeddings for {len(texts)} documents...")
-        embeddings = self.embedding_model.encode(texts).tolist()
+        embeddings = self.embedding_model.encode(texts, show_progress_bar=True)
         
-        # Add to collection
-        self.collection.add(
-            embeddings=embeddings,
-            documents=texts,
-            metadatas=metadatas,
-            ids=ids
-        )
+        self.index.add(np.array(embeddings).astype('float32'))
+        self.documents.extend(documents)
         
+        self._save()
         self.logger.info(f"Added {len(documents)} documents to vector store")
     
     def search(self, query: str, n_results: int = 5) -> List[Dict[str, Any]]:
         """Search for relevant documents"""
-        # Generate query embedding
-        query_embedding = self.embedding_model.encode([query]).tolist()
+        if len(self.documents) == 0:
+            return []
         
-        # Search in collection
-        results = self.collection.query(
-            query_embeddings=query_embedding,
-            n_results=n_results
-        )
+        query_embedding = self.embedding_model.encode([query])
+        distances, indices = self.index.search(np.array(query_embedding).astype('float32'), n_results)
         
-        # Format results
-        formatted_results = []
-        for i in range(len(results['documents'][0])):
-            formatted_results.append({
-                'content': results['documents'][0][i],
-                'metadata': results['metadatas'][0][i],
-                'distance': results['distances'][0][i] if 'distances' in results else 0
-            })
-            
-        return formatted_results
+        results = []
+        for i, idx in enumerate(indices[0]):
+            if idx < len(self.documents):
+                results.append({
+                    'content': self.documents[idx]['content'],
+                    'metadata': self.documents[idx]['metadata'],
+                    'distance': float(distances[0][i])
+                })
+        
+        return results
     
     def get_collection_info(self) -> Dict[str, Any]:
         """Get information about the collection"""
-        count = self.collection.count()
         return {
-            "document_count": count,
-            "collection_name": self.collection.name
+            "document_count": len(self.documents),
+            "collection_name": "stix_knowledge_base"
         }
     
     def clear_collection(self):
         """Clear all documents from collection"""
-        self.client.delete_collection(name="stix_knowledge_base")
-        self.collection = self.client.get_or_create_collection(
-            name="stix_knowledge_base",
-            metadata={"description": "STIX and MITRE ATT&CK knowledge base"}
-        )
+        self.index = faiss.IndexFlatL2(self.dimension)
+        self.documents = []
+        self._save()
         self.logger.info("Cleared vector store collection")
     
     def rebuild_index(self, documents: List[Dict[str, Any]]):
         """Rebuild the entire index"""
         self.clear_collection()
         self.add_documents(documents)
+    
+    def _save(self):
+        """Save index and metadata to disk"""
+        faiss.write_index(self.index, self.index_path)
+        with open(self.metadata_path, 'wb') as f:
+            pickle.dump(self.documents, f)

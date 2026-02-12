@@ -24,7 +24,7 @@ pg = st.navigation({
     ],
     "Assessment ": [
         st.Page("pages/Credibility_Assessment_Module.py", title="Credibility Assessment"),
-        #st.Page("pages/STIX_Chat.py", title="STIX Chat"),
+        st.Page("pages/STIX_Chat.py", title="STIX Chat"),
     ],
     "Tools": [
         st.Page("pages/file_browser.py", title="File Browser"),

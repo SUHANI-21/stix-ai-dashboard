@@ -18,3 +18,7 @@ stix_graph.html
 # OS files
 .DS_Store
 Thumbs.db
+
+# Embeddings (too large for git - regenerate locally)
+knowledge_base/embeddings/
+knowledge_base/embeddings/

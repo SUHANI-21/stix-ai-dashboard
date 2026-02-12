@@ -24,16 +24,20 @@ def setup_logging():
 def check_dependencies():
     """Check if required dependencies are installed"""
     required_packages = [
-        'chromadb', 'sentence_transformers', 'beautifulsoup4', 
-        'pandas', 'requests', 'ollama'
+        ('sentence_transformers', 'sentence_transformers'),
+        ('beautifulsoup4', 'bs4'),
+        ('pandas', 'pandas'),
+        ('requests', 'requests'),
+        ('ollama', 'ollama'),
+        ('faiss-cpu', 'faiss')
     ]
     
     missing = []
-    for package in required_packages:
+    for package_name, import_name in required_packages:
         try:
-            __import__(package.replace('-', '_'))
+            __import__(import_name)
         except ImportError:
-            missing.append(package)
+            missing.append(package_name)
     
     if missing:
         print(f"❌ Missing packages: {', '.join(missing)}")
@@ -52,15 +56,15 @@ def check_knowledge_base():
         return False
     
     mitre_path = kb_path / "mitre_attack"
-    schema_path = kb_path / "stix_schemas"
+    pdf_chunks_path = kb_path / "pdf_chunks" / "pdf_chunks.json"
     
     mitre_files = list(mitre_path.glob("*.json")) + list(mitre_path.glob("*.csv")) if mitre_path.exists() else []
-    schema_files = list(schema_path.glob("*.html")) if schema_path.exists() else []
+    has_pdf_chunks = pdf_chunks_path.exists()
     
     print(f"📁 Found {len(mitre_files)} MITRE files")
-    print(f"📁 Found {len(schema_files)} STIX schema files")
+    print(f"📁 PDF chunks: {'Yes' if has_pdf_chunks else 'No'}")
     
-    if not mitre_files and not schema_files:
+    if not mitre_files and not has_pdf_chunks:
         print("❌ No data files found in knowledge base")
         return False
     
@@ -71,15 +75,15 @@ def test_ollama():
     try:
         import ollama
         response = ollama.chat(
-            model="llama3.1:8b",
+            model="llama3.2:3b",
             messages=[{'role': 'user', 'content': 'Hello'}]
         )
         print("✅ Ollama connection successful")
         return True
     except Exception as e:
         print(f"❌ Ollama connection failed: {e}")
-        print("Make sure Ollama is running and llama3.1:8b is installed")
-        print("Run: ollama pull llama3.1:8b")
+        print("Make sure Ollama is running and llama3.2:3b is installed")
+        print("Run: ollama pull llama3.2:3b")
         return False
 
 def initialize_rag():
