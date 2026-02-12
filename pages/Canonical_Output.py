@@ -9,6 +9,8 @@ import tempfile
 from pathlib import Path
 from datetime import datetime
 import sys
+import signal
+from functools import wraps
 
 sys.path.insert(0, str(Path(__file__).parent.parent))
 
@@ -16,6 +18,36 @@ from modules.enhanced_detector import EnhancedVersionChecker
 from modules.converter import STIXConverter
 from threat_assessment import analyze_bundle
 from pipeline.run_pipeline import run_pipeline
+
+# Timeout decorator
+def timeout(seconds):
+    def decorator(func):
+        @wraps(func)
+        def wrapper(*args, **kwargs):
+            import threading
+            result = [None]
+            exception = [None]
+            
+            def target():
+                try:
+                    result[0] = func(*args, **kwargs)
+                except Exception as e:
+                    exception[0] = e
+            
+            thread = threading.Thread(target=target)
+            thread.daemon = True
+            thread.start()
+            thread.join(seconds)
+            
+            if thread.is_alive():
+                return {"status": "timeout", "message": f"Operation timed out after {seconds} seconds"}
+            
+            if exception[0]:
+                raise exception[0]
+            
+            return result[0]
+        return wrapper
+    return decorator
 
 st.set_page_config(page_title="Canonical Output Generator", layout="wide")
 
@@ -110,17 +142,71 @@ if uploaded_file:
                         attack_mapping_data = {"status": "failed", "message": str(e)}
                         status.update(label="⚠️ Attack mapping skipped", state="complete")
                 
-                # Step 5: Placeholder for Malware Classifier
-                with st.status("Step 5: Malware Classifier (Placeholder)...", expanded=True) as status:
-                    st.write("⏳ Placeholder - Not yet implemented")
-                    malware_classifier_result = {"status": "placeholder", "message": "Feature not yet implemented"}
-                    status.update(label="⏳ Malware Classifier (Placeholder)", state="complete")
+                # Step 5: Malware Classifier (with 20s timeout)
+                with st.status("Step 5: Running malware classifier...", expanded=True) as status:
+                    try:
+                        @timeout(20)
+                        def run_malware_classifier():
+                            from pages.malware_classifier import classify_malware
+                            return classify_malware(converted_data)
+                        
+                        malware_classifier_result = run_malware_classifier()
+                        
+                        if malware_classifier_result.get("status") == "timeout":
+                            st.warning("⏱️ Malware classifier timed out after 20 seconds")
+                            status.update(label="⏱️ Malware Classifier (Timeout)", state="complete")
+                        elif "error" in malware_classifier_result:
+                            st.warning(f"⚠️ Malware classifier failed: {malware_classifier_result['error'][:100]}")
+                            status.update(label="⚠️ Malware Classifier (Failed)", state="complete")
+                        else:
+                            st.write("✅ Malware classification completed")
+                            status.update(label="✅ Malware Classifier complete", state="complete")
+                    except Exception as e:
+                        st.warning(f"⚠️ Malware classifier error: {str(e)[:100]}")
+                        malware_classifier_result = {"status": "error", "message": str(e)}
+                        status.update(label="⚠️ Malware Classifier (Error)", state="complete")
                 
-                # Step 6: Placeholder for SDO Similarity Search
-                with st.status("Step 6: SDO Similarity Search (Placeholder)...", expanded=True) as status:
-                    st.write("⏳ Placeholder - Not yet implemented")
-                    sdo_similarity_result = {"status": "placeholder", "message": "Feature not yet implemented"}
-                    status.update(label="⏳ SDO Similarity Search (Placeholder)", state="complete")
+                # Step 6: SDO Similarity Search (with 20s timeout)
+                with st.status("Step 6: Running SDO similarity search...", expanded=True) as status:
+                    try:
+                        @timeout(20)
+                        def run_sdo_similarity():
+                            from modules.bundles_2_csv import stix_json_to_csv
+                            from modules.summary_generator import summarize_csv
+                            from modules.clean_csv import clean_csv
+                            from modules.similarity_search import generate_similarity_json
+                            
+                            # Save converted data to temp file
+                            import tempfile
+                            with tempfile.NamedTemporaryFile(mode='w', suffix='.json', delete=False) as f:
+                                json.dump(converted_data, f)
+                                temp_path = f.name
+                            
+                            csv_path = stix_json_to_csv(temp_path)
+                            summary_csv = summarize_csv(csv_path)
+                            cleaned_csv = clean_csv(summary_csv)
+                            
+                            if cleaned_csv:
+                                sim_path = generate_similarity_json(cleaned_csv, top_k=5)
+                                with open(sim_path, 'r') as f:
+                                    return json.load(f)
+                            return {"error": "Failed to generate similarity data"}
+                        
+                        sdo_similarity_result = run_sdo_similarity()
+                        
+                        if sdo_similarity_result.get("status") == "timeout":
+                            st.warning("⏱️ SDO similarity search timed out after 20 seconds")
+                            status.update(label="⏱️ SDO Similarity (Timeout)", state="complete")
+                        elif "error" in sdo_similarity_result:
+                            st.warning(f"⚠️ SDO similarity failed: {sdo_similarity_result['error'][:100]}")
+                            status.update(label="⚠️ SDO Similarity (Failed)", state="complete")
+                        else:
+                            st.write("✅ SDO similarity search completed")
+                            status.update(label="✅ SDO Similarity complete", state="complete")
+                    except Exception as e:
+                        st.warning(f"⚠️ SDO similarity error: {str(e)[:100]}")
+                        sdo_similarity_result = {"status": "error", "message": str(e)}
+                        status.update(label="⚠️ SDO Similarity (Error)", state="complete")
                 
                 # Build Canonical Output
                 st.success("✅ All steps completed!")
