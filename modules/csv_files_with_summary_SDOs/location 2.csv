@@ -1,0 +1,10 @@
+summary,id
+"The object contains a location data point for Brazil, which was identified as the primary target country of a recent military operation code-named ""Astaroth campaign"". The location is described without specific geographical details.",location--1e5e2d2c-3855-4fde-9f07-43f9c5d786a3
+"The object contains information about a region targeted by Astaroth malware. This region includes countries from South America, specifically Brazil, Mexico, Uruguay, Argentina, Paraguay, Chile, Bolivia, Peru, Ecuador, Colombia, Venezuela, and Panama. The region is further described as South America, indicating its geographical boundaries within the continent.",location--ce3fa2cf-d28d-456f-8e45-4d7ecbdb802d
+"The object contains information about a location in Portugal that was targeted by the Astaroth malware. The location is identified by its name, which matches the country of Portugal. No specific coordinates or other geographical details are provided. It appears that this location is being discussed as part of an investigation into the spread of malware.",location--d74f5454-f580-431b-ae14-dbf275bd9c62
+"The object contains information about a specific location targeted by Astaroth malware. The location is Italy, which is also the name of the country. 
+
+It appears that this entry is likely part of a larger dataset or collection of locations affected by malware.",location--1dbfee90-303f-4e02-b39b-a9a148c5573e
+"The object contains information about a location in Russia. The name of the location is ""Russian Federation"". It appears to be an official designation for the country. 
+
+There are no specific details provided about its description or region, but it is classified as a type of location.",location--dfd3c08c-cfe9-491c-8d59-b12193e52a56

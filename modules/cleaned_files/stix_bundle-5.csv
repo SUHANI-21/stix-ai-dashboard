@@ -1,0 +1,296 @@
+summary,id,type
+"The object contains a threat intelligence report detailing an organization, specifically r136a1.dev, which is the publisher of this report. The description provided by TI Mindmap HUB suggests that this report has been STIXed, indicating it meets certain standards for structured information exchange in cybersecurity.
+
+Unfortunately, no detailed information about the organization, such as its goals or primary motivation, can be gathered from the report due to missing data fields. Similarly, there is insufficient information regarding the sophistication level of r136a1.dev, the type of threat actor associated with this entity, and the tool types that might be used in relation to it.
+
+The presence of several empty data fields, including external references, kill chain phases, malware types, indicator types, family classification, and validity dates (both valid from and modified), indicates a lack of concrete details about r136a1.dev. This report seems primarily focused on providing an introduction or overview rather than offering in-depth analysis.
+
+The primary specification for this report is the STIX version 2.1, indicating that it follows standardized procedures for sharing threat intelligence information across various platforms.",identity--14d618a2-4cb2-85e1-a694-a9dc06618053,identity
+"The object contains information about a specific identity, which is classified as an organization. The name of this organization is TI Mindmap HUB, and it is described as an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.
+
+Unfortunately, the available data does not provide any detailed information about the objectives or goals of the TI Mindmap HUB organization. However, it can be inferred that its primary function involves generating STIX bundles from Open-Source Intelligence (OSINT) sources, suggesting a strong focus on threat intelligence and security.
+
+The organization's sophistication level is currently unknown, as this field is empty in the provided data. Additionally, there is no information available about the types of malware associated with the TI Mindmap HUB, nor are there any details regarding the kill chain phases or tool types it utilizes.
+
+Furthermore, the object does not provide any specific details about the threat actors it may target, as this field is also empty in the provided data.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439,identity
+"The object contains information about a malicious IP address that was used by the threat actor Turla's Kazuar v3 loader as its command-and-control server. The IP address, 185.126.255.132, is associated with high confidence and was used to hosts malicious payloads and receive victim data. This indicator falls under the category of ""malicious-activity"" as it relates to the malicious activities carried out by this threat actor.
+
+Further analysis reveals that this IP address was identified through a pattern matching method, specifically using the STIX (Standardized Threat Intelligence Expression) pattern format with a pattern version of 2.1. The pattern associated with this indicator is ""[ipv4-addr:value = '185.126.255.132']"", which indicates the specific IP address that was matched.
+
+Unfortunately, no additional information is available about this malicious IP address, such as its family or sophistication level, kill chain phases, malware types, tool types, threat actor types, primary motivation, or any external references.",indicator--0de04146-bde0-4327-9862-44fe6aa068c4,indicator
+"The object contains information about a specific domain, esetcloud.com, which has been identified as a malicious domain used to imitate ESET. This domain is associated with the Kazuar C2 infrastructure and was found to have received a certificate on the C2 server. The confidence level in this assessment is high, indicating that there is strong evidence supporting the classification of this domain as malicious.
+
+The reason for flagging esetcloud.com as malicious lies in its suspicious behavior, particularly its ability to imitate ESET and its connection to the Kazuar C2 infrastructure. Additionally, a certificate was issued for this domain on the C2 server, further reinforcing the notion that it is being used for nefarious purposes.
+
+The information provided suggests that esetcloud.com does not fall into any specific family of threats but is instead classified as a malicious activity indicator. The sophistication level and primary motivation behind using this domain are currently unknown, awaiting further analysis and evaluation.",indicator--2f2dbd7e-e6fa-4655-ad26-0336ae8bd10d,indicator
+"The object contains information about an indicator of compromise, specifically a malicious URL. The URL, which is stored at https://download.originalapk.com/wp-content/plugins/loginizer/styles/, has been identified as compromised by Kazuar BRIDGE, a payload used for data exfiltration on a WordPress plugin path. This compromise indicates high confidence in the legitimacy of the URL.
+
+The indicator is classified under the ""malicious-activity"" category and does not belong to any specific family or tool type. It also fits into various kill chain phases but its sophistication level is unknown.
+
+It's worth noting that this object has no associations with external references, goals, primary motivations, threat actors, or malware types.",indicator--8f819fc3-ae5c-4d0a-aeaa-734a4cfccbfa,indicator
+"The object contains a detailed description of an indicator of compromise, which is described as follows. The compromised WordPress plugin path, used by the Kazuar BRIDGE payload for data exfiltration, has been identified. The confidence level in this detection is high, indicating that it is a reliable finding. The description also mentions that the pattern matches the URL ""https://portal.northernfruit.com/wp-content/plugins/file-away/core/"" which is an example of malicious activity.",indicator--50c657e7-cae7-4567-b29e-d55e02c697b5,indicator
+"The object contains information about an indicator of compromise, specifically a URL that has been identified as being used by a malicious payload for data exfiltration. The confidence level associated with this indicator is high, indicating that it is considered to be a reliable finding. The compromised WordPress plugin path was used by the Kazuar BRIDGE payload to facilitate data exfiltration.
+
+The indicator is categorized as a ""malicious-activity"" type, which suggests that it relates to some form of malicious activity. However, no further information is provided about the specific nature of this activity.",indicator--a2cf3658-ce67-4a0d-adbc-602cd27bb8e7,indicator
+"The object contains a malicious activity indicator, specifically identified by its SHA-256 hash as 3db10e71dab8710fb69b5c65c48382f43be3e4c79456d7a7abd5a7059873f581. This indicator is classified under the category of malicious activity and is associated with a high level of confidence, indicating its potential to cause harm. The notes accompanying this indicator reveal that it is derived from the SHA-256 hash of an initial VBScript file (8RWRLT.vbs) used for downloading and executing Kazuar loader components.
+
+The object's description further explains that this indicator falls under the domain of Stix pattern type, which is used to represent patterns or indicators in a standardized way. The pattern associated with this indicator matches a specific file hash, indicating its relevance to malicious activity.
+
+It is worth noting that no external references, goals, family information, kill chain phases, malware types, sophistication levels, threat actor types, tool types, primary motivations, or valid from dates are available for this object.",indicator--3f58ff3e-a543-48dc-ab96-ed2e0e0f6fb7,indicator
+"The object contains information about a type of malware indicator, specifically an SHA-256 hash of the native loader DLL responsible for decrypting and executing Kazuar payloads. This indicator is classified as malicious activity and has a high level of confidence associated with it. The name of the indicator suggests that it involves a file hash related to the SHA-256 algorithm, which is used to identify the specific type of malware.
+
+The pattern associated with this indicator is defined in STIX format, specifically indicating a file hash that matches the provided SHA-256 value. This pattern can be used to detect and analyze potential malware threats. The sophistication level of this indicator is not specified, but it is noted as being relevant for certain types of malicious activities.
+
+It's worth noting that the object does not provide information on specific threat actors or tool types associated with this indicator, which might limit its usefulness in a broader context. However, the high confidence level and STIX format pattern make it a valuable asset for detecting and analyzing malware-related threats.",indicator--c8332e76-058a-4b5e-b244-f1192a45fd32,indicator
+"The object contains information about an Indicator of Compromise, which is a malicious activity indicator used to identify potential security threats. The indicator is based on a SHA-256 hash of the COM-visible .NET assembly used to bridge native loader and Kazuar payloads. This means that the indicator is designed to detect and alert against suspicious activity related to these specific types of malware. 
+
+The confidence level associated with this indicator is high, indicating its reliability as a threat detection tool. Additionally, notes are provided about the nature of the indicator, specifically stating that it involves the use of a SHA-256 hash from a COM-visible .NET assembly to bridge native loader and Kazuar payloads. 
+
+There are no external references or other indicators of compromise associated with this specific indicator, suggesting that it is a standalone threat detection tool. The primary motivation behind its creation is unclear, as this information is not provided. Similarly, the sophistication level and primary motivation are unknown.
+
+The object also provides information about its pattern type and version, which suggests that it follows standardized guidelines for representing indicators of compromise in a structured format. This allows for easy comparison and sharing of threat detection information across different systems and organizations.",indicator--d6efb40c-7e5e-41f6-bdfd-f3a924352dfc,indicator
+"The object contains information about an indicator of compromise, which is a malicious activity identified in the system. The indicator's description reveals that it is related to a SHA-256 hash of the encrypted Kazuar KERNEL payload, specifically 'jayb.dadk', dropped and executed by a loader. The confidence level associated with this indicator is high.
+
+The indicator's pattern is defined as ""file:hashes.SHA-256 = 'befa1695fcee9142738ad34cb0bfb453906a7ed52a73e2d665cf378775433aa8'"", which suggests that the object contains a reference to a specific hash value. The type of this indicator is specified as ""indicator"", and its pattern version is 2.1, indicating that it falls under a certain standard or framework.
+
+The primary motivation for this indicator is not explicitly stated in the metadata, leaving room for further analysis or interpretation. Similarly, the sophistication level associated with this indicator remains unknown.",indicator--2f982495-5cf7-4804-9c1b-71082970be2d,indicator
+"The object contains information about a type of malicious activity known as an Indicator of Compromise, which is characterized by the presence of a specific SHA-256 hash. This hash corresponds to the decrypted payload of the TyntGextctidv.exe file, which was executed in memory. The confidence level associated with this indicator is high, indicating that it is likely related to malicious activity.
+
+The object provides a pattern that can be used to identify this type of activity, which involves matching a SHA-256 hash equal to 'c1f278f88275e07cc03bd390fe1cbeedd55933110c6fd16de4187f4c4aaf42b9' within a file's hashes. This pattern is categorized under the STIX (Standardized Extensible Markup Language for Information Sharing) framework, which standardizes the representation of security-related data.
+
+The object does not provide any information about the family or type of malware associated with this indicator, nor does it offer insights into its sophistication level or primary motivation. It also does not include specific threat actor types or tool types that might be involved in this activity.",indicator--151296b9-db02-4e67-b54a-a08631e9940e,indicator
+"The object contains a malware indicator, specifically an SHA256 hash of the encrypted Kazuar WORKER payload named ""SHA256: 458ca514e058fccc55ee3142687146101e723450ebd66575c990ca55f323c769"". This indicator is classified as malicious-activity and has a high confidence level. The note accompanying the indicator mentions that it was dropped and executed by the loader, indicating its potential role in a malware attack.",indicator--5a745dc5-8c28-422d-a54c-c9434f5e4bae,indicator
+"The object contains a threat indicator related to malware, specifically an indicator of compromise (IoC) associated with the SHA-256 hash of a decrypted Kazuar WORKER payload. The IoC has a high level of confidence and is linked to malicious activity. The indicator is categorized as ""malicious-activity"" under the STIX pattern type and version 2.1, indicating that it has been standardized according to this format for easy sharing and analysis among security professionals.
+
+The description notes that the IoC was obtained from the decrypted payload of the SthtbMexprVacu.exe executable executed in memory, suggesting that the malware is designed to evade detection by executing in a sandboxed environment or using other evasion techniques. The presence of this indicator suggests that the system or network has been compromised by this malicious activity.
+
+There are no additional fields available for summary as per your request; however, some information about the threat actor types, tool types, sophistication levels, primary motivations, and family information is present but ignored according to your instructions.",indicator--832d9c6f-c848-496c-8b48-b3c5becc298b,indicator
+"The object contains a threat indicator that is classified as malicious activity, indicated by its SHA-256 hash value of b755e4369f1ac733da8f3e236c746eda94751082a3031e591b6643a596a86acb. This indicator is linked to an encrypted Kazuar BRIDGE payload and was executed by a loader, which suggests that it has the potential to cause harm in various ways. The confidence level associated with this threat indicator is high, further emphasizing its potential impact.
+
+The indicator's purpose can be determined through its pattern, which consists of a file hash matching the specified SHA-256 value. This pattern indicates that the indicator is designed to detect malicious activity involving the use of specific cryptographic hashes. It's worth noting that the primary motivation behind this threat indicator remains unknown, but it appears to focus on detecting and mitigating certain types of attacks.
+
+In terms of sophistication, the object does not provide any additional information beyond its basic characteristics. However, its ability to identify malicious activity makes it a valuable tool for threat detection. The threat actor types and tool types associated with this threat indicator are also unknown, which could limit its effectiveness in identifying specific attack vectors or tools used by adversaries.
+
+Overall, this object appears to be an important component of a larger security framework aimed at detecting and mitigating threats related to malicious activity and cryptographic hashes.",indicator--0508c786-e9aa-4918-ac11-42750b096565,indicator
+"The object contains a detailed description of an indicator, specifically an Indicator of Compromise (IoC), which is categorized under the type ""indicator"". This IoC has been identified based on its SHA-256 hash value, indicating that it belongs to a malicious activity. The confidence level associated with this IoC is high, suggesting that it is a reliable and accurate indicator of potential security threats.
+
+The IoC in question is related to a decrypted Kazuar BRIDGE payload, which was executed in memory, resulting in the creation of the SHA-256 hash value '6eb31006ca318a21eb619d008226f08e287f753aec9042269203290462eaa00d'. This hash value serves as a unique identifier for the IoC.
+
+The description also mentions that this IoC has been identified based on its pattern, which is defined as ""[file:hashes.'SHA-256' = '6eb31006ca318a21eb619d008226f08e287f753aec9042269203290462eaa00d']"". This pattern type is specified as ""stix"", indicating that it follows the STIX (Standards for Information Sharing and Analysis Between Agencies) protocol.
+
+The IoC has been classified under the category ""malicious-activity"" within the indicator types, suggesting that it is associated with malicious activities or threats. However, additional information regarding its sophistication, primary motivation, tool types, threat actor types, and malware types is not available in this metadata.
+
+Overall, the object provides a detailed description of an IoC, highlighting its relevance to potential security threats and providing a clear understanding of its characteristics and patterns.",indicator--f98edd62-fea6-4662-9c1a-164e0f3c62a1,indicator
+"The object contains information about a Windows Registry key that has been identified as a potential indicator of malicious activity. The registry key is located at HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Run\Hewlett Packard Drivers, and it was created for persistence purposes, launching the loader executable on user logon. This key was flagged with high confidence by the system, indicating a strong indication of malicious activity.
+
+The primary motivation behind this key is not explicitly stated, but it has been classified as a malicious-activity indicator. The sophistication level of this threat actor is also unknown, although it is clear that the key has been designed to persist and execute on user logon.
+
+It's worth noting that this object does not reference any specific malware types, kill chain phases, or tool types, which may be associated with this type of malicious activity. However, its presence in the registry suggests a potential threat to the system's security.
+
+The object also references an external pattern and a specified version number (2.1), indicating that it has been defined according to certain standards or guidelines for identifying and classifying indicators of malicious activity.",indicator--db2ceec3-f48b-4a73-8ce5-06ae837eb9ca,indicator
+"The object contains information about a malicious URL, specifically an indicator of compromise, which is associated with the Kazuar infection chain. This URL, https://185.126.255.132/hpbprndi.exe, is said to be hosting a legitimate signed printer driver installer used for DLL sideloading. The confidence level in this threat is medium, indicating that it is not extremely high or low.
+
+The object also includes additional information about the threat, such as its external references, goals, and kill chain phases. However, these fields are empty or not provided, so their exact nature and relevance cannot be determined.
+
+In terms of classification, the threat falls under the category of malicious activity, which is a specific type of malware. The object does not provide any information about the family of this threat or its sophistication level.
+
+The pattern associated with this threat is defined using STIX language, specifically version 2.1, and includes a URL value that points to the same malicious URL. This pattern can be used for detection and analysis purposes.
+
+Overall, the object provides a summary of the threat, highlighting its association with the Kazuar infection chain, its medium confidence level, and its classification as malicious activity.",indicator--406bd63e-1cea-4009-86b0-0f9146334bbf,indicator
+"The object contains a detailed description of an Indicator of Compromise, specifically a URL hosting the native loader DLL used to decrypt and execute Kazuar payloads. The confidence level associated with this indicator is medium. Furthermore, it is categorized under malicious activity and can be identified by its pattern, which matches the provided URL. The threat actor type and tool types are not specified in this description.",indicator--161f5dba-9a12-4de8-bb0b-f30dd98392f8,indicator
+"The object contains information about an Indicator of Compromise (IoC) related to malicious activity, specifically a URL hosting encrypted malware. The IoC has been identified by the name ""URL: https://185.126.255.132/jayb.dadk"" and is classified as having medium confidence in its accuracy. 
+
+This particular IoC is notable for being associated with an encrypted Kazuar KERNEL payload intended for stage 1 execution. Furthermore, it is linked to a specific URL where the malware can be found. The IoC also has external references which could provide additional context or details about the malicious activity.
+
+The indicator's type and pattern version are specified as ""indicator"" and 2.1 respectively, with a Stix pattern format. Its pattern includes a value that specifies the URL associated with the IoC, providing further clarity on its nature.
+
+It is essential to note that there are no available references to family associations, kill chain phases, malware types, primary motivations, sophistication levels, threat actor types, tool types, or x-capabilities for this indicator.",indicator--ae34b398-a54a-41e5-af4c-2dd7d0f354f6,indicator
+"The object contains an indicator of compromise that involves a URL hosting an encrypted Kazuar WORKER payload for stage 1 execution. The confidence level associated with this indicator is medium, which suggests a moderate level of certainty regarding its validity and relevance. Additionally, the notes provide further insight into the purpose of this indicator, stating that it is related to malicious activity.
+
+The object also specifies that it falls under the category of ""malicious-activity"" in terms of its type, indicating that it is associated with malicious behavior or activities. However, the sophistication level and primary motivation of the threat actor behind this indicator are currently unknown, as they are marked as null.
+
+Furthermore, the object does not provide any information on malware types, kill chain phases, family affiliation, external references, pattern version, spec version, tool types, threat actor types, or pattern type.",indicator--e34e598c-8a4d-40ac-8756-48c996984b0b,indicator
+"The object contains information about a cyber threat indicator, specifically an Indicator of Compromise, which is characterized by the presence of malicious activity. The URL associated with this indicator, https://185.126.255.132/pkrfsu.ldy, hosts an encrypted Kazuar BRIDGE payload intended for stage 1 execution.
+
+The confidence level for this indicator is medium, suggesting a moderate degree of certainty in its validity. The notes accompanying the indicator provide additional context, stating that it serves as a URL hosting the aforementioned payload. Furthermore, the external references to other threat indicators are not available due to missing data.
+
+In terms of its classification, the threat actor types and family affiliation associated with this indicator are unknown, as specified by 'nan' in their respective fields. Similarly, the kill chain phases, malware types, primary motivation, sophistication, spec version, tool types, and threat actor types are all uncharacterized.
+
+Notably, the pattern type is identified as STIX, a standard for describing threat intelligence information, while the pattern version is 2.1, indicating a specific schema and structure for this type of indicator.",indicator--c7b77124-49f0-4175-ae78-0ea72be38fb4,indicator
+"The object contains a description of an Indicator, which is described as a URL used by the initial VBScript to send victim system information to the attacker. The confidence level associated with this indicator is medium, indicating that it may not be the most reliable or accurate source of information. Additionally, notes about the URL are provided, stating that it is used for malicious purposes.
+
+The indicator's pattern type is specified as STIX, and its pattern version is 2.1, which suggests a standardized format for describing indicators in the context of security and threat analysis. The primary motivation or purpose behind this indicator is currently unknown, but it may be related to tracking or monitoring malicious activity.
+
+Unfortunately, no information is available on the sophistication level associated with this indicator, nor are any specific malware types, kill chain phases, or tool types linked to this URL. However, it is categorized as a malicious-activity type of indicator, suggesting that it is related to tracking malicious behavior.
+
+The object also provides external references and notes about its creation and classification, but these details have not been provided due to their metadata nature. Overall, the available information suggests that this indicator is a valuable asset for security analysts seeking to monitor and track malicious activity online.",indicator--9893ca82-fb7d-447a-a8ad-970aacad943e,indicator
+"The object contains information about a malicious Windows registry key, specifically HKEY_CURRENT_USER\SOFTWARE\Classes\CLSID\{D6BCEDD7-8E53-4769-9826-24954C975AAC}. This registry key is used for user-level persistence and execution of Kazuar payloads. It was identified as a malicious activity and has a medium level of confidence.
+
+The description of this registry key notes its role in COM object registration, indicating that it is used for the purpose of storing and executing code on the system. The object is categorized under the type ""indicator"" and falls under the indicator type ""malicious-activity"".
+
+Further analysis reveals that this object has a specific pattern associated with it, which is defined by the regular expression ""[windows-registry-key:key = 'HKEY_CURRENT_USER\\\\SOFTWARE\\\\Classes\\\\CLSID\\\\{D6BCEDD7-8E53-4769-9826-24954C975AAC}']"". This pattern is of type ""stix"" and version 2.1.
+
+The object's properties include a description, notes, indicator types, and malware types, but these values are currently set to unknown or not available. The object's sophistication level is also undefined, while the primary motivation for its inclusion in this system is not specified.",indicator--3bc27189-2725-4640-b3d8-471472be7fd2,indicator
+"The object contains information about a specific Windows registry key that is associated with malicious activity, specifically related to the execution of Kazuar payloads. This registry key is used for user-level persistence and is registered under the CLSID (Class Interface) {045CE7DB-2160-4067-BB86-0D54E20FA95D}. The indicator's confidence level in its assessment of this registry key as malicious is medium, based on its analysis.",indicator--24bb70d7-9c74-41fa-93ca-86d253a935ea,indicator
+"The object contains a description of a potential indicator of compromise related to a malicious Windows registry key. The registry key, identified by the CLSID {5806CA31-7A57-4125-AC69-4D597BD5FE38} value, is used for user-level persistence and execution of Kazuar payloads. This key is considered medium-confidence, indicating that it may be related to malicious activity.
+
+The key itself falls under the category of ""malicious-activity"" and does not appear to be part of a known family of malware. The object's sophistication level and primary motivation are currently unknown, as they are represented by nan values.
+
+The pattern associated with this indicator matches the structure of a STIX-compatible pattern, indicating that it can be used for detection and analysis purposes.",indicator--d8d0e59a-4340-4104-99a6-664098c7d962,indicator
+"The object contains a Windows Registry Key that serves as an indicator of compromise for malicious activity, specifically related to the execution of Kazuar payloads. This registry key is used for machine-wide persistence and has a confidence level of medium. The key's structure is defined by HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{D6BCEDD7-8E53-4769-9826-24954C975AAC}. 
+
+The object is categorized as a malicious activity indicator, which falls under the type of ""indicator"". It does not fall into any specific family of indicators and its sophistication level is unknown. The primary motivation behind this registry key's creation or purpose is also unclear. The object's specification version is 2.1, which corresponds to the STIX pattern format.
+
+There are no external references associated with this registry key, nor are there any patterns that match this specific type of key. The object does not fall under any specific tool types and its threat actor types are unknown.",indicator--b9ccef4b-433f-4b26-9deb-c0f08731a105,indicator
+"The object contains a detailed description of an indicator, which is a malicious activity related to a Windows registry key used for machine-wide persistence and execution of Kazuar payloads. The specific registry key refers to the CLSID {045CE7DB-2160-4067-BB86-0D54E20FA95D} under HKEY_LOCAL_MACHINE\SOFTWARE\Classes.
+
+The indicator is classified as medium in terms of confidence, indicating that it has some level of reliability but also some degree of uncertainty. The notes section provides additional information about the registry key's purpose, which is used for COM object registration to achieve machine-wide persistence and execution of Kazuar payloads.
+
+There are no external references provided for this indicator, and its goals, family, kill chain phases, malware types, and sophistication levels are all undefined or not specified. The pattern associated with this indicator matches a STIX pattern type, specifically ""[windows-registry-key:key = 'HKEY_LOCAL_MACHINE\\\\SOFTWARE\\\\Classes\\\\CLSID\\\\{045CE7DB-2160-4067-BB86-0D54E20FA95D}']"", and has a version of 2.1.
+
+Unfortunately, the primary motivation and tool types used for this indicator are not defined or specified.",indicator--d89de5c6-b823-447e-927a-b66adbf6f0ee,indicator
+"The object contains an indicator of Compromise, specifically a registry key for COM object registration used for machine-wide persistence and execution of Kazuar payloads. This type of threat actor is classified under the category of malicious activity. The registry key in question is identified by its location at HKEY_LOCAL_MACHINE\SOFTWARE\Classes\CLSID\{5806CA31-7A57-4125-AC69-4D597BD5FE38}.",indicator--fad1589c-972b-46b3-843f-5ff0d00be809,indicator
+"The object contains information about a specific attack pattern related to the Command and Scripting Interpreter: VBScript. This attack pattern is characterized by the use of VBScript files, which are clean and unobfuscated, suggesting that they were deployed on a system where the attacker already had access.
+
+The attack begins with the execution of a VBScript file named 8RWRLT.vbs, which creates multiple directories under %LOCALAPPDATA%\\Programs\\HP\\Printer\\Driver and downloads several files from a remote server. The script then executes the downloaded legitimate HP printer installer and sets up persistence. This use of VBScript as the initial execution vector allows the threat actor to leverage Windows-native scripting capabilities for file system manipulation, network communication, and process execution.
+
+The attack pattern utilizes legitimate software components, such as the HP printer installer, to carry out its malicious activities. The fact that the script is benign in appearance makes it difficult to detect immediately, allowing the threat actor to avoid raising suspicions.
+
+The attack pattern has been linked to a specific technique identified by MITRE ATT&CK, which is T1059/005. This connection provides further insight into the tactics and techniques used by threat actors to carry out this type of attack.
+
+Overall, the Command and Scripting Interpreter: VBScript attack pattern highlights the potential for attackers to use legitimate software components to carry out malicious activities, emphasizing the importance of monitoring system activity and detecting anomalies in real-time.",attack-pattern--e3c9ed50-8524-e987-7e91-dc140c8b2462,attack-pattern
+"The object contains information about an attack pattern titled ""Scheduled Task/Job: Registry Run Keys / Startup Folder"". This attack pattern involves creating a registry run entry under HKEY_CURRENT_USER\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run, which points to the legitimate signed HP printer driver installer (hpbprndi.exe). The attackers use this trusted binary for persistence, ensuring that their loader is executed every time the user logs in, blending malicious activity with legitimate software to evade detection and maintain access across reboots.
+
+The attack pattern leverages a registry run key to persist on the system. By doing so, it allows the attackers to execute their loader every time the user logs in, making it difficult for security software to detect the malicious activity.
+
+According to external references, this attack pattern is related to technique T1547.001, which involves using legitimate Windows functionality to carry out malicious activities without arousing suspicion.",attack-pattern--a36513ba-257a-952b-c829-8254864edc98,attack-pattern
+"The object contains information about an attack pattern known as the ""Ingress Tool Transfer"". This technique involves the attacker downloading multiple files from their server into a newly created directory structure, which includes a legitimate HP printer installer, a malicious loader DLL, and several encrypted payloads. The script uses native Windows objects such as WinHttp.WinHttpRequest.5.1 and ADODB.Stream to retrieve and save these files locally.
+
+The attackers use this technique to stage all necessary components for further exploitation, thereby leveraging native Windows objects to avoid detection and bypass security controls that may block non-native downloaders. This approach enables the attacker to maintain a low profile while still achieving their malicious objectives.
+
+Furthermore, the attack pattern is classified under the Mitre Attack techniques as T1105, which involves using external tools to facilitate attacks on networks or systems. The attackers also use this technique in conjunction with command-and-control phases, further indicating the complexity and sophistication of their tactics.
+
+In terms of malware types and tool types, the object does not provide any specific information about what the attacker is trying to achieve through these means. However, it is clear that the ""Ingress Tool Transfer"" attack pattern involves a range of malicious tools and techniques designed to facilitate the download and deployment of files from an external server.
+
+Overall, the ""Ingress Tool Transfer"" attack pattern appears to be a sophisticated technique used by attackers to stage payloads for further exploitation, leveraging native Windows objects to evade detection and bypass security controls.",attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7,attack-pattern
+"The object contains a description of an attack pattern known as DLL Side-Loading. This technique involves executing a malicious loader by running a legitimate, signed HP printer driver installer that allows the attacker to sideload their malicious DLL under the guise of a trusted process. The attacker exploits the trust relationship between the signed executable and the operating system to enable privilege escalation and stealthy execution of malicious code without triggering standard security warnings.
+
+The technique abuses this trust relationship to execute malicious code, making it difficult for security systems to detect the attack. It is classified as a ""privilege-escalation"" attack, which involves gaining elevated privileges or access to sensitive information.
+
+The attack pattern is linked to the MITRE ATT&CK framework, specifically technique T1574/002, and has an external reference URL that provides more information on this specific technique.",attack-pattern--7fb1596b-5cc3-1c99-ea3d-94473a2b8935,attack-pattern
+"The object contains an obfuscation tactic employed by attackers to hinder static and dynamic analysis, increase the time required for reverse engineering, and evade signature-based detection by security solutions. This tactic involves embedding real code between layers of junk logic and encrypting critical strings using a XOR-based algorithm.
+
+By employing this technique, attackers significantly complicate efforts to understand and mitigate their malware, making it challenging for security solutions to detect and analyze the malicious software. The use of obfuscation in this way serves as a primary motivation for the attacker's actions, highlighting the sophistication and complexity of modern cyber attacks.
+
+This attack pattern is categorized under the MITRE Attack technique T1027, which involves using anti-analysis techniques to evade detection by security solutions.",attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2,attack-pattern
+"The object contains information about an attack pattern known as System Information Discovery. This attack pattern involves collecting detailed system information from a victim machine using WMI queries and environment variables, providing the attacker with a comprehensive profile of the infected host. The gathered information includes operating system name and version, computer uptime, processor architecture, computer and user name, user domain, and a list of running processes.
+
+The collected data enables tailored follow-up actions and helps the attacker assess the value and suitability of the compromised system for further exploitation. This attack pattern is associated with the MITRE ATT&CK framework, specifically falling under the ""discovery"" phase within the kill chain. It has been linked to external references from the MITRE-ATTACK attack database.
+
+In terms of sophistication and motivation, the attack pattern's sophistication level is currently unknown, and its primary motivation is not specified. The threat actor types associated with this attack pattern are also unspecified.",attack-pattern--1aadd1c4-0f97-4195-587d-67d229fb8ce1,attack-pattern
+"The object contains information about an attack pattern, specifically File and Directory Discovery. This attack pattern involves enumerating all files and folders within a newly created directory to gather information about local assets. The process likely uses the Scripting.FileSystemObject to collect data on creation and last modified dates of these files and folders. The purpose of this action is to verify the successful deployment of malicious components and provide an inventory of local assets for further manipulation or exfiltration.
+
+The attack pattern is classified as a technique used in T1083, which is a tactic associated with lateral movement in cyberattacks. This suggests that File and Directory Discovery is often employed by attackers to gather information about their surroundings and identify potential targets for further exploitation.
+
+Overall, the File and Directory Discovery attack pattern highlights the importance of monitoring system logs and detecting unusual activity related to file and directory access.",attack-pattern--e0eb7569-650b-5ac4-dc4c-0614ba450c47,attack-pattern
+"The object contains information about an attack pattern identified as ""Exfiltration Over C2 Channel"". The attackers use standard HTTP POST requests with custom headers to send exfiltrated data, including OS details, user and domain information, process list, and file inventory, to the attacker's server via an HTTP POST request. This technique is used to blend their exfiltration traffic with legitimate web traffic, reducing the likelihood of detection by network monitoring solutions.
+
+The attackers' use of custom headers in their HTTP requests allows them to avoid being flagged as suspicious by traditional network monitoring systems. However, this attack pattern relies on standard HTTP POST requests, making it somewhat distinguishable from more sophisticated types of attacks.
+
+This attack pattern is categorized under the Mitre Attack technique T1041 and is part of the exfiltration phase. The primary motivation behind using this approach appears to be the goal of exfiltrating sensitive information without being detected by traditional security measures.
+
+The object also contains references to external sources, including the Mitre-Attack website, which provide additional context and details about this attack pattern.",attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0,attack-pattern
+"The object contains information about an attack pattern known as ""Process Injection: Control Flow Hijacking"". This attack technique involves the Turla developers employing a control flow redirection trick within the native loader DLL to execute malicious code in the middle of a legitimate function. The process injection manipulates the execution flow of the host process, allowing the injected code to run stealthily within the context of a trusted binary.
+
+Such techniques are used to evade runtime detection and complicate forensic analysis, as the malicious actions are interleaved with legitimate process activity. This form of attack is particularly useful for evading security measures and making it harder to analyze the malicious behavior of the attacker.
+
+The attack pattern is associated with a specific kill chain phase known as ""defense-evasion"". Additionally, there is an external reference linking this attack pattern to a Mitre-attack technique (T1055/013), which provides more information on the attack.
+
+It is worth noting that this attack pattern is part of a larger category of attack patterns related to process injection.",attack-pattern--b88923a8-b139-3c26-530f-c5a766237ae2,attack-pattern
+"The object contains information about a sophisticated attack pattern known as ""Patchless ETW and AMSI Bypass via COM Abuse."" This advanced evasion technique leverages the Component Object Model (COM) to bypass security mechanisms such as Event Tracing for Windows (ETW) and the Antimalware Scan Interface (AMSI). By exploiting COM interfaces, the loader disables or evades these security measures without altering code on disk, making detection and remediation more challenging.
+
+This attack pattern is specific to Turla's implementation and demonstrates a sophisticated understanding of Windows internals. The technique involves abusing COM interfaces rather than patching system DLLs directly, which makes it significantly harder to detect and remediate. As such, this advanced evasion technique is considered highly sophisticated and requires in-depth knowledge of Windows internals.
+
+The attack pattern aligns with the MITRE ATT&CK framework, specifically targeting the ""defense-evasion"" phase. The primary motivation behind this attack pattern appears to be evading security mechanisms, making it a significant concern for organizations seeking to protect themselves against advanced threats.",attack-pattern--4850470e-0416-d1bb-241b-7bb15a864c1d,attack-pattern
+"The object contains information about the Kazuar malware, a sophisticated backdoor and remote-access trojan attributed to the Turla group. The malware is described as having a v3 loader that is deployed via DLL sideloading in order to establish persistence, evade security solutions, and enable remote control of the infected system. Additionally, it can be used for evasion tactics such as anti-analysis.
+
+The Kazuar malware falls under two categories: backdoor and remote-access trojan. Its goals include establishing a persistent presence on an infected system, evading detection by security solutions, and enabling remote control over the compromised machine.
+
+In terms of its characteristics, the object specifies that it is classified as family-wise due to its similarity with other Turla-related malware variants.",malware--2f707419-42dc-75d9-ca01-50b63c25f0e3,malware
+"The object contains information about a threat actor known as Gamaredon, which is associated with deploying backdoors and remote-access trojans. The malware type of Gamaredon includes both backdoor and remote-access-trojan classifications. According to the provided data, Gamaredon's activities often involve collaboration with another threat group called Turla. There is a mention of a campaign involving both Gamaredon and Turla, which may imply that Gamaredon malware is present in the infection chain.",malware--b97802e1-eb72-0159-2e5b-cbe1c2a6a946,malware
+"The object contains information about a threat actor named Turla. Turla is also known by the aliases Snake, Uroburos, Venomous Bear, Waterbug, and KRYPTON. According to its description, Turla is explicitly mentioned as the developer and operator of the Kazuar v3 loader and backdoor analyzed in this article. The group's primary motivation is espionage, and it employs advanced evasion and persistence techniques as part of its campaign.
+
+The goals of Turla include deploying a Kazuar v3 backdoor, evading security solutions, establishing persistence, and collecting information about victim systems. The sophistication level of Turla's tactics is classified as advanced.",threat-actor--be1ae0b5-f0ae-aef5-8902-51bacff8b106,threat-actor
+"The object contains information about Gamaredon, a threat actor believed to be involved in cyber espionage campaigns. According to the data, Gamaredon is mentioned in the context of a reported collaboration with Turla, another known threat actor, as referenced by ESET. However, the exact role of Gamaredon in this specific attack is not detailed.
+
+The primary motivation for Gamaredon's activities appears to be espionage, indicating that their main goal is to gather sensitive information for malicious purposes. The sophistication level associated with Gamaredon's operations is classified as intermediate, suggesting a moderate level of technical expertise and capabilities.
+
+Gamaredon is believed to collaborate with Turla in cyber espionage campaigns, and the organization is part of a broader campaign involving Kazuar v3 payloads. This collaboration indicates that Gamaredon shares common goals and techniques with other threat actors, highlighting the interconnected nature of cyber threats.
+
+Overall, the data suggests that Gamaredon is a nation-state sponsored threat actor engaged in sophisticated cyber espionage activities, utilizing intermediate-level tactics and techniques to achieve their objectives.",threat-actor--b97802e1-eb72-0159-2e5b-cbe1c2a6a946,threat-actor
+"The object contains information about a VBScript tool, which is used to automate various malicious activities. The primary purpose of this tool is to download files, create directories, gather system information, and launch the malicious payload via legitimate processes. 
+
+It appears that the tool's sophistication level is unknown, as indicated by the 'sophistication' field being empty. Additionally, the tool's primary motivation for its use is also unspecified.
+
+The tool's capabilities are categorized under two main types: ""information-gathering"" and ""execution"". This suggests that the tool can collect information about a system or execute malicious code to achieve certain goals.
+
+There is no clear indication of what type of malware this tool creates, as the 'malware_types' field is empty. Similarly, there is no specified threat actor type associated with this tool.
+
+In terms of its kill chain phases, the VBScript tool falls under the ""mitre-attack"" framework and specifically the ""execution"" phase. This suggests that the tool's primary function is to execute malicious code or payload as part of a larger attack.
+
+Overall, the available information about the VBScript tool provides insight into its capabilities and functions but leaves many aspects of its nature and usage open to speculation.",tool--b200cc95-1f07-62a2-2f40-e472b05b560e,tool
+"The object contains information about a malicious tool used to download malicious payloads and exfiltrate victim data. This tool was created on January 20, 2026, and is categorized as a type of malware. The tool's name is WinHttp.WinHttpRequest.5.1, indicating its relation to the Windows HTTP request component.
+
+The primary function of this tool is for command-and-control operations, gathering information about victims, and exfiltrating stolen data. It can be used to download malicious payloads and send sensitive data back to an attacker's server via HTTP requests. The sophistication level of this tool is not explicitly stated, but its purpose suggests it is a relatively advanced threat.
+
+The tool's capabilities include command-and-control operations and exfiltration, which are typical characteristics of sophisticated malware. However, the specific details about its operation and how it achieves these goals are not detailed in the provided information. The tool falls under the category of ""information-gathering,"" ""command-and-control,"" and ""exfiltration"" types.
+
+The tool's primary motivation is to facilitate malicious activities such as exfiltrating data from victims' systems, but this information is not available in the given metadata. The threat actor type associated with this tool is not specified, which might indicate a lack of specific targeting or a more general purpose malware.",tool--cb1495b7-fd8c-01e0-34c5-7bdb753b5507,tool
+"The object contains information about a malicious tool used to write binary data to disk, enabling attackers to save and execute malicious files on victim systems. This tool is identified as ""ADODB.Stream"" and falls under the category of a malicious tool. The primary motivation for this tool appears to be related to execution. 
+
+It's worth noting that there are some fields in the object that contain no relevant information, such as aliases, external references, goals, indicator types, family classification, kill chain phases beyond ""execution"", malware types, and threat actor types. These areas seem to be either missing or not applicable to this particular tool.
+
+The sophistication level of this tool is also unknown due to a lack of available data in the corresponding field. 
+
+Additionally, there are some fields with technical specifications like specification version (2.1) which seems to be relevant but again lacks further details.",tool--a6ed82cc-ca98-0978-d017-ac7d8c299927,tool
+"The object contains information about a tool used for expanding environment variables, running executables, and creating registry entries for persistence. This tool is related to the WScript.Shell malware, which is employed to achieve persistence on infected systems. The primary motivation behind this tool's creation is to maintain control over the compromised system.
+
+The tool falls under two categories: execution and persistence. Its capabilities include expanding environment variables and running executables, as well as creating registry entries for persistent operations. These functionalities suggest that WScript.Shell is designed to evade detection by traditional security measures and ensure its continued presence on infected systems.
+
+The sophistication level of this tool is not explicitly stated in the provided data, but its purpose implies a moderate level of complexity, given its ability to create registry entries and run executables persistently. The threat actor types associated with WScript.Shell are not specified in the provided metadata.
+
+Overall, the object provides valuable insights into the capabilities and functionalities of the WScript.Shell tool, which is likely used by attackers to maintain persistence on compromised systems.",tool--10608010-855d-c88f-5211-e85742954f25,tool
+"The object contains information about a specific type of tool used for malicious purposes. The primary function of this tool is to create directories and enumerate files and folders, which can be utilized to facilitate the staging of payloads and data collection for exfiltration purposes.
+
+This tool falls under the category of information-gathering tools, as it is designed to collect and gather data about the file system, allowing attackers to access sensitive information. Additionally, the tool can execute malicious code, making it a potential execution tool.
+
+The tool's sophistication level is not explicitly stated, but its purpose suggests that it may be used by sophisticated attackers who require precise control over their environment. The tool does not appear to have any specific malware types associated with it, which may indicate that it is designed to operate independently of other malicious payloads.
+
+It is worth noting that the object's metadata fields are not relevant to its functionality or purpose, and thus they have been excluded from this summary.",tool--9ea8d72d-2441-e242-68b3-f754539c5370,tool
+"The object contains information about a tool used for malicious activities. The tool, named WScript.Network, was created to collect information about the victim's computer name, user name, and domain for reconnaissance and exfiltration purposes.
+
+This tool is categorized as an information-gathering tool, indicating that its primary function is to gather data about the target system. The threat actor associated with this tool is unknown due to the absence of specific details in the metadata field 'threat_actor_types'.
+
+The WScript.Network tool falls under the category of kill chain phase ""collection"", which suggests that it is used at an early stage of the attack to collect information about the victim's system.
+
+This tool is not part of a known malware family, but its name and function suggest that it may be related to other malicious tools. However, without further information, it cannot be conclusively determined if WScript.Network is a standalone tool or part of a larger family of similar tools.
+
+The tool has been identified as belonging to the ""information-gathering"" tool type, which implies that its purpose is to gather data about the target system for potential malicious use.",tool--b52e9304-4efb-0fec-1555-aec2562bfeb4,tool
+"The object contains information about a tool used for malicious purposes, specifically for leveraging Windows Management Instrumentation (WMI) to query operating system details and running processes. This tool is designed to aid an attacker in system profiling and data collection.
+
+Additionally, the tool has been identified by its aliases, but this information is currently not available. The tool's goals are undefined, but it is noted that it can be used for information-gathering and discovery purposes.
+
+The object also contains some external references, but these have not yet been specified. Furthermore, the tool's sophistication level and primary motivation remain unknown.
+
+It appears that WMI is a key feature of this tool, as it allows the attacker to gather detailed information about the system being targeted. The kill chain phase associated with this tool is ""discovery"", indicating its use in the initial stages of an attack.
+
+The tool can be used to target various systems and devices, but specific details about these targets are not available. Furthermore, no information is provided about the malware types or threat actor types that might be involved in using this tool.
+
+In terms of capabilities, the object notes that WMI is a key feature of this tool, which allows it to perform certain actions such as querying operating system details and running processes. However, some other x-capabilities have not yet been specified.
+
+Overall, while the specifics of this tool are somewhat unclear, it is clear that it has been designed with malicious purposes in mind, specifically for gathering detailed information about a target system or device.",tool--98b09009-d282-164d-0575-80f39d57620b,tool
+"The object contains information about a tool used for persistence purposes. The primary method employed by this tool is to utilize the Windows registry's 'Run' key, which allows it to maintain its presence on system startup, thereby ensuring the execution of the malicious payload.
+
+This tool leverages the 'persistence' capability to achieve its goals, as indicated by its specified 'tool_types'. The sophistication level associated with this tool has not been evaluated; therefore, no information is available regarding its capabilities or potential vulnerabilities.
+
+The primary motivation behind using this tool appears to be persistence, but further details are not available.",tool--f51b70f6-1ab0-3225-1878-480e9d90d567,tool
