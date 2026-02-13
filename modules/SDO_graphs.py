@@ -58,6 +58,37 @@ def build_stix_graph(bundles_dir):
 
     return G
 
+
+# def draw_interactive_graph(G, output_file="stix_graph.html"):
+#     net = Network(
+#         height="800px",
+#         width="100%",
+#         directed=True,
+#         bgcolor="#0f172a",
+#         font_color="white"
+#     )
+
+#     for node, data in G.nodes(data=True):
+#         label = data.get("name") or node.split("--")[0]
+#         title = f"""
+#         <b>{label}</b><br>
+#         Type: {data.get("type")}
+#         """
+#         net.add_node(node, label=label, title=title)
+
+#     for src, tgt, data in G.edges(data=True):
+#         net.add_edge(
+#             src,
+#             tgt,
+#             label=data.get("relationship", ""),
+#             arrows="to"
+#         )
+
+#     net.write_html(output_file)
+
+import json
+from pyvis.network import Network
+
 def draw_interactive_graph(G, output_file="stix_graph.html"):
     net = Network(
         height="800px",
@@ -97,6 +128,21 @@ def draw_interactive_graph(G, output_file="stix_graph.html"):
     net.write_html(output_file)
     print(f"[+] Graph written to {output_file}")
 
+#testing
+graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
+print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
+
+# from collections import Counter
+
+# types = Counter(
+#     data.get("type", "unknown")
+#     for _, data in graph.nodes(data=True)
+# )
+
+# print(types)
+
+import networkx as nx
+
 def get_ego_graph(graph, id, radius=1):
     if id not in graph:
         raise ValueError(f"ID {id} not found in graph")
@@ -119,6 +165,8 @@ def get_ego_graph(graph, id, radius=1):
     print(types)
     return ego
 
-# Initialize empty graph - will be populated when bundles are processed
-graph = nx.DiGraph()
-print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
+
+
+ego_graph= get_ego_graph(graph,"malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae")
+draw_interactive_graph(ego_graph)
+
