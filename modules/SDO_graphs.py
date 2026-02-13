@@ -129,44 +129,26 @@ def draw_interactive_graph(G, output_file="stix_graph.html"):
     print(f"[+] Graph written to {output_file}")
 
 #testing
-graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
-print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
+#graph=build_stix_graph("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/antonio_formato_bundles")
+#print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")
 
-# from collections import Counter
+# Test code commented out to prevent errors
+# ego_graph= get_ego_graph(graph,"malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae")
+# draw_interactive_graph(ego_graph)
 
-# types = Counter(
-#     data.get("type", "unknown")
-#     for _, data in graph.nodes(data=True)
-# )
 
-# print(types)
-
-import networkx as nx
-
-def get_ego_graph(graph, id, radius=1):
-    if id not in graph:
-        raise ValueError(f"ID {id} not found in graph")
-
-    ego = nx.ego_graph(
-        graph,
-        id,
-        radius=radius,
-        center=True,
-        undirected=False
+def get_ego_graph(G, node_id, radius=1):
+    if node_id not in G:
+        raise ValueError(f"Node {node_id} not found in graph")
+    ego= nx.ego_graph(G, node_id, radius=radius, center=True, undirected=False)
+    print("Ego graph for node:", node_id)
+    print (f"Nodes: {ego.number_of_nodes()}, Edges: {ego.number_of_edges()}")
+    types= Counter(
+        data.get("type", "unknown") for _, data in ego.nodes(data=True)
     )
-
-    print(f"Ego graph for {id}:")
-    print(f"Nodes: {ego.number_of_nodes()}, Edges: {ego.number_of_edges()}")
-    types = Counter(
-        data.get("type", "unknown")
-        for _, data in ego.nodes(data=True)
-    )
-
     print(types)
     return ego
 
-
-
-ego_graph= get_ego_graph(graph,"malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae")
-draw_interactive_graph(ego_graph)
-
+# Initialize empty graph - will be populated when bundles are processed
+graph = nx.DiGraph()
+print(f"no of edges:{graph.number_of_edges()}, num_of nodes:{graph.number_of_nodes()}")

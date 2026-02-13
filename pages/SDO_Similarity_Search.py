@@ -6,15 +6,13 @@ import os
 from collections import defaultdict
 
 # ── Your modules ─────────────────────────────────────────────────────────────
-import modules.SDO_graphs as SDO_graphs
-from modules.SDO_graphs import get_ego_graph, build_stix_graph
+from modules.SDO_graphs import graph, get_ego_graph
 
-# ── Pipeline modules ─────────────────────────────────────────────────────────
+# ── Pipeline odules ─────────────────────────────────────────────────────────
 from modules.bundles_2_csv import stix_json_to_csv
 from modules.summary_generator import summarize_csv
 from modules.clean_csv import clean_csv
 from modules.similarity_search import generate_similarity_json
-
 # ─────────────────────────────────────────────────────────────────────────────
 # PAGE CONFIG
 # ─────────────────────────────────────────────────────────────────────────────
@@ -81,9 +79,6 @@ with st.sidebar:
             with open(bundle_path, "wb") as f:
                 f.write(bundle_file.getvalue())
 
-            # Build graph from uploaded bundle
-            SDO_graphs.graph = build_stix_graph("temp_bundles")
-
             with st.spinner("Running similarity pipeline…"):
                 pipeline = BundleToSummaryPipeline(bundle_path)
                 sim_path = pipeline.run(top_k=top_k)
@@ -98,39 +93,14 @@ with st.sidebar:
                 st.session_state.pipeline_done = True
 
                 st.success("Similarity data ready for visualization")
-                
-                # Save analysis results to storage
-                if "storage" not in st.session_state:
-                    from modules.storage import STIXStorage
-                    st.session_state.storage = STIXStorage()
-                
-                files = st.session_state.storage.list_files()
-                file_id = None
-                for file_meta in files:
-                    if file_meta.get('original_filename') == bundle_file.name:
-                        file_id = file_meta.get('file_id')
-                        break
-                
-                if file_id:
-                    similarity_results = {
-                        "similarity_map": st.session_state.similarity_map,
-                        "top_k": top_k,
-                        "total_objects": len(st.session_state.selectable_ids)
-                    }
-                    st.session_state.storage.save_analysis_result(file_id, "similarity_search", similarity_results)
             else:
                 st.error("Pipeline failed")
 
     else:
-        default_path = "stix_bundle-18similar_ids.json"
+        default_path = "C:/Users/nitk/Downloads/stix-dashboard/stix-ai-dashboard/modules/stix_bundle-18similar_ids.json"
         similarity_json_path = st.text_input(
             "Path to similarity JSON",
             value=default_path
-        )
-        
-        bundle_path_for_graph = st.text_input(
-            "Path to original STIX bundle (for graph building)",
-            value="stix_bundle-18.json"
         )
 
         if similarity_json_path and os.path.isfile(similarity_json_path):
@@ -140,16 +110,6 @@ with st.sidebar:
             st.session_state.selectable_ids = sorted(
                 st.session_state.similarity_map.keys()
             )
-            
-            # Build graph from the original bundle if provided
-            if bundle_path_for_graph and os.path.isfile(bundle_path_for_graph):
-                # Create temp directory and copy bundle
-                os.makedirs("temp_graph_bundles", exist_ok=True)
-                import shutil
-                temp_bundle = os.path.join("temp_graph_bundles", os.path.basename(bundle_path_for_graph))
-                shutil.copy2(bundle_path_for_graph, temp_bundle)
-                SDO_graphs.graph = build_stix_graph("temp_graph_bundles")
-            
             st.session_state.pipeline_done = True
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -163,25 +123,24 @@ similarity_map = st.session_state.similarity_map
 selectable_ids = st.session_state.selectable_ids
 
 # ─────────────────────────────────────────────────────────────────────────────
-# GROUP IDS BY TYPE - SIMPLIFIED
+# GROUP IDS BY TYPE
 # ─────────────────────────────────────────────────────────────────────────────
 @st.cache_data(show_spinner=False)
-def group_by_type_from_graph():
+def group_by_type(ids):
     by_type = defaultdict(list)
-    for node_id, data in SDO_graphs.graph.nodes(data=True):
-        obj_type = data.get("type", "unknown")
-        by_type[obj_type].append(node_id)
+    for obj_id in ids:
+        if obj_id in graph:
+            by_type[graph.nodes[obj_id].get("type", "unknown")].append(obj_id)
     return dict(by_type)
 
-# Get all nodes from the graph grouped by type
-nodes_by_type = group_by_type_from_graph()
+nodes_by_type = group_by_type(tuple(selectable_ids))
 
 # ─────────────────────────────────────────────────────────────────────────────
 # PYVIS RENDER (CACHED)
 # ─────────────────────────────────────────────────────────────────────────────
 @st.cache_data(show_spinner=False)
 def render_cached(node_id):
-    ego = get_ego_graph(SDO_graphs.graph, node_id)
+    ego = get_ego_graph(graph, node_id)
     net = Network(
         height="520px",
         bgcolor="#0f172a",
@@ -201,9 +160,8 @@ def render_cached(node_id):
     for s, t, d in ego.edges(data=True):
         net.add_edge(s, t, title=d.get("relationship", ""))
 
-    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html", mode="w", encoding="utf-8")
-    tmp.write(net.generate_html())
-    tmp.close()
+    tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
+    net.write_html(tmp.name)
     return tmp.name
 
 # ─────────────────────────────────────────────────────────────────────────────
@@ -236,27 +194,24 @@ if not selected_id:
 st.subheader(f"Selected: {selected_id}")
 
 html = render_cached(selected_id)
-st.components.v1.html(open(html, encoding="utf-8").read(), height=600, scrolling=True)
+st.components.v1.html(open(html).read(), height=600, scrolling=True)
 
 with st.expander("Selected object JSON"):
-    st.json(SDO_graphs.graph.nodes[selected_id])
+    st.json(graph.nodes[selected_id])
 
 st.divider()
 
 st.subheader("Most similar objects")
 
-if similarity_map and selected_id in similarity_map:
-    for i, sim_id in enumerate(similarity_map.get(selected_id, []), 1):
-        if sim_id not in SDO_graphs.graph or sim_id == selected_id:
-            continue
+for i, sim_id in enumerate(similarity_map.get(selected_id, []), 1):
+    if sim_id not in graph or sim_id == selected_id:
+        continue
 
-        st.markdown(f"### {i}. {sim_id}")
-        sim_html = render_cached(sim_id)
-        st.components.v1.html(open(sim_html, encoding="utf-8").read(), height=500, scrolling=True)
+    st.markdown(f"### {i}. {sim_id}")
+    sim_html = render_cached(sim_id)
+    st.components.v1.html(open(sim_html).read(), height=500, scrolling=True)
 
-        with st.expander(f"JSON – {sim_id}"):
-            st.json(SDO_graphs.graph.nodes[sim_id])
-else:
-    st.info("No similarity data available for this object.")
+    with st.expander(f"JSON – {sim_id}"):
+        st.json(graph.nodes[sim_id])
 
 st.caption("STIX bundle → similarity → ego graph exploration")

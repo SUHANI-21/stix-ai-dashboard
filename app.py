@@ -18,7 +18,7 @@ pg = st.navigation({
         st.Page("pages/Version_Detector_and_Validator.py", title="Version Detector & Validator"),
     ],
     "Threat Analysis": [
-        st.Page("pages/SDO_Similarity_Search.py", title="SDO Similarity Search"),
+        st.Page("pages/SDO_similarity_search.py", title="SDO Similarity Search"),
         st.Page("pages/Attack_Mapping.py", title="Attack Mapping"),
         st.Page("pages/malware_classifier.py", title="Malware Classifier"),
     ],
