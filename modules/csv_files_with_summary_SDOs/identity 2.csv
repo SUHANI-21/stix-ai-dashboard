@@ -1,0 +1,637 @@
+summary,id
+"The object contains a threat intelligence report published by Socket, which provides details about an organization's identity. The report includes the following information:
+
+- The publisher of the report is Socket.
+- The report has been STIXed and linked to TI Mindmap HUB.
+- The organization's name is not explicitly stated in the report.
+- The type of entity being described is an organization, with a unique ID assigned to it.
+- The specification version used for this report is 2.1.
+
+The rest of the information provided includes external references, labels, sectors, roles, contact details, and modification timestamps that are currently blank (represented as NaN).",identity--61f25293-60ae-c54f-5dc9-804b842cf3fa
+"The object contains a detailed identity profile for the organization ""TI Mindmap HUB"". The profile includes key information about the entity, which is categorized under the organization class. 
+
+Key aspects of TI Mindmap HUB's identity profile include:
+
+- Description: TI Mindmap HUB is described as an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.
+- Purpose: As a threat intelligence platform, TI Mindmap HUB appears to be designed for gathering and analyzing open-source intelligence (OSINT) data to identify potential security threats.
+
+No specific contact information is provided in the profile.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about a researcher or expert in the field of cybersecurity. The individual, referred to as ENKI Whitehat, is associated with the Offensive Security organization.
+
+ENKI Whitehat conducted an analysis and reporting on the 2025 Lazarus Group Comebacker campaign, providing a deeper security perspective from an attacker's point of view. 
+
+The researcher is also involved in various sectors such as technology and cybersecurity, indicating their expertise lies within these areas.",identity--3f21323c-972f-447d-8dc8-5536680fdb39
+"The object contains information about the Splunk Threat Research Team. This team is an integral part of a customer's overall defense strategy and works to enhance Splunk security offerings by providing verified research and security content.
+
+The team replicates attacks, offers tactical guidance, and shares research through various channels such as conference talks, open-source projects, and blogs. Their primary objective is to bolster the security posture of Splunk customers and contribute to a more secure digital environment.
+
+Specifically, the Splunk Threat Research Team focuses on technology and security sectors, which underscores their emphasis on tackling threats within these domains.",identity--669a77d3-875b-4230-923d-479ee7527cd8
+"The object contains information about a person, Teoderick Contreras, which can be summarized as follows:
+
+Teoderick Contreras is a Senior Threat Research Engineer on Splunk's Threat Research Team. He specializes in malware reverse engineering/analysis, digital forensics, and detection development. The provided contact information allows individuals to reach out to him directly via Twitter (@tccontre18).",identity--571d6376-174f-49ce-9032-b02075faac82
+"The object contains information about Charlie Eriksen, a Malware Researcher at Aikido Security. He is the author of the Shai Hulud analysis, which suggests that he has expertise in malware research and analysis.
+
+Eriksen's profession falls under the technology sector, indicating his focus on cybersecurity-related work. His role as a security researcher and malware analyst further highlights his specialized knowledge in this area.
+
+While specific details about Eriksen's personal or professional background are not available, it is clear that he has made significant contributions to the field of malware research through his analysis of Shai Hulud.",identity--e268f476-3912-4352-97e8-66f8ffb3b04d
+"The object contains a threat intelligence report published by Datadog Security Labs. The report is STIXed by TI Mindmap HUB, indicating that it follows the Structured Threat Indicator Expression (STIX) format for sharing and standardizing threat intelligence information. 
+
+The report's metadata is limited, with only two fields containing information: 'created' and 'modified', both of which are timestamped to reflect when the report was generated. The 'id' field contains a unique identifier for the report.
+
+The report itself contains a description that explains its purpose, along with an indication that it falls under the category of threat intelligence reports issued by Datadog Security Labs.",identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee
+"The object contains a detailed profile of an organization named 'TI Mindmap HUB'. This AI-powered threat intelligence platform is designed to generate STIX bundles from Open-Source Intelligence (OSINT) sources. The platform's capabilities are centered around the creation and management of threat intelligence data, making it a valuable resource for organizations seeking to enhance their security posture.
+
+Key aspects of the 'TI Mindmap HUB' identity include its classification as an organization and its association with various sectors, although these details are currently not available due to missing metadata. The platform's name and description provide insight into its purpose and functionalities.
+
+The profile also highlights the importance of this platform in generating STIX bundles, a standardized format used for sharing threat intelligence information across different systems and platforms. This feature underscores the platform's role in facilitating collaboration and information exchange among security professionals.
+
+In summary, the 'TI Mindmap HUB' represents an essential tool for organizations seeking to bolster their security capabilities through advanced threat intelligence solutions. Its focus on generating STIX bundles from OSINT sources positions it as a key player in the field of threat intelligence management.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a threat intelligence report published by Darktrace, a publisher identified as STIXed by TI Mindmap HUB. The report details an organization's identity, categorized under the class 'organization'. It is marked as an STIXed document, indicating that it has been standardized for integration with other security platforms.
+
+Key attributes of this identity include its name, which matches the publisher Darktrace, and a specified spec version at 2.1. The report includes labels, sectors, roles, but these are currently undefined due to missing metadata.
+
+The overall structure suggests that this report aims to standardize information related to an organization's identity in a way that can be easily shared and accessed across different security systems and platforms.",identity--012332b1-72ac-6bf3-46d9-fe661901fcd2
+"The object contains information about a threat intelligence report related to an individual named Signe Zaharka. The report is labeled as STIXed by TI Mindmap HUB and has been authored by the same name. 
+
+Signe Zaharka's identity class is classified as an individual, but other categories such as roles, sectors, labels, contact information, external references, description, and spec version are either missing or undefined in this data snapshot.",identity--c8384a3b-1160-aaea-5d44-b360ff69bde7
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. The platform is described as an AI-powered solution that generates STIX bundles from Open-Source Intelligence (OSINT) sources. 
+
+The identity class of this platform is categorized as an organization, indicating it is a distinct entity with its own set of attributes and characteristics. The platform's name is straightforward, conveying its primary function in the realm of threat intelligence.
+
+There are no details provided regarding contact information, external references, labels, roles, or sectors associated with TI Mindmap HUB. These fields seem to be either unspecified or lack relevant data, which may indicate a gap in understanding or an incomplete dataset about this platform.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an organization, specifically the ESET Research Team. 
+
+ESET Research Team is described as a cybersecurity research organization that focuses on analyzing various threats and campaigns. One of its notable analyses was on the Lazarus Group's Operation DreamJob - Gotta Fly campaign, which targeted the UAV sector. Additionally, the team also analyzed the ScoringMathTea RAT.
+
+The ESET Research Team has an external reference to a published article by themselves, highlighting their work on this specific operation.",identity--113f665d-7f88-494d-989a-b83a155d8931
+"The object contains a threat intelligence report published by the AhnLab Security Intelligence Center (ASEC). The report was created on January 17, 2026, and provides information about an identity that belongs to an organization. 
+
+Key details of the report include its association with TI Mindmap HUB's STIXed format.",identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0
+"The object contains a detailed description of an AI-powered threat intelligence platform called TI Mindmap HUB. The platform generates STIX bundles from open-source intelligence (OSINT) sources, indicating its ability to collect and analyze various types of data. This information can be useful for organizations looking to enhance their security measures by providing real-time threat intelligence.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an organization called Guangzhou Kingteller Technology Co., Ltd. The key pieces of information include:
+
+- The organization was involved in a security incident where its digital certificate was compromised and used to sign malicious drivers.
+- External references exist for this incident, including information from Kaspersky Securelist regarding the ""Honeymyte kernel-mode rootkit"".
+- The organization is categorized as being within the technology sector.",identity--fa142881-2fbd-4be9-81c6-f7f18f66fd07
+"The object contains information about Push Security, a cybersecurity company. The organization specializes in browser-based detection and response, having made notable contributions to mitigating the ConsentFix attack. The provided details highlight the company's expertise in this field.",identity--a79502f1-fef3-470a-b6a3-f25409bc34c7
+"The object contains a threat intelligence report published by Microsoft, which is STIXed by TI Mindmap HUB. The report includes details about the identity of the organization behind the report.",identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a
+"The object contains a detailed threat intelligence report generated by Microsoft Threat Intelligence, which is the primary author of this report. The report has been STIXed (standardized for Threat Intelligence and Information Sharing) using TI Mindmap HUB.
+
+Here are some key points about the report:
+
+- It belongs to an individual identity.
+- The spec version of the report is 2.1.
+- The type of the report is ""identity"".
+- The report was created on January 14, 2026, and last modified on the same day.
+
+Overall, the report provides information about a specific threat intelligence entity, but some metadata such as contact information and external references are not available in this particular instance.",identity--6fd2de98-92fe-c50c-1700-7b1e235fa628
+"The object contains a detailed profile of the TI Mindmap HUB identity. 
+
+It is an AI-powered threat intelligence platform that specializes in generating STIX bundles from Open-Source Intelligence (OSINT) sources. 
+
+This platform is categorized under the organization identity class, indicating it belongs to a company or entity rather than a person.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an organization called Gen Digital. Gen Digital is a cybersecurity company that was involved in the discovery of a GhostPairing WhatsApp account takeover campaign. The campaign involves taking over WhatsApp accounts using specific techniques.
+
+Gen Digital's researchers discovered details about this campaign and published their findings publicly. This suggests that Gen Digital has expertise in identifying and mitigating such threats, which is part of its role in the technology sector.",identity--eb525f51-0188-481e-95a1-49aea0e32bf8
+The object contains information about a person named Luis Corrons. He is described as a Security Evangelist at Gen Digital and is also the co-author of the GhostPairing attack research. The provided details highlight his professional roles and expertise in the security field.,identity--6c320698-d3c6-440f-9a18-cc886ade0f97
+"The object contains a detailed profile of Martin Chlumecký, a Malware Researcher. He is described as the co-author of the GhostPairing attack research. The profile highlights his role as a researcher specializing in malware analysis, and this expertise has led to notable contributions to the field of cybersecurity.
+
+Key details about Martin Chlumecký include his profession, academic achievements, and affiliations. Unfortunately, some information is not available due to missing data (represented by 'nan').",identity--6d6ca029-c7ff-430f-b345-ce84c884458c
+"The object contains a detailed description of an organization entity, Oligo Security. The entity is classified as an organization and is associated with multiple critical vulnerabilities in Fluent Bit.
+
+Oligo Security has been actively involved in security research, having discovered and disclosed several critical vulnerabilities in the Fluent Bit system. This information is available on their website at https://oligosecurity.io/. 
+
+Unfortunately, there is limited additional context or data provided about Oligo Security beyond this description.",identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2
+"The object contains information about a security researcher named Charlie Eriksen. The details provided include:
+
+Charlie Eriksen is a Security Researcher at Aikido Security, indicating his professional role within the organization. Additionally, it is mentioned that he has authored an analysis, suggesting that he is actively engaged in research and publication.
+
+It can be inferred that Charlie Eriksen's expertise lies in the technology sector, as specified under ""sectors"". This information highlights his specialization and potential areas of focus for his security research work at Aikido Security.",identity--3c2d65b8-e03c-4c70-b3e7-741121044392
+"The object contains information about an organization entity, specifically a core capability support department of 360 Enterprise Security Group. This department specializes in discovering, defending against, handling, and researching advanced threats. The organization is referred to as 360高级威胁研究院, which translates to ""360 Advanced Threat Research Institute"" in English.",identity--a3c5444b-9a6d-48e5-b46a-20a81bc6c8d9
+"The object contains a threat intelligence report published by Cato Networks, which is marked as STIXed by TI Mindmap HUB. The report's description indicates that it is an identity-related document, providing information about an organization. 
+
+The document has the following key attributes:
+
+* Organization: It belongs to the ""organization"" class of identities.
+* Publisher: Cato Networks is the publisher of this threat intelligence report.
+* STIXed by TI Mindmap HUB: The report is labeled as STIXed, indicating that it follows the Structured Threat Intelligence eXchange (STIX) standards and has been enhanced with additional metadata using the Threat Intelligence Mindmap HUB.
+* Specification version: The document adheres to the STIX 2.1 specification version.
+
+The object lacks information on its external references, labels, roles, sectors, contact information, creation date, modification date, or any other attributes beyond these key details about the report's content and metadata.",identity--0335465b-6e4b-a389-8f1f-cf97df5c094d
+"The object contains a threat intelligence report detailing the information about an individual named Vitaly Simonovich. The report has been STIXed by TI Mindmap HUB and is categorized under the 'identity' class.
+
+Key details of the report include the creation date, which falls within 2026. Additionally, the description of the report provides background information on Vitaly Simonovich as the primary author of this threat intelligence report.
+
+Other relevant fields in the report include external references, roles, sectors, and labels; however, their values are currently not available due to being represented by 'nan' or null.
+
+The object does contain a specification version number of 2.1, indicating that the STIX format used is compatible with STIX version 2.1.",identity--18fdddfd-6264-5831-2a8e-b16350d92765
+"The object contains a detailed identity object representing the TI Mindmap HUB threat intelligence platform.
+
+Key information about the platform includes:
+
+- It is an AI-powered threat intelligence platform.
+- It generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+- The platform belongs to an organization, as indicated by its 'identity_class' label.
+- Its 'description' provides a brief overview of its capabilities and purpose.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+The object contains information about a threat intelligence report published by AhnLab Security Intelligence Center (ASEC). The report is labeled as STIXed by TI Mindmap HUB.,identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0
+"The object contains information about an identity entity named TI Mindmap HUB. This AI-powered threat intelligence platform utilizes open-source intelligence (OSINT) to generate STIX bundles. The entity belongs to the organization class of identity and has a specification version of 2.1, indicating adherence to a particular standard or protocol in the field of threat intelligence.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about the 360 Advanced Threat Research Institute. 
+
+This organization is focused on discovering, preventing, handling, and researching advanced threats, including APTs (Advanced Persistent Threats). The primary goal of this institute appears to be threat research in the technology sector, with a secondary focus on government and security.
+
+The organization's website can be found at https://www.360.cn/.",identity--e8d1039e-2f92-4bf5-9705-0a571da46f9e
+"The object contains a detailed identity record for an organization named Mandiant, which is the publisher of this threat intelligence report. The document was created on January 13, 2026, at 2:17 PM and has not undergone significant changes since its creation. 
+
+A key aspect of this identity record is that it follows a structured format defined by STIXed, an extension of the Shared Threat Intelligence Expression (STIX) framework. This framework enables the standardization of threat intelligence data across various platforms and systems.
+
+Mandiant's organization identity is categorized as 'organization' under the identity class classification scheme. Unfortunately, some additional attributes related to contact information, external references, roles, labels, sectors, and spec version have not been provided in this record.",identity--3abdfe00-0062-2e3f-9459-6b2f24935d67
+"The object contains a threat intelligence report detailing information about an individual named Amine Ismail and Anirudha Kanodia. The primary author of the report is identified as both Amine Ismail and Anirudha Kanodia.
+
+The report is categorized under 'identity' with a specific class label indicating that it pertains to an individual. Additionally, it mentions that the report has been standardized by STIXed, which implies adherence to the Standardized Threat Indicator Expression (STIX) framework for threat intelligence reporting.
+
+Unfortunately, no further information on this individual is available as some fields in the provided data are empty or lack relevance. These include 'contact_information', 'external_references', 'labels', 'roles', and 'sectors'.",identity--3a11da88-6f2f-540d-e596-c4eeed324cc5
+"The object contains a detailed profile of the TI Mindmap HUB, an AI-powered threat intelligence platform. The key characteristics of this identity include:
+
+- Description: TI Mindmap HUB generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+
+- Purpose: This is an organization type of identity.
+
+- Details: No specific external references are available for this identity.
+
+- Functionality: The platform utilizes AI technology to provide threat intelligence solutions.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about a contact organization identified by the name ""pwndefend.com"". The organization is categorized under the technology sector. Unfortunately, detailed descriptions of the organization are not available as they are missing from the provided data. The URL for the organization's website is provided, suggesting that it may be a relevant resource for further information.
+
+The identity class of the organization is specified as ""organization"", which indicates that it is a legal entity or an organization rather than an individual person. However, specific roles within the organization are not listed in the data provided.
+
+Overall, the available information about pwndefend.com suggests that it may be a notable organization operating in the technology sector, but further details are needed to provide a more comprehensive understanding of its nature and activities.",identity--c9e348aa-5d65-4e34-95d2-35020a640c10
+"The object contains information about a specific identity, which is classified as an organization. The identity belongs to an entity named watchTowr, which is associated with the technology sector.
+
+watchTowr's contact information can be found on Twitter at https://twitter.com/watchtowrcyber. However, no other detailed information such as description or external references are available.
+
+The identity is categorized under the role of watchTowr, and its sectors include technology. No labels or modifications to the identity have been recorded.",identity--0a972a9b-92da-4172-b2d2-7760cb8ad11c
+"The object contains information about an organization named Defused Cyber. The organization is associated with the technology sector and has been identified using a unique identifier. 
+
+Unfortunately, there is limited information available about this entity, as most of the details are missing or unknown. However, it can be stated that this organization falls under the technology sector and its identity was created using a specific standard version.",identity--92e298d1-1718-4377-99e8-8132c5384bb0
+"The object contains a threat intelligence report published by Palo Alto Networks Unit 42, specifically related to identity information. The report was created on January 14th, 2026, and is based on the STIXed data format.
+
+The report provides details about an organization with the name ""Palo Alto Networks Unit 42"". However, some essential metadata such as contact information, external references, labels, roles, and sectors are missing or not available. 
+
+The report uses the identity_class 'organization' to categorize the entity being described, indicating that it is a company or group rather than an individual.
+
+Overall, the object provides limited but useful information about this organization's identity, which may be relevant for threat intelligence purposes.",identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. It is an AI-powered platform that generates STIX bundles from OSINT (Open-Source Intelligence) sources. The platform's name is TI Mindmap HUB, and it belongs to the organization with ID identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a data structure representing an identity entity, specifically related to the Acronis Threat Research Unit. The entity's name is 'Acronis Threat Research Unit', which indicates that it belongs to an organization.
+
+The entity's sector of interest is identified as 'technology'. Furthermore, the description provided by the entity mentions Boto Cor de Rosa campaign and astaroth-whatsapp-based worm activity in Brazil. This suggests that the Acronis Threat Research Unit has been involved in analyzing threats related to technology sectors in Brazil.
+
+There seems to be limited information available about this identity entity, as indicated by the absence of certain metadata fields such as 'created', 'modified', or other details. However, it can be inferred that the unit is focused on threat research and analysis within the technology sector.",identity--dda14673-6ca9-482c-af7d-ac8f0eb95af9
+"The object contains a detailed information about an entity, specifically a researcher team named ""Seqrite Labs Researcher Team"". Here is a summary of the data:
+
+This researcher team is affiliated with Seqrite Labs, a global organization that continuously monitors cyber threat activity. The team has authored an analysis on Operation MoneyMount-ISO, indicating their expertise in cybersecurity research.
+
+The team's interests and sectors are focused on technology, which suggests their primary area of work is in this domain. They have also published content through their blog category on technical topics.
+
+Notably, the team does not seem to have any external references or citations for their analysis, as they only link back to their own website for further information.",identity--5541d6e9-b092-4424-8148-a49f3cc558ff
+"The object contains a threat intelligence report published by Recorded Future, with the following key details:
+
+- The publisher of the report is Recorded Future.
+- The report has been STIXed by TI Mindmap HUB for easy understanding and sharing.
+- The report is an identity-based information asset.
+
+Note that the actual content of the report itself is not provided in this data snippet.",identity--9ef7ee0c-ef7c-c0b4-6acb-4b28748c2255
+"The object contains a detailed description of an identity entity, specifically a threat intelligence platform called TI Mindmap HUB. Here's a breakdown of the key information:
+
+TI Mindmap HUB is an AI-powered platform that generates STIX bundles from Open-Source Intelligence (OSINT) sources. This platform is categorized as an organization, indicating its nature as a structured entity.
+
+The details provided include:
+
+*   Name: TI Mindmap HUB
+*   Type: Identity
+*   Spec version: 2.1
+
+No other relevant information was found in the data, and metadata fields such as timestamps were excluded to provide a clean summary of the identity entity's description.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a detailed description of an entity, specifically an Apple Developer Team ID. This ID was used for coding signing and notarization purposes related to MacSync Stealer executables. Notably, the certificate associated with this team ID was revoked following a report. The full description provided includes various metadata fields that have been omitted from the summary for brevity.",identity--80e7e0fd-5430-4491-b745-94c54109e5d1
+"The object contains information about a cybersecurity company named NVISO. The company is described as being involved in reporting on the Contagious Interview campaign. 
+
+NVISO's sectors of operation are primarily focused on technology. Additionally, the company has a publicly available contact information page that can be accessed at https://blog.nviso.eu/.",identity--697e75de-d95e-45db-99ea-40d837e7afe1
+"The object contains information about Genians Security Center, a security research organization. The center specializes in threat intelligence and analysis, indicating its focus on identifying and mitigating security threats.
+
+Genians Security Center is an organization that provides security services, but specific details about its operations are not provided. However, the fact that it has a physical website address suggests that it may be accessible to the public or have a presence in multiple locations.
+
+The sectors in which Genians Security Center operates include technology, implying that it focuses on cybersecurity and information technology related activities. 
+
+Overall, the object provides a basic overview of Genians Security Center without delving into detailed operational specifics.",identity--85906a92-f723-4429-b3ab-5583849f08f9
+"The object contains a threat intelligence report published by Morphisec, which is STIXed by TI Mindmap HUB. The report's description provides information about the publisher and the format of the data. 
+
+Key details about the report include:
+
+- Organization: Morphisec
+- Type of entity: Identity
+- Class of identity: Organization
+
+The object lacks metadata fields such as external references, labels, and roles.",identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e
+"The object contains a detailed description of an identity, specifically a threat intelligence platform known as TI Mindmap HUB. The platform is AI-powered and generates STIX bundles from Open-Source Intelligence (OSINT) sources. This suggests that TI Mindmap HUB is designed to analyze and integrate various sources of information to provide a comprehensive view of potential threats.
+
+The platform's description implies that it has the capability to process and generate data in a structured format, which can be used by organizations to enhance their threat intelligence capabilities. The mention of STIX bundles further emphasizes the platform's ability to standardize and organize this data, making it easier for users to access and analyze.
+
+Overall, TI Mindmap HUB appears to be a valuable tool for identifying and mitigating potential security threats, particularly in the realm of OSINT-driven threat intelligence.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a threat intelligence report published by heilancoos.github.io, which is marked as STIXed by TI Mindmap HUB. The report belongs to the identity class, specifically categorized as an organization. The details provided in this report include its name and spec version, indicating that it follows a standardized format for threat intelligence reports.",identity--40e30188-5929-89cc-8dba-dcd0fce6a28a
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. It is an AI-powered platform that generates STIX bundles from Open-Source Intelligence (OSINT) sources. The platform has the following characteristics: 
+
+It belongs to an organization and has been classified under identity_class as ""organization"". 
+Its spec_version is 2.1, which indicates the version of the specification being used for this object.
+The platform does not have any labels associated with it.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an organization entity named Cisco Talos. The description of this organization is not provided, but it can be identified by its external reference link to the blog at https://blog.talosintelligence.com/. This organization falls under the category of technology sectors.
+
+Additionally, no labels or roles are associated with this identity class.",identity--0a050bab-af02-4aa8-8e99-110d998ea395
+"The object contains information about a suspected group of developers and operators involved in cybercrime, specifically targeting financial services and cryptocurrency sectors. The group is identified by the alias 'Russian-speaking Threat Actors' and is believed to be active on Russian-speaking cybercrime forums and Telegram channels.
+
+The group's description suggests that they are associated with an entity called Albiriox, which is also mentioned as being active in these online communities. Additional information about this entity is not provided.
+
+Further details about the group can be found through external references, including a source from Cleafy, which provides more information on the group at https://www.cleafy.com/eura.",identity--218d7e2c-1188-42f1-ba21-3607b3452b71
+"The object contains a detailed profile of the Qianxin Threat Intelligence Center, an organization that specializes in threat intelligence and incident observation. The center's name is 'Qianxin Threat Intelligence Center', indicating its focus on providing threat intelligence services.
+
+The center's description is provided as ""Threat intelligence provider and incident observer,"" highlighting its role in monitoring and analyzing potential security threats.
+
+Additionally, the profile includes a unique identifier for the organization, denoted by the ID 'identity--bf007409-1581-4fd0-b9dc-74cf26f09bb8', which is specific to this entity.",identity--bf007409-1581-4fd0-b9dc-74cf26f09bb8
+"The object contains a detailed threat intelligence report published by CSIRT-ITA (Agenzia per la Cybersicurezza Nazionale). The report is STIXed by TI Mindmap HUB. The report's content and details are as follows: 
+
+It appears that the object belongs to an organization known as CSIRT-ITA, which is responsible for publishing the threat intelligence report.",identity--dd99c007-e87b-1e62-8eea-970d367bad9e
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. It is described as an AI-powered platform that generates STIX bundles from Open-Source Intelligence (OSINT) sources. This platform appears to be categorized under the type 'identity' and belongs to the organization class, indicating it is related to an entity or entity group.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a detailed identity record related to the Objective-See Foundation, published by the STIXed TI Mindmap HUB. The record was created on January 13, 2026, but does not provide any contact information or external references. The organization is classified as an entity with the label 'organization' and belongs to the sectors section.",identity--49ce27ee-ff24-06eb-d426-59362685719b
+"The object contains a threat intelligence report detailing information about an individual identified as Patrick Wardle. The report provides context to the individual's identity, including their name and roles, but lacks specific details on sectors or external references. 
+
+Wardle is described as the primary author of this report. The STIXed version by TI Mindmap HUB adds an additional layer of documentation to the threat intelligence framework.",identity--068cb771-7c39-c942-7109-d8b260ecaacd
+"The object contains a detailed profile of an identity entity, specifically a threat intelligence platform called TI Mindmap HUB. The entity has been categorized under the organization class.
+
+The platform is described as AI-powered, utilizing OSINT (Open-Source Intelligence) sources to generate STIX bundles. STIX stands for Standardized Extensible Information Model for Information Sharing, which is a common language used in threat intelligence and security communities.
+
+Key features of TI Mindmap HUB include:
+
+* AI-powered capabilities
+* Generation of STIX bundles from OSINT sources
+* Utilization of TI (Threat Intelligence) Mindmap, indicating a comprehensive approach to threat analysis
+
+The platform's metadata reveals that it was created on January 13, 2026, and has undergone two updates or modifications since its creation. The external references to this entity are currently unknown.
+
+In terms of categorization, the identity class for TI Mindmap HUB is ""organization"", suggesting that the platform is a distinct entity rather than an individual person.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about a security researcher named Edoardo Ottavianelli. He is categorized as an individual and has been involved in discovering and responsibly disclosing the CAI framework vulnerability. The details of his involvement include being labeled as both a researcher and a disclosure, indicating his role in identifying and publicly sharing vulnerabilities.",identity--cdd5615e-1c47-427c-9ea5-17cadbc0e854
+"The object contains a detailed information about an organization named Infoblox. Here is a summary of the key points:
+
+Infoblox is a publisher of threat intelligence reports, specifically STIXed by TI Mindmap HUB. The identity class of this organization is categorized as 'organization'. 
+
+No specific contact information is available for Infoblobc.",identity--4358b98f-3a2e-a388-d870-075d62c93606
+"The object contains information about an identity entity, specifically a threat intelligence platform called TI Mindmap HUB. The key details include:
+
+*   The platform is AI-powered.
+*   It generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+*   The type of the identity is 'organization'.
+*   The spec version of this identity entity is 2.1.
+
+Overall, TI Mindmap HUB seems to be a complex platform designed for threat intelligence purposes, combining AI technology with OSINT gathering to create comprehensive security bundles.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about Didier Stevens, a senior handler and security researcher. He is the author of tools for malware analysis and decoding. Stevens' profession falls under the technology and security sectors.",identity--f73aae6e-201b-49eb-b0fb-16e693958aec
+"The object contains information about the Avast Threat Research Team's identity. The team is involved in threat research, specifically focusing on AI-generated phishing and scam websites known as VibeScams. The team's description highlights their investigative work to uncover and study these threats. Their labels indicate that they are a research-oriented security organization.",identity--580e050e-9f13-4372-a921-c99f9c9b8be3
+"The object contains information about a specific entity known as Sophos. It is described as an organization that conducts threat research and analysis.
+
+Sophos has a unique identity represented by the ID 'identity--07a49438-9270-4cea-af38-c151e14ea52d'. This identity falls under the class of organizations, indicating that it is a legitimate entity with a defined structure and function.
+
+The purpose of Sophos is not explicitly stated in the provided data, but its name suggests that it may be involved in security or threat analysis. The description provided also implies that this organization plays a crucial role in identifying and analyzing threats to various sectors.
+
+Unfortunately, no specific information about the sectors that Sophos operates within can be gleaned from the provided data. The 'sectors' field is listed as 'nan', indicating that it contains missing or null values.
+
+The rest of the fields, such as contact information, external references, labels, roles, and spec version, are either missing or do not provide any meaningful information about Sophos.",identity--07a49438-9270-4cea-af38-c151e14ea52d
+"The object contains a threat intelligence report published by Palo Alto Networks Unit 42. The report is STIXed, indicating that it is formatted according to the STIX (Standardized Threat Intelligence Expression) framework. 
+
+This report provides information about a specific entity, which is classified as an organization. However, details such as contact information and external references are not available.",identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41
+"The object contains a detailed description of an AI-powered threat intelligence platform known as TI Mindmap HUB. The platform is capable of generating STIX bundles from Open-Source Intelligence (OSINT) sources.
+
+TI Mindmap HUB is an identity-classified organization, indicating that it has its own distinct entity within the larger framework of threat intelligence platforms. The platform's purpose is to leverage AI technology to provide a comprehensive and structured approach to threat intelligence gathering and analysis.
+
+The structure and functionality of TI Mindmap HUB are underpinned by a specific specification version (2.1), which suggests that the platform adheres to established standards and best practices in the field of threat intelligence.
+
+Overall, TI Mindmap HUB appears to be an innovative solution for organizations seeking to enhance their threat intelligence capabilities, offering a cutting-edge approach to identifying and mitigating potential security risks.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a threat intelligence report published by Socket, which is STIXed by TI Mindmap HUB. The report has the following characteristics: it belongs to an organization identity, with an unspecified label or role, and falls under the sectors category. Additionally, it features a description that outlines its purpose.",identity--61f25293-60ae-c54f-5dc9-804b842cf3fa
+"The object contains a detailed profile of an organization named TI Mindmap HUB. The identity class is identified as an organization, indicating that this entity belongs to the business world.
+
+Key information about the organization includes its name, which is 'TI Mindmap HUB', and its role in generating STIX bundles from Open-Source Intelligence (OSINT) sources using an AI-powered threat intelligence platform.
+
+Another crucial aspect of this profile is that it does not have a clear contact information associated with it, as indicated by the presence of 'nan' in the provided data. This suggests a lack of publicly available communication details about the organization.
+
+In terms of external references to verify or expand on this identity, no such information is present in the given data.
+
+The profile is structured around an AI-powered platform designed for threat intelligence, with an emphasis on utilizing OSINT sources to generate specific STIX bundles. This implies that TI Mindmap HUB plays a critical role in identifying and analyzing potential threats in a business or security context.
+
+Lastly, it's worth noting that the organization is tied to specific software specifications, indicated by a 'spec_version' of 2.1, which likely governs how data can be processed and used within the platform.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about a threat intelligence report published by 360高级威胁研究院. The key details of this report include its organization type, which is classified as an identity, and the STIXed version it conforms to.",identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41
+"The object contains a detailed information about an AI-powered threat intelligence platform known as TI Mindmap HUB. This platform generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+
+The platform's primary function is to analyze and process various types of data, providing valuable insights for security and risk management purposes. The exact details of its capabilities are not specified in the provided information.
+
+TI Mindmap HUB operates on a specific version of the Identity Standards Framework specification, version 2.1.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a threat intelligence report published by Palo Alto Networks Unit 42, which provides detailed information about the report's contents. The report is STIXed, indicating that it follows the Structured Threat Information Expression (STIX) standard for threat intelligence sharing.
+
+The report details are as follows:
+
+- The organization responsible for publishing the report is Palo Alto Networks Unit 42.
+- The report is categorized under a specific identity class, which indicates that it deals with organizational information.
+- The report provides labels, sectors, and roles related to the subject matter of the report.",identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41
+"The object contains a detailed description of the TI Mindmap HUB identity, which is an AI-powered threat intelligence platform that generates STIX bundles from open-source intelligence (OSINT) sources. The platform provides a unique value proposition by leveraging artificial intelligence to aggregate and analyze various OSINT data points, ultimately facilitating improved threat detection and response capabilities for organizations.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a detailed information about an organization named GreyNoise Intelligence. Here is a summary of the data:
+
+GreyNoise Intelligence is a threat intelligence provider that tracks and analyzes internet-scale threat activity, including credential-based attacks targeting enterprise VPN infrastructure. The organization provides expertise in this field, helping businesses to stay secure against various threats.
+
+The main focus of GreyNoise Intelligence lies within the technology sector, where they work closely with enterprises and organizations to enhance their security measures. 
+
+To learn more about GreyNoise Intelligence and its threat intelligence capabilities, you can visit their official website at https://www.greynoise.io/.",identity--48071689-59e8-4d2e-a7cc-d3ceb561f0f0
+"The object contains a threat intelligence report published by Jamf Threat Labs, which is marked as STIXed by TI Mindmap HUB. The report provides information about the publisher's identity, including its name, class, and roles. 
+
+Key details of the report include: 
+- The publisher's identity is classified as an organization.
+- There are no external references provided in the report.
+- The specific version of the STIX specification used for this report is 2.1.
+- Additional labels and sectors have been ignored due to their null values, indicating a lack of information on these topics.
+
+Overall, the report appears to be a basic identity classification issued by Jamf Threat Labs, focusing primarily on identifying the publisher's organization.",identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1
+"The object contains a threat intelligence report detailing information about an individual. The primary authors of the report are Shen Yuan and Nir Avraham. The STIXed classification indicates that this is a standardized format for representing threat intelligence data.
+
+The report includes various labels and classifications, such as identity_class, which categorizes the subject as an individual. It also mentions specific sectors related to the individual's work or activities, although these values are currently unknown due to missing data (indicated by 'nan' in the dictionary).
+
+Notable aspects of this threat intelligence report include:
+
+- The use of STIXed format for standardization and consistency.
+- The involvement of Shen Yuan and Nir Avraham as primary authors.
+- The classification of the subject as an individual, with certain sectors associated but missing data.",identity--b3a6bc16-97d2-650e-ede8-d111bbdcb5d5
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. This AI-powered platform generates STIX bundles from Open-Source Intelligence (OSINT) sources. It is classified as an organization identity and has a specification version of 2.1, which indicates that it follows the Identity Framework v2.1 guidelines.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an individual named Silas Cutler. This person is a Principal Security Researcher at Censys, where they focus on investigating organized cyber-crime groups and state-sponsored attacks. The details provided do not include specific timestamps or metadata related to the ID field, external_references, labels, roles, spec_version, created, modified, or any other timestamped fields.",identity--fe3c6940-21c9-4ff6-af1f-2f7e3ab8c0ea
+The object contains a detailed description of the Kaspersky Industrial Control Systems Cyber Emergency Response Team (ICS CERT). This security research group specializes in industrial cybersecurity.,identity--73d76344-cd88-4834-aba7-13a3f94aae95
+"The object contains information about an individual named Alexander Kozlov. He is a Principal Security Researcher at Kaspersky ICS CERT. The details provided include his role within the organization and his profession, which suggests that he is involved in security research related to industrial control systems. However, no specific sectors or areas of expertise are mentioned in the given data.",identity--bfb378bf-b3d9-4884-92f8-01089580826d
+The object contains information about an individual named Sergey Anufrienko. He is described as the Vulnerability Research Group Manager for Kaspersky ICS CERT. This role indicates that he is likely involved in researching vulnerabilities related to Industrial Control Systems (ICS) and providing guidance on mitigation strategies to prevent cyber threats.,identity--8b0cae9e-4991-40da-a846-9f941ed50183
+"The object contains a detailed profile of SentinelLABS, a research division of SentinelOne. The organization specializes in three key areas:
+
+1. Threat intelligence: SentinelLABS is involved in gathering and analyzing information on potential security threats to help protect against cyber attacks.
+2. Security research: The team conducts ongoing research into new security vulnerabilities and develops tools to identify and mitigate these risks.
+3. Development of open-source tools: SentinelLABS creates and shares publicly available tools and resources with the security community, aiming to enhance collaboration and knowledge sharing.
+
+The profile also highlights the following key details:
+
+- SentinelLABS is a subsidiary of SentinelOne, indicating a close relationship between the two organizations.
+- The organization has an external reference listed on their official website, further confirming their presence in the security research landscape.
+- A unique identifier (identity ID) is associated with SentinelLABS, which allows for specific tracking and analysis of their activities.
+
+Overall, SentinelLABS appears to be a vital component of SentinelOne's efforts to combat cyber threats, providing valuable insights and tools to the broader security community.",identity--21f03da7-e2d9-4635-8ae2-ae6f6acbec08
+"The object contains an entity identified as an ""Initial Access Broker"". This entity is believed to have been compromised by a threat actor, which allowed for initial access into the network. The broker likely provided compromised credentials, enabling further lateral movement within the system.
+
+This individual is categorized under the identity class 'individual'. 
+
+There is no available information on external references or labels associated with this entity.",identity--81fbe1bd-8a14-4bee-b212-828b354e7f6b
+"The object contains information about an unidentified threat actor who conducted various malicious activities. The individual or group is described as having engaged in intrusion, lateral movement, data collection, exfiltration, and ransomware deployment.
+
+This unknown entity does not provide any additional context or details about their identity, affiliations, or motivations. The provided information only serves to classify the actor as ""unknown"", indicating that there is no available information on this specific threat actor within the system or database.
+
+The object also includes a description of the actions taken by the threat actor, but it is essential to note that this information may not be entirely accurate or up-to-date.",identity--933c5854-2249-4909-85e0-38311c3a4c7d
+"The object contains information about a Computer Emergency Response Team (CERT) organization based in Poland. The team is identified by the name 'CERT Polska' and falls under the category of an organization.
+
+The CERT Polska has published analysis on a malware campaign known as NGate, providing insights into computer security threats. Additionally, the organization's sectors include financial services, indicating its focus area.
+
+There are no available links to external references for this identity in the provided data.",identity--8640839e-16f8-4105-9382-5308c3998516
+"The object contains information about Forcepoint X-Labs, a research team specializing in threat intelligence, phishing, malware, and email security. The team is identified by the name 'Forcepoint X-Labs' and belongs to an organization identity class.",identity--dd78b93f-c139-458b-a414-f778ff7a390e
+"The object contains information about an individual named Mayur Sewani. 
+
+Mayur Sewani is a Senior Security Researcher at Forcepoint X-Labs Research Team, where they focus on specific types of cyber threats, including Advanced Persistent Threat (APT) malwares, information stealers, phishing attacks, and defensive adversary emulation.",identity--4482663f-da2a-4d9d-92b6-0e6fcad033b9
+"The object contains information about an individual named Ben Gibney. He is a Security Researcher III at Forcepoint X-Labs, where he specializes in analytics and research for website and email filtering. This role is part of his work in the field of cybersecurity, focusing on advanced techniques to improve security measures.",identity--930ce1a9-c660-44a6-b0d4-075ac556f84a
+"The object contains information about a security firm called Synthient. Synthient was founded by Benjamin Brundage and specializes in detecting proxy networks and botnet-related threats. The company is recognized as an expert in the technology sector.
+
+One of the main focuses of Synthient is identifying and mitigating cyber threats, specifically those related to proxy networks and botnets. This expertise enables organizations to improve their overall cybersecurity posture and reduce the risk of attacks.
+
+The only external reference provided for Synthient is its official website, https://synthient.com/.",identity--5f20fb4c-050b-449c-a856-4dc95b4323a4
+"The object contains a detailed profile of XLab, a Chinese security firm. The information reveals that XLab specializes in researching botnets, including Aisuru and Kimwolf, which are malicious software networks used for malicious activities.
+
+XLab is a recognized entity in the field of cybersecurity, with its own blog where they share their research findings. According to the external references provided, XLab has an official website at https://blog.xlab.qianxin.com/. This suggests that the firm takes pride in showcasing its expertise and work through various media channels.
+
+The object also provides information about XLab's classification as an organization, which indicates its status as a legal entity. The sectors listed include technology, suggesting that XLab focuses on research related to this field.
+
+Overall, the profile paints a picture of XLab as a prominent player in the cybersecurity space, actively researching and disseminating information about various threats and security measures.",identity--0979fe3b-338d-4415-8399-8fe615c70c40
+"The object contains information about a security research firm called Quokka. The firm has published a report on security issues related to Android-based digital photo frames. 
+
+Quokka is identified as an organization, specifically in the technology sector, and its details are available through various external references, including a link to a PDF document that assesses the security of a particular digital picture frame product from Quokka.",identity--17cfef1f-ebd0-4675-bfc9-da30126fb800
+"The object contains a single entity representing Akamai Technologies. This organization is characterized by its expertise in two primary areas: cybersecurity and web performance.
+
+Additionally, the entity has an external reference to its official website at https://www.akamai.com/.",identity--68e47f35-c721-435b-9696-2519dbb39f38
+"The object contains information about a cybersecurity company called HUMAN Security. The organization is involved in investigations related to BADBOX, which suggests that they specialize in threat intelligence and cybersecurity services. 
+
+HUMAN Security's sectors of operation are primarily in the technology sector, further indicating their focus on this area of expertise.",identity--203c349a-4223-408a-84e6-870281cc3aae
+"The object contains a detailed profile of an identity entity known as Oxylabs, a proxy service provider. The organization has taken steps to address vulnerabilities that were previously exploited by Kimwolf.
+
+A notable change is the inclusion of external references, which provide additional information about Oxylabs. One such reference points to their official website at https://oxylabs.io/.",identity--1c86f561-e140-44ce-9727-83beb3af1fb0
+"The object contains information about a residential proxy network provider called IPIDEA. It is based in China and has been heavily abused by the operators of the Kimwolf botnet. 
+
+IPIDEA's role in the context is not explicitly stated, but it can be inferred that the organization is involved in providing residential proxy networks for malicious activities. The exact nature of its involvement with the Kimwolf botnet is unclear from this data alone.
+
+The object provides a description of IPIDEA as a China-based entity operating within the technology sector.",identity--051ab9c0-c2f9-4b3e-a97b-70f393a2d8af
+The object contains information about a technology firm called Spur.us. The company is involved in filtering out proxy traffic. It has been identified through an external source on its official website at https://spur.us/.,identity--acf22df1-0b4f-46f9-ac45-addbdaece138
+"The object contains a detailed description of the Federal Bureau of Investigation (FBI), a U.S. federal law enforcement agency. The FBI is involved in cybercrime investigations and has an online presence. According to external sources, it can be found at https://www.fbi.gov/. The organization falls under the sector of government, highlighting its role within the country's administrative framework.",identity--2eea6f84-7a65-4231-89e4-b5544fd66763
+"The object contains information about a sanctioned entity, specifically the U.S. Department of the Treasury. The details include:
+
+*   The U.S. Department of the Treasury was sanctioned for its involvement with the 911S5 Proxy botnet.
+*   A link to the official website of the U.S. Department of the Treasury is provided as an external reference.
+*   The entity's class is classified as an organization.
+*   No labels are associated with this identity.
+*   The sector in which the entity operates is government.",identity--72466653-6a92-4fc7-a458-60fe3eff37ab
+"The object contains a detailed identity record of the University of Sherbrooke, which is an organization. The description reveals that researchers from this university studied the threat posed by 911S5 Proxy to internal corporate networks.
+
+The organization's sectors are primarily related to education, indicating its focus on higher learning and research activities.",identity--b896ac96-b17f-4fbd-a798-b78688128b52
+"The object contains information about a lawsuit filed by Google against BADBOX 2.0 Enterprise operators for advertising fraud and botnet activity. Specifically, the statement details that Google has taken legal action against this entity due to alleged unethical practices in their advertising strategies. The lawsuit is believed to be related to instances of fraudulent behavior, such as using automated bots to deceive advertisers.
+
+The provided data highlights the severity of these allegations against BADBOX 2.0 Enterprise operators and underscores the significance of Google's involvement in this matter. This information may provide valuable insights into the world of advertising fraud and its impact on businesses operating within the technology sector.
+
+Further details about the lawsuit, including any potential consequences or resolutions, are not provided within this data set. Nevertheless, this summary offers a general overview of the situation and invites further investigation into the specifics surrounding Google's lawsuit against BADBOX 2.0 Enterprise operators.",identity--ee94476a-a051-4a95-9eed-08bbcbddbca0
+"The object contains information about an individual named Benjamin Brundage. He is the founder of Synthient and is currently an undergraduate student at Rochester Institute of Technology. Brundage has led research into the Kimwolf botnet. The sectors associated with him are technology. There is no information available on his contact information, external references, or roles.",identity--9e385d6f-26c7-4c6f-8f65-c2d1aef3bccb
+"The object contains information about an individual named Riley Kilmer. Kilmer is identified as the founder of Spur.us. According to his profile, he confirmed vulnerabilities in IPIDEA and its resellers. Additionally, his sectors of interest are listed as technology.",identity--81201b8f-ccdc-46e6-91a8-7ec8d6502aca
+"The object contains information about an individual named Chad Seaman. He is a principal security researcher at Akamai Technologies, where he advocates for consumer awareness of certain security issues. These issues include insecure Android TV boxes and residential proxy schemes. The individual's classification as 'identity-class:individual' indicates that they are being identified as a single person.",identity--056f7d29-0c08-4877-94f4-f69f479abfb9
+"The object contains information about an individual named Lindsay Kaye. She is a vice president of threat intelligence at HUMAN Security and has been involved in the investigations of the BADBOX botnet.
+
+Lindsay Kaye's professional background and expertise lie within the technology sector, as stated in her identity details.",identity--cfc296ca-0a72-45b7-a6db-82cd0a92f150
+"The object contains a threat intelligence report published by Amazon Web Services (AWS), which is a STIXed report by TI Mindmap HUB. The report's content is not provided.",identity--4de913b3-0851-4c36-8b48-c92ac094087d
+"The object contains information about a threat intelligence platform called TI Mindmap HUB. It appears to be an AI-powered platform that generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+
+TI Mindmap HUB is described as an organization, and its name suggests that it is focused on threat intelligence and possibly security-related services. The exact nature of the platform's functions and capabilities are not specified in this data snippet.
+
+One notable feature of TI Mindmap HUB is its ability to generate STIX bundles from OSINT sources. STIX (Security Information and Event Management) is a standard format for representing security-related data, and being able to generate bundles from OSINT sources could be an important capability for the platform.
+
+Overall, this information provides a basic understanding of what TI Mindmap HUB is and what it does, but more specific details about its capabilities and features would be needed to fully understand its purpose and functionality.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains a detailed threat intelligence report published by Aikido, which includes various attributes that provide insight into the organization's identity and characteristics. The report features several key elements:
+
+Aikido is identified as the publisher of this threat intelligence report.
+
+The STIXed TI Mindmap HUB has been applied to enhance the report's structure and presentation.
+
+The 'id' attribute corresponds to a unique identifier assigned to Aikido, but its value is not provided in the data.
+
+The 'spec_version' indicates that the report adheres to version 2.1 of the STIX specification.
+
+Aikido's type is classified as an 'organization', suggesting that it is a company or entity rather than an individual person.
+
+No specific contact information is available for Aikido, making it difficult to verify the authenticity of the report or reach out to the organization directly.
+
+The report includes labels, but their values are not provided, which may be necessary for categorization or filtering purposes.
+
+Aikido's sectors are also unspecified, which could impact its categorization within threat intelligence frameworks.
+
+Overall, the object contains a comprehensive threat intelligence report about Aikido, providing valuable information about this organization's identity and characteristics.",identity--03f067d6-efe5-77be-641e-966194463145
+"The object contains a threat intelligence report detailing information about an individual named Charlie Eriksen. 
+
+Key details include: 
+- The identity class of the individual is classified as personal or private. 
+
+No further information is available on this subject.",identity--dceffc23-07a6-4c37-6dcc-20054e7303df
+"The object contains a detailed description of an entity identified as 'TI Mindmap HUB', which is classified as an organization under the identity_class category. The entity's purpose revolves around providing an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.
+
+This platform, TI Mindmap HUB, serves to integrate and process various Open-Source Intelligence (OSINT) inputs into a structured format known as STIX bundles. This integration facilitates the sharing of threat information across different security domains in a standardized manner.
+
+Key characteristics of this entity include its focus on generating STIX bundles and its classification under the 'organization' identity class, highlighting its role as a centralized platform or system.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about the Insikt Group of Recorded Future's threat intelligence research team. The key details include:
+
+- The group is focused on analyzing advanced persistent threats (APTs) and cyber campaigns.
+- They are a part of Recorded Future, a company known for its threat intelligence services.
+- Their main areas of focus are in technology and research sectors.
+- This information highlights the Insikt Group's role in understanding and mitigating complex cybersecurity threats.",identity--b8c9006f-b037-4fd3-ab98-1e2f67237b3b
+"The object contains a single entity representing Salesforce, a cloud-based software company that provides customer relationship management (CRM) services and platform for third-party integrations. This organization is described as being involved in the sector of unspecified sectors. No contact information or address details are available due to missing data fields. The entity's name is explicitly stated as Salesforce.",identity--8d27ae25-c9f2-4a99-a442-f7092dfacee0
+"The object contains information about a compromised SaaS provider, Gainsight. Gainsight is a company that offers software as a service (SaaS) solutions.
+
+The published applications of Gainsight were targeted in the 2025 supply chain attack, which specifically focused on Salesforce integrations. This suggests that the attack was designed to exploit vulnerabilities in Gainsight's systems that interacted with Salesforce.
+
+Gainsight is an organization that has been impacted by a security breach.",identity--cd7b6f15-6769-499a-94aa-18952b2ccc9b
+"The object contains information about a threat actor group called ShinyHunters. The group is involved in two high-profile cyber attacks: the Gainsight breach and the Salesloft Drift hack.
+
+ShinyHunters operates under the umbrella of Scattered Spider, a larger threat actor group. The group's activities have been linked to these two notable breaches, showcasing their sophisticated capabilities and reach.
+
+Unfortunately, the provided data does not contain specific details about ShinyHunters' methods or motivations, such as their goals or tactics, operations, or technical expertise.",identity--af06417c-83c8-4fc9-8453-eb0bed622f45
+"The object contains a detailed profile of a threat intelligence report published by SEQRITE Labs. The key details are as follows:
+
+- Seqrite Labs is the publisher of this threat intelligence report.
+- The report has been STIXed, indicating it adheres to the STIX (Serialised Threat Intelligence eXchange) framework for sharing and standardizing threat intelligence data.
+- The specific version of the STIX specification being used is 2.1.
+
+This information provides context about the origin and structure of the threat intelligence report, highlighting its affiliation with a reputable publisher in the field of cybersecurity and threat intelligence.",identity--5df7e8d9-d5c2-392a-f67d-511811817c4a
+"The object contains a detailed profile of a threat intelligence platform called TI Mindmap HUB. The platform is AI-powered and serves as an intelligence hub that generates STIX bundles from Open-Source Intelligence (OSINT) sources.
+
+The platform has various attributes, including its name, which is ""TI Mindmap HUB"", and its classification as an organization. It also has a description that highlights its purpose, indicating it provides threat intelligence capabilities to analyze OSINT sources and generate relevant information in a structured format.
+
+In terms of metadata, the object does not provide any specific details on its contact information or external references, as these fields are marked as null (nan) for unknown reasons. Additionally, labels and roles associated with the platform are also unknown due to missing data in these fields.
+
+The platform has undergone updates and maintenance, with a spec version of 2.1, but there is no clear indication of what changes were made or when they occurred.",identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about an individual entity named Nick Peterson. The entity is described as the Reporter of the UEFI IOMMU vulnerability. There is no information available regarding contact details or any external references to this individual. 
+
+Further details such as labels, roles, and sectors are not provided, with all fields containing null values.",identity--b5ccd163-8150-4a74-958c-dddb40b87788
+"The object contains information about an individual identified as Mohamed Al-Sharifi. The description states that this person is a reporter of the UEFI IOMMU vulnerability. No further details are available regarding their contact information or external references. This individual's identity class is classified as personal, indicating they are not part of a group or organization.",identity--86349a90-757b-4d14-98b7-d6bf92f1ba62
+The object contains information about an organization known as Riot Games. The organization is associated with a reported UEFI IOMMU vulnerability by its employees.,identity--57515a13-8b2a-4fad-81b3-781ba43fa963
+"The object contains a record of an identity entity related to the Taiwanese CERT organization. The entity was created for a specific purpose, namely to coordinate a response with affected vendors regarding the UEFI IOMMU vulnerability. 
+
+The details provided include a description of the task at hand, which involves communicating with vendors that have been impacted by this particular vulnerability. There is also an external reference to the Taiwanese CERT's own documentation and analysis of the issue, sourced from their website.",identity--1a13018b-46af-4b58-a93f-f530959fe52b
+"The object contains information about a specific entity, likely an organization, associated with Imperva. Here is a detailed summary of the available data:
+
+The entity is named Imperva Threat Research, which appears to be part of the larger Imperva company. The description provided indicates that this entity is responsible for investigating and publishing security vulnerabilities and threat intelligence.
+
+Imperva has an external reference to their blog, where they publish information related to their research and findings. There does not appear to be any additional information about specific roles or sectors associated with this organization.
+
+It is worth noting that some fields are missing data, such as contact information, labels, modified date, roles, sectors, spec version, type, created, and external references beyond the provided blog link.",identity--f50a13fc-cadc-4318-8e2a-27ff9a499639
+"The object contains a threat intelligence report published by Infoblox, which is identified as an organization. The report has been STIXed by TI Mindmap HUB, indicating that it conforms to the STIX standard for threat intelligence sharing.
+
+Key details about the report include:
+
+*   It was created on January 16th, 2026.
+*   The report's description provides information on Infoblox as the publisher and mentions that it has been labeled as an organization identity.
+*   The object contains external references, however their value is not provided in this snippet of data.
+
+Infoblox appears to be a reputable source for threat intelligence, given its association with STIX.",identity--4358b98f-3a2e-a388-d870-075d62c93606
+The object contains information about a threat intelligence platform called TI Mindmap HUB. It is an AI-powered platform that generates STIX bundles from Open-Source Intelligence (OSINT) sources. The platform is categorized as an organization and has a unique identifier.,identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439
+"The object contains information about a cybersecurity research team known as SEQRITE Labs APT Team. This team is focused on tracking advanced persistent threats and malware campaigns. 
+
+SEQRITE Labs is the name of the organization behind this APT (Advanced Persistent Threat) team, which operates under the identity class ""organization"".",identity--5a891ab3-825b-4113-8dbb-6eb9fd2553d5
+"The object contains information about a security organization called Arctic Wolf Labs. The description states that it is comprised of elite researchers, data scientists, and engineers who specialize in threat research on emerging adversaries.",identity--407c5fd7-a90c-4cd8-a3f4-96065f9870a8
+"The object contains information about a security research organization known as Koi Research. The organization is associated with investigating and reporting on a specific campaign referred to as TigerJack's campaign. Additionally, Koi Research is classified under the category of an organization.",identity--3369e785-bb00-4469-adde-d6931b0ee3e7
+The object contains information about a cyber threat actor attributed to the United States National Security Agency (NSA). The agency is described as responsible for a series of cyber attacks. No other details are provided regarding the nature or scope of these attacks.,identity--3d857e01-ba78-43ca-a1e6-a4c5e181047a
+"The object contains information about the National Timing Center, a scientific and technological institution in China. The center has been targeted by NSA cyber operations. The description of the institution is provided, which highlights its critical nature. It is categorized as an organization under the identity_class field. The sectors associated with this institution include government and critical-infrastructure.",identity--f77ef22c-bafe-4807-aba4-18b66d1f9d9e
+"The object contains information about a threat intelligence research team called Koi Security. The team is associated with the discovery and analysis of the GlassWorm campaign. 
+
+Koi Security has an external reference to their website at https://www.koi.security/. They operate in the technology and security sectors, which are relevant to their work on identifying threats such as GlassWorm.
+
+The object does not contain detailed information about the team's roles or external references beyond this single link.",identity--3b19fb1b-6e5b-4926-8800-5870ca73f222
+"The object contains information about an individual's identity. The person is a cybersecurity reporter, covering various incidents related to data breaches, malware attacks, cybercrime, vulnerabilities, zero-day exploits, and more. They are associated with GBHackers News and can be found on their personal website: https://gbhackers.com/author/mayura/.",identity--602eaeae-7523-4965-a872-f52cce3287df
+"The object contains information about Axis Communications, a Swedish multinational company. The company specializes in network video solutions and surveillance technology, offering a range of products including IP cameras, access control systems, audio equipment, and video analytics software. These products cater to the fields of technology and physical security, indicating that Axis Communications is a leading player in the industry.",identity--2decfc47-abd1-4f0a-b55f-6c7b1f90fb97
+"The object contains information about Autodesk, a software corporation specializing in 3D design, engineering, and entertainment software. The company is known for its Autodesk Revit software, which falls under the technology sector. No further details are available on the contact information or external references of the organization.",identity--40ea5c77-93ca-42d0-bcb9-4f5f71c1151a
+"The object contains information about a company, AEC Advanced Engineering Computation Aktiebolag. The organization specializes in consulting services for Autodesk's AutoCAD and Revit platforms. They provide expertise to customers on these platforms, likely assisting with implementation, integration, or optimization.",identity--37fa073e-e14d-4462-98ba-9c5650247449
+"The object contains information about an individual named Justin Fimlaid. He is the founder and CEO of NuHarbor Security, a company with over 20 years of cybersecurity experience. Justin has served as the global CISO at Keurig Green Mountain Coffee.
+
+Justin holds expertise in technology and public sector sectors.",identity--0d89b365-d74c-4d0a-910e-fa3625302079
+"The object contains information about a research team, specifically the Seqrite Labs Research Team. The team is responsible for analyzing and reporting on the CAPI Backdoor campaign. They are affiliated with an organization, but unfortunately, this affiliation cannot be determined due to missing data.
+
+The team's description highlights their focus on technical analysis, citing external sources such as Seqrite, a cybersecurity company. Their work primarily falls under the technology sector.
+
+Unfortunately, some key details about the team are not available, including contact information and specific roles within the organization. This lack of data limits our understanding of the team's structure and functions.",identity--f71bad97-1be7-4a26-8042-8d4aaa63c389
+"The object contains information about an organization entity, specifically Kaspersky. The entity is described as a threat intelligence and cybersecurity research organization. It has been categorized under the technology sector.
+
+Kaspersky is associated with various roles, but these are not specified in the provided data. 
+
+Additionally, there are external references to Kaspersky's contact information available at intelreports@kaspersky.com",identity--a015b62b-b312-46f1-88b1-abcd92bcd7e3
+"The object contains a dictionary representing an organization entity, specifically the Google Threat Intelligence Group. The description provided by the group outlines its focus on identifying and analyzing advanced persistent threats (APTs) and malware campaigns. This suggests that the group is dedicated to investigating and mitigating complex security threats.
+
+There appears to be limited information available in this object, as several fields are left blank or contain null values (nan). These include contact information, external references, roles, sectors, labels, spec_version, created date, modified date, and ID.",identity--bc8e335c-04bf-4436-a9aa-d089bf0d2521
+"The object contains information about an entity identified by the name ""Kaspersky GReAT"". This entity is a part of the Global Research & Analysis Team at Kaspersky. 
+
+The team is recognized for its report on the Maverick banking Trojan, showcasing their expertise in analyzing and researching threats related to technology.
+
+Key details about this entity include its description as an organization within the technology sector.",identity--30b7b421-0ece-45ca-ab1c-03ca8cf68771
+"The object contains information about a decentralized lending protocol called BetterBank. It operates on the PulseChain network and utilizes FAVOR and ESTEEM tokens to incentivize liquidity provision. 
+
+BetterBank uses these tokens for motivating liquidity provision by leveraging the PulseChain network, which allows it to create a framework that enables financial services and promotes a more efficient system of lending.
+
+The information provided also highlights that BetterBank is a key player in the field of finance, specifically within the ""financial-services"" sector.",identity--13941721-e6b8-4c3f-83cb-c31c79b9179f
+"The object contains a detailed profile of Zokyo, a security auditing firm. 
+
+Zokyo conducted a security audit of BetterBank in July 2025 and identified a critical vulnerability that was exploited during an incident. The nature of this vulnerability is not specified in the provided data.
+
+It is worth noting that some information about Zokyo's identity remains unclear, including contact details and external references to their work.",identity--29325cf0-ce97-44ee-b731-c2d9162e3929
+"The object contains a detailed identity profile of Elsayed Elrefaei. The individual is described as a security researcher and author of the Securelist analysis on the BetterBank exploit. This information suggests that Elsayed has expertise in security and has conducted research related to vulnerabilities in financial systems.
+
+Further details about Elsayed's profile include his external references, which indicate that he is affiliated with Securelist, a reputable source for cybersecurity insights. The provided link allows users to access more information about Elsayed, including his biography or other relevant publications.
+
+Elaysed's identity class is categorized as 'individual', suggesting that he is not part of an organization but rather works independently as a security researcher and author.",identity--dd3bd760-aebd-400a-b5e5-430866108841
+"The object contains information about a cryptocurrency wallet, specifically an externally owned account (EOA) used for initiating the BetterBank exploit. This EOA is associated with an individual identity.
+
+The description of the account states that it was created to facilitate the exploitation of the BetterBank system, but no further details are provided about the nature or consequences of this exploit. 
+
+The sectors associated with this account indicate that its role and context are unknown, which could suggest a lack of information or understanding about the account's activities or significance.
+
+In terms of metadata, it is unclear what specific fields like 'created', 'external_references', 'modified', and others represent in this case, as their values are represented by null (nan), suggesting that they may not be relevant to the overall summary.",identity--16fd62df-b82c-4831-b763-34b1ce00ea17
+"The object contains information about a digital identity, specifically an Individual Identity. The individual is referred to as the ""Secondary Attacker EOA"" (Entity of Account) which implies that it was created after an exploit took place and serves as a bridge between assets on the Ethereum network.
+
+This address, '0xf3BA0D57129Efd8111E14e78c674c7c10254acAE', is marked as ""Attacker-controlled"" indicating its origin from the attacker. It appears to be used for asset bridging post-exploit, which could imply that this individual identity has been created to facilitate or manage assets after a security breach.
+
+The sectors associated with this identity are labeled as ""unknown"", suggesting an unclear or unclassified nature regarding how it came into existence or its role within the larger system. The 'description' explicitly states this address is used for bridging assets, further indicating its connection to post-exploitation activities.
+
+There seems to be no external references provided in the data, nor are there labels, roles, or other specifics that could offer more context about this individual identity's function or purpose within the system.",identity--8a86dff4-d022-4883-b4dd-054e8e7a2cbd
+"The object contains information about a smart contract deployed by an attacker to facilitate an exploit. The contract includes features for flash loan callbacks and dynamic contract deployment.
+
+The description of the contract highlights its malicious purpose, indicating that it is not designed for legitimate use cases. Instead, it appears to be part of a larger attack vector aimed at exploiting vulnerabilities in smart contracts.
+
+The sectors associated with this identity are classified as ""unknown"", suggesting that the attacker has not provided sufficient information about their intentions or affiliations.
+
+Overall, the object provides valuable insights into the nature and purpose of the smart contract, highlighting its potential risks to security and integrity.",identity--5159b3c3-f5bd-49f8-8eaf-53a8edb88e2b
+"The object contains information about a decentralized exchange router contract called PulseX Router. This contract is specifically used in an exploit related to the PulseX decentralized exchange router.
+
+PulseX is described as a system identity, which implies that it is a formal definition or classification of something within a larger system or framework. The name ""Router"" suggests that this contract is involved in facilitating communication or transactions between different parties.
+
+The sectors listed for this identity are limited to the financial services sector, indicating that PulseX Router is somehow related to financial activities or transactions.
+
+It's worth noting that some fields such as created date, external references, labels, modified date, and roles seem to be missing or null, which may indicate that they were not available at the time of data collection.",identity--7f328dea-144f-47df-90e6-8c65702c5d68
+The object contains information about a security resource provided by the Google Threat Intelligence Group (GTIG). The resource is used to track financially motivated threat actors.,identity--38ffb592-4900-4212-a97b-9021248bbf5c
+"The object contains information about a company called Hunt Intelligence, Inc., which is a threat intelligence provider. The key details include:
+
+- The company is associated with the technology sector.
+- It is also involved in the threat intelligence industry.
+
+No further information is provided, as the data does not contain any additional details beyond these basic characteristics.",identity--f6f0fb7e-797d-46ac-af0c-16fabafe21f6
+"The object contains information about a security research organization called Koi Security. The organization is involved in security research and has made notable discoveries, including the analysis of the PhantomRaven npm malware campaign. 
+
+The organization's contact details can be found at https://www.koi.ai/. However, no further information on this platform is available.",identity--93f58a5e-130f-4d60-8b42-69da6cf01f93

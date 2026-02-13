@@ -1,0 +1,34 @@
+summary,id,type
+"The object contains a description of an identity, which belongs to the organization class. The name of the identity is 'The MITRE Corporation'. This organization's type is specified as an identity, indicating that it is a unique entity representing an entity or group within an organization. The specification version used for this identity is 2.1.",identity--f11b0831-e7e6-5214-9431-ccf054e53e94,identity
+"The object contains a description of an attack pattern related to cloud accounts, which can be used by adversaries for various malicious purposes. Creating cloud accounts may allow attackers to further their operations, including using cloud storage services such as Dropbox or MEGA for exfiltration to the cloud or uploading tools like Microsoft OneDrive or AWS S3 buckets. Additionally, cloud accounts can be utilized in acquiring infrastructure, such as virtual private servers or serverless infrastructure, thereby enabling attackers to develop sophisticated capabilities without managing their own servers.
+
+Establishing cloud accounts may also require adversaries to establish email accounts to register with the cloud provider. This attack pattern is relevant to various threat hunting series, including ""Detecting Command & Control in the Cloud"" by Gary Golomb, and is categorized under the Mitre Attack technique T1585/003.",attack-pattern--004a96aa-5d6b-5ce1-8d93-83fb6442e720,attack-pattern
+"The object contains information about an attack pattern known as ""Establish Accounts,"" which is associated with a confidence level of 75.0%. This attack pattern involves the creation and cultivation of accounts that can be used during targeting, including social media, website, or other publicly available information.
+
+According to the description, adversaries may create fictitious personas on multiple sites, such as Facebook, LinkedIn, Twitter, Google, GitHub, Docker Hub, etc., in order to build a persona for further operations. This development of public information, presence, history, and affiliations can be used to establish legitimacy over the course of an operation using that persona or identity.
+
+Establishing accounts can also involve creating email accounts that may be directly leveraged for phishing attacks or abused free services such as registering for trial periods to acquire malicious infrastructure. The creation of these accounts can allow adversaries to bypass CAPTCHA and steal cloud platform resources, making them a crucial component in various types of cyber threats.
+
+The attack pattern is linked to the Mitre-Attack framework and is categorized under resource development in both the Mitre-Attack v18 and the original Mitre-Attack frameworks. The relevant sources cited include NEWSCASTER2014, Mandiant APT1, BlackHatRobinSage, and others, providing evidence of the attack's authenticity.
+
+The object provides valuable information about this attack pattern, which can be used to identify potential vulnerabilities in an organization's systems and take measures to prevent such attacks from occurring.",attack-pattern--05bdfbeb-6b55-5ec9-8e54-ed13fe74d414,attack-pattern
+"The object contains a course of action titled ""Pre-compromise"" designed to mitigate the Reconnaissance and Resource Development phases of an attack. This proactive measure involves implementing defenses to prevent adversaries from identifying and exploiting weaknesses, thereby reducing the organization's attack surface. The primary focus is on increasing the difficulty for attackers to conduct successful operations.
+
+To achieve this objective, several measures can be implemented, including regular audits and sanitization of publicly available data such as job posts, websites, and social media platforms. Tools like OSINT monitoring platforms are utilized to identify leaked information and track adversarial preparation efforts.
+
+In addition, protecting the domain and DNS infrastructure is crucial, which involves enabling DNSSEC and using WHOIS privacy protection. External vulnerability scanners can be deployed to proactively address weaknesses in the external attack surface, while tools like Shodan and Censys monitor for potential threats.
+
+Threat intelligence plays a vital role in tracking adversarial infrastructure, tools, and activity. Platforms such as MISP, Recorded Future, or Anomali are leveraged to gather and analyze threat intelligence.
+
+Furthermore, content and email protections can be enhanced through the use of email security solutions like Proofpoint, Microsoft Defender for Office 365, or Mimecast. Enforcing SPF/DKIM/DMARC policies helps protect against email spoofing.
+
+Lastly, training and awareness are essential components of this course of action, as employees must be educated on identifying phishing attempts, securing their social media accounts, and avoiding information leaks to prevent the successful exploitation of weaknesses.
+
+This pre-compromise mitigation strategy is supported by an external reference from the MITRE Attack database, which provides a standardized framework for understanding and mitigating cybersecurity threats.",course-of-action--27dbae08-addc-5632-9027-c6e687dcbba0,course-of-action
+"The object contains information about an intrusion set known as Storm-1811, which is a financially-motivated entity linked to the Black Basta ransomware deployment. This entity is notable for its unique phishing and social engineering mechanisms used to gain initial access into victim email inboxes, where it prompts a fake ""help desk"" interaction leading to the deployment of adversary tools and capabilities.
+
+According to Microsoft Threat Intelligence, threat actors have been misusing Quick Assist in social engineering attacks leading to ransomware. This information was published on May 15, 2024. Additionally, research by rapid7 has revealed an ongoing social engineering campaign linked to Black Basta ransomware operators, with the publication being released on May 10, 2024.
+
+Further insights into Storm-1811 can be found in reports from Red Canary Intelligence and The Red Canary Team, which have exposed how this entity exploits Remote Management Tools (RMM) to drop Black Basta ransomware. These findings were published on December 2, 2024, and June 20, 2024, respectively.
+
+Overall, Storm-1811 is a financially-motivated entity that has been linked to the deployment of Black Basta ransomware through its unique phishing and social engineering mechanisms.",intrusion-set--eb2ca495-4a49-5eaa-8e97-c7fac16c97d9,intrusion-set

@@ -115,7 +115,7 @@ def search_similar_objects(
     query_text: str,
     stix_type: str,
     top_k: int = 3,
-    threshold: float = 0.75   # 👈 ADD THIS
+    threshold: float = 0.80   # 👈 ADD THIS
 ):
     index, docs = load_index(stix_type)
 
@@ -166,6 +166,6 @@ def process_csv(csv_path, top_k=3):
 
 
 # #testing 
-process_csv("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/cleaned_files/stix_bundle-17.csv")
+#process_csv("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/cleaned_files/stix_bundle-17.csv")
 
 # generate_similarity_json("/Users/alwyndsouza/Documents/GitHub/stix_normalizer/cosine_sim/stix_bundle-18.csv")
