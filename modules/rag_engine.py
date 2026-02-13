@@ -43,8 +43,40 @@ class RAGEngine:
     def query(self, question: str, n_results: int = 8) -> Dict[str, Any]:
         """Process a query using RAG"""
         try:
+            question_lower = question.lower().strip()
+            
+            # Handle conversational messages
+            greetings = ['hi', 'hello', 'hey', 'greetings', 'good morning', 'good afternoon', 'good evening']
+            thanks = ['thanks', 'thank you', 'thx', 'appreciate it']
+            goodbyes = ['bye', 'goodbye', 'see you', 'later']
+            
+            if any(question_lower == g or question_lower.startswith(g + ' ') for g in greetings):
+                return {
+                    "answer": "Hello! I'm your STIX Intelligence assistant. I can help you with:\n\n" +
+                              "• STIX format questions (objects, properties, relationships)\n" +
+                              "• MITRE ATT&CK techniques and tactics\n" +
+                              "• Threat intelligence concepts\n" +
+                              "• Using the dashboard tools\n\n" +
+                              "What would you like to know?",
+                    "sources": [],
+                    "retrieved_docs": 0
+                }
+            
+            if any(t in question_lower for t in thanks):
+                return {
+                    "answer": "You're welcome! Feel free to ask if you have more questions.",
+                    "sources": [],
+                    "retrieved_docs": 0
+                }
+            
+            if any(question_lower == g or question_lower.startswith(g + ' ') for g in goodbyes):
+                return {
+                    "answer": "Goodbye! Come back anytime you need help with STIX or threat intelligence.",
+                    "sources": [],
+                    "retrieved_docs": 0
+                }
+            
             # Check for direct tool questions - bypass RAG entirely
-            question_lower = question.lower()
             
             # STIX conversion questions
             if any(word in question_lower for word in ['convert', 'conversion', 'stix 1', 'stix 2']):
@@ -115,10 +147,12 @@ Note: STIX 1.x uses XML format, while STIX 2.0/2.1 uses JSON format. The convers
                             and doc.get('distance', 1.0) < 0.7]
             
             if not retrieved_docs:
+                # Fallback: Use LLM's general knowledge for common questions
+                fallback_response = self._generate_fallback_response(question)
                 return {
-                    "answer": "I couldn't find relevant information in the knowledge base.",
-                    "sources": [],
-                    "error": "No relevant documents found"
+                    "answer": fallback_response,
+                    "sources": [{"source": "General Knowledge", "type": "llm", "relevance": "N/A"}],
+                    "retrieved_docs": 0
                 }
             
             # Generate response
@@ -137,6 +171,33 @@ Note: STIX 1.x uses XML format, while STIX 2.0/2.1 uses JSON format. The convers
                 "sources": [],
                 "error": str(e)
             }
+    
+    def _generate_fallback_response(self, question: str) -> str:
+        """Generate response using LLM's general knowledge when no docs found"""
+        prompt = f"""You are a cybersecurity threat intelligence expert.
+
+Question: {question}
+
+Note: No specific documents were found in the knowledge base, so provide an answer based on your general knowledge of:
+- STIX (Structured Threat Information Expression)
+- TAXII (Trusted Automated Exchange of Intelligence Information)  
+- MITRE ATT&CK Framework
+- MITRE ATLAS Framework
+- Threat intelligence concepts
+
+Provide a clear, accurate, and helpful answer. If this dashboard has relevant tools, mention them.
+
+Answer:"""
+        
+        try:
+            response = ollama.chat(
+                model=self.model_name,
+                messages=[{'role': 'user', 'content': prompt}]
+            )
+            return response['message']['content']
+        except Exception as e:
+            self.logger.error(f"Error calling Ollama: {e}")
+            return "I couldn't find relevant information in the knowledge base, and I'm unable to generate a response. Please check if Ollama is running."
     
     def _generate_response_from_web(self, question: str, web_info: str) -> str:
         """Generate response using web-scraped information"""
