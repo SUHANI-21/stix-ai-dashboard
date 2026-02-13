@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 # CONFIG
 # ==================================================
 
-VT_API_KEY = "835df2753f2fb40dd399952f3a7bcab62ff434a98a0c194cdf85d474b5e2a5d3"   # Optional: Add your VirusTotal API key here
+VT_API_KEY = "835df2753f2fb40dd399952f3a7bcab62ff434a98a0c194cdf85d474b5e2a5d3"   
 
 TIMEOUT = 5
 
@@ -171,7 +171,7 @@ def check_url(url):
 # MAIN ANALYZER
 # ==================================================
 
-def analyze_bundle(bundle, skip_external_checks=False):
+def analyze_bundle(bundle):
 
     score = 0
     reasons = []
@@ -340,17 +340,16 @@ def analyze_bundle(bundle, skip_external_checks=False):
 
     vt_hits = 0
 
-    if not skip_external_checks:
-        for ind in indicators:
+    for ind in indicators:
 
-            patt = ind.get("pattern", "")
+        patt = ind.get("pattern", "")
 
-            iocs = re.findall(r"'([^']+)'", patt)
+        iocs = re.findall(r"'([^']+)'", patt)
 
-            for ioc in iocs:
+        for ioc in iocs:
 
-                if check_virustotal(ioc):
-                    vt_hits += 1
+            if check_virustotal(ioc):
+                vt_hits += 1
 
 
     if vt_hits:
@@ -358,8 +357,7 @@ def analyze_bundle(bundle, skip_external_checks=False):
         reasons.append(f"✔ {vt_hits} IOC confirmed by VirusTotal")
 
     elif indicators or malware:
-        if not skip_external_checks:
-            reasons.append("⚠ No IOC confirmed")
+        reasons.append("⚠ No IOC confirmed")
 
 
     # ----------------------------------------------
@@ -368,11 +366,10 @@ def analyze_bundle(bundle, skip_external_checks=False):
 
     valid_urls = 0
 
-    if not skip_external_checks:
-        for url in external_urls:
+    for url in external_urls:
 
-            if check_url(url):
-                valid_urls += 1
+        if check_url(url):
+            valid_urls += 1
 
 
     if valid_urls:
@@ -380,8 +377,7 @@ def analyze_bundle(bundle, skip_external_checks=False):
         reasons.append("✔ Referenced URLs reachable")
 
     elif external_urls:
-        if not skip_external_checks:
-            reasons.append("⚠ Referenced URLs unreachable")
+        reasons.append("⚠ Referenced URLs unreachable")
 
 
     # ----------------------------------------------
