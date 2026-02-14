@@ -97,7 +97,7 @@ with st.sidebar:
                 st.error("Pipeline failed")
 
     else:
-        default_path = "modules/similarity_jsons/stix_bundle-4similar_ids.json"
+        default_path = "C:/Users/nitk/Downloads/stix-dashboard/stix-ai-dashboard/modules/stix_bundle-18similar_ids.json"
         similarity_json_path = st.text_input(
             "Path to similarity JSON",
             value=default_path
