@@ -429,7 +429,8 @@ embedder = OllamaEmbeddings(model="mxbai-embed-large:latest")
 def load_index(stix_type):
     index = faiss.read_index(f"modules/indexes/{stix_type}.faiss")
     loader = CSVLoader(
-        f"modules/csv_files_with_summary_SDOs/{stix_type}.csv"
+        f"modules/csv_files_with_summary_SDOs/{stix_type}.csv",
+        encoding="utf-8"
     )
     docs = loader.load()
     return index, docs

@@ -16,7 +16,7 @@ def clean_csv(input_csv_path):
     df = pd.read_csv(input_csv_path)
 
     csv_file=Path(input_csv_path).stem+".csv"
-    csv_path=Path("/Users/alwyndsouza/Documents/GitHub/stix-ai-dashboard/modules/cleaned_files")/csv_file
+    csv_path=Path("modules/cleaned_files")/csv_file
     csv_path.parent.mkdir(parents=True, exist_ok=True)
 
     # Drop unwanted columns if they exist

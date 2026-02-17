@@ -216,6 +216,7 @@
 
 # st.caption("STIX bundle → similarity → ego graph exploration")
 
+import tempfile
 import streamlit as st
 from pyvis.network import Network
 import tempfile
@@ -315,7 +316,7 @@ with st.sidebar:
                 st.error("Pipeline failed")
 
     else:
-        default_path = "modules/similarity_jsons/stix_bundle-4similar_ids.json"
+        default_path = "modules/similarity_jsons/stix_bundle-10similar_ids.json"
         similarity_json_path = st.text_input(
             "Path to similarity JSON",
             value=default_path
@@ -380,9 +381,19 @@ def render_cached(node_id):
     for s, t, d in ego.edges(data=True):
         net.add_edge(s, t, title=d.get("relationship", ""))
 
+    # tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
+    # net.write_html(tmp.name)
+
     tmp = tempfile.NamedTemporaryFile(delete=False, suffix=".html")
-    net.write_html(tmp.name)
+    tmp.close()  # close it first
+
+    html_content = net.generate_html()
+
+    with open(tmp.name, "w", encoding="utf-8") as f:
+        f.write(html_content)
+
     return tmp.name
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # SIDEBAR – GRAPH CONTROLS
@@ -414,7 +425,10 @@ if not selected_id:
 st.subheader(f"Selected: {selected_id}")
 
 html = render_cached(selected_id)
-st.components.v1.html(open(html).read(), height=600, scrolling=True)
+with open(html, "r", encoding="utf-8") as f:
+    html_content = f.read()
+
+st.components.v1.html(html_content, height=600, scrolling=True)
 
 with st.expander("Selected object JSON"):
     st.json(graph.nodes[selected_id])
@@ -429,7 +443,10 @@ for i, sim_id in enumerate(similarity_map.get(selected_id, []), 1):
 
     st.markdown(f"### {i}. {sim_id}")
     sim_html = render_cached(sim_id)
-    st.components.v1.html(open(sim_html).read(), height=500, scrolling=True)
+    with open(sim_html, "r", encoding="utf-8") as f:
+        html_content = f.read()
+
+    st.components.v1.html(html_content, height=500, scrolling=True)
 
     with st.expander(f"JSON – {sim_id}"):
         st.json(graph.nodes[sim_id])

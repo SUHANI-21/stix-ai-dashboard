@@ -12,7 +12,7 @@ from urllib.parse import urlparse
 # CONFIG
 # ==================================================
 
-VT_API_KEY = "835df2753f2fb40dd399952f3a7bcab62ff434a98a0c194cdf85d474b5e2a5d3"   
+VT_API_KEY = None  # Default: no key (BYOK)
 
 TIMEOUT = 5
 
@@ -122,13 +122,15 @@ def parse_date(val):
 # VIRUSTOTAL CHECK
 # ==================================================
 
-def check_virustotal(ioc):
+def check_virustotal(ioc, api_key=None):
 
-    if not VT_API_KEY:
+    key = api_key or VT_API_KEY
+    if not key:
+        print(f"[VirusTotal] Skipped - No API key provided")
         return None
 
     headers = {
-        "x-apikey": VT_API_KEY
+        "x-apikey": key
     }
 
     url = f"https://www.virustotal.com/api/v3/search?query={ioc}"
@@ -142,9 +144,15 @@ def check_virustotal(ioc):
 
             if data.get("data"):
                 return True
+        elif r.status_code == 401:
+            print(f"[VirusTotal] Error - Invalid API key")
+        elif r.status_code == 429:
+            print(f"[VirusTotal] Error - Rate limit exceeded")
+        else:
+            print(f"[VirusTotal] Error - Status code: {r.status_code}")
 
-    except:
-        pass
+    except Exception as e:
+        print(f"[VirusTotal] Error - {str(e)}")
 
     return False
 
@@ -171,7 +179,7 @@ def check_url(url):
 # MAIN ANALYZER
 # ==================================================
 
-def analyze_bundle(bundle):
+def analyze_bundle(bundle, skip_external_checks=False, vt_api_key=None):
 
     score = 0
     reasons = []
@@ -340,16 +348,30 @@ def analyze_bundle(bundle):
 
     vt_hits = 0
 
-    for ind in indicators:
+    if not skip_external_checks:
+        ioc_count = 0
+        for ind in indicators:
+            patt = ind.get("pattern", "")
+            iocs = re.findall(r"'([^']+)'", patt)
+            ioc_count += len(iocs)
+        
+        if ioc_count > 0 and vt_api_key:
+            print(f"[VirusTotal] Checking {ioc_count} IOCs...")
+        
+        for ind in indicators:
 
-        patt = ind.get("pattern", "")
+            patt = ind.get("pattern", "")
 
-        iocs = re.findall(r"'([^']+)'", patt)
+            iocs = re.findall(r"'([^']+)'", patt)
 
-        for ioc in iocs:
-
-            if check_virustotal(ioc):
-                vt_hits += 1
+            for ioc in iocs:
+                print(f"[VirusTotal] Querying: {ioc}")
+                result = check_virustotal(ioc, vt_api_key)
+                if result:
+                    vt_hits += 1
+                    print(f"[VirusTotal] ✓ Match found for: {ioc}")
+                else:
+                    print(f"[VirusTotal] ✗ No match for: {ioc}")
 
 
     if vt_hits:
@@ -357,7 +379,12 @@ def analyze_bundle(bundle):
         reasons.append(f"✔ {vt_hits} IOC confirmed by VirusTotal")
 
     elif indicators or malware:
-        reasons.append("⚠ No IOC confirmed")
+        if skip_external_checks:
+            reasons.append("⚠ VirusTotal check skipped (external checks disabled)")
+        elif vt_api_key:
+            reasons.append("⚠ No IOC confirmed")
+        else:
+            reasons.append("⚠ VirusTotal check skipped (no API key)")
 
 
     # ----------------------------------------------

@@ -1,0 +1,41 @@
+# Streamlit & UI
+streamlit
+plotly
+pyvis
+
+# STIX Libraries
+stix2
+stix2-validator
+stix
+stix2-elevator
+
+# Data Processing
+lxml<5
+python-dateutil
+pandas
+
+# Utilities
+pyyaml
+requests
+beautifulsoup4
+
+# RAG System Dependencies
+chromadb
+sentence-transformers
+ollama
+
+# ML/AI Dependencies
+numpy
+scikit-learn
+transformers
+torch
+accelerate
+
+# Threat Similarity Search
+faiss-cpu
+langchain_ollama
+langchain_community
+langchain-huggingface
+
+# Network Analysis
+networkx

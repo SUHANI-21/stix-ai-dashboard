@@ -76,6 +76,25 @@ st.markdown("# 📋 Canonical Output Generator")
 st.markdown("Upload a STIX file → Run complete analysis → Get canonical JSON output")
 st.markdown("---")
 
+# Initialize session state for VT API key
+if "canonical_vt_api_key" not in st.session_state:
+    st.session_state.canonical_vt_api_key = ""
+
+# Sidebar for API key
+with st.sidebar:
+    st.markdown("### 🔑 VirusTotal API Key (Optional)")
+    vt_key = st.text_input(
+        "Paste your VirusTotal API key",
+        type="password",
+        value=st.session_state.canonical_vt_api_key,
+        help="Optional: Provide your own VirusTotal API key for IOC validation in credibility assessment."
+    )
+    if vt_key:
+        st.session_state.canonical_vt_api_key = vt_key
+        st.success("✅ API key configured")
+    else:
+        st.info("ℹ️ No API key - VirusTotal checks will be skipped")
+
 # File uploader
 uploaded_file = st.file_uploader("Upload STIX file (JSON or XML)", type=["json", "xml"])
 
@@ -115,7 +134,11 @@ if uploaded_file:
                 
                 # Step 3: Credibility Assessment
                 with st.status("Step 3: Running credibility assessment...", expanded=True) as status:
-                    credibility_result = analyze_bundle(converted_data, skip_external_checks=True)
+                    credibility_result = analyze_bundle(
+                        converted_data,
+                        skip_external_checks=False,
+                        vt_api_key=st.session_state.canonical_vt_api_key if st.session_state.canonical_vt_api_key else None
+                    )
                     st.write(f"✅ Credibility Score: {credibility_result['score']}/100 ({credibility_result['rating']})")
                     status.update(label="✅ Credibility assessed", state="complete")
                 

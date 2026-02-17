@@ -85,6 +85,8 @@ if "threat_assessment_result" not in st.session_state:
     st.session_state.threat_assessment_result = None
 if "threat_storage" not in st.session_state:
     st.session_state.threat_storage = STIXStorage()
+if "vt_api_key" not in st.session_state:
+    st.session_state.vt_api_key = ""
 
 def reset_threat_session():
     """Reset threat assessment session data"""
@@ -100,6 +102,22 @@ st.divider()
 # Sidebar - File Upload
 with st.sidebar:
     st.markdown("### 📁 STIX Bundle Source")
+    
+    # VirusTotal API Key Input
+    st.markdown("### 🔑 VirusTotal API Key (Optional)")
+    vt_key = st.text_input(
+        "Paste your VirusTotal API key",
+        type="password",
+        value=st.session_state.vt_api_key,
+        help="Optional: Provide your own VirusTotal API key for IOC validation. Leave empty to skip VirusTotal checks."
+    )
+    if vt_key:
+        st.session_state.vt_api_key = vt_key
+        st.success("✅ API key configured")
+    else:
+        st.info("ℹ️ No API key - VirusTotal checks will be skipped")
+    
+    st.divider()
     
     # Check if file shared from dashboard
     if "shared_stix_bytes" in st.session_state and st.session_state.shared_stix_bytes:
@@ -205,7 +223,10 @@ if st.session_state.threat_file_path and Path(st.session_state.threat_file_path)
         if st.button("🔍 Run Threat Assessment", key="run_assessment", use_container_width=True):
             with st.spinner("🔄 Analyzing threat credibility..."):
                 try:
-                    assessment_result = analyze_bundle(st.session_state.threat_converted_data)
+                    assessment_result = analyze_bundle(
+                        st.session_state.threat_converted_data,
+                        vt_api_key=st.session_state.vt_api_key if st.session_state.vt_api_key else None
+                    )
                     st.session_state.threat_assessment_result = assessment_result
                     st.success("✅ Threat assessment completed!")
                     
