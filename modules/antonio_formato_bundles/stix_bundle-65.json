@@ -1,0 +1,263 @@
+{
+  "type": "bundle",
+  "id": "bundle--60e3f598-93fa-4214-86fb-e50d1546ef48",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--4c8e7bc2-0616-4048-9585-c1eae98c28a2",
+      "name": "SantaStealer C2 Servers",
+      "description": "Command and control servers used by SantaStealer for exfiltration of stolen data. Data is sent in 10 MB compressed chunks over unencrypted HTTP to a hard-coded /upload endpoint.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "external_references": [
+        {
+          "source_name": "Rapid7",
+          "url": "https://www.rapid7.com/blog/post/tr-santastealer-is-coming-to-town-a-new-ambitious-infostealer-advertised-on-underground-forums"
+        }
+      ],
+      "observable_refs": [
+        "31.57.38.244:6767",
+        "80.76.49.114:6767"
+      ],
+      "created_by_ref": "identity--",
+      "created": "2025-12-16T00:00:00Z",
+      "modified": "2025-12-16T00:00:00Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c70efdd5-9a45-4ab1-ad8e-2a80c6517734",
+      "name": "Account Discovery",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1087"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3f184cb0-aa89-48a8-80bb-29a20a226ea7",
+      "name": "Automated Exfiltration",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1020"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0b8db14f-b94f-4bc2-85dc-54cd60e9bb06",
+      "name": "Data Compressed",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e8aa957d-1db3-4bcb-9234-cfef44dc70f8",
+      "name": "Browser Information Discovery",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--73a427fe-3f6d-4d9c-b518-f08dbdb1f66a",
+      "name": "Archive Collected Data",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1560"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--38e53b8e-1e11-41ad-a990-423d158f07ee",
+      "name": "Data Transfer Size Limits",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1030"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--09ef9a23-6621-4df6-9c15-2db91ef054a8",
+      "name": "Archive via Library",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1560.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--54978ece-f1fb-49e4-bf79-d0e1701e3b81",
+      "name": "Automated Collection",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f90637c6-c446-456a-aa58-5d8e62e91bb3",
+      "name": "Exfiltration Over C2 Channel",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--6f00c584-1e30-456c-b06b-0097dfdd37cd",
+      "hashes": {
+        "SHA-256": "1a277cba1676478bf3d47bec97edaa14f83f50bdd11e2a15d9e0936ed243fd64"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--06bfb81b-10f5-4079-b014-d1d55a6a4b78",
+      "hashes": {
+        "SHA-256": "abbb76a7000de1df7f95eef806356030b6a8576526e0e938e36f71b238580704"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2e2ae007-3e6b-4e81-8f14-59bc5eaa101f",
+      "hashes": {
+        "SHA-256": "5db376a328476e670aeefb93af8969206ca6ba8cf0877fd99319fa5d5db175ca"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ce3b21dd-d398-4156-9393-1cc1eb6cac36",
+      "hashes": {
+        "SHA-256": "a8daf444c78f17b4a8e42896d6cb085e4faad12d1c1ae7d0e79757e6772bddb9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1ae6eeeb-6316-4a77-9377-91b769b847bc",
+      "hashes": {
+        "SHA-256": "5c51de7c7a1ec4126344c66c70b71434f6c6710ce1e6d160a668154d461275ac"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ea726448-af5d-4d53-937b-d7431a647333",
+      "hashes": {
+        "SHA-256": "48540f12275f1ed277e768058907eb70cc88e3f98d055d9d73bf30aa15310ef3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--30ba36db-1867-48ef-883f-79a93ae28189",
+      "hashes": {
+        "SHA-256": "99fd0c8746d5cce65650328219783c6c6e68e212bf1af6ea5975f4a99d885e59"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--85cdb8f5-fe64-4f88-860c-927f31c65aeb",
+      "hashes": {
+        "SHA-256": "ad8777161d4794281c2cc652ecb805d3e6a9887798877c6aa4babfd0ecb631d2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--13d75d76-aea9-48ad-9551-ef641db1d91c",
+      "hashes": {
+        "SHA-256": "73e02706ba90357aeeb4fdcbdb3f1c616801ca1affed0a059728119bd11121a4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5b8accee-4cef-4763-82ea-058a010edf8b",
+      "hashes": {
+        "SHA-256": "e04936b97ed30e4045d67917b331eb56a4b2111534648adcabc4475f98456727"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8e9606b6-1e7a-4bc5-bcb2-e919f9225646",
+      "hashes": {
+        "SHA-256": "66fef499efea41ac31ea93265c04f3b87041a6ae3cd14cd502b02da8cc77cca8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2be54132-8973-43ac-985a-083c553cd334",
+      "hashes": {
+        "SHA-256": "4edc178549442dae3ad95f1379b7433945e5499859fdbfd571820d7e5cf5033c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1d51b2b4-84d9-4147-8255-fe0cafd79ce3",
+      "hashes": {
+        "SHA-256": "926a6a4ba8402c3dd9c33ceff50ac957910775b2969505d36ee1a6db7a9e0c87"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--42a55d8a-da6d-4d17-8028-9ff703451beb",
+      "hashes": {
+        "SHA-256": "9b017fb1446cdc76f040406803e639b97658b987601970125826960e94e9a1a6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--73d59057-d900-4b62-ae5f-58051d00f2b6",
+      "hashes": {
+        "SHA-256": "f81f710f5968fea399551a1fb7a13fad48b005f3c9ba2ea419d14b597401838c"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0de0b0a8-6d8e-4b80-820f-20e4f3e457d4",
+      "value": "31.57.38.244"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4d69ab33-e6bb-455a-9379-9e7a4b89946e",
+      "value": "80.76.49.114"
+    },
+    {
+      "type": "url",
+      "id": "url--5d28af56-efdf-4773-93e4-59a953cecb3b",
+      "value": "http://31.57.38.244:6767/upload"
+    },
+    {
+      "type": "url",
+      "id": "url--ed8dfab7-4e50-48b5-a0ce-b9896048ac26",
+      "value": "http://80.76.49.114:6767/upload"
+    },
+    {
+      "type": "url",
+      "id": "url--83b34aa7-107e-4b93-ad4f-9f96da3216fe",
+      "value": "https://lolz.live/santa/"
+    },
+    {
+      "type": "url",
+      "id": "url--875f986c-501d-4c56-87e4-e508a55a9997",
+      "value": "https://t.me/SantaStealer"
+    }
+  ]
+}

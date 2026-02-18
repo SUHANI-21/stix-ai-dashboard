@@ -1,0 +1,363 @@
+{
+  "type": "bundle",
+  "id": "bundle--744b4875-f640-4ea9-8129-d24fe38dd8b6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--ab055e35-edcd-4bee-954b-7272d342cf45",
+      "hashes": {
+        "MD5": "235A93C7A4B79135E4D3C220F9313421"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--00e8593e-c431-4c42-8ef1-104947b46a84",
+      "hashes": {
+        "MD5": "760B026EDFE2546798CDC136D0A33834"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b16cef52-09b6-4704-b095-2072f52b332c",
+      "hashes": {
+        "MD5": "7E70530BE2BFFCFADEC74DE6DC282357"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f7cfc21e-ee03-45c8-95b9-f099b86565a2",
+      "hashes": {
+        "MD5": "5CC5381A1B4AC275D221ECC57B85F7C3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--247780d5-b6ad-487d-bdaf-6a44d682b901",
+      "hashes": {
+        "MD5": "AD885646DAEE05159902F32499713008"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0bedf7ae-f10f-41eb-9798-57aaac6aad52",
+      "hashes": {
+        "MD5": "A7ED440BB7114FAD21ABFA2D4E3790A0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6e69a82c-610a-4c12-87b8-5fd60fe8a37d",
+      "hashes": {
+        "MD5": "7CF2FD60B6368FBAC5517787AB798EA2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--36b25545-361b-4998-bf4a-9203042bc36e",
+      "hashes": {
+        "MD5": "E64527A9FF2CAF0C2D90E2238262B59A"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fcdcfc5f-db6d-4f44-944a-8d0cc34010f0",
+      "hashes": {
+        "MD5": "31231FD3F3A88A27B37EC9A23E92EBBC"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9e507115-c86d-4b49-a555-6abc1643986d",
+      "hashes": {
+        "MD5": "FFBDE4340FC156089F968A3BD5AA7A57"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1e8ef0e4-4691-4588-8277-e996ea540360",
+      "hashes": {
+        "MD5": "E7AF0705BA1EE2B6FBF5E619C3B2747E"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7af21c1a-9214-4e68-b875-e98999dc08d7",
+      "hashes": {
+        "MD5": "BFD7642671A5788722D74D62D8647DF9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a83d11f8-0d6a-40e7-a633-b4a81d219043",
+      "hashes": {
+        "MD5": "8D504BA5A434F392CC05EBE0ED42B586"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8567262b-252e-497d-b3a5-440228083de0",
+      "hashes": {
+        "MD5": "87CE512032A5D1422399566ECE5E24CF"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--93b0a570-50e8-4b3d-9c6b-ed457030c67f",
+      "hashes": {
+        "MD5": "B06845C9586DCC27EDBE387EAAE8853F"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--46137965-7799-4888-a759-50ee078eac7f",
+      "hashes": {
+        "MD5": "DB06453806DACAFDC7135F3B0DEA4A8F"
+      }
+    },
+    {
+      "type": "directory",
+      "id": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "path": "%APPDATA%\\Local\\NodeJS"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--42bd5416-77e4-42a1-a978-009ccac3891b",
+      "value": "185.28.119.179"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--306b0348-fef6-4ad2-b9cd-cd440d34bf9d",
+      "value": "196.251.72.192"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b5311d2e-f186-449e-a7dc-1c5d8051836f",
+      "value": "103.246.145.201"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--44fb31db-d712-4b35-98c4-60b40791409e",
+      "value": "193.24.123.68"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192",
+      "value": "62.60.226.179"
+    },
+    {
+      "type": "url",
+      "id": "url--753024a4-4ae8-4c02-bf07-4085e55a5b53",
+      "value": "ws://185.28.119.179:1234"
+    },
+    {
+      "type": "url",
+      "id": "url--1dd12f00-69f2-4e0e-81bd-e611709e2252",
+      "value": "ws://196.251.72.192:1234"
+    },
+    {
+      "type": "url",
+      "id": "url--33cfafd6-1afc-463b-82b8-b500c72a7491",
+      "value": "ws://103.246.145.201:1234"
+    },
+    {
+      "type": "url",
+      "id": "url--981be492-63cf-4090-80c5-9c49595099ef",
+      "value": "ws://193.24.123.68:3011"
+    },
+    {
+      "type": "url",
+      "id": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "value": "ws://62.60.226.179:3001"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--ecdba7dd-a187-4425-8bc9-abc454b95041",
+      "address": "0x73625B6cdFECC81A4899D221C732E1f73e504a32",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--daeda9c7-55ea-43e6-beb0-b7da2bd1ef0e",
+      "address": "0x10ca9bE67D03917e9938a7c28601663B191E4413",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--62bb010d-7b4e-433c-b83f-50ed19f7be08",
+      "address": "0xEc99D2C797Db6E0eBD664128EfED9265fBE54579",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--5e4193b7-94d0-443d-b300-09ade2d6552f",
+      "address": "0xf11Cb0578EA61e2EDB8a4a12c02E3eF26E80fc36",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--18d65462-fadb-4ed3-b9f7-61acd9eae150",
+      "address": "0xdb8e8B0ef3ea1105A6D84b27Fc0bAA9845C66FD7",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--0340692c-aaf3-4dfa-b08b-a7a809d2b02f",
+      "address": "0x52221c293a21D8CA7AFD01Ac6bFAC7175D590A84",
+      "currency": "ethereum"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--ae70489f-b1b1-404c-abfd-e44076958f34",
+      "address": "0x46b0f9bA6F1fb89eb80347c92c9e91BDF1b9E8CC",
+      "currency": "ethereum"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d93cd3b-e9ba-44f9-b9d8-b4aa4754f80e",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--312dc26e-4403-4d16-ba56-0faf284b6163",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b33c76c5-cd65-4be8-958d-0e15636f3366",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ca496975-c87e-426e-9d73-f3669167c470",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f45980f6-a328-4ad5-9c22-2f0990e55a19",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55ef02f9-e4e1-4236-95cf-29dd2e9e792e",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e7402ae-f45c-46ce-8524-f520c9798337",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3eb5dba3-0a69-4d10-a4bb-fdeed74e9b87",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98b43b0a-6e8b-4512-94a0-95eb4418d932",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88ad3e86-2d98-4157-b43d-1fc196d26be3",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8a5a7f7-bc34-4f76-b7f7-02fb5dfb82c2",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e97ca7c5-18a1-46e1-977d-f263b30080c3",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--808189c1-8291-4d7d-a4d1-042e5640cf93",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ac983c3-75f3-4ac5-872b-314bb267ee0a",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--819779e7-38f5-411a-aae4-5628ab15bd2c",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1dc4aab8-d346-484c-ad21-a78b0127ab13",
+      "relationship_type": "contains",
+      "source_ref": "directory--d55d48ee-3bf9-4dc6-b1fc-a505b4c28f3e",
+      "target_ref": "file--46137965-7799-4888-a759-50ee078eac7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6d84564-c16a-44b9-bce1-8db27b419086",
+      "relationship_type": "resolves-to",
+      "source_ref": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "target_ref": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--684a0ffb-8fc8-46c6-abf5-489c95f2721c",
+      "relationship_type": "resolves-to",
+      "source_ref": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "target_ref": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e010b29-ef9c-42e3-b492-7b7d673a01d4",
+      "relationship_type": "resolves-to",
+      "source_ref": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "target_ref": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c952bfe-2152-4c15-a89a-8a7d73d7e2ef",
+      "relationship_type": "resolves-to",
+      "source_ref": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "target_ref": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f494d71-166e-4ad5-942d-1f007673041f",
+      "relationship_type": "resolves-to",
+      "source_ref": "url--85e1ab64-2238-4e2f-b477-0a4823938b93",
+      "target_ref": "ipv4-addr--67fafc0b-5764-49ca-b8d4-eedf557b2192"
+    }
+  ]
+}

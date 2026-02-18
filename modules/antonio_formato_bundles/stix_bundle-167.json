@@ -1,0 +1,358 @@
+{
+  "type": "bundle",
+  "id": "bundle--93089184-bc5b-4e06-b6a1-7f45bf168fdc",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "tool",
+      "id": "tool--c7139aca-e2cb-431d-9a53-5d75edf860ec",
+      "name": "Picus Exposure Validation",
+      "description": "Picus Exposure Validation turns overwhelming vulnerability data into clear, evidence-based priorities. It safely simulates real-world attacks across cloud, network, and endpoint controls to reveal the exposures that are truly exploitable in an environment, helping organizations prioritize patching and reduce mean time to remediation.",
+      "labels": [
+        "security validation",
+        "exposure validation",
+        "simulation"
+      ],
+      "external_references": [
+        {
+          "source_name": "Picus Security Exposure Validation Datasheet",
+          "url": "https://www.picussecurity.com/hubfs/Picus-Exposure-Validation-EXV-Datasheet%20(2).pdf"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "name": "Picus Complete Security Validation Platform",
+      "description": "The Picus Complete Security Validation Platform provides granular and actionable insights for operational and executive teams, helps build proactive capabilities, and maximizes technology utilization.",
+      "labels": [
+        "security validation",
+        "platform"
+      ],
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--86159a38-c02e-42d5-bcbc-65c64d736c88",
+      "name": "Data from Local System",
+      "description": "Adversaries may collect data from a local system for exfiltration.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1005-data-from-local-system",
+          "external_id": "T1005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--03b4602d-6f04-4360-bab8-d8c95ffbb4cf",
+      "name": "Impair Defenses: Disable or Modify Linux Audit System",
+      "description": "Adversaries may disable or modify the Linux audit system to evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-012-disable-or-modify-linux-audit-system",
+          "external_id": "T1562.012"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b8518820-c037-4689-85d6-af8e98d3ce1b",
+      "name": "Impair Defenses: Spoof Security Alerting",
+      "description": "Adversaries may spoof security alerting mechanisms to avoid detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-011-spoof-security-alerting",
+          "external_id": "T1562.011"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1d877681-58c6-4582-ae31-ab060d2a5205",
+      "name": "Impair Defenses: Downgrade Attack",
+      "description": "Adversaries may attempt to downgrade security controls to weaken defenses.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-010-downgrade-attack",
+          "external_id": "T1562.010"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3b02e1e9-11f1-4b4d-ab15-a420540e0f37",
+      "name": "Input Capture",
+      "description": "Adversaries may capture user input to obtain credentials or other sensitive information.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1056-input-capture",
+          "external_id": "T1056"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1bda4d1f-1cf9-41dd-b954-bd7f2222f10b",
+      "name": "Impair Defenses: Safe Mode Boot",
+      "description": "Adversaries may boot systems in safe mode to disable security controls.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-009-safe-mode-boot",
+          "external_id": "T1562.009"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c94fcdb0-d52b-4e69-9102-5fc361ccdaf9",
+      "name": "Impair Defenses: Disable or Modify Cloud Logs",
+      "description": "Adversaries may disable or modify cloud logs to evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-008-disable-or-modify-cloud-logs",
+          "external_id": "T1562.008"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23",
+      "name": "Impair Defenses: Disable or Modify Cloud Firewall",
+      "description": "Adversaries may disable or modify cloud firewall settings to bypass security controls.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://www.picussecurity.com/resource/blog/t1562-007-disable-or-modify-cloud-firewall",
+          "external_id": "T1562.007"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--0b3f18c9-6ed1-4a22-85ad-7244ac3d6996",
+      "value": "https://www.picussecurity.com/resource"
+    },
+    {
+      "type": "url",
+      "id": "url--1183c3ed-3c7f-42d4-ae48-c0ec25df75dd",
+      "value": "https://www.picussecurity.com/resource/tag/datasheet"
+    },
+    {
+      "type": "url",
+      "id": "url--7385dec7-bdee-47d3-8a76-039995cad925",
+      "value": "https://www.picussecurity.com/hubfs/Picus-Exposure-Validation-EXV-Datasheet%20(2).pdf"
+    },
+    {
+      "type": "url",
+      "id": "url--78651f6e-3b24-4203-abbb-163cdf1e1d1c",
+      "value": "https://www.picussecurity.com/resource/blog/whats-new-in-mitre-attack-v18"
+    },
+    {
+      "type": "url",
+      "id": "url--a7b0568b-e3d8-484c-bc68-fbc2b5641bad",
+      "value": "https://www.picussecurity.com/resource/blog/t1005-data-from-local-system"
+    },
+    {
+      "type": "url",
+      "id": "url--05fe11b8-56ca-4d64-8701-92d448fa35c2",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-012-disable-or-modify-linux-audit-system"
+    },
+    {
+      "type": "url",
+      "id": "url--1390ec4f-27b3-4077-a373-ebbf6f21db7c",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-011-spoof-security-alerting"
+    },
+    {
+      "type": "url",
+      "id": "url--2fe37e03-9e16-4e36-9773-4c98b54c052e",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-010-downgrade-attack"
+    },
+    {
+      "type": "url",
+      "id": "url--9c57eaac-9e92-472b-ab74-ff71f5ff06d4",
+      "value": "https://www.picussecurity.com/resource/blog/t1056-input-capture"
+    },
+    {
+      "type": "url",
+      "id": "url--cd71b9b0-5f18-42f9-9a18-940ef99b41d8",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-009-safe-mode-boot"
+    },
+    {
+      "type": "url",
+      "id": "url--42ef768a-a685-415f-8d64-ada93d447f19",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-008-disable-or-modify-cloud-logs"
+    },
+    {
+      "type": "url",
+      "id": "url--bd413813-bcbb-4aa7-9c48-5ddc6a412a22",
+      "value": "https://www.picussecurity.com/resource/blog/t1562-007-disable-or-modify-cloud-firewall"
+    },
+    {
+      "type": "file",
+      "id": "file--f34c7573-4e6c-42f0-9f42-9dd26823525e",
+      "name": "Picus-Exposure-Validation-EXV-Datasheet (2).pdf"
+    },
+    {
+      "type": "file",
+      "id": "file--7c4e3be7-eb01-4ccd-b746-59c5b68344ae",
+      "name": "AWARDS-2022-Dark-updated.png"
+    },
+    {
+      "type": "file",
+      "id": "file--f7dc63f6-39c6-463a-9f0e-b6de6e602345",
+      "name": "Exposure-Validation-Datasheet-Mockup.png"
+    },
+    {
+      "type": "file",
+      "id": "file--ed1b16d4-a7d1-4753-bf98-ff9ef427f996",
+      "name": "bg-resources-hero.png"
+    },
+    {
+      "type": "file",
+      "id": "file--2779240f-ca18-4af4-98ff-67232fed1034",
+      "name": "whats-new-in-MITRE-ATTCK-v18-blog-preview.png"
+    },
+    {
+      "type": "file",
+      "id": "file--47281422-a777-4da2-bdbd-3cb2b05e4b11",
+      "name": "rr25-Blog-7-data-from-local-system (1).png"
+    },
+    {
+      "type": "file",
+      "id": "file--52859b32-7508-45b9-9880-87358b90b1ce",
+      "name": "rr25-Blog-5-Impair-Defenses-12.png"
+    },
+    {
+      "type": "file",
+      "id": "file--2dea0088-f56d-4809-a57e-0e459d248ad4",
+      "name": "rr25-Blog-5-Impair-Defenses-11 (1).png"
+    },
+    {
+      "type": "file",
+      "id": "file--2c0dc81e-c12e-4eb9-8725-0a957042a1b3",
+      "name": "rr25-Blog-5-Impair-Defenses-10.png"
+    },
+    {
+      "type": "file",
+      "id": "file--966f70fd-78c7-447e-a650-4fdc4e66ee36",
+      "name": "rr25-Blog-6-Input-Capture.png"
+    },
+    {
+      "type": "file",
+      "id": "file--b368516e-d231-44c6-a319-acebfbc84606",
+      "name": "rr25-Blog-5-Impair-Defenses-9.png"
+    },
+    {
+      "type": "file",
+      "id": "file--aaedc839-e8dc-4e0a-99c2-c752b4294380",
+      "name": "rr25-Blog-5-Impair-Defenses-8.png"
+    },
+    {
+      "type": "file",
+      "id": "file--9528a2a5-4d37-47c6-b7e8-4f50160ef5f8",
+      "name": "rr25-Blog-5-Impair-Defenses-7.png"
+    },
+    {
+      "type": "file",
+      "id": "file--645f0d7b-7037-461d-bc72-1efefa83fee2",
+      "name": "chevron-right.svg"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98e2060e-8bfa-4c33-8a32-aa19d6f4ed0d",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--42f87399-225c-430a-bfa4-17b3b8baa53a",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--571cec07-5d18-45f7-8328-6fd88eb10209",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ff31c03-b90a-4781-ba57-34dc3160a93d",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0c43efd-2f79-46b4-bef9-a8274a9163fb",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19f203bb-03e2-4b6e-b1c9-0cd929307dd9",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9cf61fcd-a154-4465-ace7-2466a536d5a7",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfff2266-e959-4fa9-975d-279ac3d7aca9",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a1826c4-c7bd-4672-add5-8628f1e93a27",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e33e031-d0b1-4dd7-9646-837de27a6532",
+      "relationship_type": "uses",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "attack-pattern--72a12613-69fa-4a96-990e-06b2303c2b23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--74356286-d7ff-46e1-b019-7ee26d0a3c2e",
+      "relationship_type": "related-to",
+      "source_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e",
+      "target_ref": "tool--fe317194-8ef9-4629-98dd-23ed01e8482e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b10e9362-e784-4955-bd64-21962baec3de",
+      "relationship_type": "related-to",
+      "source_ref": "file--645f0d7b-7037-461d-bc72-1efefa83fee2",
+      "target_ref": "url--bd413813-bcbb-4aa7-9c48-5ddc6a412a22"
+    }
+  ]
+}

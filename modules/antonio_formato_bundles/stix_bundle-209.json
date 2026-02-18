@@ -1,0 +1,397 @@
+{
+  "type": "bundle",
+  "id": "bundle--649a5189-2458-4180-8683-c29bf26f88b7",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--90596a93-e7a3-48d7-9228-a605242e7252",
+      "name": "SmartApeSG C2 Infrastructure",
+      "description": "Command and control servers used by SmartApeSG, previously hosted on Stark Industries, later transitioned to Hivelocity and HostZealot.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--2a1322b5-5d5d-4305-ace0-ba9d0b77548f",
+      "name": "NetSupport RAT C2 Cluster",
+      "description": "Cluster of command and control servers for NetSupport RAT, including old and new IPs and domains, some active for over a year and receiving victim communications.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--c867a52c-e47f-45ae-8ca3-b9dc1392ed9b",
+      "name": "Quasar RAT C2 Infrastructure",
+      "description": "Command and control servers for Quasar RAT, including 193.107.109.76 and associated hosts communicating over TCP/1488 and TCP/54664.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--243702c8-2458-4257-bcaa-bd2145ce7431",
+      "name": "Moldovan C2 Management Hosts",
+      "description": "Three Moldovan IPs (5.181.156.16, 5.181.157.69, 5.181.158.15) hosted by MivoCloud used for C2 management activities, including connections to SmartApeSG and NetSupport RAT clusters.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--7cedce21-4510-4186-8ea3-d4d2560a3d66",
+      "name": "Fake Cryptocurrency Services",
+      "description": "Infrastructure including domains such as ubsglobalmarkets[.]com, k-trades[.]com, and rivosgroup[.]com used for cryptocurrency scams and impersonation of legitimate companies.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0344ee58-b5e2-4bf5-8224-fe5d0ea2a5da",
+      "value": "5.181.156.16"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e636c87f-c206-42bb-a24c-5a1d17e20840",
+      "value": "5.181.157.69"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--40f0a3eb-caf2-405b-86b8-35a9dbd15aaf",
+      "value": "5.181.158.15"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7fabeead-27f0-4580-a771-dfaab16358d5",
+      "value": "95.164.37.152"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f41d93ce-c730-41cf-9a09-73aefe1b203f",
+      "value": "194.31.109.74"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--33354e2c-590b-4963-a7d8-5f1848508e07",
+      "value": "193.107.109.76"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--73791e88-1edd-4728-97e5-73ae55551249",
+      "value": "5.181.159.111"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ace30c51-c553-4bd7-8c54-b1a710fd0fea",
+      "value": "5.181.159.113"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6a1d7612-64fe-46e9-a91c-d961d5ad3d8b",
+      "value": "5.181.159.119"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6bd40335-9694-4339-b3e5-728dcfd90923",
+      "value": "45.8.145.132"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0bfbe73-2a68-49bc-9725-a77dc9bf0a39",
+      "value": "45.67.35.101"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8a1560f8-d6b1-4b8a-9f3d-9d559f6ed706",
+      "value": "185.153.183.59"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b6102fa3-e940-462e-b3b9-4cbc18454912",
+      "value": "23mtkro.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2fea87dd-280c-46fc-9445-221fba7ce4e8",
+      "value": "allenew1.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ffdf55c6-1e9a-4db0-aa15-205969298e9c",
+      "value": "asdgelvasd.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b276b9a1-ac8a-4248-9cfe-cdf601eeae5b",
+      "value": "asdsrjhegrhj.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--94d10c25-85a4-4bf1-9a37-47cfc5bd1676",
+      "value": "comparegjs.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0e7dc78b-11ab-4381-a274-7898a5acdb71",
+      "value": "dgdsrzzw45tg.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7acbf718-9e0a-4bee-8983-05c85a26bb48",
+      "value": "dsfygfnb3.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a49cb68d-aca8-461d-8b62-d56571269143",
+      "value": "duvje6egvuas.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f9811ee3-164a-44a3-a3b5-b37bba3c6647",
+      "value": "dvtrstrhdbcvbxr.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--69121237-b19a-49fe-b979-2b10d09b95d8",
+      "value": "e3ubj753ifg.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e21a8c0d-6068-4b89-b122-ae7c0ba8b66c",
+      "value": "fdoshbjdo.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1286fb30-6dca-4415-9e69-15b67ee27e84",
+      "value": "fufvnasie.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--025a4f52-852c-47bf-8dfe-21b4a949efd1",
+      "value": "gfu6nfmgnm86gm.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f7a18e32-197c-45f8-827f-070983e16511",
+      "value": "gjuauyfhjha.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--86280790-5d1a-44a3-bee5-5ffdd20cb646",
+      "value": "gkdkr.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--745355d0-b98c-4d7f-aae4-458170f817ca",
+      "value": "gsdgtruhu45.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db8d6757-666a-4740-977e-de84ab9e8949",
+      "value": "huntaget.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9c2ebb2d-dbd2-4c0d-a871-798e85c0399b",
+      "value": "isaydiuaysoidalkspw.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3f548eb1-3805-4836-8395-9ce76f29a9e4",
+      "value": "jintsung.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c23430aa-f1a5-47e0-8434-1e88b34850e8",
+      "value": "jkhmzxvidfyidu.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--00bc64f9-631d-42b2-9816-758bd18825af",
+      "value": "mgsubneu4hgba.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e7756dd6-2194-4dfb-912c-691bce98ea21",
+      "value": "mixuvvvjsurub.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8767da75-8272-4c4f-87c2-dc81ddb0c4de",
+      "value": "moreeu.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ca3201bb-04e1-4638-8879-c87be26a9cd5",
+      "value": "msguguudfh4.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0e1dd96a-3f69-4fdb-ab56-3c55629aa2b2",
+      "value": "nfdsnvuusds7d64jg.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e5547c59-b711-4751-b4ac-760b0bee018e",
+      "value": "recsfgsfxvdgr.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b413f6fc-8b85-428d-bd17-aefb4dac1837",
+      "value": "ruhvsvya.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5124fe82-7a06-4860-85b9-9396187530bd",
+      "value": "safvyhgdrsdfhd.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--98771f7e-5c09-4bf6-afe4-383de78171b2",
+      "value": "sasfyvuaseyzzs.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--26f40672-a4f2-494a-9942-b82c59e556a7",
+      "value": "sasygzsu4zusaty.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9df22606-35c5-46a7-85a5-22af3f9cbe9a",
+      "value": "scheduleyaraupd2.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1756488b-a144-4a2e-9910-076ecd3d6ee7",
+      "value": "sdfojbeufibibsuu8u.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b853c5ef-13f7-440c-b04c-a286df597eea",
+      "value": "sdgn446yhd.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4e56819c-9147-4627-921b-48f88e0e154e",
+      "value": "sdjbizirebz.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c964ba3-70ce-449b-a5a3-fe324babf932",
+      "value": "sertte56gzxes.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2de6063-874d-4faf-8ee0-83e96f94a48d",
+      "value": "sevndgkhkidgr.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a28af0f8-38e5-47da-a81a-5e8dc5466bf6",
+      "value": "sidfbuz8egozs.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f8b246bb-394b-4b83-8c8e-0ffc32092572",
+      "value": "ssdghgrehndx.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--416a0a4a-338a-42b9-ab8a-a03ae7aa139c",
+      "value": "tojh5roh4.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--469eb54e-0625-46c4-828c-44e847dafd28",
+      "value": "torpoa.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1cd0903c-562a-482a-800b-0bb1e111dc84",
+      "value": "tripdsbeacgsa43wes.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2e873fc3-552d-40c9-bbf2-49e1a7af0497",
+      "value": "u4snvsrtvlrui.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2adb1fc0-73f4-4d08-b4e3-902693791ace",
+      "value": "u55fbwiubyuere.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8d89ad83-3537-457e-b5be-0947ec2ff277",
+      "value": "usjnvovoo4.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5df51142-d815-46e6-b1c4-aa2a7f63054b",
+      "value": "zjdhduv.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6b6d8a2b-b6ef-4458-8585-37029689a684",
+      "value": "zytjbgev.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4e209f30-edd5-41df-a5e6-70c9c0985bfa",
+      "value": "derelay.rabby.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2801fbda-9d68-4ce6-95af-86e45224e592",
+      "value": "fex.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--98cac520-7457-4a08-8802-4acec3f17f01",
+      "value": "exploit.im"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9bdea1ee-4c35-4226-9ec1-f54c85c8a08e",
+      "value": "ubsglobalmarkets.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8e2d61f2-2c29-472a-8b16-63fc19899c29",
+      "value": "ubs.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3ed2e796-2586-4fcf-924f-f5204820e18d",
+      "value": "k-trades.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--29128acb-c371-491b-a3a5-a1c02502037f",
+      "value": "rivosgroup.com"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--b94dba78-c6a2-46cd-b90a-5d5eb3954322",
+      "subject": "CN=55554rac",
+      "issuer": "CN=55554rac"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--90a05c11-9c52-4c6e-8d41-393791ef3720",
+      "subject": "CN=MATRACHEDICIDGA",
+      "issuer": "CN=MATRACHEDICIDGA"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--75076b97-d89b-42a0-9671-e7f2d2cb5603",
+      "subject": "CN=WIN-7FUHAU7D2HV",
+      "issuer": "CN=WIN-7FUHAU7D2HV"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--8c256619-beb2-4372-aad2-ebbd43976deb",
+      "subject": "CN=WIN-J9D866ESIJ2",
+      "issuer": "CN=WIN-J9D866ESIJ2"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--03df022a-cf30-4117-9b9d-327860669d67",
+      "subject": "CN=DESKTOP-TCRDU4C",
+      "issuer": "CN=DESKTOP-TCRDU4C"
+    }
+  ]
+}

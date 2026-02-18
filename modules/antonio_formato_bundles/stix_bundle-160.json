@@ -1,0 +1,236 @@
+{
+  "type": "bundle",
+  "id": "bundle--2b328020-1fae-46d8-b5a3-d6e8411b8941",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--a42d4411-b415-4d36-ad31-21679f4a72ad",
+      "name": "Pay Adjustment.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--79402178-7e5d-4196-9c79-7e8bca2d8eb8",
+      "name": "stage1.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--39140266-a22f-4fcf-a2fb-e6e70bf88563",
+      "name": "cwiper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b6e25d0d-1879-4405-963b-e639f03b1bf9",
+      "name": "ktool.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b0f28750-1735-4550-a1eb-a15fad98e817",
+      "name": "lootsubmit.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--d4e15c29-8fc7-42e5-b818-ae0756db816f",
+      "name": "trackerjacker.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--6709a155-0c2a-41d8-8199-b8ccefc62bf6",
+      "name": "SytecaClient.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--8cac9c04-2a7f-4530-9f58-1f595f77e1d8",
+      "name": "EkranClient.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--44558d37-dfd2-4aac-8ba5-56b8e3e9e988",
+      "name": "EkranClientSession.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--362a1a33-2254-4172-987a-aa86da08139b",
+      "name": "EkranController.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5ad41b78-856b-4855-81a7-a0adae11c08b",
+      "name": "grpcwebproxy.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0bed7b96-a924-4dc1-b0a7-1394b19a5aed",
+      "name": "PamConnectionManager.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b4c02a12-1954-40d9-b424-b82942349c92",
+      "name": "SytecaClient.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--0420961c-0d3f-4b0b-92bd-814e7b903a9c",
+      "name": "AppxModels.exe",
+      "path": "C:\\ProgramData\\Microsoft\\Windows\\Models\\AppxModels.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5bcefa0c-4c82-4c76-9614-7cbd5adb2561",
+      "name": "windowsdevicesync.exe",
+      "path": "CSIDL_COMMON_APPDATA\\microsoft\\devicesync\\windowsdevicesync.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--f0c84272-685d-4d7a-88d3-21cc3f79c828",
+      "name": "readme.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--35872ecc-35a1-4973-b299-43b1bfb52b68",
+      "name": "vssadmin.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--6d0158ca-9e19-43b6-aa9a-239efed53888",
+      "name": "psexec64.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--316e5829-0e71-498a-bf54-e9b24fd66464",
+      "name": "cmd.exe",
+      "path": "C:\\Windows\\System32\\cmd.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--1b3dd83f-bff6-495b-bb32-b0e11aea3724",
+      "name": "SMBExec"
+    },
+    {
+      "type": "file",
+      "id": "file--b3982f02-9512-4bd9-9e0d-8e0dc3aa279c",
+      "name": "FreeFileSync"
+    },
+    {
+      "type": "file",
+      "id": "file--6527a286-a942-4b48-9d6f-f1170620a21c",
+      "name": "MegaSync"
+    },
+    {
+      "type": "file",
+      "id": "file--5443dca2-f066-42dd-81da-65d16537ae7e",
+      "name": "7-zip"
+    },
+    {
+      "type": "file",
+      "id": "file--93541fe6-1e6d-4feb-8477-de9b4a61954d",
+      "name": "runtimebroker.exe",
+      "path": "CSIDL_SYSTEM\\diagsvcs\\runtimebroker.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ca90b7e9-22e3-4f57-bd42-28179a133ccf",
+      "name": "regsvr32.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--a7049ad4-c8ce-4a5d-a6e0-81ee6eb1a22c",
+      "name": "usbdriverinstaller.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c7d4580e-377e-48e4-b52c-11cb04f7d004",
+      "name": "usbolddriveruninstaller.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5b9c7538-b13a-419d-8122-fb239bc4fdd2",
+      "name": "CredentialProviderWrapper.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--4848af16-79c2-4d32-a65a-4c47b75a9040",
+      "name": "SoundCapture_7.20.576.0.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--9bf3b414-057b-4f88-98e0-f670dd0037c1",
+      "name": "CredentialProviderWrapper_7.20.576.0.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--11033705-93f0-4994-99b2-575e8c0dedcb",
+      "name": "GC2"
+    },
+    {
+      "type": "file",
+      "id": "file--a0eef69e-85ff-4e4c-b93c-150683499f75",
+      "name": "Adaptix C2"
+    },
+    {
+      "type": "file",
+      "id": "file--0750903b-71cc-438d-8092-2b723dc34677",
+      "name": "Stowaway"
+    },
+    {
+      "type": "file",
+      "id": "file--36d667a1-201c-4362-ac58-0dc347175f03",
+      "name": "AnyDesk"
+    },
+    {
+      "type": "url",
+      "id": "url--4f978d1f-be0e-407e-a998-94dc94df2e72",
+      "value": "https://hilarious-trifle-d9182e.netlify.app/stage1.ps1"
+    },
+    {
+      "type": "url",
+      "id": "url--4e9d4a05-cdbc-42b5-8d4d-65e558502447",
+      "value": "https://hilarious-trifle-d9182e.netlify.app/cwiper.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--98711761-a2e6-4d91-abfa-0d3a544a7044",
+      "value": "https://hilarious-trifle-d9182e.netlify.app/ktool.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--04cb824b-8336-4d87-8e36-8bcbc1ab48df",
+      "value": "https://hilarious-trifle-d9182e.netlify.app/lootsubmit.ps1"
+    },
+    {
+      "type": "url",
+      "id": "url--d7221b28-850f-47bc-bd40-943c47791752",
+      "value": "https://hilarious-trifle-d9182e.netlify.app"
+    },
+    {
+      "type": "url",
+      "id": "url--82044560-7ef3-458f-8d81-49c15b71f0bd",
+      "value": "https://youtu.be/ZAWnlZg2P38"
+    },
+    {
+      "type": "url",
+      "id": "url--79c64a4e-1156-44ce-aa4c-c8d70c69b66a",
+      "value": "https://youtu.be/7y1xJAVZxXg"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0c26a86c-55ca-4a0a-b730-4c4cc272c8be",
+      "value": "hilarious-trifle-d9182e.netlify.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--926894f3-a6f7-4f06-886c-33c14ca23cc6",
+      "value": "xql562evsy7njcsngacphc2erzjfecwotdkobn3m4uxu2gtqh26newid.onion"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bb3a7d59-bdeb-4fe3-8417-e07e3e99cbe3",
+      "value": "mega.nz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fe3c54ba-faf8-4266-8db0-773ce4710cb5",
+      "value": "wigle.net"
+    }
+  ]
+}

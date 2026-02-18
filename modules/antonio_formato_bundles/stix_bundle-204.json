@@ -1,0 +1,380 @@
+{
+  "type": "bundle",
+  "id": "bundle--aced2354-eab7-4a1e-91d4-19c10a77a903",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "indicator",
+      "id": "indicator--83d7339d-b46a-4f4e-8bde-21071700530b",
+      "name": "Health Checkup Attack File Hashes",
+      "description": "MD5 hashes of files used in the attack chain.",
+      "pattern": "[file:hashes.MD5 = 'd02be241dda3d4027f6fbd84ac015ca8' OR file:hashes.MD5 = '903cec93146327414cbc49068c524292' OR file:hashes.MD5 = '5f5f868d339aeb58c613fe7eb55e5432' OR file:hashes.MD5 = '7d994b591c2d4fafeb3e71278229566e']",
+      "valid_from": "2025-10-01T00:00:00Z",
+      "labels": [
+        "file hash",
+        "indicator",
+        "malware"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--59ce15d6-20f7-41b5-8b24-9d199db0627d",
+      "name": "Health Checkup Attack C2 Domains and IPs",
+      "description": "C2 domains and IP addresses used by the malware for communication.",
+      "pattern": "[domain-name:value = 'load.samework.o-r.kr' OR domain-name:value = 'attach.skycloud.o-r.kr' OR domain-name:value = 'attach.skyline.r-e.kr' OR domain-name:value = 'update.alzip.r-e.kr' OR domain-name:value = 'mail.naverwork.r-e.kr' OR domain-name:value = 'gwa.wooritg.o-r.kr' OR domain-name:value = 'mail.naverwork.o-r.kr' OR domain-name:value = 'image.secuwizvpn.r-e.kr' OR domain-name:value = 'load.rwbcode.com' OR domain-name:value = 'rwbcode.com' OR ipv4-addr:value = '162.220.11.202']",
+      "valid_from": "2025-10-01T00:00:00Z",
+      "labels": [
+        "C2",
+        "indicator",
+        "domain",
+        "ip"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a24e37eb-409e-4931-91e9-a868d6e2ffa6",
+      "name": "Health Checkup Attack C2 URLs",
+      "description": "C2 URLs contacted by the malware.",
+      "pattern": "[url:value = 'http://load.samework.o-r.kr/index.php' OR url:value = 'http://load.rwbcode.com/index.php']",
+      "valid_from": "2025-10-01T00:00:00Z",
+      "labels": [
+        "C2",
+        "indicator",
+        "url"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--49706af0-5ed0-44d7-81cc-4f7d50e6ef13",
+      "name": "\uac74\uac15\uac80\uc9c4 \uc548\ub0b4\uc11c.alz",
+      "hashes": {
+        "MD5": "d02be241dda3d4027f6fbd84ac015ca8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d40955cb-74b9-48f4-af8a-1e3df5fa26e5",
+      "name": "\uac74\uac15\uac80\uc9c4 \uc548\ub0b4\uc11c.pdf.jse",
+      "hashes": {
+        "MD5": "903cec93146327414cbc49068c524292"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ddcf2c8f-e819-43fe-81cf-4378afe48761",
+      "name": "bEyjSIpZvbJpjVv9.a9oc",
+      "hashes": {
+        "MD5": "5f5f868d339aeb58c613fe7eb55e5432"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--eb34d86c-f413-48ef-951f-54e0bee0ed4d",
+      "name": "hkNlPHP61rvE0T7J.lpxQ",
+      "hashes": {
+        "MD5": "7d994b591c2d4fafeb3e71278229566e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--91996412-82a9-4cfa-a5af-4e856b51fe70",
+      "name": "\uac74\uac15\uac80\uc9c4 \uc548\ub0b4\uc11c.pdf"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e9b8d058-1259-4b5e-8a88-b9c1ad4f64ba",
+      "value": "load.samework.o-r.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--81fbcb7a-4d41-4ac6-818b-088a342dfc87",
+      "value": "attach.skycloud.o-r.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--518066dc-4e37-47e4-8306-7ddfff5d3489",
+      "value": "attach.skyline.r-e.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c8b1792f-3cef-4e46-9193-5eb478a0b44e",
+      "value": "update.alzip.r-e.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--da695118-af14-4f32-921a-44a0ab1530fc",
+      "value": "mail.naverwork.r-e.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0ce05701-f750-4024-bc0f-abc090e127b5",
+      "value": "gwa.wooritg.o-r.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a3615b86-2ae2-400c-96a0-a24dc4190e4d",
+      "value": "mail.naverwork.o-r.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--16805ba9-c45c-4a51-b510-4d834bb697cb",
+      "value": "image.secuwizvpn.r-e.kr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b80fc871-42d2-4ec8-89f7-bbf097f7bd2d",
+      "value": "load.rwbcode.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d",
+      "value": "rwbcode.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--81d4eead-a91c-437f-9ad2-adb1ba264754",
+      "value": "162.220.11.202"
+    },
+    {
+      "type": "url",
+      "id": "url--62daa18c-d069-459f-8b96-2eed9eaf5cef",
+      "value": "http://load.samework.o-r.kr/index.php"
+    },
+    {
+      "type": "url",
+      "id": "url--61295693-5ea4-4948-931e-7b363529b97c",
+      "value": "http://load.rwbcode.com/index.php"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--618a2aa6-174a-4528-9dfe-899f295d8472",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "intrusion-set--66e7d6bb-63eb-47e4-affd-301fb469c433"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f80a8dbf-fa94-49f1-b940-fcbdf7b92de3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--66e7d6bb-63eb-47e4-affd-301fb469c433",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30ce2bdf-d08c-4592-b775-c7896b9779e2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--66e7d6bb-63eb-47e4-affd-301fb469c433",
+      "target_ref": "attack-pattern--ce89719b-5d06-43f9-98ed-26412739bb30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28a47e15-4b1d-4817-a08a-0c2d15fae1c9",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5083ff94-1f15-4e3e-9f5c-687b5fb91b57",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fa09c78-67ec-426a-a754-bf38e3dfa5f6",
+      "relationship_type": "drops",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "file--91996412-82a9-4cfa-a5af-4e856b51fe70"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1d0403a-cc8b-44cd-8462-dc2a23a81a01",
+      "relationship_type": "drops",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "file--91996412-82a9-4cfa-a5af-4e856b51fe70"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c14c85ab-3c65-4ff4-8b6e-0c4339f13534",
+      "relationship_type": "drops",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "file--91996412-82a9-4cfa-a5af-4e856b51fe70"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d54e6510-ff15-40e8-a10a-4854c2483e6d",
+      "relationship_type": "drops",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "file--91996412-82a9-4cfa-a5af-4e856b51fe70"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eacf8129-6660-4430-98df-c2639997dab4",
+      "relationship_type": "drops",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "file--91996412-82a9-4cfa-a5af-4e856b51fe70"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--17f08ca0-d980-4e74-a13e-b5e2c13e8042",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "tool--106f722d-d103-452d-a082-1ff744a1e819"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09b9e439-16b5-4083-b683-38249bb64866",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "tool--106f722d-d103-452d-a082-1ff744a1e819"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b5d6eef-5736-4376-826a-af23bafaaa89",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "tool--106f722d-d103-452d-a082-1ff744a1e819"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--84ecfa16-9c10-4896-8176-f9500a5f0f1a",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "process--b2780bcb-c30f-4dc6-9bec-303898bac105"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--219ea594-cf47-4a9d-a643-3b553ddee0e6",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "process--b2780bcb-c30f-4dc6-9bec-303898bac105"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09b43ff7-e6a1-4a39-822b-3137361e50b4",
+      "relationship_type": "uses",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "process--b2780bcb-c30f-4dc6-9bec-303898bac105"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b4b4ee5-e6b9-4c9d-97ab-ab32b7d51b68",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3eadfef0-0f26-484e-9536-8812aad5699a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--761f7839-6fa3-423f-9d5a-0566c7ad5520",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d8c16739-f5ad-4916-b27f-b328c9ce17c5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54e58cc2-0a8f-4f29-bc77-eeed5bf16091",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5354288-2af1-4d31-b1d5-7c7e973d2813",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--703716eb-5a46-4012-a28e-d2f3f3d41c58",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f434b17b-8700-4bdd-8270-d2906c704131",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c37f529-3f92-4c13-87a2-37585539ecb2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c73e23cb-c1f5-4374-a336-e6639f0a1085",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--99124c24-68e3-4b69-95cb-31af5e990773",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "domain-name--87cd1cd3-1f71-45a9-b69d-f4c92139834d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3549936a-0057-45a8-8ebd-a61392942d60",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "ipv4-addr--81d4eead-a91c-437f-9ad2-adb1ba264754"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8608709f-bc2d-4c6f-b918-6264c4bfdfee",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "url--61295693-5ea4-4948-931e-7b363529b97c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fed9601-6597-440e-99a7-00683726a7b3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1",
+      "target_ref": "url--61295693-5ea4-4948-931e-7b363529b97c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e57e342c-1527-4091-960e-cd9ddd883c72",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a24e37eb-409e-4931-91e9-a868d6e2ffa6",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08307091-5f87-46b4-b715-c89ac9ac2839",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a24e37eb-409e-4931-91e9-a868d6e2ffa6",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe6eefcc-f565-4218-a7f1-505ec38f80a9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a24e37eb-409e-4931-91e9-a868d6e2ffa6",
+      "target_ref": "malware--2278c798-b744-4a94-8490-6c5c6badbcd1"
+    }
+  ]
+}

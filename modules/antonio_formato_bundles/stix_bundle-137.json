@@ -1,0 +1,80 @@
+{
+  "type": "bundle",
+  "id": "bundle--8603b58d-b5a6-4762-ae25-06ae5d4025ae",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3bcd3352-ab37-4e7d-83e5-6ee673e6d1ce",
+      "name": "Supply Chain Compromise via npm Packages",
+      "description": "The threat actor compromised over 500 npm packages, propagating malware through the npm ecosystem. The attack targeted developer credentials, cloud service API keys, and software distribution channels.",
+      "external_references": [
+        {
+          "source_name": "GitHub IOC List",
+          "url": "https://github.com/wiz-sec-public/wiz-research-iocs/blob/main/reports/shai-hulud-2-packages.csv"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ce23e8d0-97e1-4509-af34-3c8c4e756858",
+      "hashes": {
+        "SHA-256": "62ee164b9b306250c1172583f138c9614139264f889fa99614903c12755468d0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e6901797-a706-4d59-9d28-9347f717680a",
+      "hashes": {
+        "SHA-256": "f099c5d9ec417d4445a0328ac0ada9cde79fc37410914103ae9c609cbc0ee068"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9731e842-682f-4895-901d-2bc9c762be0a",
+      "hashes": {
+        "SHA-256": "a3894003ad1d293ba96d77881ccd2071446dc3f65f434669b49b3da92421901a"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--96c4d44b-0f3e-4b1e-ba5f-3d39059aea6e",
+      "value": "http://bun.sh/install.ps1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55f40d0d-003f-4738-b712-a85a97d2f82d",
+      "relationship_type": "uses",
+      "source_ref": "malware--715eef2c-808e-46d9-9aab-76899a958f8e",
+      "target_ref": "attack-pattern--3bcd3352-ab37-4e7d-83e5-6ee673e6d1ce"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--414d11d0-ecc1-4914-b16e-b26e67612a9d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--08ac074e-c91b-4997-990a-db64743d9455",
+      "target_ref": "file--9731e842-682f-4895-901d-2bc9c762be0a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebce2c32-f5e5-4551-8e87-f675d7894072",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--08ac074e-c91b-4997-990a-db64743d9455",
+      "target_ref": "file--9731e842-682f-4895-901d-2bc9c762be0a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e718933-eafa-4643-b763-2c015a71a0b1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--08ac074e-c91b-4997-990a-db64743d9455",
+      "target_ref": "file--9731e842-682f-4895-901d-2bc9c762be0a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54eca964-d3ff-4cf1-a665-f28c3f4c1284",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--08ac074e-c91b-4997-990a-db64743d9455",
+      "target_ref": "url--96c4d44b-0f3e-4b1e-ba5f-3d39059aea6e"
+    }
+  ]
+}

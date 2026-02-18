@@ -1,0 +1,221 @@
+{
+  "type": "bundle",
+  "id": "bundle--65a384db-cbb7-4ffb-b978-20e3be29becd",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--77283dae-5327-4973-b0f3-af1c2b7248a3",
+      "name": "FortiCloud SSO Login Authentication Bypass",
+      "description": "Critical vulnerabilities affecting Fortinet products with FortiCloud SSO login feature enabled. CVE-2025-59718 and CVE-2025-59719 allow unauthenticated attackers to bypass FortiCloud SSO login authentication via a crafted SAML response message due to improper verification of cryptographic signature (CWE-347).",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59718"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59719"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7e058369-342b-41a8-a229-969f509a7196",
+      "name": "Authentication Bypass via Crafted SAML Response",
+      "description": "An attacker exploits improper verification of cryptographic signature in FortiCloud SSO login authentication by sending a crafted SAML response message, allowing bypass of authentication.",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CWE",
+          "external_id": "CWE-347"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--b269f51d-18eb-489b-963e-eb8ba978238f",
+      "name": "FortiOS",
+      "description": "Fortinet's FortiOS operating system affected by FortiCloud SSO Login Authentication Bypass vulnerabilities.",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "versions": [
+        "7.6.0 through 7.6.3",
+        "7.4.0 through 7.4.8",
+        "7.2.0 through 7.2.11",
+        "7.0.0 through 7.0.17"
+      ],
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--78bbcf04-9506-47ce-8d10-cd49c006e3c2",
+      "name": "FortiProxy",
+      "description": "Fortinet's FortiProxy software affected by FortiCloud SSO Login Authentication Bypass vulnerabilities.",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "versions": [
+        "7.6.0 through 7.6.3",
+        "7.4.0 through 7.4.10",
+        "7.2.0 through 7.2.14",
+        "7.0.0 through 7.0.21"
+      ],
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--81a40d5f-0998-4502-bc83-4638bf5f58bd",
+      "name": "FortiSwitchManager",
+      "description": "Fortinet's FortiSwitchManager software affected by FortiCloud SSO Login Authentication Bypass vulnerabilities.",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "versions": [
+        "7.2.0 through 7.2.6",
+        "7.0.0 through 7.0.5"
+      ],
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--a2479177-ae56-4dd4-a7fc-9835a5ca5458",
+      "name": "FortiWeb",
+      "description": "Fortinet's FortiWeb software affected by FortiCloud SSO Login Authentication Bypass vulnerabilities.",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z",
+      "versions": [
+        "8.0.0",
+        "7.6.0 through 7.6.4",
+        "7.4.0 through 7.4.9"
+      ],
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--89e038a0-868f-4344-99ef-43656251498f",
+      "name": "FortiOS",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--70c7be49-a352-4438-b3cd-a36daacb00b7",
+      "name": "FortiProxy",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--f1734d3f-2b04-44d3-9645-dc86cfdb6fcb",
+      "name": "FortiSwitchManager",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--28079798-2af9-4ee7-b790-1213b501f05c",
+      "name": "FortiWeb",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3057fcba-fe51-49aa-ba0a-dfc9548daf19",
+      "name": "CVE-2025-59718"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "name": "CVE-2025-59719"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--14d2e88d-8da6-4dcd-a1de-02c196047fe8",
+      "value": "contact@cyber.gc.ca"
+    },
+    {
+      "type": "url",
+      "id": "url--2ab63970-2572-43f5-a1b6-db7efb6f9997",
+      "value": "https://www.cyber.gc.ca/en/incident-management"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c989d324-a3e6-4d4c-bae5-ef5d66649a77",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a5ec573-5853-4abf-b2d5-ccb6140ebd9e",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5991dec1-68f9-49fb-aa93-ed02bf8ade1b",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "attack-pattern--7e058369-342b-41a8-a229-969f509a7196",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb80aa51-8032-40a4-a8de-3513f05d65d0",
+      "relationship_type": "has",
+      "source_ref": "attack-pattern--7e058369-342b-41a8-a229-969f509a7196",
+      "target_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1dce7cee-205c-44f3-b308-ba82dbeb8927",
+      "relationship_type": "has",
+      "source_ref": "attack-pattern--7e058369-342b-41a8-a229-969f509a7196",
+      "target_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2147722-66ae-4121-ad7f-9295c76da4fe",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "software--28079798-2af9-4ee7-b790-1213b501f05c",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4979fd0-2313-4712-b97e-8dba87d2e6eb",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "software--28079798-2af9-4ee7-b790-1213b501f05c",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--583de450-d1b3-4ae4-b59f-8b41c12d0494",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "software--28079798-2af9-4ee7-b790-1213b501f05c",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--17f7de1a-5d67-4393-bb56-5c16ea56184c",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--72c6c022-5e32-45a4-b903-eab8059a47cc",
+      "target_ref": "software--28079798-2af9-4ee7-b790-1213b501f05c",
+      "created": "2025-12-15T00:00:00Z",
+      "modified": "2025-12-15T00:00:00Z"
+    }
+  ]
+}

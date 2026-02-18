@@ -1,0 +1,600 @@
+{
+  "type": "bundle",
+  "id": "bundle--82b05d2c-daff-4bea-9739-e6678605416f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d83521e1-4872-43c2-8fc2-b26c394d1d04",
+      "name": "Phishing: Spearphishing Attachment",
+      "description": "Malicious PDF and Word document attachments delivered via spear-phishing emails.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001",
+          "url": "https://attack.mitre.org/techniques/T1566/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e2520f40-1b9c-4af8-a707-8e9a4db92744",
+      "name": "Phishing: Spearphishing Link",
+      "description": "Victims are instructed to download a fake 'Security Scanner' from Dropbox.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cab8060a-282d-4e16-a6ed-d2932d46423e",
+      "name": "User Execution: Malicious File",
+      "description": "Victims are socially engineered to manually open PDF/Word documents.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002",
+          "url": "https://attack.mitre.org/techniques/T1204/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5700e1cd-b420-44e2-a040-8799260a7ff0",
+      "name": "Command and Scripting Interpreter: Python",
+      "description": "Campaign-I deploys a PyInstaller-packed Python malware (PYTRIC).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.006",
+          "url": "https://attack.mitre.org/techniques/T1059/006/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3db8ed09-801e-4b30-8702-0fb058cf216b",
+      "name": "Command and Scripting Interpreter: Visual Basic",
+      "description": "Campaign-II uses malicious VBA macros in a Word document.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.005",
+          "url": "https://attack.mitre.org/techniques/T1059/005/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cd3af9dc-f2b9-4a30-a72d-852951ca03ef",
+      "name": "Windows Management Instrumentation",
+      "description": "RUSTRIC is executed via WMI (Win32_Process.Create).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1047",
+          "url": "https://attack.mitre.org/techniques/T1047/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d4fc396c-1642-40f7-b649-8871ccc10473",
+      "name": "Masquerading: Match Legitimate Name or Location",
+      "description": "Both campaigns spoof trusted antivirus vendors (Check Point and SentinelOne).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005",
+          "url": "https://attack.mitre.org/techniques/T1036/005/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1d06de6b-e20d-41ff-982f-fcf320e981ca",
+      "name": "Obfuscated Files or Information",
+      "description": "Payload is hex-encoded within Word document.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027",
+          "url": "https://attack.mitre.org/techniques/T1027/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6878ae36-eaa3-43ef-8142-90a9c4e54db8",
+      "name": "Signed Binary Proxy Execution",
+      "description": "Malware execution leverages trusted Windows binaries (e.g., wmic, nslookup, whoami, hostname).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1218",
+          "url": "https://attack.mitre.org/techniques/T1218/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2ff9ea62-dd03-436c-8565-d3ce5ca72bf5",
+      "name": "Security Software Discovery",
+      "description": "RUSTRIC enumerates 28 different antivirus and EDR products by checking known file paths and process indicators.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1518.001",
+          "url": "https://attack.mitre.org/techniques/T1518/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--054f801b-3a9a-47e2-934e-beb11f43a614",
+      "name": "Ingress Tool Transfer",
+      "description": "Campaign-I retrieves the second-stage payload from Dropbox as part of the infection chain.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105",
+          "url": "https://attack.mitre.org/techniques/T1105/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Both implants attempt to connect attacker-controlled C2 infrastructure over standard web-based protocols.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001",
+          "url": "https://attack.mitre.org/techniques/T1071/001/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--5a891ab3-825b-4113-8dbb-6eb9fd2553d5",
+      "name": "SEQRITE Labs",
+      "identity_class": "organization",
+      "description": "SEQRITE Labs APT Team is a cybersecurity research team that tracks advanced persistent threats and malware campaigns."
+    },
+    {
+      "type": "file",
+      "id": "file--32671a66-936d-4fe8-b4b2-da93c6be427a",
+      "name": "help.pdf",
+      "hashes": {
+        "SHA-256": "e422c2f25fbb4951f069c6ba24e9b917e95edb9019c10d34de4309f480c342df"
+      },
+      "mime_type": "application/pdf"
+    },
+    {
+      "type": "file",
+      "id": "file--456e6d6c-9e56-4001-b057-8703dcc60ad3",
+      "name": "Webinar.doc",
+      "hashes": {
+        "SHA-256": "6f079c1e2655ed391fb8f0b6bfafa126acf905732b5554f38a9d32d0b9ca407d"
+      },
+      "mime_type": "application/msword"
+    },
+    {
+      "type": "file",
+      "id": "file--264c4c80-ab4d-4787-b4b8-1454ccf31a4e",
+      "name": "Webinar.zip",
+      "hashes": {
+        "SHA-256": "77ceeb88a1fe4fb03af1acc589e02aeb156e3b22b110124ce1b25c940b0d9bbe"
+      },
+      "mime_type": "application/zip"
+    },
+    {
+      "type": "file",
+      "id": "file--4518a1be-1267-44c0-b604-6e6f5d8296e0",
+      "name": "PhotoAcq.log"
+    },
+    {
+      "type": "file",
+      "id": "file--73641591-82af-456b-885c-ce1fc9fd46fa",
+      "hashes": {
+        "SHA-256": "54ebdea80d30660f1d7be0b71bc3eb04189ef2036cdbba24d60f474547d3516a"
+      },
+      "mime_type": "application/x-dosexec"
+    },
+    {
+      "type": "file",
+      "id": "file--18053ee8-7ffa-4b2f-ba3b-aeadbd2fba54",
+      "hashes": {
+        "SHA-256": "2afcac3231235b5cea0fc702d705ec76afec424a9cec820749b83b6299d1fe1b"
+      },
+      "mime_type": "application/x-dosexec"
+    },
+    {
+      "type": "file",
+      "id": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "hashes": {
+        "SHA-256": "6df21646d13c5b68c14c70516dfc74ef2aef4a4246970d7f4fbd072053ba40e6"
+      },
+      "mime_type": "application/vnd.ms-outlook"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c82dc76a-2fd0-4099-9971-bd494f0d8c22",
+      "value": "stratioai.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6980c260-e727-46f8-a19c-7d25ad107354",
+      "value": "netvigil.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7a698bfc-fb1b-4bc9-a7e0-e48d1803d0e7",
+      "value": "l-m.co.il"
+    },
+    {
+      "type": "url",
+      "id": "url--5c5fca18-fd9e-4484-b68a-3c2d9354baba",
+      "value": "https://www.dropbox.com/scl/fi/e2tctz6iy0s81dcxysbkf/help.pdf?rlkey=4b3uydquzd0h5xe7lk0gk95r9&st=c1qfydwi&dl=1"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8279ef41-65ab-4cf7-8324-7b53875d085f",
+      "value": "159.198.68.25"
+    },
+    {
+      "type": "software",
+      "id": "software--eac1539e-468d-42e2-a158-0f7f80d2363c",
+      "name": "PYTRIC",
+      "languages": [
+        "Python"
+      ],
+      "description": "Malicious PyInstaller implant acting as a wiper, abuses Check Point icon."
+    },
+    {
+      "type": "software",
+      "id": "software--c9e5950f-7c0c-4c67-99cb-dd278a6be47d",
+      "name": "RUSTRIC",
+      "languages": [
+        "Rust"
+      ],
+      "description": "Malicious Rust implant for espionage, abuses SentinelOne icon."
+    },
+    {
+      "type": "software",
+      "id": "software--27cd78c9-27d0-4789-bb30-c4d8e2caf261",
+      "name": "Security Scanner",
+      "description": "Fake security tool referenced in phishing PDF, impersonates Check Point branding."
+    },
+    {
+      "type": "process",
+      "id": "process--bdfb2b2d-d26f-4a43-8c7a-841189482bbc",
+      "command_line": "whoami.exe"
+    },
+    {
+      "type": "process",
+      "id": "process--4f1768ab-d2c6-4f6d-ad94-6d74a7c01b2d",
+      "command_line": "hostname.exe"
+    },
+    {
+      "type": "process",
+      "id": "process--0d91ad31-398c-4ba1-bf1f-205bc010f4cf",
+      "command_line": "nslookup.exe"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--29b3bc80-9f23-477f-b25c-1c40a70b42da",
+      "user_id": "Backup2040",
+      "account_type": "telegram-bot"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--def5951f-58be-42a8-afad-8ca8be770f40",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "description": "UNG0801 (Operation IconCat) uses PYTRIC malware in Campaign-I."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--883900ce-a30b-42e2-8d1e-b2ec19bb2d7c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "description": "UNG0801 (Operation IconCat) uses RUSTRIC malware in Campaign-II."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b65e563c-f708-4846-bc26-12ea3046cb62",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses spear-phishing attachments for initial access (T1566.001)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7aa1882b-d19f-4afc-bef4-11678e4b8494",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses spear-phishing links for initial access (T1566.002)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--833bb54d-98e2-4a46-be78-e7c65dc8b1a6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses user execution of malicious files (T1204.002)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50c0a325-b626-4ef1-ad81-a3deb81cb210",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses Python command/scripting interpreter (T1059.006) via PYTRIC."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a78452bf-54bb-428a-9edc-140ddc2d8e44",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses Visual Basic command/scripting interpreter (T1059.005) via malicious Word macros."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--17233142-6e99-4141-9afb-92f61a1b6e9b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses Windows Management Instrumentation for execution (T1047) via RUSTRIC."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a78e7e46-73ff-443b-bd22-152980901b3b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses masquerading by matching legitimate AV names/icons (T1036.005)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65606fc0-e866-40ab-999d-8c373ec886e6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses obfuscated files/information (T1027) via hex-encoded payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6a1d575-8606-4ca4-bfac-92ca859a0e7f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses signed binary proxy execution (T1218) via trusted Windows binaries."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--451a0570-027e-46d3-aeb3-4c470c077c5f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses security software discovery (T1518.001) via RUSTRIC."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89f53fe6-ddf5-4afd-8fe5-822eca7fb100",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses ingress tool transfer (T1105) via Dropbox for second-stage payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79513c53-048b-47fb-9617-42b85c0e4151",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5235437c-418e-4587-a48a-c89050d5471c",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "UNG0801 uses application layer web protocols (T1071.001) for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9430b386-1acf-4ce0-a1bd-93bf843216c3",
+      "relationship_type": "delivers",
+      "source_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "target_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "description": "help.pdf delivers PYTRIC malware in Campaign-I."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce947c06-2f30-4e53-8211-708e4d8bb70f",
+      "relationship_type": "delivers",
+      "source_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "target_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "description": "Webinar.doc delivers RUSTRIC malware in Campaign-II via macros."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ceaad89-09d8-4c0a-a1c4-3447f2639555",
+      "relationship_type": "drops",
+      "source_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Webinar.doc drops PhotoAcq.log as the final-stage payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6b49c4e8-9f79-4f7c-8004-1a8c64262e0f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "user-account--29b3bc80-9f23-477f-b25c-1c40a70b42da",
+      "description": "PYTRIC communicates with the Telegram bot Backup2040."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c847780a-f5b1-4ffe-adcf-1c713dfa97a4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "domain-name--7a698bfc-fb1b-4bc9-a7e0-e48d1803d0e7",
+      "description": "RUSTRIC communicates with the C2 domain stratioai.org."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5acc538e-4e67-4d6e-83a6-71e3f20126f6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "ipv4-addr--8279ef41-65ab-4cf7-8324-7b53875d085f",
+      "description": "RUSTRIC communicates with the C2 IP address 159.198.68.25."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88fcdf87-ee39-4cbe-9978-bde3365d8ffc",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "PYTRIC uses Python command/scripting interpreter (T1059.006)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc4d7f81-05a5-4dcf-95ca-ae6dbae1a8e9",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "RUSTRIC uses Windows Management Instrumentation (T1047) for execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12626c05-ddd9-4d80-8a73-bf8e07939d62",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "RUSTRIC uses security software discovery (T1518.001)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a59f469-402c-4787-844d-b525c99120ea",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "attack-pattern--134cda79-daab-45ad-9a88-aa6da08279c9",
+      "description": "RUSTRIC uses application layer web protocols (T1071.001) for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9de6247c-efee-44c7-87b3-ef8002fa632c",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "process--0d91ad31-398c-4ba1-bf1f-205bc010f4cf",
+      "description": "RUSTRIC executes whoami.exe on victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c34e6bda-5d96-4052-a5a7-671e42aedf5b",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "process--0d91ad31-398c-4ba1-bf1f-205bc010f4cf",
+      "description": "RUSTRIC executes hostname.exe on victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e22ff1b-5496-4894-b821-8a7ca41f013f",
+      "relationship_type": "uses",
+      "source_ref": "malware--70938363-5dbd-4b3e-84de-455d5a02ce69",
+      "target_ref": "process--0d91ad31-398c-4ba1-bf1f-205bc010f4cf",
+      "description": "RUSTRIC executes nslookup.exe on victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52efddac-581a-47da-8778-cf0ce61ad330",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Help.pdf SHA-256 indicator matches help.pdf file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dae46bbd-aa7c-4007-99e7-0bf532f05283",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Document file SHA-256 indicator matches Webinar.doc file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5a54913-3381-49e4-a258-c0b9a545cfcd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "ZIP file SHA-256 indicator matches Webinar.zip file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc567dc7-51d5-49dc-90ba-78df4ee9bbef",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "EXE file SHA-256 #1 indicator matches executable file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f457be04-4866-40ff-83ba-ef916192b5ae",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "EXE file SHA-256 #2 indicator matches executable file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9a65c10-bb91-4f9c-a619-c8d496d09f3a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Outlook file SHA-256 indicator matches Outlook file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6220cb96-7834-4879-8fb5-8ef9b1ba5e16",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "domain-name--7a698bfc-fb1b-4bc9-a7e0-e48d1803d0e7",
+      "description": "stratioai.org domain indicator matches stratioai.org domain object."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6d4a69e-eba7-44bc-bebc-03ef7fcfe96e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "ipv4-addr--8279ef41-65ab-4cf7-8324-7b53875d085f",
+      "description": "159.198.68.25 IP address indicator matches ipv4-addr object."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c68e0b9-5e22-482f-9b40-f5b430776a71",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a1c40c82-b939-4cf1-b0ae-9bd68d06b629",
+      "target_ref": "url--5c5fca18-fd9e-4484-b68a-3c2d9354baba",
+      "description": "Dropbox lure URL indicator matches Dropbox URL object."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7fd6796e-42d0-48ac-aa64-5ee554c6fe1f",
+      "relationship_type": "uses",
+      "source_ref": "email-message--2c58c841-d063-429a-9b02-b8c10355c832",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Spear-phishing email delivers Webinar.doc as an attachment."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--267d1b3d-f809-4cdf-a100-44aa32710317",
+      "relationship_type": "uses",
+      "source_ref": "email-message--2c58c841-d063-429a-9b02-b8c10355c832",
+      "target_ref": "file--9521e25c-e8e1-4f19-ae76-7c725f7683c1",
+      "description": "Spear-phishing email delivers Webinar.zip as an attachment."
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "type": "bundle",
+  "id": "bundle--7e65f33b-9f96-47ef-9eff-02952bdf46d5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "software",
+      "id": "software--33deabf4-2dea-4426-ad7a-ff50c8b57954",
+      "name": "CAI Framework",
+      "description": "Cybersecurity AI (CAI) is a lightweight, open-source framework that empowers security professionals to build and deploy AI-powered offensive and defensive automation. It is used for automated or semi-automated vulnerability discovery, penetration testing, bug bounty workflows, and security assessments.",
+      "created_by_ref": "identity--",
+      "labels": [
+        "framework",
+        "AI",
+        "security",
+        "automation"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub Repository",
+          "url": "https://github.com/aliasrobotics/cai"
+        },
+        {
+          "source_name": "Documentation",
+          "url": "https://aliasrobotics.github.io/cai/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--cdd5615e-1c47-427c-9ea5-17cadbc0e854",
+      "name": "Edoardo Ottavianelli",
+      "identity_class": "individual",
+      "description": "Security researcher who discovered and responsibly disclosed the CAI framework vulnerability.",
+      "contact_information": "",
+      "labels": [
+        "researcher",
+        "disclosure"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--fe8721ac-9e7e-4de5-9a3a-09827c57dc63",
+      "name": "index.html",
+      "content_type": "text/html",
+      "extensions": {
+        "http": {
+          "request_method": "GET",
+          "request_value": "http://localhost:8000/index.html"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--18af88ca-191b-4ae8-9100-c520ab9716a0",
+      "name": "/tmp/username"
+    },
+    {
+      "type": "file",
+      "id": "file--45a664b8-30ae-4160-9442-de94c5054aae",
+      "name": "/tmp/password"
+    },
+    {
+      "type": "software",
+      "id": "software--b6f25190-f855-4abb-bbca-179e8ad80396",
+      "name": "cai-framework",
+      "version": "0.5.9",
+      "cpe": "cpe:2.3:a:aliasrobotics:cai-framework:0.5.9:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--ddfc4b32-d3c3-4752-b4d7-c75f5d3620ba",
+      "name": "sshpass"
+    },
+    {
+      "type": "software",
+      "id": "software--ee5f0947-ee18-4677-88fa-87dbd971646e",
+      "name": "curl"
+    },
+    {
+      "type": "process",
+      "id": "process--5b2b282e-85d7-4f28-831f-0dbcd8f2b8b0",
+      "command_line": "curl -s http://localhost:8000/index.html"
+    },
+    {
+      "type": "process",
+      "id": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "command_line": "sshpass -p 'password1$(echo pwned > /tmp/password)' ssh -o StrictHostKeyChecking=no root$(echo pwned > /tmp/username)@localhost -p 22 'id'"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--0f32ad3a-2f2b-41fa-adec-8178a16e004f",
+      "account_login": "root$(echo pwned > /tmp/username)"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--97fb386d-7558-4484-9fea-d0113d2b64f6",
+      "account_login": "root",
+      "display_name": "root"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a298214c-3d2c-4ae6-bcdb-6e5a82f97fb4",
+      "value": "127.0.0.1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--159afbdd-ee9a-4236-8c03-67c589cc3306",
+      "relationship_type": "has",
+      "source_ref": "software--ee5f0947-ee18-4677-88fa-87dbd971646e",
+      "target_ref": "vulnerability--ef08b0c7-3b75-4d10-a9bc-8c5935ccb90b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d805115-f200-409b-af67-625a126b776c",
+      "relationship_type": "has",
+      "source_ref": "software--ee5f0947-ee18-4677-88fa-87dbd971646e",
+      "target_ref": "vulnerability--ef08b0c7-3b75-4d10-a9bc-8c5935ccb90b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ce0876b-3a81-4aab-bbac-1d0e3ac5df75",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6b91b06f-a2a9-41c0-94c8-fc4b2954ec33",
+      "target_ref": "vulnerability--ef08b0c7-3b75-4d10-a9bc-8c5935ccb90b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45e5a522-15bb-41f4-9cf9-55700b51ecae",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--6b91b06f-a2a9-41c0-94c8-fc4b2954ec33",
+      "target_ref": "software--ee5f0947-ee18-4677-88fa-87dbd971646e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4dfc08fc-1a1e-4c38-8723-b3027c503c88",
+      "relationship_type": "uses",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "file--45a664b8-30ae-4160-9442-de94c5054aae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65358d93-8ad0-4a10-ae2f-b15e35a3ea4d",
+      "relationship_type": "uses",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "file--45a664b8-30ae-4160-9442-de94c5054aae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--990f6ddf-c63f-4fd4-9a0a-78250c181758",
+      "relationship_type": "creates",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "file--45a664b8-30ae-4160-9442-de94c5054aae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6153936b-06a6-4cbb-9ac3-b38524d234bb",
+      "relationship_type": "creates",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "file--45a664b8-30ae-4160-9442-de94c5054aae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0f94aa8-e576-49c5-a335-2f0b9cd9ca8b",
+      "relationship_type": "uses",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "user-account--97fb386d-7558-4484-9fea-d0113d2b64f6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--859cbf67-84df-456b-8c46-e3ac7e89f15b",
+      "relationship_type": "communicates-with",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "network-traffic--aabbec0a-8068-428a-adbf-be2f65ce68d8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d39ebbc-22a0-4169-9b59-7383261fad9c",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--aabbec0a-8068-428a-adbf-be2f65ce68d8",
+      "target_ref": "ipv4-addr--a298214c-3d2c-4ae6-bcdb-6e5a82f97fb4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d8b39dc7-74c6-437e-be9b-cd9d0bf56509",
+      "relationship_type": "uses",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "software--ee5f0947-ee18-4677-88fa-87dbd971646e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d0ca79c-8f72-4d73-b4d4-24172149c98c",
+      "relationship_type": "uses",
+      "source_ref": "process--36ab2f03-2db6-4ea2-8776-b8406c85cce3",
+      "target_ref": "software--ee5f0947-ee18-4677-88fa-87dbd971646e"
+    }
+  ]
+}

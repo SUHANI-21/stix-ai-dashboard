@@ -1,0 +1,37 @@
+{
+  "type": "bundle",
+  "id": "bundle--a6d8ef6e-4f11-4b8b-b895-dbefffb2af89",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "url",
+      "id": "url--eae65c09-fae3-4d8b-9a67-44887ccf5b19",
+      "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2025/11/Whisper-Leak-A-novel-side-channel-attack-on-remote-language-models-Featured-809x455.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--50bf9b6c-3723-40e3-91f4-9bd65f153743",
+      "value": "https://www.microsoft.com/en-us/security/blog/content-type/news/"
+    },
+    {
+      "type": "url",
+      "id": "url--bdc593ba-dc5b-4c14-81e1-322d1415e314",
+      "value": "https://www.microsoft.com/en-us/security/blog/author/windows-defender-research/"
+    },
+    {
+      "type": "url",
+      "id": "url--fda00869-c548-4813-ac0b-e82e57745063",
+      "value": "https://www.microsoft.com/en-us/security/blog/author/jonathan-bar-or/"
+    },
+    {
+      "type": "url",
+      "id": "url--c9b0727e-4029-4b1e-8624-bf2e5b95b6bc",
+      "value": "https://www.microsoft.com/en-us/security/blog/author/geoff-mcdonald/"
+    },
+    {
+      "type": "url",
+      "id": "url--493d335a-9f49-4d65-bcc5-43a61141ebfb",
+      "value": "https://azure.microsoft.com/en-us/products/cognitive-services/text-to-speech"
+    }
+  ]
+}

@@ -1,0 +1,22 @@
+{
+  "type": "bundle",
+  "id": "bundle--2fdf9600-4b93-4618-91ff-f212cb2c8659",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "url",
+      "id": "url--3f3733b6-fb62-4771-b5ad-1c9f70a4bcc9",
+      "value": "https://www.microsoft.com/en-us/security/blog/wp-content/uploads/2026/01/Featured-image-phishing-1.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--a7f61b90-6160-462f-aa49-7618bd83b960",
+      "value": "https://www.microsoft.com/en-us/security/blog/content-type/research/"
+    },
+    {
+      "type": "url",
+      "id": "url--e3742bc8-bd75-46ac-9bd2-ee0bf0e51594",
+      "value": "https://www.microsoft.com/en-us/security/blog/author/microsoft-security-threat-intelligence/"
+    }
+  ]
+}

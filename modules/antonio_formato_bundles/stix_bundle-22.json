@@ -1,0 +1,656 @@
+{
+  "type": "bundle",
+  "id": "bundle--0d7d0dc7-6bb6-4b94-99ff-5ba1936aa062",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "created": "2026-01-14T20:20:00.663983Z",
+      "modified": "2026-01-14T20:20:00.663983Z",
+      "name": "Microsoft",
+      "description": "Microsoft is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--6fd2de98-92fe-c50c-1700-7b1e235fa628",
+      "created": "2026-01-14T20:20:00.663983Z",
+      "modified": "2026-01-14T20:20:00.663983Z",
+      "name": "Microsoft Threat Intelligence",
+      "description": "Microsoft Threat Intelligence is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T20:20:00.663983Z",
+      "modified": "2026-01-14T20:20:00.663983Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T20:20:00.663983Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3bc042f4-f2c8-b113-fadc-3e86e729d706",
+      "created": "2026-01-14T20:20:23.143302Z",
+      "modified": "2026-01-14T20:20:23.143302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Abuse of Virtual Desktop Infrastructure for Initial Access",
+      "description": "RedVDS attackers leveraged compromised accounts and misconfigured access controls on a global virtual desktop provider to gain initial access to victim environments. By targeting the provider’s infrastructure, attackers were able to bypass traditional network perimeter defenses and directly access virtual desktops used by employees at manufacturing companies and other organizations. This technique allowed them to masquerade as legitimate users and blend into normal activity, making detection significantly more difficult. The attackers exploited weak authentication mechanisms and reused credentials to access multiple organizations via the provider’s platform.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "created": "2026-01-14T20:20:23.143452Z",
+      "modified": "2026-01-14T20:20:23.143452Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Credential Harvesting from Virtual Desktop Sessions",
+      "description": "Once inside the virtual desktop environment, RedVDS actors deployed custom scripts and tools to harvest credentials stored within user sessions. This included extracting saved passwords from browsers, credential managers, and cached authentication tokens. By operating within the virtual desktop context, attackers could access sensitive internal resources and escalate privileges by capturing credentials used for both local and cloud-based services. The harvested credentials were then used to pivot to other systems or sold to other cybercriminals.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1003/",
+          "external_id": "T1003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "created": "2026-01-14T20:20:23.143664Z",
+      "modified": "2026-01-14T20:20:23.143664Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Deployment of Remote Access Tools via Virtual Desktop",
+      "description": "RedVDS attackers installed remote access tools and malware directly onto compromised virtual desktops, enabling persistent access and control over victim environments. These tools were often disguised as legitimate software or were installed using elevated privileges obtained from harvested credentials. The remote access tools allowed attackers to maintain a foothold, exfiltrate data, and launch further attacks, including ransomware deployment and lateral movement within the victim’s network.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1219/",
+          "external_id": "T1219"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f3e51dd3-9141-39a0-926c-db80fac12aba",
+      "created": "2026-01-14T20:20:23.143737Z",
+      "modified": "2026-01-14T20:20:23.143737Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Lateral Movement through Shared Virtual Desktop Infrastructure",
+      "description": "After gaining access to one virtual desktop, RedVDS actors exploited the interconnected nature of the provider’s infrastructure to move laterally between different organizations and user accounts. By abusing trust relationships and shared resources within the virtual desktop provider’s environment, attackers were able to compromise additional targets without needing to breach each organization individually. This lateral movement technique enabled rapid expansion of their foothold and increased the scale of impact.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1021/001/",
+          "external_id": "T1021.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+      "created": "2026-01-14T20:20:23.143793Z",
+      "modified": "2026-01-14T20:20:23.143793Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Data Exfiltration via Virtual Desktop Channels",
+      "description": "RedVDS attackers exfiltrated sensitive data directly through virtual desktop sessions, bypassing traditional network monitoring and data loss prevention systems. By leveraging the provider’s infrastructure, attackers could transfer files and information out of victim environments using encrypted channels and legitimate protocols, making detection and attribution challenging. The exfiltrated data included intellectual property, financial records, and employee information, which was then monetized or used for further attacks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1041/",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dfdc97e5-454f-a092-bd9a-cd3bf4a3a613",
+      "created": "2026-01-14T20:20:23.143893Z",
+      "modified": "2026-01-14T20:20:23.143893Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Custom Virtual Desktop Provider Account Enumeration",
+      "description": "RedVDS actors developed custom scripts to enumerate user accounts and organizations hosted on the virtual desktop provider’s platform. By systematically probing for active accounts and misconfigured access controls, attackers identified high-value targets and vulnerable entry points. This reconnaissance allowed them to prioritize attacks and maximize the effectiveness of their operations, targeting manufacturing companies and other critical infrastructure organizations.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f2363849-3e34-538e-fbf7-058c3307e8fe",
+      "created": "2026-01-14T20:20:23.143944Z",
+      "modified": "2026-01-14T20:20:23.143944Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Evasion of Security Controls via Provider Infrastructure",
+      "description": "RedVDS attackers exploited the trusted relationship between organizations and the virtual desktop provider to evade security controls. By operating within the provider’s infrastructure, attackers bypassed endpoint protection, network segmentation, and monitoring tools that were not configured to inspect traffic or activity originating from virtual desktops. This technique allowed them to maintain stealthy access and avoid detection for extended periods.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1070/004/",
+          "external_id": "T1070.004"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "created": "2026-01-14T20:20:25.617861Z",
+      "modified": "2026-01-14T20:20:25.617861Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "RedVDS",
+      "description": "RedVDS is a virtual desktop infrastructure platform abused by cybercriminals to provide remote access to compromised systems. It enables attackers to control infected machines and deploy additional malware payloads as part of their operations.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "lateral-movement",
+        "persistence"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "created": "2026-01-14T20:20:28.998183Z",
+      "modified": "2026-01-14T20:20:28.998183Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "RedVDS",
+      "description": "RedVDS is identified as a virtual desktop provider whose infrastructure was leveraged by cybercriminals to conduct worldwide operations. In this attack, RedVDS played a central role by facilitating access and resources for various criminal activities.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Enable cybercriminal operations",
+        "Provide infrastructure for illicit activities"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "created": "2026-01-14T20:20:37.349310Z",
+      "modified": "2026-01-14T20:20:37.349310Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "PowerShell",
+      "description": "Attackers leveraged PowerShell scripts to automate lateral movement, execute payloads, and evade detection within compromised virtual desktop environments provided by RedVDS.",
+      "tool_types": [
+        "execution",
+        "defense-evasion",
+        "remote-access"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--db719941-e3f8-5103-6922-cae2a74e8c3f",
+      "created": "2026-01-14T20:20:37.349399Z",
+      "modified": "2026-01-14T20:20:37.349399Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "PsExec",
+      "description": "PsExec was used by threat actors to remotely execute commands and deploy malware across multiple systems hosted on RedVDS infrastructure, facilitating lateral movement.",
+      "tool_types": [
+        "remote-access",
+        "execution",
+        "lateral-movement"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--3b9197e7-ed9a-7d2f-1668-e1f1add2e62f",
+      "created": "2026-01-14T20:20:37.349453Z",
+      "modified": "2026-01-14T20:20:37.349453Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Windows Management Instrumentation (WMI)",
+      "description": "WMI was abused to gather system information and execute malicious commands on remote endpoints within the virtual desktop environment.",
+      "tool_types": [
+        "information-gathering",
+        "execution",
+        "remote-access"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "created": "2026-01-14T20:20:37.349502Z",
+      "modified": "2026-01-14T20:20:37.349502Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Cobalt Strike",
+      "description": "Cobalt Strike was deployed as a beacon for command-and-control communications and post-exploitation activities, including credential harvesting and persistence.",
+      "tool_types": [
+        "remote-access",
+        "credential-exploitation",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--82bb9d42-0f55-e21c-63d5-19a90c071cc2",
+      "created": "2026-01-14T20:20:37.349549Z",
+      "modified": "2026-01-14T20:20:37.349549Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Telegram API",
+      "description": "Attackers used the Telegram API to exfiltrate stolen credentials and system information from compromised RedVDS-hosted desktops to attacker-controlled Telegram channels.",
+      "tool_types": [
+        "exfiltration",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "created": "2026-01-14T20:20:37.349638Z",
+      "modified": "2026-01-14T20:20:37.349638Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "curl",
+      "description": "curl was used to download additional payloads and communicate with remote command-and-control servers from compromised virtual desktops.",
+      "tool_types": [
+        "command-and-control",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5df9cd26-1628-ba77-3c9f-1c25b7c11800",
+      "created": "2026-01-14T20:20:37.349898Z",
+      "modified": "2026-01-14T20:20:37.349898Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "description": "RedVDS uses RedVDS malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a7097d02-ff78-5ab7-2a5c-7cbe8b0014e3",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--3bc042f4-f2c8-b113-fadc-3e86e729d706",
+      "description": "RedVDS employs 'Abuse of Virtual Desktop Infrastructure for Initial Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ed3950d-1fda-061e-5b75-4bb16bc77de5",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "description": "RedVDS employs 'Credential Harvesting from Virtual Desktop Sessions' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7f3c03b5-c748-93af-8e30-487f28663131",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "RedVDS employs 'Deployment of Remote Access Tools via Virtual Desktop' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--35da3a5a-c022-2128-bf45-8be250a4e208",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--f3e51dd3-9141-39a0-926c-db80fac12aba",
+      "description": "RedVDS employs 'Lateral Movement through Shared Virtual Desktop Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e7d5ac9b-c1fc-cc3e-4411-a5d3c18b795a",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+      "description": "RedVDS employs 'Data Exfiltration via Virtual Desktop Channels' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7972e072-9017-29bd-5202-3068ae66dc56",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--dfdc97e5-454f-a092-bd9a-cd3bf4a3a613",
+      "description": "RedVDS employs 'Custom Virtual Desktop Provider Account Enumeration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--da597a94-e1a2-1c09-21f6-40a74b38c221",
+      "created": "2026-01-14T20:20:37.349958Z",
+      "modified": "2026-01-14T20:20:37.349958Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "attack-pattern--f2363849-3e34-538e-fbf7-058c3307e8fe",
+      "description": "RedVDS employs 'Evasion of Security Controls via Provider Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6a27c026-1f77-eb8e-6f8c-3ceac8f1d7eb",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "RedVDS uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1a622683-e0df-1649-0bb6-8e8306a7fd9c",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--db719941-e3f8-5103-6922-cae2a74e8c3f",
+      "description": "RedVDS uses PsExec tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--39a7e2b7-3844-1c4e-b8f5-23b91bccc005",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--3b9197e7-ed9a-7d2f-1668-e1f1add2e62f",
+      "description": "RedVDS uses Windows Management Instrumentation (WMI) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2988397b-d6db-653f-14c3-a3906a6a8852",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "RedVDS uses Cobalt Strike tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--41921d3d-e9ff-b937-7165-ffb2e04b78cb",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--82bb9d42-0f55-e21c-63d5-19a90c071cc2",
+      "description": "RedVDS uses Telegram API tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bf63919e-d04c-e9a0-26e0-bd03ffd90b16",
+      "created": "2026-01-14T20:20:37.350226Z",
+      "modified": "2026-01-14T20:20:37.350226Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "RedVDS uses curl tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fb20eae1-a117-8787-66ec-f5438ff1c1ab",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "RedVDS uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--42972bd3-855f-c64d-9e03-f9d8e3fbd70b",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--db719941-e3f8-5103-6922-cae2a74e8c3f",
+      "description": "RedVDS uses PsExec for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--159c326b-c722-9815-ec8f-94ef739e581f",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--3b9197e7-ed9a-7d2f-1668-e1f1add2e62f",
+      "description": "RedVDS uses Windows Management Instrumentation (WMI) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--caaf40cb-50cb-eb51-0638-352860e8cf80",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "RedVDS uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b300cd99-35bd-d90e-495e-ea03ff83e322",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--82bb9d42-0f55-e21c-63d5-19a90c071cc2",
+      "description": "RedVDS uses Telegram API for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9a005304-abec-14bd-4ba6-8beb0559b05e",
+      "created": "2026-01-14T20:20:37.350302Z",
+      "modified": "2026-01-14T20:20:37.350302Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "RedVDS uses curl for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--79d47d98-60a7-1407-3640-7eea0d218fb4",
+      "created": "2026-01-14T20:20:37.350452Z",
+      "modified": "2026-01-14T20:20:37.350452Z",
+      "created_by_ref": "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+      "name": "Inside RedVDS: How a single virtual desktop provider fueled worldwide cybercriminal operations | Microsoft Security Blog",
+      "description": "This report contains technical analysis and indicators from: https://www.microsoft.com/en-us/security/blog/2026/01/14/inside-redvds-how-a-single-virtual-desktop-provider-fueled-worldwide-cybercriminal-operations/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T20:20:37.350452Z",
+      "object_refs": [
+        "identity--5f532a3f-c4f1-ea40-3f37-070f59a7a53a",
+        "identity--6fd2de98-92fe-c50c-1700-7b1e235fa628",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--3bc042f4-f2c8-b113-fadc-3e86e729d706",
+        "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+        "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+        "attack-pattern--f3e51dd3-9141-39a0-926c-db80fac12aba",
+        "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+        "attack-pattern--dfdc97e5-454f-a092-bd9a-cd3bf4a3a613",
+        "attack-pattern--f2363849-3e34-538e-fbf7-058c3307e8fe",
+        "malware--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+        "threat-actor--5b4ad4b5-36a8-e76c-9a37-9cd89731687e",
+        "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+        "tool--db719941-e3f8-5103-6922-cae2a74e8c3f",
+        "tool--3b9197e7-ed9a-7d2f-1668-e1f1add2e62f",
+        "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+        "tool--82bb9d42-0f55-e21c-63d5-19a90c071cc2",
+        "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+        "relationship--5df9cd26-1628-ba77-3c9f-1c25b7c11800",
+        "relationship--a7097d02-ff78-5ab7-2a5c-7cbe8b0014e3",
+        "relationship--3ed3950d-1fda-061e-5b75-4bb16bc77de5",
+        "relationship--7f3c03b5-c748-93af-8e30-487f28663131",
+        "relationship--35da3a5a-c022-2128-bf45-8be250a4e208",
+        "relationship--e7d5ac9b-c1fc-cc3e-4411-a5d3c18b795a",
+        "relationship--7972e072-9017-29bd-5202-3068ae66dc56",
+        "relationship--da597a94-e1a2-1c09-21f6-40a74b38c221",
+        "relationship--6a27c026-1f77-eb8e-6f8c-3ceac8f1d7eb",
+        "relationship--1a622683-e0df-1649-0bb6-8e8306a7fd9c",
+        "relationship--39a7e2b7-3844-1c4e-b8f5-23b91bccc005",
+        "relationship--2988397b-d6db-653f-14c3-a3906a6a8852",
+        "relationship--41921d3d-e9ff-b937-7165-ffb2e04b78cb",
+        "relationship--bf63919e-d04c-e9a0-26e0-bd03ffd90b16",
+        "relationship--fb20eae1-a117-8787-66ec-f5438ff1c1ab",
+        "relationship--42972bd3-855f-c64d-9e03-f9d8e3fbd70b",
+        "relationship--159c326b-c722-9815-ec8f-94ef739e581f",
+        "relationship--caaf40cb-50cb-eb51-0638-352860e8cf80",
+        "relationship--b300cd99-35bd-d90e-495e-ea03ff83e322",
+        "relationship--9a005304-abec-14bd-4ba6-8beb0559b05e"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

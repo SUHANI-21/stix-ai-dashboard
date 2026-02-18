@@ -1,0 +1,365 @@
+{
+  "type": "bundle",
+  "id": "bundle--72a99743-1dc6-4fce-88a7-26ab08dedce5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--6623d54f-4f73-416f-9932-145c300c4a10",
+      "name": "JSON Keeper",
+      "description": "Legitimate JSON storage service abused by threat actors to host and deliver obfuscated malware payloads.",
+      "infrastructure_types": [
+        "hosting-middleware"
+      ],
+      "aliases": [
+        "jsonkeeper.com"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--68a8884c-5646-4d2e-ab5d-7b20163aabff",
+      "name": "JSONsilo",
+      "description": "Legitimate JSON storage service abused by threat actors for malware hosting and delivery.",
+      "infrastructure_types": [
+        "hosting-middleware"
+      ],
+      "aliases": [
+        "jsonsilo.com"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--3a8a487c-f6cb-496e-ba17-c7e3a087ffcb",
+      "name": "npoint.io",
+      "description": "Legitimate JSON storage service used for hosting malicious payloads in the Contagious Interview campaign.",
+      "infrastructure_types": [
+        "hosting-middleware"
+      ],
+      "aliases": [
+        "npoint.io"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--99ab65ae-385a-4a84-9233-ee1861722206",
+      "name": "Pastebin",
+      "description": "Pastebin URLs used by InvisibleFerret to retrieve additional payloads and encoded messages.",
+      "infrastructure_types": [
+        "hosting-middleware"
+      ],
+      "aliases": [
+        "pastebin.com"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--2a959631-a962-4811-9d1c-c56b5cffd2ca",
+      "name": "Railway",
+      "description": "Cloud hosting service used to host and serve additional payloads for the Contagious Interview campaign.",
+      "infrastructure_types": [
+        "cloud-service"
+      ],
+      "aliases": [
+        "railway.com"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--13659b11-69af-417d-963f-2d29411555bf",
+      "name": "TOR Hidden Service",
+      "description": "TOR .onion address used by TsunamiInstaller for downloading additional payloads.",
+      "infrastructure_types": [
+        "anonymization"
+      ],
+      "aliases": [
+        "n34kr3z26f3jzp4ckmwuv5ipqyatumdxhgjgsmucc65jac56khdy5zqd.onion"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--8dc83091-9e52-4fb4-a012-d283e34b85ff",
+      "name": "BeaverTail/InvisibleFerret C2 Servers",
+      "description": "Multiple IP addresses used as command and control servers for BeaverTail and InvisibleFerret malware.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb",
+      "name": "GitLab/GitHub Repositories",
+      "description": "Malicious repositories hosting trojanized code projects used in the Contagious Interview campaign.",
+      "infrastructure_types": [
+        "hosting-middleware"
+      ],
+      "aliases": [
+        "gitlab.com",
+        "github.com"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "identity",
+      "id": "identity--697e75de-d95e-45db-99ea-40d837e7afe1",
+      "name": "NVISO",
+      "description": "NVISO is a cybersecurity company reporting on the Contagious Interview campaign.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://blog.nviso.eu/"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79bcc419-c3f0-4d81-9677-e7dae09fe9c7",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "intrusion-set--c0dc65d8-a34c-49de-914e-240bbed26e9a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4044f56e-1dfd-4e6f-b260-a233225d98b2",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24387744-6f52-415b-8dcb-0535c4fc57c9",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23e27299-61bf-4edf-ab7e-d754ee915784",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae52e393-8bd0-4b5c-98e7-a0529c4eadd9",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "tool--96701975-7f1c-4380-863b-1a770ec36096"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab4ac07b-8ef0-495f-bcfd-6d0f74101033",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3d2285f-7980-473e-b2a4-7991085362e2",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30450dba-3d55-418c-9818-7ebaeba915ed",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e185b5b-8e0a-4a07-9277-40a3c7418e26",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51babbde-4de2-47f4-8678-858f35df11c7",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c8198ec-4653-49ac-b1d4-8f688d9527fd",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c3120cb7-6ba1-41e4-b58b-d9df17769e6c",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c041cae2-4316-4cf4-bbef-c085a10c54ec",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53304927-e22f-48d8-bf75-bbbc020da603",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c2eb884-cc0a-4500-a432-89b2112b78d9",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4845d4c4-31d2-4160-893d-c99dc0081d20",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87154d9a-6fe6-49b0-9250-48ce8625abf7",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a0e738a0-a8f4-41bc-8f50-401a5368785a",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70da503c-cb30-4541-be89-24938946132c",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66f53c2c-11e9-47e5-b88a-73b7df1ad24a",
+      "relationship_type": "uses",
+      "source_ref": "campaign--019916f0-b6c9-4b88-ba44-371c33c2d983",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--317b5cc3-98e4-405c-8a16-d190cd22d3b2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--343d913c-2dc1-4df2-a680-18291702d5bf",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0272588a-6afd-4723-a8b3-dce754962c7f",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3a9f1f10-6927-40d4-a664-0320a40968fb",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--defffa9b-0d01-43f2-82a9-b16afd97dad9",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb3b3b18-2504-4670-8516-44f31da1e67e",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d49b9ab8-d773-4493-9f61-de924949ec69",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d27b9a3-85b7-459e-a1ae-aa6a7a0a9e72",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fbcf417-914a-4cf4-9977-f8d21a9bdb8d",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9209406-6d13-4d37-ac9c-7043802e36b1",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e93638f-6607-4eeb-8529-bc53db40e900",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73053b31-e75f-4ed5-93d6-cfe457966c08",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "attack-pattern--c57ff5c0-bfbd-41df-8003-7568724fc1c6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0e3bd5e-8b18-444c-870d-714a2c65a102",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab7ed093-f651-42d7-bc65-c98239164f3d",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f0b7220-6d30-4c6b-985b-16f0b8a4f962",
+      "relationship_type": "uses",
+      "source_ref": "malware--1939ad1e-56cd-42be-b75c-b201b521792d",
+      "target_ref": "infrastructure--9b126077-ba19-421e-931d-9a3ee79aafcb"
+    }
+  ]
+}

@@ -1,0 +1,1290 @@
+{
+  "type": "bundle",
+  "id": "bundle--555bb02e-5d19-484f-816a-f43c4dd0e0cd",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "name": "Tomiris",
+      "description": "Tomiris is an APT group active since at least 2021, known for targeting government, diplomatic, and intergovernmental organizations in Russia and Central Asia. The group leverages multi-language malware, spear-phishing, and public services (Telegram, Discord) for C2. Tomiris is associated with tools such as JLORAT, reverse shells, file grabbers, and post-exploitation frameworks like AdaptixC2 and Havoc.",
+      "aliases": [
+        "Tomiris APT"
+      ],
+      "goals": [
+        "Espionage",
+        "Remote access",
+        "Persistence",
+        "Data exfiltration"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "malware",
+      "id": "malware--a28a7c49-7de5-4ce9-b22c-c6d8f0f7a1fc",
+      "name": "Tomiris C/C++ ReverseShell",
+      "description": "A reverse shell written in C/C++ used by Tomiris. Provides remote console access, collects system info, and downloads next-stage payloads such as AdaptixC2. Does not persist by itself; persistence is established by registry modification after further payload delivery.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "reverse shell",
+        "C/C++",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/0f955d7844e146f2bd756c9ca8711263/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--10ba4ae4-2279-4ec5-a166-2d095252f4ce",
+      "name": "Tomiris Rust Downloader",
+      "description": "A Rust-based downloader Trojan used by Tomiris. Collects system info, enumerates files of interest, sends file paths to Discord via webhooks, then downloads and executes further payloads using PowerShell scripts.",
+      "malware_types": [
+        "downloader",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Rust",
+        "downloader",
+        "Discord",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/1083b668459beacbc097b3d4a103623f/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--7a75b63b-a502-4941-be68-ac40ca4dcca5",
+      "name": "Tomiris Python Discord ReverseShell",
+      "description": "A Python-based reverse shell compiled with PyInstaller and obfuscated with PyArmor. Uses the Discord API for C2, executes commands received via Discord, and downloads additional implants such as AdaptixC2 and Tomiris Python FileGrabber.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Python",
+        "Discord",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/091fbacd889fa390dc76bb24c2013b59/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--4bdf2679-fbb7-47c6-b993-be279b471ab9",
+      "name": "Tomiris Python FileGrabber",
+      "description": "A Python-based file grabber delivered by the Tomiris Python Discord ReverseShell. Collects files with specific extensions, archives them, and sends to C2 via HTTP POST. Ignores system and program folders.",
+      "malware_types": [
+        "file stealer"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Python",
+        "file grabber",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/c0f81b33a80e5e4e96e503dbc401cbee/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--973658c2-4b8b-4e2b-9438-9cff3e462a47",
+      "name": "Distopia backdoor",
+      "description": "A Python backdoor based on the dystopia-c2 GitHub project. Enables execution of console commands, file download/upload, and process termination. Used by Tomiris for remote access and downloading further payloads.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Python",
+        "backdoor",
+        "Distopia",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/b8fe3a0ad6b64f370db2ea1e743c84bb/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--b276b50b-bea6-41c3-a45e-02148028d1b1",
+      "name": "Tomiris Python Telegram ReverseShell",
+      "description": "A Python reverse shell compiled with PyInstaller, obfuscated with PyArmor. Uses Telegram bot API for C2, executes commands, and sends results back. Distinct from previous Telemiris bots.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Python",
+        "Telegram",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/42e165ab4c3495fade8220f4e6f5f696/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--c59cb646-44ae-4889-bba4-e1f883e6eb4b",
+      "name": "Tomiris C# Telegram ReverseShell",
+      "description": "A reverse shell written in C# using Telegram bot API for C2. Executes commands received via Telegram using specified bot credentials.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "C#",
+        "Telegram",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/2fba6f91ada8d05199ad94affd5e5a18/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--5b860216-6bbb-4b83-8c39-ff9a3a7c6fff",
+      "name": "JLORAT",
+      "description": "An implant used by Tomiris since 2022. Capable of taking screenshots, executing commands, uploading files to C2. Used for remote access and espionage.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": true,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "JLORAT",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/c73c545c32e5d1f72b74ab0087ae1720/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--09376c18-d233-41e6-8c97-fbba6017bc14",
+      "name": "Tomiris Rust ReverseShell",
+      "description": "A simple reverse shell written in Rust. Uses PowerShell as the shell for command execution. Used by Tomiris for remote access.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Rust",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/9a9b1ba210ac2ebfe190d1c63ec707fa/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--2d45e0c2-9db5-4fe7-8165-87c424520023",
+      "name": "Tomiris Go ReverseShell",
+      "description": "A reverse shell written in Go. Establishes TCP connection to hardcoded IP, runs cmd.exe and redirects input/output over the connection.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Go",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/087743415e1f6cc961e9d2bb6dfd6d51/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--70c612ed-80b1-4676-b8a2-5d37896c4a01",
+      "name": "Tomiris PowerShell Telegram Backdoor",
+      "description": "A PowerShell backdoor extracted and executed by a C++ packer. Uses Telegram for C2, supports file upload and command execution. Credentials are hardcoded.",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "PowerShell",
+        "Telegram",
+        "backdoor",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/c75665e77ffb3692c2400c3c8dd8276b/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--9866fab4-560b-477e-bd71-facbcaa4269b",
+      "name": "Tomiris C# ReverseShell",
+      "description": "A simple reverse shell written in C#. Executes console commands received from the operator.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "C#",
+        "reverse shell",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/df95695a3a93895c1e87a76b4a8a9812/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--e343c3b3-806d-462b-be0c-f7b8f59a1a57",
+      "name": "Tomiris C++ ReverseSocks",
+      "description": "A reverse SOCKS proxy written in C++, based on the Neosama/Reverse-SOCKS5 GitHub project. Used for proxying traffic and enabling lateral movement.",
+      "malware_types": [
+        "proxy"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "C++",
+        "SOCKS proxy",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/2ed5ebc15b377c5a03f75e07dc5f1e08/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--d791e74b-0b60-4f66-9b4d-f4f0f3239b39",
+      "name": "Tomiris Go ReverseSocks",
+      "description": "A reverse SOCKS proxy written in Go, based on Acebond/ReverseSocks5 GitHub project. Used for proxying traffic and lateral movement.",
+      "malware_types": [
+        "proxy"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "Go",
+        "SOCKS proxy",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/83267c4e942c7b86154acd3c58eaf26c/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--dea71f81-922d-4234-bcaa-4b544bd2feb2",
+      "name": "AdaptixC2",
+      "description": "A modular, open-source post-exploitation framework used by Tomiris for persistence, lateral movement, and further exploitation. Delivered as a next-stage payload by various Tomiris implants.",
+      "malware_types": [
+        "post-exploitation",
+        "C2 framework"
+      ],
+      "is_family": true,
+      "labels": [
+        "AdaptixC2",
+        "post-exploitation",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/cd46316aebc41e36790686f1ec1c39f0/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "name": "Havoc",
+      "description": "An open-source post-exploitation framework used by Tomiris for further exploitation and persistence after initial access.",
+      "malware_types": [
+        "post-exploitation",
+        "C2 framework"
+      ],
+      "is_family": true,
+      "labels": [
+        "Havoc",
+        "post-exploitation",
+        "Tomiris"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/4edc02724a72afc3cf78710542db1e6e/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--47be9029-1bf4-4a4f-976d-1fcaa4d45ad4",
+      "name": "Spear phishing via malicious archive",
+      "description": "Initial access is achieved via phishing emails containing password-protected malicious archives. The archive contains an executable disguised as an office document, often with a double extension and a long filename to hide the true extension.",
+      "labels": [
+        "phishing",
+        "initial access",
+        "malicious archive",
+        "Tomiris"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ce6d5401-5b44-4247-9956-1c2770ad1ace",
+      "name": "Use of public services for C2",
+      "description": "Tomiris implants leverage public services such as Telegram and Discord for command-and-control communications, blending malicious traffic with legitimate service activity to evade detection.",
+      "labels": [
+        "C2",
+        "Telegram",
+        "Discord",
+        "evasion",
+        "Tomiris"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--50daea07-abed-46ac-980d-d09fae74c3ec",
+      "name": "Post-exploitation framework deployment",
+      "description": "After gaining initial access, Tomiris operators deploy open-source post-exploitation frameworks like AdaptixC2 and Havoc for persistence, lateral movement, and further exploitation.",
+      "labels": [
+        "post-exploitation",
+        "framework",
+        "Tomiris"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--384f0595-d929-4d19-b0a9-172cad4d74df",
+      "name": "Registry modification for persistence",
+      "description": "Persistence is established by adding entries to the Windows Run registry key to ensure payloads are executed on system startup.",
+      "labels": [
+        "persistence",
+        "registry modification",
+        "Tomiris"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "name": "File collection and exfiltration",
+      "description": "Implants collect files with specific extensions, archive them, and exfiltrate to C2 servers via HTTP POST or public service APIs.",
+      "labels": [
+        "data exfiltration",
+        "file collection",
+        "Tomiris"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--2889b213-7cc5-4587-b1fd-735304996240",
+      "hashes": {
+        "MD5": "B8FE3A0AD6B64F370DB2EA1E743C84BB"
+      },
+      "name": "Distopia Backdoor"
+    },
+    {
+      "type": "file",
+      "id": "file--5ec6635e-c934-4ce6-ba7d-18766609ad95",
+      "hashes": {
+        "MD5": "091FBACD889FA390DC76BB24C2013B59"
+      },
+      "name": "Tomiris Python Discord ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--3bbf67c6-fe6f-44ad-9779-bd9b890df1b3",
+      "hashes": {
+        "MD5": "C0F81B33A80E5E4E96E503DBC401CBEE"
+      },
+      "name": "Tomiris Python FileGrabber"
+    },
+    {
+      "type": "file",
+      "id": "file--7f6c134d-236d-46f6-9a09-107f3001cc2b",
+      "hashes": {
+        "MD5": "42E165AB4C3495FADE8220F4E6F5F696"
+      },
+      "name": "Tomiris Python Telegram ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--bd9d3702-fdd4-4d26-b186-114914995b52",
+      "hashes": {
+        "MD5": "2FBA6F91ADA8D05199AD94AFFD5E5A18"
+      },
+      "name": "Tomiris C# Telegram ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--78302b39-a78c-4ba8-acc8-cbca5e56385c",
+      "hashes": {
+        "MD5": "0F955D7844E146F2BD756C9CA8711263"
+      },
+      "name": "Tomiris C/C++ ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--8380aed7-4e4f-4f12-b5a2-b0386920bf98",
+      "hashes": {
+        "MD5": "078BE0065D0277935CDCF7E3E9DB4679"
+      },
+      "name": "Tomiris C/C++ ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--9015c699-e726-45d1-8d5b-116f4891707a",
+      "hashes": {
+        "MD5": "33ED1534BBC8BD51E7E2CF01CADC9646"
+      },
+      "name": "Tomiris C/C++ ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--330154a8-bdb8-4e1e-965a-96935d257782",
+      "hashes": {
+        "MD5": "1083B668459BEACBC097B3D4A103623F"
+      },
+      "name": "Tomiris Rust Downloader"
+    },
+    {
+      "type": "file",
+      "id": "file--818fba8e-b435-4f62-ac62-50f7fd808e4e",
+      "hashes": {
+        "MD5": "C73C545C32E5D1F72B74AB0087AE1720"
+      },
+      "name": "JLORAT"
+    },
+    {
+      "type": "file",
+      "id": "file--b070bd9e-bbfd-4780-bb38-ef01819d1fae",
+      "hashes": {
+        "MD5": "9A9B1BA210AC2EBFE190D1C63EC707FA"
+      },
+      "name": "Tomiris Rust ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--a7455de4-58c6-41af-918c-7f504c2534ee",
+      "hashes": {
+        "MD5": "2ED5EBC15B377C5A03F75E07DC5F1E08"
+      },
+      "name": "Tomiris C++ ReverseSocks"
+    },
+    {
+      "type": "file",
+      "id": "file--d4b824ea-22a4-4a8b-8de8-06512713b3d4",
+      "hashes": {
+        "MD5": "C75665E77FFB3692C2400C3C8DD8276B"
+      },
+      "name": "Tomiris PowerShell Telegram Backdoor"
+    },
+    {
+      "type": "file",
+      "id": "file--32baa312-ac15-45f8-9bbc-8884bc6d899f",
+      "hashes": {
+        "MD5": "DF95695A3A93895C1E87A76B4A8A9812"
+      },
+      "name": "Tomiris C# ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--69357c8b-511c-4e31-96c5-207373f5ebbe",
+      "hashes": {
+        "MD5": "087743415E1F6CC961E9D2BB6DFD6D51"
+      },
+      "name": "Tomiris Go ReverseShell"
+    },
+    {
+      "type": "file",
+      "id": "file--a4249350-3063-45c0-9097-8f5956b2b002",
+      "hashes": {
+        "MD5": "83267C4E942C7B86154ACD3C58EAF26C"
+      },
+      "name": "Tomiris Go ReverseSocks"
+    },
+    {
+      "type": "file",
+      "id": "file--7a8ea380-16fe-4abc-a605-01963075c53e",
+      "hashes": {
+        "MD5": "CD46316AEBC41E36790686F1EC1C39F0"
+      },
+      "name": "AdaptixC2"
+    },
+    {
+      "type": "file",
+      "id": "file--8f57ca61-0724-4394-b9f6-d7aa540b3a2e",
+      "hashes": {
+        "MD5": "1241455DA8AADC1D828F89476F7183B7"
+      },
+      "name": "AdaptixC2"
+    },
+    {
+      "type": "file",
+      "id": "file--4a26fd63-f690-461e-a8f1-f5188cc0787f",
+      "hashes": {
+        "MD5": "F1DCA0C280E86C39873D8B6AF40F7588"
+      },
+      "name": "AdaptixC2"
+    },
+    {
+      "type": "file",
+      "id": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "hashes": {
+        "MD5": "4EDC02724A72AFC3CF78710542DB1E6E"
+      },
+      "name": "Havoc"
+    },
+    {
+      "type": "url",
+      "id": "url--5f5fe988-5e9b-4746-9157-1a72b096aa76",
+      "value": "hxxps://discord.com/api/webhooks/1357597727164338349/ikaFqukFoCcbdfQIYXE91j-dGB-8YsTNeSrXnAclYx39Hjf2cIPQalTlAxP9-2791UCZ"
+    },
+    {
+      "type": "url",
+      "id": "url--aa18ed16-40ad-426e-abb3-c2a9ecbcf8e1",
+      "value": "hxxps://discord.com/api/webhooks/1370623818858762291/p1DC3l8XyGviRFAR50de6tKYP0CCr1hTAes9B9ljbd-J-dY7bddi31BCV90niZ3bxIMu"
+    },
+    {
+      "type": "url",
+      "id": "url--def9b614-6827-45b1-86c7-7f95629e2845",
+      "value": "hxxps://discord.com/api/webhooks/1388018607283376231/YYJe-lnt4HyvasKlhoOJECh9yjOtbllL_nalKBMUKUB3xsk7Mj74cU5IfBDYBYX-E78G"
+    },
+    {
+      "type": "url",
+      "id": "url--4b34809a-e9a1-4770-a7fb-47ab7dc35edf",
+      "value": "hxxps://discord.com/api/webhooks/1386588127791157298/FSOtFTIJaNRT01RVXk5fFsU_sjp_8E0k2QK3t5BUcAcMFR_SHMOEYyLhFUvkY3ndk8-w"
+    },
+    {
+      "type": "url",
+      "id": "url--b3a308c3-8930-4349-8975-0b30ad50209e",
+      "value": "hxxps://discord.com/api/webhooks/1369277038321467503/KqfsoVzebWNNGqFXePMxqi0pta2445WZxYNsY9EsYv1u_iyXAfYL3GGG76bCKy3-a75"
+    },
+    {
+      "type": "url",
+      "id": "url--4036412b-a13c-4d9c-8b11-5570effc1bdd",
+      "value": "hxxps://discord.com/api/webhooks/1396726652565848135/OFds8Do2qH-C_V0ckaF1AJJAqQJuKq-YZVrO1t7cWuvAp7LNfqI7piZlyCcS1qvwpXTZ"
+    },
+    {
+      "type": "url",
+      "id": "url--85ad36cb-8919-4c0d-97a7-f6f166963ca4",
+      "value": "hxxp://62.113.115.89/homepage/infile.php"
+    },
+    {
+      "type": "url",
+      "id": "url--d5ed4b76-5ba5-41ee-beb7-d05b957a51d2",
+      "value": "hxxps://api.telegram.org/bot7562800307:AAHVB7Ctr-K52J-egBlEdVoRHvJcYr-0nLQ/"
+    },
+    {
+      "type": "url",
+      "id": "url--a492a416-9cfe-45be-a07a-dcd8a7807a77",
+      "value": "hxxps://api.telegram.org/bot7804558453:AAFR2OjF7ktvyfygleIneu_8WDaaSkduV7k/"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b868ccb8-c848-4b6f-b691-f9b0a9934987",
+      "value": "77.232.39.47"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e05b3f12-fd10-4f75-932a-df81032e3d2f",
+      "value": "109.172.85.63"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--17fa0610-4585-4ad1-a7c0-766d513c3364",
+      "value": "109.172.85.95"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4345c735-22ef-43c6-a8c6-2b1a2d043c2b",
+      "value": "185.173.37.67"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6bf43800-b4d5-4aad-939e-c26ebef01f73",
+      "value": "185.231.155.111"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--20d38f8b-f133-4d49-af85-2b3367236161",
+      "value": "195.2.81.99"
+    },
+    {
+      "type": "url",
+      "id": "url--a10541ae-1595-43dd-8910-448b5f086415",
+      "value": "hxxps://discordapp.com/api/webhooks/1392383639450423359/TmFw-WY-u3D3HihXqVOOinL73OKqXvi69IBNh_rr15STd3FtffSP2BjAH59ZviWKWJRX"
+    },
+    {
+      "type": "url",
+      "id": "url--c6905a9f-a71b-4eb0-adda-7cd70c4c0e5f",
+      "value": "hxxps://discordapp.com/api/webhooks/1363764458815623370/IMErckdJLreUbvxcUA8c8SCfhmnsnivtwYSf7nDJF-bWZcFcSE2VhXdlSgVbheSzhGYE"
+    },
+    {
+      "type": "url",
+      "id": "url--12c9cf86-2e8e-4bbf-85cf-39a311dcd5fe",
+      "value": "hxxps://discordapp.com/api/webhooks/1355019191127904457/xCYi5fx_Y2-ddUE0CdHfiKmgrAC-Cp9oi-Qo3aFG318P5i-GNRfMZiNFOxFrQkZJNJsR"
+    },
+    {
+      "type": "url",
+      "id": "url--5d176919-b222-4530-aa93-fec9fc9e5c68",
+      "value": "hxxp://82.115.223.218/"
+    },
+    {
+      "type": "url",
+      "id": "url--1be229e3-29dd-4556-a944-252de9e1bfd4",
+      "value": "hxxp://172.86.75.102/"
+    },
+    {
+      "type": "url",
+      "id": "url--e069c7cb-5f5e-46f2-bac2-41c9a0141f4b",
+      "value": "hxxp://193.149.129.113/"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a0e0566b-c26e-4924-be1e-d8ab1d757a0c",
+      "value": "185.209.30.41"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ab4db908-1e63-4be7-bb4b-62655822a0b4",
+      "value": "185.231.154.84"
+    },
+    {
+      "type": "url",
+      "id": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "value": "hxxps://api.telegram.org/bot8039791391:AAHcE2qYmeRZ5P29G6mFAylVJl8qH_ZVBh8/"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a6e75eaf-4bc6-466f-8001-09ce9cef8b5d",
+      "value": "206.188.196.191"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9117beec-8486-4fe7-98cf-c5d538646fa1",
+      "value": "188.127.225.191"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--813167ed-1eaa-460e-b833-8bf86afa0d9c",
+      "value": "188.127.251.146"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1fb1aac0-adff-4c94-9353-d4ad2b5477de",
+      "value": "94.198.52.200"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f914a569-de6b-4586-abd4-546cba33926d",
+      "value": "188.127.227.226"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--56233798-24d6-46d1-bd6b-77d36fdd7137",
+      "value": "185.244.180.169"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--cc384c0d-dfcc-4fde-a383-865682efb842",
+      "value": "91.219.148.93"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b9d3a37d-93a4-4d93-957e-61a2ad4cad1d",
+      "value": "62.113.114.209"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6fa244c3-5c46-47c2-b490-e0ecde6aee7c",
+      "value": "195.2.78.133"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2bf8a86f-0484-4f36-b81b-ad5df3837e4f",
+      "value": "192.165.32.78"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f80dc242-f12d-4c7a-8fa8-41ab442c25d7",
+      "value": "188.127.231.136"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0b8b5ae7-4370-45d8-afed-85b0339604b0",
+      "value": "77.232.42.107"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c98b3d53-bd66-4458-9145-90f540a502f1",
+      "value": "94.198.52.210"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--62442bca-89b1-4e9c-ae7e-941935372945",
+      "value": "96.9.124.207"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--55298cca-7794-4371-a218-91a09d8563cd",
+      "value": "192.153.57.189"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8bf4f060-f91f-4a8a-8694-5ac72913a7b3",
+      "value": "64.7.199.193"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "value": "78.128.112.209"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e962f5df-2f87-4372-ba9f-fd517a50d870",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris C/C++ ReverseShell for initial access and remote control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9549e438-238f-45a9-bdc6-ba211a2ef5c5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Rust Downloader for reconnaissance and delivery of further payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9abcc46-1cbd-483f-9b7c-746cb431d6ae",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Python Discord ReverseShell for initial access and remote control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63d1a2ca-afdf-48c6-9167-4ef2f7441cf1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Python FileGrabber for file exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dcc71dd2-93e9-4899-8d19-ed6577bd19ca",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Distopia backdoor for remote access and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ff43714-8fe1-42af-b8e7-035bd2e2de49",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Python Telegram ReverseShell for remote access via Telegram."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2614642e-587d-44ef-ad43-f00e506a48c5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris C# Telegram ReverseShell for remote access via Telegram."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d18ffcdf-5c8a-4a8d-887d-e1472aac623e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses JLORAT for remote access and espionage."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e6a729ec-7069-461a-adc0-7da6ea7b5d23",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Rust ReverseShell for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edfd78d1-ebfa-4a8d-9952-b9664b50a59d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Go ReverseShell for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf4e2bdd-3db7-4632-abbc-5b6fefce9121",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris PowerShell Telegram Backdoor for persistence and remote access via Telegram."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31ce1b41-bd4e-4810-919d-cc99736fcf1c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris C# ReverseShell for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e43cb881-3f2b-46c3-a2b7-16252898a33c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris C++ ReverseSocks for proxying traffic and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--070e5054-2d4b-4763-8285-5ed6a77b574e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Tomiris Go ReverseSocks for proxying traffic and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3afbf577-4f7a-4a05-94fe-c76d671bf09e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses AdaptixC2 for post-exploitation, persistence, and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98d61afb-e14d-4cb5-a39f-7153c20cc609",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris APT group uses Havoc for post-exploitation and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80b04733-8b4b-44ba-be9a-a0fa35ac0dec",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "description": "Tomiris APT group uses spear phishing via malicious archives for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fae5d8b-8fd8-466c-bc4f-7713fa41f20a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "description": "Tomiris APT group leverages public services such as Telegram and Discord for C2 communications."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a79bfa36-22e0-41a6-8176-58e0d4a8a131",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "description": "Tomiris APT group deploys post-exploitation frameworks such as AdaptixC2 and Havoc after initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10bd0509-b405-4e7e-8af4-ed6068549444",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "description": "Tomiris APT group establishes persistence via registry modification."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--42d4f6c0-8c6d-4d6d-b198-ecf4f38fbda7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8074ace3-c783-484d-a1fd-86dd16030e93",
+      "target_ref": "attack-pattern--5bd5a2c3-555a-4838-92b4-1f79649cd8c0",
+      "description": "Tomiris APT group collects and exfiltrates files from infected systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--874dd467-a0c6-4683-9a3d-e7aa54cb9259",
+      "relationship_type": "delivers",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris C/C++ ReverseShell downloads and delivers AdaptixC2 as a next-stage payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d260af4c-be07-4d7e-9a6b-2784a2b884ea",
+      "relationship_type": "delivers",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris Python Discord ReverseShell downloads and delivers AdaptixC2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9afb956b-fe25-4332-8bef-da5a899fe770",
+      "relationship_type": "delivers",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Tomiris Python Discord ReverseShell downloads and delivers Tomiris Python FileGrabber."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--810842fe-c0fc-4c49-8689-14baaed934f6",
+      "relationship_type": "delivers",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "description": "Distopia backdoor downloads and delivers Tomiris Python Telegram ReverseShell."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--512fed13-e386-41bf-807a-baed25bd9197",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Distopia backdoor communicates with Discord webhook for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b75b669e-d5b4-428d-bd79-19ed143478c1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris Python Discord ReverseShell communicates with Discord webhooks for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28724a68-b04a-4d3e-b2b4-bbf9a8aa5701",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris Python FileGrabber exfiltrates files to its C2 URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fbf5919f-c5da-4db1-8849-eddde396d203",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris Python Telegram ReverseShell communicates with Telegram bot API for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1043ba4c-f6c9-40a6-87e8-b10245ce5d3d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris C# Telegram ReverseShell communicates with Telegram bot API for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c53e8eac-4c40-4445-acc6-0ae80e65cda1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris C/C++ ReverseShell communicates with its C2 IPs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c2f5374-017f-480b-a077-e9568ab70794",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris Rust Downloader communicates with Discord webhooks for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--950c547e-4a32-456d-9de5-dfc893254412",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Tomiris Rust ReverseShell communicates with its C2 IP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ffd2b2f2-55d1-4ff3-aa44-3481b632c0bb",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Tomiris C++ ReverseSocks communicates with its C2 IP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa9e3b89-cba4-41a2-878a-f3bc6fcedaec",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "url--3ecb1aaa-b6cd-42b7-b6c4-c65abf6385bb",
+      "description": "Tomiris PowerShell Telegram Backdoor communicates with Telegram bot API for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f94bc3b-bc24-4e2e-a8c7-d7303bf4fb46",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Tomiris C# ReverseShell communicates with its C2 IPs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2fa50a3-7efb-4674-8f64-338813eaa323",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Tomiris Go ReverseShell communicates with its C2 IP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5b6c1de-ac99-4a6e-9bea-ce917341c375",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Tomiris Go ReverseSocks communicates with its C2 IPs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5f968c1-2c70-41c2-b5e0-a8e41b077951",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "AdaptixC2 communicates with its C2 IPs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34bebc08-1899-4559-8558-9fdc9f36f2b0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "ipv4-addr--fd9dc466-c476-40ea-9b9d-a119951d6aec",
+      "description": "Havoc communicates with its C2 IP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e0a6a0a-271b-4d96-afec-48b11a001138",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Distopia backdoor sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70144469-aa41-48bb-8208-792a6319f34e",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Python Discord ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5984c261-979b-485a-8339-5f6c36f0adce",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Python FileGrabber sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f25a650b-4f0b-494c-8252-55a9157e0d5e",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Python Telegram ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cf02437e-305c-4112-9cdc-2e48b56db907",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris C# Telegram ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--83200aa4-b8f2-474e-8f47-01d00a1c6304",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris C/C++ ReverseShell sample files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2dd4d0f0-3c28-4528-81b3-0ae391c481ac",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Rust Downloader sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2048463e-581e-43d0-ba82-e4124aeed615",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "JLORAT sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ffa39c2-c68c-48ab-b0df-17d5b5f5a559",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Rust ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71d09c89-e008-4516-a8d3-c290455e16f0",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris C++ ReverseSocks sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2c28850-0612-4cfb-a2d5-4ca687c77a37",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris PowerShell Telegram Backdoor sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2058d04c-9ec5-4305-a28f-bec2363f6f4a",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris C# ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bce92c9-7a48-4460-8665-003d78388a16",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Go ReverseShell sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e309da7e-ca22-4d21-a600-83aeb6110eed",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Tomiris Go ReverseSocks sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a4c2430-4b3f-4297-b9c0-4090d99ada22",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "AdaptixC2 sample files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff183d0c-2d21-4c66-9686-42b6a4c22873",
+      "relationship_type": "has",
+      "source_ref": "malware--1ad66bd7-33ec-431e-91b3-04e1eb57b660",
+      "target_ref": "file--2ae3bcee-f60c-4439-90fd-4be2623a2554",
+      "description": "Havoc sample file."
+    }
+  ]
+}

@@ -1,0 +1,158 @@
+{
+  "type": "bundle",
+  "id": "bundle--2b758dd1-c1a2-4fe7-802e-7a8a44ceb210",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--786457bd-fdf2-410a-87e5-f02cdc409310",
+      "name": "Credential-Harvesting Infrastructure",
+      "description": "BlueDelta's infrastructure for credential harvesting includes domains, IP addresses, and URLs hosted on free services such as InfinityFree, Byet Internet Services, Webhook.site, and ngrok.",
+      "created_by_ref": "identity--",
+      "object_marking_refs": [],
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "description": "Indicators of compromise associated with BlueDelta credential-harvesting campaigns.",
+          "url": "https://www.recordedfuture.com/research/bluedeltas-persistent-campaign-against-ukrnet"
+        }
+      ],
+      "x_infrastructure_domains": [
+        "account-security-googie.my-board.org",
+        "account-security-googie.rf.gd",
+        "account-settings-shsvchx.wuaze.com",
+        "config-settings.kesug.com",
+        "enmrgkf41bifd.x.pipedream.net"
+      ],
+      "x_infrastructure_ips": [
+        "172.111.206.103",
+        "185.27.134.125"
+      ],
+      "x_infrastructure_urls": [
+        "https://account-settings-shsvchx.wuaze.com/uzdfbdhyzxjc",
+        "https://account-settings-shsvchx.wuaze.com/uzdfbdhyzxjc/ald.php",
+        "https://account-settings-shsvchx.wuaze.com/sidsixcnvxcucxv",
+        "https://account-settings-shsvchx.wuaze.com/sidsixcnvxcucxv/ald.php",
+        "https://config-settings.kesug.com/sogfdshxncvsad",
+        "https://config-settings.kesug.com/sogfdshxncvsad/npp.php",
+        "https://d3ef-2804-37f8-400-2cbf-4996-e46a-4802-5c08.ngrok-free.app",
+        "https://shorturl.at/Be4Xe",
+        "https://webhook.site/3791f8c0-1308-4c5b-9c82-0dc416aeb9c4",
+        "https://webhook.site/e8ae3bbd-ab02-46b7-b84c-f5f4baa5d7c7",
+        "https://webhook.site/ff237e88-cbaf-4b0b-b787-6e2f1f2c926f"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--b8c9006f-b037-4fd3-ab98-1e2f67237b3b",
+      "name": "Recorded Future Insikt Group",
+      "identity_class": "organization",
+      "description": "Recorded Future's Insikt Group is a threat intelligence research team that analyzes advanced persistent threats and cyber campaigns.",
+      "sectors": [
+        "technology",
+        "research"
+      ],
+      "contact_information": "https://www.recordedfuture.com/"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c6d0fff-0863-4f6f-9360-af3ce01c8936",
+      "value": "account-security-googie.my-board.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c9562839-7925-4869-ad66-3dc3815820fc",
+      "value": "account-security-googie.rf.gd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--65047f60-2edb-4a4a-a330-3b80e3239ad9",
+      "value": "account-settings-shsvchx.wuaze.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f5df49b2-f9e7-4f46-a4db-664b9ec1388c",
+      "value": "config-settings.kesug.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f8b75ed0-11ae-4e90-aa1c-f3f4c721b2e0",
+      "value": "enmrgkf41bifd.x.pipedream.net"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fe58a193-40bb-4376-821e-077779d6a45e",
+      "value": "172.111.206.103"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--36aded1d-a0a0-4428-aabe-edf0e6721ff2",
+      "value": "185.27.134.125"
+    },
+    {
+      "type": "url",
+      "id": "url--a05b1695-848a-4497-896e-e0766416107a",
+      "value": "https://account-settings-shsvchx.wuaze.com/uzdfbdhyzxjc"
+    },
+    {
+      "type": "url",
+      "id": "url--58ff59c3-6478-4b3c-8713-2e1e50f19d8a",
+      "value": "https://account-settings-shsvchx.wuaze.com/uzdfbdhyzxjc/ald.php"
+    },
+    {
+      "type": "url",
+      "id": "url--83a64b28-8f2c-4429-8ebb-85e5b8683d56",
+      "value": "https://account-settings-shsvchx.wuaze.com/sidsixcnvxcucxv"
+    },
+    {
+      "type": "url",
+      "id": "url--50f3d56e-96b5-4f01-9506-7694978a7162",
+      "value": "https://account-settings-shsvchx.wuaze.com/sidsixcnvxcucxv/ald.php"
+    },
+    {
+      "type": "url",
+      "id": "url--95fb4b49-324e-42af-99ae-46f201b47dab",
+      "value": "https://config-settings.kesug.com/sogfdshxncvsad"
+    },
+    {
+      "type": "url",
+      "id": "url--292048a9-1d5f-4305-9847-1b9d7748ca5e",
+      "value": "https://config-settings.kesug.com/sogfdshxncvsad/npp.php"
+    },
+    {
+      "type": "url",
+      "id": "url--b82242a6-a27a-4ab6-8bc6-24d422bae170",
+      "value": "https://d3ef-2804-37f8-400-2cbf-4996-e46a-4802-5c08.ngrok-free.app"
+    },
+    {
+      "type": "url",
+      "id": "url--d70709c8-cc87-4e42-bd1c-fede41653bf6",
+      "value": "https://shorturl.at/Be4Xe"
+    },
+    {
+      "type": "url",
+      "id": "url--0396ccb0-1cb8-4667-9470-ab5a6f0b65e8",
+      "value": "https://webhook.site/3791f8c0-1308-4c5b-9c82-0dc416aeb9c4"
+    },
+    {
+      "type": "url",
+      "id": "url--aa066fba-38ac-4229-92a4-3fb58ebc3779",
+      "value": "https://webhook.site/e8ae3bbd-ab02-46b7-b84c-f5f4baa5d7c7"
+    },
+    {
+      "type": "url",
+      "id": "url--28ec11cf-e87f-4db4-9e3b-abc039cb2a10",
+      "value": "https://webhook.site/ff237e88-cbaf-4b0b-b787-6e2f1f2c926f"
+    },
+    {
+      "type": "url",
+      "id": "url--f42fe7ea-82f4-40ba-9786-b4d75932055d",
+      "value": "https://www.grc.net/documents/68527c604ba00StrategicandPoliticalImplicationsforIsraelandIran2.pdf"
+    },
+    {
+      "type": "url",
+      "id": "url--1fcd99b8-85a7-4eee-8c11-8d1e40ded769",
+      "value": "https://eccoclimate.org/wp-content/uploads/2025/07/MATTCCh-Pact4MED.pdf"
+    }
+  ]
+}

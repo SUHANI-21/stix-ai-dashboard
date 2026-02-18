@@ -1,0 +1,67 @@
+{
+  "type": "bundle",
+  "id": "bundle--4360604d-e9f3-4963-9039-26d191811af6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--21f03da7-e2d9-4635-8ae2-ae6f6acbec08",
+      "name": "SentinelLABS",
+      "identity_class": "organization",
+      "description": "SentinelLABS is a research division of SentinelOne, specializing in threat intelligence, security research, and development of open-source tools for the security community.",
+      "external_references": [
+        {
+          "source_name": "SentinelOne Security Research",
+          "url": "https://www.sentinelone.com/labs/category/security-research/"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--398942c1-6ec7-49fe-80b6-75cedb7abbdf",
+      "value": "<phising domain>"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--02b03b74-dc71-4dcc-a9ef-dfce0964e81c",
+      "value": "<target domain>"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--52697eb4-ecd9-417b-b97f-1054fa58213f",
+      "value": "gitbook.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6aae224b-0cae-4798-8b3e-5e42aa4c2bbb",
+      "value": "webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7db12e5d-e461-45b9-8a7d-487a3766dac5",
+      "value": "github.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--837bbcef-2bd8-47f5-8612-161613435888",
+      "value": "azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3d362511-5826-4d36-ae0e-59d27f28c6db",
+      "value": "aws.amazon.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ffc650e8-93b7-42dc-b828-b4df441ba4f6",
+      "value": "<IP address>"
+    },
+    {
+      "type": "file",
+      "id": "file--03c51d88-4644-4e33-bc7d-d22c43607368",
+      "hashes": {
+        "SHA-1": "38c47d338a9c5ab7ccef7413edb7b2112bdfc56f"
+      }
+    }
+  ]
+}

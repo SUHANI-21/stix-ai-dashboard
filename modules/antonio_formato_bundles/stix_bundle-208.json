@@ -1,0 +1,258 @@
+{
+  "type": "bundle",
+  "id": "bundle--9510538a-ff46-4938-bca7-848b75ddffca",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--bba2b547-7b59-4079-b7d3-92f57f294fdc",
+      "name": "Triofox Unauthenticated Access Control Vulnerability",
+      "description": "An unauthenticated access vulnerability in Gladinet\u2019s Triofox file-sharing and remote access platform (CVE-2025-12480) allowed attackers to bypass authentication and access configuration pages, enabling the upload and execution of arbitrary payloads. The vulnerability was exploited by manipulating the HTTP Host header to 'localhost', granting access to privileged setup pages.",
+      "created": "2025-11-10T00:00:00Z",
+      "modified": "2025-11-10T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-12480",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-12480"
+        },
+        {
+          "source_name": "Mandiant",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/no-place-like-localhost-triofox-vulnerability"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "name": "UNC6485",
+      "description": "Threat cluster tracked by Google Threat Intelligence Group (GTIG) responsible for exploiting CVE-2025-12480 and conducting post-exploitation activities including privilege escalation, defense evasion, and deployment of remote access utilities.",
+      "aliases": [
+        "UNC6485"
+      ],
+      "created": "2025-08-24T00:00:00Z",
+      "modified": "2025-11-10T00:00:00Z"
+    },
+    {
+      "type": "file",
+      "id": "file--179a974f-5fb9-448d-bf2d-daeab05eb491",
+      "name": "SAgentInstaller_16.7.10368.56560.exe",
+      "path": "C:\\Windows\\appcompat\\SAgentInstaller_16.7.10368.56560.exe",
+      "hashes": {
+        "SHA-256": "43c455274d41e58132be7f66139566a941190ceba46082eb2ad7a6a261bfd63f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--aefac1e6-3858-47d1-bdf1-0b803d4c6dce",
+      "name": "sihosts.exe",
+      "path": "C:\\Windows\\temp\\sihosts.exe",
+      "hashes": {
+        "SHA-256": "50479953865b30775056441b10fdcb984126ba4f98af4f64756902a807b453e7"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--837a2b11-578e-47cb-82ca-2777611c1d70",
+      "name": "silcon.exe",
+      "path": "C:\\Windows\\temp\\silcon.exe",
+      "hashes": {
+        "SHA-256": "16cbe40fb24ce2d422afddb5a90a5801ced32ef52c22c2fc77b25a90837f28ad"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--75004aa7-ed29-43cb-a647-8434368e1128",
+      "name": "file.exe",
+      "path": "C:\\Windows\\temp\\file.exe",
+      "hashes": {
+        "SHA-256": "ac7f226bdf1c6750afa6a03da2b483eee2ef02cd9c2d6af71ea7c6a9a4eace2f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--61a00cd4-0667-440f-b38f-35e97c80adc0",
+      "name": "centre_report.bat",
+      "path": "C:\\triofox\\centre_report.bat"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4e00c5a4-2345-462d-98ed-f811c0b3cbae",
+      "value": "85.239.63.37"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9a0db5e3-a9d9-4798-9f4a-8c446df72810",
+      "value": "65.109.204.197"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--45ad255d-6692-46b7-9a41-2e50e97f902c",
+      "value": "84.200.80.252"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d0032c7d-3378-41a9-b9b0-3a84a7fce52e",
+      "value": "216.107.136.46"
+    },
+    {
+      "type": "url",
+      "id": "url--19d929d9-acce-4b11-8f86-04a1aaf9b79e",
+      "value": "http://84.200.80.252/SAgentInstaller_16.7.10368.56560.zip"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccf51d25-b630-464a-9d53-c2cb3257b3d4",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "vulnerability--bba2b547-7b59-4079-b7d3-92f57f294fdc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--285ed5ea-15ea-4a65-bd05-4196934f6c37",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97359ee9-8408-444d-8efb-8940604f2148",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4f7d5de-55d4-42f8-812d-66aea88aecbf",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b676a516-63a6-4ede-897a-458a9a083f23",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bd3bd2f-e89d-4174-b1f4-a6c3336419df",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95e8a07e-81d4-4a5c-ab0e-1b05b5e4f6e4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "tool--44b4f665-57e3-41f9-b7de-dcc3f91ad41b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c9ac96b-6395-4439-9ef1-57b66b840d23",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "tool--44b4f665-57e3-41f9-b7de-dcc3f91ad41b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5517302-a705-4c47-884a-fa98acd4371c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "tool--44b4f665-57e3-41f9-b7de-dcc3f91ad41b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f20cbca4-31d7-4279-ab76-f2b321688448",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "tool--44b4f665-57e3-41f9-b7de-dcc3f91ad41b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8c43a89-f7ee-4bd8-9b7c-4e2c6bf6f1ce",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--1eadb6d1-ad67-4c48-8b12-34760ac46cd1",
+      "target_ref": "tool--44b4f665-57e3-41f9-b7de-dcc3f91ad41b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8d51f0c2-c9e0-43c1-9fa7-c7d5a63179a9",
+      "relationship_type": "uses",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8925012-a1e3-4f54-b577-ba0e5bd2f503",
+      "relationship_type": "drops",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9cb51ab-f762-41d7-9f08-7aa171a3861e",
+      "relationship_type": "drops",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7da8299-aa18-4a6e-94c8-c0211076e5df",
+      "relationship_type": "drops",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7583284f-6d16-4a02-acbf-3f75a3e6e66a",
+      "relationship_type": "drops",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e51a6939-83a3-4bb4-beb7-3a7f90eace3b",
+      "relationship_type": "drops",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "file--61a00cd4-0667-440f-b38f-35e97c80adc0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--012d365a-4e2b-4cc1-bf30-3e051af82b9a",
+      "relationship_type": "downloads",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "url--19d929d9-acce-4b11-8f86-04a1aaf9b79e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3779637-5d75-44ba-874c-99073a3a8ff5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "ipv4-addr--d0032c7d-3378-41a9-b9b0-3a84a7fce52e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c750e22-289f-4be2-8d4d-fb535c1a160d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "ipv4-addr--d0032c7d-3378-41a9-b9b0-3a84a7fce52e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--787c96d5-eedc-451c-a159-e5b8a8dc1dce",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "ipv4-addr--d0032c7d-3378-41a9-b9b0-3a84a7fce52e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f82c190-bdf9-4dcc-a412-06d8b2d851e0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--8e0d3823-f28e-40fc-b98b-42564b7e4541",
+      "target_ref": "ipv4-addr--d0032c7d-3378-41a9-b9b0-3a84a7fce52e"
+    }
+  ]
+}

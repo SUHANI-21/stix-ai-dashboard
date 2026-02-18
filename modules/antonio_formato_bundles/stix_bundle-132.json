@@ -1,0 +1,425 @@
+{
+  "type": "bundle",
+  "id": "bundle--c7c6c2da-178b-418b-b7aa-7db37527f3e3",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--76307a51-8d71-4504-bb2e-1804ddd5aaa6",
+      "name": "01flip",
+      "description": "01flip is a multi-platform ransomware family written entirely in Rust. It targets both Windows and Linux systems, encrypts files using AES-128-CBC and RSA-2048, and drops ransom notes with contact information. It employs defense evasion techniques such as using low-level system APIs, encoding strings, and removing itself after execution. The ransomware has been observed targeting critical infrastructure organizations in Southeast Asia, with victims in the Philippines and Taiwan. It is associated with financially motivated attackers tracked as CL-CRI-1036.",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": true,
+      "operating_system_refs": [
+        "windows",
+        "linux"
+      ],
+      "implementation_languages": [
+        "Rust"
+      ],
+      "external_references": [
+        {
+          "source_name": "Unit42",
+          "url": "https://unit42.paloaltonetworks.com/new-ransomware-01flip-written-in-rust/"
+        },
+        {
+          "source_name": "VirusTotal",
+          "url": "https://www.virustotal.com/gui/file/e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957/details"
+        },
+        {
+          "source_name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/forums/t/808867/unknown-01flip-ext-ransomware-attack-zimbra-server/"
+        }
+      ],
+      "labels": [
+        "ransomware",
+        "Rust",
+        "multi-platform",
+        "Windows",
+        "Linux",
+        "AES-128-CBC",
+        "RSA-2048",
+        "defense evasion",
+        "critical infrastructure",
+        "Asia-Pacific",
+        "CL-CRI-1036"
+      ],
+      "sample_refs": [
+        "file--6aad1c36ab9c7c44350ebe3a17178b4fd93c2aa296e2af212ab28d711c0889a3",
+        "file--e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--5423c158-c331-429d-9b33-d5cf5f878e7c",
+      "name": "Sliver",
+      "description": "Sliver is a publicly available cross-platform adversary emulation framework written in Go. It was used by attackers in the CL-CRI-1036 campaign to facilitate post-exploitation activities such as lateral movement and credential dumping. The attackers deployed a Linux version of Sliver as a TCP Pivot implant.",
+      "malware_types": [
+        "remote-access-trojan",
+        "adversary-emulation"
+      ],
+      "is_family": true,
+      "operating_system_refs": [
+        "linux"
+      ],
+      "implementation_languages": [
+        "Go"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/BishopFox/sliver"
+        }
+      ],
+      "labels": [
+        "adversary emulation",
+        "post-exploitation",
+        "lateral movement",
+        "credential dumping",
+        "TCP Pivot",
+        "CL-CRI-1036"
+      ],
+      "sample_refs": [
+        "file--ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--d74dd6a1-f871-4530-9603-2d27e1b83fd4",
+      "name": "CL-CRI-1036",
+      "description": "CL-CRI-1036 is a cluster of financially motivated malicious activity tracked by Unit 42. The actors behind this intrusion set have used 01flip ransomware and Sliver implants in attacks against organizations in the Asia-Pacific region, including critical infrastructure. The group is associated with manual exploitation, data leaks on dark web forums, and ransomware deployment.",
+      "aliases": [
+        "CL-CRI-1036"
+      ],
+      "goals": [
+        "financial gain",
+        "data theft",
+        "ransomware deployment"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial",
+      "external_references": [
+        {
+          "source_name": "Unit42",
+          "url": "https://unit42.paloaltonetworks.com/unit-42-attribution-framework/"
+        }
+      ],
+      "labels": [
+        "cybercrime",
+        "ransomware",
+        "Asia-Pacific",
+        "critical infrastructure",
+        "data leak",
+        "manual exploitation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--89d23106-83b9-4a1d-8277-6842ac9b4c9b",
+      "name": "Data Encryption for Impact",
+      "description": "01flip ransomware encrypts files on victim systems using AES-128-CBC and RSA-2048, renames files, and drops ransom notes to demand payment for decryption.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1486/",
+          "external_id": "T1486"
+        }
+      ],
+      "labels": [
+        "ransomware",
+        "file encryption",
+        "impact"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d40283de-3810-4ede-9fc3-68f372d07568",
+      "name": "Indicator Removal on Host",
+      "description": "01flip ransomware attempts to remove traces of itself after encrypting files by deleting its executable and overwriting file data.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1070/",
+          "external_id": "T1070"
+        }
+      ],
+      "labels": [
+        "indicator removal",
+        "defense evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b8d3e535-7865-4bc8-ba77-7d7330349429",
+      "name": "Exploit Public-Facing Application",
+      "description": "Attackers attempted to exploit CVE-2019-11580 in internet-facing applications to gain initial access to victim networks.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1190/",
+          "external_id": "T1190"
+        },
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2019-11580"
+        }
+      ],
+      "labels": [
+        "initial access",
+        "exploit",
+        "CVE-2019-11580"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a28a54a2-79f6-4e6f-912e-880e01d738f3",
+      "name": "Lateral Movement",
+      "description": "Attackers performed lateral movement within victim environments, deploying additional implants and ransomware to multiple devices.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1075/",
+          "external_id": "T1075"
+        }
+      ],
+      "labels": [
+        "lateral movement",
+        "post-exploitation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1cff8c38-6e5b-4732-ae4b-dad0c7d11943",
+      "name": "Credential Dumping",
+      "description": "Attackers likely performed credential dumping to facilitate further compromise and lateral movement.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1003/",
+          "external_id": "T1003"
+        }
+      ],
+      "labels": [
+        "credential dumping",
+        "post-exploitation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--79c140e7-1b88-4e5b-ba1c-13880de6ebb0",
+      "name": "Defense Evasion via Encoded Strings",
+      "description": "01flip ransomware encodes user-defined strings in its binary and decodes them at runtime to evade detection.",
+      "labels": [
+        "defense evasion",
+        "encoded strings"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--bde328e8-c6b2-4d6c-99c7-394fce0da5ff",
+      "name": "Defense Evasion via Native API/System Calls",
+      "description": "01flip ransomware uses low-level system APIs and native calls to blend in with normal operating system activity and evade detection.",
+      "labels": [
+        "defense evasion",
+        "native API",
+        "system calls"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6ef6b9bc-9487-45e3-a170-b9de2ac3181d",
+      "name": "Anti-Sandbox Technique via Filename Check",
+      "description": "01flip ransomware checks if its filename contains the string '01flip' and, if so, removes indicators without encrypting files, as an anti-sandbox technique.",
+      "labels": [
+        "defense evasion",
+        "anti-sandbox"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--835f9683-0d56-4bb4-be5d-2747590ee778",
+      "name": "Sliver TCP Pivot Implant",
+      "description": "A TCP Pivot implant variant of Sliver used by attackers for lateral movement and post-exploitation in Linux environments.",
+      "tool_types": [
+        "remote access",
+        "pivoting"
+      ],
+      "labels": [
+        "Sliver",
+        "TCP Pivot",
+        "lateral movement",
+        "post-exploitation"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/BishopFox/sliver/wiki/Pivots/d87b3e15111e7be50dd885be966c35bca629c626#tcp-pivots"
+        }
+      ],
+      "sample_refs": [
+        "file--ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--882e1ae8-206d-4d5b-afe4-fb684bafa024",
+      "name": "01flip ransomware Windows sample",
+      "hashes": {
+        "SHA-256": "6aad1c36ab9c7c44350ebe3a17178b4fd93c2aa296e2af212ab28d711c0889a3"
+      },
+      "size": 741888,
+      "mime_type": "application/x-dosexec",
+      "labels": [
+        "Windows",
+        "01flip",
+        "ransomware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--a59e52a7-1f0f-44dc-991c-2f79944c0861",
+      "name": "01flip ransomware Linux sample",
+      "hashes": {
+        "SHA-256": "e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957"
+      },
+      "size": 948640,
+      "mime_type": "application/x-elf",
+      "labels": [
+        "Linux",
+        "01flip",
+        "ransomware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--43f8ca2a-4b45-4e12-a65e-cf0654e9c658",
+      "name": "Sliver TCP Pivot Linux implant",
+      "hashes": {
+        "SHA-256": "ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+      },
+      "size": 13414400,
+      "mime_type": "application/x-elf",
+      "labels": [
+        "Linux",
+        "Sliver",
+        "TCP Pivot"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--766a4fd3-fec0-4ca6-8620-396aa14e2eb0",
+      "hashes": {
+        "SHA-256": "6aad1c36ab9c7c44350ebe3a17178b4fd93c2aa296e2af212ab28d711c0889a3"
+      },
+      "name": "01flip ransomware (Windows)",
+      "size": 741888,
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "PE32+",
+          "machine_hex": "8664",
+          "stripped": true
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7ead890d-59bc-4914-82f0-6d9efa2dbdd6",
+      "hashes": {
+        "SHA-256": "e5834b7bdd70ec904470d541713e38fe933e96a4e49f80dbfb25148d9674f957"
+      },
+      "name": "01flip ransomware (Linux)",
+      "size": 948640,
+      "extensions": {
+        "linux-elf-ext": {
+          "elf_type": "ELF 64-bit LSB executable",
+          "architecture": "x86-64",
+          "stripped": true
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6d29451c-b0d8-4720-9987-067e3149e379",
+      "hashes": {
+        "SHA-256": "ba41f0c7ea36cefe7bc9827b3cf27308362a4d07a8c97109704df5d209bce191"
+      },
+      "name": "Sliver Beacon TCP Pivot (Linux)",
+      "size": 13414400,
+      "extensions": {
+        "linux-elf-ext": {
+          "elf_type": "ELF 64-bit LSB executable",
+          "architecture": "x86-64",
+          "stripped": true
+        }
+      }
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--a621c056-7c34-42fb-bfd9-20169561238a",
+      "value": "01Flip@proton.me"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--e5392c4a-f590-4a23-aaf0-5873fc749c9a",
+      "value": "mp@proton.me"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--53a296b4-82eb-4158-8dda-97166e1b674f",
+      "value": "proton.me"
+    },
+    {
+      "type": "file",
+      "id": "file--43b28178-1945-4419-9b71-e38887b9b9e7",
+      "name": "RECOVER-YOUR-FILE.TXT"
+    },
+    {
+      "type": "file",
+      "id": "file--db17ebac-de27-4751-922f-977444e56365",
+      "name": "<ORIGINAL_FILENAME>.<UNIQUE_ID>.<0 or 1>.01flip"
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--dc68adf8-caa2-4c1a-a76a-dc563aca5978",
+      "algorithm": "RSA",
+      "public_key": "-----BEGIN PUBLIC KEY-----\n...\n-----END PUBLIC KEY-----"
+    },
+    {
+      "type": "cryptocurrency-address",
+      "id": "cryptocurrency-address--7cbbcd5f-7cc6-49b0-9695-49c59b79789e",
+      "currency": "bitcoin"
+    },
+    {
+      "type": "software",
+      "id": "software--5e4a9b7e-b47a-4c69-9b2e-21d33e29e721",
+      "name": "01flip ransomware",
+      "languages": [
+        "Rust"
+      ],
+      "cpe": "",
+      "description": "Multi-platform ransomware written in Rust targeting Windows and Linux."
+    },
+    {
+      "type": "software",
+      "id": "software--95598e63-01ee-4d3c-a049-6bbfe0791917",
+      "name": "Sliver",
+      "languages": [
+        "Go"
+      ],
+      "description": "Cross-platform adversary emulation framework used for C2 and lateral movement."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2cd05d4e-489f-46e1-a04a-e2326643f3cb",
+      "name": "CVE-2019-11580",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/cve-2019-11580"
+        }
+      ]
+    }
+  ]
+}

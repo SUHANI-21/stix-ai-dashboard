@@ -1,0 +1,403 @@
+{
+  "type": "bundle",
+  "id": "bundle--49ff4f62-33f3-4275-8768-80cf7ff284c6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "name": "Kimsuky",
+      "description": "Kimsuky is a North Korea-linked threat actor (DPRK nexus) known for targeting South Korean organizations and individuals with spear-phishing, credential theft, and malware campaigns. Kimsuky has consistently operated since at least the 2010s and is attributed with the development and deployment of KimJongRAT and related malware families. The group employs sophisticated social engineering, infrastructure leveraging cloud services, and tailored spear-phishing using victims\u2019 personal information.",
+      "aliases": [
+        "Thallium",
+        "Black Banshee",
+        "Velvet Chollima"
+      ],
+      "first_seen": "2013-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Credential Theft",
+        "Data Exfiltration",
+        "Targeting South Korean entities"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/new-babyshark-malware-targets-u-s-national-security-think-tanks/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e45a8164-dbe5-4ff3-ab7c-c907a1c05664",
+      "name": "Phishing: Spearphishing Link",
+      "description": "Kimsuky leverages spear-phishing emails impersonating public institutions and services to lure victims into clicking malicious links or downloading malware-laden archives. Attacks often include credential phishing pages and prompt for extra actions such as entering passwords or enabling macros.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--574c3f18-e825-43c3-b538-2a0816f5c152",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "description": "KimJongRAT variants include PowerShell script-based malware, which decodes and executes payloads, collects system and browser data, and communicates with C2 servers.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d2265de0-4189-439f-bf1b-f916e6ae0486",
+      "name": "User Execution: Malicious File",
+      "description": "Attackers distribute malicious shortcut (LNK) files and password-protected decoy documents to trick users into executing malware.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002",
+          "url": "https://attack.mitre.org/techniques/T1204/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fec532aa-7cc9-4c36-b11b-6e11c7e59de7",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "description": "KimJongRAT establishes persistence by registering autorun entries in the Windows registry to execute malware on system startup.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--347b056b-9901-48b9-8617-62d6200bb55d",
+      "name": "Clipboard Data",
+      "description": "KimJongRAT variants collect clipboard contents at frequent intervals and exfiltrate them to C2 infrastructure.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1115",
+          "url": "https://attack.mitre.org/techniques/T1115/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f1cbbc07-fd63-446d-894f-495052f5658c",
+      "name": "Input Capture: Keylogging",
+      "description": "KimJongRAT includes modules for keylogging, capturing keystrokes and active window titles, and exfiltrating logs to C2 servers.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.001",
+          "url": "https://attack.mitre.org/techniques/T1056/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e3a66ad5-5220-4bed-87d4-b019a51556bb",
+      "name": "Exfiltration Over C2 Channel",
+      "description": "Collected data and files are exfiltrated over HTTP POST requests to attacker-controlled C2 domains, with additional encryption and chunking mechanisms.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041",
+          "url": "https://attack.mitre.org/techniques/T1041/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--909c87c9-5ec7-4701-a5a3-a8148b5d0a18",
+      "name": "Obfuscated Files or Information: Dynamic API Resolution",
+      "description": "KimJongRAT uses API name obfuscation and dynamic resolution to evade detection and analysis.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.007",
+          "url": "https://attack.mitre.org/techniques/T1027/007/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e5525b4d-6212-43a8-9588-ad6032b13c73",
+      "name": "Virtualization/Sandbox Evasion: System Checks",
+      "description": "KimJongRAT performs anti-VM checks and terminates execution if a virtualized environment is detected.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.001",
+          "url": "https://attack.mitre.org/techniques/T1497/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622",
+      "name": "Web Service: Use of Cloud and Public Infrastructure",
+      "description": "Kimsuky leverages GitHub Releases and Google Drive for malware distribution and payload delivery.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102",
+          "url": "https://attack.mitre.org/techniques/T1102/"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--24f63b20-6299-41f4-939b-0a28fb1a7b7d",
+      "name": "KimJongRAT 2024-2025 Expansion Campaign",
+      "description": "A campaign attributed to Kimsuky, active from 2024 through 2025, involving the distribution of KimJongRAT variants via spear-phishing, credential phishing, and cloud infrastructure. The campaign targets South Korean institutions and individuals, with evidence of merged PE and PowerShell workflows, credential theft, and broad targeting using personal information.",
+      "first_seen": "2024-01-01T00:00:00Z",
+      "last_seen": "2025-11-21T00:00:00Z",
+      "objective": "Espionage, credential theft, and data exfiltration against South Korean entities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a35c6b22-9cc0-4ec8-aa2e-cde16125c3c3",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--463c1b89-ff4a-438e-b11f-e737655f5c1c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5b7c52c-121c-4de3-8215-5d98aa7da9c0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65aa6dc9-d23b-424f-8884-c471af2072f7",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d28737f1-2faf-4d16-b62f-787dc4dff5af",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45ffabc0-d025-44b0-b852-9d6e8fc4af77",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--979440b6-42a0-496e-a142-ce1c9017c768",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c924c77-ac07-4690-9ca2-0f0dcb36bbe8",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--936ff290-2a4e-4f7e-95d4-91926ee9df68",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56bae0aa-a8b6-4595-872c-e6f23551a6d2",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--074309a0-b610-4ac9-9ebb-ff1993efa5cc",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87538f52-c345-4cc1-82eb-67a6b745ffea",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93b316f4-f883-4c2e-8875-e219f3abc3bb",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b6f910d-9e5e-47ce-b9dc-dbab510f6346",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c233060-ca45-423f-a9f0-3399d7592b1c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b07323ac-a5e2-4a80-925c-3bc161bcbcc2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8d125707-7cd8-4acd-8381-003c04af222f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c44305e-c461-4908-9f38-fd37195b9b99",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6da1bfa-5195-449d-ba58-ae8c32235469",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--209851b6-7fc7-4bc5-b50f-6c6175303964",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc780a37-0be5-4227-bc22-f1856bb0e02e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72cee887-4aa9-49e8-b49c-65eae9aa3266",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccda064b-ac9b-4fed-bed2-80d0b3a192ca",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be9c144e-c24e-4e22-a0be-6ea791c3ae94",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ce3e72b-dec3-4f5a-993e-e6d4cf73f778",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1663f77c-b15d-4a01-989a-a05e485e34c9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--252a5863-a9a6-4d91-ac87-79ee4016a45a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28",
+      "target_ref": "attack-pattern--4e0f31fe-3498-4812-9c81-79be34223622"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--278e6afa-c1bc-415e-a64a-9bf4a22f42f6",
+      "relationship_type": "uses",
+      "source_ref": "campaign--24f63b20-6299-41f4-939b-0a28fb1a7b7d",
+      "target_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89c01714-8c45-424b-8cc9-6eef69564c70",
+      "relationship_type": "uses",
+      "source_ref": "campaign--24f63b20-6299-41f4-939b-0a28fb1a7b7d",
+      "target_ref": "intrusion-set--9b78caad-eca2-4d00-93b3-e6a09b5d8c28"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4e547ae-81cd-462b-9338-387487b75af0",
+      "relationship_type": "uses",
+      "source_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3",
+      "target_ref": "indicator--a9250585-afea-415a-851d-611554e89bf2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a13253b-c781-43db-b737-7be210ef1f9b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a9250585-afea-415a-851d-611554e89bf2",
+      "target_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0255c9a9-2750-4798-bc4c-8a5b239f13b4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a9250585-afea-415a-851d-611554e89bf2",
+      "target_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5f58c1d-3769-4011-8f5c-1ab6187abb67",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a9250585-afea-415a-851d-611554e89bf2",
+      "target_ref": "malware--b0033894-b7e1-4718-913a-0c33c763a8a3"
+    }
+  ]
+}

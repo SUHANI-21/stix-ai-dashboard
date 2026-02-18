@@ -1,0 +1,301 @@
+{
+  "type": "bundle",
+  "id": "bundle--ad45d8bf-d45e-44a6-82a5-4b26709950e5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ffd6ab6c-f179-4e9a-84ee-bba15f921bc2",
+      "name": "CVE-2024-57726",
+      "description": "A severe vulnerability in SimpleHelp RMM platform exploited by ransomware groups for initial access.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57726",
+          "external_id": "CVE-2024-57726"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8fe2ed94-3c22-43c9-968f-9c93194f2399",
+      "name": "CVE-2024-57727",
+      "description": "A severe vulnerability in SimpleHelp RMM platform exploited by ransomware groups for initial access.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57727",
+          "external_id": "CVE-2024-57727"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--36281431-bc53-4f99-8036-8ac1a81d4e79",
+      "name": "CVE-2024-57728",
+      "description": "A severe vulnerability in SimpleHelp RMM platform exploited by ransomware groups for initial access.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-57728",
+          "external_id": "CVE-2024-57728"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--ed59cbae-8883-4606-90c7-a8f02575ae59",
+      "name": "Medusa",
+      "description": "Medusa is a ransomware-as-a-service (RaaS) group active in 2025, known for exploiting SimpleHelp RMM vulnerabilities to gain initial access, exfiltrate data, and encrypt victim systems. Medusa employs double extortion tactics and operates a dark web leak site.",
+      "aliases": [
+        "Medusa ransomware"
+      ],
+      "external_references": [
+        {
+          "source_name": "ZenSec Medusa",
+          "url": "https://zensec.co.uk/medusa-ransomware/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--081b8c46-7594-4402-9850-4c76a692c69e",
+      "name": "DragonForce",
+      "description": "DragonForce is a ransomware-as-a-service (RaaS) group active since 2023, known for exploiting SimpleHelp RMM vulnerabilities, exfiltrating data with Restic, and encrypting victim systems. The group uses double extortion and operates public-facing blogs and data leak sites.",
+      "aliases": [
+        "DragonForce ransomware",
+        "Dragon Force"
+      ],
+      "external_references": [
+        {
+          "source_name": "ZenSec DragonForce",
+          "url": "https://zensec.co.uk/dragonforce-ransomware/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4e11f7cc-890c-4953-abd4-a23083c17866",
+      "name": "gaze.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--46004f0c-8e0c-4caf-897d-07daf1fa7b61",
+      "name": "2Gk8.exe",
+      "hashes": {
+        "SHA-256": "df6cb5199c272c491b3a7ac44df6c4c279d23f7c09daed758c831b26732a4851"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c0c486d9-ad81-47d1-a5c2-a5df88f9226c",
+      "name": "COMPANY NAME.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--18b4bf38-1ddb-4674-aaa4-36e7df2cff00",
+      "name": "0ZI9.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--19ccbfb3-4866-4d36-ab06-5a38c6d9bc40",
+      "name": "vWl38BlvZ.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--8587d304-50af-476d-9b1e-219ebe49ef81",
+      "name": "Smuot.sys",
+      "hashes": {
+        "SHA-256": "b7703a59c39a0d2f7ef6422945aaeaaf061431af0533557246397551b8eed505"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--410eec8e-719f-4e4e-929a-cace8ecb7196",
+      "name": "cpuCJ.sys",
+      "hashes": {
+        "SHA-256": "89d473ad486e144f3c71ad95ed6016248613fc33d76792e8632206cea86ecfdd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7817a7be-af43-4fd6-b3b0-b4f2dc61d578",
+      "name": "mmTVA.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--99900103-e720-49f1-a2b1-5506aa13d47a",
+      "name": "rkses.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--08ede9f1-309c-4515-a908-fe0b921b2e16",
+      "name": "lsp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b1c5a664-4323-4237-8426-0dd1a8effa78",
+      "name": "ngconf.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--6227b1a4-525e-4c3c-8bac-776ad2e7cfed",
+      "name": "PDQInventoryScanner.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--124b96ab-ccd4-4349-98a7-46c4377dd68d",
+      "name": "PDQInventory-Scanner-1.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--470489e5-4e6e-4fd2-a12c-653ed3914499",
+      "name": "PDQDeployService.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e93bf87c-a017-40da-8617-68a1de900ea3",
+      "name": "Netscan.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9a8ee060-3319-4147-a0af-c756a77327b1",
+      "name": "!!!READ_ME_MEDUSA!!!.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--0ac06494-4c58-46ff-aa42-e6ca53aea8d7",
+      "name": "[REDACTED COMPANY NAME].exe"
+    },
+    {
+      "type": "file",
+      "id": "file--301cd158-5e85-40db-9b9a-612da0ec9c57",
+      "name": "AnyDesk.exe",
+      "hashes": {
+        "SHA-256": "aea8f85e569443a8c00b94fa19b5155b9122183f05bedfdcdccd1d18451760fd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5f914c45-68eb-47f8-86b3-d6b6541dca82",
+      "name": "win.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--aa69b6ef-bf76-4b55-9ced-9f93c4c8d145",
+      "name": "SimpleService.exe",
+      "hashes": {
+        "SHA-256": "e414f781c73f6984158f5d12af9f89c57d993e8db0322ebc0da346179a8b9e2d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--cf3820d7-5360-489f-b0ff-4a199186fe0c",
+      "name": "elev_win.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--547f27d8-ea3b-4966-9c7b-b8edf663c020",
+      "name": "winupdate.exe",
+      "hashes": {
+        "SHA-256": "98394683d8f30ce9fb313100f593dc16e97a52723b18d534cf586391a97cdc1d"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--509f2656-1706-4833-b7e4-6eac8f7d6efd",
+      "value": "213.183.63.41"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8cf0f4eb-dbac-465e-81bf-94990088e079",
+      "value": "179.60.146.40"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--229177d1-872d-4b1e-b69b-0d2cebb9e65e",
+      "value": "91.191.209.110"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bf423879-63e0-43a5-af38-a7195d3723b2",
+      "value": "wasabisys.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ec3200a2-9f1b-43a3-b10e-1f164152d6ce",
+      "value": "osintcorp.net"
+    },
+    {
+      "type": "url",
+      "id": "url--198451ef-ca67-4df5-ae11-9822a0d0c9b1",
+      "value": "hxxp://s7lmmhlt3iwnwirxvgjidl6omcblvw2rg75txjfduy73kx5brlmiulad.onion/"
+    },
+    {
+      "type": "url",
+      "id": "url--9d8a57a8-38e6-423f-9dde-853993a54241",
+      "value": "hxxp://7aqabivkwmpvjkyefonf3gpy5gsubopqni7kcirsrq3pflckxq5zz4id.onion/"
+    },
+    {
+      "type": "url",
+      "id": "url--3bcd8169-b343-49f3-84fd-6bbc46a3a41b",
+      "value": "z3wqggtxft7id3ibr7srivv5gjof5fwg76slewnzwwakjuf3nlhukdid.onion"
+    },
+    {
+      "type": "url",
+      "id": "url--dd737bd9-66e3-4c2d-b9da-1511a2aaf6c9",
+      "value": "dragonforxxbp3awc7mzs5dkswrua3znqyx5roefmi4smjrsdi22xwqd.onion"
+    },
+    {
+      "type": "software",
+      "id": "software--bc14fba6-9234-43c0-9f53-6a70bbb27d5e",
+      "name": "SimpleHelp",
+      "cpe": "cpe:2.3:a:simplehelp:simplehelp:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--f649e69b-262c-4baf-8643-75da5c438860",
+      "name": "PDQ Inventory"
+    },
+    {
+      "type": "software",
+      "id": "software--88c27101-c107-4d87-aa85-0aa08b59a57f",
+      "name": "PDQ Deploy"
+    },
+    {
+      "type": "software",
+      "id": "software--c79639c0-e36d-4dbd-be8e-a613293cf587",
+      "name": "RClone"
+    },
+    {
+      "type": "software",
+      "id": "software--4ec291a4-7032-4e7f-9fa8-4dfe98b002c0",
+      "name": "Restic"
+    },
+    {
+      "type": "software",
+      "id": "software--f163c212-afa9-41e0-a817-d71bb665072e",
+      "name": "AnyDesk"
+    },
+    {
+      "type": "software",
+      "id": "software--61725c19-7e3e-448c-b248-8c321d9f6515",
+      "name": "Microsoft Defender"
+    },
+    {
+      "type": "software",
+      "id": "software--42d4cf88-d4f5-42dd-8738-9ae8a22dac40",
+      "name": "Veeam"
+    },
+    {
+      "type": "software",
+      "id": "software--e3363b3a-4ee5-484c-8088-025859f79f11",
+      "name": "Cobalt Strike"
+    },
+    {
+      "type": "software",
+      "id": "software--1b7bd10e-966b-4fa4-81e2-8f330183b078",
+      "name": "PowerShell"
+    }
+  ]
+}

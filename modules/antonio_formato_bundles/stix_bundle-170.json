@@ -1,0 +1,150 @@
+{
+  "type": "bundle",
+  "id": "bundle--20ca7398-c068-48b5-aefa-242de6c8c9fd",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9de4b878-86a9-475c-8e6e-75c8845e6f28",
+      "name": "Clipboard Hijacking via Fake CAPTCHA",
+      "description": "KongTuke uses fake CAPTCHA pages to hijack the clipboard, injecting malicious commands that download and execute PowerShell scripts, leading to further malware infection.",
+      "external_references": [
+        {
+          "source_name": "ISC Diary",
+          "url": "https://isc.sans.edu/diary/KongTuke+activity/32498/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2948f43f-060a-442b-9c61-f155c3f84f06",
+      "name": "Persistence via Scheduled Task",
+      "description": "The malicious Python script establishes persistence on infected Windows clients by creating a scheduled task.",
+      "external_references": [
+        {
+          "source_name": "ISC Diary",
+          "url": "https://isc.sans.edu/diary/KongTuke+activity/32498/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--e6857713-7b61-4f92-83b9-07f3f84bee72",
+      "name": "Malicious Python Package Zip Archive",
+      "hashes": {
+        "SHA-256": "b2e084a9cab46b01cfa8725c3cc23ef5cc2a4e399d83ff760e4bdb8b028ec6f6"
+      },
+      "size": 24946416,
+      "mime_type": "application/zip",
+      "description": "Zip archive containing a Windows Python environment and a malicious Python script, delivered as part of KongTuke infection.",
+      "external_references": [
+        {
+          "source_name": "MalwareBazaar",
+          "url": "https://bazaar.abuse.ch/sample/b2e084a9cab46b01cfa8725c3cc23ef5cc2a4e399d83ff760e4bdb8b028ec6f6/"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--3d68b7ab-85b7-4b09-8e15-d6fd937e51d4",
+      "value": "http://64.111.92.212:6655/ab"
+    },
+    {
+      "type": "url",
+      "id": "url--0b2c6820-96d7-400b-9e8f-1da861949a7e",
+      "value": "http://64.111.92.212:6655/se"
+    },
+    {
+      "type": "url",
+      "id": "url--0169388e-6e04-4754-9b56-a8130972297b",
+      "value": "http://64.111.92.212:6655/node"
+    },
+    {
+      "type": "url",
+      "id": "url--c7b4105a-1540-4cc9-84ee-926adb8a5507",
+      "value": "http://64.111.92.212:6655/nada000"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3d5c08b6-6c62-40bb-ae01-becc700a67e2",
+      "value": "telegra.ph"
+    },
+    {
+      "type": "directory",
+      "id": "directory--45068891-1ee1-4df6-a700-5ac5a5b6777e",
+      "path": "C:\\Users\\<username>\\AppData\\Roaming\\DATA"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9f84002-040b-40d4-a604-457797394e61",
+      "relationship_type": "uses",
+      "source_ref": "malware--f6dbb415-9d31-4c80-91f5-744c55e1940e",
+      "target_ref": "attack-pattern--2948f43f-060a-442b-9c61-f155c3f84f06",
+      "description": "KongTuke uses fake CAPTCHA pages to hijack the clipboard, injecting malicious commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33f4657a-8396-4554-a10e-e78430bde867",
+      "relationship_type": "uses",
+      "source_ref": "malware--f6dbb415-9d31-4c80-91f5-744c55e1940e",
+      "target_ref": "attack-pattern--2948f43f-060a-442b-9c61-f155c3f84f06",
+      "description": "KongTuke establishes persistence by creating a scheduled task."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--359c2dcf-f73a-4050-bfae-88ced663b410",
+      "relationship_type": "drops",
+      "source_ref": "malware--f6dbb415-9d31-4c80-91f5-744c55e1940e",
+      "target_ref": "file--35fbe1cd-14d7-409b-bb8c-1fb36ecba7fc",
+      "description": "KongTuke infection delivers a zip archive containing a malicious Python script and Windows Python environment."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76de4628-2baa-4125-bc7e-6b181dea86e0",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--46835326-c0ea-4afc-8b02-7c8b7fee4f80",
+      "target_ref": "malware--f6dbb415-9d31-4c80-91f5-744c55e1940e",
+      "description": "Observed URLs indicate KongTuke initial infection activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9004588-f7e6-491a-ba86-6edac2460475",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--46835326-c0ea-4afc-8b02-7c8b7fee4f80",
+      "target_ref": "url--c7b4105a-1540-4cc9-84ee-926adb8a5507",
+      "description": "Indicator includes the URL http://64.111.92.212:6655/ab."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c145bb01-f990-461d-915a-067d141b5568",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--46835326-c0ea-4afc-8b02-7c8b7fee4f80",
+      "target_ref": "url--c7b4105a-1540-4cc9-84ee-926adb8a5507",
+      "description": "Indicator includes the URL http://64.111.92.212:6655/se."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--494d9ed2-5f88-4d0a-a89e-83c3161dfadb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--46835326-c0ea-4afc-8b02-7c8b7fee4f80",
+      "target_ref": "url--c7b4105a-1540-4cc9-84ee-926adb8a5507",
+      "description": "Indicator includes the URL http://64.111.92.212:6655/node."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa8386e0-0daa-4e40-b1bc-b1373b052d21",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--46835326-c0ea-4afc-8b02-7c8b7fee4f80",
+      "target_ref": "url--c7b4105a-1540-4cc9-84ee-926adb8a5507",
+      "description": "Indicator includes the URL http://64.111.92.212:6655/nada000."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6a6dafe-cb26-49df-9a02-ef3dfb253cbe",
+      "relationship_type": "located-at",
+      "source_ref": "file--35fbe1cd-14d7-409b-bb8c-1fb36ecba7fc",
+      "target_ref": "directory--45068891-1ee1-4df6-a700-5ac5a5b6777e",
+      "description": "Malicious Python package zip archive was saved to the AppData\\Roaming\\DATA directory."
+    }
+  ]
+}

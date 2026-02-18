@@ -1,0 +1,999 @@
+{
+  "type": "bundle",
+  "id": "bundle--3e35eeaa-69e4-4131-93ce-dfe341e2337f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "name": "AuraStealer",
+      "malware_types": [
+        "infostealer",
+        "malware-as-a-service"
+      ],
+      "description": "AuraStealer is an emerging infostealer-as-a-service (MaaS) malware, first observed in July 2025, actively promoted on underground forums. Developed in C++ (~500-700kB), it targets Windows 7-11 and is marketed as a highly efficient, low-footprint stealer capable of stealing data from over 110 browsers, 70 applications (including wallets and 2FA tools), and 250+ browser extensions. It employs advanced obfuscation and anti-analysis techniques, including indirect control flow obfuscation, exception-driven API hashing, anti-debug, anti-tamper, anti-VM, anti-sandbox, and string encryption. Distribution occurs via Scam-Yourself campaigns (notably TikTok videos), cracked games/software, and malicious IDE/browser extensions. It uses AES-CBC encryption for configuration and network traffic, and is capable of executing additional payloads.",
+      "is_family": true,
+      "aliases": [
+        "Aura Stealer"
+      ],
+      "operating_system_refs": [
+        "windows"
+      ],
+      "implementation_languages": [
+        "C++"
+      ],
+      "capabilities": [
+        "Steals credentials, session tokens, recovery data, clipboard contents, screenshots, password manager databases, VPN configs, system/process info",
+        "Targets Chromium/Gecko browsers, cryptocurrency wallets, 2FA tokens, remote access/FTP configs",
+        "Supports custom configuration modules for file theft",
+        "Executes additional payloads",
+        "Uses dynamically generated mutexes",
+        "Bypasses Application-Bound Encryption (ABE) in Chromium browsers",
+        "Uses Heaven's Gate technique for NTDLL calls"
+      ],
+      "labels": [
+        "infostealer",
+        "malware-as-a-service",
+        "obfuscated",
+        "Windows"
+      ],
+      "external_references": [
+        {
+          "source_name": "Gen Digital Blog",
+          "url": "https://www.gendigital.com/blog/news/defeating-aurastealer-practical-deobfuscation-workflows-for-modern-infostealers"
+        },
+        {
+          "source_name": "SANS Diary",
+          "url": "https://isc.sans.edu/diary/32380"
+        },
+        {
+          "source_name": "g0njxa interview",
+          "url": "https://g0njxa.medium.com/approaching-stealers-devs-a-brief-interview-with-aura-9b513369e117"
+        },
+        {
+          "source_name": "GitHub IOC Scripts",
+          "url": "https://github.com/avast/ioc/tree/master/AuraStealer/extras"
+        }
+      ],
+      "sample_refs": [
+        "0223E39D9C26F065FABB1BCB8A1A03FE439BB18B8D14816646D8D236A6FD46A3",
+        "01E67139B59EED0FE1FCB4C66A9E88AD20DD8B55648C077AEC7FA2AE3431EA5F",
+        "9A46C8D884F4C59701D3AF7BEAD1E099E3DDEB1E2B75F98756CC5403D88BD370",
+        "FD3875225C1AB60E6DC52FC8F94B4D389624592B7E7B57EE86E54CEBE5D3EB6A",
+        "EC7BA08B1655963D6C9F7D996F3559C58893769A2C803DA1F99610A0AAA1224A",
+        "0F691762DA02ABBD94046381ECEDFD8B31CCBB835DED6049E9D6CD2AFDD3F551",
+        "F6E7341AB412EF16076901EA5835F61FBC3E94D0B9F2813355576BAD57376F29",
+        "D19274A14B905679DBD43FFB374CA0E11F9DC66FDB9E17236829A9A56F3E7D31",
+        "F0F7AE1FC2D569B8B9267D2EC81F7E539DB4BEAF275BCA41962C27ECFA5361BF",
+        "158369AD66EA4BACEEE19051425C21F657FFC1B3483EA812323816B612F324BD",
+        "F816558972F62D206757BAD4A95EE75290615F520F3B24D814FFBCDFC6998C6C",
+        "F7D0F099D042DE83AA2D0A13100640BEA49D28C77C2EB3087C0FB43EC0CD83D7"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "delivery",
+          "phase_name": "initial_access"
+        },
+        {
+          "kill_chain_name": "execution",
+          "phase_name": "execution"
+        },
+        {
+          "kill_chain_name": "defense_evasion",
+          "phase_name": "obfuscation"
+        },
+        {
+          "kill_chain_name": "collection",
+          "phase_name": "data_collection"
+        },
+        {
+          "kill_chain_name": "exfiltration",
+          "phase_name": "data_exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1f94b3fc-2941-4fe9-a76a-d376cc305bcc",
+      "name": "Indirect Control Flow Obfuscation",
+      "description": "AuraStealer uses indirect control flow obfuscation by replacing direct jumps and calls with indirect ones, where target addresses are computed at runtime using arithmetic and conditional instructions. This disrupts static analysis and control-flow graph reconstruction.",
+      "x_mitre_detection": "Requires advanced reverse engineering and symbolic execution to reconstruct original control flow.",
+      "labels": [
+        "obfuscation",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e5ec372f-6b13-4cbc-8d44-ce019cea6af8",
+      "name": "Exception-Driven API Hashing",
+      "description": "AuraStealer obfuscates its WinAPI usage by resolving functions via hash-based lookup tables and triggering deliberate exceptions intercepted by a custom handler, which then dispatches the correct API address.",
+      "x_mitre_detection": "Analysis of exception handler routines and hash tables required.",
+      "labels": [
+        "obfuscation",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--31401f2d-8309-4b44-831d-e106ecc070c1",
+      "name": "String Encryption (XOR Stack-Based)",
+      "description": "Most strings in AuraStealer are encrypted using stack-based XOR routines, requiring emulation or symbolic execution for decryption.",
+      "x_mitre_detection": "Emulation or decryption scripts needed to recover strings.",
+      "labels": [
+        "obfuscation",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ef265a23-a3c2-4d3c-b412-45a7caf27d35",
+      "name": "Anti-Tampering Check",
+      "description": "AuraStealer verifies integrity using MapFileAndCheckSumW, comparing file checksum against PE header value. If tampering is detected, execution is halted.",
+      "x_mitre_detection": "Monitor for checksum validation API usage and tampering.",
+      "labels": [
+        "defense-evasion",
+        "anti-analysis"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--84a7480c-06b5-45f3-9d5c-76110efc6f5c",
+      "name": "Dialog Box Human Verification",
+      "description": "When unprotected, AuraStealer displays a dialog box requiring user input of a randomly generated code, impeding automated sandbox analysis.",
+      "x_mitre_detection": "Detection via automated sandbox instrumentation.",
+      "labels": [
+        "defense-evasion",
+        "anti-sandbox"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7a683f3a-ffb0-447b-bbae-2768d496f5af",
+      "name": "Geolocation Blacklist Check",
+      "description": "AuraStealer retrieves system/user language and country codes via WinAPI and terminates if a blacklisted country is detected (CIS, Baltic states).",
+      "x_mitre_detection": "Monitor locale-based execution logic.",
+      "labels": [
+        "defense-evasion",
+        "geo-fencing"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1c9023d8-113e-417f-bc92-aed8a51198e6",
+      "name": "Anti-Sandbox Checks",
+      "description": "Checks for hooked Sleep function, emulator artifacts (JohnDoe, HAL9TH), and blacklisted DLLs to evade sandbox and emulation environments.",
+      "x_mitre_detection": "Monitor for time-based checks and DLL enumeration.",
+      "labels": [
+        "defense-evasion",
+        "anti-sandbox"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b414534b-06c2-4bf0-b688-3e238b01be4c",
+      "name": "Anti-VM Checks",
+      "description": "AuraStealer checks for hypervisor presence (cpuid), desktop window size, physical memory, processor count, and process count to evade virtualized environments.",
+      "x_mitre_detection": "Monitor for environment fingerprinting and VM detection logic.",
+      "labels": [
+        "defense-evasion",
+        "anti-virtualization"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00fae58c-f287-49fa-8710-01cb833cfd88",
+      "name": "Anti-Debug Checks",
+      "description": "Inspects debug flags in PEB, KUSER_SHARED_DATA, creates debug objects, and checks for blacklisted processes. Also inspects opcodes at function return addresses for breakpoints.",
+      "x_mitre_detection": "Monitor for anti-debugging API usage and process enumeration.",
+      "labels": [
+        "defense-evasion",
+        "anti-debugging"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--96d274db-1f50-4995-91d9-f97c3d506b80",
+      "name": "Application-Bound Encryption Bypass",
+      "description": "AuraStealer bypasses Chromium Application-Bound Encryption by injecting shellcode into suspended browser processes and invoking IElevator::Decrypt, allowing theft of protected data.",
+      "x_mitre_detection": "Monitor for process injection and API abuse in browsers.",
+      "labels": [
+        "credential-access",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9dff49d6-b8cb-44c6-916f-c4537f428271",
+      "name": "Mutex Creation for Execution Control",
+      "description": "Creates dynamically generated mutexes based on build ID and time to prevent multiple instances and limit execution duration.",
+      "x_mitre_detection": "Monitor for mutex creation with changing names.",
+      "labels": [
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--36443797-4276-4cc1-9af3-7f38b18b1eff",
+      "name": "Encrypted Configuration and Network Traffic",
+      "description": "Configuration and exfiltrated data are encrypted using AES-CBC and Base64 encoding, with keys generated at runtime.",
+      "x_mitre_detection": "Monitor for AES-CBC encrypted traffic and config blocks.",
+      "labels": [
+        "defense-evasion",
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d958ae63-d84f-448f-b12d-1b809289e059",
+      "name": "Data Collection and Exfiltration",
+      "description": "Steals credentials, session tokens, recovery data, clipboard, screenshots, password manager databases, VPN configs, system/process info, and custom files. Exfiltrates data via encrypted network traffic to C2 servers.",
+      "x_mitre_detection": "Monitor for suspicious file access and encrypted outbound traffic.",
+      "labels": [
+        "collection",
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--719d8605-de76-4697-8f33-28b29f84ab4c",
+      "name": "Execution of Additional Payloads",
+      "description": "AuraStealer is capable of executing additional payloads via ShellExecuteExW after initial data theft.",
+      "x_mitre_detection": "Monitor for process creation and payload execution.",
+      "labels": [
+        "execution"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2729d5ed-1e2f-4257-acff-9532e8104893",
+      "name": "Scam-Yourself Campaign Delivery",
+      "description": "AuraStealer is distributed via TikTok videos disguised as product activation guides, instructing victims to run malicious PowerShell commands.",
+      "x_mitre_detection": "Monitor for suspicious PowerShell command execution from clipboard or user input.",
+      "labels": [
+        "initial-access",
+        "social-engineering"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "name": "Malicious Software/Extension Delivery",
+      "description": "AuraStealer is also delivered via cracked games/software and malicious browser/IDE extensions, sometimes alongside other malware such as GlassWorm.",
+      "x_mitre_detection": "Monitor for execution of packed binaries and suspicious extensions.",
+      "labels": [
+        "initial-access"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "name": "AuraStealer C2 Infrastructure",
+      "description": "AuraStealer uses a set of dedicated command and control servers for configuration retrieval and data exfiltration. The web panel is built on the Tabler template and supports Russian and English.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [
+        "AuraStealer Panel"
+      ],
+      "external_references": [
+        {
+          "source_name": "Gen Digital Blog",
+          "url": "https://www.gendigital.com/blog/news/defeating-aurastealer-practical-deobfuscation-workflows-for-modern-infostealers"
+        }
+      ],
+      "labels": [
+        "c2",
+        "malware-infrastructure"
+      ],
+      "x_infrastructure_hosts": [
+        "apachesrv.cfd",
+        "argametop.cfd",
+        "armydevice.shop",
+        "browsertools.shop",
+        "calibrated.cfd",
+        "chicagocigars.shop",
+        "clocktok.cfd",
+        "connupdate.cfd",
+        "coralpoint.cfd",
+        "cybertool.shop",
+        "gamedb.shop",
+        "glossmagazine.shop",
+        "goldenring.cfd",
+        "greenapi.cfd",
+        "magicupdate.cfd",
+        "mscloud.cfd",
+        "mushub.cfd",
+        "opencamping.shop",
+        "privateconnect.cfd",
+        "searchagent.cfd",
+        "searchservice.cfd",
+        "softytoys.shop",
+        "stmservice.cfd",
+        "sysrequest.cfd",
+        "systemupdate.cfd",
+        "unknowntool.shop",
+        "updservice.cfd"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--7844beb1-86a6-4197-b3e1-fcd747760832",
+      "hashes": {
+        "SHA-256": "0223E39D9C26F065FABB1BCB8A1A03FE439BB18B8D14816646D8D236A6FD46A3"
+      },
+      "name": "AuraStealer 1.0.0"
+    },
+    {
+      "type": "file",
+      "id": "file--1e6c307c-4654-4547-ad61-4abbd8864305",
+      "hashes": {
+        "SHA-256": "01E67139B59EED0FE1FCB4C66A9E88AD20DD8B55648C077AEC7FA2AE3431EA5F"
+      },
+      "name": "AuraStealer 1.1.0"
+    },
+    {
+      "type": "file",
+      "id": "file--ecc4ebc8-d4fa-4700-8017-ad69d1c7c432",
+      "hashes": {
+        "SHA-256": "9A46C8D884F4C59701D3AF7BEAD1E099E3DDEB1E2B75F98756CC5403D88BD370"
+      },
+      "name": "AuraStealer 1.1.1"
+    },
+    {
+      "type": "file",
+      "id": "file--6c4a8eff-0aa6-4fa7-bcc0-23cc5222c2cf",
+      "hashes": {
+        "SHA-256": "FD3875225C1AB60E6DC52FC8F94B4D389624592B7E7B57EE86E54CEBE5D3EB6A"
+      },
+      "name": "AuraStealer 1.1.2"
+    },
+    {
+      "type": "file",
+      "id": "file--f6d56bd7-73a6-4617-a58c-b97d71529d99",
+      "hashes": {
+        "SHA-256": "EC7BA08B1655963D6C9F7D996F3559C58893769A2C803DA1F99610A0AAA1224A"
+      },
+      "name": "AuraStealer 1.2.0"
+    },
+    {
+      "type": "file",
+      "id": "file--742e5162-6f3f-4d53-b1f8-2e1e0a383f97",
+      "hashes": {
+        "SHA-256": "0F691762DA02ABBD94046381ECEDFD8B31CCBB835DED6049E9D6CD2AFDD3F551"
+      },
+      "name": "AuraStealer 1.2.1"
+    },
+    {
+      "type": "file",
+      "id": "file--ed6bbf8c-fcdc-42ea-b471-b36d580a6c6a",
+      "hashes": {
+        "SHA-256": "F6E7341AB412EF16076901EA5835F61FBC3E94D0B9F2813355576BAD57376F29"
+      },
+      "name": "AuraStealer 1.2.3"
+    },
+    {
+      "type": "file",
+      "id": "file--ea8669db-d5e9-4fd7-8352-0995140fff42",
+      "hashes": {
+        "SHA-256": "D19274A14B905679DBD43FFB374CA0E11F9DC66FDB9E17236829A9A56F3E7D31"
+      },
+      "name": "AuraStealer 1.3.0"
+    },
+    {
+      "type": "file",
+      "id": "file--8c4f3596-90e8-4561-b8dc-2b10c242d1ce",
+      "hashes": {
+        "SHA-256": "F0F7AE1FC2D569B8B9267D2EC81F7E539DB4BEAF275BCA41962C27ECFA5361BF"
+      },
+      "name": "AuraStealer 1.4.0"
+    },
+    {
+      "type": "file",
+      "id": "file--1797e570-c3e1-4b7f-9699-9a26d90e0d98",
+      "hashes": {
+        "SHA-256": "158369AD66EA4BACEEE19051425C21F657FFC1B3483EA812323816B612F324BD"
+      },
+      "name": "AuraStealer 1.5.0"
+    },
+    {
+      "type": "file",
+      "id": "file--ff2ce677-997b-401d-b41a-2a758c740095",
+      "hashes": {
+        "SHA-256": "F816558972F62D206757BAD4A95EE75290615F520F3B24D814FFBCDFC6998C6C"
+      },
+      "name": "AuraStealer 1.5.1"
+    },
+    {
+      "type": "file",
+      "id": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "hashes": {
+        "SHA-256": "F7D0F099D042DE83AA2D0A13100640BEA49D28C77C2EB3087C0FB43EC0CD83D7"
+      },
+      "name": "AuraStealer 1.5.2"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--de637931-7fc8-4d34-a5c1-ddd3d08de2ed",
+      "value": "apachesrv.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0c36648d-9241-439c-8979-0c0d7ad6827b",
+      "value": "argametop.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1ab42881-c053-4d3d-bcdb-3a62d4830ad9",
+      "value": "armydevice.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3deb350a-bb17-416e-850d-869f0c0aec5d",
+      "value": "browsertools.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2b8c9cae-b7d5-48cd-af96-92792043c326",
+      "value": "calibrated.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--86e0abb0-1d28-43f9-a0be-53f40a6fe4f1",
+      "value": "chicagocigars.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fd7ec960-8724-406c-b547-2ab3df286d0d",
+      "value": "clocktok.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--968b3b4f-97f3-4009-a2f9-b9678b748d08",
+      "value": "connupdate.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d7e020d2-d5fb-46e6-99a9-377c5564c549",
+      "value": "coralpoint.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f5d67c32-3000-4a88-9201-fab0d7f7a9a4",
+      "value": "cybertool.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5b41d875-51b0-4d98-afe9-81139bcec942",
+      "value": "gamedb.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4d732c76-0f9b-4711-b48b-cb3bdf9da02e",
+      "value": "glossmagazine.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a2150c3-f371-4a7f-98aa-a8f6a08add88",
+      "value": "goldenring.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c48a6ac4-03be-41ae-b296-c9df0368786b",
+      "value": "greenapi.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e1156052-fc69-438a-8432-8942ad30cf5b",
+      "value": "magicupdate.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d8262d13-656e-457f-aa88-0786707e1a1e",
+      "value": "mscloud.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--88ce02d9-ba59-4553-b87a-acf7b3a09d77",
+      "value": "mushub.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e187ea17-b421-4473-b5a8-e8c3a8d37ef3",
+      "value": "opencamping.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d4323b1f-64c3-4ed7-8ec4-8ef2ef3918db",
+      "value": "privateconnect.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4d8c1950-aa24-4183-a293-04d4bc36aa18",
+      "value": "searchagent.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9bce7f9c-d269-43e3-8a4d-9f790fb64b89",
+      "value": "searchservice.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0c95ea11-813e-4cd1-a19e-28e8b4c73cbe",
+      "value": "softytoys.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e74f6174-eff9-43f6-841b-ee89e97efdbc",
+      "value": "stmservice.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a729bc2-e41a-4fc0-b180-43fdbe33353b",
+      "value": "sysrequest.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--038fc1dc-3d28-4ec0-8ee2-2e267ff2fcd7",
+      "value": "systemupdate.cfd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fad97b6f-ba45-442d-a907-e5d581d0974c",
+      "value": "unknowntool.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "value": "updservice.cfd"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efd46baa-7857-405b-a42d-ec88c4053e58",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer uses indirect control flow obfuscation to hinder analysis."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f91a2ed5-0466-4af6-b96c-a8e46b48b1c9",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer uses exception-driven API hashing to obfuscate WinAPI calls."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3662eaca-63e9-4047-b67f-df7a3751614f",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer encrypts most strings using stack-based XOR routines."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dc26b91b-b727-40d3-bdde-74f0260faef1",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer performs anti-tampering checks using MapFileAndCheckSumW."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d628996d-ec60-4684-a7e4-62d92e955c97",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer displays a dialog box for human verification when unprotected."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0ee4ebb-543c-4d10-9651-be7eb025b9bf",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer checks geolocation and terminates in blacklisted countries."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc758222-0236-4107-84af-073842b0fc8a",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer performs anti-sandbox checks including hooked Sleep and DLL enumeration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60be9bf6-9aea-4d46-b952-f152ea6d4477",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer performs anti-VM checks to evade virtualized environments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90a25632-4e66-4eff-959c-0cffc9202e1b",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer performs anti-debug checks including PEB inspection and process blacklist."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e41ca1a-8d67-4be2-9cb7-267a5b67bc08",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer bypasses Application-Bound Encryption in Chromium browsers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--996c99aa-16d7-4e9f-b15e-c764015d94cf",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer creates dynamically generated mutexes for execution control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16a54329-4435-473f-a2e0-42e9462b5006",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer encrypts configuration and network traffic using AES-CBC."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3560ebca-0cfb-4aac-be81-f3054141d242",
+      "relationship_type": "uses",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer collects and exfiltrates data to C2 servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f857e26-1693-4eb8-89bc-28d812c2b005",
+      "relationship_type": "executes",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer can execute additional payloads via ShellExecuteExW."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91da540d-0101-4306-893c-98658499c42c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer is delivered via Scam-Yourself campaigns using TikTok videos."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91a27536-db4a-4fec-93ed-83c4575f0536",
+      "relationship_type": "delivers",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "attack-pattern--9059e3c8-acea-44a2-ba8c-8927523ceb8a",
+      "description": "AuraStealer is delivered via cracked games/software and malicious extensions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e4ddee4-ee3e-4802-a19b-6cd1a79d1913",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "description": "AuraStealer communicates with its dedicated C2 infrastructure for configuration retrieval and data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--480208ca-7508-44e7-a133-bda26f25d5ef",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain apachesrv.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--378f25ef-6225-491c-a114-3ad1ccf02b6f",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain argametop.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f85560b-afab-497e-a5ed-3679b31b3db9",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain armydevice.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccea4983-5965-48f9-9c02-ed962131d75b",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain browsertools.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4734d5bf-0061-4069-a51e-326d0b9b1a87",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain calibrated.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f03c9df-3206-44e3-97a6-1a3bb6986658",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain chicagocigars.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0c78d59-8228-4a3f-8637-7b9dae098522",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain clocktok.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02bb027b-33e1-468a-ad5d-cb8e60410b8e",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain connupdate.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb1fc268-dca5-4e44-bc0f-00a904515723",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain coralpoint.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0db96898-9656-4dfd-aa5e-132a6fee2054",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain cybertool.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75e0b4af-ad05-43a6-a212-d0d1edfb8d14",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain gamedb.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--267e1277-08fa-4102-994e-ba3a92594b61",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain glossmagazine.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f45543dd-8a70-464f-906a-e36c80aa24ef",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain goldenring.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41001466-2e0b-4130-9a9e-24ff255462dc",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain greenapi.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c1107d51-b15b-477c-a536-3b8e08b7f233",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain magicupdate.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ba9ff2e-e92e-4ee6-84c9-6898aec7b91a",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain mscloud.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df243a49-a254-42a4-868b-357580675338",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain mushub.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edc6535e-dc16-4bae-b0f3-046ccaa75c46",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain opencamping.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--582f15a2-175b-4d89-8028-a9aaa779afa9",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain privateconnect.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71baabda-cd65-4df1-98c1-1cbc133e7cf4",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain searchagent.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5667e017-2de5-4afc-9aad-4f583bce2860",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain searchservice.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f141d37e-2a2e-481c-ba54-c1b931064040",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain softytoys.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d94b046a-6ccc-43d6-85fd-488e8e733a17",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain stmservice.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3aa28426-3559-404b-a984-7b7824c24ba8",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain sysrequest.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81066c06-1347-49f7-b424-d790a85a7f13",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain systemupdate.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02367c80-ee40-460c-9851-d1f9ab17cbc7",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain unknowntool.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fd2d006-7c68-49a7-80d4-bfeb4b272176",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--b0a432b2-73b8-48bc-ab1a-3dea951d55e6",
+      "target_ref": "domain-name--85d30bf6-9222-4bcc-9779-4b159f4d74f4",
+      "description": "AuraStealer C2 infrastructure uses the domain updservice.cfd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e0f93ed-d6d7-49f1-8009-45484d1307b7",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.0.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c5f5a4a-13e6-4732-b229-185e03726a96",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.1.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48e5cbc7-da09-4389-b425-ac08a204b5dd",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.1.1 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4ea0c2d-1cae-4604-afed-1b735b22b320",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.1.2 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9ff74aa-706b-4de7-977e-679dde36c3bd",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.2.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4969426f-9a93-4a05-ae4b-34a076999859",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.2.1 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a78ecbab-cfbf-442b-8985-ed0f34b51a81",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.2.3 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce463811-94d8-4ee7-8e8b-82926469ae71",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.3.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69493c2a-1612-4c12-bb64-618fcb908160",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.4.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61103955-7978-450b-858b-ef29cb949352",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.5.0 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5b5d9b9-5b09-4ea5-9f53-3096d127bf3e",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.5.1 is a sample of AuraStealer malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55fc08c5-4db3-46ae-aa3e-1e1011bed2bc",
+      "relationship_type": "drops",
+      "source_ref": "malware--abcff602-9390-4141-96a5-4b9234f0960e",
+      "target_ref": "file--8e622869-fd42-4570-b586-7ad4b40fb245",
+      "description": "AuraStealer 1.5.2 is a sample of AuraStealer malware."
+    }
+  ]
+}

@@ -1,0 +1,369 @@
+{
+  "type": "bundle",
+  "id": "bundle--962ea3a4-e58c-4368-80ec-54adc9d42f3c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--96079a1e-c5f1-484c-ae47-f00f84a6a03d",
+      "name": "Trojan.ChimeraWire",
+      "extensions": {
+        "malware": {
+          "family": "ChimeraWire",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3f087ca4-260c-4334-aa81-69f837ca34ac",
+      "name": "Trojan.DownLoader48.54600",
+      "extensions": {
+        "malware": {
+          "family": "DownLoader48",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c93dab2c-d80d-4d66-b072-4908321943af",
+      "name": "Trojan.DownLoader48.54318",
+      "extensions": {
+        "malware": {
+          "family": "DownLoader48",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--efffd443-b59e-4bf0-949b-16f0046f2186",
+      "name": "Trojan.DownLoader48.61444",
+      "extensions": {
+        "malware": {
+          "family": "DownLoader48",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9cf9f828-9128-402b-b1bb-929244f43a25",
+      "name": "Trojan.Starter.8377",
+      "extensions": {
+        "malware": {
+          "family": "Starter",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4155b710-08d4-4f22-8040-34fbdb81da3b",
+      "name": "Python.Downloader.208",
+      "extensions": {
+        "malware": {
+          "family": "Downloader",
+          "classification": "Trojan"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--297ee13e-862a-4721-8a87-1f7718a1a71c",
+      "name": "ISCSIEXE.dll",
+      "extensions": {
+        "malware": {
+          "family": "Trojan.Starter.8377",
+          "classification": "Trojan DLL"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d5c0d0ad-c14d-447d-b94d-49b9caac5b8a",
+      "name": "UpdateRingSettings.dll",
+      "extensions": {
+        "malware": {
+          "family": "Trojan.DownLoader48.54318",
+          "classification": "Trojan DLL"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--89431dc7-54ec-4304-b178-eff85941e918",
+      "name": "OneDrivePatcher.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--734b03e1-2575-4f57-8767-084a7311120a",
+      "name": "ATL.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--72a6f31b-2410-497e-9acf-49b68a25d399",
+      "name": "runs.vbs"
+    },
+    {
+      "type": "file",
+      "id": "file--815aaa0e-c71e-43b6-a07c-01e235e9d027",
+      "name": "Guardian.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ba5a4dd7-b533-4467-bb80-097d32e28854",
+      "name": "pythonw.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7e27435c-888a-48ec-a782-1f927fe3a1ad",
+      "name": "chrome-win.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "name": "chrome-win",
+      "extensions": {
+        "software": {
+          "product": "Google Chrome",
+          "platform": "Windows"
+        }
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--3780862b-1cac-41f7-ac49-fc9722ac84e8",
+      "name": "Google Chrome",
+      "cpe": "cpe:2.3:a:google:chrome:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--add955bf-cacf-4030-b7d4-e68968a42996",
+      "name": "NopeCHA",
+      "description": "Google Chrome extension for CAPTCHA solving"
+    },
+    {
+      "type": "software",
+      "id": "software--8f4d97fa-d212-4775-8249-7a718941da0d",
+      "name": "Buster",
+      "description": "Google Chrome extension for CAPTCHA solving"
+    },
+    {
+      "type": "url",
+      "id": "url--026eb515-db33-4732-864b-d9d348474c3f",
+      "value": "https://vms.drweb.ru/search/?q=Trojan.ChimeraWire.2&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--a3a8b325-6b36-4d2e-b78c-06306158833e",
+      "value": "https://vms.drweb.ru/search/?q=Trojan.DownLoader48.54600&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--8fd53647-a843-426e-aa9e-8e94d788c98e",
+      "value": "https://vms.drweb.ru/search/?q=Trojan.Starter.8377&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--3ef1561e-69ab-4a53-899e-390f601636f7",
+      "value": "https://vms.drweb.ru/search/?q=Python.Downloader.208&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--8f6d654f-5f5f-4697-8a68-4a7b68806ee7",
+      "value": "https://vms.drweb.ru/search/?q=Trojan.DownLoader48.54318&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--75ce0ad5-3a8e-4caa-a27c-c2050b3766a0",
+      "value": "https://vms.drweb.ru/search/?q=Trojan.DownLoader48.61444&lng=ru"
+    },
+    {
+      "type": "url",
+      "id": "url--b591d90a-62b5-455e-bcda-2c5603383792",
+      "value": "https://github.com/DoctorWebLtd/malware-iocs/blob/master/Trojan.ChimeraWire/README.adoc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01387096-9f5b-4068-82bd-81f32caea53a",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Trojan.DownLoader48.54600 delivers Python.Downloader.208 as part of the first infection chain.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fff27117-bb0d-403e-83dc-eb85a9c5ef3f",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.DownLoader48.54600 drops ISCSIEXE.dll (Trojan.Starter.8377) as part of the first infection chain.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9674aa62-1e93-428b-82c8-034542c53dda",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Python.Downloader.208 delivers Trojan.Starter.8377 (ISCSIEXE.dll) for privilege escalation.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d1ae74c-dd7f-4d9e-982e-1eca517954ac",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Python.Downloader.208 drops runs.vbs to enable repeated execution with elevated privileges.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7581c89c-d08a-4cd0-b585-7cb11f25169d",
+      "relationship_type": "executes",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.Starter.8377 executes runs.vbs to re-launch Python.Downloader.208 with administrator privileges.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7abfae97-8d03-4d8b-a925-4a1796157105",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Python.Downloader.208 delivers Trojan.DownLoader48.54318 (UpdateRingSettings.dll) as the next stage.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25ed16c0-a225-40c6-a53b-2d8d137b4b2b",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Python.Downloader.208 drops UpdateRingSettings.dll (Trojan.DownLoader48.54318) from the onedrive.zip archive.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8a2d3d3-fed3-4e17-ab1d-cca359a84b7c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Trojan.DownLoader48.54318 delivers the final payload Trojan.ChimeraWire after decrypting and unpacking the shellcode.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef3cc925-4f9d-4442-ab11-52b954f71e47",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.DownLoader48.54318 drops the Trojan.ChimeraWire executable as the final stage.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7d4ee06-a161-49b4-a7d5-530bccc362c7",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Trojan.DownLoader48.61444 delivers both Trojan.DownLoader48.54318 (UpdateRingSettings.dll) and Python.Downloader.208 as part of the second infection chain.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--29a2438e-a053-493c-9ab2-1368586ff246",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.DownLoader48.61444 drops UpdateRingSettings.dll (Trojan.DownLoader48.54318) and Python.Downloader.208 from ZIP archives.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7c86fe2-8038-46ea-978d-e7c4f661088f",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.DownLoader48.61444 drops Guardian.exe (renamed pythonw.exe) for launching Python.Downloader.208.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02f0c9aa-defb-4e55-9df4-2f1dd48ff79a",
+      "relationship_type": "drops",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.DownLoader48.61444 drops OneDrivePatcher.exe and ATL.dll as part of the infection chain.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57f43f04-c2d3-4f17-b09e-e7badfbbe23e",
+      "relationship_type": "delivers",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "description": "Trojan.DownLoader48.61444 delivers Trojan.ChimeraWire as the final payload after multi-stage infection.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--411ecea3-bb28-4da7-82ee-9ccf0f608510",
+      "relationship_type": "downloads",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "file--e59c425a-bed7-4deb-b933-89acb8c55f47",
+      "description": "Trojan.ChimeraWire downloads chrome-win.zip containing Google Chrome for Windows.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9087e980-d8a6-462e-84d1-58bd14770b27",
+      "relationship_type": "installs",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "software--8f4d97fa-d212-4775-8249-7a718941da0d",
+      "description": "Trojan.ChimeraWire installs Google Chrome browser from chrome-win.zip.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04c47d27-1f13-4192-b794-aacac70564fc",
+      "relationship_type": "installs",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "software--8f4d97fa-d212-4775-8249-7a718941da0d",
+      "description": "Trojan.ChimeraWire installs the NopeCHA extension in Google Chrome for automated CAPTCHA solving.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88fc2347-ba75-455c-b9a2-539e9f3cad41",
+      "relationship_type": "installs",
+      "source_ref": "malware--ae67ba0e-0209-413a-b003-a31be914ec28",
+      "target_ref": "software--8f4d97fa-d212-4775-8249-7a718941da0d",
+      "description": "Trojan.ChimeraWire installs the Buster extension in Google Chrome for automated CAPTCHA solving.",
+      "created": "2025-12-08T00:00:00Z",
+      "modified": "2025-12-08T00:00:00Z"
+    }
+  ]
+}

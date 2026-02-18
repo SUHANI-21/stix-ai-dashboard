@@ -1,0 +1,681 @@
+{
+  "type": "bundle",
+  "id": "bundle--815a0187-3c46-4d12-859a-84efb81f85b1",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fb961d98-c3e9-411f-9984-59d28f98d348",
+      "name": "Archive via Utility",
+      "description": "Threat actor used 7-Zip to compress sensitive files prior to exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1560.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1d394430-e90a-44a7-842e-9cf057dc8cf2",
+      "name": "Exfiltration Over Web Service",
+      "description": "Threat actor exfiltrated archived files via the temporary file-sharing service temp.sh.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1567"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b68329a6-ef95-4ef7-a6a2-94716edc8470",
+      "name": "Data Encrypted for Impact",
+      "description": "Lynx ransomware encrypted files on backup and file servers for impact.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1486"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--59e09383-e784-47e7-bf10-7e06d71649c0",
+      "name": "Inhibit System Recovery",
+      "description": "Threat actor deleted backup jobs and removed backups from Veeam Backup & Replication to inhibit system recovery.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1490"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--faec69d1-3d91-4955-b8d0-d4310fbee22f",
+      "name": "Valid Accounts",
+      "description": "Threat actor used previously compromised credentials, including domain admin accounts, for initial access and lateral movement.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1078"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--29e46592-dbc3-4978-aad3-14bef2faa018",
+      "name": "Remote Desktop Protocol",
+      "description": "Threat actor used RDP for initial access, lateral movement, and execution of post-compromise activities.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1021.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--26f30e07-cd21-4e79-a838-8b43712a63ce",
+      "name": "Remote Access Software",
+      "description": "AnyDesk remote access software was installed for persistence.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1219"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--07147ac1-2044-4e58-8a47-bf126da125f1",
+      "name": "Network Service Discovery",
+      "description": "SoftPerfect Network Scanner and NetExec were used for network service and host discovery.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1046"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2aa366b4-4518-4493-8b4f-1770d22673a3",
+      "name": "Domain Account",
+      "description": "Threat actor created new domain accounts with look-alike names and added them to privileged groups for persistence and privilege escalation.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1136.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--69949714-0e20-412d-b8df-8256db523c7c",
+      "name": "Additional Local or Domain Groups",
+      "description": "Threat actor added newly created accounts to high-privilege domain groups, including Domain Admins.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1098.007"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--12ade8a3-c18d-4f78-af5b-8eb2bdefc4c9",
+      "name": "Windows Command Shell",
+      "description": "Threat actor used cmd.exe for hands-on-keyboard activity, discovery, and execution of ransomware.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d8484e48-cdae-4f0d-a65b-c37f177ef8d3",
+      "name": "PowerShell",
+      "description": "Threat actor used PowerShell for command execution during post-compromise activity.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d1d0cab7-da44-4a74-82b3-5c1b275c8c1c",
+      "name": "Query Registry",
+      "description": "Threat actor queried Windows registry for hostnames and virtualization infrastructure.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--89a67e02-f8cd-492f-995e-2bd5fff04eb8",
+      "name": "System Information Discovery",
+      "description": "Threat actor ran systeminfo and other commands for system information discovery.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--02f36592-38a0-4e8e-8741-cf7fb1b67ea5",
+      "name": "System Network Configuration Discovery",
+      "description": "Threat actor ran ipconfig and route print to discover network configuration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1016"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cb7cd6fe-a7ab-424d-a7e4-7d511a1c0e42",
+      "name": "Network Share Discovery",
+      "description": "Threat actor used SoftPerfect Network Scanner to enumerate network shares and check for write access.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1135"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8c4e5ec5-936a-4aa5-bbb8-5fe8091e0910",
+      "name": "Remote System Discovery",
+      "description": "Threat actor discovered remote systems using network scanning tools and enumeration commands.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1018"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "name": "Windows Service",
+      "description": "AnyDesk was installed as a Windows service for persistence.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1543.003"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--f557058c-c35b-44e8-a007-48a498217ff7",
+      "name": "Railnet LLC / Virtualine",
+      "description": "Railnet LLC is a legal front for Virtualine, a Russia-based bulletproof hosting provider whose infrastructure was used for RDP connections during the intrusion.",
+      "infrastructure_types": [
+        "hosting"
+      ],
+      "external_references": [
+        {
+          "source_name": "Intrinsec",
+          "url": "https://www.intrinsec.com/en/from-espionage-to-psyops-tracking-operations-and-bulletproof-providers-of-uac/"
+        }
+      ],
+      "aliases": [
+        "Virtualine"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--81fbe1bd-8a14-4bee-b212-828b354e7f6b",
+      "name": "Initial Access Broker",
+      "description": "Initial access broker likely provided compromised credentials to the threat actor, enabling initial access and lateral movement.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "id": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "name": "Threat Actor",
+      "description": "Unidentified threat actor who conducted the intrusion, lateral movement, data collection, exfiltration, and ransomware deployment.",
+      "identity_class": "unknown"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4d89b127-017d-4ab7-b7ee-63bb5f2cfa7d",
+      "value": "195.211.190.189"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--51fc9c4a-b74d-40bb-ac7e-1336fbd99e89",
+      "value": "77.90.153.30"
+    },
+    {
+      "type": "file",
+      "id": "file--48038efd-3221-4823-90c0-1bd20fbbdeed",
+      "name": "netscan.exe",
+      "hashes": {
+        "MD5": "3073af95dfc18361caebccd69d0021a2",
+        "SHA-1": "efe8b9ff7ff93780c9162959a4c1e5ecf6e840a4",
+        "SHA-256": "517288e12c05a92e483e6d80b9136c19bc58c46851720680bb6d1b7016034c37"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dcf4b4a5-5f48-448f-a750-9272a238ca19",
+      "name": "nxc.exe",
+      "hashes": {
+        "MD5": "7532ff90145b8c59dc9440bf43dc87a5",
+        "SHA-1": "2b4b11d3ecffd82ed44db652cdd65733224f8e34",
+        "SHA-256": "6285d32a9491a0084da85a384a11e15e203badf67b1deed54155f02b7338b108"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--12673927-3902-44fb-b2f8-20966125a41c",
+      "name": "w.exe",
+      "hashes": {
+        "MD5": "e2179046b86deca297ebf7398b95e438",
+        "SHA-1": "3e01df0155a539fe6d802ee9e9226d8c77fd96c9",
+        "SHA-256": "07b36c1660deb223749a8ac151676d8924bc13aa59e6712a3c14a2df5237264a"
+      }
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--5be579ce-5aea-4469-970e-f8da65289bf7",
+      "account_login": "administratr",
+      "is_privileged": true,
+      "account_type": "domain"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--53b41478-d17b-46ca-84ad-aada48901297",
+      "account_login": "Lookalike 1",
+      "is_privileged": true,
+      "account_type": "domain"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--6c409ab5-2924-45ae-accd-6a1df4eeb371",
+      "account_login": "Lookalike 2",
+      "is_privileged": true,
+      "account_type": "domain"
+    },
+    {
+      "type": "software",
+      "id": "software--0e22ce42-76c6-491f-8e74-bacf4f47d205",
+      "name": "SoftPerfect Network Scanner",
+      "cpe": "cpe:2.3:a:softperfect:network_scanner:7.2.7:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--1c2b3da0-d0d0-4119-8f78-ed3813b4d9cb",
+      "name": "AnyDesk",
+      "cpe": "cpe:2.3:a:anydesk:anydesk:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--ab60d34b-43f7-4f9b-b252-3399e1ecbbcc",
+      "name": "NetExec"
+    },
+    {
+      "type": "software",
+      "id": "software--7447af75-7d9c-46bf-94aa-9f8533cf9a02",
+      "name": "Lynx ransomware"
+    },
+    {
+      "type": "software",
+      "id": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "name": "7-Zip"
+    },
+    {
+      "type": "url",
+      "id": "url--31c0814a-56e0-4cd6-ab36-7d988f1a964d",
+      "value": "http://temp.sh"
+    },
+    {
+      "type": "hostname",
+      "id": "hostname--ed4d5e0b-a70a-410c-b145-45e503c4c686",
+      "value": "DESKTOP-BUL6K1U"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb4cd79d-8a22-4174-b82b-86261461d96a",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "description": "Threat actor used Lynx ransomware to encrypt files on backup and file servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b952af21-8655-4676-a97b-652fb9d7c801",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "description": "Threat actor used SoftPerfect Network Scanner for network and share discovery, privilege enumeration, and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f5c179b-a682-450f-b2fd-2868cd1be9a6",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "description": "Threat actor used NetExec for SMB enumeration, password spraying, and host discovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8cb2ed3-27fc-4e5b-b45c-452397690fb6",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "description": "Threat actor installed AnyDesk remote access client for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f802d689-627b-4065-98ef-f802088333f2",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "tool--a2f8bb38-fcd4-4eb7-b0a9-c523ddf62d5f",
+      "description": "Threat actor used 7-Zip to compress and archive files prior to exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8909285-52f7-4f40-a3e8-419b20d37aeb",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used 7-Zip to compress sensitive files prior to exfiltration (Archive via Utility)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d25fba8-9bd4-4026-b988-36588d2985c6",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor exfiltrated archived files via the temporary file-sharing service temp.sh (Exfiltration Over Web Service)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1eadb87a-8fd2-47e6-b5b9-1a70f3948ab1",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor encrypted files for impact using Lynx ransomware (Data Encrypted for Impact)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bcc079bf-0237-490d-98b5-e3e62849114c",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor deleted backup jobs and removed backups from Veeam Backup & Replication to inhibit system recovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d21e98e-6774-4015-ac1b-9cbe6d771806",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used previously compromised credentials, including domain admin accounts, for initial access and lateral movement (Valid Accounts)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34dfe301-2913-4068-8447-549aae96296d",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used RDP for initial access, lateral movement, and execution of post-compromise activities (Remote Desktop Protocol)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--196c810d-7e10-448e-a530-01e4b9cb111b",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor installed AnyDesk remote access software for persistence (Remote Access Software)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87cdb288-90b8-459d-972a-9c74015f4987",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used SoftPerfect Network Scanner and NetExec for network service and host discovery (Network Service Discovery)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e19b938b-a1e1-47d8-8dca-9f4c20487f06",
+      "relationship_type": "creates",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "user-account--6c409ab5-2924-45ae-accd-6a1df4eeb371",
+      "description": "Threat actor created the 'administratr' domain account for persistence and privilege escalation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--62f6e9a3-719a-46dc-8aa4-5e64b2e66c68",
+      "relationship_type": "creates",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "user-account--6c409ab5-2924-45ae-accd-6a1df4eeb371",
+      "description": "Threat actor created the 'Lookalike 1' domain account for persistence and privilege escalation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4c3d7d6-f855-48f4-b883-faff734d25d0",
+      "relationship_type": "creates",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "user-account--6c409ab5-2924-45ae-accd-6a1df4eeb371",
+      "description": "Threat actor created the 'Lookalike 2' domain account for persistence and privilege escalation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3a57c55-e468-4fe2-9db3-9dc021798f48",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor created new domain accounts with look-alike names and added them to privileged groups for persistence and privilege escalation (Domain Account)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bba2f7f3-e5a1-4de7-a629-c35d987c507b",
+      "relationship_type": "adds",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor added newly created accounts to high-privilege domain groups, including Domain Admins (Additional Local or Domain Groups)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f36d5702-0847-4340-90f7-3a01c506b526",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used cmd.exe for hands-on-keyboard activity, discovery, and execution of ransomware (Windows Command Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--112a0cff-c8b0-481d-b1db-a3930a4cc658",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used PowerShell for command execution during post-compromise activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0befabdc-319e-4d87-93b0-fcb1f9436217",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor queried Windows registry for hostnames and virtualization infrastructure (Query Registry)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e7c6731-a766-4589-a6b8-8ec0105c0421",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor ran systeminfo and other commands for system information discovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--684dee7b-ba30-4b06-807e-6042fa9f9a1c",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor ran ipconfig and route print to discover network configuration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b8b7c4a-96ca-44fe-8b33-87e74cb09260",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor used SoftPerfect Network Scanner to enumerate network shares and check for write access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f1e79da-cbc1-47a2-9c32-6c561c4da0b7",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor discovered remote systems using network scanning tools and enumeration commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0aa0c5d-675f-4068-a14a-7e5342471b3f",
+      "relationship_type": "installs",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "attack-pattern--a6dae95e-822a-4f65-b329-fce312720465",
+      "description": "Threat actor installed AnyDesk as a Windows service for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45fefc45-e8b0-4e94-a8df-d72c74dd44ab",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "file--12673927-3902-44fb-b2f8-20966125a41c",
+      "description": "SoftPerfect Network Scanner was deployed as netscan.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb689739-5a43-47c2-859f-aba47b39c535",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "file--12673927-3902-44fb-b2f8-20966125a41c",
+      "description": "NetExec was deployed as nxc.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07482805-0e67-44c3-8d5e-e0c624b832d1",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "file--12673927-3902-44fb-b2f8-20966125a41c",
+      "description": "Lynx ransomware was deployed as w.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--266bbca0-e08d-46fa-8af4-83908e54deb0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "description": "SoftPerfect Network Scanner malware is the same as the SoftPerfect Network Scanner software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d374180-b478-4ffc-b7b2-89746de5e5d1",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "description": "AnyDesk malware is the same as the AnyDesk software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3bc5d44f-8689-487d-aa15-4b578e57f15c",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "description": "NetExec malware is the same as the NetExec software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e83c539-117e-4d68-805f-ad35e3db8298",
+      "relationship_type": "uses",
+      "source_ref": "malware--e5282e70-8e89-41dd-8869-b161da08f9fd",
+      "target_ref": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "description": "Lynx ransomware malware is the same as the Lynx ransomware software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79151355-9761-4091-aff7-7223edf64eb0",
+      "relationship_type": "uses",
+      "source_ref": "tool--a2f8bb38-fcd4-4eb7-b0a9-c523ddf62d5f",
+      "target_ref": "software--7f983ca8-eb2b-4cd8-938b-6145e9a582b8",
+      "description": "7-Zip tool is the same as the 7-Zip software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb289718-c01e-4cee-9e75-4835b217750e",
+      "relationship_type": "communicates-with",
+      "source_ref": "ipv4-addr--51fc9c4a-b74d-40bb-ac7e-1336fbd99e89",
+      "target_ref": "infrastructure--f557058c-c35b-44e8-a007-48a498217ff7",
+      "description": "IP address 195.211.190.189 was used for RDP connections and is hosted on Railnet LLC / Virtualine infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a476b32-1d2b-4fd3-9cd4-fb3fce0cb6c8",
+      "relationship_type": "communicates-with",
+      "source_ref": "ipv4-addr--51fc9c4a-b74d-40bb-ac7e-1336fbd99e89",
+      "target_ref": "infrastructure--f557058c-c35b-44e8-a007-48a498217ff7",
+      "description": "IP address 77.90.153.30 was used for RDP connections and is hosted on Railnet LLC / Virtualine infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08ebb3a8-0402-4922-bd02-ed4bede253ad",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--f557058c-c35b-44e8-a007-48a498217ff7",
+      "target_ref": "ipv4-addr--51fc9c4a-b74d-40bb-ac7e-1336fbd99e89",
+      "description": "Railnet LLC / Virtualine infrastructure hosted IP address 195.211.190.189."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69976388-7f14-4a63-b6e0-14388599032e",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--f557058c-c35b-44e8-a007-48a498217ff7",
+      "target_ref": "ipv4-addr--51fc9c4a-b74d-40bb-ac7e-1336fbd99e89",
+      "description": "Railnet LLC / Virtualine infrastructure hosted IP address 77.90.153.30."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0573379-9713-4a19-9188-f5fefbc2e73a",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "url--31c0814a-56e0-4cd6-ab36-7d988f1a964d",
+      "description": "Threat actor used temp.sh for exfiltration of archived files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--615e7d0a-c94f-407d-8fff-c7d65cdffbb6",
+      "relationship_type": "uses",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "hostname--ed4d5e0b-a70a-410c-b145-45e503c4c686",
+      "description": "Threat actor connected from hostname DESKTOP-BUL6K1U during RDP sessions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c60c763-d09e-4cd6-ace3-d88d47fe30c9",
+      "relationship_type": "provides",
+      "source_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "target_ref": "identity--933c5854-2249-4909-85e0-38311c3a4c7d",
+      "description": "Initial Access Broker likely provided compromised credentials to the threat actor."
+    }
+  ]
+}

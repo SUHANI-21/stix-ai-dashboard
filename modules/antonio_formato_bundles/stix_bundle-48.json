@@ -1,0 +1,167 @@
+{
+  "type": "bundle",
+  "id": "bundle--e76ed9d5-aaf0-4b38-b317-ac8fd814f8c6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "domain-name",
+      "id": "domain-name--1e969ef2-1dec-4ef6-a228-e7766329dbcd",
+      "value": "meetingtv.us"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8b987552-7206-4ea0-a886-c20cd2bc45d6",
+      "value": "webinarstvus.cloudfunctions.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5009f115-02ae-490a-9501-fd606fff7efd",
+      "value": "zoocorder.firebaseio.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--aa44e482-78e3-4523-afcd-26efc1c15f77",
+      "value": "infinitynewtab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8bfb276a-fd26-437c-8260-e5ba7eb19187",
+      "value": "infinitytab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b8204d1b-2917-4926-a16b-6c2422c8db6a",
+      "value": "jt2x.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0e32775c-5d14-4c34-beaa-1dbc4406e702",
+      "value": "zhuayuya.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--cbc958db-7ca7-48ca-a759-c2ed7e58fa66",
+      "value": "58.144.143.27"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--43719c5c-9a03-49f8-96c9-d0309ddaa86e",
+      "value": "muo.cc"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9f521b00-bd95-4d97-a00d-b0dc1335b08e",
+      "value": "websiteshare.cn"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--06e7c87b-b6d1-45b2-8780-a8dd13d3bd20",
+      "value": "diytab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--90f332ab-77ee-4aaa-80cb-c6e344058225",
+      "value": "userscss.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f1e15438-7ae1-4668-8235-4844f4252bce",
+      "value": "istartnewtab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--32ed5f10-3713-4b54-8b82-7d3c96a5a4d2",
+      "value": "letsearchesp.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--33c6752c-4d6a-4734-8f05-6f336df55106",
+      "value": "policies.extfans.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2cd19e6b-6d62-4ebc-ab60-45fb3a24d422",
+      "value": "gmzdaily.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--545ee01c-a13e-4590-919e-a1ad10ac4932",
+      "value": "api.jt2x.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8160b513-b46b-48d9-99c6-99129fd1e098",
+      "value": "bcaicai.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f6335de3-1c33-43fb-add0-5c9540b75235",
+      "value": "liveupdt.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--18b017a3-f7c7-4445-8723-0ea4eb0e29af",
+      "value": "dealctr.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--89420165-bcc4-4ad3-ba97-8990617554c2",
+      "value": "mitarchive.info"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cb1b8a98-deef-4230-b87a-5b05d77ad102",
+      "value": "zoomcorder.com"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--824547c2-562c-4936-bb82-811b75bdf58a",
+      "value": "1305302314@qq.com"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--e715e11e-c4fe-442f-b33b-840a7d5a2430",
+      "value": "mail@imba97.cn"
+    },
+    {
+      "type": "software",
+      "id": "software--0359b8b4-16fd-4ddb-8603-fe143d26faff",
+      "name": "Twitter X Video Downloader",
+      "cpe": "cpe:2.3:a:twitter_x_video_downloader:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--0a29c666-ee23-4794-9641-cb8ed86669fe",
+      "name": "Chrome Audio Capture",
+      "cpe": "cpe:2.3:a:chrome_audio_capture:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--ae7f13b4-5355-408d-bc25-5a7d312420df",
+      "name": "New Tab - Customized Dashboard",
+      "cpe": "cpe:2.3:a:new_tab_customized_dashboard:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--c843b5d9-859e-4dc6-92e8-ee5760e280d1",
+      "name": "WeTab",
+      "cpe": "cpe:2.3:a:wetab:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--0f634693-93ad-4b63-bed7-4d8f472d3019",
+      "name": "Google Translate by charliesmithbons",
+      "cpe": "cpe:2.3:a:google_translate:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--71495ca6-0d0d-4d57-aa51-c7de27ca6887",
+      "name": "xtwitterdownloader@benimaddonum.com"
+    },
+    {
+      "type": "software",
+      "id": "software--8bbc699b-36c7-4097-801b-65e32b41c537",
+      "name": "nickyfeng2@edgetranslate.com"
+    }
+  ]
+}

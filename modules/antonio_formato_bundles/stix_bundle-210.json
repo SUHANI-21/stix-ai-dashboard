@@ -1,0 +1,253 @@
+{
+  "type": "bundle",
+  "id": "bundle--d9b4a63d-bcd0-4802-a759-775412d8edba",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--7d6e7c76-e79f-427e-85dd-abfc392e4fa8",
+      "name": "Neptune Loader",
+      "description": "Neptune Loader is an innovative HTTP loader project that provides robust and efficient control over computer systems through commands administered via user-friendly web panel. First advertised in November 2023 by a forum member named 'M0HX' on hackerforums[.]net. Controllers can be fingerprinted via open port 3000 with HTTP.TITLE 'Neptune - Login'.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "first_seen": "2023-11-01",
+      "labels": [
+        "neptune",
+        "malware",
+        "loader",
+        "c2"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cypho Analysis",
+          "url": "https://www.cypho.io/blogs/neptune-loader-exposing-hidden-realms-malware-command-control-vulnerability-undercover-effected-machines"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--63c4954b-4c84-4366-b50c-f6dc7adbd17e",
+      "name": "Gremlin Stealer",
+      "description": "Gremlin Stealer is a malware family first observed in the wild since at least March 2025. It bypasses Chrome cookie V20 protection and steals web browser cookies, stored autofill data, clipboard data, and credentials from applications like FTP clients, Steam, Discord, and Telegram. Controllers can be fingerprinted via open port 80 with HTTP.TITLE 'Gremlin Access'.",
+      "malware_types": [
+        "stealer"
+      ],
+      "first_seen": "2025-03-01",
+      "labels": [
+        "gremlin",
+        "malware",
+        "stealer",
+        "c2"
+      ],
+      "external_references": [
+        {
+          "source_name": "Palo Alto Networks Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/new-malware-gremlin-stealer-for-sale-on-telegram/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--8879c2be-15bf-4f9f-a8f9-e1cdd41928ec",
+      "name": "SilentCryptoMiner",
+      "description": "SilentCryptoMiner is a publicly available malware used by cybercriminals to perform unauthorized cryptocurrency mining. It has been used in multiple campaigns, including distribution via YouTube tutorial videos and SEO poisoning. Managed via Unam Web Panel.",
+      "malware_types": [
+        "cryptominer"
+      ],
+      "labels": [
+        "cryptominer",
+        "malware",
+        "mining"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.com/silentcryptominer-spreads-through-blackmail-on-youtube/115788/"
+        },
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.com/miner-campaign-misuses-open-source-siem-agent/114022/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "name": "Unam Web Panel",
+      "description": "Unam Web Panel is a web panel used to monitor and manage SilentCryptoMiner. First released in November 2021 by UnamSanctum. Controllers can be fingerprinted via open port 80 with HTTP.TITLE 'Unam Web Panel - Login'.",
+      "malware_types": [
+        "remote-access-trojan",
+        "webshell"
+      ],
+      "first_seen": "2021-11-01",
+      "labels": [
+        "unam",
+        "malware",
+        "web-panel",
+        "c2"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/UnamSanctam/UnamWebPanel"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6912bae0-3fe5-4a39-ba0e-bba4a3758a96",
+      "value": "196.251.72.217"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4880f834-7e9e-4a6c-8f5c-294baafcf12c",
+      "value": "196.251.72.216"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9aec6802-eacb-4a37-b2c8-2950226c994d",
+      "value": "196.251.72.215"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--391a8c9a-30e5-437e-8529-871c963b3e88",
+      "value": "217.119.129.92"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--abb4766b-825b-48ae-9e0c-a17360b2d4dd",
+      "value": "207.244.199.46"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--102b99e9-4d55-43f4-9551-546540f5a3ed",
+      "value": "62.60.248.110"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3eff4207-07f1-4d15-96bd-ab816649e129",
+      "value": "103.251.164.121"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--36b65c04-9557-4f8d-9e8a-66c35087cb51",
+      "value": "129.151.135.50"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--572184af-4b3c-4d01-a39d-f18eab8c6df1",
+      "value": "196.251.84.193"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11",
+      "value": "196.251.90.74"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da69874f-6377-4b19-868f-a53e0ac0fea7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--316e93c7-7001-4c29-bdad-40e5609dca89",
+      "target_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebc08b0c-d0cb-4e08-a459-782c699744a2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--316e93c7-7001-4c29-bdad-40e5609dca89",
+      "target_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7346c45-ebad-4966-b745-b92f72ae3013",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--316e93c7-7001-4c29-bdad-40e5609dca89",
+      "target_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3be190d9-0ca2-4515-a060-689c8f6dc100",
+      "relationship_type": "uses",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8d7c1efe-9ba5-4304-b40a-e354f2126223",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6bf84eb-c502-49ce-9835-6d283cdbc51d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4e38ae3-9134-44e3-9e20-12eaddfb1205",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa922e5b-d15d-4203-9ccb-f4b3bd49e503",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b66458f2-f48d-450a-979c-575cf3e52919",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89cf2a1d-4e6a-47d3-b11c-20fdfadc3947",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb295481-16cb-41e3-bb8f-b8cc03fca35a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2a1025b-89df-4d4f-8731-34c981ce06ff",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab6554c0-b578-4b47-9939-af29355d6bbf",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9686d3c5-3720-49f0-a2df-5901b16fc861",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bdd66037-8980-4c32-8a2e-944e2e75d555",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9ec157c8-acb1-4338-b63d-7644ae20e579",
+      "target_ref": "ipv4-addr--f79dee74-8da6-4f9a-a8e4-22aa75a66a11"
+    }
+  ]
+}

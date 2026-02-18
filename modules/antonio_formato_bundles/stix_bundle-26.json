@@ -1,0 +1,190 @@
+{
+  "type": "bundle",
+  "id": "bundle--b04b253c-4859-4703-9dba-8570621dd591",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "created": "2026-01-14T06:15:05.631319Z",
+      "modified": "2026-01-14T06:15:05.631319Z",
+      "name": "Palo Alto Networks Unit 42",
+      "description": "Palo Alto Networks Unit 42 is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T06:15:05.631319Z",
+      "modified": "2026-01-14T06:15:05.631319Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T06:15:05.631319Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--92303dff-77b8-a67d-742a-5d17b27f1076",
+      "created": "2026-01-14T06:15:21.475224Z",
+      "modified": "2026-01-14T06:15:21.475224Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Malicious Model Metadata for Remote Code Execution",
+      "description": "Attackers exploit vulnerabilities in popular open-source AI/ML Python libraries (NeMo, Uni2TS, FlexTok) by crafting model files with malicious metadata. These libraries use metadata to configure models and pipelines, but in vulnerable versions, metadata is executed as code during model loading. By embedding arbitrary code in the metadata section of a model file, an attacker can ensure that when a victim loads the model using a vulnerable library, the embedded code is executed automatically. This technique leverages the trust placed in model files and the automated processing of metadata, enabling remote code execution without user interaction beyond loading the model. The attack is effective against any system or workflow that loads models from untrusted sources, such as public repositories like HuggingFace.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7c73e0ff-a90e-2229-bb9a-f6d08a10653b",
+      "created": "2026-01-14T06:15:21.475346Z",
+      "modified": "2026-01-14T06:15:21.475346Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Abuse of Third-Party Library Class Instantiation via Metadata",
+      "description": "The attack leverages the fact that a shared third-party library used by the affected AI/ML frameworks instantiates Python classes directly from metadata provided in model files. Vulnerable implementations do not sanitize or validate this metadata, allowing attackers to specify class names and parameters that result in the instantiation and execution of arbitrary code. This technique is highly effective in environments where models are frequently exchanged and loaded, as it bypasses traditional security controls and exploits the dynamic nature of Python class loading. The attacker’s code is executed in the context of the application loading the model, potentially leading to full system compromise.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b26bc8f8-7f19-f85e-6f1b-a244ca19034d",
+      "created": "2026-01-14T06:15:21.475430Z",
+      "modified": "2026-01-14T06:15:21.475430Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Supply Chain Attack via Compromised AI/ML Model Repositories",
+      "description": "By uploading maliciously crafted model files to popular public repositories such as HuggingFace, attackers can target downstream users who download and use these models with vulnerable libraries. The widespread use and trust in these repositories amplify the risk, as tens of millions of downloads occur for affected models. This supply chain attack does not require direct access to victim systems; instead, it relies on the distribution and adoption of compromised models. Attackers can achieve broad impact by poisoning the supply chain, leading to remote code execution on any system that loads the malicious models.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e587f614-6ebf-bdef-dc02-8c591643f220",
+      "created": "2026-01-14T06:15:30.630160Z",
+      "modified": "2026-01-14T06:15:30.630160Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "NeMo",
+      "description": "NeMo, a PyTorch-based AI/ML framework by NVIDIA, is abused in this attack by loading model files with malicious metadata. Vulnerable versions execute arbitrary code embedded in the metadata when the model is loaded, enabling remote code execution.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--d4d9bc6c-a03e-ab2b-aeac-9d8a7a487934",
+      "created": "2026-01-14T06:15:30.630279Z",
+      "modified": "2026-01-14T06:15:30.630279Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Uni2TS",
+      "description": "Uni2TS, a PyTorch library by Salesforce, is exploited by attackers who craft model files with malicious metadata. When loaded by vulnerable versions, the library executes attacker-supplied code, resulting in remote code execution.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e095bd90-2cda-ae15-2d8c-4c754c8f3fcc",
+      "created": "2026-01-14T06:15:30.630335Z",
+      "modified": "2026-01-14T06:15:30.630335Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "FlexTok",
+      "description": "FlexTok, a Python-based AI/ML framework by Apple, is abused by attackers embedding malicious code in model metadata. Vulnerable versions of FlexTok execute this code during model loading, allowing remote code execution.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--1afa0edd-d6a7-9d80-0660-a83196a20cf8",
+      "created": "2026-01-14T06:15:30.630389Z",
+      "modified": "2026-01-14T06:15:30.630389Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "PyTorch",
+      "description": "PyTorch, an open-source machine learning library, is indirectly abused as the underlying framework for the vulnerable libraries. Attackers leverage PyTorch's model loading mechanisms to trigger execution of malicious code embedded in model files.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--7cbc23e6-4574-d679-24cd-fffc4b5d2b72",
+      "created": "2026-01-14T06:15:30.630640Z",
+      "modified": "2026-01-14T06:15:30.630640Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Remote Code Execution With Modern AI/ML Formats and Libraries",
+      "description": "This report contains technical analysis and indicators from: https://unit42.paloaltonetworks.com/rce-vulnerabilities-in-ai-python-libraries/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T06:15:30.630640Z",
+      "object_refs": [
+        "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--92303dff-77b8-a67d-742a-5d17b27f1076",
+        "attack-pattern--7c73e0ff-a90e-2229-bb9a-f6d08a10653b",
+        "attack-pattern--b26bc8f8-7f19-f85e-6f1b-a244ca19034d",
+        "tool--e587f614-6ebf-bdef-dc02-8c591643f220",
+        "tool--d4d9bc6c-a03e-ab2b-aeac-9d8a7a487934",
+        "tool--e095bd90-2cda-ae15-2d8c-4c754c8f3fcc",
+        "tool--1afa0edd-d6a7-9d80-0660-a83196a20cf8"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

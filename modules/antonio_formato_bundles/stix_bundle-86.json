@@ -1,0 +1,583 @@
+{
+  "type": "bundle",
+  "id": "bundle--877916b3-5a5e-45b6-b764-1b6ae71c9483",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "name": "LongNosedGoblin",
+      "aliases": [
+        "LongNosedGoblin"
+      ],
+      "description": "A China-aligned APT group discovered by ESET Research, active since at least September 2023, targeting governmental entities in Southeast Asia and Japan for cyberespionage. The group uses Group Policy for malware deployment and lateral movement, and cloud services like OneDrive and Google Drive for C&C.",
+      "first_seen": "2023-09-01T00:00:00Z",
+      "goals": [
+        "Cyberespionage",
+        "Information theft from governmental entities"
+      ],
+      "primary_motivation": "espionage",
+      "secondary_motivations": [],
+      "resource_level": "organization",
+      "external_references": [
+        {
+          "source_name": "ESET Research",
+          "url": "https://www.welivesecurity.com/en/eset-research/longnosedgoblin-tries-sniff-out-governmental-affairs-southeast-asia-japan/"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/groups/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--1fedd16f-c31a-4d1d-b120-e844507c174c",
+      "hashes": {
+        "SHA-1": "4E3F6E9D0F443F4C42974A0551EEE957B498DA3D"
+      },
+      "name": "History.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--691f9c88-7adb-46cb-bffd-28d696019df0",
+      "hashes": {
+        "SHA-1": "CD745BD2636F607CC4FB9389535BF3579321CA72"
+      },
+      "name": "History.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--e1c3ab5c-152d-41a0-b9ae-c00a830148f8",
+      "hashes": {
+        "SHA-1": "154A35DD4117DB760699C2092AFB307E94008506"
+      },
+      "name": "Registry.plo"
+    },
+    {
+      "type": "file",
+      "id": "file--0672e4ae-1a1b-4143-8ecd-206a9e8a2bc6",
+      "hashes": {
+        "SHA-1": "B1D4A283A9CCC9E34993DD2093A904AFBD88B9B9"
+      },
+      "name": "Registry.pol"
+    },
+    {
+      "type": "file",
+      "id": "file--39bce60b-9a63-4de3-bb6a-a00befd35241",
+      "hashes": {
+        "SHA-1": "77D2A8CB316B7A470E76E163551A00BB16A696C5"
+      },
+      "name": "Registry.plo"
+    },
+    {
+      "type": "file",
+      "id": "file--7c7cd92a-49d3-40fe-bcc1-886ebe2b86cb",
+      "hashes": {
+        "SHA-1": "F93E449C5520C4718E284375C54BE33711505985"
+      },
+      "name": "Registry.pol"
+    },
+    {
+      "type": "file",
+      "id": "file--2909cdc2-e66e-4e4f-8461-ee190118d0b0",
+      "hashes": {
+        "SHA-1": "1959E2198D6F81B2604DF7AC1F508AEB7A6FA07E"
+      },
+      "name": "SharedReg.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--fd6dfe50-bc2c-4bb7-adf1-783c29f69faf",
+      "hashes": {
+        "SHA-1": "E0B44715BC4C327C04E63F881ECC087B7ACBD306"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--19af98cf-4824-4935-9555-d7d004b18b19",
+      "hashes": {
+        "SHA-1": "43C8AE8561E7E3BF9CD748136C091099E5CBEEEE"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d875d0ce-be7f-4e71-9950-6d604f3364ab",
+      "hashes": {
+        "SHA-1": "D11FC2D6159CB8BA392B145B3EE4ADFA15DB4C83"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--09abbb71-d30b-484f-a345-27ed502dbf26",
+      "hashes": {
+        "SHA-1": "A0A80AC293645076EBAE393FF0A6A4229E2EDE1C"
+      },
+      "name": "pmp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3730545a-168e-448e-954e-c597970d69ea",
+      "hashes": {
+        "SHA-1": "DDBBAE33E04A49D17DD24D85B637667B4407AE19"
+      },
+      "name": "SERV.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--f479fa12-ef2f-4a69-8d5a-852c779e77c0",
+      "hashes": {
+        "SHA-1": "60158C509446893B3B57D40DC4B4B3795FCDF369"
+      },
+      "name": "HPSupportAssistant.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--a168ddc6-fd5b-428a-ab14-a970ede48625",
+      "hashes": {
+        "SHA-1": "F5B7440EE25116A49EC5EE82507B353880217AC1"
+      },
+      "name": "RTLWVern.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ae7e7cf5-fa7b-4d34-b173-cbd8b4d4cf7d",
+      "hashes": {
+        "SHA-1": "85939C56BFCACD0993E6FB9F7CFD6137601FB7D4"
+      },
+      "name": "hpSmartAdapter.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--8c897ed6-5ad5-44da-972f-2e5b3a8509f0",
+      "hashes": {
+        "SHA-1": "C66F9FEC0F8CBF577840944F61198A75B3E2A58C"
+      },
+      "name": "hputils.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--806341d9-883c-4ba2-8387-9754f9468eb4",
+      "hashes": {
+        "SHA-1": "4C2FCCE3BAB4144D90C741A6D77ADF209C786B54"
+      },
+      "name": "IGCCSvc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e893ed40-675b-4680-a29e-65b4efc0084f",
+      "hashes": {
+        "SHA-1": "161A25CB0B8FA998BF1BDEE31F06F24876453CDF"
+      },
+      "name": "AdobeHelper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--bf88cb9f-6f55-468b-b489-0d80d4261485",
+      "hashes": {
+        "SHA-1": "4D61A9FBBCC4F7A37BE21548B55BB5B9B837F83B"
+      },
+      "name": "msi.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--0da813e4-87a5-4943-b08e-15399496344c",
+      "hashes": {
+        "SHA-1": "5AE440805719250AAEFEE9B39DACD23D2FB573CD"
+      },
+      "name": "TCOCertified.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ebaeae7e-deca-47d8-b9a7-e5f9cacd83e4",
+      "hashes": {
+        "SHA-1": "E93D32C739825519A10A4C52C5F1EE33936E4FDB"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4ad89e00-4dfb-453a-b4e3-1eaec4031230",
+      "hashes": {
+        "SHA-1": "212126896D38C1EE57320FB6940FED7A6E30D9EA"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--66fbc431-03c4-4a5c-93cf-b94008ca9b6c",
+      "hashes": {
+        "SHA-1": "CFFE15AA4D0F9E6577CCB509ACE9C588937943F2"
+      },
+      "name": "HPNDFInterface.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b565d49e-9cd9-4c4e-847b-e824c035812a",
+      "hashes": {
+        "SHA-1": "6AC22CE60B706E3B9A7927633116911E1087C0D4"
+      },
+      "name": "bemsvc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e2c32d63-87cc-4ecb-baff-950188b55ad4",
+      "hashes": {
+        "SHA-1": "2C1959DD85424CEDC96B1BB86A95FCA440CB9E36"
+      },
+      "name": "HPDeviceCheck.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d92afe1d-2f6a-46b3-b856-b04ea4218299",
+      "hashes": {
+        "SHA-1": "46107B1292B830D9BCEBBDA6EEDB32FBC05707B4"
+      },
+      "name": "HP.OCF.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--cd3fadca-5307-4f10-a5f5-95fb11f43794",
+      "hashes": {
+        "SHA-1": "581464978C29B2BC79C65766E62011C94D2CBEAB"
+      },
+      "name": "HP.OCF.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--a649f937-811c-45f3-b5cd-05a59812aad8",
+      "hashes": {
+        "SHA-1": "0D91A0E52212EC44E32C47F7760AF3B473B72798"
+      },
+      "name": "ax_installer.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e38e4457-ddf1-488c-9ebb-3df88316011d",
+      "hashes": {
+        "SHA-1": "48D715466857FB0C6CD0249DE6D960FC199438E1"
+      },
+      "name": "btdevmanager.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c36614b1-8eaf-4dc0-a542-c7992120937a",
+      "hashes": {
+        "SHA-1": "563677CFACD328EA2478836E58A8BD0DF11206A3"
+      },
+      "name": "info.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--1cfc4535-6a97-4f65-9e13-9f825edb26c0",
+      "hashes": {
+        "SHA-1": "AC2264C56121141DAF751A3852CD34F3ACB1D63C"
+      },
+      "name": "ntrtscan.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--56a2d962-f64a-49e6-aa8e-c73a2502897b",
+      "hashes": {
+        "SHA-1": "70A615BC580522E1EEE4B61394DC7A247FE47022"
+      },
+      "name": "ntrtscan.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5eb3ac19-9ae8-4fcb-932b-513c90fa877e",
+      "hashes": {
+        "SHA-1": "E9C5E4AA335DFBD25786234A58CE4C9C551D1A41"
+      },
+      "name": "oci.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "hashes": {
+        "SHA-1": "EC9CEB599DF3BDFFAD536900D0E6D48E2E5FF12B"
+      },
+      "name": "mscorsvc.dll"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0417d1aa-b722-415d-9475-4eb638c497ac",
+      "value": "118.107.234.26"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--38ac9452-1825-4de8-b21b-61c60b89e359",
+      "value": "www.sslvpnserver.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--18381ed9-684f-456e-ae62-fc5b5d31a603",
+      "value": "103.159.132.30"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ef2f480c-e2a4-443a-8a2f-bd8d5b337c65",
+      "value": "www.threadstub.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c0dc8c93-43ee-46d7-a2e4-a23257e5f284",
+      "value": "101.99.88.113"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--346ce235-b861-477d-9e61-eb6e2c0d42ff",
+      "value": "www.blazenewso.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--00bccba0-5fd2-4966-822e-a4bbe6e18118",
+      "value": "118.107.234.29"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--cfc8f7e0-0ad7-40c0-ba6b-043d1bcd4fd4",
+      "value": "101.99.88.188"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--93ae4971-9fcd-4c09-abbc-45c4fac91b8b",
+      "value": "www.privacypolicy-my.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--55b2d00c-24b8-4986-a0e9-e2e3b6660e82",
+      "value": "38.54.17.131"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73782c99-998b-4e4a-85f4-7654d237f88c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses NosyHistorian to collect browser history from victim machines."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6443b28e-3830-4789-9bde-8e2e1b2e1aa1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses NosyDoor backdoor for C&C, execution of commands, and exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95cc10c2-0ac0-405a-be0a-acc8e69fabad",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses NosyStealer to exfiltrate browser data from Chrome and Edge."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e552536-9a57-4d48-af77-22b5786e0abc",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses NosyDownloader to deploy additional malware and tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--053c131c-cf55-4869-9a6e-165e643428ac",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses NosyLogger for keylogging and local data collection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--babedb24-cbfa-42a5-9716-fc93fe643869",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin deploys ReverseSocks5 for traffic tunneling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd4c81e5-bab5-4be6-9cc2-ad66beeb4e45",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--fc422fe3-cb13-4a69-ab96-f4d78f76a427",
+      "target_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "description": "LongNosedGoblin uses Argument runner to launch applications such as FFmpeg for audio/video capture."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94e7f37c-801c-48a8-bfa9-2d7815f25bfe",
+      "relationship_type": "uses",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyHistorian is deployed as History.ini."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e1928ea-be58-4da0-b814-268d0e55dbdb",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyDoor stage 1 dropper is deployed as Registry.plo."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c45ad8da-43db-41c8-9b7b-02bba8f1f5a0",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyDoor stage 1 dropper is deployed as Registry.pol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d23fdb1c-a545-46f0-8f6b-f67fb5581353",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyDoor stage 2 uses SharedReg.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ce42ee8-775f-4646-8105-e6335a48acf9",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyDoor stage 3 payloads are represented by files with SHA-1s E0B44715BC4C327C04E63F881ECC087B7ACBD306, 43C8AE8561E7E3BF9CD748136C091099E5CBEEEE, and D11FC2D6159CB8BA392B145B3EE4ADFA15DB4C83."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4f93f12-4d61-4047-af79-a5fce99460ba",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyStealer stage 1 is pmp.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aadd96d3-0dcb-4b3d-a645-369f4bab6783",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyStealer stage 2 is SERV.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1a7f954-4937-4091-9d0e-30452dbae6bf",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyStealer stage 2 is msi.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e8bba11-125a-4337-b8eb-e5b5d49a94a5",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyStealer stage 3 is file with SHA-1 212126896D38C1EE57320FB6940FED7A6E30D9EA."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e95bef1-f391-468f-b1ad-970b7236a7e1",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyStealer stage 4 is file with SHA-1 E93D32C739825519A10A4C52C5F1EE33936E4FDB."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a6e03f2-cb1f-42a6-8aa4-5fbd75bc8ed0",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyDownloader is patched into benign files such as HPSupportAssistant.exe, RTLWVern.exe, hpSmartAdapter.exe, hputils.exe, HPNDFInterface.exe, bemsvc.exe, HPDeviceCheck.exe, HP.OCF.exe, ax_installer.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97aa9409-8d6e-4c5d-986d-bbe63ef14e0a",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "NosyLogger is deployed as IGCCSvc.exe and btdevmanager.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08dc553d-2107-4977-a4ef-e84e460ba0bb",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "ReverseSocks5 is deployed as AdobeHelper.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed8dd134-c5ec-4988-8e05-f9bf828fa90a",
+      "relationship_type": "drops",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "file--a72da013-12b1-421e-b68c-613aa1190d70",
+      "description": "Argument runner is deployed as TCOCertified.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48445c7e-d3db-41bf-b344-cd4e16abdde7",
+      "relationship_type": "uses",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "tool--971a6c62-b1d4-4c6d-9d8c-8a480acbda2d",
+      "description": "Argument runner launches FFmpeg for audio and video capture."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d8e1aed6-0970-4dcb-8b0b-60142b7b1f97",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "ipv4-addr--55b2d00c-24b8-4986-a0e9-e2e3b6660e82",
+      "description": "ReverseSocks5 communicates with 118.107.234.29 as a proxy server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1900d84-22a9-4697-ae15-6c4e4802d23a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "domain-name--93ae4971-9fcd-4c09-abbc-45c4fac91b8b",
+      "description": "NosyDownloader communicates with www.sslvpnserver.com as a C&C server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d18e1c4-bf0c-4233-900e-ee085889d3f3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "domain-name--93ae4971-9fcd-4c09-abbc-45c4fac91b8b",
+      "description": "NosyDownloader communicates with www.threadstub.com as a C&C server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--330939e6-ea44-47c4-b378-2f89fbf422e9",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "domain-name--93ae4971-9fcd-4c09-abbc-45c4fac91b8b",
+      "description": "NosyDownloader communicates with www.blazenewso.com as a C&C server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--874eea07-4db2-4111-837b-8e206447c01d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "domain-name--93ae4971-9fcd-4c09-abbc-45c4fac91b8b",
+      "description": "NosyDownloader communicates with www.privacypolicy-my.com as a C&C server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b2752f0-1837-4081-9430-17c7880c7c3b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "ipv4-addr--55b2d00c-24b8-4986-a0e9-e2e3b6660e82",
+      "description": "NosyDownloader communicates with 118.107.234.26, 103.159.132.30, 101.99.88.113, 101.99.88.188 as C&C servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff4f9ea6-bc9d-49ba-85ae-7ee4241c37c5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--42cb2ab1-cc7f-4b83-8fde-2122b29570b5",
+      "target_ref": "ipv4-addr--55b2d00c-24b8-4986-a0e9-e2e3b6660e82",
+      "description": "Loader of unknown malware (possibly Cobalt Strike) communicates with 38.54.17.131."
+    }
+  ]
+}

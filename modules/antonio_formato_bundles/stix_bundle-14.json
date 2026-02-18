@@ -1,0 +1,2339 @@
+{
+  "type": "bundle",
+  "id": "bundle--655fcaf3-aeab-4e4d-bb98-2b867155170b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "created": "2026-01-17T20:51:24.989715Z",
+      "modified": "2026-01-17T20:51:24.989715Z",
+      "name": "AhnLab SEcurity intelligence Center (ASEC)",
+      "description": "AhnLab SEcurity intelligence Center (ASEC) is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T20:51:24.989715Z",
+      "modified": "2026-01-17T20:51:24.989715Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T20:51:24.989715Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c3179ce8-b703-d23e-e235-0ae798fa0d3a",
+      "created": "2026-01-17T20:51:47.970279Z",
+      "modified": "2026-01-17T20:51:47.970279Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Brute Force and Credential Stuffing on MS-SQL Servers",
+      "description": "Trigona and other threat actors target externally exposed MS-SQL servers with weak or default credentials. The attackers employ brute force and dictionary attacks to gain unauthorized access to these servers. Once login is successful, they proceed to execute further malicious activities. The campaign specifically exploits the fact that many database servers are configured with simple or guessable passwords, making them highly susceptible to automated credential attacks. This initial access vector is a recurring theme in the observed incidents, with attackers leveraging automated tools to rapidly test large numbers of username and password combinations until access is achieved.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1110/001/",
+          "external_id": "T1110.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3d58c97e-d8e3-46a3-b716-949415be5bfd",
+      "created": "2026-01-17T20:51:47.970375Z",
+      "modified": "2026-01-17T20:51:47.970375Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "CLR Shell Execution for Payload Deployment",
+      "description": "After gaining access to the MS-SQL server, attackers utilize the CLR Shell technique to execute arbitrary commands and deploy additional payloads. The CLR Shell leverages SQL Server’s ability to run .NET code, allowing the attacker to execute system-level commands directly from the database context. This method is used to install further malware, such as backdoors, privilege escalation tools, and remote access utilities. The attackers’ consistent use of CLR Shell highlights their preference for leveraging built-in server functionalities to maintain stealth and flexibility in their operations.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1505/002/",
+          "external_id": "T1505.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1b133d58-4f79-e08c-0006-ba87786f54cc",
+      "created": "2026-01-17T20:51:47.970472Z",
+      "modified": "2026-01-17T20:51:47.970472Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Abuse of BCP Utility for Local File Creation from Database",
+      "description": "Attackers exploit the Bulk Copy Program (BCP) utility (bcp.exe) to export malicious binaries stored in SQL tables to the local filesystem. They first inject or store the malware payloads as binary objects in a database table (e.g., 'uGnzBdZbsi'), then use BCP commands to write these binaries to disk, specifying format files (e.g., 'FODsOZKgAU.txt') for proper extraction. This technique allows the attacker to bypass traditional network-based delivery mechanisms and leverage legitimate administrative tools to stage malware directly on the compromised server, reducing the likelihood of detection by network security controls.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "created": "2026-01-17T20:51:47.970524Z",
+      "modified": "2026-01-17T20:51:47.970524Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Malware Download via Curl, Bitsadmin, and PowerShell",
+      "description": "Following initial compromise, attackers use various legitimate command-line utilities—such as Curl, Bitsadmin, and PowerShell—to download additional malicious payloads from remote servers. These tools are invoked with specific URLs pointing to attacker-controlled infrastructure, and the downloaded files are saved to locations on the infected system. This approach enables flexible and reliable delivery of malware components, including backdoors, miners, and remote access tools, while blending in with normal administrative activity and evading some endpoint protections.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1105/",
+          "external_id": "T1105"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "created": "2026-01-17T20:51:47.970577Z",
+      "modified": "2026-01-17T20:51:47.970577Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Installation and Abuse of Legitimate Remote Access Tools (AnyDesk, RustDesk, Teramind)",
+      "description": "Attackers install legitimate remote access software such as AnyDesk, RustDesk, and Teramind on compromised servers to establish persistent, interactive control. These tools are deployed via silent installation commands and batch scripts, often placed in system directories. By using widely recognized remote management software, attackers can maintain access even if other malware components are detected and removed. The campaign also involves modifying registry keys to facilitate remote logon and creating new user accounts specifically for remote access, further entrenching their foothold.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1219/",
+          "external_id": "T1219"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--4ad80e6b-7119-947c-a7df-86a53ec04113",
+      "created": "2026-01-17T20:51:47.970628Z",
+      "modified": "2026-01-17T20:51:47.970628Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Creation of New Local Users for RDP Access",
+      "description": "Custom batch scripts are used to create new local user accounts (e.g., 'Remote99', 'Ladmin', 'erp2') with permissions to access the system via Remote Desktop Protocol (RDP). These scripts also modify system settings and registry keys to enable credential logon and facilitate remote access. By establishing new privileged accounts, attackers ensure continued access and control, even if the original compromised account is disabled or removed. This technique is a key aspect of the persistence and privilege escalation strategy observed in the campaign.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1136/001/",
+          "external_id": "T1136.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+      "created": "2026-01-17T20:51:47.970683Z",
+      "modified": "2026-01-17T20:51:47.970683Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Deployment of Rust-based Scanner Malware for Network Reconnaissance",
+      "description": "Attackers deploy custom Rust-based scanner malware on infected servers to collect system information and scan for additional targets. The malware gathers IP and geolocation data via 'ip-api.com' and reports this information to a C&C server. It then performs targeted scans for RDP and MS-SQL services within the network, enabling lateral movement and identification of further vulnerable systems. The use of custom-built scanners demonstrates a tailored approach to internal reconnaissance and expansion within compromised environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1046/",
+          "external_id": "T1046"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c78bd3f3-4ff8-25bd-465c-9b60ec9be72f",
+      "created": "2026-01-17T20:51:47.970785Z",
+      "modified": "2026-01-17T20:51:47.970785Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Installation of Proxyware and CoinMiner for Resource Monetization",
+      "description": "Beyond traditional data theft and ransomware, attackers install proxyware and cryptocurrency mining software on compromised servers. Proxyware leverages the server’s available internet bandwidth to generate revenue by sharing it with external parties, while CoinMiner exploits CPU resources to mine cryptocurrency. These monetization techniques are deployed alongside other malware, maximizing the financial gain from each compromised asset and often running covertly in the background to avoid detection.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1496/",
+          "external_id": "T1496"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2a9aa73f-8dab-b578-9757-8d1a7310d4f7",
+      "created": "2026-01-17T20:51:47.970872Z",
+      "modified": "2026-01-17T20:51:47.970872Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Use of Custom StressTester for Service Availability and SQL Injection Testing",
+      "description": "Attackers utilize a custom-built tool named StressTester, written in Go, to assess the performance and vulnerability of targeted services. The tool is capable of sending GET and POST requests, as well as executing SQL injection attempts against MS-SQL servers. This allows attackers to test the robustness of services, identify exploitable injection points, and potentially disrupt normal operations. The deployment of StressTester prior to launching brute force or injection attacks indicates a deliberate, reconnaissance-driven approach to exploitation.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "created": "2026-01-17T20:52:11.614672Z",
+      "modified": "2026-01-17T20:52:11.614672Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "CLR Shell",
+      "description": "CLR Shell is used by attackers to execute arbitrary commands on compromised MS-SQL servers, enabling further payload delivery and system control.",
+      "malware_types": [
+        "backdoor",
+        "trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "CLRShell"
+      ],
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "lateral-movement"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "created": "2026-01-17T20:52:11.614794Z",
+      "modified": "2026-01-17T20:52:11.614794Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Potato",
+      "description": "Potato-type malware is used for privilege escalation on Windows systems, allowing attackers to gain higher-level access after initial compromise.",
+      "malware_types": [
+        "privilege-escalation",
+        "trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Juicy Potato",
+        "Rotten Potato"
+      ],
+      "x_capabilities": [
+        "privilege-escalation",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "created": "2026-01-17T20:52:11.614851Z",
+      "modified": "2026-01-17T20:52:11.614851Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "CoinMiner",
+      "description": "CoinMiner is deployed to hijack system resources for unauthorized cryptocurrency mining, exploiting compromised servers for financial gain.",
+      "malware_types": [
+        "trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Cryptominer"
+      ],
+      "x_capabilities": [
+        "resource-hijacking",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "created": "2026-01-17T20:52:11.614902Z",
+      "modified": "2026-01-17T20:52:11.614902Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Proxyware",
+      "description": "Proxyware is used to monetize compromised servers by sharing their internet bandwidth with external parties, often without the owner's consent.",
+      "malware_types": [
+        "trojan",
+        "adware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "resource-hijacking",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "created": "2026-01-17T20:52:11.614950Z",
+      "modified": "2026-01-17T20:52:11.614950Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Gh0st RAT",
+      "description": "Gh0st RAT is installed to provide attackers with persistent remote access and control over infected systems, enabling data theft and further exploitation.",
+      "malware_types": [
+        "remote-access-trojan",
+        "backdoor"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Gh0stRAT"
+      ],
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "created": "2026-01-17T20:52:11.614997Z",
+      "modified": "2026-01-17T20:52:11.614997Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Cobalt Strike",
+      "description": "Cobalt Strike is a penetration testing tool frequently abused by attackers to establish command-and-control channels and facilitate lateral movement within networks.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "lateral-movement",
+        "remote-access"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "created": "2026-01-17T20:52:11.615056Z",
+      "modified": "2026-01-17T20:52:11.615056Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Meterpreter",
+      "description": "Meterpreter is a payload used for remote access and post-exploitation, allowing attackers to control compromised systems and execute further malicious actions.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "lateral-movement"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "created": "2026-01-17T20:52:11.615105Z",
+      "modified": "2026-01-17T20:52:11.615105Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Trigona",
+      "description": "Trigona ransomware targets exposed MS-SQL servers, encrypting files and demanding ransom payments from victims after gaining access via brute force or credential attacks.",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "encryption",
+        "data-exfiltration",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "created": "2026-01-17T20:52:11.615153Z",
+      "modified": "2026-01-17T20:52:11.615153Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Teramind",
+      "description": "Teramind, typically a legitimate RMM tool, is abused by attackers to remotely monitor and control infected systems, facilitating ongoing surveillance and access.",
+      "malware_types": [
+        "remote-access-trojan",
+        "spyware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "persistence",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "created": "2026-01-17T20:52:11.615199Z",
+      "modified": "2026-01-17T20:52:11.615199Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "AnyDesk",
+      "description": "AnyDesk, a legitimate remote desktop application, is used maliciously by attackers to establish persistent remote access to compromised servers.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "created": "2026-01-17T20:52:11.615252Z",
+      "modified": "2026-01-17T20:52:11.615252Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Rust-based Scanner",
+      "description": "A custom Rust-based scanner is deployed to enumerate and brute-force RDP and MS-SQL services, collecting system and geolocation data for further exploitation.",
+      "malware_types": [
+        "scanner",
+        "trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "lateral-movement"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "created": "2026-01-17T20:52:11.615297Z",
+      "modified": "2026-01-17T20:52:11.615297Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "StressTester",
+      "description": "StressTester, written in Go, is used to test internet speed and perform SQL injection requests, aiding attackers in identifying vulnerable systems and services.",
+      "malware_types": [
+        "scanner",
+        "trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "data-exfiltration",
+        "lateral-movement"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "created": "2026-01-17T20:52:15.635085Z",
+      "modified": "2026-01-17T20:52:15.635085Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Trigona",
+      "description": "Trigona is a ransomware threat actor attributed in the article as actively targeting exposed MS-SQL servers with weak credentials. The group uses a combination of custom malware, remote management tools, and brute-force techniques to gain access, deploy ransomware, and maintain persistence.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Compromise MS-SQL servers",
+        "Deploy ransomware",
+        "Establish remote access via tools like AnyDesk and Teramind",
+        "Create persistent access accounts",
+        "Exfiltrate or monetize system resources"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "created": "2026-01-17T20:52:28.591162Z",
+      "modified": "2026-01-17T20:52:28.591162Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Cobalt Strike",
+      "description": "Used to deploy backdoors on compromised MS-SQL servers, enabling attackers to gain remote control and execute commands post-exploitation.",
+      "tool_types": [
+        "remote-access",
+        "exploitation",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "created": "2026-01-17T20:52:28.591250Z",
+      "modified": "2026-01-17T20:52:28.591250Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Meterpreter",
+      "description": "Installed as a backdoor to provide attackers with interactive control over infected servers, allowing further exploitation and lateral movement.",
+      "tool_types": [
+        "remote-access",
+        "exploitation",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "created": "2026-01-17T20:52:28.591307Z",
+      "modified": "2026-01-17T20:52:28.591307Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "AnyDesk",
+      "description": "Abused to establish persistent remote access to compromised servers by installing the legitimate remote desktop software silently.",
+      "tool_types": [
+        "remote-access",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "created": "2026-01-17T20:52:28.591358Z",
+      "modified": "2026-01-17T20:52:28.591358Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "RustDesk",
+      "description": "Used as a legitimate remote desktop tool to maintain unauthorized access to infected systems.",
+      "tool_types": [
+        "remote-access",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "created": "2026-01-17T20:52:28.591407Z",
+      "modified": "2026-01-17T20:52:28.591407Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Teramind",
+      "description": "Installed as a remote monitoring and management (RMM) tool to provide attackers with ongoing surveillance and control over compromised hosts.",
+      "tool_types": [
+        "remote-access",
+        "information-gathering",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "created": "2026-01-17T20:52:28.591456Z",
+      "modified": "2026-01-17T20:52:28.591456Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PowerShell",
+      "description": "Used to execute commands and download malicious payloads (e.g., via Invoke-WebRequest) on compromised servers.",
+      "tool_types": [
+        "execution",
+        "information-gathering",
+        "download"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "created": "2026-01-17T20:52:28.591503Z",
+      "modified": "2026-01-17T20:52:28.591503Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "BCP (Bulk Copy Program)",
+      "description": "Abused to extract malicious binaries stored in SQL tables and write them as executable files on the local system.",
+      "tool_types": [
+        "execution",
+        "exploitation",
+        "resource-development"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "created": "2026-01-17T20:52:28.591562Z",
+      "modified": "2026-01-17T20:52:28.591562Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "curl",
+      "description": "Used to download malicious executables from remote servers to the infected host.",
+      "tool_types": [
+        "download",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d099db08-5594-0a4a-3a68-bcc3d0d3d7f1",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "description": "Trigona uses CLR Shell malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e0501260-0ed4-10cf-beca-45037eec23e2",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "description": "Trigona uses Potato malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4cc58dea-c640-7de4-3235-d58eed627101",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "description": "Trigona uses CoinMiner malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b93f5ece-8502-5f4f-ae54-eac3d20d3217",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "description": "Trigona uses Proxyware malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c9d8c922-fdb3-b47c-c72f-3da0e41a434e",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "description": "Trigona uses Gh0st RAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--43e5a28d-1ec3-d7a7-1cc5-2692e0a3aa13",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Trigona uses Cobalt Strike malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f9ad1524-75f5-51b1-0321-64a6364fec7f",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Trigona uses Meterpreter malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--be9cc47d-b313-5209-c04a-fbb3b46ea437",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "description": "Trigona uses Trigona malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d765fb4c-7faa-a325-a90f-5031dde53712",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Trigona uses Teramind malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--69a1802a-9678-e7f9-3a50-4166c377bf33",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Trigona uses AnyDesk malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--39d68d20-0ce8-d4ab-ae26-1a28ebce3513",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "description": "Trigona uses Rust-based Scanner malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--49a48d66-d3a4-f225-9102-6f1f7723221e",
+      "created": "2026-01-17T20:52:28.591893Z",
+      "modified": "2026-01-17T20:52:28.591893Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "description": "Trigona uses StressTester malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a6b07d82-9646-bd3e-6204-b06fd67cf84f",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--c3179ce8-b703-d23e-e235-0ae798fa0d3a",
+      "description": "Trigona employs 'Brute Force and Credential Stuffing on MS-SQL Servers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4b4080ef-f962-769d-36a6-1d13e64aad7c",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--3d58c97e-d8e3-46a3-b716-949415be5bfd",
+      "description": "Trigona employs 'CLR Shell Execution for Payload Deployment' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--571b46ca-fb41-0098-0549-ee7a238f87e4",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--1b133d58-4f79-e08c-0006-ba87786f54cc",
+      "description": "Trigona employs 'Abuse of BCP Utility for Local File Creation from Database' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--77053576-8829-1a24-1b10-d6afaf6345db",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "description": "Trigona employs 'Malware Download via Curl, Bitsadmin, and PowerShell' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f114de2e-2f0a-14e5-bae4-76674ea1e26d",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "Trigona employs 'Installation and Abuse of Legitimate Remote Access Tools (AnyDesk, RustDesk, Teramind)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--154de272-f8d7-7aee-c064-7075e4ae0de0",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--4ad80e6b-7119-947c-a7df-86a53ec04113",
+      "description": "Trigona employs 'Creation of New Local Users for RDP Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fae0aacc-343d-9766-c45f-db5253d9b8f2",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+      "description": "Trigona employs 'Deployment of Rust-based Scanner Malware for Network Reconnaissance' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--650707f4-6606-e7b5-e653-08d2a1e0deed",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--c78bd3f3-4ff8-25bd-465c-9b60ec9be72f",
+      "description": "Trigona employs 'Installation of Proxyware and CoinMiner for Resource Monetization' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e1373677-2850-e109-9c35-bd779deeb5f5",
+      "created": "2026-01-17T20:52:28.592031Z",
+      "modified": "2026-01-17T20:52:28.592031Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "attack-pattern--2a9aa73f-8dab-b578-9757-8d1a7310d4f7",
+      "description": "Trigona employs 'Use of Custom StressTester for Service Availability and SQL Injection Testing' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9b5a0bdd-a673-aba2-023c-e4de7719e37f",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Trigona uses Cobalt Strike tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--eaa5c4ec-559f-3fac-f031-ba594970ce81",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Trigona uses Meterpreter tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79946c76-a533-407d-3ad0-fe40b1c417c1",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Trigona uses AnyDesk tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2862d7f3-57de-aea1-b142-f14c4c7e9c41",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Trigona uses RustDesk tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8d0e8a45-a42b-0699-cd62-75cf89353600",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Trigona uses Teramind tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--482455b8-7c56-0986-27ed-f86c41d7a060",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Trigona uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--694644a5-d794-e513-c11e-cb92b6059af4",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Trigona uses BCP (Bulk Copy Program) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8d0df333-7efa-25fc-1848-b735e553ab33",
+      "created": "2026-01-17T20:52:28.592399Z",
+      "modified": "2026-01-17T20:52:28.592399Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Trigona uses curl tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3b0652b1-e376-6024-f030-b027d7700c71",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "CLR Shell uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b00d5a67-a9ea-a74f-f965-fea808c3fd1b",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "CLR Shell uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dac5f95b-f03c-ea4b-8d3b-6352350f200f",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "CLR Shell uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--259762df-851b-4cb7-db62-d0d4a9842b18",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "CLR Shell uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3102229d-a34b-dde2-0aff-3555bfe73406",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "CLR Shell uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c290b559-9bba-c3ef-09ce-78fe79f4b3ed",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "CLR Shell uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2b792b6-088e-99c6-3828-eeb42b8a8282",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "CLR Shell uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd33795e-ee54-b4d5-f482-42d75fcfcedd",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "CLR Shell uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--851f0c14-5785-e591-67b3-e9aa0cb7f229",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Potato uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e8ac45ef-7f56-5b75-2001-896ee11c5d4c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Potato uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a09041b8-170b-525e-a8ce-acf21b478cba",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Potato uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f3b7a16b-a0da-f682-b29c-172b04e6effb",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Potato uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--386a3ba8-9e2c-40c1-15cf-02c5331470a2",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Potato uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5d39bfaf-1b05-6235-3f69-630c1ffa856c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Potato uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b6ec3be6-d246-2861-a476-69511f4dab3c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Potato uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fb9a447e-20a2-d111-2081-565e1ded5c72",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Potato uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--099ae90b-e8de-80d9-5b0b-bba1f20751e8",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "CoinMiner uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9eb975f9-06e4-409f-4365-d90232c91fb2",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "CoinMiner uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d93bf4d-856c-4fa6-0f1b-a396a23be5a4",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "CoinMiner uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b11be88a-2f61-2e84-e639-b2640a1b43f9",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "CoinMiner uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ef59841c-8369-25f3-4487-26d974cb0f79",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "CoinMiner uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3bfa6268-71df-eb8e-c1c9-85f668e1cbe9",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "CoinMiner uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--45bc765d-a762-2123-2536-11dbc7f046bc",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "CoinMiner uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b3409a87-ba99-c213-d9ab-c52741d32cfe",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "CoinMiner uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--72dd82ff-d602-5afd-05d8-5346a609db1c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Proxyware uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--65fa91dc-92a8-8fd1-753e-1d63d6c9744d",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Proxyware uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a61759f4-74dc-9037-b7f1-5e087115d674",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Proxyware uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--66018963-3a77-533c-c4ac-68afa7b3bb70",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Proxyware uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--30d95f97-95c7-042c-7724-b76c8c61a94b",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Proxyware uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--54ce50a6-75e9-7053-9720-03d961a8e1aa",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Proxyware uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--03257e3d-2db9-af25-484f-0641e7e83def",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Proxyware uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cbcb1be7-63bf-4534-0a89-3cec5bb11c43",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Proxyware uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--252c8302-99a3-a586-f4cb-edc07e44245a",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Gh0st RAT uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7020f0de-ab2e-561f-cf81-c13e5fe3f084",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Gh0st RAT uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e6f1fe88-1ac9-a73d-e27e-5fd5de4a7a17",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Gh0st RAT uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--430c656a-b006-dd5e-27fa-a695cae7c631",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Gh0st RAT uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--07245abe-c01a-799a-1bc4-212c8ccdfc0e",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Gh0st RAT uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4d9e13d2-9502-b649-03e6-529e0ad56c52",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Gh0st RAT uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--99a9a51d-b8a7-0193-9356-d7e279769139",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Gh0st RAT uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3a145028-cf67-e709-0db2-1d191ae7f609",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Gh0st RAT uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a4bb5d24-7c1b-26ce-60f4-30f2799af448",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Cobalt Strike uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--02eada38-8baa-65ac-9257-76f58b7e02ee",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Cobalt Strike uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6c84a257-13b5-4126-25c2-d25dd301a9cb",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Cobalt Strike uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b12c978b-d500-4016-443c-56ea3ef89cc6",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Cobalt Strike uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--235ea565-a975-f70d-d76b-8bb68b08776e",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Cobalt Strike uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--41990986-8d25-c4f1-bec8-a9b5fbf3d4ac",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Cobalt Strike uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3895ded4-565f-ff76-73b4-a5197a2ee5b1",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Cobalt Strike uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e20132aa-972b-f655-68de-644e53b090b5",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Cobalt Strike uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bac01b87-35a3-d509-58bd-e92f344957c0",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Meterpreter uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--da2a75bd-1265-b7b7-0543-3cdd0244db34",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Meterpreter uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1c758b4f-ada4-2326-3192-2a08e9aa69cd",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Meterpreter uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5e0db891-d93c-43e1-a72a-2a98be1e9b9a",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Meterpreter uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e332178c-c705-efd4-0d4f-e051db40c822",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Meterpreter uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9923313d-1897-1022-7ed0-808e35dd11c6",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Meterpreter uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b34df448-16ad-c946-b374-ad7330481a82",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Meterpreter uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e9f3a595-4f53-e2a3-88b0-519df71a46b9",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Meterpreter uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--654a9fbf-b6ba-6c3b-69b1-0e5a217befe6",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Trigona uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc6a6c8e-a667-7d20-9f01-ed5c111620ce",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Trigona uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e0d5acae-9955-ec8c-2589-b49a65e54abe",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Trigona uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--551d1166-9eed-bfc4-20d0-c62a0fc131a7",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Trigona uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c11473c9-20d5-5932-801c-a7db295ae690",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Trigona uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d9019d9b-71bb-ffcc-bc0c-01fe548a9256",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Trigona uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2357738e-8b84-d395-2cbf-d10a285a237b",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Trigona uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--38ba0d95-a02d-a385-cdca-9f8b1be65dc9",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Trigona uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1ec6d49b-19c9-eb44-cb15-815ed7ab1e22",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Teramind uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9aaab150-2718-81c3-9b9d-11db8220a48c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Teramind uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--14194581-33a0-75d5-ddc0-582e03928fe0",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Teramind uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f0bee608-8e69-97bb-bbcd-ea02111eb6c4",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Teramind uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b209f08e-a409-f3c4-aa02-3502486e1c89",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Teramind uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--331330d4-df4c-4cab-abc7-a1dc499f077d",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Teramind uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--790cfcd5-d6a7-5ee3-937c-bb57319190a5",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Teramind uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a7def661-0807-5eb6-0fd0-a07f2c5b9b16",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Teramind uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d1d6691d-ad1e-1d9a-903b-3623dcd4e6f8",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "AnyDesk uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a3bdc49-a575-5483-41bd-cd15639b2a46",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "AnyDesk uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--acf56450-db2f-f0b3-392d-faff4f47c2f2",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "AnyDesk uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--54cfea01-5a92-f00d-e012-24757d566bb1",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "AnyDesk uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8363d40e-0c9b-ffd2-a2c5-195593a8d848",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "AnyDesk uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--52b8aba9-b5d6-d90e-48b6-ad0267070e44",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "AnyDesk uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8fd45df2-8f12-3f46-e70d-ec8a3baac442",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "AnyDesk uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c698d8e2-a842-8291-550f-82195e7c9688",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "AnyDesk uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--45c33de3-f5ae-505b-abb3-afb328a7e9b0",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "Rust-based Scanner uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ef0552c6-8e41-2a29-0c81-126b509a5423",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "Rust-based Scanner uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8e23baa6-bcd7-3767-2ed3-a4108185303a",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "Rust-based Scanner uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3c965f92-f974-568c-4809-7f396975de18",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "Rust-based Scanner uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d8d56bcf-c85d-d845-ab82-5043d669facd",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "Rust-based Scanner uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6e8515cf-401e-b50e-1934-7eb6360e0cb2",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Rust-based Scanner uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9e6d7152-aa52-b819-7f9e-c236f1c1b0e8",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "Rust-based Scanner uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--033901fa-9bc5-a0d0-d5b5-d4ec0a6a5771",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "Rust-based Scanner uses curl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7fa9f586-b186-82b8-82ff-6c3eba1fe25c",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+      "description": "StressTester uses Cobalt Strike for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc7411bc-68cd-75b1-61a8-2765ae6ca3ee",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "StressTester uses Meterpreter for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8943c60d-4e24-4df0-8bab-b8c5fccc9639",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+      "description": "StressTester uses AnyDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b809eb10-9f82-928a-b9e0-6550e734a7e4",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+      "description": "StressTester uses RustDesk for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1376fc94-60fa-12cf-3eb0-e8f2ef97384a",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+      "description": "StressTester uses Teramind for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c186c306-90c9-e243-97d3-e5d949ac7fbc",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "StressTester uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2288cbe1-87a4-b736-f55e-ad7020dfb855",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+      "description": "StressTester uses BCP (Bulk Copy Program) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--873e73c7-340f-cc39-53ab-693691620987",
+      "created": "2026-01-17T20:52:28.592496Z",
+      "modified": "2026-01-17T20:52:28.592496Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+      "target_ref": "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+      "description": "StressTester uses curl for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--79ba6de0-9f45-981f-2a38-36233b6609c2",
+      "created": "2026-01-17T20:52:28.604767Z",
+      "modified": "2026-01-17T20:52:28.604767Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "2025년 4분기 윈도우 데이터베이스 서버 대상 악성코드 통계 보고서 - ASEC",
+      "description": "This report contains technical analysis and indicators from: https://asec.ahnlab.com/ko/91968/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T20:52:28.604767Z",
+      "object_refs": [
+        "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--c3179ce8-b703-d23e-e235-0ae798fa0d3a",
+        "attack-pattern--3d58c97e-d8e3-46a3-b716-949415be5bfd",
+        "attack-pattern--1b133d58-4f79-e08c-0006-ba87786f54cc",
+        "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+        "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+        "attack-pattern--4ad80e6b-7119-947c-a7df-86a53ec04113",
+        "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+        "attack-pattern--c78bd3f3-4ff8-25bd-465c-9b60ec9be72f",
+        "attack-pattern--2a9aa73f-8dab-b578-9757-8d1a7310d4f7",
+        "malware--ce06ca58-a8b1-227a-3fad-65480f80b30c",
+        "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+        "malware--9a34bbdf-cba5-4f1c-d9ca-cfac9978bf65",
+        "malware--6d7e76f7-4c18-e535-67a4-48e11ebb2498",
+        "malware--4d1f1382-6a78-92b1-e655-da01495302a0",
+        "malware--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+        "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+        "malware--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+        "malware--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+        "malware--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+        "malware--bc45f322-47f3-aaa4-52f6-6eb22e13c63b",
+        "malware--77905037-613d-72b0-2fd2-70e72bfa8b56",
+        "threat-actor--91cab5f4-544b-ad15-1b29-b7a4c0117368",
+        "tool--d10440fb-0e62-3537-56f5-aa7e3d3d443f",
+        "tool--2b0ea882-cf9c-918a-9610-d71354fe5166",
+        "tool--d3ec00d1-2fc8-e67d-8022-63dc9e85639a",
+        "tool--70f4c86e-9585-6322-5d1d-807c6069374b",
+        "tool--078e9bc0-8552-0b5a-7e45-7bb0763e6a67",
+        "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+        "tool--22df3ece-0c89-cb42-339b-12b7537bcca9",
+        "tool--f6e57c9d-e709-e45f-eb0d-955351f53548",
+        "relationship--d099db08-5594-0a4a-3a68-bcc3d0d3d7f1",
+        "relationship--e0501260-0ed4-10cf-beca-45037eec23e2",
+        "relationship--4cc58dea-c640-7de4-3235-d58eed627101",
+        "relationship--b93f5ece-8502-5f4f-ae54-eac3d20d3217",
+        "relationship--c9d8c922-fdb3-b47c-c72f-3da0e41a434e",
+        "relationship--43e5a28d-1ec3-d7a7-1cc5-2692e0a3aa13",
+        "relationship--f9ad1524-75f5-51b1-0321-64a6364fec7f",
+        "relationship--be9cc47d-b313-5209-c04a-fbb3b46ea437",
+        "relationship--d765fb4c-7faa-a325-a90f-5031dde53712",
+        "relationship--69a1802a-9678-e7f9-3a50-4166c377bf33",
+        "relationship--39d68d20-0ce8-d4ab-ae26-1a28ebce3513",
+        "relationship--49a48d66-d3a4-f225-9102-6f1f7723221e",
+        "relationship--a6b07d82-9646-bd3e-6204-b06fd67cf84f",
+        "relationship--4b4080ef-f962-769d-36a6-1d13e64aad7c",
+        "relationship--571b46ca-fb41-0098-0549-ee7a238f87e4",
+        "relationship--77053576-8829-1a24-1b10-d6afaf6345db",
+        "relationship--f114de2e-2f0a-14e5-bae4-76674ea1e26d",
+        "relationship--154de272-f8d7-7aee-c064-7075e4ae0de0",
+        "relationship--fae0aacc-343d-9766-c45f-db5253d9b8f2",
+        "relationship--650707f4-6606-e7b5-e653-08d2a1e0deed",
+        "relationship--e1373677-2850-e109-9c35-bd779deeb5f5",
+        "relationship--9b5a0bdd-a673-aba2-023c-e4de7719e37f",
+        "relationship--eaa5c4ec-559f-3fac-f031-ba594970ce81",
+        "relationship--79946c76-a533-407d-3ad0-fe40b1c417c1",
+        "relationship--2862d7f3-57de-aea1-b142-f14c4c7e9c41",
+        "relationship--8d0e8a45-a42b-0699-cd62-75cf89353600",
+        "relationship--482455b8-7c56-0986-27ed-f86c41d7a060",
+        "relationship--694644a5-d794-e513-c11e-cb92b6059af4",
+        "relationship--8d0df333-7efa-25fc-1848-b735e553ab33",
+        "relationship--3b0652b1-e376-6024-f030-b027d7700c71",
+        "relationship--b00d5a67-a9ea-a74f-f965-fea808c3fd1b",
+        "relationship--dac5f95b-f03c-ea4b-8d3b-6352350f200f",
+        "relationship--259762df-851b-4cb7-db62-d0d4a9842b18",
+        "relationship--3102229d-a34b-dde2-0aff-3555bfe73406",
+        "relationship--c290b559-9bba-c3ef-09ce-78fe79f4b3ed",
+        "relationship--b2b792b6-088e-99c6-3828-eeb42b8a8282",
+        "relationship--dd33795e-ee54-b4d5-f482-42d75fcfcedd",
+        "relationship--851f0c14-5785-e591-67b3-e9aa0cb7f229",
+        "relationship--e8ac45ef-7f56-5b75-2001-896ee11c5d4c",
+        "relationship--a09041b8-170b-525e-a8ce-acf21b478cba",
+        "relationship--f3b7a16b-a0da-f682-b29c-172b04e6effb",
+        "relationship--386a3ba8-9e2c-40c1-15cf-02c5331470a2",
+        "relationship--5d39bfaf-1b05-6235-3f69-630c1ffa856c",
+        "relationship--b6ec3be6-d246-2861-a476-69511f4dab3c",
+        "relationship--fb9a447e-20a2-d111-2081-565e1ded5c72",
+        "relationship--099ae90b-e8de-80d9-5b0b-bba1f20751e8",
+        "relationship--9eb975f9-06e4-409f-4365-d90232c91fb2",
+        "relationship--3d93bf4d-856c-4fa6-0f1b-a396a23be5a4",
+        "relationship--b11be88a-2f61-2e84-e639-b2640a1b43f9",
+        "relationship--ef59841c-8369-25f3-4487-26d974cb0f79",
+        "relationship--3bfa6268-71df-eb8e-c1c9-85f668e1cbe9",
+        "relationship--45bc765d-a762-2123-2536-11dbc7f046bc",
+        "relationship--b3409a87-ba99-c213-d9ab-c52741d32cfe",
+        "relationship--72dd82ff-d602-5afd-05d8-5346a609db1c",
+        "relationship--65fa91dc-92a8-8fd1-753e-1d63d6c9744d",
+        "relationship--a61759f4-74dc-9037-b7f1-5e087115d674",
+        "relationship--66018963-3a77-533c-c4ac-68afa7b3bb70",
+        "relationship--30d95f97-95c7-042c-7724-b76c8c61a94b",
+        "relationship--54ce50a6-75e9-7053-9720-03d961a8e1aa",
+        "relationship--03257e3d-2db9-af25-484f-0641e7e83def",
+        "relationship--cbcb1be7-63bf-4534-0a89-3cec5bb11c43",
+        "relationship--252c8302-99a3-a586-f4cb-edc07e44245a",
+        "relationship--7020f0de-ab2e-561f-cf81-c13e5fe3f084",
+        "relationship--e6f1fe88-1ac9-a73d-e27e-5fd5de4a7a17",
+        "relationship--430c656a-b006-dd5e-27fa-a695cae7c631",
+        "relationship--07245abe-c01a-799a-1bc4-212c8ccdfc0e",
+        "relationship--4d9e13d2-9502-b649-03e6-529e0ad56c52",
+        "relationship--99a9a51d-b8a7-0193-9356-d7e279769139",
+        "relationship--3a145028-cf67-e709-0db2-1d191ae7f609",
+        "relationship--a4bb5d24-7c1b-26ce-60f4-30f2799af448",
+        "relationship--02eada38-8baa-65ac-9257-76f58b7e02ee",
+        "relationship--6c84a257-13b5-4126-25c2-d25dd301a9cb",
+        "relationship--b12c978b-d500-4016-443c-56ea3ef89cc6",
+        "relationship--235ea565-a975-f70d-d76b-8bb68b08776e",
+        "relationship--41990986-8d25-c4f1-bec8-a9b5fbf3d4ac",
+        "relationship--3895ded4-565f-ff76-73b4-a5197a2ee5b1",
+        "relationship--e20132aa-972b-f655-68de-644e53b090b5",
+        "relationship--bac01b87-35a3-d509-58bd-e92f344957c0",
+        "relationship--da2a75bd-1265-b7b7-0543-3cdd0244db34",
+        "relationship--1c758b4f-ada4-2326-3192-2a08e9aa69cd",
+        "relationship--5e0db891-d93c-43e1-a72a-2a98be1e9b9a",
+        "relationship--e332178c-c705-efd4-0d4f-e051db40c822",
+        "relationship--9923313d-1897-1022-7ed0-808e35dd11c6",
+        "relationship--b34df448-16ad-c946-b374-ad7330481a82",
+        "relationship--e9f3a595-4f53-e2a3-88b0-519df71a46b9",
+        "relationship--654a9fbf-b6ba-6c3b-69b1-0e5a217befe6",
+        "relationship--bc6a6c8e-a667-7d20-9f01-ed5c111620ce",
+        "relationship--e0d5acae-9955-ec8c-2589-b49a65e54abe",
+        "relationship--551d1166-9eed-bfc4-20d0-c62a0fc131a7",
+        "relationship--c11473c9-20d5-5932-801c-a7db295ae690",
+        "relationship--d9019d9b-71bb-ffcc-bc0c-01fe548a9256",
+        "relationship--2357738e-8b84-d395-2cbf-d10a285a237b",
+        "relationship--38ba0d95-a02d-a385-cdca-9f8b1be65dc9",
+        "relationship--1ec6d49b-19c9-eb44-cb15-815ed7ab1e22",
+        "relationship--9aaab150-2718-81c3-9b9d-11db8220a48c",
+        "relationship--14194581-33a0-75d5-ddc0-582e03928fe0",
+        "relationship--f0bee608-8e69-97bb-bbcd-ea02111eb6c4",
+        "relationship--b209f08e-a409-f3c4-aa02-3502486e1c89",
+        "relationship--331330d4-df4c-4cab-abc7-a1dc499f077d",
+        "relationship--790cfcd5-d6a7-5ee3-937c-bb57319190a5",
+        "relationship--a7def661-0807-5eb6-0fd0-a07f2c5b9b16",
+        "relationship--d1d6691d-ad1e-1d9a-903b-3623dcd4e6f8",
+        "relationship--4a3bdc49-a575-5483-41bd-cd15639b2a46",
+        "relationship--acf56450-db2f-f0b3-392d-faff4f47c2f2",
+        "relationship--54cfea01-5a92-f00d-e012-24757d566bb1",
+        "relationship--8363d40e-0c9b-ffd2-a2c5-195593a8d848",
+        "relationship--52b8aba9-b5d6-d90e-48b6-ad0267070e44",
+        "relationship--8fd45df2-8f12-3f46-e70d-ec8a3baac442",
+        "relationship--c698d8e2-a842-8291-550f-82195e7c9688",
+        "relationship--45c33de3-f5ae-505b-abb3-afb328a7e9b0",
+        "relationship--ef0552c6-8e41-2a29-0c81-126b509a5423",
+        "relationship--8e23baa6-bcd7-3767-2ed3-a4108185303a",
+        "relationship--3c965f92-f974-568c-4809-7f396975de18",
+        "relationship--d8d56bcf-c85d-d845-ab82-5043d669facd",
+        "relationship--6e8515cf-401e-b50e-1934-7eb6360e0cb2",
+        "relationship--9e6d7152-aa52-b819-7f9e-c236f1c1b0e8",
+        "relationship--033901fa-9bc5-a0d0-d5b5-d4ec0a6a5771",
+        "relationship--7fa9f586-b186-82b8-82ff-6c3eba1fe25c",
+        "relationship--bc7411bc-68cd-75b1-61a8-2765ae6ca3ee",
+        "relationship--8943c60d-4e24-4df0-8bab-b8c5fccc9639",
+        "relationship--b809eb10-9f82-928a-b9e0-6550e734a7e4",
+        "relationship--1376fc94-60fa-12cf-3eb0-e8f2ef97384a",
+        "relationship--c186c306-90c9-e243-97d3-e5d949ac7fbc",
+        "relationship--2288cbe1-87a4-b736-f55e-ad7020dfb855",
+        "relationship--873e73c7-340f-cc39-53ab-693691620987"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

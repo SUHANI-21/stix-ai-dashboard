@@ -1,0 +1,353 @@
+{
+  "type": "bundle",
+  "id": "bundle--0b544999-7ce7-4282-8a51-dc2eabd1477b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152",
+      "name": "Improper IOMMU Initialization in UEFI Firmware Enables Early-Boot DMA Attacks",
+      "description": "A vulnerability in certain UEFI-supported motherboard models leaves systems vulnerable to early-boot DMA attacks. Although the firmware indicates that DMA protection is active, it fails to correctly initialize the IOMMU. This allows a malicious PCIe device with physical access to read or modify system memory before the operating system's defenses load, exposing sensitive data and enabling pre-boot code injection.",
+      "created": "2025-12-17T00:00:00Z",
+      "modified": "2025-12-19T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-11901",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-11901"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-14302",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14302"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-14303",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14303"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-14304",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14304"
+        },
+        {
+          "source_name": "CERT/CC VU#382314",
+          "url": "https://vuls.cert.org/vuls/id/382314"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--b5ccd163-8150-4a74-958c-dddb40b87788",
+      "name": "Nick Peterson",
+      "identity_class": "individual",
+      "description": "Reporter of the UEFI IOMMU vulnerability",
+      "sectors": [],
+      "contact_information": ""
+    },
+    {
+      "type": "identity",
+      "id": "identity--86349a90-757b-4d14-98b7-d6bf92f1ba62",
+      "name": "Mohamed Al-Sharifi",
+      "identity_class": "individual",
+      "description": "Reporter of the UEFI IOMMU vulnerability",
+      "sectors": [],
+      "contact_information": ""
+    },
+    {
+      "type": "identity",
+      "id": "identity--57515a13-8b2a-4fad-81b3-781ba43fa963",
+      "name": "Riot Games",
+      "identity_class": "organization",
+      "description": "Organization whose employees reported the UEFI IOMMU vulnerability",
+      "sectors": [
+        "entertainment"
+      ],
+      "contact_information": ""
+    },
+    {
+      "type": "identity",
+      "id": "identity--1a13018b-46af-4b58-a93f-f530959fe52b",
+      "name": "Taiwanese CERT",
+      "identity_class": "organization",
+      "description": "Coordinated response with affected vendors for the UEFI IOMMU vulnerability",
+      "sectors": [
+        "government"
+      ],
+      "contact_information": "",
+      "external_references": [
+        {
+          "source_name": "Taiwanese CERT",
+          "url": "https://tinyurl.com/twcert"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--c2698279-7a5a-4b0f-8757-70d23ad3167e",
+      "name": "UEFI firmware",
+      "cpe": "cpe:2.3:o:*:uefi_firmware:*:*:*:*:*:*:*:*",
+      "vendor": "Multiple vendors",
+      "description": "Firmware for initializing hardware and enforcing early security policies on modern motherboards."
+    },
+    {
+      "type": "software",
+      "id": "software--bd02d80c-82af-485c-9f74-93ffd1d514c2",
+      "name": "IOMMU",
+      "description": "Input\u2013Output Memory Management Unit used to restrict unauthorized memory access by peripheral devices."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--cd566ea7-635a-4299-997d-328801237338",
+      "name": "PCIe device",
+      "description": "Peripheral Component Interconnect Express device capable of performing DMA transactions."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--b3534942-4eba-401e-8db5-ab53fb2f796d",
+      "name": "Intel Z490 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel Z490 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--dc722699-8170-4206-975a-36a185ca4dca",
+      "name": "Intel W480 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel W480 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--d578d056-9dbe-4495-b130-3df0e2133adb",
+      "name": "Intel B460 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel B460 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--3a6c4034-16f0-4057-8d10-e84408930ff5",
+      "name": "Intel H410 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel H410 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--1a71cbbd-064a-4abc-852e-4ab6599fb66d",
+      "name": "Intel Z590 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel Z590 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--fb2401a7-4d1e-4fe2-84bb-f2e902a3cbf5",
+      "name": "Intel B560 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel B560 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--7a5d08b0-612c-4daa-8ceb-f5550e27bb24",
+      "name": "Intel H510 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel H510 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--4edae3f6-bb55-41bc-9d18-5e2ade28d93d",
+      "name": "Intel Z690 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel Z690 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--28e95d94-3c77-4471-9624-b32f26c50090",
+      "name": "Intel B660 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel B660 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--c4164e95-ce74-4c5b-8037-1cab4e2e95ca",
+      "name": "Intel W680 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel W680 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--40b03473-db06-4482-8e8d-fac4f78d2578",
+      "name": "Intel Z790 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel Z790 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--58e7adbb-5aea-49d2-95e0-e3e399453c1a",
+      "name": "Intel B760 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel B760 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "hardware",
+      "id": "hardware--4841d9c7-7fa1-4de5-b48e-d652d1cf8c88",
+      "name": "Intel W790 motherboard",
+      "manufacturer": "ASUSTeK Computer Inc.",
+      "description": "Motherboard based on Intel W790 chipset affected by improper IOMMU initialization vulnerability."
+    },
+    {
+      "type": "url",
+      "id": "url--d093344b-b44f-4447-8aae-a804459ea007",
+      "value": "https://www.asus.com/support/download-center/"
+    },
+    {
+      "type": "url",
+      "id": "url--2f854327-7bec-40db-be76-edde3621e37d",
+      "value": "https://www.asrock.com/support/Security.asp"
+    },
+    {
+      "type": "url",
+      "id": "url--ac283b11-43c9-4d9d-9f16-b4da3e43d163",
+      "value": "https://www.gigabyte.com/Support/Security?type=1"
+    },
+    {
+      "type": "url",
+      "id": "url--1fed606f-16f4-4589-8de6-4b8e8b1968c4",
+      "value": "https://csr.msi.com/global/product-security-advisories"
+    },
+    {
+      "type": "url",
+      "id": "url--66c53e1f-685f-4df1-a41d-dd0c1b307571",
+      "value": "https://www.asus.com/security-advisory/"
+    },
+    {
+      "type": "url",
+      "id": "url--282e70a2-8821-4e02-8dd4-aa3f62e47840",
+      "value": "https://www.asus.com/support/faq/1044348/"
+    },
+    {
+      "type": "url",
+      "id": "url--7c886906-c25b-481f-8895-fe64ba3d5ccb",
+      "value": "https://uefi.org"
+    },
+    {
+      "type": "url",
+      "id": "url--356e1938-1424-48ee-a73f-ff5bed84c480",
+      "value": "https://www.intel.com/content/dam/develop/external/us/en/documents/intel-whitepaper-using-iommu-for-dma-protection-in-uefi-820238.pdf"
+    },
+    {
+      "type": "url",
+      "id": "url--d6159a0a-2131-406e-911a-d61e22af8098",
+      "value": "https://en.wikipedia.org/wiki/DMA_attack"
+    },
+    {
+      "type": "url",
+      "id": "url--46b97e39-cd93-4805-a498-a1445ed2a27f",
+      "value": "https://i.blackhat.com/USA21/Wednesday-Handouts/us-21-PCIe-Device-Attacks-Beyond-DMA-Exploiting-PCIe-Switches-Messages-And-Errors.pdf"
+    },
+    {
+      "type": "url",
+      "id": "url--a2779e1c-0e11-4de5-b4fb-360e72af23e7",
+      "value": "https://www.synacktiv.com/ressources/IOMMU_and_DMA_attacks_presentation_16_9.pdf"
+    },
+    {
+      "type": "url",
+      "id": "url--5d210ee3-e39a-46fc-9f34-597b2677743e",
+      "value": "https://learn.microsoft.com/en-us/windows/security/hardware-security/kernel-dma-protection-for-thunderbolt"
+    },
+    {
+      "type": "url",
+      "id": "url--2cf76fc5-773c-410b-9415-1df4198953c7",
+      "value": "https://tinyurl.com/twcert"
+    },
+    {
+      "type": "url",
+      "id": "url--6091b80e-695b-4919-ad5f-789a665fb3c2",
+      "value": "https://eclypsium.com/blog/direct-memory-access-attacks-a-walk-down-memory-lane/"
+    },
+    {
+      "type": "url",
+      "id": "url--623965e9-cf89-499a-9cc4-a6a9f60aeb5d",
+      "value": "https://www.sei.cmu.edu/blog/uefi-terra-firma-for-attackers/"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--e85b47e9-c687-4afd-a2e6-3e0b6922a6bc",
+      "value": "cert@cert.org"
+    },
+    {
+      "type": "phone-number",
+      "id": "phone-number--b4c619c8-5e19-4294-951a-2dbb70a17ef1",
+      "value": "+14122685800"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00b4382f-29bf-43b9-85df-8502d7cdeb61",
+      "relationship_type": "documents",
+      "source_ref": "report--13d1c37a-9ec5-4afa-8ba7-40691e71ffa7",
+      "target_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6ee9e9f-db30-4e1c-b1eb-f11d34727a4d",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152",
+      "target_ref": "software--bd02d80c-82af-485c-9f74-93ffd1d514c2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0886e3e7-8731-45ce-8448-7dc17f45efb0",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152",
+      "target_ref": "hardware--4841d9c7-7fa1-4de5-b48e-d652d1cf8c88"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fa46383-2975-43a1-904b-64858121ad73",
+      "relationship_type": "has",
+      "source_ref": "software--bd02d80c-82af-485c-9f74-93ffd1d514c2",
+      "target_ref": "hardware--4841d9c7-7fa1-4de5-b48e-d652d1cf8c88"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d115e43-9b0b-4b4b-85ad-eaccd86ed44f",
+      "relationship_type": "has",
+      "source_ref": "software--bd02d80c-82af-485c-9f74-93ffd1d514c2",
+      "target_ref": "software--bd02d80c-82af-485c-9f74-93ffd1d514c2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48787e2e-f712-4830-afa5-5c347a3ed3ff",
+      "relationship_type": "exploits",
+      "source_ref": "hardware--4841d9c7-7fa1-4de5-b48e-d652d1cf8c88",
+      "target_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f4a160d-adf5-446e-88f1-d5ecc6eca954",
+      "relationship_type": "reported",
+      "source_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b",
+      "target_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eaae6cab-c175-43ba-abbf-a057aa30683c",
+      "relationship_type": "reported",
+      "source_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b",
+      "target_ref": "vulnerability--fd9a569f-fb02-419a-924c-0915b6212152"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec1e059a-e34d-498a-b56d-9f39aeab2c3a",
+      "relationship_type": "member-of",
+      "source_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b",
+      "target_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e116ecf5-e6bb-4b4e-9e35-3ad842130b25",
+      "relationship_type": "coordinated-with",
+      "source_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b",
+      "target_ref": "identity--1a13018b-46af-4b58-a93f-f530959fe52b"
+    }
+  ]
+}

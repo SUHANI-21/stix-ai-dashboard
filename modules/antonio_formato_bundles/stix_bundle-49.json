@@ -1,0 +1,654 @@
+{
+  "type": "bundle",
+  "id": "bundle--7a5a494c-8b70-433e-b5e8-fe9760052eb2",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--bade6100-c7c4-470b-b8d7-e4b53d9a1321",
+      "name": "VS Code Extension Supply Chain Compromise",
+      "description": "Malicious VS Code extensions published to Open VSX Marketplace, containing delayed-execution encrypted payloads that evade automated scanning and infect developer environments.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-first-self-propagating-worm-using-invisible-code-hits-openvsx-marketplace"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4786b22a-38ae-4ec7-a0b3-924b16feeaf3",
+      "name": "Hardware Wallet Trojanization",
+      "description": "Malware attempts to detect and replace legitimate hardware wallet applications (Ledger Live, Trezor Suite) with trojanized versions, enabling theft of cryptocurrency and manipulation of wallet operations.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--878d1370-d783-4acb-989c-2a539b240565",
+      "name": "Credential Theft via macOS Keychain, Browser, and Developer Tools",
+      "description": "Malware steals credentials from macOS Keychain, browser cookies and storage, VS Code GitHub tokens, NPM tokens, SSH keys, and VPN configurations.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f61030e3-eadb-4301-ba6f-798f87cdd6f7",
+      "name": "Delayed Execution for Sandbox Evasion",
+      "description": "Malware waits 15 minutes before executing its payload to evade detection by automated sandbox environments.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--46ef569a-1ca7-4c82-b71b-a9c3546bc42e",
+      "name": "Blockchain-Based Command and Control",
+      "description": "Malware queries Solana blockchain transaction memos containing base64-encoded URLs to fetch current C2 endpoints, making C2 infrastructure decentralized and resilient.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8b9d3025-4af9-4e55-af29-d1ce7222336a",
+      "name": "Persistence via LaunchAgents (macOS)",
+      "description": "Malware achieves persistence on macOS systems by creating LaunchAgents.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503",
+      "name": "Stealth Execution via AppleScript (macOS)",
+      "description": "Malware uses AppleScript for stealthy execution of commands on macOS systems.",
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--b3a51c7c-4cdb-442e-9a61-2f2c3cfaa58f",
+      "name": "GlassWorm C2 Infrastructure",
+      "description": "Command and control servers and blockchain wallet used by GlassWorm for payload delivery and exfiltration.",
+      "infrastructure_types": [
+        "command-and-control",
+        "exfiltration"
+      ],
+      "external_references": [
+        {
+          "source_name": "Koi Security Blog",
+          "url": "https://www.koi.ai/blog/glassworm-goes-native-same-infrastructure-hardened-delivery"
+        }
+      ],
+      "x_infrastructure_hosts": [
+        "45.32.151.157",
+        "45.32.150.251",
+        "217.69.11.60",
+        "BjVeAjPrSKFiingBn4vZvghsGj9KCE8AJVtbc9S8o8SC"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--91172ad8-6662-4035-a896-c69b667e108e",
+      "name": "main file",
+      "extension": "js",
+      "encryption_algorithm": "AES-256-CBC"
+    },
+    {
+      "type": "file",
+      "id": "file--793b1fb3-cb62-4371-bb5b-9a59cfb21cfd",
+      "name": "login.keychain-db",
+      "path": "/Library/Keychains/login.keychain-db"
+    },
+    {
+      "type": "file",
+      "id": "file--1ba0eeec-16a9-4f38-aeda-af2c4f11e4ed",
+      "name": "Ledger Live",
+      "category": "application"
+    },
+    {
+      "type": "file",
+      "id": "file--9ec50864-31db-4714-be74-8ebadd21b37d",
+      "name": "Trezor Suite",
+      "category": "application"
+    },
+    {
+      "type": "directory",
+      "id": "directory--dbab8978-d0ed-4bdc-8f1a-0750215c49e7",
+      "path": "/tmp/ijewf/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--31aa7887-7879-4214-a633-9c930713e4e5",
+      "path": "~/.ssh"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3f386ba2-05a3-4e76-83be-bb0454f0c4e8",
+      "value": "45.32.151.157"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e0aaa411-171a-41b3-9932-e205749f540c",
+      "value": "45.32.150.251"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7bcf6971-98c2-48a7-8481-eb104e80b947",
+      "value": "217.69.11.60"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--e556bdb7-bf08-4a19-8c75-36f9876f693d",
+      "currency": "Solana",
+      "address": "BjVeAjPrSKFiingBn4vZvghsGj9KCE8AJVtbc9S8o8SC"
+    },
+    {
+      "type": "software",
+      "id": "software--f9383cd1-81ca-4582-a523-71535235670e",
+      "name": "studio-velte-distributor.pro-svelte-extension",
+      "categories": [
+        "vs code extension"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--6ca07190-e6c0-4e9c-b60b-94103ec0cb7e",
+      "name": "cudra-production.vsce-prettier-pro",
+      "categories": [
+        "vs code extension"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--f67a8efa-3bff-4af6-995f-d254a5f3ccac",
+      "name": "Puccin-development.full-access-catppuccin-pro-extension",
+      "categories": [
+        "vs code extension"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--2134ec38-2251-4079-a7df-4e1732f52af8",
+      "name": "MetaMask",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--59847a80-c029-4c00-a93a-d1812391de9a",
+      "name": "Phantom",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--54adb9f5-06f4-4653-a707-ddbf3cad542f",
+      "name": "Coinbase Wallet",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--90de9bb3-a819-47e3-a1e9-2431aa52b110",
+      "name": "Exodus",
+      "categories": [
+        "browser extension wallet",
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--475b7695-c6b1-43da-8092-076282ed8599",
+      "name": "Keplr",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--46014fd2-6004-4402-9945-2d5141480fad",
+      "name": "Solflare",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--227f8295-3a53-4309-bc3c-cf55dfd06ea3",
+      "name": "Trust Wallet",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--03525224-3413-43b1-89df-cb5edcd2c33f",
+      "name": "Rabby",
+      "categories": [
+        "browser extension wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--0ca7e71a-9190-4083-92a4-05714bdcb9a4",
+      "name": "Electrum",
+      "categories": [
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--03507027-a968-43eb-ae0c-3befdf6b091f",
+      "name": "Coinomi",
+      "categories": [
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--ac128f30-f530-41f3-b92b-9c43af0fc0c2",
+      "name": "Atomic",
+      "categories": [
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--fd928250-6fe2-4570-9c0b-143bec904431",
+      "name": "Monero",
+      "categories": [
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--3e4f707e-ed69-4b15-947b-3049ac16d75e",
+      "name": "Bitcoin Core",
+      "categories": [
+        "desktop wallet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--cce37286-30db-4338-b815-236db81c6bef",
+      "name": "GitHub",
+      "categories": [
+        "developer credential"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--0c47ac50-0fa3-442e-8136-b51f5d71be8c",
+      "name": "NPM",
+      "categories": [
+        "developer credential"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--e07981b1-c2f9-4f26-97d5-b54083da67f6",
+      "name": "Chrome",
+      "categories": [
+        "browser"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--30a37d11-2be3-4978-8d47-22a678728c32",
+      "name": "Firefox",
+      "categories": [
+        "browser"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--c650dc76-0374-4439-9bc6-510ab85f6b62",
+      "name": "Brave",
+      "categories": [
+        "browser"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--ef7d282d-1836-4987-9be0-182af89e453e",
+      "name": "Edge",
+      "categories": [
+        "browser"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fa4f8bc-369c-46c4-b937-bc33ba423624",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--469750be-273b-4774-9939-012ca6549233",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b5301d6-6cfd-4463-9ca1-40c386075f33",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c3a57164-2b85-4420-9be3-c11c9b89d81c",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd7c4b00-b717-4189-af49-7256379fc875",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6069252d-67dc-4f5e-b6da-d1630eedd607",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f469497e-f320-4967-a5cd-3bc310888c97",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--474d12bf-6484-4866-8800-e860e2f4de5a",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "attack-pattern--8e7e8432-c117-4409-ba40-71806f9bb503"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--943ace3b-d0b3-4f47-9a00-ec7481ea35d7",
+      "relationship_type": "delivers",
+      "source_ref": "tool--704615d2-98f3-4f8c-a119-2459ffdf5e7c",
+      "target_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7fd47b71-af7e-4bc9-b981-da3440a8231c",
+      "relationship_type": "delivers",
+      "source_ref": "tool--704615d2-98f3-4f8c-a119-2459ffdf5e7c",
+      "target_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a1c2e38-3d73-4f93-93f6-f14b0e2d1c47",
+      "relationship_type": "delivers",
+      "source_ref": "tool--704615d2-98f3-4f8c-a119-2459ffdf5e7c",
+      "target_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7775f85-7830-4318-98a1-8403f578e417",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "infrastructure--b3a51c7c-4cdb-442e-9a61-2f2c3cfaa58f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--795d5b71-697a-4aec-b0ce-6a5180adbb88",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "ipv4-addr--7bcf6971-98c2-48a7-8481-eb104e80b947"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56a7f777-bea6-460c-b079-8bb6e89f2df3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "ipv4-addr--7bcf6971-98c2-48a7-8481-eb104e80b947"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddf7b64d-c402-46b8-a8d3-0b19753d8581",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "ipv4-addr--7bcf6971-98c2-48a7-8481-eb104e80b947"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4c2ce95-3704-439b-84ae-2e89733e9022",
+      "relationship_type": "uses",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "cryptocurrency-wallet--e556bdb7-bf08-4a19-8c75-36f9876f693d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5cbfc4f7-a136-48cd-bd3d-7c8e37e0f20b",
+      "relationship_type": "drops",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "file--9ec50864-31db-4714-be74-8ebadd21b37d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f305ce85-6649-4132-8e9a-44b1b6b08900",
+      "relationship_type": "drops",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "file--9ec50864-31db-4714-be74-8ebadd21b37d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb7f5a7f-990e-4083-a647-52b9e374b8cd",
+      "relationship_type": "replaces",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "file--9ec50864-31db-4714-be74-8ebadd21b37d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ae0525b-1a46-4e6d-a984-e9ac69f79adc",
+      "relationship_type": "replaces",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "file--9ec50864-31db-4714-be74-8ebadd21b37d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fa35c5e-3a52-47a6-a52c-047c95f6e024",
+      "relationship_type": "stores",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "directory--31aa7887-7879-4214-a633-9c930713e4e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f05b0c6a-d064-4b8c-a2a8-8a00cd451d75",
+      "relationship_type": "collects",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "directory--31aa7887-7879-4214-a633-9c930713e4e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba9123d6-282d-4d99-850a-be9217ada6dc",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b837684b-e44e-4953-b07d-d425c14e9dd7",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eafa4a34-4e1c-4093-b1e3-60988850498b",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16552a64-59c6-4c61-a895-b5f7e86bd7d0",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc288606-21d5-4c3f-85da-2bfa491e7ec9",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4d6d7cf-6f6f-4b8e-b3f8-d5afc7194f0f",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1571555d-673d-48dc-95fd-221b18f6816d",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0939ceb8-ef41-435d-b18b-01d92b7b609d",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13922912-9c42-41ff-bc93-2f195be24274",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ae06055-e0a4-4278-ab1b-71f5de10a5e7",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--531ade0a-2f25-4059-8543-ddfc5644902e",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba585353-dac2-4b2a-ac0e-6eb67203393a",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e412612d-75a2-41bd-8db1-264b4f696503",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9864cc9-99c0-46cc-9006-e86fc25a8ecb",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--917cca88-db0a-4ec2-a17f-1822fe83a2f6",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51ef1323-6dd4-4c69-9bd9-90b284f6757d",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1c87ca0-45d2-4627-bcb7-9028fadef4fc",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6de76d8a-26ed-44f9-ad54-8a1a4c7a7b2d",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df412aaa-b8d7-4b3b-96c8-e3dc9f8df75a",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0bfea7c-9c7f-4345-bdd5-e00bcc6358f0",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0a51758-7772-4a7b-b225-7a24433558dc",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94db6e39-8cf4-49eb-93b6-5b88517485d1",
+      "relationship_type": "targets",
+      "source_ref": "malware--43410eab-6666-454e-a6ba-c79efb9bcae2",
+      "target_ref": "software--ef7d282d-1836-4987-9be0-182af89e453e"
+    }
+  ]
+}

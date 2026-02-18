@@ -1,0 +1,334 @@
+{
+  "type": "bundle",
+  "id": "bundle--7d468074-3dc1-4bca-ae9e-c9fb270bc465",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--674247fb-da01-4274-ba5e-47ef79cc1a34",
+      "name": "Spearphishing Link",
+      "description": "BlueDelta distributed malicious PDF lures containing embedded links to credential-harvesting pages, enabling evasion of common email filtering and sandbox detection techniques.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002",
+          "url": "https://attack.mitre.org/techniques/T1566/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--66561cc0-c0e1-44ed-8891-0d3a520d0e27",
+      "name": "Input Capture: GUI Input Capture",
+      "description": "BlueDelta credential harvesting pages use JavaScript to exfiltrate credentials and relay CAPTCHA information, capturing usernames, passwords, and two-factor authentication codes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.002",
+          "url": "https://attack.mitre.org/techniques/T1056/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3c84e726-25f5-4d36-b50b-9de42a38a242",
+      "name": "Web Portal Capture",
+      "description": "BlueDelta created fake UKR.NET login portals to harvest credentials from targeted users.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003",
+          "url": "https://attack.mitre.org/techniques/T1056/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0ff47fde-c52a-4957-b11b-34d73b7c8146",
+      "name": "Acquire Infrastructure: Web Services",
+      "description": "BlueDelta leveraged free web services such as Mocky, DNS EXIT, ngrok, Serveo, and Byet Internet Services to host credential harvesting pages and relay stolen data.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1583.006",
+          "url": "https://attack.mitre.org/techniques/T1583/006/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--46876b27-95d6-4744-9cea-364b38855457",
+      "name": "Standard Encoding",
+      "description": "BlueDelta used standard encoding techniques for command and control communications.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1132.001",
+          "url": "https://attack.mitre.org/techniques/T1132/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b26bb30a-adf0-4db4-9505-c6f744897a6c",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "BlueDelta used HTTP and HTTPS protocols for exfiltration and command and control.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001",
+          "url": "https://attack.mitre.org/techniques/T1071/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513",
+      "name": "Web Service",
+      "description": "BlueDelta utilized web services for command and control and data exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102",
+          "url": "https://attack.mitre.org/techniques/T1102/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1ae75bc5-b8d7-4787-a1b2-0c8a96623f48",
+      "name": "BlueDelta Infrastructure Domains and IPs",
+      "description": "Indicators of compromise associated with BlueDelta credential harvesting campaigns, including domains, IP addresses, and URLs.",
+      "pattern": "[domain-name:value = 'jkbfgkjdffghh.linkpc.net' OR domain-name:value = 'kfghjerrlknsm.line.pm' OR domain-name:value = '5ae39a1b39d45d08f947bdf0ee0452ae.serveo.net' OR domain-name:value = 'ukraine.html-5.me' OR domain-name:value = 'ukrainesafe.is-great.org' OR domain-name:value = 'abaf-5-135-199-21.ngrok-free.app' OR domain-name:value = 'efbc-51-161-109-50.ngrok-free.app' OR domain-name:value = '3bb1-51-161-109-50.ngrok-free.app' OR domain-name:value = '838f-51-161-109-50.ngrok-free.app' OR domain-name:value = '3576-51-161-109-50.ngrok-free.app' OR domain-name:value = 'dd06-51-161-109-50.ngrok-free.app' OR domain-name:value = '1961-51-161-109-50.ngrok-free.app' OR domain-name:value = '2884-51-161-109-50.ngrok-free.app' OR domain-name:value = '2a06-51-161-109-50.ngrok-free.app' OR domain-name:value = '7dc8-51-161-109-50.ngrok-free.app' OR domain-name:value = 'c4cb-51-161-109-50.ngrok-free.app' OR ipv4-addr:value = '3.67.15.169' OR ipv4-addr:value = '5.135.199.21' OR ipv4-addr:value = '18.157.68.73' OR ipv4-addr:value = '51.161.109.50' OR ipv4-addr:value = '73.80.9.137' OR ipv4-addr:value = '179.43.141.80']",
+      "valid_from": "2024-06-01T00:00:00Z",
+      "labels": [
+        "malicious-activity",
+        "BlueDelta",
+        "credential-harvesting"
+      ],
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "description": "Indicators of compromise from BlueDelta UKR.NET campaign."
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6180bd9-12d5-4ce8-a027-60526531c53e",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--1e6c3f07-eeab-41cd-95cd-bac16f076fab",
+      "target_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--38d94772-4f3e-4e01-8558-c28ef29159ca",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "malware--fae34a91-401a-432c-9660-6d704762579d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--312d46d3-941e-4476-b3ac-a9dc22244db1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9f8d7224-9ab4-4893-91df-845d926376fb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c615b60-4559-4516-8f5f-02edc8e5f242",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1536d9e1-816e-429f-927b-ebfbcbe6959c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--991cefc4-8753-4975-8c90-f9f25686cc9f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--870315f4-cb98-4b54-96b1-a605fb5ce8c6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8eb4c121-3cbf-44a5-a1c4-3985f0a3e563",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e0cb38e-a027-40aa-94fa-1f8b0922dc69",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1de8df0-a649-4b45-8d23-ea630eb01dbe",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b5e6407-e6ea-41a5-bf22-ad6e43fadf94",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c11a5ab-3dfb-4352-bc2f-74c7d2175237",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a41901f9-a664-4db5-a0da-fd51b0035886",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56538b9d-c454-494b-bf0b-0633e256e497",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9c71d3d-9157-4945-975e-e96bdc8d5598",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f9b10a2-ae9d-4b8a-b4ec-27599becaca9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e357b90b-7d5f-4dda-a769-c4a32d49aca3",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f115866-0ca1-4253-bd75-8162afb28481",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f601651-5339-423b-94ff-d667c2491ece",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9249641-37ca-4b4d-8650-f162161ed030",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6bf8e519-a1b0-48a3-aaa8-f45c28f18853",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cf3c07d7-afa4-4db9-9a43-a2797b5234d7",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ad3cdcd-c574-43e8-81cc-ab056525a9c6",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "tool--850cbb9b-761c-4d6b-a99e-4277e8ed5a52"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32969353-9acd-44db-a123-9e5ae88a9e60",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a014955a-cb1d-4ea8-9261-c9acd2baabb4",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d112109d-ed16-48b7-a62a-5fe8c9f71bef",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9596dedc-b506-42ec-8ad8-7360b15bfa94",
+      "relationship_type": "uses",
+      "source_ref": "malware--fae34a91-401a-432c-9660-6d704762579d",
+      "target_ref": "attack-pattern--9cb8f516-73f8-4170-937e-0b465892e513"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--214cb5bd-0a4b-44e7-9aea-f7a254da0636",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1ae75bc5-b8d7-4787-a1b2-0c8a96623f48",
+      "target_ref": "malware--fae34a91-401a-432c-9660-6d704762579d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--817adc7b-af32-44cb-ba9e-fd7f1657d2f3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--1ae75bc5-b8d7-4787-a1b2-0c8a96623f48",
+      "target_ref": "intrusion-set--a3c1707b-479e-4fc7-af71-d09da176fcb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2dc4a6bf-5a3e-4ec0-81c2-e8d63d989b3d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1e6c3f07-eeab-41cd-95cd-bac16f076fab",
+      "target_ref": "malware--fae34a91-401a-432c-9660-6d704762579d"
+    }
+  ]
+}

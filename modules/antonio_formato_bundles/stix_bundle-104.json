@@ -1,0 +1,282 @@
+{
+  "type": "bundle",
+  "id": "bundle--69e1ba0f-dfec-4cde-bda4-1be71d1d081d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--56ccf444-1f0f-428b-808d-32f7c4a0a09a",
+      "name": "CVE-2025-66516",
+      "description": "A critical XML External Entity (XXE) injection vulnerability in Apache Tika, rated CVSS 10.0. The vulnerability affects tika-core (versions 1.13-3.2.1), tika-pdf-module (versions 2.0.0-3.2.1), and tika-parsers (versions 1.13-1.28.5). Exploitation is unauthenticated and remote, requiring only the processing of a specially crafted PDF file. Attackers can read arbitrary files, conduct SSRF attacks, and cause denial of service via entity expansion.",
+      "created": "2025-12-05T00:00:00Z",
+      "modified": "2025-12-05T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-66516"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093",
+      "name": "CVE-2025-54988",
+      "description": "An earlier XXE vulnerability in Apache Tika, rated CVSS 8.4, originally identified in the PDF parser module. The full scope was later clarified to include tika-core, meaning patching only the PDF module does not fully mitigate the issue.",
+      "created": "2025-08-01T00:00:00Z",
+      "modified": "2025-12-05T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-54988"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--3deaa736-1613-487b-90c5-a94f89a6ff5b",
+      "name": "Apache Tika",
+      "description": "Apache Tika is a widely used document processing framework for content extraction, metadata analysis, and indexing. It is affected by XXE vulnerabilities in multiple core components.",
+      "created": "2025-12-05T00:00:00Z",
+      "modified": "2025-12-05T00:00:00Z",
+      "cpe": "cpe:2.3:a:apache:tika:*:*:*:*:*:*:*:*",
+      "external_references": [
+        {
+          "source_name": "vendor",
+          "url": "https://tika.apache.org/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "name": "XML External Entity (XXE) Injection via PDF XFA",
+      "description": "Attackers craft malicious PDF files with XFA content containing external XML entity references. When processed by vulnerable Apache Tika instances, these entities are resolved, enabling file read, SSRF, and denial of service.",
+      "created": "2025-12-05T00:00:00Z",
+      "modified": "2025-12-05T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1224/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--eeb27574-0da3-4072-9818-1a1647cf7798",
+      "name": "PDF document",
+      "extensions": {
+        "pdf": {
+          "xfa_content": true,
+          "external_entity_references": true
+        }
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--b2af46e7-173c-4f9c-9d40-44a49fdc91df",
+      "name": "Apache Tika",
+      "cpe": "cpe:2.3:a:apache:tika:*",
+      "version": "1.13-3.2.1"
+    },
+    {
+      "type": "software",
+      "id": "software--87aae129-0594-4ca1-a8ba-c6d7fae9d6a5",
+      "name": "Apache Tika core",
+      "cpe": "cpe:2.3:a:apache:tika-core:*",
+      "version": "1.13-3.2.1"
+    },
+    {
+      "type": "software",
+      "id": "software--d3a97c06-d073-4b23-9c70-b065932c1b03",
+      "name": "Apache Tika PDF parser module",
+      "cpe": "cpe:2.3:a:apache:tika-parser-pdf-module:*",
+      "version": "2.0.0-3.2.1"
+    },
+    {
+      "type": "software",
+      "id": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "name": "Apache Tika parsers",
+      "cpe": "cpe:2.3:a:apache:tika-parsers:*",
+      "version": "1.13-1.28.5"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d6388e82-cdc0-4a41-8699-cf640499a919",
+      "value": "169.254.169.254"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6b7970b2-15a8-4f54-a9ab-b4f84bec4abb",
+      "value": "10.0.0.0"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c179f709-8ea9-4a60-9888-8e48186f84ec",
+      "value": "172.16.0.0"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ca562906-346e-4e85-b9d9-a69f2ced59bc",
+      "value": "192.168.0.0"
+    },
+    {
+      "type": "directory",
+      "id": "directory--2ff6e24b-fc08-491a-82c4-c671d6a2e58d",
+      "path": "/etc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6c3f379-9ff7-4103-bfc3-3f8d60cd0007",
+      "relationship_type": "has",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e24a0bc9-a0a1-4eb9-8fc2-a351b4e308db",
+      "relationship_type": "has",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--089bf1b0-b378-4f46-ab99-dc01f49fcf8d",
+      "relationship_type": "has",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--abb6deaf-3951-4cf2-b69a-0b55210ce5c9",
+      "relationship_type": "has",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ff31d45-cc98-4330-8e4c-07c15da301e6",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--533a76a4-8d70-45f5-b0ce-828a53ccf1cc",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--063fa052-e755-41f3-a164-bdf2539a4612",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a979d7b-f818-4ebe-8f54-9260a3460815",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f33377a3-83d1-47fe-ad2c-2e00f5b881ed",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26bdeec8-acd2-414f-82c9-8889be0257f2",
+      "relationship_type": "vulnerable-to",
+      "source_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec18d9ee-2525-46e4-9694-fbc52e049937",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6179a0eb-85e3-4aac-bea0-e7a474c4ec3a",
+      "target_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dd67ec62-c856-4273-b18a-8b9d28bd63e2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6179a0eb-85e3-4aac-bea0-e7a474c4ec3a",
+      "target_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34ce7797-b11f-43ab-be11-3b8e2ce8dee8",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6179a0eb-85e3-4aac-bea0-e7a474c4ec3a",
+      "target_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd00c27a-e18c-4562-ab2b-13ab01e9ef61",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6179a0eb-85e3-4aac-bea0-e7a474c4ec3a",
+      "target_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec46db2c-37fc-49f6-b08f-cdb9c6cbc3e3",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "target_ref": "file--c59ec3fb-5b34-4a4f-9cb5-ce75d980c001"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e88d9aff-24db-4126-aea2-c9d272cb7048",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc02a892-7769-4ce0-bde0-1d91726a0d74",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cacfcd77-ac38-4f0d-8065-03400f1e36e8",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d88ab694-de02-43ff-ae62-d6f35de69080",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--90fe6e46-34f3-4ff7-9809-b875b5994676",
+      "target_ref": "software--ed81fe0b-cbd8-419c-a6b9-7a6026bfebb8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c8485b0-4e5b-46d8-952b-b479cc7e8a91",
+      "relationship_type": "related-to",
+      "source_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093",
+      "target_ref": "vulnerability--31b669ce-8814-4052-8b78-e2256a3eb093"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--331f5f81-6123-4880-8df8-3deac0ca3643",
+      "relationship_type": "contains",
+      "source_ref": "file--c59ec3fb-5b34-4a4f-9cb5-ce75d980c001",
+      "target_ref": "file--c59ec3fb-5b34-4a4f-9cb5-ce75d980c001"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ad9ca4e-2a96-4b61-b685-f486ae6115f1",
+      "relationship_type": "contains",
+      "source_ref": "directory--2ff6e24b-fc08-491a-82c4-c671d6a2e58d",
+      "target_ref": "file--c59ec3fb-5b34-4a4f-9cb5-ce75d980c001"
+    }
+  ]
+}

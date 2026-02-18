@@ -1,0 +1,424 @@
+{
+  "type": "bundle",
+  "id": "bundle--6afdc329-ad51-442f-a77b-5ef2d3c51704",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--1121b7e1-5f0f-4efc-b8c8-ab5385988017",
+      "name": "APT41",
+      "aliases": [
+        "Blackfly",
+        "Grayfly",
+        "Redfly",
+        "Earth Longzhi"
+      ],
+      "description": "APT41 is one of the longest-running Chinese espionage groups, believed to be composed of multiple sub-groups, including Blackfly, Grayfly, Redfly, and Earth Longzhi. The group has targeted victims in Taiwan, China, Thailand, Malaysia, Indonesia, Pakistan, Ukraine, and the United States, focusing on espionage and monitoring foreign governments' attitudes and policies toward China.",
+      "first_seen": "2012-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Persistence",
+        "Credential Access"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--204f5aa5-18b6-4817-bc1d-b7b52f851917",
+      "name": "Kelp",
+      "aliases": [
+        "Salt Typhoon",
+        "Earth Estries"
+      ],
+      "description": "Kelp (aka Salt Typhoon, Earth Estries) is a China-linked threat group that came to global prominence in 2024 for compromising the networks of multiple U.S. telecoms companies in the run-up to the 2024 U.S. presidential election, intercepting communications of campaign staff. The group shares tools with other Chinese actors and has targeted organizations in dozens of countries.",
+      "first_seen": "2022-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Persistence"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "name": "Space Pirates",
+      "description": "Space Pirates are China-linked threat actors believed to have been active since at least 2017, noted for carrying out attacks against Russian companies and sharing tools with other Chinese threat groups.",
+      "first_seen": "2017-01-01T00:00:00Z",
+      "goals": [
+        "Espionage"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--639c02c1-3833-49fe-9cda-83d7ac603f1a",
+      "name": "DLL Sideloading",
+      "description": "Attackers use the DLL search order mechanism in Windows to plant and invoke a legitimate application that executes a malicious DLL payload.",
+      "x_mitre_id": "T1574.002"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a55a17b8-2e2a-4012-aa84-6604b1487e3c",
+      "name": "Scheduled Task/Job",
+      "description": "Attackers create scheduled tasks to ensure persistence on the system.",
+      "x_mitre_id": "T1053.005"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f737b74c-7bb5-4ebc-be7b-993847911a02",
+      "name": "Command and Control over HTTP",
+      "description": "Malicious code connects to a remote command and control server using HTTP protocol.",
+      "x_mitre_id": "T1071.001"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ee620051-a65e-4e6a-864a-af88bdc8275b",
+      "name": "Exploit Public-Facing Application",
+      "description": "Attackers scan and exploit public-facing applications using known vulnerabilities such as Atlassian OGNL Injection (CVE-2022-26134), Log4j (CVE-2021-44228), Apache Struts (CVE-2017-9805), and GoAhead RCE (CVE-2017-17562).",
+      "x_mitre_id": "T1190"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "name": "Network Service Scanning",
+      "description": "Attackers perform mass scanning of servers to identify exploitable services and connectivity.",
+      "x_mitre_id": "T1046"
+    },
+    {
+      "type": "file",
+      "id": "file--1f7d2b21-4bdc-490c-be23-d70d5cb8850d",
+      "hashes": {
+        "SHA-256": "51ffcff8367b5723d62b3e3108e38fb7cbf36354e0e520e7df7c8a4f52645c4d"
+      },
+      "name": "imjpuexc.exe",
+      "path": "csidl_profile\\documents\\imjpuexc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ae58302b-5e51-4d61-8e78-d1bc5b933473",
+      "hashes": {
+        "SHA-256": "6f7f099d4c964948b0108b4e69c9e81b5fc5ff449f2fa8405950d41556850ed9"
+      },
+      "name": "msoutbound",
+      "path": "csidl_profile\\documents\\msoutbound"
+    },
+    {
+      "type": "file",
+      "id": "file--80e776e1-7a24-4f89-b6f3-7ef0971adfe6",
+      "hashes": {
+        "SHA-256": "99a0b424bb3a6bbf60e972fd82c514fd971a948f9cedf3b9dc6b033117ecb106"
+      },
+      "name": "sbamres.dll",
+      "path": "csidl_profile\\ldap_write\\documents\\sbamres.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--05c1c224-f5a4-4ca0-bf27-d67fa99dcbe8",
+      "hashes": {
+        "SHA-256": "dae63db9178c5f7fb5f982fbd89683dd82417f1672569fef2bbfef83bec961e2"
+      },
+      "name": "mmp.exe",
+      "path": "csidl_profile\\downloads\\mmp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--35a83665-74db-45aa-8611-3387e6ad7bf3",
+      "hashes": {
+        "SHA-256": "e356dbd3bd62c19fa3ff8943fc73a4fab01a6446f989318b7da4abf48d565af2"
+      },
+      "name": "vetysafe.exe",
+      "path": "csidl_profile\\documents\\vetysafe.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--21a12991-be7b-4462-9c3f-0ff6f2058a6b",
+      "hashes": {
+        "SHA-256": "f52b86b599d7168d3a41182ccd89165e0d1f2562aa7363e0718d502b7e3fcb69"
+      },
+      "name": "msascui.exe",
+      "path": "csidl_profile\\ldap_write\\documents\\msascui.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--f114a7ed-1649-4a6c-9f3e-5bfe288fd28f",
+      "value": "hxxp://38.180.83[.]166/6CDF0FC26CDF0FC2"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c586aa77-c864-4c56-aa2d-c88ec349b750",
+      "value": "192.0.0.88"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3888f4cf-dd7b-4484-9b5f-1c3ace905b7e",
+      "value": "38.180.83.166"
+    },
+    {
+      "type": "file",
+      "id": "file--94c7ce53-1c3c-426f-b832-6c482df4da15",
+      "name": "msbuild.exe",
+      "path": "CSIDL_WINDOWS\\microsoft.net\\framework\\v4.0.30319\\msbuild.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2091876e-9217-468f-b13e-097420cee1f8",
+      "name": "outbound.xml",
+      "path": "CSIDL_COMMON_APPDATA\\microsoft\\rac\\outbound\\outbound.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--8f6677ce-2041-4c3d-9bb6-74e1fdba9207",
+      "name": "csc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9cac3104-53f5-40f0-aa53-c6eaac8c9efe",
+      "name": "curl"
+    },
+    {
+      "type": "file",
+      "id": "file--e73a7faa-da6d-4500-aefe-e400f3da1df3",
+      "name": "netstat"
+    },
+    {
+      "type": "file",
+      "id": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "name": "schtasks"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee4b6a4d-c0f9-48be-981f-cb4f09d68e90",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used sbamres.dll for DLL sideloading, as well as other tools and techniques in the intrusion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d0fe6b2-3e4a-4390-a870-3c48c7ea607a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used Imjpuexc.exe on the targeted network."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4591f55d-89a9-4b30-9a23-a7f296b38ca9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used Dcsync tool for credential access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d8eba85-e066-4379-bbbb-cb531678b566",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used msascui.exe loader to decrypt and load payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32bf64f8-c31d-46b2-8387-0248e4031c70",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used vetysafe.exe for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45d6579f-011b-448b-aa30-c7c01828921c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "APT41 used msoutbound for persistence and launching further malicious code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0ed34f1-20d1-47c4-b658-1fa8a2ad16f5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "description": "APT41 used DLL sideloading technique."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--601922a1-5463-4126-8d1a-abea990417d0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "description": "APT41 created scheduled tasks for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12601395-aefa-4d71-8e3f-08bbd9573a99",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "description": "APT41 performed command and control over HTTP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dcea31af-acee-4eb5-b151-a0be360fb5b8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "description": "APT41 exploited public-facing applications using known vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fcd9a9c-812f-42cf-87a8-a4c556b990be",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "attack-pattern--e413b6c4-c3bf-423c-b3ce-4065e2410c83",
+      "description": "APT41 performed network service scanning."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--384acf8e-1468-4d0e-a4da-d0ac5f247f42",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used imjpuexc.exe on the targeted network."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50856dbe-3a89-42e0-ae54-08903e0f318f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used msoutbound file for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8573af87-0e30-46eb-bcfd-82d4a89e94f6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used sbamres.dll for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5cf178c9-84f7-47b0-a17d-6a6e1e049b46",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used mmp.exe (Dcsync tool) for credential access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d4350ac-2248-4526-8663-2dc3e0233a0c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 abused vetysafe.exe for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c2be434-892a-4bd7-b0f3-4352e3350967",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used msascui.exe loader for payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48074f0a-04ca-41c5-9201-839aaae8d20d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used msbuild.exe to execute malicious code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3979473-2aee-4fe0-9461-b7cdb83f196d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used outbound.xml for launching further code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--568b6f19-900d-4d98-8bd6-9f5e1a49a6d9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 injected code into csc.exe for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b15e88b-d67d-4a9b-8689-4438a895058c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used curl for connectivity testing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5d37636-333f-4597-91cc-eb5b9720f329",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used netstat to enumerate network connections."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7c252fc-844b-40ba-8fc2-215b747bc6f9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "file--f5857022-bad8-406d-a856-005a10efa84d",
+      "description": "APT41 used schtasks to create scheduled tasks for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--40974df2-5326-46a4-9a9e-3a4202ace9b0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "url--f114a7ed-1649-4a6c-9f3e-5bfe288fd28f",
+      "description": "APT41 connected to a malicious command and control server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56010cd0-43e6-4a0a-aceb-a9ed39017b67",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "target_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "description": "sbamres.dll has been linked to Space Pirates activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6118c92-b530-430b-9820-cc44e23e92c5",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "target_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "description": "sbamres.dll has been used by Kelp (Salt Typhoon) in a separate incident."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--37daa09a-dbb0-41e3-bb35-dd8c09977f72",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "Kelp used Deed RAT in activity attributed to the group."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6db47b22-73e0-4c2c-aa06-3213783426a1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "Space Pirates used sbamres.dll in previous attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3db5c6c5-5499-45c7-8b22-b1305aa87a73",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e3604cb8-0438-4930-9a0e-f9b60154234f",
+      "target_ref": "malware--237fea80-653c-4022-89b2-4c47029d981b",
+      "description": "Kelp used sbamres.dll in previous attacks."
+    }
+  ]
+}

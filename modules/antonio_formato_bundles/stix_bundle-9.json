@@ -1,0 +1,839 @@
+{
+  "type": "bundle",
+  "id": "bundle--d99948b4-7951-42d6-bc0e-ff16935652f0",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "created": "2026-01-19T21:44:25.854030Z",
+      "modified": "2026-01-19T21:44:25.854030Z",
+      "name": "Palo Alto Networks Unit 42",
+      "description": "Palo Alto Networks Unit 42 is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-19T21:44:25.854030Z",
+      "modified": "2026-01-19T21:44:25.854030Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-19T21:44:25.854030Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6321710b-d09c-dfb8-9fd4-48a7723a01a8",
+      "created": "2026-01-19T21:44:42.612466Z",
+      "modified": "2026-01-19T21:44:42.612466Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Help Desk Social Engineering and Impersonation",
+      "description": "In this campaign, the attacker initiated contact with multiple help desks (payroll, IT, HR shared services) by impersonating legitimate employees. Through repeated phone calls, the attacker probed for verification procedures and gathered information from social media platforms to successfully answer challenge/response authentication questions. This enabled them to manipulate help desk personnel into performing unauthorized password resets and re-enrolling multi-factor authentication (MFA) devices for accounts under their control. The attack bypassed technical controls by exploiting human trust and operational workflows, demonstrating a highly targeted and persistent social engineering approach.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1646/",
+          "external_id": "T1646"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+      "created": "2026-01-19T21:44:42.612562Z",
+      "modified": "2026-01-19T21:44:42.612562Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Password Reset via Social Engineering",
+      "description": "The attacker exploited help desk workflows to request and obtain password resets for targeted employee accounts. By circumventing standard authentication procedures through impersonation and leveraging publicly available information, the attacker convinced help desk staff to reset passwords, thereby gaining access to sensitive systems such as payroll. This technique allowed the attacker to take control of multiple accounts without needing to compromise technical controls directly.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1078/004/",
+          "external_id": "T1078.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dd5ca258-eb65-cba9-c409-c62b14215609",
+      "created": "2026-01-19T21:44:42.612626Z",
+      "modified": "2026-01-19T21:44:42.612626Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Multi-Factor Authentication (MFA) Re-enrollment Abuse",
+      "description": "After successfully impersonating employees to help desk staff, the attacker manipulated personnel into re-enrolling MFA devices for compromised accounts. This allowed the attacker to register their own authentication devices, effectively bypassing existing MFA protections and maintaining access to targeted accounts. The abuse of MFA recovery and enrollment workflows was a critical step in ensuring continued access and blending in with legitimate user activity.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1621/",
+          "external_id": "T1621"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--312336dc-c970-4e61-0c59-1f041bbf93a0",
+      "created": "2026-01-19T21:44:42.612683Z",
+      "modified": "2026-01-19T21:44:42.612683Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Reconnaissance via Social Media and Repeated Help Desk Probing",
+      "description": "The attacker conducted extensive reconnaissance by mining social platforms for personal and professional information about targeted employees. They also repeatedly called help desks to probe for the types of verification questions asked, allowing them to prepare accurate responses for future impersonation attempts. This dual approach enabled the attacker to gather the necessary data to defeat authentication challenges and improve the success rate of social engineering attacks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1592/",
+          "external_id": "T1592"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6eda9fd0-5410-e018-bb35-8df9d673ec26",
+      "created": "2026-01-19T21:44:42.612807Z",
+      "modified": "2026-01-19T21:44:42.612807Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "External Email Registration for Persistent Access",
+      "description": "To establish persistence, the attacker registered an external email address as an authentication method for a service account within the victim's Azure AD environment. This allowed them to maintain long-term access to the environment, even if other compromised credentials were reset or revoked. By adding an attacker-controlled email to the authentication flow, the threat actor ensured they could regain access at any time, demonstrating a sophisticated approach to persistence in cloud identity systems.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f676f841-b96b-b1b2-b760-7488b2883e97",
+      "created": "2026-01-19T21:44:42.612870Z",
+      "modified": "2026-01-19T21:44:42.612870Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Payroll System Account Compromise and Financial Data Manipulation",
+      "description": "Once authenticated into the payroll system, the attacker compromised multiple employee accounts to access sensitive payroll information. They then modified direct-deposit details for several individuals, redirecting paychecks into bank accounts under their control. The use of valid credentials and legitimate MFA devices allowed the attacker’s activity to blend in with normal operations, delaying detection until employees reported missing paychecks. This technique represents targeted manipulation of financial systems for direct monetary gain.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1565/001/",
+          "external_id": "T1565.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c224aaf0-db5f-8b44-81e9-800aef6180ba",
+      "created": "2026-01-19T21:44:42.612956Z",
+      "modified": "2026-01-19T21:44:42.612956Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Blending Malicious Activity with Normal Operations",
+      "description": "The attacker ensured that their actions—such as modifying payroll details and accessing sensitive accounts—were performed using valid credentials and MFA devices that appeared legitimate. This allowed their activity to blend seamlessly with normal business operations, making it difficult for automated security controls to detect the fraud. The incident was only discovered after employees reported missing paychecks, highlighting the effectiveness of this stealthy approach.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--593c0c3b-780d-4848-582b-dd99f673fe2a",
+      "created": "2026-01-19T21:44:42.613039Z",
+      "modified": "2026-01-19T21:44:42.613039Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Repeated Probing of Help Desk Verification Procedures",
+      "description": "The attacker repeatedly called help desks to test and learn the types of verification questions used for authentication. By doing so, they were able to refine their social engineering tactics and gather the necessary information to successfully impersonate employees. This iterative probing increased the likelihood of bypassing help desk security measures and facilitated subsequent unauthorized account access.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "created": "2026-01-19T21:44:46.882822Z",
+      "modified": "2026-01-19T21:44:46.882822Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "WannaCry",
+      "description": "WannaCry is a ransomware family that encrypts files on infected systems and demands payment for decryption. In the article, it was discovered as an ongoing compromise in the client's legacy OT environment, indicating long-term persistence beyond the main payroll diversion incident.",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": true,
+      "aliases": [
+        "WCry",
+        "WanaCrypt0r",
+        "Wana Decryptor"
+      ],
+      "x_capabilities": [
+        "encryption",
+        "lateral-movement",
+        "persistence",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "created": "2026-01-19T21:44:52.743915Z",
+      "modified": "2026-01-19T21:44:52.743915Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Unknown Criminal Actor",
+      "description": "The primary threat actor in the payroll diversion incident used social engineering tactics to impersonate employees, manipulate help desk staff, and compromise multiple accounts to redirect paychecks to attacker-controlled accounts. The actor demonstrated intent for financial gain and persistence by registering external email addresses for authentication.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "goals": [
+        "Compromise employee accounts",
+        "Modify direct-deposit details",
+        "Redirect paychecks to attacker-controlled accounts",
+        "Establish persistence in Azure AD"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "created": "2026-01-19T21:44:52.744108Z",
+      "modified": "2026-01-19T21:44:52.744108Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "WannaCry",
+      "description": "WannaCry ransomware was identified as an ongoing compromise in the client's legacy OT environment, unrelated to the payroll diversion. The malware has persisted in the environment for years, indicating a previous infection that was never fully remediated.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "aliases": [
+        "WCry",
+        "WannaCrypt",
+        "WannaCryptor"
+      ],
+      "goals": [
+        "Ransomware deployment",
+        "Disrupt OT systems",
+        "Financial extortion"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--3affa6a9-fbc0-ae5b-f3c9-631b39384ddf",
+      "created": "2026-01-19T21:44:58.854497Z",
+      "modified": "2026-01-19T21:44:58.854497Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Azure Active Directory (Azure AD)",
+      "description": "The attacker abused Azure AD by registering an external email address as an authentication method for a service account, enabling persistence and long-term access to cloud identities.",
+      "tool_types": [
+        "credential-exploitation",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--7daf26d7-8a71-9b84-da96-511372d04ce3",
+      "created": "2026-01-19T21:44:58.854788Z",
+      "modified": "2026-01-19T21:44:58.854788Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Payroll System",
+      "description": "The attacker accessed the legitimate payroll system using compromised credentials to modify direct-deposit details and redirect paychecks to attacker-controlled accounts.",
+      "tool_types": [
+        "credential-exploitation",
+        "impact"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--28373f15-790e-ee38-3111-079e8d888a8c",
+      "created": "2026-01-19T21:44:58.856539Z",
+      "modified": "2026-01-19T21:44:58.856539Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Help Desk Systems",
+      "description": "The attacker manipulated legitimate help desk workflows to perform password resets and re-enroll MFA devices by impersonating employees and bypassing verification procedures.",
+      "tool_types": [
+        "credential-exploitation",
+        "privilege-escalation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--b5337ef2-2dc6-0492-3a13-1bb5cf9df50a",
+      "created": "2026-01-19T21:44:58.862832Z",
+      "modified": "2026-01-19T21:44:58.862832Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Multi-Factor Authentication (MFA) System",
+      "description": "The attacker abused the MFA system by tricking help desk personnel into re-enrolling MFA devices, allowing unauthorized access to employee accounts.",
+      "tool_types": [
+        "credential-exploitation",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--96ffdbb9-fa5c-bc83-0689-a44f5d3d0785",
+      "created": "2026-01-19T21:44:58.863131Z",
+      "modified": "2026-01-19T21:44:58.863131Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Social Media Platforms",
+      "description": "The attacker used social media platforms to gather publicly available information about employees, aiding in bypassing help desk authentication and verification questions.",
+      "tool_types": [
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79112c39-8856-8771-5c44-35b0f8b64501",
+      "created": "2026-01-19T21:44:58.869679Z",
+      "modified": "2026-01-19T21:44:58.869679Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "description": "Unknown Criminal Actor uses WannaCry malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--72e1393c-56d6-0d49-c92e-ac6ea642cd40",
+      "created": "2026-01-19T21:44:58.869679Z",
+      "modified": "2026-01-19T21:44:58.869679Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "description": "WannaCry uses WannaCry malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--50279160-a1e3-2544-f9aa-ac25182a545d",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--6321710b-d09c-dfb8-9fd4-48a7723a01a8",
+      "description": "Unknown Criminal Actor employs 'Help Desk Social Engineering and Impersonation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--72a20384-6ad8-0232-ee45-4eaddca56eec",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+      "description": "Unknown Criminal Actor employs 'Password Reset via Social Engineering' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bea96cd9-9116-578c-14c2-7cad530002d1",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--dd5ca258-eb65-cba9-c409-c62b14215609",
+      "description": "Unknown Criminal Actor employs 'Multi-Factor Authentication (MFA) Re-enrollment Abuse' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6f32fac5-ee26-6aa3-708b-effbeec3aac3",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--312336dc-c970-4e61-0c59-1f041bbf93a0",
+      "description": "Unknown Criminal Actor employs 'Reconnaissance via Social Media and Repeated Help Desk Probing' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--967533bf-7951-dd1e-47c5-96649e7569a9",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--6eda9fd0-5410-e018-bb35-8df9d673ec26",
+      "description": "Unknown Criminal Actor employs 'External Email Registration for Persistent Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3fa7d00e-75ec-5fa1-2b0c-21ac9d28c5e5",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--f676f841-b96b-b1b2-b760-7488b2883e97",
+      "description": "Unknown Criminal Actor employs 'Payroll System Account Compromise and Financial Data Manipulation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c45c01e0-5c6a-05b7-b8f8-b33cbc726ffb",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--c224aaf0-db5f-8b44-81e9-800aef6180ba",
+      "description": "Unknown Criminal Actor employs 'Blending Malicious Activity with Normal Operations' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5630df63-291a-1a4a-1dda-c2764f2045da",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "attack-pattern--593c0c3b-780d-4848-582b-dd99f673fe2a",
+      "description": "Unknown Criminal Actor employs 'Repeated Probing of Help Desk Verification Procedures' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--61bc83b2-1268-d29c-9c35-f311b1a68d07",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--6321710b-d09c-dfb8-9fd4-48a7723a01a8",
+      "description": "WannaCry employs 'Help Desk Social Engineering and Impersonation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d38c095-f819-1928-fea9-2031d55ef9e8",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+      "description": "WannaCry employs 'Password Reset via Social Engineering' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ebd01de9-56a6-b22f-73fa-501963fd5585",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--dd5ca258-eb65-cba9-c409-c62b14215609",
+      "description": "WannaCry employs 'Multi-Factor Authentication (MFA) Re-enrollment Abuse' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7cd556a3-2af8-8494-11fb-e919cc6ca2e7",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--312336dc-c970-4e61-0c59-1f041bbf93a0",
+      "description": "WannaCry employs 'Reconnaissance via Social Media and Repeated Help Desk Probing' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b77cef35-7535-e84b-0b6d-eefdf8a9d36d",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--6eda9fd0-5410-e018-bb35-8df9d673ec26",
+      "description": "WannaCry employs 'External Email Registration for Persistent Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c3a66eb2-c48e-dd1c-5245-527ed8de13c0",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--f676f841-b96b-b1b2-b760-7488b2883e97",
+      "description": "WannaCry employs 'Payroll System Account Compromise and Financial Data Manipulation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3b030f94-52bc-1cc2-c322-ba8abbbbe697",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--c224aaf0-db5f-8b44-81e9-800aef6180ba",
+      "description": "WannaCry employs 'Blending Malicious Activity with Normal Operations' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8d9868e6-ef03-b845-7932-713d2873687e",
+      "created": "2026-01-19T21:44:58.871338Z",
+      "modified": "2026-01-19T21:44:58.871338Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "attack-pattern--593c0c3b-780d-4848-582b-dd99f673fe2a",
+      "description": "WannaCry employs 'Repeated Probing of Help Desk Verification Procedures' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6578d4d0-165d-b528-e6db-b11eb3c00de2",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "tool--3affa6a9-fbc0-ae5b-f3c9-631b39384ddf",
+      "description": "Unknown Criminal Actor uses Azure Active Directory (Azure AD) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4597ac12-e478-3011-bfee-d0226f2c45db",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "tool--7daf26d7-8a71-9b84-da96-511372d04ce3",
+      "description": "Unknown Criminal Actor uses Payroll System tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f7ddb87a-6878-145b-3df2-4b3bfd56191b",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "tool--28373f15-790e-ee38-3111-079e8d888a8c",
+      "description": "Unknown Criminal Actor uses Help Desk Systems tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fbac13a5-3461-a78a-40b8-b8aa0563bd08",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "tool--b5337ef2-2dc6-0492-3a13-1bb5cf9df50a",
+      "description": "Unknown Criminal Actor uses Multi-Factor Authentication (MFA) System tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec00378d-b218-0bbf-37f9-fa6ff02ac102",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+      "target_ref": "tool--96ffdbb9-fa5c-bc83-0689-a44f5d3d0785",
+      "description": "Unknown Criminal Actor uses Social Media Platforms tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5c6cc50c-1c8e-936f-b073-0ed6b1df6038",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--3affa6a9-fbc0-ae5b-f3c9-631b39384ddf",
+      "description": "WannaCry uses Azure Active Directory (Azure AD) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dc61ce81-a068-781c-b85b-b837884780ae",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--7daf26d7-8a71-9b84-da96-511372d04ce3",
+      "description": "WannaCry uses Payroll System tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c0ed29d6-fd96-c4ca-4721-fabea405efa5",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--28373f15-790e-ee38-3111-079e8d888a8c",
+      "description": "WannaCry uses Help Desk Systems tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--db05b992-6e65-125a-4525-c7021ac42f49",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--b5337ef2-2dc6-0492-3a13-1bb5cf9df50a",
+      "description": "WannaCry uses Multi-Factor Authentication (MFA) System tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79f40ffa-303e-10d2-ee46-053b6793d5ea",
+      "created": "2026-01-19T21:44:58.881985Z",
+      "modified": "2026-01-19T21:44:58.881985Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--96ffdbb9-fa5c-bc83-0689-a44f5d3d0785",
+      "description": "WannaCry uses Social Media Platforms tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6e95d4ed-e276-cce5-bc81-a3f39378e594",
+      "created": "2026-01-19T21:44:58.883287Z",
+      "modified": "2026-01-19T21:44:58.883287Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--3affa6a9-fbc0-ae5b-f3c9-631b39384ddf",
+      "description": "WannaCry uses Azure Active Directory (Azure AD) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c4fe0aef-9610-4912-98da-111451d4e804",
+      "created": "2026-01-19T21:44:58.883287Z",
+      "modified": "2026-01-19T21:44:58.883287Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--7daf26d7-8a71-9b84-da96-511372d04ce3",
+      "description": "WannaCry uses Payroll System for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dc67b8b6-d9bb-e046-b36f-8e2a22ea2f4e",
+      "created": "2026-01-19T21:44:58.883287Z",
+      "modified": "2026-01-19T21:44:58.883287Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--28373f15-790e-ee38-3111-079e8d888a8c",
+      "description": "WannaCry uses Help Desk Systems for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e05bcc86-7596-fa8c-0382-403930d7c6ce",
+      "created": "2026-01-19T21:44:58.883287Z",
+      "modified": "2026-01-19T21:44:58.883287Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--b5337ef2-2dc6-0492-3a13-1bb5cf9df50a",
+      "description": "WannaCry uses Multi-Factor Authentication (MFA) System for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--69518ba8-1155-71ea-b017-e6ed1bf5d2ac",
+      "created": "2026-01-19T21:44:58.883287Z",
+      "modified": "2026-01-19T21:44:58.883287Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "relationship_type": "uses",
+      "source_ref": "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+      "target_ref": "tool--96ffdbb9-fa5c-bc83-0689-a44f5d3d0785",
+      "description": "WannaCry uses Social Media Platforms for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--97200581-dff1-867e-24da-f9a88461d536",
+      "created": "2026-01-19T21:44:58.885419Z",
+      "modified": "2026-01-19T21:44:58.885419Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Anatomy of an Attack: The Payroll Pirates and the Power of Social Engineering",
+      "description": "This report contains technical analysis and indicators from: https://unit42.paloaltonetworks.com/social-engineering-payroll-pirates/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-19T21:44:58.885419Z",
+      "object_refs": [
+        "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--6321710b-d09c-dfb8-9fd4-48a7723a01a8",
+        "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+        "attack-pattern--dd5ca258-eb65-cba9-c409-c62b14215609",
+        "attack-pattern--312336dc-c970-4e61-0c59-1f041bbf93a0",
+        "attack-pattern--6eda9fd0-5410-e018-bb35-8df9d673ec26",
+        "attack-pattern--f676f841-b96b-b1b2-b760-7488b2883e97",
+        "attack-pattern--c224aaf0-db5f-8b44-81e9-800aef6180ba",
+        "attack-pattern--593c0c3b-780d-4848-582b-dd99f673fe2a",
+        "malware--9678a98e-2905-327e-8552-63bb52ade7e0",
+        "threat-actor--cfd7dd7a-cc4e-2c50-8ce8-4e520e94ef06",
+        "threat-actor--9678a98e-2905-327e-8552-63bb52ade7e0",
+        "tool--3affa6a9-fbc0-ae5b-f3c9-631b39384ddf",
+        "tool--7daf26d7-8a71-9b84-da96-511372d04ce3",
+        "tool--28373f15-790e-ee38-3111-079e8d888a8c",
+        "tool--b5337ef2-2dc6-0492-3a13-1bb5cf9df50a",
+        "tool--96ffdbb9-fa5c-bc83-0689-a44f5d3d0785",
+        "relationship--79112c39-8856-8771-5c44-35b0f8b64501",
+        "relationship--72e1393c-56d6-0d49-c92e-ac6ea642cd40",
+        "relationship--50279160-a1e3-2544-f9aa-ac25182a545d",
+        "relationship--72a20384-6ad8-0232-ee45-4eaddca56eec",
+        "relationship--bea96cd9-9116-578c-14c2-7cad530002d1",
+        "relationship--6f32fac5-ee26-6aa3-708b-effbeec3aac3",
+        "relationship--967533bf-7951-dd1e-47c5-96649e7569a9",
+        "relationship--3fa7d00e-75ec-5fa1-2b0c-21ac9d28c5e5",
+        "relationship--c45c01e0-5c6a-05b7-b8f8-b33cbc726ffb",
+        "relationship--5630df63-291a-1a4a-1dda-c2764f2045da",
+        "relationship--61bc83b2-1268-d29c-9c35-f311b1a68d07",
+        "relationship--3d38c095-f819-1928-fea9-2031d55ef9e8",
+        "relationship--ebd01de9-56a6-b22f-73fa-501963fd5585",
+        "relationship--7cd556a3-2af8-8494-11fb-e919cc6ca2e7",
+        "relationship--b77cef35-7535-e84b-0b6d-eefdf8a9d36d",
+        "relationship--c3a66eb2-c48e-dd1c-5245-527ed8de13c0",
+        "relationship--3b030f94-52bc-1cc2-c322-ba8abbbbe697",
+        "relationship--8d9868e6-ef03-b845-7932-713d2873687e",
+        "relationship--6578d4d0-165d-b528-e6db-b11eb3c00de2",
+        "relationship--4597ac12-e478-3011-bfee-d0226f2c45db",
+        "relationship--f7ddb87a-6878-145b-3df2-4b3bfd56191b",
+        "relationship--fbac13a5-3461-a78a-40b8-b8aa0563bd08",
+        "relationship--ec00378d-b218-0bbf-37f9-fa6ff02ac102",
+        "relationship--5c6cc50c-1c8e-936f-b073-0ed6b1df6038",
+        "relationship--dc61ce81-a068-781c-b85b-b837884780ae",
+        "relationship--c0ed29d6-fd96-c4ca-4721-fabea405efa5",
+        "relationship--db05b992-6e65-125a-4525-c7021ac42f49",
+        "relationship--79f40ffa-303e-10d2-ee46-053b6793d5ea",
+        "relationship--6e95d4ed-e276-cce5-bc81-a3f39378e594",
+        "relationship--c4fe0aef-9610-4912-98da-111451d4e804",
+        "relationship--dc67b8b6-d9bb-e046-b36f-8e2a22ea2f4e",
+        "relationship--e05bcc86-7596-fa8c-0382-403930d7c6ce",
+        "relationship--69518ba8-1155-71ea-b017-e6ed1bf5d2ac"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

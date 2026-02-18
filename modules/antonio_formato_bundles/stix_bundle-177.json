@@ -1,0 +1,617 @@
+{
+  "type": "bundle",
+  "id": "bundle--5420eaa6-2faa-4d03-b5ae-6f1c2f7cb8a8",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--55473ff5-985f-40cc-bf01-1ae058a212a9",
+      "name": "LeakyInjector",
+      "description": "LeakyInjector is a first-stage malware that uses low-level APIs for process injection to avoid detection, decrypts the ChaCha20-encrypted second stage (LeakyStealer), and injects it into explorer.exe. It is signed with a valid Extended Validation certificate and is related to multiple samples using the same certificate infrastructure.",
+      "malware_types": [
+        "dropper",
+        "injector"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "LeakyInjector",
+        "dropper",
+        "injector",
+        "crypto stealer"
+      ],
+      "external_references": [
+        {
+          "source_name": "Hybrid Analysis",
+          "url": "https://hybrid-analysis.blogspot.com/search/label/LeakyInjector"
+        }
+      ],
+      "sample_refs": [
+        "file--9b8bd9550e8fdb0ca1482f801121113b364e590349922a3f7936b2a7b6741e82",
+        "file--88e0c1652eb91c517a5fec9d356c7f30c0136d544f5d55ac37f20c5612134efb"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "name": "LeakyStealer",
+      "description": "LeakyStealer is a polymorphic information-stealing malware injected by LeakyInjector. It targets cryptocurrency wallets and browser extensions, exfiltrates browser history, establishes persistence via the Run registry key, and beacons to its C2 server at regular intervals. It implements backdoor commands for downloading/executing files and running Windows commands. It is signed with a valid EV certificate reused across multiple samples.",
+      "malware_types": [
+        "stealer",
+        "backdoor"
+      ],
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "labels": [
+        "LeakyStealer",
+        "infostealer",
+        "crypto stealer",
+        "cryptowallet stealer",
+        "polymorphic"
+      ],
+      "external_references": [
+        {
+          "source_name": "Hybrid Analysis",
+          "url": "https://hybrid-analysis.blogspot.com/search/label/LeakyStealer"
+        }
+      ],
+      "sample_refs": [
+        "file--9b8bd9550e8fdb0ca1482f801121113b364e590349922a3f7936b2a7b6741e82",
+        "file--88e0c1652eb91c517a5fec9d356c7f30c0136d544f5d55ac37f20c5612134efb",
+        "file--dea8653698cea84e063165524c3e8c8141de246a29b9b8de40be3943fd1c6f14"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ffb76c1e-f143-495a-9efc-75c56c17ccd0",
+      "hashes": {
+        "SHA256": "9b8bd9550e8fdb0ca1482f801121113b364e590349922a3f7936b2a7b6741e82"
+      },
+      "name": "LeakyStealer Sample",
+      "labels": [
+        "malware sample",
+        "LeakyStealer"
+      ],
+      "external_references": [
+        {
+          "source_name": "Hybrid Analysis",
+          "url": "https://hybrid-analysis.com/sample/9b8bd9550e8fdb0ca1482f801121113b364e590349922a3f7936b2a7b6741e82"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5d3b9596-3d3b-48a8-8eac-40d173ff094a",
+      "hashes": {
+        "SHA256": "88e0c1652eb91c517a5fec9d356c7f30c0136d544f5d55ac37f20c5612134efb"
+      },
+      "name": "LeakyStealer Sample",
+      "labels": [
+        "malware sample",
+        "LeakyStealer"
+      ],
+      "external_references": [
+        {
+          "source_name": "Hybrid Analysis",
+          "url": "https://hybrid-analysis.com/sample/88e0c1652eb91c517a5fec9d356c7f30c0136d544f5d55ac37f20c5612134efb"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--9685c07d-ebaa-42b9-b5e5-4bc5bf37910d",
+      "hashes": {
+        "SHA256": "dea8653698cea84e063165524c3e8c8141de246a29b9b8de40be3943fd1c6f14"
+      },
+      "name": "LeakyStealer Sample",
+      "labels": [
+        "malware sample",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ec6beeeb-e825-47a7-afac-7a35c3960de0",
+      "name": "%AppData%\\MicrosoftEdgeUpdateCore.exe",
+      "labels": [
+        "malware file",
+        "persistence",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4aa7cac0-d988-423f-8f78-92696484ea0d",
+      "name": "C:\\Users\\<User>\\AppData\\Local\\Temp\\history_%d.db",
+      "labels": [
+        "browser history",
+        "temporary file",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--0c0b8ad8-ddd8-426f-a535-be551ced22f5",
+      "name": "EdgeUpdateCore Registry Value",
+      "description": "Persistence registry value created by LeakyStealer.",
+      "pattern": "[windows-registry-key:value = 'EdgeUpdateCore']",
+      "labels": [
+        "persistence",
+        "registry",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--485c982b-7035-4d85-b513-9d545710db44",
+      "name": "LeakyStealer C2 Domain",
+      "description": "C2 domain used by LeakyStealer.",
+      "pattern": "[domain-name:value = 'everstead.group']",
+      "labels": [
+        "C2",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a0fea059-3a22-448e-88ad-c7bd88c422ae",
+      "name": "LeakyStealer C2 IP",
+      "description": "C2 IP address used by LeakyStealer.",
+      "pattern": "[ipv4-addr:value = '45.151.62.120']",
+      "labels": [
+        "C2",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--167df441-aecb-45af-a45b-898b1277b0af",
+      "name": "LeakyStealer C2 Domain",
+      "description": "Secondary C2 domain associated with LeakyStealer.",
+      "pattern": "[domain-name:value = 'ip-ptr.tech']",
+      "labels": [
+        "C2",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "name": "LeakyStealer Distribution Domain",
+      "description": "Domain distributing LeakyStealer installer.",
+      "pattern": "[domain-name:value = 'paycnex.com']",
+      "labels": [
+        "distribution",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--36c8a176-40a2-46ce-9310-61ee73c1e197",
+      "name": "Process Injection",
+      "description": "LeakyInjector injects LeakyStealer into explorer.exe using low-level Windows APIs.",
+      "labels": [
+        "process injection",
+        "defense evasion",
+        "LeakyInjector"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3d85e229-f398-4b9f-a5f9-82fb888ccf04",
+      "name": "Persistence via Registry Run Key",
+      "description": "LeakyStealer establishes persistence by creating an entry under the Run registry key.",
+      "labels": [
+        "persistence",
+        "registry",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9d307064-ed68-435f-82cd-3db98952bcff",
+      "name": "Information Stealing",
+      "description": "LeakyStealer steals cryptocurrency wallet data and browser history from Chrome, Edge, Brave, Opera, and Vivaldi.",
+      "labels": [
+        "information stealing",
+        "crypto wallet",
+        "browser history",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c194de2d-2c46-43bb-92fa-f9cb82d6cbab",
+      "name": "Command and Control Beaconing",
+      "description": "LeakyStealer beacons to its C2 server at regular intervals.",
+      "labels": [
+        "C2",
+        "beaconing",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--aaebe2b8-f58e-4a28-81d9-a813f34ab27b",
+      "name": "Polymorphic Engine",
+      "description": "LeakyStealer modifies its memory area with hard-coded bytes at runtime to evade detection.",
+      "labels": [
+        "polymorphic",
+        "defense evasion",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "name": "Execution of Arbitrary Commands",
+      "description": "LeakyStealer executes Windows commands and downloads/executes files via C2 backdoor commands.",
+      "labels": [
+        "remote command execution",
+        "backdoor",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--4c35fdbf-f092-4480-82cf-cc7c87230d6e",
+      "name": "LeakyStealer C2 Infrastructure",
+      "description": "C2 infrastructure for LeakyStealer, including IP 45.151.62.120 (ports 22, 80, 443), domains everstead.group and ip-ptr.tech.",
+      "labels": [
+        "C2",
+        "LeakyStealer"
+      ],
+      "external_references": [
+        {
+          "source_name": "Shodan",
+          "url": "https://www.shodan.io/host/45.151.62.120"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--4bd4786f-0a2c-40bc-a374-05ad745360fa",
+      "name": "LeakyStealer Distribution Infrastructure",
+      "description": "Distribution infrastructure for LeakyStealer, including paycnex.com domain and MSI installer dynatrc.php.",
+      "labels": [
+        "distribution",
+        "LeakyStealer"
+      ]
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--b0ace1f6-eef5-42b6-bcb9-65b2eaceba39",
+      "labels": [
+        "malware signing",
+        "LeakyStealer",
+        "LeakyInjector"
+      ],
+      "issuer": "Sectigo Public Code Signing CA EV R36",
+      "subject": "Hefei Nudan Jukuang Network Technology Co., Ltd.",
+      "validity_not_before": "2025-09-09T00:00:00Z",
+      "validity_not_after": "2026-09-09T00:00:00Z",
+      "x509_v3_thumbprint": "A8BF7554363D27DEB374C4E2658AC05C60E3BAA7",
+      "description": "Extended Validation certificate used to sign LeakyInjector and LeakyStealer samples. Reused across at least seven related samples."
+    },
+    {
+      "type": "file",
+      "id": "file--5253d804-b141-4193-8bf2-b7b42a39230f",
+      "hashes": {
+        "SHA-256": "9b8bd9550e8fdb0ca1482f801121113b364e590349922a3f7936b2a7b6741e82"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--617fed6e-39b5-4078-bb73-3f18b7d53558",
+      "hashes": {
+        "SHA-256": "88e0c1652eb91c517a5fec9d356c7f30c0136d544f5d55ac37f20c5612134efb"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--07854acb-4347-4a26-9182-8987f561c3a6",
+      "name": "MicrosoftEdgeUpdateCore.exe",
+      "path": "%AppData%\\MicrosoftEdgeUpdateCore.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "name": "history_%d.db",
+      "path": "C:\\Users\\<User>\\AppData\\Local\\Temp\\history_%d.db"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2125b44-dad0-4d2f-b705-a6b35640239f",
+      "value": "everstead.group"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--deea82e6-e45d-4a36-87d1-36ab8678053a",
+      "value": "ip-ptr.tech"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--180da26e-8679-4af7-9507-8aac9be29d5b",
+      "value": "paycnex.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6240e0c1-0c66-4701-b570-7d601f43a065",
+      "value": "45.151.62.120"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--d32f9529-2b84-4cd3-b607-61d36b58176e",
+      "key": "HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\EdgeUpdateCore"
+    },
+    {
+      "type": "certificate",
+      "id": "certificate--2218e596-cfec-4c48-92a7-f9d527f02bf2",
+      "issuer": "Sectigo Public Code Signing CA EV R36",
+      "subject": "Hefei Nudan Jukuang Network Technology Co., Ltd.",
+      "validity_not_before": "2025-09-09T00:00:00Z",
+      "validity_not_after": "2026-09-09T00:00:00Z",
+      "x509_v3_thumbprint": "A8BF7554363D27DEB374C4E2658AC05C60E3BAA7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--802d69bb-9d5a-49ec-af77-4c3e2d6f658c",
+      "relationship_type": "drops",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "description": "LeakyInjector drops and injects LeakyStealer as its second stage payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1aa41874-6a65-4c3c-9db2-dca635450469",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyInjector uses process injection to inject LeakyStealer into explorer.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd7fa593-19e8-4b5b-aa60-c66eb8db4d8b",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "x509-certificate--b0ace1f6-eef5-42b6-bcb9-65b2eaceba39",
+      "description": "LeakyInjector is signed with the same Extended Validation certificate as LeakyStealer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--451e2c95-835c-4d10-bfb0-a09fcc8f247a",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyInjector sample file associated with LeakyInjector."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e0fd4d2-c07c-4fb5-b80b-c333b2e91d2e",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyInjector sample file associated with LeakyInjector."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c47e791-77cc-4b96-a9d0-70dabd799b3b",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyStealer establishes persistence via registry Run key."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7bb1249a-5681-40ac-967d-4c7f6c7442f3",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyStealer steals information such as crypto wallet data and browser history."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8297e8ec-2070-4d76-b0b3-e5f4ebc6d5ef",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyStealer beacons to its C2 server at regular intervals."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--167965d4-6249-445a-8948-7e68862017d6",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyStealer uses a polymorphic engine to modify its memory area at runtime."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87918b81-9455-4a87-8909-acc9e81992de",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "attack-pattern--baa95ed6-cf1d-42d9-bcd7-f7be5994f1bb",
+      "description": "LeakyStealer executes arbitrary Windows commands and downloads/executes files via C2 backdoor commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c170a41-454b-4f55-9578-bc2bfb0fca00",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "x509-certificate--b0ace1f6-eef5-42b6-bcb9-65b2eaceba39",
+      "description": "LeakyStealer is signed with a valid Extended Validation certificate reused across multiple samples."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3191e495-79d0-4a52-b190-05ba0d02e1a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyStealer sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b078f50-79a1-421d-b3e9-63c345d558f8",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyStealer sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b3602a2-ce3c-47d4-b3fc-054870def17b",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyStealer sample file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b2fa27a-78c9-458d-bf50-8e60a7df48eb",
+      "relationship_type": "creates",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyStealer copies itself as %AppData%\\MicrosoftEdgeUpdateCore.exe for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f59748b4-18a9-4be2-baac-0b404ee61d0b",
+      "relationship_type": "creates",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "description": "LeakyStealer creates temporary browser history files for exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a40ba740-acdc-4223-85c2-d2a209471ba6",
+      "relationship_type": "creates",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "windows-registry-key--d32f9529-2b84-4cd3-b607-61d36b58176e",
+      "description": "LeakyStealer creates a registry value for persistence under Run key."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82653211-ebe2-4893-83a6-8e8c6d62a2a8",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "infrastructure--4bd4786f-0a2c-40bc-a374-05ad745360fa",
+      "description": "LeakyStealer communicates with its C2 infrastructure (IP and domains)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5bd9890-f364-4ab4-b24b-9924964a6648",
+      "relationship_type": "downloads",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "infrastructure--4bd4786f-0a2c-40bc-a374-05ad745360fa",
+      "description": "LeakyStealer is distributed via infrastructure including paycnex.com domain and MSI installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a451e8f-1f48-4943-a638-e3e0f38a33e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "description": "LeakyStealer uses the EdgeUpdateCore registry value for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edbc73bc-0906-4a09-a7ce-0c8af34ea3b3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "description": "LeakyStealer communicates with the C2 domain everstead.group."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b30b5c50-e7f8-48ba-a71f-e66f4ecb7e03",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "description": "LeakyStealer communicates with the C2 IP address 45.151.62.120."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79021c1c-6290-44e1-9289-52fcd30f166b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "description": "LeakyStealer communicates with the secondary C2 domain ip-ptr.tech."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58fc4a1c-c448-4900-a3df-cb8249f2261b",
+      "relationship_type": "downloads",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "indicator--0d120af6-1944-4668-ad7e-142c1c1f7184",
+      "description": "LeakyStealer is distributed via paycnex.com domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e60653f3-d51f-44d9-a9d1-7dc4edd8b7a8",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "domain-name--180da26e-8679-4af7-9507-8aac9be29d5b",
+      "description": "LeakyStealer communicates with everstead.group C2 domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1119ae75-094a-4603-b91a-df3bd32d93ab",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "domain-name--180da26e-8679-4af7-9507-8aac9be29d5b",
+      "description": "LeakyStealer communicates with ip-ptr.tech C2 domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--776d4a89-5b3b-491a-88b7-63c5113288e0",
+      "relationship_type": "downloads",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "domain-name--180da26e-8679-4af7-9507-8aac9be29d5b",
+      "description": "LeakyStealer is distributed via paycnex.com domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e4f66be-72a9-41a9-87dc-9bdc6815909f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "ipv4-addr--6240e0c1-0c66-4701-b570-7d601f43a065",
+      "description": "LeakyStealer communicates with C2 IP 45.151.62.120."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--766d0088-b73a-41de-85e1-235c86ae1af0",
+      "relationship_type": "creates",
+      "source_ref": "malware--44acbe13-7564-48b6-bf99-01abb65b852a",
+      "target_ref": "windows-registry-key--d32f9529-2b84-4cd3-b607-61d36b58176e",
+      "description": "LeakyStealer creates registry key for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22eb122b-a8ed-44c6-b688-58abeff10ed6",
+      "relationship_type": "signed-by",
+      "source_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "target_ref": "certificate--2218e596-cfec-4c48-92a7-f9d527f02bf2",
+      "description": "LeakyStealer sample file signed by EV certificate."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46b8ed8d-9f59-40e7-9709-bc0f93539355",
+      "relationship_type": "signed-by",
+      "source_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "target_ref": "certificate--2218e596-cfec-4c48-92a7-f9d527f02bf2",
+      "description": "LeakyStealer sample file signed by EV certificate."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9e13b21-2b81-4e67-a339-21a8cdc1f88f",
+      "relationship_type": "signed-by",
+      "source_ref": "file--6bc1eb31-aff5-4c08-9007-53e45cee816e",
+      "target_ref": "certificate--2218e596-cfec-4c48-92a7-f9d527f02bf2",
+      "description": "LeakyStealer sample file signed by EV certificate."
+    }
+  ]
+}

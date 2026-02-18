@@ -1,0 +1,619 @@
+{
+  "type": "bundle",
+  "id": "bundle--c212c89b-97ba-46d4-a2ee-3421bc8c952b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0f895a92-900a-48e5-bd81-3121ddac1f55",
+      "name": "Phishing via Fake Google Play Pages",
+      "description": "Adversaries create counterfeit Google Play Store pages and phishing overlays to trick users into installing Fantasy Hub. These pages may impersonate legitimate apps such as Telegram or banking applications.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1660",
+          "external_id": "T1660"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2536ece8-d013-4bb2-bc7b-a490a8642349",
+      "name": "Event Triggered Execution: Broadcast Receivers",
+      "description": "Fantasy Hub creates broadcast receivers to receive SMS events and outgoing calls, enabling persistence and monitoring of device activity.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1624/001/",
+          "external_id": "T1624.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--329d1b8e-8641-41bc-aae7-e37ec53e4d29",
+      "name": "Masquerading: Match Legitimate Name or Location",
+      "description": "Fantasy Hub payloads impersonate Google Play icons and names to evade detection and lower user suspicion.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1655/001/",
+          "external_id": "T1655.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7328d240-5135-42ca-b768-287b1c422b8c",
+      "name": "System Information Discovery",
+      "description": "Fantasy Hub collects device information such as device name, brand, Android version, and IP address.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1426/",
+          "external_id": "T1426"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b6048249-2359-4a44-a1cf-36be8cbb7cb5",
+      "name": "Protected User Data: SMS Messages",
+      "description": "Fantasy Hub exfiltrates user SMS messages and sends them to its command and control server.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1636/004/",
+          "external_id": "T1636.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7e4d7c5b-92f3-4854-9655-a461d052fbc3",
+      "name": "Protected User Data: Call Log",
+      "description": "Fantasy Hub steals call logs from the victim's device.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1636/002/",
+          "external_id": "T1636.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--09d3aafe-9fb5-47c8-a5a9-17e02c440d7e",
+      "name": "Protected User Data: Contact List",
+      "description": "Fantasy Hub steals contacts from the victim's device.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1636/003/",
+          "external_id": "T1636.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b1abd3e6-2b03-4631-8d11-9ea80728a1da",
+      "name": "Stored Application Data",
+      "description": "Fantasy Hub retrieves the list of installed applications from the victim's device.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1409",
+          "external_id": "T1409"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ccd00e4e-0522-43a1-b1e0-93036e733f69",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Fantasy Hub uses HTTP protocol to communicate with its command and control servers.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1437/001/",
+          "external_id": "T1437.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e897f92f-a2ee-4070-8a1e-0c4b0f80fa56",
+      "name": "Call Control",
+      "description": "Fantasy Hub can silently execute USSD codes and make phone calls from the victim's device.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1616",
+          "external_id": "T1616"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--08e55658-b9e6-4d54-9424-ec957a5f523a",
+      "name": "Exfiltration Over C2 Channel",
+      "description": "Fantasy Hub sends exfiltrated data over its command and control channel.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1646/",
+          "external_id": "T1646"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "name": "SMS Control",
+      "description": "Fantasy Hub can read and send SMS messages from the victim's device.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1582/",
+          "external_id": "T1582"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0",
+      "name": "Fantasy Hub Operators",
+      "description": "Operators based in Russia advertise and sell Fantasy Hub via a Malware-as-a-Service model, providing documentation, videos, and subscription management through Telegram bots. They target financial institutions and general Android users.",
+      "aliases": [
+        "FantasyHub Sellers",
+        "Fantasy Hub Threat Actors"
+      ],
+      "external_references": [
+        {
+          "source_name": "Zimperium",
+          "url": "https://zimperium.com/blog/fantasy-hub-android-rat"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--3cca811d-41ef-40f0-8298-94cabfd71ef9",
+      "name": "Fantasy Hub MaaS Campaign",
+      "description": "A campaign involving the distribution of Fantasy Hub Android RAT via fake Google Play pages and phishing overlays, targeting financial institutions (Alfa, PSB, Tbank, Sber) and general Android users. The campaign leverages Telegram bot subscriptions and social engineering.",
+      "aliases": [
+        "FantasyHub MaaS"
+      ],
+      "external_references": [
+        {
+          "source_name": "Zimperium",
+          "url": "https://zimperium.com/blog/fantasy-hub-android-rat"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--58d84a17-1231-4945-aed4-6def0d495403",
+      "name": "metadata.dat",
+      "extensions": {
+        "android": {
+          "asset": true,
+          "encrypted": true,
+          "encryption_algorithm": "custom XOR routine",
+          "compressed": true,
+          "compression_algorithm": "gzip (zlib with windowBits=31)"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--025ea921-9ffd-48e1-9dd4-125c979df955",
+      "name": "metamask_loader",
+      "extensions": {
+        "android": {
+          "library": true,
+          "native": true
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "name": "APK",
+      "extensions": {
+        "android": {
+          "dropper": true,
+          "masquerades_as": [
+            "Google Play Update",
+            "Banking Apps",
+            "Telegram"
+          ],
+          "activity_alias": true
+        }
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--da6b72f8-c522-43da-ac03-d6078577b05b",
+      "value": "play.google.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--caabdda6-9d40-408c-ae7c-a081d2487c8d",
+      "value": "telegram.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--04382322-4682-48f5-b634-8381c17441ce",
+      "value": "alfa-bank.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ffa6543a-3ad7-4c9e-befe-44e99b14a1c6",
+      "value": "psbank.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--32e86778-9dc2-494e-a657-217f5f491a3d",
+      "value": "sberbank.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "value": "tbank.ru"
+    },
+    {
+      "type": "software",
+      "id": "software--35ba3958-23ae-45c2-81fd-61cc2d4101c1",
+      "name": "Fantasy Hub",
+      "labels": [
+        "android",
+        "remote access trojan",
+        "spyware",
+        "malware-as-a-service"
+      ],
+      "description": "Android RAT sold via Russian-language MaaS channels, capable of device control, SMS/contacts/call log exfiltration, live audio/video streaming, phishing overlays, and notification manipulation."
+    },
+    {
+      "type": "software",
+      "id": "software--4efb61b3-f22d-4abc-bc3a-7396d0de21b1",
+      "name": "WebRTC",
+      "labels": [
+        "open-source",
+        "real-time communication"
+      ],
+      "description": "Used by Fantasy Hub for live audio/video streaming from victim device to C2."
+    },
+    {
+      "type": "software",
+      "id": "software--9478cc7b-8261-4791-8d16-e6bf07fb2e56",
+      "name": "Telegram",
+      "labels": [
+        "messaging",
+        "bot"
+      ],
+      "description": "Used for bot-driven subscription, notification delivery, and phishing page impersonation."
+    },
+    {
+      "type": "account",
+      "id": "account--81e3c0f9-fa5f-4547-b221-068afdea3193",
+      "account_type": "telegram-bot",
+      "display_name": "Fantasy Hub Subscription Bot"
+    },
+    {
+      "type": "device",
+      "id": "device--03ebc1af-8ccc-4e8f-ace5-69381546a0d2",
+      "brand": "Android",
+      "model": "Generic",
+      "extensions": {
+        "android": {
+          "sms_handler_role": true,
+          "root_detection": true
+        }
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee193087-868e-4973-a678-2c895ac1d874",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub uses phishing via fake Google Play pages to trick users into installing the malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31d88e9b-0a73-4c72-9f2c-701d85274ce3",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub uses event triggered execution via broadcast receivers for persistence and monitoring."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4281a85e-d87f-4824-8fab-d761b8f01e00",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub uses masquerading by matching legitimate app names and icons to evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed936401-e92b-4d24-b47b-adbfce83ddc6",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub uses system information discovery to collect device information."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ecd23cc9-4a43-45b9-b247-a0c4a3944009",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub exfiltrates SMS messages from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6decb95-615d-47f0-b685-525d4238fccf",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub exfiltrates call logs from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe8559ac-c087-43f6-805b-208f2b002ea7",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub exfiltrates contacts from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a543f8c4-c85e-4489-a932-e6b4e5237e70",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub retrieves stored application data from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfabceb7-2e00-48f3-a753-08d3ea19a929",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub uses HTTP protocol for command and control communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb5d70a0-2ae0-465c-9b22-e597c01b7b04",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub can execute USSD codes and make calls from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c6fc4f4-deb8-45dd-9275-5d8245674494",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub exfiltrates data over its C2 channel."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dc419490-0529-4241-9db6-85a71d673889",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "attack-pattern--a0cd0071-678b-42ff-b802-cf83b29df13c",
+      "description": "Fantasy Hub can read and send SMS messages from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75e52759-1b50-48e0-8c33-44ed69fb9d54",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "description": "Fantasy Hub uses the metamask_loader library to decrypt and unpack its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d27ee96-713e-4458-8d1e-e69d59db791f",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "description": "Fantasy Hub uses a Telegram bot for subscription management and notification delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c98eeec-e47c-42d9-8ec0-9dcda3546356",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "description": "Fantasy Hub uses WebRTC for live audio and video streaming from victim devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f83da64-579d-4b27-b693-e46aa91be595",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "description": "Fantasy Hub accesses and decrypts the metadata.dat asset at runtime."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9aa3d0a-160d-4da8-bc9e-e227576d3767",
+      "relationship_type": "drops",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "description": "Fantasy Hub drops a native library named metamask_loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--087164c8-54ea-4796-aff5-fffe32da7f8b",
+      "relationship_type": "drops",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "description": "Fantasy Hub drops APK files that masquerade as Google Play updates, banking apps, and Telegram."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf3ad9be-6513-4ed4-b457-5f6df0965ab8",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate Google Play (play.google.com)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--417a3cd8-5ab7-4bbf-b9c4-3daae5aa5e7f",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate Telegram (telegram.org)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b727e830-7691-4190-8247-b44ed4ee22e7",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate Alfa Bank (alfa-bank.ru)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3712c97c-4658-40de-8474-b20ea505f7b1",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate PSB (psbank.ru)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81849136-62b0-43ae-9fc8-d65c33b263d4",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate Sber Bank (sberbank.ru)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82f05d8b-bdc0-4f91-9827-e88374c381b6",
+      "relationship_type": "impersonates",
+      "source_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "target_ref": "domain-name--edb44cb0-4dd1-4cf1-b8e0-4b699453237b",
+      "description": "Fantasy Hub APK files impersonate Tbank (tbank.ru)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ea2d89d-0942-499d-9592-680da13f6fbf",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "software--9478cc7b-8261-4791-8d16-e6bf07fb2e56",
+      "description": "Fantasy Hub is implemented as Android RAT software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32187189-82e4-48f2-9170-5e58dc853f0b",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "software--9478cc7b-8261-4791-8d16-e6bf07fb2e56",
+      "description": "Fantasy Hub uses WebRTC software for real-time streaming."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--068e18db-b63e-46f9-9f80-aa2c6022b770",
+      "relationship_type": "uses",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "software--9478cc7b-8261-4791-8d16-e6bf07fb2e56",
+      "description": "Fantasy Hub uses Telegram for bot-driven subscription and notification delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61e8e66f-f280-4552-9cfc-6d9f1aca45d1",
+      "relationship_type": "uses",
+      "source_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "target_ref": "file--2f3d928a-2cd7-40bb-9a3f-fe053a2b3228",
+      "description": "The metamask_loader tool accesses and decrypts the metadata.dat asset."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b733641e-feff-460d-bd6c-5eda1b10620c",
+      "relationship_type": "uses",
+      "source_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "target_ref": "account--81e3c0f9-fa5f-4547-b221-068afdea3193",
+      "description": "The Telegram bot tool is operated via the Fantasy Hub Subscription Bot account."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ccb7415-f93c-4ff0-9025-e1404c848503",
+      "relationship_type": "uses",
+      "source_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "target_ref": "software--9478cc7b-8261-4791-8d16-e6bf07fb2e56",
+      "description": "Fantasy Hub leverages the open-source WebRTC project for streaming."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--682fa7a6-7fab-43d5-a265-b5810a24a6b5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0",
+      "target_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "description": "Fantasy Hub Operators use Fantasy Hub malware in their campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a365995-82e7-4f1c-87ea-2bb900e98c29",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0",
+      "target_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "description": "Fantasy Hub Operators use Telegram bot for managing subscriptions and notifications."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1909f342-b74f-4618-bd88-c3c50d35e60e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0",
+      "target_ref": "campaign--3cca811d-41ef-40f0-8298-94cabfd71ef9",
+      "description": "Fantasy Hub Operators conduct the Fantasy Hub MaaS Campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92a0062f-4f70-4ec8-8ebb-4a116a3a3058",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cca811d-41ef-40f0-8298-94cabfd71ef9",
+      "target_ref": "intrusion-set--46731e1d-f1c3-4c7e-975d-aafd18ff7eb0",
+      "description": "The Fantasy Hub MaaS Campaign is attributed to Fantasy Hub Operators."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ca59c61-4d17-4dca-8219-bfae6c268f3e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cca811d-41ef-40f0-8298-94cabfd71ef9",
+      "target_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "description": "The Fantasy Hub MaaS Campaign distributes Fantasy Hub malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7bc77b72-16ca-494e-aca5-1908dc795a8e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cca811d-41ef-40f0-8298-94cabfd71ef9",
+      "target_ref": "tool--9175c8cc-7d3c-40e9-afd4-dafa5635ee5b",
+      "description": "The Fantasy Hub MaaS Campaign uses Telegram bot for subscription and notification."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ec5d488-4379-4820-88ce-827571265550",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "network-traffic--7cedbc9b-bfdd-4a2b-9525-7be28427ee92",
+      "description": "Fantasy Hub communicates with its C2 server via HTTP protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a2a47cae-0efd-42f8-99db-f671bb665402",
+      "relationship_type": "targets",
+      "source_ref": "malware--198c88c9-79b0-46a3-a8ed-1563b519a737",
+      "target_ref": "device--03ebc1af-8ccc-4e8f-ace5-69381546a0d2",
+      "description": "Fantasy Hub targets Android devices."
+    }
+  ]
+}

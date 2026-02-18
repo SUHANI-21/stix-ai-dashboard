@@ -1,0 +1,639 @@
+{
+  "type": "bundle",
+  "id": "bundle--2e0b2e93-4bbc-4bfe-aa46-c8b81389a142",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--76d3a6ae-dcc1-4b67-a017-fc919626bf0f",
+      "name": "Supply Chain Compromise via Malicious NPM Packages",
+      "description": "The attacker compromises popular npm packages by injecting malicious files (`setup_bun.js` and `bun_environment.js`) that appear to be introducing the Bun runtime. The code collects system and cloud secrets, exfiltrates them to public GitHub repositories, and attempts to propagate by updating other npm packages using discovered tokens. If propagation fails, destructive commands are executed to delete files and wipe disks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Pulsedive Blog",
+          "url": "https://blog.pulsedive.com/npm-compromise-the-wrath-of-the-shai-hulud-supply-chain-attack/"
+        }
+      ]
+    },
+    {
+      "type": "malware-analysis",
+      "id": "malware-analysis--b298cb16-a1d3-4de8-8110-4840a0485080",
+      "product": "Shai-Hulud",
+      "result_name": "Shai-Hulud v2 NPM Supply Chain Campaign",
+      "analysis_sco_refs": [],
+      "analysis_started": "2025-11-21T00:00:00Z",
+      "analysis_ended": "2025-11-25T15:00:00Z",
+      "analysis_engine_version": "N/A",
+      "submitted": "2025-11-25T15:00:00Z",
+      "analysis_version": "2.0",
+      "result": "malicious",
+      "summary": "Analysis of Shai-Hulud v2 reveals a worm that propagates via npm supply chain, exfiltrates secrets to GitHub, and destroys files if propagation fails. The campaign affected thousands of repositories and major npm packages.",
+      "external_references": [
+        {
+          "source_name": "Pulsedive Blog",
+          "url": "https://blog.pulsedive.com/npm-compromise-the-wrath-of-the-shai-hulud-supply-chain-attack/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--332d44db-bc7b-40df-a3b7-ecba4151a240",
+      "name": "Shai-Hulud Threat Actor",
+      "description": "The actor(s) behind the Shai-Hulud npm supply chain attacks, responsible for compromising thousands of npm packages and exfiltrating secrets to public GitHub repositories.",
+      "aliases": [
+        "Sha1-Hulud"
+      ],
+      "first_seen": "2025-11-21T00:00:00Z",
+      "goals": [
+        "Exfiltrate secrets from CI/CD, cloud, and developer environments",
+        "Propagate malware via npm supply chain",
+        "Cause destruction by deleting and wiping files if propagation fails"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial",
+      "external_references": [
+        {
+          "source_name": "Wiz",
+          "url": "https://www.wiz.io/blog/shai-hulud-2-0-ongoing-supply-chain-attack#which-actions-should-security-teams-take-32"
+        },
+        {
+          "source_name": "Aikido",
+          "url": "https://www.aikido.dev/blog/shai-hulud-strikes-again-hitting-zapier-ensdomains#differences-from-last-time"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--6cca8092-ff0b-4904-ad95-9550a9bb4b04",
+      "name": "Shai-Hulud v2 NPM Supply Chain Attack",
+      "description": "A campaign beginning in late November 2025 involving the compromise of numerous npm packages (including those from Zapier, ENS Domains, PostHog, and Postman) to distribute the Shai-Hulud malware. The campaign resulted in mass exfiltration of secrets, creation of over 22,000 public GitHub repositories, and destructive actions on infected hosts.",
+      "aliases": [
+        "Sha1-Hulud v2"
+      ],
+      "first_seen": "2025-11-21T00:00:00Z",
+      "last_seen": "2025-11-25T15:00:00Z",
+      "objective": "Exfiltrate secrets and propagate via npm supply chain; destroy files if propagation fails.",
+      "external_references": [
+        {
+          "source_name": "Pulsedive Blog",
+          "url": "https://blog.pulsedive.com/npm-compromise-the-wrath-of-the-shai-hulud-supply-chain-attack/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4cdc788f-015a-4b28-b7e8-be9c4a8577a0",
+      "name": "setup_bun.js"
+    },
+    {
+      "type": "file",
+      "id": "file--a0ed71c7-91a5-4bd8-867e-ebc5d878dee0",
+      "name": "bun_environment.js",
+      "size": 10000000
+    },
+    {
+      "type": "file",
+      "id": "file--fa27735c-623d-412e-9021-01da0c118a40",
+      "name": ".github/workflows/discussion.yaml"
+    },
+    {
+      "type": "file",
+      "id": "file--5f33c119-d031-4a5a-9b4d-2813d0fcfd86",
+      "name": "cloud.json"
+    },
+    {
+      "type": "file",
+      "id": "file--ee1b87fc-efce-4b74-a43f-9b4bd3341845",
+      "name": "contents.json"
+    },
+    {
+      "type": "file",
+      "id": "file--c0b1ac93-878b-4408-bd1d-7c47c15b030b",
+      "name": "environment.json"
+    },
+    {
+      "type": "file",
+      "id": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "name": "truffleSecrets.json"
+    },
+    {
+      "type": "software",
+      "id": "software--85ee59e7-eb96-4413-8bdd-e8bfbb0262a5",
+      "name": "Bun",
+      "cpe": "cpe:2.3:a:bun:bun:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--75fb81f1-d9b9-4e72-95ad-dbb5f4ad5fe8",
+      "name": "npm",
+      "cpe": "cpe:2.3:a:npm:npm:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--86048591-9cc1-44dd-99cb-17ea6945d936",
+      "name": "cmd.exe",
+      "cpe": "cpe:2.3:a:microsoft:cmd.exe:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--1698b52c-00b1-413f-ade4-35c0ec5433ef",
+      "name": "cipher",
+      "cpe": "cpe:2.3:a:microsoft:cipher:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--7ac7111b-b92d-4c56-a9b4-199619641d50",
+      "name": "shred",
+      "cpe": "cpe:2.3:a:shred:shred:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "directory",
+      "id": "directory--c5a75bd4-3777-4cb4-b178-8b553a4b5ee2",
+      "path": "%USERPROFILE%"
+    },
+    {
+      "type": "directory",
+      "id": "directory--141bfb6b-ff90-44b9-ab46-4be416307685",
+      "path": "/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws/node_modules/@postman/tunnel-agent"
+    },
+    {
+      "type": "directory",
+      "id": "directory--818068e9-6bdb-4e0d-a720-4cd3defd45c9",
+      "path": "/mnt/<redacted>/workspace/Feature-MultiBranch-PWT/AGAction/ws"
+    },
+    {
+      "type": "account",
+      "id": "account--414d1160-a703-4177-b86b-a86d82eac900",
+      "account_type": "github"
+    },
+    {
+      "type": "account",
+      "id": "account--30c16725-e2cc-4dc0-9b29-86ab20ece659",
+      "account_type": "npm"
+    },
+    {
+      "type": "account",
+      "id": "account--9d04c4c3-2bae-4866-bb63-0dda7fb68b23",
+      "account_type": "aws"
+    },
+    {
+      "type": "account",
+      "id": "account--5904fc3c-8bc9-4b16-a748-d08a9929af9a",
+      "account_type": "gcp"
+    },
+    {
+      "type": "account",
+      "id": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "account_type": "azure"
+    },
+    {
+      "type": "url",
+      "id": "url--08e63242-3ba1-48c5-a802-bb7dfeb329ea",
+      "value": "https://github.com/pulsedive-research/resources/tree/main/The%20Return%20of%20Shai-Hulud"
+    },
+    {
+      "type": "url",
+      "id": "url--913af749-6a45-452b-ab9b-c0b0530610a7",
+      "value": "https://blog.pulsedive.com/npm-compromise-the-wrath-of-the-shai-hulud-supply-chain-attack/"
+    },
+    {
+      "type": "url",
+      "id": "url--a92d58fd-819b-4d6b-977c-fa7c8e0f13df",
+      "value": "https://t.co/wljoG10P3o"
+    },
+    {
+      "type": "url",
+      "id": "url--0f6a8860-ec14-4817-a725-f94df632c89f",
+      "value": "https://helm.ci.artifacts.walmart.com/artifactory/ret-marketplace-helm-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--c0693810-2f91-443f-ae29-908f3c467bf0",
+      "value": "https://generic.ci.artifacts.walmart.com/artifactory/ret-marketplace-generic"
+    },
+    {
+      "type": "url",
+      "id": "url--0e8867c8-2c11-43ef-9831-d7e0d630b2b8",
+      "value": "https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi/ret-marketplace-pypi"
+    },
+    {
+      "type": "url",
+      "id": "url--eaee91d7-cc3f-4880-adec-336e2d2c4713",
+      "value": "https://npm.ci.artifacts.walmart.com/artifactory/api/npm"
+    },
+    {
+      "type": "url",
+      "id": "url--1e230c7a-8b0d-46ba-96b4-ddecb55b26a6",
+      "value": "https://gecgithub01.walmart.com/RET-Marketplace/mp-coee-pwt.git"
+    },
+    {
+      "type": "url",
+      "id": "url--0c7c3f80-a007-4c2d-b5ec-41e9d215ef2d",
+      "value": "https://runner-1-2175078775.<redacted>pro-prod-runner02.prod-ndc23.prod.walmart.com/job/Feature-MultiBranch-PWT/job/AGAction/22/display/redirect?page=tests"
+    },
+    {
+      "type": "url",
+      "id": "url--82e3d5e7-4286-474c-8256-9668833e69a3",
+      "value": "https://runner-1-2175078775.<redacted>pro-prod-runner02.prod-ndc23.prod.walmart.com/job/Feature-MultiBranch-PWT/job/AGAction/22/display/redirect?page=changes"
+    },
+    {
+      "type": "url",
+      "id": "url--2cca9ec7-685b-428a-9cd2-5e2b68fc0081",
+      "value": "https://runner-1-2175078775.<redacted>pro-prod-runner02.prod-ndc23.prod.walmart.com/job/Feature-MultiBranch-PWT/job/AGAction/22/"
+    },
+    {
+      "type": "url",
+      "id": "url--17937a4e-273d-40ba-bbf5-2c17a0f8297f",
+      "value": "https://gecgithub01.walmart.com/RET-Marketplace/mp-coee-pwt"
+    },
+    {
+      "type": "url",
+      "id": "url--d1fcdf6f-38a1-4f8b-932d-e577a529a83a",
+      "value": "https://ci.artifacts.walmart.com/artifactory"
+    },
+    {
+      "type": "url",
+      "id": "url--7376da27-ad28-4358-b43d-95e0a8fce1c2",
+      "value": "https://npm.ci.artifacts.walmart.com:443/artifactory/api/npm/ret-marketplace-npm/@postman/tunnel-agent/-/tunnel-agent-0.6.7.tgz"
+    },
+    {
+      "type": "url",
+      "id": "url--c771f93e-388d-4378-92b6-d0db172737fd",
+      "value": "https://repository.walmart.com/content/groups/public/"
+    },
+    {
+      "type": "url",
+      "id": "url--2a89cd18-99b8-4b16-a88c-1a7de90a474c",
+      "value": "https://sonar<redacted>producer.walmart.com/<redacted>-sonar-results"
+    },
+    {
+      "type": "url",
+      "id": "url--acc2ed73-7988-4ba5-880e-c5c0e42a40b8",
+      "value": "http://gec-maven-nexus.walmart.com/nexus/repository/googleapis-storage/chromedriver"
+    },
+    {
+      "type": "url",
+      "id": "url--11908e26-5ce3-4d4f-af33-ae23ee24a7dd",
+      "value": "https://akeyless.gw.prod.glb.us.walmart.net:8080"
+    },
+    {
+      "type": "url",
+      "id": "url--c3a09af7-cf0b-4523-bedb-b78cbf3b6a63",
+      "value": "https://mvn.ci.artifacts.walmart.com/artifactory/ret-marketplace-mvn"
+    },
+    {
+      "type": "url",
+      "id": "url--4e120e0b-c88f-47ae-b4a9-871ae22d145e",
+      "value": "https://mvn.ci.artifacts.walmart.com/artifactory/ret-marketplace-mvn-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--0051a3bd-229e-4e50-9343-9ace6e26dd6b",
+      "value": "https://helm.ci.artifacts.walmart.com/artifactory/ret-marketplace-helm"
+    },
+    {
+      "type": "url",
+      "id": "url--2179319e-78a7-4069-b783-597123a7a75e",
+      "value": "https://sbt.ci.artifacts.walmart.com/artifactory/ret-marketplace-sbt"
+    },
+    {
+      "type": "url",
+      "id": "url--35eb8ca7-513d-4fea-bcf0-a7950b740a26",
+      "value": "https://docker.ci.artifacts.walmart.com"
+    },
+    {
+      "type": "url",
+      "id": "url--8534396a-3e0e-4c92-9afc-205a96316ca0",
+      "value": "https://pypi.ci.artifacts.walmart.com/artifactory/api/pypi"
+    },
+    {
+      "type": "url",
+      "id": "url--a290d88f-92a1-4ad4-8b50-35efa244c984",
+      "value": "https://npm.ci.artifacts.walmart.com/artifactory/api/npm/ret-marketplace-npm"
+    },
+    {
+      "type": "url",
+      "id": "url--1eafecf0-50f8-4f84-8174-6dbc54cffc62",
+      "value": "https://npm.ci.artifacts.walmart.com/artifactory/api/npm/ret-marketplace-npm-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--8ec9ff21-b524-43de-b449-718c8899b234",
+      "value": "https://generic.ci.artifacts.walmart.com/artifactory/ret-marketplace-generic-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--c6b23d7e-3a5c-4205-82fc-c4a14cc87d39",
+      "value": "https://sbt.ci.artifacts.walmart.com/artifactory/ret-marketplace-sbt-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--ebc33a0a-ae5c-46be-bd7c-04b4214c345e",
+      "value": "https://helm.ci.artifacts.walmart.com/artifactory/ret-marketplace-helm-prod-local"
+    },
+    {
+      "type": "url",
+      "id": "url--721c7fcf-11a9-4be5-8f7e-9ddc7a6567a6",
+      "value": "https://docker.ci.artifacts.walmart.com"
+    },
+    {
+      "type": "url",
+      "id": "url--401f4685-cd3e-4a87-980c-4b13aad8f398",
+      "value": "https://runner-1-2175078775.<redacted>pro-prod-runner02.prod-ndc23.prod.walmart.com/job/Feature-MultiBranch-PWT/job/AGAction/display/redirect"
+    },
+    {
+      "type": "url",
+      "id": "url--dbb13e2a-8753-4c4f-83cd-98427210bc93",
+      "value": "https://runner-1-2175078775.<redacted>pro-prod-runner02.prod-ndc23.prod.walmart.com/job/Feature-MultiBranch-PWT/job/AGAction/22/display/redirect"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75724808-e504-489e-8719-78849f084b0e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--332d44db-bc7b-40df-a3b7-ecba4151a240",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "The Shai-Hulud Threat Actor uses the Shai-Hulud malware to compromise npm packages and exfiltrate secrets.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2b0ec9a-625c-4511-a80c-f6c8c466f712",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "intrusion-set--332d44db-bc7b-40df-a3b7-ecba4151a240",
+      "description": "Shai-Hulud malware is attributed to the Shai-Hulud Threat Actor.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c4df375-8757-4143-b3b3-d3d3ad5e1a95",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "attack-pattern--76d3a6ae-dcc1-4b67-a017-fc919626bf0f",
+      "description": "Shai-Hulud malware uses supply chain compromise via malicious NPM packages as its attack pattern.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fbf45c83-9007-451f-81ab-1d1e9c8352e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "Shai-Hulud malware uses setup_bun.js as a dropper/downloader component.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5fcd2f6-8c90-40c4-9edb-e1be92d29711",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "Shai-Hulud malware uses bun_environment.js as its payload for information stealing and destructive actions.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70058d6a-cc16-43cb-9115-d49e4818e923",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "Shai-Hulud malware drops setup_bun.js file into compromised npm packages.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--723e49a4-6ee6-4bb7-8511-e434561f4856",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "Shai-Hulud malware drops bun_environment.js file into compromised npm packages.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45d0bc5e-1502-4299-91dc-811e773390ce",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "Shai-Hulud malware adds malicious .github/workflows/discussion.yaml workflow to infected repositories.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7339218-72f2-40fe-80b7-9dfa5ce9e021",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "tool--c9146b7e-8399-4e72-b7dd-cdf0353b8a40",
+      "description": "Shai-Hulud malware masquerades as Bun runtime setup to evade detection.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--668ece7a-49ce-4fde-8b82-d3d9b690f32c",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "tool--c9146b7e-8399-4e72-b7dd-cdf0353b8a40",
+      "description": "Shai-Hulud malware uses TruffleHog to collect secrets and stores them in truffleSecrets.json.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b244bbe4-d9bd-482b-8cf3-bc503432bf86",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "bun_environment.js drops cloud.json containing exfiltrated cloud secrets.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4c72afa-da20-45c4-bdf1-32b5e9c713f8",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "bun_environment.js drops contents.json containing exfiltrated system information.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbabf5bb-9daf-4c15-9e1f-7d84aa7b890f",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "bun_environment.js drops environment.json containing build and environment information.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a8bdd5a-03bb-45d1-9448-18ce3fa6112a",
+      "relationship_type": "drops",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "file--e2c30c20-e972-4051-a562-84a85a596166",
+      "description": "bun_environment.js drops truffleSecrets.json containing credentials collected by TruffleHog.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbaa4ade-40ac-43e8-a296-0c4afef63d3d",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "software--7ac7111b-b92d-4c56-a9b4-199619641d50",
+      "description": "Shai-Hulud malware propagates via npm by compromising npm packages.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6d3ef15b-eaf4-4dfe-ba6f-16ae5af89fd3",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "software--7ac7111b-b92d-4c56-a9b4-199619641d50",
+      "description": "Shai-Hulud malware uses cmd.exe and cipher for destructive file deletion and disk wiping in Windows environments.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5bc33d6-adab-4f5e-9006-63c432200e1b",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "software--7ac7111b-b92d-4c56-a9b4-199619641d50",
+      "description": "Shai-Hulud malware uses shred for destructive file overwriting in Linux/macOS environments.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24b7a482-b9a2-424f-9554-d576150e99d8",
+      "relationship_type": "targets",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "description": "Shai-Hulud malware targets GitHub accounts for exfiltration and workflow manipulation.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a88d831d-e6bf-47e3-bede-2e255b25fe82",
+      "relationship_type": "targets",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "description": "Shai-Hulud malware targets npm accounts for propagation.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--193b0829-15b2-48da-8e08-b1e83ee3ac13",
+      "relationship_type": "targets",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "description": "Shai-Hulud malware targets AWS accounts for secret collection.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc829292-8832-4d7b-b38f-6ad5f5f9d7f3",
+      "relationship_type": "targets",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "description": "Shai-Hulud malware targets GCP accounts for secret collection.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8aa93690-57df-4bae-90a0-5731f4365017",
+      "relationship_type": "targets",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "account--0aa7e4fd-b274-4c63-9aba-d535e9f81d95",
+      "description": "Shai-Hulud malware targets Azure accounts for secret collection.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7266b2a0-21b2-4c08-b93c-c4d4d567b64b",
+      "relationship_type": "related-to",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "malware-analysis--b298cb16-a1d3-4de8-8110-4840a0485080",
+      "description": "Shai-Hulud malware was analyzed in the Shai-Hulud v2 NPM Supply Chain Campaign analysis.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4cc5cdf4-60bc-478a-a9c2-08f1ff1d8dd7",
+      "relationship_type": "related-to",
+      "source_ref": "campaign--6cca8092-ff0b-4904-ad95-9550a9bb4b04",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "The Shai-Hulud v2 NPM Supply Chain Attack campaign delivered the Shai-Hulud malware.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba4129ea-0da8-4386-ba6a-b517e2efda9c",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--27043c6f-b418-4a06-b11d-70d04ea8ebf3",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "Presence of Shai-Hulud malicious files is an indicator for Shai-Hulud malware infection.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e2ad45f-5733-40d6-a76a-4c5cd7a7d549",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--27043c6f-b418-4a06-b11d-70d04ea8ebf3",
+      "target_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "description": "Presence of files setup_bun.js, bun_environment.js, cloud.json, contents.json, environment.json, truffleSecrets.json indicates Shai-Hulud malware activity.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bda9e4b8-7d96-488b-8089-564179b6ec12",
+      "relationship_type": "related-to",
+      "source_ref": "malware-analysis--b298cb16-a1d3-4de8-8110-4840a0485080",
+      "target_ref": "campaign--6cca8092-ff0b-4904-ad95-9550a9bb4b04",
+      "description": "Malware analysis is related to the Shai-Hulud v2 NPM Supply Chain Attack campaign.",
+      "start_time": "2025-11-21T00:00:00Z",
+      "end_time": "2025-11-25T15:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7440fd35-6804-4c8b-96fa-14c2d94ea60e",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "directory--818068e9-6bdb-4e0d-a720-4cd3defd45c9",
+      "description": "Shai-Hulud malware deletes files in %USERPROFILE% using destructive commands if propagation fails.",
+      "start_time": "2025-11-21T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27bfcaaf-2f91-4e58-a733-5d420bf95fc2",
+      "relationship_type": "uses",
+      "source_ref": "malware--498c8e05-3573-4794-ab77-ea1ce064da69",
+      "target_ref": "directory--818068e9-6bdb-4e0d-a720-4cd3defd45c9",
+      "description": "Shai-Hulud malware interacts with infected npm package directories for propagation and exfiltration.",
+      "start_time": "2025-11-21T00:00:00Z"
+    }
+  ]
+}

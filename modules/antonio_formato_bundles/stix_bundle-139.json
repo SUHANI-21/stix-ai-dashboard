@@ -1,0 +1,600 @@
+{
+  "type": "bundle",
+  "id": "bundle--c3ffaa4d-e0ef-465a-9d80-46fde076aa57",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "campaign",
+      "id": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "name": "Operation Hanoi Thief",
+      "description": "A spear-phishing campaign targeting Vietnamese IT departments and HR recruiters using fake resume pseudo-polyglot type documents. The campaign delivers a multi-stage infection chain culminating in the LOTUSHARVEST DLL stealer. The campaign is attributed with medium confidence to a Chinese-origin threat actor.",
+      "aliases": [
+        "Hanoi Thief"
+      ],
+      "objective": "Harvest browser credentials and history from targeted professionals.",
+      "start_time": "2025-11-03",
+      "targeted_sectors": [
+        "Information Technology",
+        "Recruitment & HR Firms"
+      ],
+      "targeted_locations": [
+        "Vietnam"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--173dfa8c-93bc-4026-a4ef-b80328cb0572",
+      "name": "Unattributed Chinese-origin Threat Actor",
+      "description": "Threat actor assessed with medium confidence to be of Chinese origin, targeting Vietnamese IT and HR sectors with spear-phishing and credential stealing campaigns. Attribution to state sponsorship is not confirmed.",
+      "aliases": [
+        "Chinese-origin Hanoi Thief group"
+      ],
+      "goals": [
+        "Credential theft",
+        "Information gathering"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--04f33cf5-3295-4e7c-8507-3931d8b617e0",
+      "name": "Spearphishing Attachment",
+      "description": "Use of spear-phishing emails with ZIP attachments containing malicious LNK and pseudo-polyglot payloads.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4ac5698f-0298-4712-a465-bcbad8b463f1",
+      "name": "Develop Payloads: Malware",
+      "description": "Development of custom malware payloads for use in targeted attacks.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1587.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--258e72b8-1749-41b5-946d-78a698d1dcac",
+      "name": "User Execution: Malicious File",
+      "description": "Execution of malicious files by tricking users (e.g., LNK file, pseudo-polyglot payload).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e850c05f-cf88-49b6-a8d3-ae964a0e01b5",
+      "name": "Signed Binary Proxy Execution",
+      "description": "Abuse of trusted Windows binaries (LOLBINs) such as ftp.exe and DeviceCredentialDeployment.exe to execute malicious scripts.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1218"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--abf142a1-d2e7-4376-93d5-88cd7685a58f",
+      "name": "Masquerading: misleading file extension",
+      "description": "Use of misleading file extensions to disguise malicious files (e.g., .png for batch/PDF payloads).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.007"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--31e2332f-cb11-4fd8-b7a8-d63fe5079581",
+      "name": "Deobfuscate File",
+      "description": "Deobfuscation of files to extract embedded malicious payloads.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1140"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cc175466-7fce-49f7-8e7d-81dbaf36ce54",
+      "name": "DLL Side-Loading",
+      "description": "DLL sideloading via ctfmon.exe to execute LOTUSHARVEST DLL.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1574.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c058c88d-aaa4-4804-9874-c60e6dcb6a41",
+      "name": "System Information Discovery",
+      "description": "Harvesting system information such as computer name and username.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--41ba6b20-2c26-459b-ad66-c02d71315235",
+      "name": "File system discovery for browser data",
+      "description": "Discovery and enumeration of browser files for credential and history theft.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1012"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d15bddcf-0cba-441d-a6ba-a4d905f88842",
+      "name": "Credentials from Password Stores",
+      "description": "Harvesting credentials from browser password stores using CryptUnprotectData.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--997702a5-0e5b-46d0-bb88-6f96457f0880",
+      "name": "Data from Local System",
+      "description": "Collection of data from local system, including browser history and credentials.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5bb4767b-2d7b-418a-83a6-c6fed19bdd52",
+      "name": "Exfiltration Over C2 Channel",
+      "description": "Exfiltration of stolen data over HTTPS to attacker-controlled infrastructure.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8",
+      "name": "Web Protocol: HTTPS",
+      "description": "Use of HTTPS for command and control and data exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--9a83b0f9-7639-4bbc-be33-144b413074f5",
+      "name": "Operation Hanoi Thief C2 Infrastructure",
+      "description": "Attacker infrastructure used for exfiltration and command and control.",
+      "infrastructure_types": [
+        "command-and-control",
+        "exfiltration"
+      ],
+      "aliases": [
+        "pipedream.net",
+        "requestrepo.com"
+      ],
+      "external_references": [
+        {
+          "source_name": "Seqrite",
+          "url": "https://www.seqrite.com/blog/operation-hanoi-thief-threat-actor-targets-vietnamese-it-professionals-and-recruitment-teams/"
+        }
+      ],
+      "observable_refs": [
+        "domain:eol4hkm8mfoeevs.m.pipedream.net",
+        "domain:uuhlswlx.requestrepo.com"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--da2f4cc0-c37b-49ed-9a24-dd862610a82a",
+      "hashes": {
+        "SHA-256": "1beb8fb1b6283dc7fffedcc2f058836d895d92b2fb2c37d982714af648994fed"
+      },
+      "name": "Le-Xuan-Son_CV.zip",
+      "mime_type": "application/zip"
+    },
+    {
+      "type": "file",
+      "id": "file--5f9c5ca1-13d8-48b3-bcd9-58ec72368bb1",
+      "hashes": {
+        "SHA-256": "77373ee9869b492de0db2462efd5d3eff910b227e53d238fae16ad011826388a"
+      },
+      "name": "CV.pdf.lnk",
+      "mime_type": "application/x-ms-shortcut"
+    },
+    {
+      "type": "file",
+      "id": "file--c599826f-f232-47ce-81c6-830c00881953",
+      "hashes": {
+        "SHA-256": "693ea9f0837c9e0c0413da6198b6316a6ca6dfd9f4d3db71664d2270a65bcf38"
+      },
+      "name": "offsec-certified-professional.png",
+      "mime_type": "application/octet-stream"
+    },
+    {
+      "type": "file",
+      "id": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "hashes": {
+        "SHA-256": "48e18db10bf9fa0033affaed849f053bd20c59b32b71855d1cc72f613d0cac4b"
+      },
+      "name": "MsCtfMonitor.dll",
+      "mime_type": "application/x-dosexec"
+    },
+    {
+      "type": "directory",
+      "id": "directory--e0617c9a-2d10-42c0-8f7c-194ea9216283",
+      "path": "C:\\ProgramData"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d715c345-021f-48a5-96ff-9e94b802648b",
+      "value": "eol4hkm8mfoeevs.m.pipedream.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db849b4f-08de-4d2d-8469-0f069ad8c28e",
+      "value": "uuhlswlx.requestrepo.com"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--9bc3b019-89a8-4d54-ac87-4d02e807d31a",
+      "key": "HKEY_LOCAL_MACHINE\\SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Explorer\\Shell Folders\\ProgramData"
+    },
+    {
+      "type": "software",
+      "id": "software--1faf2710-5d16-4100-977d-cc9b2bebdf41",
+      "name": "ftp.exe",
+      "cpe": "cpe:/a:microsoft:ftp"
+    },
+    {
+      "type": "software",
+      "id": "software--6fc9c411-8605-41ad-b9fd-21523e0440cf",
+      "name": "ctfmon.exe",
+      "cpe": "cpe:/a:microsoft:ctfmon"
+    },
+    {
+      "type": "software",
+      "id": "software--94047124-5ff7-4cdc-86c1-a6b2291d2ea0",
+      "name": "DeviceCredentialDeployment.exe"
+    },
+    {
+      "type": "software",
+      "id": "software--7619e4de-6ca3-4e45-a3d2-bced195a8be3",
+      "name": "certutil.exe",
+      "cpe": "cpe:/a:microsoft:certutil"
+    },
+    {
+      "type": "software",
+      "id": "software--a0e90c80-a086-4f93-81a0-9b2b58b8dc2c",
+      "name": "Google Chrome",
+      "cpe": "cpe:/a:google:chrome"
+    },
+    {
+      "type": "software",
+      "id": "software--4a140ab1-0e59-452c-b472-64c3e305f04c",
+      "name": "Microsoft Edge",
+      "cpe": "cpe:/a:microsoft:edge"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--7397e970-98c2-4c99-b953-1eed85872712",
+      "user_id": "Le Xuan Son",
+      "account_type": "local"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--aeae9dd1-3351-447a-92fd-9ba467b7ef21",
+      "subject": "lala.exe"
+    },
+    {
+      "type": "phone-number",
+      "id": "phone-number--1cb3a929-f02d-41b2-b657-51e09875ae6c",
+      "value": "+84912345678"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b12dbcb0-1386-4989-93be-6acbc1b6f081",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "intrusion-set--173dfa8c-93bc-4026-a4ef-b80328cb0572"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f18ad030-2e4c-4edb-8564-40b9fdd4375d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "malware--01d8c890-c383-419c-a853-97e53c025267"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f337b586-a46f-4443-a7d5-2ab4e3ba589d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04617017-66d7-4441-b085-f82ce90afc1b",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7bc59d6e-e5b3-4605-aeab-eeace7a02565",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64a77bce-e862-4464-bf28-64820c07f8bf",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55b54dfb-28ed-4c02-8285-79d1c2e7bfd8",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "infrastructure--9a83b0f9-7639-4bbc-be33-144b413074f5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf5a3ee5-acb8-4309-8955-f0638a47fb7c",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a3984d2-22c6-4580-ab1e-b4f64dffc537",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9e15a74-3467-4d5d-a4b2-ab26b55517e1",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92b58900-7ea9-445e-97b1-83cc81f3d49d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5958a58-7fe8-4d48-acb6-da97d5eb7ab4",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b370ffd-2630-4dd1-a0ec-727f2e29446a",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45c60b62-97f4-458d-8b58-2b8760a475dd",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93f9840f-591a-4b93-a45f-e842ae7a7984",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dccc0d18-3eed-43ff-97a7-65748a9c41cf",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f638c332-17b6-440d-b8de-7b6c5a0dcef1",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b2509cf-99d7-4ec6-b9ff-b4c171d2afd7",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0abbb9b-af4c-4b22-8d70-126a305e0a74",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1a9d3b18-802d-4ed1-82e6-a5d3d5ed5bb1",
+      "target_ref": "attack-pattern--670722c3-c215-4d2c-8146-ae089120fed8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ad1d5a6-89cf-49ac-9d30-e1cdb3468106",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f909c972-e2de-4002-8b5e-7a90f79e4323",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c11c5c8-c978-4f6c-8b7c-471c06e86c53",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4131a333-5ec6-4ec9-90ed-15adf5be6620",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--51d011d7-bb83-49ae-b3c4-9bc24e412fde",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--836f7e14-0931-4cb6-b9c2-48bf4bbf3b2e",
+      "relationship_type": "delivers",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--18804193-1552-4e76-af52-ef092a803c08",
+      "relationship_type": "contains",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a281c3b-a7f0-48a1-8c0c-8864d92b380b",
+      "relationship_type": "contains",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c149bfc-b8b8-4bba-bafb-09e332e7bc32",
+      "relationship_type": "drops",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4adfe987-edbb-4fe8-8e9a-d13a2261b618",
+      "relationship_type": "uses",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--abdffd56-2f1c-4535-9deb-33e474e17ab6",
+      "relationship_type": "uses",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4145665-89e6-43e2-b738-a9ce8ccdcf87",
+      "relationship_type": "uses",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c951146-f3f3-4831-a3e0-8bd99dae40b4",
+      "relationship_type": "uses",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3705abe-4b1a-498f-9f22-79acca22fbf0",
+      "relationship_type": "uses",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab4acbe6-48c7-43ee-a048-d4d37d2f6dca",
+      "relationship_type": "uses",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c20672cc-cc06-4c5c-8c1e-3d4424d08a51",
+      "relationship_type": "uses",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fde287c1-9832-4db8-a8d0-29a9a8ccac0e",
+      "relationship_type": "uses",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "software--4a140ab1-0e59-452c-b472-64c3e305f04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c721eaf-a45e-4428-8b1f-a51dd00e6a1e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "infrastructure--9a83b0f9-7639-4bbc-be33-144b413074f5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d84c4686-fcfd-442a-b7da-53f7624446fe",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "domain-name--db849b4f-08de-4d2d-8469-0f069ad8c28e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c51203e0-aaff-4df3-a6f8-b53d949441b3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--01d8c890-c383-419c-a853-97e53c025267",
+      "target_ref": "domain-name--db849b4f-08de-4d2d-8469-0f069ad8c28e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ba2152f-165a-42cf-9157-6cffee61d9ba",
+      "relationship_type": "located-at",
+      "source_ref": "file--da87b232-ad8b-486a-a380-ccb6d95b8045",
+      "target_ref": "directory--e0617c9a-2d10-42c0-8f7c-194ea9216283"
+    }
+  ]
+}

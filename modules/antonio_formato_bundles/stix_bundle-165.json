@@ -1,0 +1,349 @@
+{
+  "type": "bundle",
+  "id": "bundle--6d7934ef-72f1-461a-9812-29a0f4acf58a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "name": "ToddyCat",
+      "aliases": [
+        "ToddyCat APT"
+      ],
+      "description": "ToddyCat is an advanced persistent threat (APT) group known for evolving techniques to covertly access business correspondence and credentials from target organizations, including attacks against Microsoft Exchange Server, Microsoft 365, and Gmail. The group has deployed custom tools for credential theft, email exfiltration, and access token extraction.",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--ca0f27b2-d2d4-4b73-afd8-5c10709d8061",
+      "name": "TomBerBil",
+      "description": "TomBerBil is a family of credential-stealing tools used by ToddyCat APT. It extracts cookies and saved passwords from browsers (Chrome, Edge, Firefox) and collects DPAPI encryption keys. The latest variant is implemented in PowerShell and executed on domain controllers via scheduled tasks, using SMB to access remote hosts.",
+      "malware_types": [
+        "credential-extraction"
+      ],
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/toddycat-traffic-tunneling-data-extraction-tools/112443/"
+        }
+      ],
+      "labels": [
+        "PowerShell",
+        "Credential Access"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--14f8ac4c-3130-402d-9509-ec4a860ef474",
+      "name": "TCSectorCopy",
+      "description": "TCSectorCopy is a 32-bit C++ tool used by ToddyCat APT for block-by-block copying of files that may be locked by applications or the OS, such as Outlook OST files. It bypasses the standard Windows API by reading directly from the disk device.",
+      "malware_types": [
+        "data-exfiltration"
+      ],
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"
+        }
+      ],
+      "labels": [
+        "Collection",
+        "Outlook"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--0d7baaf2-701d-4c71-a9a8-bfcc9baf6a98",
+      "name": "SharpTokenFinder",
+      "description": "SharpTokenFinder is a C# tool used by ToddyCat APT to search for and extract OAuth 2.0 access tokens from the memory of Microsoft 365-related processes by dumping their memory and searching for JWT strings.",
+      "malware_types": [
+        "credential-access"
+      ],
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/toddycat-apt-steals-email-data-from-outlook/118044/"
+        }
+      ],
+      "labels": [
+        "Token Theft",
+        "Office 365"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--1ac9d29c-e85f-4bfd-a5b1-44066cf5c666",
+      "name": "ip445.ps1",
+      "hashes": {
+        "MD5": "55092E1DEA3834ABDE5367D79E50079A"
+      },
+      "path": "C:\\programdata\\ip445.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--99377b27-3851-4cb4-b419-3cc2ae16b527",
+      "name": "xCopy.exe",
+      "hashes": {
+        "MD5": "2320377D4F68081DA7F39F9AF83F04A2"
+      },
+      "path": "C:\\Windows\\Temp\\xCopy.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--487db103-24ad-48af-a55d-9f2d0bfb9311",
+      "name": "stf.exe",
+      "hashes": {
+        "MD5": "B9FDAD18186F363C3665A6F54D51D3A0"
+      },
+      "path": "c:\\windows\\temp\\stf.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ab8b5001-aed5-4cf0-aae2-3bb98fcc4331",
+      "name": "XstExport.exe",
+      "hashes": {
+        "MD5": "49584BD915DD322C3D84F2794BB3B950"
+      },
+      "path": "C:\\Windows\\Temp\\XstExport.exe"
+    },
+    {
+      "type": "directory",
+      "id": "directory--e26ae3d2-2f69-47c1-8680-2c6001dfb006",
+      "path": "C:\\programdata\\temp\\"
+    },
+    {
+      "type": "file",
+      "id": "file--8b8a8838-3d5b-4a84-a38f-c36cc12076ab",
+      "name": "uhosts.txt",
+      "path": "C:\\programdata\\uhosts.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--a365b181-2b0e-4c44-b7fd-bcda12744144",
+      "name": "Login Data",
+      "path": "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+    },
+    {
+      "type": "file",
+      "id": "file--947abfe8-94aa-4b42-8bd5-2857220edc4f",
+      "name": "Local State",
+      "path": "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Local State"
+    },
+    {
+      "type": "file",
+      "id": "file--dfd90c31-4923-4ded-ab2f-afa6069807d7",
+      "name": "Cookies",
+      "path": "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Cookies"
+    },
+    {
+      "type": "file",
+      "id": "file--ea954dc8-bdd2-40ae-8bab-5764f7ae3807",
+      "name": "History",
+      "path": "\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\History"
+    },
+    {
+      "type": "file",
+      "id": "file--ca9f966e-7d7d-420c-be40-df09bf22fc89",
+      "name": "key3.db",
+      "path": "\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<profile>\\key3.db"
+    },
+    {
+      "type": "file",
+      "id": "file--9fea24a5-ade4-4fe8-92c9-332945b47d02",
+      "name": "signons.sqlite",
+      "path": "\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<profile>\\signons.sqlite"
+    },
+    {
+      "type": "file",
+      "id": "file--ac57454a-2c40-4e7d-a358-3da69ac81598",
+      "name": "key4.db",
+      "path": "\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<profile>\\key4.db"
+    },
+    {
+      "type": "file",
+      "id": "file--411cdfc1-8d0d-461c-aeab-5c503acf3aa5",
+      "name": "logins.json",
+      "path": "\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\<profile>\\logins.json"
+    },
+    {
+      "type": "directory",
+      "id": "directory--1211b7d7-b100-46b6-ac63-8536fe68a987",
+      "path": "\\AppData\\Roaming\\Microsoft\\Protect"
+    },
+    {
+      "type": "directory",
+      "id": "directory--91b8a027-6d67-4a52-9361-f15ff9ad9817",
+      "path": "\\AppData\\Local\\Microsoft\\Credentials"
+    },
+    {
+      "type": "file",
+      "id": "file--70c1f599-6e29-48be-a553-c45d3021fc31",
+      "name": "<email>@<domain>.ost",
+      "path": "C:\\Users\\<user>\\AppData\\Local\\Microsoft\\Outlook\\<email>@<domain>.ost"
+    },
+    {
+      "type": "file",
+      "id": "file--0cd218cb-a682-49db-abac-2b26db8684a1",
+      "name": "<email>@<domain>.ost2"
+    },
+    {
+      "type": "file",
+      "id": "file--1c22fc6e-00db-4f79-9406-05dd253e9dd8",
+      "name": "OUTLOOK.EXE_<id>.dmp",
+      "path": "c:\\windows\\temp\\OUTLOOK.EXE_<id>.dmp"
+    },
+    {
+      "type": "file",
+      "id": "file--17722e73-0a8e-4368-95de-fea0b97a6204",
+      "name": "dmp.rar",
+      "path": "%temp%\\dmp.rar"
+    },
+    {
+      "type": "file",
+      "id": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "name": "SectorCopy.pdb",
+      "path": "O:\\Projects\\Penetration\\Tools\\SectorCopy\\Release\\SectorCopy.pdb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ed9c3cc-8bdc-4a8e-b5bc-e64024afad7c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "target_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "description": "ToddyCat APT uses TomBerBil for credential theft from browsers and DPAPI key collection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--584203a8-1d07-4a98-90ed-9ad192d5246d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "target_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "description": "ToddyCat APT uses TCSectorCopy for block-by-block copying and exfiltration of Outlook OST files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--040698aa-3ab0-4b32-a38e-a59bd5edfc66",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "target_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "description": "ToddyCat APT uses SharpTokenFinder to extract OAuth tokens from Office 365 processes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6e52eea-560f-4fac-9a3d-db31a420cd44",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "target_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "description": "ToddyCat APT uses XstReader to export and view Outlook OST/PST file contents."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b90998ef-7d27-40fd-80db-543537cdfe3e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--586c7136-582a-49e9-a588-e1620cc9c1f5",
+      "target_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "description": "ToddyCat APT abuses ProcDump to dump Office 365 process memory for token extraction."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cab68499-4a5f-461c-862e-f9956b14eabd",
+      "relationship_type": "drops",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TomBerBil PowerShell variant is delivered as ip445.ps1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61f2a730-f1bd-43be-be65-b181459cf7bb",
+      "relationship_type": "drops",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TCSectorCopy is delivered as xCopy.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8acc2a96-a75a-4edc-9f37-91c427c62343",
+      "relationship_type": "drops",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "stf.exe is a malicious file associated with ToddyCat APT operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ec7f28f-c5f4-45b1-bf01-684964e74927",
+      "relationship_type": "drops",
+      "source_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "XstReader is delivered as XstExport.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2835583-5723-4195-8d0d-47f953adb18c",
+      "relationship_type": "collects",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TomBerBil collects browser credential files: Login Data, Local State, Cookies, and History from Chrome/Edge."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--009017f7-26b6-424e-b47d-fcfc719089d5",
+      "relationship_type": "collects",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TomBerBil collects Firefox credential files: key3.db, signons.sqlite, key4.db, logins.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dac7a19c-b665-4320-b2a2-0a6d1b4dbb60",
+      "relationship_type": "collects",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "directory--91b8a027-6d67-4a52-9361-f15ff9ad9817",
+      "description": "TomBerBil collects DPAPI keys from Microsoft Protect and Credentials directories."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5f904e0-409c-4ebf-8446-8ef663a27448",
+      "relationship_type": "collects",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TCSectorCopy collects Outlook OST files for exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--afea9131-dec6-4134-97e9-bd62067a7360",
+      "relationship_type": "processes",
+      "source_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "XstReader processes copied OST files to export email content."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fee40cc0-176e-440f-a739-3a82732d6681",
+      "relationship_type": "drops",
+      "source_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "ProcDump creates OUTLOOK.EXE_<id>.dmp by dumping the Outlook process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5d1d0ea-e967-4c0d-9125-33e417e52bf1",
+      "relationship_type": "archives",
+      "source_ref": "tool--be9bbe92-f968-4a68-ae8c-012648601046",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "WinRAR is used to archive the Outlook process dump as dmp.rar for exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--011f48d5-588e-4b11-98b5-40795589f814",
+      "relationship_type": "has",
+      "source_ref": "malware--5d4871a8-e140-4796-9517-621f63fa0208",
+      "target_ref": "file--be1ae795-dadf-4a29-beac-f9e4a66b32a7",
+      "description": "TCSectorCopy has SectorCopy.pdb as its debug symbol file."
+    }
+  ]
+}

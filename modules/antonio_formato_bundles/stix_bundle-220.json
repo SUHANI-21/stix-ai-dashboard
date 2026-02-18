@@ -1,0 +1,423 @@
+{
+  "type": "bundle",
+  "id": "bundle--a4a81377-112e-4647-a184-63c3297d9d78",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "name": "Scattered LAPSUS$ Hunters",
+      "aliases": [
+        "SLH",
+        "Scattered LAPSUS$ Hunters \u2013 The Com HQ SCATTERED SP1D3R HUNTERS"
+      ],
+      "description": "Scattered LAPSUS$ Hunters (SLH) is a federated cybercriminal brand that emerged in August 2025, appropriating reputational assets from Scattered Spider, ShinyHunters, and LAPSUS$. SLH operates primarily on Telegram, leveraging cycles of channel creation and removal to maintain public presence. The group blends technical signaling and social performance, focusing on data theft, extortion, and credential harvesting, often using AI-automated vishing and spearphishing. SLH has announced an Extortion-as-a-Service (EaaS) model and claims capabilities in exploit development targeting SaaS, CRM, and database systems. The group is characterized by fluid collaboration, brand-sharing, and situational alliances with other The Com-adjacent clusters.",
+      "first_seen": "2025-08-08T00:00:00Z",
+      "goals": [
+        "Data theft",
+        "Extortion",
+        "Credential harvesting",
+        "Social engineering",
+        "Exploit development"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial gain",
+      "secondary_motivations": [
+        "attention-driven hacktivism",
+        "social validation"
+      ],
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/scattered-lapsus-hunters-anatomy-of-a-federated-cybercriminal-brand"
+        },
+        {
+          "source_name": "Resecurity",
+          "url": "https://www.resecurity.com/ar/blog/article/trinity-of-chaos-the-lapsus-shinyhunters-and-scattered-spider-alliance-embarks-on-global-cybercrime-spree"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--56547032-f8af-4cfe-a19f-9027c45025f0",
+      "name": "CVE-2025-31324",
+      "description": "A vulnerability in SAP NetWeaver referenced in SLH channels as a target for exploit development and proof-of-concept code circulation.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-31324"
+        },
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/scattered-lapsus-hunters-anatomy-of-a-federated-cybercriminal-brand"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2932c082-a61f-4aec-a810-20bb369ecec3",
+      "name": "CVE-2025-61882",
+      "description": "A zero-day vulnerability in Oracle E-Business Suite claimed by SLH as acquired and leaked, with public exploitation attributed to Cl0p ransomware operators.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-61882"
+        },
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/scattered-lapsus-hunters-anatomy-of-a-federated-cybercriminal-brand"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ae6c2ae9-5b11-4df6-ae22-637d4394d211",
+      "name": "CVE-2023-2163",
+      "description": "A local privilege escalation vulnerability demonstrated by SLH-affiliated posts, providing access to /etc/shadow.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2023-2163"
+        },
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/scattered-lapsus-hunters-anatomy-of-a-federated-cybercriminal-brand"
+        }
+      ]
+    },
+    {
+      "type": "channel",
+      "id": "channel--a570f745-63af-45ed-b262-1d60b6c7f210",
+      "name": "scattered lapsu$ hunters \u2013 The Com HQ SCATTERED SP1D3R HUNTERS",
+      "platform": "Telegram"
+    },
+    {
+      "type": "channel",
+      "id": "channel--c8354da0-8f40-4f48-99f3-2defc9367500",
+      "name": "scattered LAPSUS$ hunters 7.0",
+      "platform": "Telegram"
+    },
+    {
+      "type": "channel",
+      "id": "channel--14571a3d-d5ab-4cf7-8ed5-d54410ee8d98",
+      "name": "BreachForums",
+      "platform": "Forum"
+    },
+    {
+      "type": "channel",
+      "id": "channel--fa430478-845c-4623-b336-b3ce44968795",
+      "name": "RaidForums",
+      "platform": "Forum"
+    },
+    {
+      "type": "software",
+      "id": "software--8451b46f-a81a-4ccb-a8ff-a7e287187230",
+      "name": "Sh1nySp1d3r Ransomware",
+      "categories": [
+        "ransomware"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--1d0f9d81-2ef8-47f7-a8b3-ada26b8b75e5",
+      "name": "BlackLotus",
+      "categories": [
+        "UEFI bootkit"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--d6fdf85b-01b7-4fe4-b1f2-1b628f142cb4",
+      "name": "Medusa",
+      "categories": [
+        "rootkit"
+      ]
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--f11685e2-be15-4d1b-9740-a21e320ef3d4",
+      "user_id": "shinycorp",
+      "account_login": "shinycorp"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--23a0330e-4949-413d-b4ef-1a5f7b514349",
+      "user_id": "@sp1d3rhunters",
+      "account_login": "@sp1d3rhunters"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--76ac104a-59bf-4d32-9cf1-741eb41753ac",
+      "user_id": "@sloke48",
+      "account_login": "@sloke48"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--2fb3f757-6775-4ff1-a0d6-52f2404a888d",
+      "user_id": "@shinyc0rp",
+      "account_login": "@shinyc0rp"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--6f8988fe-b971-4b2d-9615-24be43467a7e",
+      "user_id": "sevyuwu",
+      "account_login": "sevyuwu"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--63f3aa7a-d64e-4426-ab4d-a32db1150300",
+      "user_id": "Rey",
+      "account_login": "Rey"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--6cb0a89b-f308-406e-bee6-6f711c1a6fe6",
+      "user_id": "SLSHsupport",
+      "account_login": "SLSHsupport"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--7bb3612d-c7b2-4478-81d0-9db890c6d6b0",
+      "user_id": "Alg0d",
+      "account_login": "Alg0d"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--44f846e1-82d8-4860-af44-a068b8f317d3",
+      "user_id": "yuka",
+      "account_login": "yuka"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--efd3476e-b54c-4aa4-927b-d9227c5b3f99",
+      "user_id": "Yukari",
+      "account_login": "Yukari"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "user_id": "Cvsp",
+      "account_login": "Cvsp"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a1bbde28-e202-4ee8-9c3b-fd295f8a0a81",
+      "name": "CVE-2025-31324",
+      "description": "SAP NetWeaver vulnerability"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--122c1109-0953-49cd-9e38-3d9361f4ac84",
+      "name": "CVE-2025-61882",
+      "description": "Oracle E-Business Suite vulnerability"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e9889934-690a-47ba-b05e-f901553b0c32",
+      "name": "CVE-2023-2163",
+      "description": "Local privilege escalation exploit with access to /etc/shadow"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4721d286-6507-475b-96ba-08879ce12fae",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "description": "Scattered LAPSUS$ Hunters referenced Sh1nySp1d3r Ransomware as a proposed ransomware offering, indicating aspirations toward ransomware operations.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65413cbd-dbd9-44c6-b010-5c8af4d58f39",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "description": "Scattered LAPSUS$ Hunters is linked to BlackLotus UEFI bootkit through the persona Yukari/Cvsp.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a514706-1bbe-4b30-8b07-9c0e61fd5410",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "description": "Scattered LAPSUS$ Hunters is linked to Medusa rootkit through the persona Yukari/Cvsp.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--359505d4-1c19-4924-8225-2498af3d497f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "vulnerability--e9889934-690a-47ba-b05e-f901553b0c32",
+      "description": "SLH channels circulated exploit proof-of-concept code targeting CVE-2025-31324 (SAP NetWeaver).",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3401e41e-d76a-402d-933d-44edb98559b6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "vulnerability--e9889934-690a-47ba-b05e-f901553b0c32",
+      "description": "SLH claimed acquisition and leakage of CVE-2025-61882 (Oracle E-Business Suite) zero-day.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fc884e3-d81f-4cd6-a275-b97ec9e5cc36",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "vulnerability--e9889934-690a-47ba-b05e-f901553b0c32",
+      "description": "SLH-affiliated posts demonstrated exploitation of CVE-2023-2163 for local privilege escalation.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ede9730d-74d2-496b-878e-a0f18ccab338",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "tool--247c079a-a5fc-44fb-bcaa-6f59926ea8fd",
+      "description": "SLH used automated vishing tools leveraging Google Voice for credential harvesting and social engineering.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d97c7c8-49c1-4926-a9d7-250c2bc20419",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "tool--247c079a-a5fc-44fb-bcaa-6f59926ea8fd",
+      "description": "SLH utilized exploit development toolkits targeting CRM, DBMS, and SaaS platforms.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c5f99f5-7850-4fbe-a3c7-d3902ec98857",
+      "relationship_type": "owns",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "channel--fa430478-845c-4623-b336-b3ce44968795",
+      "description": "SLH operated the Telegram channel 'scattered lapsu$ hunters \u2013 The Com HQ SCATTERED SP1D3R HUNTERS' as its primary operational environment.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01b2e663-6f0a-4ec8-9c66-e206e1618996",
+      "relationship_type": "owns",
+      "source_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "target_ref": "channel--fa430478-845c-4623-b336-b3ce44968795",
+      "description": "SLH operated the Telegram channel 'scattered LAPSUS$ hunters 7.0' as part of its recurring cycles of channel creation and removal.",
+      "start_time": "2025-08-08T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4943c248-1f76-4f5a-9967-ec5fa0dc79aa",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "target_ref": "software--d6fdf85b-01b7-4fe4-b1f2-1b628f142cb4",
+      "description": "Sh1nySp1d3r Ransomware is referenced as both a malware family and a software tool used by SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4eb7504d-b508-4e38-a297-0d78259aa02a",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "target_ref": "software--d6fdf85b-01b7-4fe4-b1f2-1b628f142cb4",
+      "description": "BlackLotus UEFI bootkit is referenced as both a malware family and a software tool linked to SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf30d0ea-7ae8-4635-af76-e54b4aa1cc8b",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--9c550c4d-48f8-49cf-a793-f2dde8b84aa2",
+      "target_ref": "software--d6fdf85b-01b7-4fe4-b1f2-1b628f142cb4",
+      "description": "Medusa rootkit is referenced as both a malware family and a software tool linked to SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f037604b-b8de-4850-9779-5977c4419f41",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'shinycorp' functions as principal orchestrator and administrator for SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db557e53-0326-401c-a355-e68dc205ddab",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona '@sp1d3rhunters' is an alias of shinycorp and acts as an amplifier for SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--15a50d26-63c8-4e07-93a1-b2e7a92cad9c",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona '@sloke48' is an alias of shinycorp and acts as an amplifier for SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27ac9b94-06be-4b07-aeff-5722ec4d94d1",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona '@shinyc0rp' is an alias of shinycorp and acts as an amplifier for SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--799ad6d6-90e9-460d-a4ef-9495a379f7d6",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'sevyuwu' (Sevy) is an auxiliary identity amplifying SLH narratives."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27b2d5cb-9029-4a0c-9ea0-2618abeada4e",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'Rey' is an auxiliary identity amplifying SLH narratives."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04c09640-42f3-4c8c-8eb3-b3240125d336",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'SLSHsupport' is an auxiliary identity amplifying SLH narratives."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--605da180-a0a0-4e47-bc28-2aac293245d0",
+      "relationship_type": "member-of",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'Alg0d' operates as a high-visibility broker focused on data sales and negotiation for SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d321ac32-2cee-4525-89d8-a8eac20121b4",
+      "relationship_type": "cooperates-with",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'yuka' (also known as Yukari or Cvsp) operates as an exploit and initial access broker, cooperating with SLH but not directly integrated."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--739dff84-e5a1-475a-8572-62218961730d",
+      "relationship_type": "cooperates-with",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'Yukari' is associated with exploit development and malware engineering, cooperating with SLH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0b8c9d7-1291-4e5b-af2b-9dfc5fea3f92",
+      "relationship_type": "cooperates-with",
+      "source_ref": "user-account--425dc9c0-3a33-458d-b31b-4e740e80a9d8",
+      "target_ref": "intrusion-set--41d684c3-0775-40e8-b176-3c6822f2569c",
+      "description": "The persona 'Cvsp' is associated with exploit development and malware engineering, cooperating with SLH."
+    }
+  ]
+}

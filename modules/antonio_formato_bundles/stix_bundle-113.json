@@ -1,0 +1,291 @@
+{
+  "type": "bundle",
+  "id": "bundle--0d7bee56-0586-4628-b548-96ce8bf05a9f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--c5662301-8c3e-4a7d-85ad-e763ea7019d7",
+      "name": ".vscode/settings.json"
+    },
+    {
+      "type": "file",
+      "id": "file--fa0a8d96-667b-42d8-9a78-c0b872b261f8",
+      "name": ".idea/workspace.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--710098fb-4830-4d39-ae0c-646091f631ba",
+      "name": "*.code-workspace"
+    },
+    {
+      "type": "file",
+      "id": "file--bbb772bc-6254-49c8-b969-ed81f0830ce3",
+      "name": ".git/hooks/*.sample"
+    },
+    {
+      "type": "file",
+      "id": "file--95c92adc-e12b-4da4-935f-9851b4500195",
+      "name": "*.json"
+    },
+    {
+      "type": "file",
+      "id": "file--366d4b1d-541c-4fc5-812f-bb8674269547",
+      "name": "src/"
+    },
+    {
+      "type": "file",
+      "id": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "name": "README"
+    },
+    {
+      "type": "url",
+      "id": "url--d5358649-1c40-4074-8bb1-f1daecb96f88",
+      "value": "https://maccarita.com/log?data=<DATA>"
+    },
+    {
+      "type": "url",
+      "id": "url--6d77c694-c873-4615-9b6a-505ad8a75347",
+      "value": "https://aws.amazon.com/security/security-bulletins/AWS-2025-019/"
+    },
+    {
+      "type": "url",
+      "id": "url--802ffda0-9699-44cf-ae3d-e298a4e7c2e3",
+      "value": "https://code.claude.com/docs/en/ide-integrations#security-considerations"
+    },
+    {
+      "type": "url",
+      "id": "url--59ff166e-cb66-422e-99a3-565c7052590a",
+      "value": "https://github.com/features/copilot"
+    },
+    {
+      "type": "url",
+      "id": "url--37ca40c4-af27-4993-9a94-d0f9e212163e",
+      "value": "https://cursor.com/"
+    },
+    {
+      "type": "url",
+      "id": "url--135bf5c7-e375-4e61-a823-d48f8a00d908",
+      "value": "http://windsurf.com/"
+    },
+    {
+      "type": "url",
+      "id": "url--968c1011-9bbd-4b0f-b943-3eb6136fb170",
+      "value": "https://kiro.dev"
+    },
+    {
+      "type": "url",
+      "id": "url--c7ae7f95-2178-45b5-9487-5f82c01bf79a",
+      "value": "https://zed.dev"
+    },
+    {
+      "type": "url",
+      "id": "url--ccfcb1f1-47df-42e3-bfd0-185fa4d68681",
+      "value": "https://roocode.com"
+    },
+    {
+      "type": "url",
+      "id": "url--353a3d83-102f-462c-9baf-60833d0a2ccd",
+      "value": "https://www.jetbrains.com/junie/"
+    },
+    {
+      "type": "url",
+      "id": "url--e8015d25-2892-4607-8584-fafc419cf4e8",
+      "value": "https://github.com/cline/cline/"
+    },
+    {
+      "type": "url",
+      "id": "url--87bd249c-a34d-4c63-af8f-202eaae7847b",
+      "value": "https://github.com/google-gemini/gemini-cli"
+    },
+    {
+      "type": "url",
+      "id": "url--0ab92936-f6e2-44ee-b5a0-a549f3973820",
+      "value": "https://github.com/anthropics/claude-code"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e36211a-c5c7-4a97-a5cf-9f6bb879e391",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "description": "IDEsaster includes the attack pattern where prompt injection is used to leverage vulnerable tools within AI IDEs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab20bdbb-3318-4f11-a4f4-2766fb03b261",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "description": "IDEsaster includes the attack pattern where prompt injection and legitimate tools are used to modify AI agent settings."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3623527e-9223-4974-b6c0-7413dec4830b",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "description": "IDEsaster includes the attack pattern where prompt injection and vulnerable tools are used to modify AI agent configuration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d99d54be-d55c-4953-a1e4-d697fce52f69",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "description": "IDEsaster includes the novel attack pattern where prompt injection and agent tools trigger base IDE features."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12b5952e-404f-44b0-aba2-9fc7a3ef2141",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "IDEsaster encompasses the remote JSON schema data exfiltration vulnerability in AI IDEs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c91b0d01-10b2-41a0-8174-a665fe9cb028",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "IDEsaster encompasses the IDE settings overwrite vulnerability enabling remote code execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--495473ad-3b36-4dda-aca1-45bfe49f46ef",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "IDEsaster encompasses the multi-root workspace settings vulnerability enabling remote code execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--249b93f3-e352-4f82-879a-70c3f3824e7c",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--c96bbbde-0544-4a32-861e-9dd881c0f3ad",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "The Secure for AI Principle is recommended to mitigate the IDEsaster vulnerability class."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6bfec504-c63e-4c53-bb49-3e142c4d70b8",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--c96bbbde-0544-4a32-861e-9dd881c0f3ad",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "User mitigation guidance for developers using AI IDEs helps reduce risk from IDEsaster vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61badbce-fd34-4913-8949-710e58a17e25",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--c96bbbde-0544-4a32-861e-9dd881c0f3ad",
+      "target_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "description": "Developer mitigation guidance for building AI IDEs helps reduce risk from IDEsaster vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--421a03eb-957f-4a1f-a684-7067426a4da5",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Vulnerable Tools attack pattern may involve manipulating .json files as part of the attack."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5471303-c421-4dd3-bc60-bdb39b249794",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Tools \u2192 AI Agent Settings attack pattern may involve modifying .vscode/settings.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--360e3abe-72b5-4153-ae1c-43da3b53069f",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Tools \u2192 AI Agent Settings attack pattern may involve modifying .idea/workspace.xml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6867dc27-e2b4-4cf3-8e3a-8c407dc070c2",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Vulnerable Tools \u2192 AI Agent Settings attack pattern may involve modifying .vscode/settings.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5464f686-124c-4ce8-8663-e1a99a808c33",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Vulnerable Tools \u2192 AI Agent Settings attack pattern may involve modifying .idea/workspace.xml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--907d4738-bb2f-4c0a-8eec-493e030ad993",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Tools \u2192 Base IDE Features attack pattern may involve modifying *.code-workspace files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c5cb060-e7a6-49df-9c18-f77186fe84bc",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Tools \u2192 Base IDE Features attack pattern may involve modifying .git/hooks/*.sample files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5760189a-a3d9-495a-809c-530777cc3002",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Prompt Injection \u2192 Tools \u2192 Base IDE Features attack pattern may involve modifying .json files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f455ac9-d065-40b9-b56c-768e0a1cde4f",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--749b6f26-d057-4544-b611-f6baab318614",
+      "target_ref": "url--0ab92936-f6e2-44ee-b5a0-a549f3973820",
+      "description": "Prompt Injection \u2192 Vulnerable Tools attack pattern may use remote URLs such as https://maccarita.com/log?data=<DATA> for data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11aaff38-38a2-436e-94e3-0606a0153ef2",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Remote JSON Schema Data Exfiltration vulnerability involves writing .json files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3f0c1bb-e1e7-45c6-aa2b-254229acc26c",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "url--0ab92936-f6e2-44ee-b5a0-a549f3973820",
+      "description": "Remote JSON Schema Data Exfiltration vulnerability involves referencing remote schemas via URLs such as https://maccarita.com/log?data=<DATA>."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--579f873a-15f8-44ad-90b5-47d30647f0c9",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "IDE Settings Overwrite for RCE vulnerability involves overwriting .vscode/settings.json and .idea/workspace.xml files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25d5dd48-3f2b-418d-908c-c18d45936d08",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--ae3262d0-d9ca-4ccd-9c88-21fc80ee1a33",
+      "target_ref": "file--407b19a0-46cc-4fd8-825f-66e4c97938cf",
+      "description": "Multi-Root Workspace Settings RCE vulnerability involves modifying *.code-workspace files."
+    }
+  ]
+}

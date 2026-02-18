@@ -1,0 +1,602 @@
+{
+  "type": "bundle",
+  "id": "bundle--6cc6a589-3644-4f1a-9c12-5a8f6a42c49e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--5f20fb4c-050b-449c-a856-4dc95b4323a4",
+      "name": "Synthient",
+      "description": "Synthient is a security firm founded by Benjamin Brundage, specializing in detection of proxy networks and botnet-related threats.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Synthient",
+          "url": "https://synthient.com/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--0979fe3b-338d-4415-8399-8fe615c70c40",
+      "name": "XLab",
+      "description": "XLab is a Chinese security firm that researches botnets including Aisuru and Kimwolf.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "XLab",
+          "url": "https://blog.xlab.qianxin.com/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--17cfef1f-ebd0-4675-bfc9-da30126fb800",
+      "name": "Quokka",
+      "description": "Quokka is a security research firm that published a report on security issues in Android-based digital photo frames.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Quokka",
+          "url": "https://go.quokka.io/hubfs/App-Intel/Technical_Uhale-Digital-Picture-Frame-Security-Assessment.pdf"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--68e47f35-c721-435b-9696-2519dbb39f38",
+      "name": "Akamai Technologies",
+      "description": "Akamai Technologies is a technology company specializing in cybersecurity and web performance.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Akamai",
+          "url": "https://www.akamai.com/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--203c349a-4223-408a-84e6-870281cc3aae",
+      "name": "HUMAN Security",
+      "description": "HUMAN Security is a cybersecurity company involved in BADBOX investigations and threat intelligence.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "HUMAN Security",
+          "url": "https://www.humansecurity.com/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--1c86f561-e140-44ce-9727-83beb3af1fb0",
+      "name": "Oxylabs",
+      "description": "Oxylabs is a proxy service provider that implemented changes to address vulnerabilities exploited by Kimwolf.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Oxylabs",
+          "url": "https://oxylabs.io/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--051ab9c0-c2f9-4b3e-a97b-70f393a2d8af",
+      "name": "IPIDEA",
+      "description": "IPIDEA is a China-based residential proxy network provider, heavily abused by Kimwolf botnet operators.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "IPIDEA",
+          "url": "https://ipidea.net/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--acf22df1-0b4f-46f9-ac45-addbdaece138",
+      "name": "Spur.us",
+      "description": "Spur.us is a technology firm that helps companies identify and filter out proxy traffic.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Spur.us",
+          "url": "https://spur.us/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--2eea6f84-7a65-4231-89e4-b5544fd66763",
+      "name": "Federal Bureau of Investigation",
+      "description": "The FBI is a U.S. federal law enforcement agency involved in cybercrime investigations.",
+      "identity_class": "organization",
+      "sectors": [
+        "government"
+      ],
+      "external_references": [
+        {
+          "source_name": "FBI",
+          "url": "https://www.fbi.gov/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--72466653-6a92-4fc7-a458-60fe3eff37ab",
+      "name": "U.S. Department of the Treasury",
+      "description": "The U.S. Department of the Treasury sanctioned the creators of the 911S5 Proxy botnet.",
+      "identity_class": "organization",
+      "sectors": [
+        "government"
+      ],
+      "external_references": [
+        {
+          "source_name": "U.S. Department of the Treasury",
+          "url": "https://home.treasury.gov/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--b896ac96-b17f-4fbd-a798-b78688128b52",
+      "name": "University of Sherbrooke",
+      "description": "University of Sherbrooke researchers studied the threat posed by 911S5 Proxy to internal corporate networks.",
+      "identity_class": "organization",
+      "sectors": [
+        "education"
+      ],
+      "external_references": [
+        {
+          "source_name": "University of Sherbrooke",
+          "url": "https://www.usherbrooke.ca/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--ee94476a-a051-4a95-9eed-08bbcbddbca0",
+      "name": "Google",
+      "description": "Google filed a lawsuit against BADBOX 2.0 Enterprise operators for advertising fraud and botnet activity.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "external_references": [
+        {
+          "source_name": "Google",
+          "url": "https://www.google.com/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--9e385d6f-26c7-4c6f-8f65-c2d1aef3bccb",
+      "name": "Benjamin Brundage",
+      "description": "Founder of Synthient and undergraduate student at Rochester Institute of Technology, Brundage led research into Kimwolf botnet.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--81201b8f-ccdc-46e6-91a8-7ec8d6502aca",
+      "name": "Riley Kilmer",
+      "description": "Founder of Spur.us, Kilmer confirmed vulnerabilities in IPIDEA and its resellers.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--056f7d29-0c08-4877-94f4-f69f479abfb9",
+      "name": "Chad Seaman",
+      "description": "Principal security researcher at Akamai Technologies, advocating consumer awareness of insecure Android TV boxes and residential proxy schemes.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--cfc296ca-0a72-45b7-a6db-82cd0a92f150",
+      "name": "Lindsay Kaye",
+      "description": "Vice president of threat intelligence at HUMAN Security, involved in BADBOX botnet investigations.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--2c76e1f0-2707-416f-8705-0853cab691d6",
+      "name": "Android Debug Bridge",
+      "description": "Diagnostic tool for Android devices. When enabled by default on Android TV boxes, allows unauthenticated remote configuration and installation of malicious firmware via port 5555.",
+      "cpe": "cpe:2.3:a:google:android_debug_bridge:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--662b30e7-6c38-4482-a002-8f4779a5c8b0",
+      "name": "Uhale app",
+      "description": "Android-based app running on digital picture frames, found to have serious security issues and vulnerable to residential proxy malware.",
+      "cpe": "cpe:2.3:a:uhale:uhale_app:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "device",
+      "id": "device--9e6be463-cf80-4900-9dc1-89cff30af9e7",
+      "name": "Android TV Box",
+      "description": "Unofficial Android TV boxes sold by third-party merchants on Amazon, BestBuy, Newegg, and Walmart, often pre-installed with residential proxy malware and shipped with ADB enabled by default.",
+      "manufacturer": "Various",
+      "model": "Various"
+    },
+    {
+      "type": "device",
+      "id": "device--d1021801-2e7b-4b10-b675-4e165a1d8262",
+      "name": "Superbox",
+      "description": "Popular model of unsanctioned Android TV box, leaves Android Debug Mode running on localhost:5555 and frequently acts as a proxy node for IPIDEA.",
+      "manufacturer": "Unknown",
+      "model": "Superbox"
+    },
+    {
+      "type": "device",
+      "id": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "name": "Digital Photo Frame",
+      "description": "Android-based digital photo frames running the Uhale app, vulnerable to residential proxy malware and lacking security/authentication.",
+      "manufacturer": "Various",
+      "model": "Various"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2c03d0fc-e4f8-4a76-9ccb-8c7c22828f6e",
+      "value": "14emeliaterracewestroxburyma02132.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--010e09fe-b7c1-49f6-a0bc-a37a28366c62",
+      "value": "cloudflare.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--64e0a4e3-cc34-4cb6-a3ef-5d6a3f8afe30",
+      "value": "google.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d043079b-9a7d-4f0f-a00d-64aebf8d75cc",
+      "value": "apple.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3343f198-7d60-4f96-a8ea-1e19bf84ecc6",
+      "value": "ipidea.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e755ff45-f647-4185-be4f-67bb54456f88",
+      "value": "922proxy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--52d96259-4c45-4ca1-a507-065f98991694",
+      "value": "oxylabs.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e9629b24-9740-4504-91f1-963c9bb344eb",
+      "value": "spur.us"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3f0c119b-2752-46b6-aa98-a9f5a1357848",
+      "value": "synthient.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7c1d8555-4682-431c-adec-758f65bc95f0",
+      "value": "ninjio.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2933aac3-ae91-4648-9f1c-24c6e99e4171",
+      "value": "knowbe4.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--82de3037-dfdd-4e42-870b-b0b95e6cfad5",
+      "value": "walmart.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1dcffc1a-494e-46de-8a83-f5d2b440f5d2",
+      "value": "amazon.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7511eac2-72cd-4f94-9df1-00f5f06568e0",
+      "value": "bestbuy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1730b80a-a2ce-47a4-8ee9-0b2a6bf733e2",
+      "value": "newegg.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f9506b24-1c63-4e2e-a7a6-14b72dd9d8b6",
+      "value": "xlab.qianxin.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db7dae1e-cdc4-4f03-947e-043e8b4f4fd6",
+      "value": "krebsOnSecurity.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c9679046-eb41-483b-898b-2b6baf2e48cb",
+      "value": "192.168.0.1"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--807c3087-f24f-449e-a3d4-a4ccfffb551d",
+      "value": "0.0.0.0"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--698b3602-e983-4c15-a289-33b23f1d497e",
+      "account_login": "krebsfiveheadindustries",
+      "description": "Pass phrase used to unlock malicious download for Kimwolf botnet."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbd010ab-b3a1-4e18-bd78-69fc5c11ace2",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf uses abuse of residential proxy networks to tunnel through proxy endpoints and infect devices behind firewalls and routers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49666c0e-280b-40e1-8b71-a798968190fe",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf uses exploitation of unauthenticated Android Debug Bridge (ADB) to gain administrative access and install malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--801ae920-fd0d-4953-b66d-c1955b8f433b",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf uses malicious DNS configuration via proxy access to redirect traffic to attacker-controlled servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e088f86-8fb9-4cba-996c-7462342d354b",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf uses pre-installed malware on unofficial devices to infect Android TV boxes and digital photo frames."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2eee18c-a3ff-4dac-92db-a24f6d8b3889",
+      "relationship_type": "variant-of",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "description": "Kimwolf is suspected to be an Android-based variant of Aisuru."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8bb2e0e7-cdad-46c0-9bd6-d5da196e147b",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "description": "Kimwolf infects unofficial Android TV boxes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e845fe7-2397-4f59-8465-4dbc959da1c2",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "description": "Kimwolf infects digital photo frames running the Uhale app."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb23e661-33e1-48ab-969c-35669de96c1d",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "description": "Kimwolf infects Superbox Android TV boxes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f555ed3-5941-4037-b62c-980b2996ca1b",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "software--662b30e7-6c38-4482-a002-8f4779a5c8b0",
+      "description": "Kimwolf exploits Android Debug Bridge enabled by default on Android TV boxes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0fa1421-b5da-4e57-b35a-01e49314e083",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "software--662b30e7-6c38-4482-a002-8f4779a5c8b0",
+      "description": "Kimwolf infects digital photo frames running the Uhale app."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db20afeb-6ba2-4315-8287-dc27648bf804",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "network-traffic--78254bf1-8add-4964-8251-070eadcf6984",
+      "description": "Kimwolf uses unrestricted administrative access via ADB on port 5555."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7cfc354-b2a3-43e8-9d32-dc6eb82f8459",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "network-traffic--78254bf1-8add-4964-8251-070eadcf6984",
+      "description": "Kimwolf uses malicious DNS traffic targeting internal NAT IP ranges."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ac0d93a-873c-4d65-9ed2-19676e8f66b8",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "network-traffic--78254bf1-8add-4964-8251-070eadcf6984",
+      "description": "Kimwolf drops malware payload by directing infected systems to visit a specific Internet address and use the pass phrase 'krebsfiveheadindustries'."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9abcd509-a983-4e71-b574-ecce9e7ecb49",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "user-account--698b3602-e983-4c15-a289-33b23f1d497e",
+      "description": "Kimwolf uses the pass phrase 'krebsfiveheadindustries' to unlock malicious downloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4d6d6c4-20aa-40f7-8686-bd3cdedfd472",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "description": "Kimwolf Botnet Operators use Kimwolf malware to compromise devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9484a500-e01d-4042-9540-ffb3a7b429a5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf Botnet Operators exploit residential proxy networks for infection and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb052a93-6dea-46a7-89f3-010a66a85b25",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf Botnet Operators exploit unauthenticated ADB on Android devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6541d397-585a-4dc1-9051-71a10230f690",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "Kimwolf Botnet Operators monetize via app installs, proxy bandwidth sales, and DDoS-for-hire."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7bcc145-0e07-4339-9b05-223ef8728716",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "BADBOX 2.0 Enterprise uses pre-installed malware on unofficial devices for advertising fraud and botnet activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5925fe93-4417-415f-987c-2fffcf29f4a4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "description": "BADBOX 2.0 Enterprise Operators use BADBOX 2.0 Enterprise malware for advertising fraud and other criminal activities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--984f9d94-2bd3-4bd7-8c88-083b7ec714af",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "BADBOX 2.0 Enterprise Operators monetize via app installs, proxy bandwidth sales, and DDoS-for-hire."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0cb7e527-7f62-4ef3-83eb-13e2e6e3ecc9",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "911S5 Proxy uses abuse of residential proxy networks to access infected nodes' LAN resources and perform DNS cache poisoning."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ca06dd8-4b85-4400-92fa-377b15dcda6b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "description": "911S5 Proxy Operators use 911S5 Proxy botnet for LAN access and DNS cache poisoning."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d746f5f-1d7c-491e-adde-a46b5fcec0d2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eb96153e-a529-477b-8c26-a4bd510e8980",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "911S5 Proxy Operators exploit LAN access and DNS cache poisoning via residential proxy networks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b446346-0374-4280-bee9-617bd17d16bb",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "description": "BADBOX 2.0 infects unsanctioned Android streaming devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--659fb5c5-bf5f-4e39-a1bd-adbabe2a481c",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "BADBOX 2.0 uses pre-installed malware on unofficial devices and malicious apps from unofficial marketplaces."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5babe03a-3f4f-4b85-b64b-85cc6ef94865",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "device--43eb0e9a-08ca-4025-be4f-5c50e02bf823",
+      "description": "BADBOX infects Android OS devices with backdoor malware prior to purchase."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a572d4df-c981-4ee0-b3b6-e5d42418be0f",
+      "relationship_type": "uses",
+      "source_ref": "malware--4071e280-1739-45fc-bb0b-a0301f1e7b11",
+      "target_ref": "attack-pattern--51d6ec90-68e6-462c-a048-4277f249236b",
+      "description": "BADBOX uses pre-installed malware on unofficial devices."
+    }
+  ]
+}

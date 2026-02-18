@@ -1,0 +1,492 @@
+{
+  "type": "bundle",
+  "id": "bundle--edfd982e-be9f-46ec-9e32-49f01465c7ed",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "created": "2026-01-17T07:29:02.273828Z",
+      "modified": "2026-01-17T07:29:02.273828Z",
+      "name": "Cato Networks",
+      "description": "Cato Networks is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--18fdddfd-6264-5831-2a8e-b16350d92765",
+      "created": "2026-01-17T07:29:02.273828Z",
+      "modified": "2026-01-17T07:29:02.273828Z",
+      "name": "Vitaly Simonovich",
+      "description": "Vitaly Simonovich is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T07:29:02.273828Z",
+      "modified": "2026-01-17T07:29:02.273828Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T07:29:02.273828Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0132c1c8-6124-9145-4962-84d489a133b9",
+      "created": "2026-01-17T07:29:24.832922Z",
+      "modified": "2026-01-17T07:29:24.832922Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "HashJack Indirect Prompt Injection via URL Fragments",
+      "description": "HashJack is a novel indirect prompt injection technique that leverages the fragment portion of legitimate URLs (the part after the # symbol) to conceal malicious instructions. When a user interacts with an AI browser assistant (such as Copilot for Edge, Gemini for Chrome, or Comet for Perplexity), the assistant processes the full URL, including the hidden fragment, and feeds it to the underlying large language model (LLM). This causes the LLM to execute the concealed prompt, which can result in a variety of malicious outcomes such as phishing, data exfiltration, misinformation, malware guidance, medical harm, and credential theft. The attack does not require compromising the website itself; any legitimate site can be weaponized simply by crafting a URL with a malicious fragment. Because fragments are never sent to the server and remain client-side, traditional network, server, and content security defenses are blind to this attack.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--397780ca-58b5-5911-3f1e-24650975dec1",
+      "created": "2026-01-17T07:29:24.833086Z",
+      "modified": "2026-01-17T07:29:24.833086Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Abuse of User Trust via Legitimate Websites",
+      "description": "This technique exploits the user's trust in legitimate websites by embedding malicious instructions within the URL fragment. Since the base URL points to a trusted site and the page content remains unchanged, users are unlikely to suspect malicious activity. The attack relies on the assumption that users will interact with AI browser assistants on these trusted sites, inadvertently triggering the hidden payload. This abuse of trust is critical to the success of HashJack, as users are more likely to follow AI-generated suggestions and actions when they believe the context is safe.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8d990cbd-7195-84cf-44e4-e2dd1c2b754e",
+      "created": "2026-01-17T07:29:24.833186Z",
+      "modified": "2026-01-17T07:29:24.833186Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Invisible Payload Delivery via Client-Side URL Fragments",
+      "description": "HashJack delivers its payload by embedding malicious prompts in the URL fragment, which is processed entirely on the client side by the AI browser assistant. Because fragments are never transmitted over the network or logged by the server, traditional security controls such as IDS/IPS and content security policies are unable to detect or block the attack. This stealthy delivery mechanism ensures that the malicious instructions remain invisible to defenders, making detection and response extremely challenging.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--22b553b2-9c2e-eb98-d92f-1f40cf456ae3",
+      "created": "2026-01-17T07:29:24.833276Z",
+      "modified": "2026-01-17T07:29:24.833276Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Automated Data Exfiltration in Agentic AI Browsers",
+      "description": "In agentic AI browsers like Comet, HashJack can escalate its impact by leveraging the assistant's autonomous capabilities. Once the malicious prompt is injected, the AI assistant can automatically collect user data and transmit it to attacker-controlled endpoints without further user interaction. This enables rapid and covert data exfiltration, as the assistant acts on the hidden instructions embedded in the URL fragment, bypassing user awareness and traditional security controls.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--27f377e5-ac36-d5ed-e8c3-45953125b8fe",
+      "created": "2026-01-17T07:29:24.833350Z",
+      "modified": "2026-01-17T07:29:24.833350Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Callback Phishing via AI Browser Assistant",
+      "description": "HashJack enables callback phishing by injecting prompts that instruct the AI assistant to guide users into interacting with attacker-controlled resources. For example, the assistant may suggest contacting a fake support number or visiting a malicious site, all while the user believes they are engaging with a legitimate website. This technique leverages the AI assistant's authority and the user's trust to facilitate social engineering attacks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--181f3a7a-62bd-83a2-0154-6e177f286365",
+      "created": "2026-01-17T07:29:24.833430Z",
+      "modified": "2026-01-17T07:29:24.833430Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Credential Theft through AI Assistant Manipulation",
+      "description": "By injecting prompts that direct the AI assistant to request or collect sensitive credentials from the user, HashJack can facilitate credential theft. The assistant may ask for login information, passwords, or other sensitive data under the guise of legitimate activity, exploiting the user's trust in both the website and the AI assistant. The stolen credentials can then be transmitted to attacker-controlled endpoints, enabling further compromise.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bb71897f-97b9-46ca-1732-ee440c4838f7",
+      "created": "2026-01-17T07:29:24.833506Z",
+      "modified": "2026-01-17T07:29:24.833506Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Malware Guidance via AI Browser Assistant",
+      "description": "HashJack can be used to inject prompts that instruct the AI browser assistant to guide users through downloading or executing malware. The assistant may provide step-by-step instructions or links to malicious files, leveraging its perceived authority and the legitimacy of the website to convince users to follow through. This technique increases the likelihood of successful malware delivery, especially among users who trust AI-generated advice.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--da64e693-40fe-d207-0668-e026021ef387",
+      "created": "2026-01-17T07:29:24.833731Z",
+      "modified": "2026-01-17T07:29:24.833731Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Dissemination of Misinformation via AI Assistant",
+      "description": "By injecting prompts that direct the AI assistant to provide false or misleading information, HashJack can be used to spread misinformation. This can have serious consequences, especially in sensitive contexts such as medical advice or financial guidance. The attack leverages the user's trust in both the website and the AI assistant, making it difficult for users to discern legitimate information from maliciously injected content.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e894a5da-e5a8-1abd-1fd0-f18a87fc008f",
+      "created": "2026-01-17T07:29:24.833855Z",
+      "modified": "2026-01-17T07:29:24.833855Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Medical Harm through Malicious AI Prompts",
+      "description": "HashJack can be weaponized to cause medical harm by injecting prompts that instruct the AI assistant to provide dangerous or incorrect medical advice. Users seeking health-related information may receive guidance that is intentionally harmful, potentially leading to adverse outcomes. This technique is particularly concerning given the increasing reliance on AI assistants for medical decision support.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--66ba13da-b92c-5ace-ce6c-e044c4e9ac99",
+      "created": "2026-01-17T07:29:29.237823Z",
+      "modified": "2026-01-17T07:29:29.237823Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "HashJack",
+      "description": "HashJack is a novel indirect prompt injection technique that weaponizes legitimate URLs to deliver hidden malicious instructions to AI browser assistants. It enables attackers to execute a variety of malicious activities, including phishing, data exfiltration, and credential theft, by manipulating AI-driven workflows.",
+      "malware_types": [
+        "trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "created": "2026-01-17T07:29:33.058845Z",
+      "modified": "2026-01-17T07:29:33.058845Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Generic Threat Actors",
+      "description": "The article refers to 'threat actors' as the entities leveraging the HashJack technique to conduct malicious activities against AI browser assistants. No specific group or individual is attributed, and the term is used generically to describe those exploiting the vulnerability.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "callback phishing",
+        "data exfiltration",
+        "misinformation",
+        "malware guidance",
+        "medical harm",
+        "credential theft"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "unknown"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--87ec502f-20d5-2c0c-d734-a688480644fb",
+      "created": "2026-01-17T07:29:37.270069Z",
+      "modified": "2026-01-17T07:29:37.270069Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "AI Browser Assistants (e.g., Copilot for Edge, Gemini for Chrome, Comet/Perplexity)",
+      "description": "Legitimate AI browser assistants are abused by threat actors via indirect prompt injection in URL fragments. Malicious instructions hidden after the '#' in URLs are executed by the AI assistant, enabling actions such as data exfiltration, phishing, and credential theft.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation",
+        "collection"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--6134bd65-bebd-1ad3-c8ac-640af9564bb3",
+      "created": "2026-01-17T07:29:37.270164Z",
+      "modified": "2026-01-17T07:29:37.270164Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "Legitimate Websites/URLs",
+      "description": "Threat actors weaponize legitimate websites by embedding malicious prompts in the URL fragment. The AI browser assistant processes these URLs, assuming they are safe, and executes hidden instructions, facilitating social engineering and data theft.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dc674e53-c210-76d0-77ca-f2cd16baff95",
+      "created": "2026-01-17T07:29:37.270435Z",
+      "modified": "2026-01-17T07:29:37.270435Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "malware--66ba13da-b92c-5ace-ce6c-e044c4e9ac99",
+      "description": "Generic Threat Actors uses HashJack malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a953bc0f-d319-def7-f6ba-1284cbca640c",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--0132c1c8-6124-9145-4962-84d489a133b9",
+      "description": "Generic Threat Actors employs 'HashJack Indirect Prompt Injection via URL Fragments' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--72e601ea-a7ea-f29e-6b3a-2b7ff6b1ee63",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--397780ca-58b5-5911-3f1e-24650975dec1",
+      "description": "Generic Threat Actors employs 'Abuse of User Trust via Legitimate Websites' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9984ba70-a1ef-383d-6c22-484b2590aafb",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--8d990cbd-7195-84cf-44e4-e2dd1c2b754e",
+      "description": "Generic Threat Actors employs 'Invisible Payload Delivery via Client-Side URL Fragments' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8f91d720-19e6-86f4-5b23-fda7bea0e87b",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--22b553b2-9c2e-eb98-d92f-1f40cf456ae3",
+      "description": "Generic Threat Actors employs 'Automated Data Exfiltration in Agentic AI Browsers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--75dd16a7-c491-a793-0488-9a5c2261c2b5",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--27f377e5-ac36-d5ed-e8c3-45953125b8fe",
+      "description": "Generic Threat Actors employs 'Callback Phishing via AI Browser Assistant' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc85c2cf-e5fa-2437-2484-d6c0698b2173",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--181f3a7a-62bd-83a2-0154-6e177f286365",
+      "description": "Generic Threat Actors employs 'Credential Theft through AI Assistant Manipulation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f8eed941-5c36-538d-11b0-f9b04bafd343",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--bb71897f-97b9-46ca-1732-ee440c4838f7",
+      "description": "Generic Threat Actors employs 'Malware Guidance via AI Browser Assistant' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--96afe13b-46cf-0481-d996-9aecd43f4db1",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--da64e693-40fe-d207-0668-e026021ef387",
+      "description": "Generic Threat Actors employs 'Dissemination of Misinformation via AI Assistant' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--50752189-3c2d-6405-e76c-e7f0172794dd",
+      "created": "2026-01-17T07:29:37.270504Z",
+      "modified": "2026-01-17T07:29:37.270504Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--e894a5da-e5a8-1abd-1fd0-f18a87fc008f",
+      "description": "Generic Threat Actors employs 'Medical Harm through Malicious AI Prompts' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b362f245-cd47-c58b-bbbe-1d2ab3858b64",
+      "created": "2026-01-17T07:29:37.270812Z",
+      "modified": "2026-01-17T07:29:37.270812Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "tool--87ec502f-20d5-2c0c-d734-a688480644fb",
+      "description": "Generic Threat Actors uses AI Browser Assistants (e.g., Copilot for Edge, Gemini for Chrome, Comet/Perplexity) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--93864466-0941-774b-66c4-f96f443e95e2",
+      "created": "2026-01-17T07:29:37.270812Z",
+      "modified": "2026-01-17T07:29:37.270812Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "tool--6134bd65-bebd-1ad3-c8ac-640af9564bb3",
+      "description": "Generic Threat Actors uses Legitimate Websites/URLs tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3024796c-f60e-a3eb-2bdf-4764ea62bb70",
+      "created": "2026-01-17T07:29:37.270871Z",
+      "modified": "2026-01-17T07:29:37.270871Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "malware--66ba13da-b92c-5ace-ce6c-e044c4e9ac99",
+      "target_ref": "tool--87ec502f-20d5-2c0c-d734-a688480644fb",
+      "description": "HashJack uses AI Browser Assistants (e.g., Copilot for Edge, Gemini for Chrome, Comet/Perplexity) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9b289eb5-3c2a-c4b5-728c-df70458dc9b9",
+      "created": "2026-01-17T07:29:37.270871Z",
+      "modified": "2026-01-17T07:29:37.270871Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "relationship_type": "uses",
+      "source_ref": "malware--66ba13da-b92c-5ace-ce6c-e044c4e9ac99",
+      "target_ref": "tool--6134bd65-bebd-1ad3-c8ac-640af9564bb3",
+      "description": "HashJack uses Legitimate Websites/URLs for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--c57cff32-a9b2-3b52-b296-a1e92a14caa5",
+      "created": "2026-01-17T07:29:37.270999Z",
+      "modified": "2026-01-17T07:29:37.270999Z",
+      "created_by_ref": "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+      "name": "HashJack - First Known Indirect Prompt Injection | Cato Networks",
+      "description": "This report contains technical analysis and indicators from: https://www.catonetworks.com/blog/cato-ctrl-hashjack-first-known-indirect-prompt-injection/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T07:29:37.270999Z",
+      "object_refs": [
+        "identity--0335465b-6e4b-a389-8f1f-cf97df5c094d",
+        "identity--18fdddfd-6264-5831-2a8e-b16350d92765",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--0132c1c8-6124-9145-4962-84d489a133b9",
+        "attack-pattern--397780ca-58b5-5911-3f1e-24650975dec1",
+        "attack-pattern--8d990cbd-7195-84cf-44e4-e2dd1c2b754e",
+        "attack-pattern--22b553b2-9c2e-eb98-d92f-1f40cf456ae3",
+        "attack-pattern--27f377e5-ac36-d5ed-e8c3-45953125b8fe",
+        "attack-pattern--181f3a7a-62bd-83a2-0154-6e177f286365",
+        "attack-pattern--bb71897f-97b9-46ca-1732-ee440c4838f7",
+        "attack-pattern--da64e693-40fe-d207-0668-e026021ef387",
+        "attack-pattern--e894a5da-e5a8-1abd-1fd0-f18a87fc008f",
+        "malware--66ba13da-b92c-5ace-ce6c-e044c4e9ac99",
+        "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+        "tool--87ec502f-20d5-2c0c-d734-a688480644fb",
+        "tool--6134bd65-bebd-1ad3-c8ac-640af9564bb3",
+        "relationship--dc674e53-c210-76d0-77ca-f2cd16baff95",
+        "relationship--a953bc0f-d319-def7-f6ba-1284cbca640c",
+        "relationship--72e601ea-a7ea-f29e-6b3a-2b7ff6b1ee63",
+        "relationship--9984ba70-a1ef-383d-6c22-484b2590aafb",
+        "relationship--8f91d720-19e6-86f4-5b23-fda7bea0e87b",
+        "relationship--75dd16a7-c491-a793-0488-9a5c2261c2b5",
+        "relationship--bc85c2cf-e5fa-2437-2484-d6c0698b2173",
+        "relationship--f8eed941-5c36-538d-11b0-f9b04bafd343",
+        "relationship--96afe13b-46cf-0481-d996-9aecd43f4db1",
+        "relationship--50752189-3c2d-6405-e76c-e7f0172794dd",
+        "relationship--b362f245-cd47-c58b-bbbe-1d2ab3858b64",
+        "relationship--93864466-0941-774b-66c4-f96f443e95e2",
+        "relationship--3024796c-f60e-a3eb-2bdf-4764ea62bb70",
+        "relationship--9b289eb5-3c2a-c4b5-728c-df70458dc9b9"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

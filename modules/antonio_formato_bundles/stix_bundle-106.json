@@ -1,0 +1,379 @@
+{
+  "type": "bundle",
+  "id": "bundle--5024c668-becd-42da-a467-8a96e0cf9960",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--0cdf6752-ff1a-4963-a2f3-ebc50653e9d6",
+      "name": "Frogblight",
+      "description": "Frogblight is an Android banking Trojan first observed in August 2025 targeting individuals in Turkey. It is distributed via phishing SMS messages (smishing) and fake apps, such as those masquerading as court case file viewers or the Chrome browser. Frogblight steals banking credentials by using official government websites as intermediaries and has extensive spyware capabilities, including collecting SMS messages, installed apps list, device filesystem information, sending arbitrary SMS, and remote device control. It uses both REST API and WebSocket protocols for C2 communication and is under active development, with indications it may be distributed under a Malware-as-a-Service (MaaS) model.",
+      "malware_types": [
+        "banking",
+        "spyware",
+        "trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "HEUR:Trojan-Banker.AndroidOS.Frogblight.*",
+        "HEUR:Trojan-Banker.AndroidOS.Agent.eq",
+        "HEUR:Trojan-Banker.AndroidOS.Agent.ep",
+        "HEUR:Trojan-Spy.AndroidOS.SmsThief.de"
+      ],
+      "operating_system_refs": [
+        "android"
+      ],
+      "first_seen": "2025-08",
+      "last_seen": "2025-09",
+      "capabilities": [
+        "credential-access",
+        "spyware",
+        "send-sms",
+        "collect-sms",
+        "collect-call-logs",
+        "collect-contacts",
+        "collect-installed-apps",
+        "collect-filesystem-info",
+        "take-screenshot",
+        "inject-code",
+        "remote-device-control",
+        "persistence",
+        "anti-removal",
+        "anti-emulation",
+        "geofencing"
+      ],
+      "sample_hashes": [
+        "8483037dcbf14ad8197e7b23b04aea34",
+        "105fa36e6f97977587a8298abc31282a",
+        "e1cd59ae3995309627b6ab3ae8071e80",
+        "115fbdc312edd4696d6330a62c181f35",
+        "08a3b1fb2d1abbdbdd60feb8411a12c7",
+        "d7d15e02a9cd94c8ab00c043aef55aff",
+        "9dac23203c12abd60d03e3d26d372253"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        },
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/8483037dcbf14ad8197e7b23b04aea34/"
+        },
+        {
+          "source_name": "GitHub phishing website repo",
+          "url": "https://github.com/eraykarakaya0020/e-ifade-vercel"
+        },
+        {
+          "source_name": "GitHub APK repo",
+          "url": "https://github.com/Chromeapk"
+        }
+      ],
+      "labels": [
+        "android",
+        "banking trojan",
+        "spyware",
+        "malware-as-a-service",
+        "turkey",
+        "credential theft",
+        "sms phishing",
+        "smishing"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dc784239-03f4-48cb-b1a5-5ebfd6395308",
+      "name": "Smishing",
+      "description": "Frogblight is distributed via phishing SMS messages (smishing), which convince users they are involved in a court case and prompt them to download the malware from malicious links.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "phishing",
+        "smishing",
+        "mobile"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--281cba52-ab38-4ffc-bdf2-511a232418d8",
+      "name": "Credential Harvesting via WebView Injection",
+      "description": "Frogblight injects JavaScript into WebView instances of official government and banking websites to capture user credentials and transmit them to its C2 server.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "credential-access",
+        "webview-injection",
+        "banking"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ea5560e7-534f-4b24-8dbe-70c8c2c86662",
+      "name": "Remote Device Control via C2",
+      "description": "Frogblight enables remote device control, including sending SMS, collecting data, and executing commands, using REST API and WebSocket protocols for C2 communication.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "remote-access",
+        "mobile",
+        "c2"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--468da90b-0c26-4d4d-9ec3-dc2f966135ec",
+      "name": "Persistence via Boot Receiver and Foreground Service",
+      "description": "Frogblight maintains persistence on infected devices through a broadcast receiver that triggers on boot completion and a foreground service that interacts with the C2.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "persistence",
+        "android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e2529c0a-e5d4-4f2e-a32c-082a60c5d5fb",
+      "name": "Anti-Emulation and Geofencing",
+      "description": "Later versions of Frogblight employ anti-emulation and geofencing techniques, shutting down if executed in an emulator or on devices located in the United States.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "anti-emulation",
+        "geofencing",
+        "android"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--2d9e331b-7412-410f-bc2c-fa585dec768c",
+      "name": "Frogblight Web Panel",
+      "description": "A web-based control panel used by Frogblight operators to manage infected devices, sort victims by parameters, send bulk SMS, and perform mass actions. Access is restricted via authentication keys.",
+      "labels": [
+        "c2",
+        "malware panel",
+        "malware-as-a-service"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--98d057d1-7d5a-43bb-b7e2-b98ad553b6f2",
+      "name": "Frogblight Phishing Website",
+      "description": "A phishing website used to distribute Frogblight malware, disguised as a portal for viewing court case files. Source code is available publicly on GitHub.",
+      "labels": [
+        "phishing",
+        "malware distribution",
+        "android"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub phishing website repo",
+          "url": "https://github.com/eraykarakaya0020/e-ifade-vercel"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--0736e380-e99a-4dba-8245-f40195f2835a",
+      "name": "Frogblight APK Hashes",
+      "description": "Hashes of APK files associated with Frogblight malware.",
+      "pattern": "[file:hashes.'MD5' = '8483037dcbf14ad8197e7b23b04aea34' OR file:hashes.'MD5' = '105fa36e6f97977587a8298abc31282a' OR file:hashes.'MD5' = 'e1cd59ae3995309627b6ab3ae8071e80' OR file:hashes.'MD5' = '115fbdc312edd4696d6330a62c181f35' OR file:hashes.'MD5' = '08a3b1fb2d1abbdbdd60feb8411a12c7' OR file:hashes.'MD5' = 'd7d15e02a9cd94c8ab00c043aef55aff' OR file:hashes.'MD5' = '9dac23203c12abd60d03e3d26d372253']",
+      "labels": [
+        "malware",
+        "android",
+        "frogblight"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky OpenTip",
+          "url": "https://opentip.kaspersky.com/"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--c3fca31e-ae77-4324-bdb3-b5a8c9bf00c0",
+      "name": "Frogblight C2 Domains",
+      "description": "Command and control domains associated with Frogblight.",
+      "pattern": "[domain-name:value = '1249124fr1241og5121.sa.com' OR domain-name:value = 'froglive.net']",
+      "labels": [
+        "c2",
+        "malware",
+        "frogblight"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--78049328-4ed7-4904-a5e7-8e1d19877d25",
+      "name": "Frogblight C2 IP Address",
+      "description": "Command and control IP address associated with Frogblight.",
+      "pattern": "[ipv4-addr:value = '45.138.16.208']",
+      "labels": [
+        "c2",
+        "malware",
+        "frogblight"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--e98488a1-f5da-4230-9bd2-7cfb707102a9",
+      "name": "Frogblight Distribution URLs",
+      "description": "URLs used to distribute Frogblight APK files.",
+      "pattern": "[url:value = 'https://farketmez37.cfd/e-ifade.apk' OR url:value = 'https://farketmez36.sbs/e-ifade.apk' OR url:value = 'https://e-ifade-app-5gheb8jc.devinapps.com/e-ifade.apk']",
+      "labels": [
+        "malware distribution",
+        "android",
+        "frogblight"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--42c74676-c38e-4b6b-9e55-a6ca0975d55e",
+      "name": "Frogblight GitHub Repositories",
+      "description": "GitHub repositories containing Frogblight phishing website source code and APK files.",
+      "pattern": "[url:value = 'https://github.com/eraykarakaya0020/e-ifade-vercel' OR url:value = 'https://github.com/Chromeapk']",
+      "labels": [
+        "malware",
+        "phishing",
+        "frogblight"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--023afe7a-aeff-4f28-bcfa-1d60905c6513",
+      "name": "Unattributed Android Banking Threat Actor",
+      "description": "The actor behind Frogblight is currently unattributed but is suspected to be Turkish-speaking and may have previously distributed Coper malware under the MaaS model.",
+      "aliases": [
+        "Coper distributors (suspected)"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/frogblight-banker/118440/"
+        }
+      ],
+      "labels": [
+        "android",
+        "banking",
+        "malware-as-a-service",
+        "turkey",
+        "unattributed"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ee8e1bb7-857a-4929-ad14-c1fe464f8eaa",
+      "hashes": {
+        "MD5": "8483037dcbf14ad8197e7b23b04aea34"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7261f160-cb79-425c-b2da-94328a4ff6d7",
+      "hashes": {
+        "MD5": "105fa36e6f97977587a8298abc31282a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0b51ac30-e175-4c2e-9a73-6f4c2b5586cd",
+      "hashes": {
+        "MD5": "e1cd59ae3995309627b6ab3ae8071e80"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e0cab3e2-0790-40f0-9e18-eaf57ed44fdb",
+      "hashes": {
+        "MD5": "115fbdc312edd4696d6330a62c181f35"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0a2fe176-bf5b-4a31-b314-ed2147f8ffa5",
+      "hashes": {
+        "MD5": "08a3b1fb2d1abbdbdd60feb8411a12c7"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--75b098db-6513-4ad7-9644-bf73df20cb3c",
+      "hashes": {
+        "MD5": "d7d15e02a9cd94c8ab00c043aef55aff"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2693c174-91e3-4b19-a5ce-537bd7a1d253",
+      "hashes": {
+        "MD5": "9dac23203c12abd60d03e3d26d372253"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b3ebecdf-6db6-4e30-9589-0551193c7cee",
+      "value": "1249124fr1241og5121.sa.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--052d092b-65b5-4c63-aced-d8bcd5888c31",
+      "value": "froglive.net"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ee0b433f-07f3-405e-bc6f-182ea6281ec6",
+      "value": "45.138.16.208"
+    },
+    {
+      "type": "url",
+      "id": "url--26439688-d9df-4c1f-9957-ef4095d9af5e",
+      "value": "https://github.com/eraykarakaya0020/e-ifade-vercel"
+    },
+    {
+      "type": "url",
+      "id": "url--c10f0b53-1461-4ce0-a2fa-92f509315e1b",
+      "value": "https://github.com/Chromeapk"
+    },
+    {
+      "type": "url",
+      "id": "url--c869602b-c0fc-4c2a-b815-f03a20f1a89e",
+      "value": "https://farketmez37.cfd/e-ifade.apk"
+    },
+    {
+      "type": "url",
+      "id": "url--aa15a227-6de8-4492-87ad-2c716c515545",
+      "value": "https://farketmez36.sbs/e-ifade.apk"
+    },
+    {
+      "type": "url",
+      "id": "url--141fef15-f4c9-4854-90b6-555f000a4cb7",
+      "value": "https://e-ifade-app-5gheb8jc.devinapps.com/e-ifade.apk"
+    }
+  ]
+}

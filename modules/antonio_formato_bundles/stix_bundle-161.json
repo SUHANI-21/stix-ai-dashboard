@@ -1,0 +1,232 @@
+{
+  "type": "bundle",
+  "id": "bundle--295ed5cf-20df-4578-9f7c-8a9eaedca3fa",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7ab8ba64-808b-4ddc-901e-80ef0d4f5277",
+      "name": "HTML Overlay Credential Theft",
+      "description": "Uses persistent HTML overlays to mimic legitimate banking apps and capture user credentials. Overlays are stored locally and triggered for targeted apps, with input exfiltrated to C2 via WebView JavaScript bridge.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hubfs/MTI_Blog_Sturnus3.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--18fb6c92-668c-4794-ac35-8f069fcb7717",
+      "name": "Accessibility-Based Keylogging",
+      "description": "Leverages Android Accessibility Service to capture keystrokes, UI events, and reconstruct user activity. Collects text changes, focus shifts, and UI interactions for exfiltration.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hubfs/MTI_Blog_Sturnus3.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8098a0ec-5880-4340-b944-9c502848927f",
+      "name": "Screen Capture and Streaming",
+      "description": "Streams device screen to attackers in real time using display-capture and Accessibility-based screenshot techniques. Enables remote control and monitoring of user activity.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hubfs/vnc.png"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2c3efd64-362e-48ba-945b-9b7b2c7d9b1c",
+      "name": "Encrypted Messaging Bypass",
+      "description": "Monitors encrypted messaging apps (WhatsApp, Telegram, Signal) by capturing decrypted content from the device screen via Accessibility logging, bypassing end-to-end encryption.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hs-fs/hubfs/MessagingApps.png"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2dedac56-201f-4104-8e67-5426122d9f69",
+      "name": "Device Administrator Abuse",
+      "description": "Secures and defends Android Device Administrator privileges to block removal and persist on device. Monitors and interferes with attempts to disable admin status.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hs-fs/hubfs/image-png-Nov-18-2025-12-47-39-4206-PM.png"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4",
+      "name": "Environmental Monitoring",
+      "description": "Continuously tracks device state, connectivity, power, SIM, app installs, USB, forensic signs, and security settings to evade analysis and adapt tactics.",
+      "external_references": [
+        {
+          "source_name": "ThreatFabric",
+          "url": "https://www.threatfabric.com/hs-fs/hubfs/env.png"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--03d67d68-4418-43d2-8ab9-8dba5bf50c6b",
+      "hashes": {
+        "SHA-256": "045a15df1121ec2a6387ba15ae72f8e658c52af852405890d989623cf7f6b0e5"
+      },
+      "name": "Google Chrome",
+      "extensions": {
+        "android": {
+          "package_name": "com.klivkfbky.izaybebnx"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b257e5b1-804b-44d4-8388-c43192e6f0ce",
+      "hashes": {
+        "SHA-256": "0cf970d2ee94c44408ab6cbcaabfee468ac202346b9980f240c2feb9f6eb246d"
+      },
+      "name": "Preemix Box",
+      "extensions": {
+        "android": {
+          "package_name": "com.uvxuthoq.noscjahae"
+        }
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c56705a-629f-4e84-83df-868b07b6d4c9",
+      "value": "amoled.multicoloredhdrsupport.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--81c9d1ab-639f-4b0d-a142-30d74999f400",
+      "value": "walnut.almondcollections.com"
+    },
+    {
+      "type": "directory",
+      "id": "directory--6c719a59-92e9-4dd9-bf9d-2e4b7bfcec8a",
+      "path": "/data/user/0/<malware_package>/files/overlays/"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd15f920-49b6-4d53-bb40-284e03810364",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a69ee352-1ce4-49db-b784-99314f22a13c",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58d11e4d-f54a-4c79-a411-e24a4d0f1ac9",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59c3fec1-ccd2-46a7-ad0a-e97d2e920d8b",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc9726a2-149a-41d8-91b1-c76b602d2869",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fdae276e-87e4-494a-812d-6ab445e5114f",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e519380b-899e-4406-b393-392727161d38",
+      "relationship_type": "uses",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d28ed97-1b42-4183-9a37-211a7a7f5c34",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4019c556-51ca-41d7-b881-c96fca8fa710",
+      "target_ref": "file--b257e5b1-804b-44d4-8388-c43192e6f0ce"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8723989-b712-40f7-8e3e-2af68617c2e4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4019c556-51ca-41d7-b881-c96fca8fa710",
+      "target_ref": "file--b257e5b1-804b-44d4-8388-c43192e6f0ce"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5527daec-7502-4785-9cd3-ebc246673c07",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4019c556-51ca-41d7-b881-c96fca8fa710",
+      "target_ref": "domain-name--81c9d1ab-639f-4b0d-a142-30d74999f400"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--444b5f25-2799-4d81-9ae0-e49d298e49cd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4019c556-51ca-41d7-b881-c96fca8fa710",
+      "target_ref": "domain-name--81c9d1ab-639f-4b0d-a142-30d74999f400"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52e505f5-ff00-422d-b947-347543f416f0",
+      "relationship_type": "drops",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "file--b257e5b1-804b-44d4-8388-c43192e6f0ce"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--844941d6-1e02-4bdb-8307-9b0d596b6208",
+      "relationship_type": "drops",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "file--b257e5b1-804b-44d4-8388-c43192e6f0ce"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55223154-64b8-48bc-a38d-27ffb7f3abe2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "domain-name--81c9d1ab-639f-4b0d-a142-30d74999f400"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89e1d7ed-96f6-45d7-af40-68bf793027b6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--521cab37-480a-4254-a629-c177257c8fce",
+      "target_ref": "domain-name--81c9d1ab-639f-4b0d-a142-30d74999f400"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--487191e8-14c2-477f-adcf-4f855637bb8d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--f81a0d95-059d-46fa-a5d3-ddee01a860b4",
+      "target_ref": "directory--6c719a59-92e9-4dd9-bf9d-2e4b7bfcec8a"
+    }
+  ]
+}

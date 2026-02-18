@@ -1,0 +1,70 @@
+{
+  "type": "bundle",
+  "id": "bundle--39f7fc91-952e-4f7b-a346-196d03beaa26",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--e41f0b40-54f9-44d9-9174-c72776a7fde2",
+      "hashes": {
+        "SHA-256": "8437cf40bdd8b005b239c163e774ec7178195f0b80c75e8d27a773831479f68f"
+      },
+      "name": "mexico_november_po.docx",
+      "extensions": {
+        "zip": {
+          "contains": [
+            "_rels/",
+            "docProps/",
+            "word/",
+            "[Content_Types].xml",
+            "docProps/app.xml",
+            "docProps/core.xml",
+            "word/_rels/",
+            "word/theme/",
+            "word/document.xml",
+            "word/endnotes.xml",
+            "word/Engaging.rtf",
+            "word/fontTable.xml",
+            "word/footer1.xml",
+            "word/footnotes.xml",
+            "word/numbering.xml",
+            "word/settings.xml",
+            "word/styles.xml",
+            "word/webSettings.xml",
+            "word/theme/theme1.xml",
+            "word/_rels/document.xml.rels",
+            "word/_rels/settings.xml.rels",
+            "_rels/.rels"
+          ]
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1c3a18f3-1074-432e-9857-b6d5f2fe5e03",
+      "name": "Engaging.rtf",
+      "parent_directory": "word/",
+      "extensions": {
+        "rtf": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b1acfa58-7079-448d-a781-b4f70d5afdf2",
+      "hashes": {
+        "SHA-256": "d8ed658cc3d0314088cf8135399dbba9511e7f117d5ec93e6acc757b43e58dbc"
+      },
+      "name": "license.ini",
+      "parent_directory": "C:\\Users\\user01\\AppData\\Local\\Temp\\",
+      "extensions": {
+        "dll": {}
+      }
+    },
+    {
+      "type": "process",
+      "id": "process--e1058aa6-985a-4426-855e-f45cb1fa4453",
+      "command_line": "CmD.exe /C rundll32 %tmp%\\license.ini,IEX A\\x12\\x0cC",
+      "name": "CmD.exe"
+    }
+  ]
+}

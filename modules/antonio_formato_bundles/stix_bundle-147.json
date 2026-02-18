@@ -1,0 +1,617 @@
+{
+  "type": "bundle",
+  "id": "bundle--507a13c4-c595-4cc8-af35-9e365556a917",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e7727597-5f76-4777-b662-8ab6e1f153b5",
+      "name": "Phishing for Initial Access",
+      "description": "Snake Keylogger is commonly distributed via phishing emails containing malicious links, scripts, or archives (ZIP/RAR), which initiate the infection chain.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1585999e-9e6d-40c0-8fe0-23fbb38ab422",
+      "name": "Execution via Powershell",
+      "description": "Snake uses powershell scripts, often launched via bat files or other droppers, to download and execute its payload.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--03cc1804-14a6-42c1-9d89-f9a34e6e4914",
+      "name": "Persistence via Scheduled Task",
+      "description": "Snake achieves persistence by creating scheduled tasks using schtasks.exe and XML configuration files.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6bf411da-ebd6-495c-a230-5fcfc2371659",
+      "name": "Persistence via Startup Folder",
+      "description": "Snake maintains persistence by writing scripts or executables to the Windows Startup folder.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7b71c871-b0de-4102-9788-615e7f74fef0",
+      "name": "Process Injection",
+      "description": "Snake injects its payload into legitimate .NET processes or self-injects to evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055.012"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--db4c39d0-9e7b-4856-93eb-3ecb7120d9cb",
+      "name": "Obfuscated Files or Information",
+      "description": "Snake employs heavy code obfuscation, runtime string encryption, and steganography to evade analysis.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b321157c-53e4-4ca4-9e11-f72e7a37aba0",
+      "name": "Virtualization/Sandbox Evasion",
+      "description": "Snake uses anti-VM and anti-debugging techniques, such as checking hardware, process names, and libraries typical of analysis environments.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0f2bb3c0-5299-4525-becf-2f7df4612545",
+      "name": "Keylogging",
+      "description": "Snake captures keystrokes and clipboard data from infected systems.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a9efed19-b462-4138-b8ab-397dd1d6d521",
+      "name": "Screen Capture",
+      "description": "Snake captures screenshots and may also access microphone or webcam.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1113"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cc0ab16b-35a6-495c-adc5-63bb6bc2f435",
+      "name": "Browser Information Discovery",
+      "description": "Snake searches for and steals browser credentials and profile information from a wide range of browsers.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1217"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "name": "Exfiltration Over Telegram",
+      "description": "Snake exfiltrates stolen data via Telegram bots, using chat_id and token for communication.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--c6b6dd93-6783-43aa-afd9-ecb9854d9de8",
+      "name": "UAC-0041",
+      "description": "Threat actor known to use Snake Keylogger in conjunction with Formbook as a loader.",
+      "aliases": [],
+      "goals": [
+        "Credential theft",
+        "Information gathering"
+      ],
+      "resource_level": "organization"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--db3904b7-f4ea-4b2c-b4df-db90dcc33c26",
+      "name": "TA558",
+      "description": "Threat actor using steganography and multiple malware families (AgentTesla, FormBook, Remcos, LokiBot, GuLoader, XWorm) including Snake Keylogger.",
+      "aliases": [],
+      "goals": [
+        "Credential theft",
+        "Information gathering"
+      ],
+      "resource_level": "organization"
+    },
+    {
+      "type": "file",
+      "id": "file--a6c3144e-684b-439b-b426-d8fe3537ffbe",
+      "hashes": {
+        "SHA-256": "2b5066e80b14497fbfb74edec0ece993bc96364b05e07b56fcf1d8c2ffc13638"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7e8ce4d7-e609-4c3b-abe0-a800bc1be160",
+      "hashes": {
+        "SHA-256": "4cf6adbd484317ea9575c236291b11a675a0b03246646df502ffc1623c9f3bed"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e5b5fc7e-7f3e-4ab1-b226-283c65e8bc35",
+      "hashes": {
+        "SHA-256": "8f70d1e2dd175ef62acf06496488b9bbf634d900809d133d5d175b26ec0d5586"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e9411d86-0056-4a1e-9a4f-23d90dc6e369",
+      "hashes": {
+        "SHA-256": "23c7a3b054d0d62e729a70c5337e60a9b2ca9f4771ac26158811cc30ef3c14d6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7b12a5ca-a146-4aa6-99da-cf3e999e82ab",
+      "hashes": {
+        "SHA-256": "e4667848d54b7e333098e169e398d77b1f470628a481000af8ef3f4dcf8bed0a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--06393a35-d5bd-48b9-a62a-74719e804741",
+      "hashes": {
+        "SHA-256": "2bea445eed1b8e44585e00037f0c7e1db38c7064ca778859a391a23fd531864a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e5ad0bba-872d-48bc-bade-c70987adc532",
+      "hashes": {
+        "SHA-256": "838e76e03d054712b2e4d7460a94c3c5efc94561e63830119ad1f853736a3678"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--017f180d-0c5e-4444-bb8d-19c539119cc1",
+      "hashes": {
+        "SHA-256": "6d6d0e56950402b84ea721cd06cd329629d6b64e885923533de5b1c33b50d15c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--27891847-f97a-4c3f-a9d2-9f382bd8a2a4",
+      "hashes": {
+        "SHA-256": "098231c653d5968cadf74d3b7118d170615385dd0278035dbb4001204ac338ab"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dcca22c1-0cdd-4de1-b0fa-c680eb8c6441",
+      "hashes": {
+        "SHA-256": "03b59ea7bb1e2da157ae489381b5b047536b6737bf87feeba65b499ee484b4db"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1cd5cfe4-d6e3-41be-8bfc-2e5c90cc1b00",
+      "hashes": {
+        "SHA-256": "c9ecb6fb948227414357e221aa9b46dda2063989a8c47624815e9b8ee0e1aa86"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0b2ee609-449d-41df-927d-592c31361c97",
+      "hashes": {
+        "SHA-256": "a986ef1f64a9f305fafa053dd1593ca32a3ad865da931b4ba62a84da8e14c2a3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--df195ba8-40cf-4347-94dc-0662e232b32b",
+      "hashes": {
+        "SHA-256": "3ed27c3c0e41ffd40027a4ddde28a4391e15f76714abc523c72c597ff9b5d456"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--79f6adce-4578-4e05-867d-bb5ba73a8029",
+      "hashes": {
+        "SHA-256": "2f76a21937582bd59783cab01437d029a6ccd52635e2a3f424831ad7e444e640"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8e4e1482-cdfd-4a28-8e88-9994d211dd6a",
+      "hashes": {
+        "SHA-256": "082c17414af12072323ba9f4c1b1ce57491434032ff5f339374866dea3dfcc09"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--75fd1d18-2001-4a1e-88e2-12dac8a89836",
+      "hashes": {
+        "SHA-256": "6b734c88958bfe7447e6702844486156daf7a54cbd0a1cf9b7bfef98daadf519"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5906c901-5011-48da-8742-f2d411aec2a2",
+      "hashes": {
+        "SHA-256": "cd8484bc36f1b71b38d2484a693b04cd58f979dd3ce9ae5cac5722e28b45500f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6dc3a582-bcdd-4da7-ba5d-f295b48032ed",
+      "hashes": {
+        "SHA-256": "7f0f163959167b201b99ebe9695944e5b9c3ac7536fc84023aac565b0c21d3d4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--220ddc97-c6ed-424a-8614-55b3fda15104",
+      "hashes": {
+        "SHA-256": "50f2444ef55d8aa33dbcbf6b7324237671cface9e5fe6535fe23f811ceecc48f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--aac2fd91-c7b9-49c3-a898-0bfd6b89e569",
+      "hashes": {
+        "SHA-256": "8134d4cf36ca673a2c8c3a18bf7326f08cc2d2b692f239be423c04540dee1d04"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--92c0fe72-4508-4264-9cd4-035adf3edfd6",
+      "hashes": {
+        "SHA-256": "4bb3d81a2909aca92d4bcf47ea8e8f10fa685ab569fb9e9b63c276cbe08c3630"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--362a2996-811f-4259-a336-cc78d0c69873",
+      "hashes": {
+        "SHA-256": "f409ec6f04457e094ec5bc962c8ec8ee489771f8a4a2db1e35bbf9d71987c715"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5a1d3035-e99b-4012-b75a-0fdbb333f11a",
+      "hashes": {
+        "SHA-256": "d927a872657c6005e6d25f2e7aa1bed89f4c90b5323efc9e3bd1509167bc9c45"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f100e076-d47b-4faf-9715-6c81f571c514",
+      "hashes": {
+        "SHA-256": "36934868ebcecbd1f53d8bcb6a74cc445078d6759a8a607cbd6ca016a71dd56a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e6be8fd8-ad9c-470f-8e9f-15fde22daf18",
+      "hashes": {
+        "SHA-256": "a09d6699c8aad5ef8e6cc60745ffa8764da18b41e92e3f02da1f45b70c74d695"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--00c9419c-d231-4afb-ba3f-f5622c7d4fac",
+      "hashes": {
+        "SHA-256": "6f7729109b694aacc08e419e7126d1503ae2e77b5a6375e7299179309df7c562"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1969b16c-b76d-4094-ae4b-00af16ab3f76",
+      "hashes": {
+        "SHA-256": "7a1ac0566d753f699dd7fffb5b96326812eb33c19e454b93fa916a21fcbca4c0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--994270fb-8bde-447a-b978-e88542bfddd1",
+      "hashes": {
+        "SHA-256": "21ef045bc0f31750070ee021b7e781e3b833d5b08797512e646cb10bdf602045"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--072dd3bc-ae74-4e93-a268-df614d01bc69",
+      "hashes": {
+        "SHA-256": "73cc07e806fc2c6d0beef8c20b20c62a647887e81d3b4306d647416aceb0eccd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c9051fdd-f465-4972-bc62-2e642e55e4dc",
+      "hashes": {
+        "SHA-256": "7b50accfe80d370e374def391c5d57fbf8c7a468d1f20e1274e59839dafbf2db"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--effb33ea-fa46-4b93-bcc0-ab8e76924ed2",
+      "hashes": {
+        "SHA-256": "30409e85d1244083354035528d143f8d653a7304ae758a39ee88896071c4f4a1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--482a7a07-a0cb-43ca-b246-8bf34eed6463",
+      "hashes": {
+        "SHA-256": "0101b663877eb3c46f2c7461a84653ed9bcddbda070c8ff399d21c6974a6da41"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a2fc36e5-d3e8-4f3f-a2c0-d5abebf4ab48",
+      "hashes": {
+        "SHA-256": "179A42990FA012C58F24B7A556A321A0AF26911AEF71DB91E5D19F30B1C68766"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--db39c738-81a6-4f9c-aad2-636ebefa06fc",
+      "hashes": {
+        "SHA-256": "56eae3341ce6eaec052ad638ad5f10c871ed01d23f68d1f28646e2f6305bfbb6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--217cdc78-784f-43be-a100-5c70f3705108",
+      "hashes": {
+        "SHA-256": "e8f02457c0ce811c8b7e3574ec86609d52021d2cb59782ee6ef1efb0bb6e0af2"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--81657fee-d40a-4289-afd6-db1495dd6a05",
+      "value": "51.38.247.67"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dbdb7dd4-18a7-495d-9b06-39d1ccf92524",
+      "value": "3.23.155.57"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c952048d-a7a0-43b8-8a91-b0f73c69135e",
+      "value": "anotherarmy.dns.army"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bafb2334-e571-4d6f-9154-b4f67aeede21",
+      "value": "aborters.duckdns.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ba29676a-ec1b-4167-ab98-5000e158246b",
+      "value": "varders.kozow.com"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3a8aa71-5284-4432-b735-454b016c2b49",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake Keylogger is commonly distributed via phishing emails containing malicious links, scripts, or archives (ZIP/RAR), which initiate the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f60b3a2b-461d-4847-9c18-b266aeded8a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake uses powershell scripts, often launched via bat files or other droppers, to download and execute its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e662051a-0eb1-4765-8128-ca18a3994920",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake achieves persistence by creating scheduled tasks using schtasks.exe and XML configuration files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e6c23a43-5e15-4a2b-8301-e8726abb2243",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake maintains persistence by writing scripts or executables to the Windows Startup folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4f8130b-603b-438e-b24d-ceda02a6557b",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake injects its payload into legitimate .NET processes or self-injects to evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67cca3df-db59-4eca-90eb-5254bd8ca86c",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake employs heavy code obfuscation, runtime string encryption, and steganography to evade analysis."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e9dc750-00e4-4ff3-9013-19b174a697c8",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake uses anti-VM and anti-debugging techniques, such as checking hardware, process names, and libraries typical of analysis environments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6931bd9-eee0-45f6-861e-52d0a5c73493",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake captures keystrokes and clipboard data from infected systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5af7f285-c628-4bff-a997-adbe3fc9620c",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake captures screenshots and may also access microphone or webcam."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7172497d-d69a-49b6-9742-4adf8dfe0070",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake searches for and steals browser credentials and profile information from a wide range of browsers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad9224d4-0afa-4620-8795-588a882b62e3",
+      "relationship_type": "uses",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "attack-pattern--be1717b2-649c-4efe-bf12-d554e8ab0d38",
+      "description": "Snake exfiltrates stolen data via Telegram bots, using chat_id and token for communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44807736-e3e8-4e84-bd4f-f4e8946344be",
+      "relationship_type": "related-to",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "Matiex is closely related to Snake Keylogger, with similar code structure and capabilities. There is evidence of code sharing and evolutionary lineage."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b57e33f-a0c1-49e3-a013-91db9da18fdd",
+      "relationship_type": "related-to",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "Cheetah is a variant in the Snake Keylogger lineage, showing similar resource loading and persistence mechanisms."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c5b7498-20f1-47a6-a9ce-40959c8528ec",
+      "relationship_type": "related-to",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "Nova is a variant related to the Snake Keylogger family, with similar functionalities and persistence mechanisms."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6553793c-d80f-46d7-a889-648b622f676f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--db3904b7-f4ea-4b2c-b4df-db90dcc33c26",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "UAC-0041 threat actor used Snake Keylogger in conjunction with Formbook as a loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbde10ea-6349-4540-bcb3-69d992f06567",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--db3904b7-f4ea-4b2c-b4df-db90dcc33c26",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "TA558 threat actor used Snake Keylogger alongside other malware families, employing steganography and loaders."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8223974d-35f6-4d10-b0e3-fe512f5bd0c0",
+      "relationship_type": "uses",
+      "source_ref": "campaign--df2cc673-f0ef-4ba7-bf01-719b9024444b",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "QuirkyLoader Campaign deployed Snake Keylogger and other malware for mass credential theft and information gathering."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e668919b-fa4b-4657-a03c-2fd8abc81d6d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--df2cc673-f0ef-4ba7-bf01-719b9024444b",
+      "target_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "description": "GuLoader Campaign used GuLoader to deploy Snake Keylogger."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4974b7f8-2f8d-4381-a561-8dcdb02f4bd1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "domain-name--ba29676a-ec1b-4167-ab98-5000e158246b",
+      "description": "Snake Keylogger exfiltrates data and communicates with C2 infrastructure via this domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2b5c51d-ffe8-42a6-a2f7-cb14f0ce0dda",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "domain-name--ba29676a-ec1b-4167-ab98-5000e158246b",
+      "description": "Snake Keylogger exfiltrates data and communicates with C2 infrastructure via this domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa555c71-df47-4c57-b6e5-14e42d7151fc",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "domain-name--ba29676a-ec1b-4167-ab98-5000e158246b",
+      "description": "Snake Keylogger exfiltrates data and communicates with C2 infrastructure via this domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ec894b1-df93-4405-b5c6-87b17aa4c825",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "ipv4-addr--dbdb7dd4-18a7-495d-9b06-39d1ccf92524",
+      "description": "Snake Keylogger exfiltrates data and communicates with C2 infrastructure via this IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f3b0ff9-9057-465e-9a85-96d133d79e06",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--16887a49-bdc1-4605-870d-fdcc4751e497",
+      "target_ref": "ipv4-addr--dbdb7dd4-18a7-495d-9b06-39d1ccf92524",
+      "description": "Snake Keylogger exfiltrates data and communicates with C2 infrastructure via this IP address."
+    }
+  ]
+}

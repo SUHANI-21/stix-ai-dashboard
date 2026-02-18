@@ -1,0 +1,824 @@
+{
+  "type": "bundle",
+  "id": "bundle--f02e7a21-4920-460d-8f22-9985190951ca",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "created": "2026-01-14T21:50:59.819822Z",
+      "modified": "2026-01-14T21:50:59.819822Z",
+      "name": "Jamf Threat Labs",
+      "description": "Jamf Threat Labs is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--b3a6bc16-97d2-650e-ede8-d111bbdcb5d5",
+      "created": "2026-01-14T21:50:59.819822Z",
+      "modified": "2026-01-14T21:50:59.819822Z",
+      "name": "Shen Yuan and Nir Avraham",
+      "description": "Shen Yuan and Nir Avraham is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T21:50:59.819822Z",
+      "modified": "2026-01-14T21:50:59.819822Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T21:50:59.819822Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--eba1fcee-766b-9d9e-a8d4-c4ffe0038074",
+      "created": "2026-01-14T21:51:22.337634Z",
+      "modified": "2026-01-14T21:51:22.337634Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Error Code Taxonomy for Granular Anti-Analysis Reporting",
+      "description": "Predator spyware implements a sophisticated error code taxonomy (301-311) that allows operators to diagnose exactly why an implant deployment failed. When an anti-analysis check is triggered, the implant does not simply terminate; it reports a specific error code to the command-and-control infrastructure, then cleans up and exits. This enables operators to distinguish between failures caused by security tools, developer mode, jailbreak detection, geographic restrictions, or multiple instance detection, among others. The system is designed to provide precise feedback, transforming failed deployments into actionable diagnostic events. The non-sequential numbering and missing codes suggest extensibility and shared taxonomy across Intellexa products, allowing for variant-specific or deprecated checks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c5f9e2de-b8ab-12e5-b9bb-37da48270c32",
+      "created": "2026-01-14T21:51:22.337755Z",
+      "modified": "2026-01-14T21:51:22.337755Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Multiple Instance Detection via Process Enumeration",
+      "description": "Predator uses the getCountNames() function to enumerate all running processes on the device using sysctl and proc_pidpath APIs. It specifically counts how many processes are running from the staging directory (/private/var/tmp/). If two or more instances are detected, the implant reports error code 311 and aborts. This technique is designed to prevent researchers from running multiple analysis instances simultaneously, thereby limiting the ability to perform parallel reverse engineering or sandboxing. By monitoring its own presence, Predator ensures only a single instance operates, reducing the risk of detection and analysis.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d8cb0e0c-6a49-c105-e449-5cd22480c4c8",
+      "created": "2026-01-14T21:51:22.337840Z",
+      "modified": "2026-01-14T21:51:22.337840Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Developer Mode Detection Using sysctlbyname",
+      "description": "The implant includes a targeted check for iOS Developer Mode, which is commonly enabled by security researchers and developers. The is_developer() function calls sysctlbyname(\"security.mac.amfi.developer_mode_status\") to determine if Developer Mode is active. If detected, Predator aborts execution and reports the event to its operators. This approach allows the spyware to avoid environments likely to be used for analysis or research, reducing the risk of exposure and reverse engineering. By specifically targeting a feature introduced for research purposes, Predator demonstrates an awareness of its threat landscape and adapts its deployment accordingly.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e71c4a48-98a2-c09c-695f-ec38f4af7d92",
+      "created": "2026-01-14T21:51:22.338004Z",
+      "modified": "2026-01-14T21:51:22.338004Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Jailbreak Detection via File and Directory Checks",
+      "description": "Predator employs the is_not_phone() function to detect jailbroken devices by checking for the existence of specific files and directories associated with jailbreak tools and package managers. It uses the access() syscall to look for paths such as /bin/bash, /private/var/tmp/cydia.log, /Applications/Cydia.app, /private/var/lib/apt/, /private/var/lib/cydia, /etc/apt, and /private/var/stash. Additionally, it checks if /bin/ contains more than two entries, which is atypical for stock iOS. If any indicators are found, Predator reports the detection and aborts. This method helps the spyware avoid environments where its behavior could be more easily analyzed or modified.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1516/",
+          "external_id": "T1516"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f28a0e61-b87c-3e5c-0d1d-45064d9ba331",
+      "created": "2026-01-14T21:51:22.338100Z",
+      "modified": "2026-01-14T21:51:22.338100Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Geographic Restriction Based on Locale Settings",
+      "description": "Predator incorporates a geographic restriction mechanism that checks the device's locale settings to avoid executing on devices located in the United States or Israel. If the locale matches either of these jurisdictions, the implant reports error code 309 and refuses to execute. This technique is likely implemented to avoid legal or political repercussions and to reduce the risk of exposure in regions with advanced cybersecurity capabilities. By restricting its operational footprint, Predator minimizes the likelihood of detection by well-resourced organizations and researchers.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--94f70ba6-9de2-de28-0736-1fe4e8b3da21",
+      "created": "2026-01-14T21:51:22.338944Z",
+      "modified": "2026-01-14T21:51:22.338944Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Crash Reporter Monitoring for Anti-Forensics",
+      "description": "Predator includes an undocumented crash reporter monitoring system designed to detect if crash logs or crash reporting tools are active on the device. This system enables the implant to identify when its own failures or abnormal terminations are being logged, which could provide valuable forensic evidence to researchers or incident responders. Upon detection, Predator can clean up traces and abort execution, thereby minimizing the forensic footprint and complicating post-infection analysis. This anti-forensics capability is a sophisticated addition to the spyware's defense-evasion arsenal.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a88ce0ca-2c85-c06f-3a24-068e755d1521",
+      "created": "2026-01-14T21:51:22.339118Z",
+      "modified": "2026-01-14T21:51:22.339118Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "SpringBoard Hooking to Hide Recording Indicators",
+      "description": "Predator hooks into the iOS SpringBoard process to suppress or hide recording indicators that would normally alert the victim to ongoing audio or screen recording. By modifying the behavior of system UI elements, the spyware ensures that its surveillance activities remain covert and undetectable to the user. This technique directly targets user awareness and leverages deep integration with the operating system to evade detection. The use of SpringBoard hooking demonstrates advanced technical capability and a focus on stealth.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1556/001/",
+          "external_id": "T1556.001"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "created": "2026-01-14T21:51:27.178724Z",
+      "modified": "2026-01-14T21:51:27.178724Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Predator",
+      "description": "Predator is a sophisticated iOS spyware developed by Intellexa, used for targeted surveillance. It employs advanced anti-analysis techniques, granular error code reporting, and multiple detection mechanisms to evade researchers and security tools.",
+      "malware_types": [
+        "spyware",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Intellexa Predator"
+      ],
+      "x_capabilities": [
+        "data-exfiltration",
+        "command-and-control",
+        "anti-analysis",
+        "persistence",
+        "remote-access",
+        "privilege-escalation"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "created": "2026-01-14T21:51:27.178813Z",
+      "modified": "2026-01-14T21:51:27.178813Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "PREYHUNTER",
+      "description": "PREYHUNTER is a stager component associated with Predator, responsible for initial infection and deployment of the full spyware payload. It facilitates the exploitation process and prepares the environment for Predator's main modules.",
+      "malware_types": [
+        "dropper",
+        "stager"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "persistence",
+        "anti-analysis"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "created": "2026-01-14T21:51:32.825031Z",
+      "modified": "2026-01-14T21:51:32.825031Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Intellexa",
+      "description": "Intellexa is explicitly identified as the developer and operator of the Predator spyware platform. In this attack, they are responsible for deploying sophisticated iOS spyware with advanced anti-analysis and anti-forensics capabilities.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "aliases": [
+        "Intellexa Consortium"
+      ],
+      "goals": [
+        "Deploy Predator spyware on target devices",
+        "Evade detection and forensic analysis",
+        "Collect intelligence from compromised iOS devices",
+        "Diagnose and troubleshoot failed deployments"
+      ],
+      "sophistication": "innovator",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "created": "2026-01-14T21:51:32.825143Z",
+      "modified": "2026-01-14T21:51:32.825143Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Predator operators",
+      "description": "Predator operators are referenced as the entities managing and deploying the Predator spyware. They utilize the error code taxonomy and anti-analysis features to maximize successful infections and avoid detection.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Successfully infect target devices",
+        "Avoid security researchers and forensic tools",
+        "Receive detailed diagnostic feedback on deployment failures"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+      "created": "2026-01-14T21:51:40.638930Z",
+      "modified": "2026-01-14T21:51:40.638930Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "sysctl",
+      "description": "Used by Predator to enumerate all running processes and gather system information, specifically to detect multiple instances of the spyware and to check system parameters for anti-analysis purposes.",
+      "tool_types": [
+        "information-gathering",
+        "discovery"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+      "created": "2026-01-14T21:51:40.639022Z",
+      "modified": "2026-01-14T21:51:40.639022Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "proc_pidpath",
+      "description": "Abused to retrieve the executable path of each running process, allowing the spyware to identify and count its own instances for anti-analysis and evasion.",
+      "tool_types": [
+        "information-gathering",
+        "discovery"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+      "created": "2026-01-14T21:51:40.639077Z",
+      "modified": "2026-01-14T21:51:40.639077Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "sysctlbyname",
+      "description": "Used to check the status of iOS Developer Mode by querying 'security.mac.amfi.developer_mode_status', enabling the spyware to detect if the device is likely being analyzed by researchers.",
+      "tool_types": [
+        "information-gathering",
+        "discovery"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+      "created": "2026-01-14T21:51:40.639130Z",
+      "modified": "2026-01-14T21:51:40.639130Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "access",
+      "description": "Leveraged to check for the existence of files and directories associated with jailbreak tools and environments, helping Predator identify devices that may be used for security research or analysis.",
+      "tool_types": [
+        "information-gathering",
+        "discovery"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--04a20d61-1600-f425-20c6-6d42dac99712",
+      "created": "2026-01-14T21:51:40.639454Z",
+      "modified": "2026-01-14T21:51:40.639454Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "description": "Intellexa uses Predator malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2c947695-eac1-d27b-00f2-c7566a1b2146",
+      "created": "2026-01-14T21:51:40.639454Z",
+      "modified": "2026-01-14T21:51:40.639454Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "description": "Intellexa uses PREYHUNTER malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--905e5033-56c7-94b2-f096-33efe5ee2769",
+      "created": "2026-01-14T21:51:40.639454Z",
+      "modified": "2026-01-14T21:51:40.639454Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "description": "Predator operators uses Predator malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b1b6f7ba-62fb-eb84-a9f3-884494c28a46",
+      "created": "2026-01-14T21:51:40.639454Z",
+      "modified": "2026-01-14T21:51:40.639454Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "description": "Predator operators uses PREYHUNTER malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ce27681e-9d1e-33f7-518b-7223d2f252ac",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--eba1fcee-766b-9d9e-a8d4-c4ffe0038074",
+      "description": "Intellexa employs 'Error Code Taxonomy for Granular Anti-Analysis Reporting' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--558c439d-61bf-81fa-7468-333bbe8393b2",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--c5f9e2de-b8ab-12e5-b9bb-37da48270c32",
+      "description": "Intellexa employs 'Multiple Instance Detection via Process Enumeration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--693c466b-2e79-3e9e-a681-f948ecf9f898",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--d8cb0e0c-6a49-c105-e449-5cd22480c4c8",
+      "description": "Intellexa employs 'Developer Mode Detection Using sysctlbyname' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0ce01c3d-c405-bd99-d7b8-e2be62f99ad1",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--e71c4a48-98a2-c09c-695f-ec38f4af7d92",
+      "description": "Intellexa employs 'Jailbreak Detection via File and Directory Checks' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4105ba19-09b7-4e37-c005-f6d2801ef194",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--f28a0e61-b87c-3e5c-0d1d-45064d9ba331",
+      "description": "Intellexa employs 'Geographic Restriction Based on Locale Settings' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--32d2935c-b87e-0fec-f1ce-25b7c97cc75a",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--94f70ba6-9de2-de28-0736-1fe4e8b3da21",
+      "description": "Intellexa employs 'Crash Reporter Monitoring for Anti-Forensics' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--53d84a39-82c4-3e6d-88b6-361737a4fedf",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "attack-pattern--a88ce0ca-2c85-c06f-3a24-068e755d1521",
+      "description": "Intellexa employs 'SpringBoard Hooking to Hide Recording Indicators' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a3ca9d3e-f89b-3b71-aba8-2a35372ad877",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--eba1fcee-766b-9d9e-a8d4-c4ffe0038074",
+      "description": "Predator operators employs 'Error Code Taxonomy for Granular Anti-Analysis Reporting' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ad73358c-c8ac-ef4f-2c57-e5c8eecb3328",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--c5f9e2de-b8ab-12e5-b9bb-37da48270c32",
+      "description": "Predator operators employs 'Multiple Instance Detection via Process Enumeration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6ab7a8be-eea2-4769-ca2f-c95c3c0dab23",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--d8cb0e0c-6a49-c105-e449-5cd22480c4c8",
+      "description": "Predator operators employs 'Developer Mode Detection Using sysctlbyname' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--350b412f-0331-6ae0-8cd5-c9fb4f4a773e",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--e71c4a48-98a2-c09c-695f-ec38f4af7d92",
+      "description": "Predator operators employs 'Jailbreak Detection via File and Directory Checks' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--03b77886-5e35-cc7f-3a3e-726301a858df",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--f28a0e61-b87c-3e5c-0d1d-45064d9ba331",
+      "description": "Predator operators employs 'Geographic Restriction Based on Locale Settings' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2374f07c-2894-df94-35bf-6c9f30a89931",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--94f70ba6-9de2-de28-0736-1fe4e8b3da21",
+      "description": "Predator operators employs 'Crash Reporter Monitoring for Anti-Forensics' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cca250fa-26ff-b5f8-84b7-5b650cb77979",
+      "created": "2026-01-14T21:51:40.639551Z",
+      "modified": "2026-01-14T21:51:40.639551Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "attack-pattern--a88ce0ca-2c85-c06f-3a24-068e755d1521",
+      "description": "Predator operators employs 'SpringBoard Hooking to Hide Recording Indicators' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dde12e16-4b11-9fb8-d615-676ab63ef6ff",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+      "description": "Intellexa uses sysctl tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f945cf85-126c-eb01-b2cc-1446747870c5",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+      "description": "Intellexa uses proc_pidpath tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a6b87bda-62d1-a4a8-54a4-4d3c8f2a910f",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+      "description": "Intellexa uses sysctlbyname tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8951b6dc-0a06-829e-822a-76fdd934ab75",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+      "target_ref": "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+      "description": "Intellexa uses access tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--641a5d56-ac09-9019-ff65-a4c5a6c665e5",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+      "description": "Predator operators uses sysctl tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d4dfaa5a-202f-0b60-c4b5-98eddc60be07",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+      "description": "Predator operators uses proc_pidpath tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--889d55c8-18ff-f5ba-5893-4a0bd43c1fa8",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+      "description": "Predator operators uses sysctlbyname tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--64addfd4-3a3c-f7f3-98eb-3ec8afd2fedf",
+      "created": "2026-01-14T21:51:40.639915Z",
+      "modified": "2026-01-14T21:51:40.639915Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+      "target_ref": "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+      "description": "Predator operators uses access tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--33f1ee6e-19a0-ef70-77fd-fa70b3327b0f",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "target_ref": "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+      "description": "Predator uses sysctl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4f82dd7c-419c-8ae6-71c2-31d47566b588",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "target_ref": "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+      "description": "Predator uses proc_pidpath for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a5964229-d5f2-d49d-e3d4-089f05c89246",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "target_ref": "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+      "description": "Predator uses sysctlbyname for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e808805-7883-ffe8-92fc-4f963ef12216",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+      "target_ref": "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+      "description": "Predator uses access for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b570458f-03f2-16c7-475d-d36a5c54e2b9",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "target_ref": "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+      "description": "PREYHUNTER uses sysctl for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0adde62b-677d-e926-607a-521559d8e499",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "target_ref": "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+      "description": "PREYHUNTER uses proc_pidpath for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--631ebcb5-13b3-1642-bd32-a32e170f92d1",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "target_ref": "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+      "description": "PREYHUNTER uses sysctlbyname for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--032582d9-dd9a-4198-3551-cb8638d82015",
+      "created": "2026-01-14T21:51:40.640017Z",
+      "modified": "2026-01-14T21:51:40.640017Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "relationship_type": "uses",
+      "source_ref": "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+      "target_ref": "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+      "description": "PREYHUNTER uses access for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--daa68377-b18b-76b8-cf2f-09db0463aa7e",
+      "created": "2026-01-14T21:51:40.641289Z",
+      "modified": "2026-01-14T21:51:40.641289Z",
+      "created_by_ref": "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+      "name": "Predator iOS Spyware: Undocumented Anti-Analysis Techniques",
+      "description": "This report contains technical analysis and indicators from: https://www.jamf.com/blog/predator-spyware-anti-analysis-techniques-ios-error-codes-detection/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T21:51:40.641289Z",
+      "object_refs": [
+        "identity--d4a47b7a-c415-30f2-52b9-59b8c0f64ab1",
+        "identity--b3a6bc16-97d2-650e-ede8-d111bbdcb5d5",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--eba1fcee-766b-9d9e-a8d4-c4ffe0038074",
+        "attack-pattern--c5f9e2de-b8ab-12e5-b9bb-37da48270c32",
+        "attack-pattern--d8cb0e0c-6a49-c105-e449-5cd22480c4c8",
+        "attack-pattern--e71c4a48-98a2-c09c-695f-ec38f4af7d92",
+        "attack-pattern--f28a0e61-b87c-3e5c-0d1d-45064d9ba331",
+        "attack-pattern--94f70ba6-9de2-de28-0736-1fe4e8b3da21",
+        "attack-pattern--a88ce0ca-2c85-c06f-3a24-068e755d1521",
+        "malware--a573f12a-da39-6d2f-f2f8-7ce41764427c",
+        "malware--25793a64-b7ac-365c-9852-e64fe8ef7e8a",
+        "threat-actor--72e7545c-12ab-39fe-b6ce-989081203155",
+        "threat-actor--51fde138-3521-c22a-9dc0-72dc57253544",
+        "tool--a2c88367-4f3d-f26f-1deb-725e477b78de",
+        "tool--eab57db5-2961-2913-cf1e-6b28f8a39d30",
+        "tool--92a67321-66ed-6e78-155a-0275c427f7f5",
+        "tool--9df3b01c-60df-20d1-3843-841ff0d4482c",
+        "relationship--04a20d61-1600-f425-20c6-6d42dac99712",
+        "relationship--2c947695-eac1-d27b-00f2-c7566a1b2146",
+        "relationship--905e5033-56c7-94b2-f096-33efe5ee2769",
+        "relationship--b1b6f7ba-62fb-eb84-a9f3-884494c28a46",
+        "relationship--ce27681e-9d1e-33f7-518b-7223d2f252ac",
+        "relationship--558c439d-61bf-81fa-7468-333bbe8393b2",
+        "relationship--693c466b-2e79-3e9e-a681-f948ecf9f898",
+        "relationship--0ce01c3d-c405-bd99-d7b8-e2be62f99ad1",
+        "relationship--4105ba19-09b7-4e37-c005-f6d2801ef194",
+        "relationship--32d2935c-b87e-0fec-f1ce-25b7c97cc75a",
+        "relationship--53d84a39-82c4-3e6d-88b6-361737a4fedf",
+        "relationship--a3ca9d3e-f89b-3b71-aba8-2a35372ad877",
+        "relationship--ad73358c-c8ac-ef4f-2c57-e5c8eecb3328",
+        "relationship--6ab7a8be-eea2-4769-ca2f-c95c3c0dab23",
+        "relationship--350b412f-0331-6ae0-8cd5-c9fb4f4a773e",
+        "relationship--03b77886-5e35-cc7f-3a3e-726301a858df",
+        "relationship--2374f07c-2894-df94-35bf-6c9f30a89931",
+        "relationship--cca250fa-26ff-b5f8-84b7-5b650cb77979",
+        "relationship--dde12e16-4b11-9fb8-d615-676ab63ef6ff",
+        "relationship--f945cf85-126c-eb01-b2cc-1446747870c5",
+        "relationship--a6b87bda-62d1-a4a8-54a4-4d3c8f2a910f",
+        "relationship--8951b6dc-0a06-829e-822a-76fdd934ab75",
+        "relationship--641a5d56-ac09-9019-ff65-a4c5a6c665e5",
+        "relationship--d4dfaa5a-202f-0b60-c4b5-98eddc60be07",
+        "relationship--889d55c8-18ff-f5ba-5893-4a0bd43c1fa8",
+        "relationship--64addfd4-3a3c-f7f3-98eb-3ec8afd2fedf",
+        "relationship--33f1ee6e-19a0-ef70-77fd-fa70b3327b0f",
+        "relationship--4f82dd7c-419c-8ae6-71c2-31d47566b588",
+        "relationship--a5964229-d5f2-d49d-e3d4-089f05c89246",
+        "relationship--2e808805-7883-ffe8-92fc-4f963ef12216",
+        "relationship--b570458f-03f2-16c7-475d-d36a5c54e2b9",
+        "relationship--0adde62b-677d-e926-607a-521559d8e499",
+        "relationship--631ebcb5-13b3-1642-bd32-a32e170f92d1",
+        "relationship--032582d9-dd9a-4198-3551-cb8638d82015"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

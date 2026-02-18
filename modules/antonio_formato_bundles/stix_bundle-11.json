@@ -1,0 +1,100 @@
+{
+  "type": "bundle",
+  "id": "bundle--749b6bf2-f8a9-497a-b1c8-ec922c405cd9",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--dd99c007-e87b-1e62-8eea-970d367bad9e",
+      "created": "2026-01-18T20:26:41.535765Z",
+      "modified": "2026-01-18T20:26:41.535765Z",
+      "name": "CSIRT-ITA (Agenzia per la Cybersicurezza Nazionale)",
+      "description": "CSIRT-ITA (Agenzia per la Cybersicurezza Nazionale) is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-18T20:26:41.535765Z",
+      "modified": "2026-01-18T20:26:41.535765Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-18T20:26:41.535765Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+      "created": "2026-01-18T20:26:47.737841Z",
+      "modified": "2026-01-18T20:26:47.737841Z",
+      "created_by_ref": "identity--dd99c007-e87b-1e62-8eea-970d367bad9e",
+      "name": "Spear Phishing via Email Impersonating Banco BPM",
+      "description": "In this campaign, attackers send targeted phishing emails to Banco BPM customers, impersonating the bank and informing recipients of an urgent need to activate a security device for transaction protection. The emails are crafted to appear legitimate and exploit the trust relationship between the victim and the bank. The message includes a call-to-action, urging users to click on a provided link to 'activate' the device. This technique leverages social engineering and brand impersonation to increase the likelihood of victim engagement and credential theft. The use of a banking theme and urgent security messaging is specifically tailored to the target audience, increasing the effectiveness of the attack.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1566/001/",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0c31f494-5e7f-f671-e013-a4af7fd866ff",
+      "created": "2026-01-18T20:26:47.738039Z",
+      "modified": "2026-01-18T20:26:47.738039Z",
+      "created_by_ref": "identity--dd99c007-e87b-1e62-8eea-970d367bad9e",
+      "name": "Credential Harvesting via Fake Security Device Activation Portal",
+      "description": "Upon clicking the link in the phishing email, victims are redirected to a fraudulent web portal designed to mimic Banco BPM's legitimate online banking interface. The portal requests the user to enter their banking credentials under the pretense of activating a new security device. This technique is specifically customized for this campaign, as the attackers exploit the sense of urgency and the promise of enhanced security to trick users into divulging sensitive information. The fake portal is likely crafted to closely resemble the real bank's website, further lowering suspicion and increasing the success rate of credential harvesting.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--b21181c5-b708-40eb-1ea4-f1a0fb4ab10b",
+      "created": "2026-01-18T20:26:52.054273Z",
+      "modified": "2026-01-18T20:26:52.054273Z",
+      "created_by_ref": "identity--dd99c007-e87b-1e62-8eea-970d367bad9e",
+      "name": "Phishing: campagna a tema “Banco BPM” - ACN",
+      "description": "This report contains technical analysis and indicators from: https://www.acn.gov.it/portale/w/phishing-campagna-a-tema-banco-bpm-",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-18T20:26:52.054273Z",
+      "object_refs": [
+        "identity--dd99c007-e87b-1e62-8eea-970d367bad9e",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+        "attack-pattern--0c31f494-5e7f-f671-e013-a4af7fd866ff"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

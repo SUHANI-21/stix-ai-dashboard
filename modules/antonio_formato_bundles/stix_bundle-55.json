@@ -1,0 +1,725 @@
+{
+  "type": "bundle",
+  "id": "bundle--205de66f-c5df-4ede-b5fc-40c708e8745a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "name": "SideWinder",
+      "aliases": [
+        "Rattlesnake",
+        "T-APT-04"
+      ],
+      "description": "SideWinder is an APT group targeting South Asian governments, military, and tax agencies. The group uses phishing emails themed around tax refunds to deliver malware, leveraging techniques like DLL side-loading, Living-off-the-Land binaries, and cloud storage for payload delivery. Recent activity targeted Indian tax officials using fake tax department websites and multi-stage payloads.",
+      "goals": [
+        "Espionage",
+        "Data theft",
+        "Targeting government, military, and tax organizations"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--da3f6bb4-0e29-4a02-a712-9600ff31fd5c",
+      "name": "Phishing via Tax Refund Theme",
+      "description": "Use of phishing emails themed around tax refunds to lure victims into visiting fake tax department websites and downloading malicious payloads.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1566.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a7f6b3d5-2f16-4e52-9e6e-c7c22f65b73a",
+      "name": "DLL Side-Loading",
+      "description": "Abuse of legitimate signed binaries to load malicious DLLs, evading security detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1574.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5c551332-0df5-4756-bb1b-d69b6d82cfe7",
+      "name": "Geofencing Execution",
+      "description": "Malware checks victim's timezone (UTC+5:30) and only executes in targeted regions, using timeapi[.]io for verification.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1614.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f27796f3-f0ec-43d0-addb-930a0c9fef06",
+      "name": "Sandbox Evasion",
+      "description": "Malware detects analysis tools (e.g., Procmon, Wireshark) and self-terminates to evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1497.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2193a11c-8df7-4e67-9ac9-54c840172bf0",
+      "name": "Sleep/Delay Technique",
+      "description": "Malware uses long sleep intervals (e.g., Sleep(210000) for 3.5 minutes) to evade sandboxes with short timeouts.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1622"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5eb4e96b-e271-44b6-b865-934d40b8b9d5",
+      "name": "Cloud Storage Payload Delivery",
+      "description": "Malware payloads are hosted on public cloud storage (e.g., GoFile) and downloaded via legitimate-looking URLs.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "name": "Living-off-the-Land Binaries",
+      "description": "Malware leverages trusted system binaries and signed executables to execute malicious code and evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1218"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6df17384-4281-4dd0-a686-fcbb618c7da8",
+      "value": "ksdfuefagfrukayhfka.eu.cc"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c10e1f21-6124-4691-8f01-5983e0071112",
+      "value": "zibenbang.vip"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f2a45805-8e8f-450a-a1b6-f4a32848fd1c",
+      "value": "gfmqvip.vip"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8682987c-f2e6-4144-ac42-f1d6ad37f6e0",
+      "value": "sow4.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3cc93a54-9322-4b02-9592-0a88a73576d8",
+      "value": "oopae.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--77c0dac7-a176-471a-b9e5-5d64c1f6258c",
+      "value": "googlevip.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8e0c7484-7900-4717-9fda-fb96a5212998",
+      "value": "googlevip.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bb37a092-3db8-4d15-a873-f6f3089e8178",
+      "value": "wwwqqo.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3e241361-5e00-47b5-943a-ceccef1d9b2f",
+      "value": "qqooe.click"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5a68d7d4-0302-4b18-af16-177f4f17390f",
+      "value": "googleaxc.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--710abf82-dca0-48ae-9df3-b45fae3d9541",
+      "value": "googlewery.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d1ff6370-da56-4a60-a13e-44969721a0c6",
+      "value": "oopv.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--efaddd73-3a74-4f30-bc55-d28d5ebb9289",
+      "value": "wwsxcpl.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dfb13c59-91f5-45b6-9d86-b32f4f727eee",
+      "value": "mrysaqw.qpon"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--48e15e9a-f66c-4c1f-a613-50c2fc8b4bfd",
+      "value": "hetyqraftryt.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e3fc93e6-3461-4293-9dba-02bb40b97992",
+      "value": "googlewww.qpon"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ae3b7318-4bf4-4cfe-b0d4-d2c13e68b8c2",
+      "value": "googlehkcom.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e56d5296-8558-4f63-8afd-4a60d12222c5",
+      "value": "stockjp.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c93e52d-ed78-4935-8295-4a6876496377",
+      "value": "gofjasj.help"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--98b6b9e9-c7d5-4709-adc9-7437df2783f5",
+      "value": "zhantugaokao.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--49c449fb-80b3-4a38-b496-077224f9e3e0",
+      "value": "oytdwzz.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f5554fa1-6db0-4b12-8a11-57d38cd75c9e",
+      "value": "gsrydkjz.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "value": "wgooglegoogle.com"
+    },
+    {
+      "type": "url",
+      "id": "url--9d73c66f-e6d2-4495-b370-c52e321586bf",
+      "value": "surl.li/wijrvg"
+    },
+    {
+      "type": "url",
+      "id": "url--fab2807f-00c3-42de-83fe-944fe750ba47",
+      "value": "surl.li/oskzir"
+    },
+    {
+      "type": "url",
+      "id": "url--1671de39-734c-4345-9989-b2e391b8becd",
+      "value": "surl.li/wuvdwi"
+    },
+    {
+      "type": "url",
+      "id": "url--b7f720ee-8578-4390-9b35-5678ec7bd299",
+      "value": "store10.gofile.io/download/direct/957700da-f706-4bef-99ad-983ab36d02f5/inspection.zip"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b445ffd2-c720-46cd-8c89-a41017b8c25e",
+      "value": "8.217.152.225"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0b1e8fc6-99d8-457a-a61e-7ee1805d3e50",
+      "value": "180.178.56.230"
+    },
+    {
+      "type": "file",
+      "id": "file--99dafac3-4662-4aca-a15f-9b1263d6e40e",
+      "name": "Inspection.zip",
+      "hashes": {
+        "MD5": "eb5bd49b6eef60ff85892ef7c8015b01"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2e6f7ea1-a556-4d21-8930-17a1fa762aa2",
+      "name": "MpGear.dll",
+      "hashes": {
+        "MD5": "7f397f286905114b94da3ec9052cb89d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ce345ba7-44d6-418a-8051-7f14bed1a557",
+      "name": "1bin",
+      "hashes": {
+        "MD5": "537abad75fc343690119851610d9b54b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "name": "mysetup.exe",
+      "hashes": {
+        "MD5": "6a3b5fed4383a2e54d70b4a01c44ba01"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bad0d0b-6685-48a3-89be-ef7609b553c4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "SideWinder uses SenseCE.exe as a dropper via DLL side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--046e12fd-c755-4819-a0bd-98a7caedcc2b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "SideWinder uses MpGear.dll as a remote-access-trojan payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39e34ed4-dd1a-4e9d-ad60-2a0da7d22bd2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "SideWinder uses Shellcode Loader (1bin) for in-memory execution of shellcode."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a0199f45-ef61-4774-a14f-63f3238e9cf3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "SideWinder uses mysetup.exe as a proxy tool for persistence and C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cd0fcda-2d6b-4804-b34c-82d655d0cc4e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder uses phishing emails themed around tax refunds to lure victims."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c24812c-2a9c-4cd8-8d3b-f82ba96a90d8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder uses DLL side-loading to evade security detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03a618a5-587a-435a-9639-a841664d8417",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder employs geofencing execution by checking victim timezone."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b67c1f64-9745-4f36-a706-42e10565ffcb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder uses sandbox evasion by detecting analysis tools and self-terminating."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf502e91-c5de-4cc2-965b-fb7f2e280fb8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder uses sleep/delay techniques to evade sandbox detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--207639bb-814a-4cca-94ac-d9578e3854ff",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder delivers payloads via public cloud storage."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a40cad94-2a3f-405e-b59c-4bf87351a4c7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e4b31173-0eff-4e91-90a3-b607a923229f",
+      "target_ref": "attack-pattern--089c48e9-bded-4437-ae5d-2e9dea675070",
+      "description": "SideWinder leverages living-off-the-land binaries for evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8b38a42-7d7e-48b9-bc24-1de9a76f9da3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes ksdfuefagfrukayhfka.eu.cc."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d63980ae-2c87-4f11-b07d-ff094d65c986",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes zibenbang.vip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f866720d-a2c6-4838-895e-f40d1362637b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes gfmqvip.vip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ecfdb09-14ab-4043-9945-925dd1962abc",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes sow4.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0592e85-bfd5-4730-aedc-61bee0886579",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes oopae.icu."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bf6ddc7-ffa4-4430-8972-008ea5082c53",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googlevip.icu."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5e5af01-bc6b-4266-af7a-37037ae42e3c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googlevip.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df39970b-993b-4e14-86b3-bc9d67ded584",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes wwwqqo.icu."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12166de2-57db-4353-8d3f-2e7df9ef3fce",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes qqooe.click."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bfe1940-3a19-46c0-8d06-14360ca8bc5f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googleaxc.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1573ab4-b691-48a5-980c-dc41b5c8a117",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googlewery.cyou."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5e105e5-0e2e-48b2-99b7-a0ddfb8c3c3d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes oopv.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05a3023f-7165-4ee7-8cfb-289a1d4a06fa",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes wwsxcpl.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3cfc2b1e-f134-4e2e-bf55-f8485d1345fd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes mrysaqw.qpon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a105d09c-f077-4d9b-8fbc-e158d8fb9237",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes hetyqraftryt.cyou."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--162c6980-ee91-4b26-ab65-ef6233b065a5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googlewww.qpon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54481d16-6457-4486-8e27-1773526c6fde",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes googlehkcom.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--074ab6b7-d3bb-4470-810a-c68d2270d7c2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes stockjp.top."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--040c46aa-61d4-4df0-97b6-6469eafe9030",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes gofjasj.help."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66ec561b-6f2b-4ae4-a61f-eccc8466482f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes zhantugaokao.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34e7b7ff-6c3d-4f28-afb5-f758c0a5a73f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes oytdwzz.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef4a6818-7dc3-4dcb-8682-5b7bbbafeae7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes gsrydkjz.cyou."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09d1444e-dcb2-4974-8e31-1b764018ddfd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "domain-name--c7b03e7e-57d3-49cb-b64d-aad6553c3777",
+      "description": "Suspicious Domains indicator includes wgooglegoogle.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--313ec8a3-280a-45fa-b180-48bd69f2535c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "url--b7f720ee-8578-4390-9b35-5678ec7bd299",
+      "description": "Phishing URLs indicator includes surl.li/wijrvg."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5cd1f712-cd51-4a59-b3fd-196d08c032e4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "url--b7f720ee-8578-4390-9b35-5678ec7bd299",
+      "description": "Phishing URLs indicator includes surl.li/oskzir."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c5c3e60-f4f7-47a7-a227-14b010b293a5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "url--b7f720ee-8578-4390-9b35-5678ec7bd299",
+      "description": "Phishing URLs indicator includes surl.li/wuvdwi."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dd86388e-648c-4501-a5af-74c31a10b60e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "url--b7f720ee-8578-4390-9b35-5678ec7bd299",
+      "description": "Payload Download URL indicator includes store10.gofile.io/download/direct/957700da-f706-4bef-99ad-983ab36d02f5/inspection.zip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f15ac01a-2d0f-475b-8b5d-f828642c1ae8",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "ipv4-addr--0b1e8fc6-99d8-457a-a61e-7ee1805d3e50",
+      "description": "C2 IP Addresses indicator includes 8.217.152.225."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65e9738c-9dec-4334-a2ba-2fbf47fb52bc",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "ipv4-addr--0b1e8fc6-99d8-457a-a61e-7ee1805d3e50",
+      "description": "C2 IP Addresses indicator includes 180.178.56.230."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cf17435-baf8-43ca-8cf9-6833563b370f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator includes Inspection.zip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb9b73c3-490c-4c85-bc1b-d1a1063514bd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator includes MpGear.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00e7609b-3105-483b-b11a-5e7fca731e0f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator includes 1bin shellcode loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c840f78c-9b2b-48e6-875c-fc274335cf03",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator includes mysetup.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f16fc7c-7ff1-44ed-9f37-91684f2e96d8",
+      "relationship_type": "drops",
+      "source_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "SenseCE.exe drops MpGear.dll via DLL side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96b27270-b4a9-45ba-8781-76e47a165dc8",
+      "relationship_type": "drops",
+      "source_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "MpGear.dll loads Shellcode Loader (1bin) in memory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95f65950-7c70-4fa2-bbdc-e33e8ad195d3",
+      "relationship_type": "drops",
+      "source_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "Shellcode Loader (1bin) drops mysetup.exe for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--06d2d12d-46c8-456a-ac44-4ce618dbd28f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "Malicious File Hashes indicator matches SenseCE.exe (Inspection Document Review.exe)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5f11d17-8e22-4619-a9d9-21e79c48f748",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "Malicious File Hashes indicator matches MpGear.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--189f4747-0109-495d-8710-bc88515f6a1a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "Malicious File Hashes indicator matches Shellcode Loader (1bin)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d34c082-8401-4111-ba85-b69113897f35",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "malware--11e5d82e-b7e7-4d42-b2f0-fc229c18863a",
+      "description": "Malicious File Hashes indicator matches mysetup.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b61c4e72-e2ba-4f44-8341-e65fc6be687f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator matches file Inspection.zip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efb632d1-c0bb-4017-b603-dad38d9abcc7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator matches file MpGear.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1ee6fd3-1d0a-4054-9348-503dd690a4b7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator matches file 1bin."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3aa49047-6e8c-417d-8cd1-48fb9312e011",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--24487e88-7231-4a94-87b0-03f49c34a455",
+      "target_ref": "file--e8e5b434-943a-4492-9876-d0499226e157",
+      "description": "Malicious File Hashes indicator matches file mysetup.exe."
+    }
+  ]
+}

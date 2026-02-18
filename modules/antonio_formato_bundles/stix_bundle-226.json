@@ -1,0 +1,428 @@
+{
+  "type": "bundle",
+  "id": "bundle--6fd3cac7-fe6a-4003-bd13-f42cdb10e768",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--a9822a50-6df1-4842-a94a-942950f95483",
+      "name": "aurologic GmbH",
+      "description": "German hosting provider serving as a central nexus for high-risk hosting networks and threat activity enablers (TAEs), providing upstream transit and data center services to networks repeatedly associated with malicious infrastructure.",
+      "aliases": [
+        "aurologic",
+        "aurologic GmbH",
+        "AS30823"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "data-center",
+        "internet-backbone"
+      ],
+      "first_seen": "2023-10",
+      "location": "Langen, Germany",
+      "confidence": 80,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "aurologic GmbH website",
+          "url": "https://aurologic.com"
+        },
+        {
+          "source_name": "Recorded Future",
+          "url": "https://www.recordedfuture.com"
+        },
+        {
+          "source_name": "Tornado Datacenter GmbH & Co. KG",
+          "url": "https://tornado-datacenter.de"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--ab24f258-4ea0-4b65-8f84-febb40f5bc4d",
+      "name": "Aeza Group",
+      "description": "Russian hosting provider enabling cybercriminal and state-aligned operations via resilient, abuse-tolerant infrastructure. Aeza International Ltd (AS210644) is a UK-registered branch. Aeza is a prominent threat activity enabler (TAE), repeatedly cited for hosting malicious infrastructure, ransomware, infostealers, and supporting Russian disinformation campaigns.",
+      "aliases": [
+        "Aeza Group",
+        "Aeza International Ltd",
+        "Aeza Logistic LLC",
+        "Cloud Solutions LLC",
+        "AS210644"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "first_seen": "2021",
+      "location": "Russia; UK",
+      "confidence": 80,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "OFAC Sanctions",
+          "url": "https://home.treasury.gov/news/press-releases/sb0185"
+        },
+        {
+          "source_name": "UK Government Sanctions",
+          "url": "https://www.gov.uk/government/news/uk-sanctions-georgia-linked-supporters-of-putins-illegal-war-in-ukraine"
+        },
+        {
+          "source_name": "LowEndTalk Forum",
+          "url": "https://lowendtalk.com/discussion/196542/aeza-going-downhill/p13"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--38ff5058-0f5e-4a9d-9d5e-b4ff659c5049",
+      "name": "Femo IT Solutions Limited",
+      "description": "UK-incorporated organization (AS214351) displaying high concentrations of validated malicious infrastructure, including C2 servers for Cobalt Strike, DcRat, Rhadamanthys Stealer, TinyLoader, THC Hydra, and more. Assessed to be under control of Defhost.",
+      "aliases": [
+        "Femo IT Solutions",
+        "Femo IT Solutions Limited",
+        "AS214351"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "first_seen": "2024",
+      "location": "United Kingdom",
+      "confidence": 80,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "UK Companies House",
+          "url": "https://find-and-update.company-information.service.gov.uk/company/15885164"
+        },
+        {
+          "source_name": "bgp.tools",
+          "url": "https://bgp.tools/as/214351"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--3991d425-d172-447a-9ccb-fcd57332141c",
+      "name": "Defhost",
+      "description": "Bulletproof hosting provider assessed to control Femo IT Solutions Limited, advertising resilience against takedown efforts and uninterrupted operations.",
+      "infrastructure_types": [
+        "bulletproof-hosting"
+      ],
+      "confidence": 80,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "Telegram",
+          "url": "https://t.me/defhost"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--d7275de7-064c-40e9-a6ca-f49834fcf120",
+      "name": "Global-Data System IT Corporation",
+      "description": "Swiss hosting provider (AS42624, SWISSNETWORK02) with high concentrations of malicious activity, hosting a wide range of malware families and supporting DDoSIA, Socks5Systemz, and other commodity malware ecosystems.",
+      "aliases": [
+        "Global-Data System IT Corporation",
+        "SWISSNETWORK02",
+        "AS42624"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "first_seen": "2024-07",
+      "location": "Switzerland",
+      "confidence": 70,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "RIPE DB",
+          "url": "https://apps.db.ripe.net/db-web-ui/query"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--433ac1b6-1cf4-4cd4-825b-72fc9f9dafc7",
+      "name": "PrivateAlps",
+      "description": "Offshore privacy-centric hosting provider registered in Switzerland, assessed to be closely tied to Global-Data System IT Corporation. Advertises no KYC, DMCA-ignored hosting, and Tor-friendly infrastructure.",
+      "infrastructure_types": [
+        "bulletproof-hosting"
+      ],
+      "location": "Switzerland",
+      "confidence": 60,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--848325b4-adce-4ff3-8702-32aa791e7cbb",
+      "name": "metaspinner net GmbH",
+      "description": "ASN (AS209800) registered April 2025, announced exclusively through aurologic. Accumulated substantial malicious footprint, hosting loaders, stealers, RATs, and botnets. Assessed to be controlled by threat actors affiliated with Virtualine Technologies.",
+      "aliases": [
+        "metaspinner net GmbH",
+        "AS209800"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "first_seen": "2025-04-25",
+      "location": "Germany",
+      "confidence": 80,
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "metaspinner[.]net",
+          "url": "https://metaspinner.net"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--c3e8c840-5faa-4b18-ac13-0ee4c7322eea",
+      "name": "Virtualine Technologies",
+      "description": "Russia-linked bulletproof hosting provider, controlling infrastructure and domains associated with metaspinner net GmbH, Railnet LLC, and others. Advertises on Russian-language forums and uses London-based virtual office addresses.",
+      "infrastructure_types": [
+        "bulletproof-hosting"
+      ],
+      "location": "Russia; UK",
+      "confidence": 80,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--1bce7dfb-b7a9-4fdb-a88c-51a0585e6afb",
+      "name": "Lanedo Datacenter",
+      "description": "Datacenter registered October 16, 2025, in Amsterdam, Netherlands, receiving IP prefixes transferred from metaspinner net GmbH at peak malicious activity. Associated domain lanedo[.]net presents as German ISP.",
+      "aliases": [
+        "Lanedo Datacenter",
+        "lanedo[.]net"
+      ],
+      "infrastructure_types": [
+        "hosting-provider"
+      ],
+      "first_seen": "2025-10-16",
+      "location": "Netherlands",
+      "confidence": 70,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--eebea274-a15e-4181-8397-0f4937a51a17",
+      "name": "Lanedo GmbH",
+      "description": "Company registered October 13, 2025, in Germany, assessed to be impersonated by threat actors for bulletproof hosting. Legitimate company operates as software consultancy with domain lanedo[.]com.",
+      "aliases": [
+        "Lanedo GmbH",
+        "lanedo[.]net",
+        "lanedo[.]com"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "location": "Germany",
+      "confidence": 70,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--b600bb37-fe03-4e7e-b215-8111d7305b1e",
+      "name": "Railnet LLC",
+      "description": "US-incorporated hosting provider (AS214943) emerging as one of the most abuse-heavy networks, hosting infrastructure for over 30 malware families. Acts as backbone for bulletproof hosting brands including Virtualine Technologies, DripHosting (DiorHost), and RetryHost.",
+      "aliases": [
+        "Railnet LLC",
+        "AS214943"
+      ],
+      "infrastructure_types": [
+        "hosting-provider",
+        "bulletproof-hosting"
+      ],
+      "first_seen": "2024-04",
+      "location": "United States",
+      "confidence": 80,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--c0a21544-2865-4e29-8e0f-6e51ab9a091e",
+      "name": "DripHosting (DiorHost)",
+      "description": "Bulletproof hosting provider branded as DripHosting and DiorHost, operating infrastructure via Railnet LLC.",
+      "aliases": [
+        "DripHosting",
+        "DiorHost",
+        "driphost[.]net",
+        "dior[.]host"
+      ],
+      "infrastructure_types": [
+        "bulletproof-hosting"
+      ],
+      "confidence": 70,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--aacc9517-6873-4e2d-930b-15854eb1e623",
+      "name": "RetryHost",
+      "description": "Bulletproof hosting provider offering VPS and RDP services, originating a single range through Railnet LLC.",
+      "aliases": [
+        "RetryHost"
+      ],
+      "infrastructure_types": [
+        "bulletproof-hosting"
+      ],
+      "confidence": 70,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--6e24ec91-18d9-4ac6-a7dc-a77654fcad0b",
+      "number": 30823,
+      "name": "aurologic GmbH",
+      "organization": "aurologic GmbH",
+      "location": "Langen, Germany"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--fbed6043-0620-4779-87af-4bed7644cf95",
+      "number": 210644,
+      "name": "Aeza International Ltd",
+      "organization": "Aeza International Ltd",
+      "location": "United Kingdom"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--0ca1ad41-7651-4224-918d-a7fcb06285ad",
+      "number": 214943,
+      "name": "Railnet LLC",
+      "organization": "Railnet LLC",
+      "location": "United States"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--22391106-845e-4ca6-a5f8-c2a948bcdc3b",
+      "number": 42624,
+      "name": "Global-Data System IT Corporation",
+      "organization": "Global-Data System IT Corporation (SWISSNETWORK02)",
+      "location": "Switzerland"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--36259a1d-a58d-46a8-af06-929a0a9e4e8c",
+      "number": 214351,
+      "name": "Femo IT Solutions Limited",
+      "organization": "Femo IT Solutions Limited",
+      "location": "United Kingdom"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--b19eb2c4-d4ce-4464-a874-4acee030cf92",
+      "number": 209800,
+      "name": "metaspinner net GmbH",
+      "organization": "metaspinner net GmbH",
+      "location": "Germany"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--a7531327-f70b-442a-8196-949276d34693",
+      "number": 213511,
+      "name": "VSVK Onderhoud B.V.",
+      "organization": "VSVK Onderhoud B.V.",
+      "location": "Netherlands"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--676a5ac4-a77a-489f-9761-45ff0e004f89",
+      "number": 215829,
+      "name": "Smart Digital Ideas DOO",
+      "organization": "Smart Digital Ideas DOO",
+      "location": "Serbia"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a1767f53-483d-40f3-81e0-221aa980749d",
+      "value": "45.142.122.0/24"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0ffa10c0-23d6-4424-a1ec-566e220ed9e5",
+      "value": "62.60.226.0/24"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--53505db3-5b90-4df0-826b-23c655f7a2e8",
+      "value": "176.46.152.0/24"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a2623a30-b542-430f-9981-5e01250b8971",
+      "value": "91.92.240.0/22"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e4fc6803-f859-441e-855b-e10d87ee4f7a",
+      "value": "158.94.208.0/22"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--14f5b890-b93b-4f21-8561-1bc1a6caac8e",
+      "value": "178.16.52.0/22"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--43379d42-ad27-4b29-9be5-5804a172695d",
+      "value": "65.21.125.233"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2fdf3a0f-b54d-43c9-8ae0-341220d54dec",
+      "value": "metaspinner.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a0ea24e5-cfaf-45c1-8935-0475e463f088",
+      "value": "virtualine.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e376012d-27fa-4b2c-8df8-dbf3432fdb8a",
+      "value": "virtualine.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--adc68a4a-4b31-4612-935c-a8dab4b48234",
+      "value": "vonie.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d56d53d4-e55a-4d7f-92cd-96175b35b51f",
+      "value": "proxio.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--378e5acf-665d-4e14-9054-c9c753571d9a",
+      "value": "proxio.cc"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3151b922-dd4e-4fe9-9464-d10a726bc642",
+      "value": "antired.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6244a7fa-0d06-4ff5-b0ca-bfdf03a9b99f",
+      "value": "lanedo.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6f31e985-4287-4b49-8733-41d3f9aa6b2d",
+      "value": "lanedo.com"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--a9e2fbeb-6c8c-4667-b38e-da59ce6388e9",
+      "value": "abuse@aurologic.com"
+    }
+  ]
+}

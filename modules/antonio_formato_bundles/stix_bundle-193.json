@@ -1,0 +1,623 @@
+{
+  "type": "bundle",
+  "id": "bundle--fd506b24-b41b-46e4-96eb-6172f60439b5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "tool",
+      "id": "tool--c7295699-6bb7-4e84-8571-840d08234892",
+      "name": "MSIXBuilder",
+      "description": "MSIXBuilder is an automated solution for security teams to create, test, and validate detection coverage against MSIX-based attacks without the risk of deploying live malware. It supports both command-line and GUI interfaces, and can generate signed and unsigned MSIX packages.",
+      "labels": [
+        "defensive",
+        "testing",
+        "simulation"
+      ],
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/MHaggis/MSIXBuilder"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9f0a584b-6e75-472d-9ea1-5ffb02c8a1d7",
+      "name": "Malvertising for MSIX Malware Delivery",
+      "description": "Threat actors purchase legitimate ad placements for popular software searches, leading users to fake landing pages that distribute malicious MSIX packages.",
+      "external_references": [
+        {
+          "source_name": "Microsoft Security Blog",
+          "url": "https://www.microsoft.com/en-us/security/blog/2023/12/28/financially-motivated-threat-actors-misusing-app-installer/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9dbdfed0-7c7e-4d33-ac1b-c88cdfc70cf7",
+      "name": "Social Engineering via Collaboration Platforms",
+      "description": "Attackers exploit workplace collaboration platforms like Microsoft Teams, sending fabricated SharePoint and OneDrive sharing notifications to deliver malicious MSIX packages.",
+      "external_references": [
+        {
+          "source_name": "Red Canary",
+          "url": "https://redcanary.com/blog/threat-intelligence/msix-installers/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1f50d57c-6473-469c-8617-61de24e69f9b",
+      "name": "SEO Poisoning for MSIX Malware Delivery",
+      "description": "Threat actors compromise websites and inject malicious code to redirect visitors searching for specific software to fake download pages distributing MSIX malware.",
+      "external_references": [
+        {
+          "source_name": "Sekoia Blog",
+          "url": "https://blog.sekoia.io/exposing-fakebat-loader-distribution-methods-and-adversary-infrastructure/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "name": "Loader-as-a-Service (LaaS) using MSIX",
+      "description": "Commercial malware services offer MSIX-packaged malware as a subscription, including code-signed packages and administration panels for tracking infections.",
+      "external_references": [
+        {
+          "source_name": "Sekoia Blog",
+          "url": "https://blog.sekoia.io/exposing-fakebat-loader-distribution-methods-and-adversary-infrastructure/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--c764a850-5307-497b-b9a2-bd048f8aeb2d",
+      "name": "MyApp.msix",
+      "extensions": {
+        "zip": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e8e7a24d-04cf-44e6-a3b5-2092b26dd4c7",
+      "name": "AppxManifest.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--3575d483-1822-4c80-9ffc-b080a1b03c16",
+      "name": "AppxBlockMap.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--330ded33-a04a-48f0-abe9-77fa35dc78c0",
+      "name": "AppxSignature.p7x"
+    },
+    {
+      "type": "file",
+      "id": "file--16f40c2e-9130-440c-b0f5-865b7bc020dd",
+      "name": "[Content_Types].xml"
+    },
+    {
+      "type": "directory",
+      "id": "directory--fbc85ed7-12e0-4cfb-bc81-8530b95c338a",
+      "path": "Assets/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--f8df8052-2c49-4f70-a23d-cfbf18c7b844",
+      "path": "VFS/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--e7cd0542-c126-4774-8742-862cb247d67e",
+      "path": "VFS/ProgramFilesX64/"
+    },
+    {
+      "type": "file",
+      "id": "file--a8600ea2-54ed-48c9-a31a-5dd3f6f8470c",
+      "name": "Registry.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--0d4b38b5-1896-48e7-9c96-c986a8333286",
+      "name": "AI_STUBS/AiStubX64Elevated.exe",
+      "original_file_name": "popupwrapper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--135bc5ec-ce85-4e5b-9e82-b39903546d68",
+      "name": "AI_STUBS/AiStubX86Elevated.exe",
+      "original_file_name": "popupwrapper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3b412cae-b517-4a60-a95f-32f269e63df5",
+      "name": "AI_STUBS/AiStubX64.exe",
+      "original_file_name": "popupwrapper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--a8954918-c06d-495f-bb7f-a803f26ee56d",
+      "name": "AI_STUBS/AiStubX86.exe",
+      "original_file_name": "popupwrapper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ee439854-920f-4f5f-93fa-00917bc440cd",
+      "name": "powershell.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--215ffbf9-37d5-4d28-94dd-431c6fb8e8b7",
+      "name": "SecurityTest.msix"
+    },
+    {
+      "type": "file",
+      "id": "file--e90b6aff-7f92-4338-bbbb-1b954f63f80b",
+      "name": "TestFlowApp_1.0.0.0_neutral__cb5a5h139q78w.msix"
+    },
+    {
+      "type": "file",
+      "id": "file--50a1b7d1-c5c6-4a29-a3e4-a80ec276fa5d",
+      "name": "Storm-0569 MSIX (BATLOADER)",
+      "hashes": {
+        "SHA-256": "48aa2393ef590bab4ff2fd1e7d95af36e5b6911348d7674347626c9aaafa255e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--705c4068-e21d-437d-8117-078b5348c4f3",
+      "name": "Storm-0569 MSIX (BATLOADER)",
+      "hashes": {
+        "SHA-256": "11b71429869f29122236a44a292fde3f0269cde8eb76a52c89139f79f4b97e63"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--377c95ae-5ef9-4557-9bf3-caf251e76650",
+      "name": "Storm-0569 MSIX (BATLOADER)",
+      "hashes": {
+        "SHA-256": "7e646dfe7b7f330cb21db07b94f611eb39f604fab36e347fb884f797ba462402"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--04640a04-8a3e-4a44-8392-150d5f9098dd",
+      "name": "Storm-0569 MSIX (BATLOADER)",
+      "hashes": {
+        "SHA-256": "ffb45dc14ea908b21e01e87ec18725dff560c093884005c2b71277e2de354866"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4bf30e1a-f650-40ab-9946-11217b5f3485",
+      "name": "Storm-0569 MSIX (BATLOADER)",
+      "hashes": {
+        "SHA-256": "b79633917e51da2a4401473d08719f493d61fd64a1b10fe482c12d984d791ccb"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--40212c93-1575-4365-baa9-935bfd1bbbb3",
+      "name": "Storm-1113 MSIX (EugenLoader)",
+      "hashes": {
+        "SHA-256": "44cac5bf0bab56b0840bd1c7b95f9c7f5078ff417705eeaaf5ea5a2167a81dd5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a94ea2b0-993a-4096-bfa7-d65bdb0e9d00",
+      "name": "Sangria Tempest MSIX (Carbanak/POWERTRASH)",
+      "hashes": {
+        "SHA-256": "2ba527fb8e31cb209df8d1890a63cda9cd4433aa0b841ed8b86fa801aff4ccbd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fdc3d762-7457-4236-aedd-4d653157e1df",
+      "name": "Sangria Tempest MSIX (Carbanak/POWERTRASH)",
+      "hashes": {
+        "SHA-256": "06b4aebbc3cd62e0aadd1852102645f9a00cc7eea492c0939675efba7566a6de"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d22ab9b6-00fc-42bb-b73d-b2e403b554c2",
+      "name": "Storm-1674 MSIX (SectopRAT/DarkGate)",
+      "hashes": {
+        "SHA-256": "2ed5660c7b768b4c2a7899d00773af60cd4396f24a2f7d643ccc1bf74a403970"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9cba4dcf-924a-42ed-88e7-b39d6da298a3",
+      "name": "GoogleMeet.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "e300c44b45b07f3766586e500f4f3596c23ffd80171eaa5334bb4db3e8d027e0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ee783a03-b166-427d-a28e-e86f4390fcab",
+      "name": "SAPConcur.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "4d03c2a47265eab0c87006a4a2965fcf394fbdabb8e86cbe16b36376d04b8143"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e71ef41f-c0ab-4190-88dd-969546603cb2",
+      "name": "Asana.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "1e54b2e6558e2c92df73da65cd90b462dcafa1e6dcc311336b1543c68d3e82bc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6bcd4ee6-4be9-49b9-9894-b5cfae42e144",
+      "name": "WSJ.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "f015da1f2ada32f734b81aa282bea62840cd84afaa353ca52d5e2d0c82e705d1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ee8d1b1d-8412-4314-b4ee-738d98c07fd1",
+      "name": "WSJ.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "de5f6cc6a3eaee870f438a43e1e262283124aa1cfa11ad395a05c4bff026c09f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ae6b71d7-62e3-465a-a9c5-35f276926b54",
+      "name": "CNN.msix (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "1d17937f2141570de62b437ff6bf09b1b58cfdb13ff02ed6592e077e2d368252"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--74fbe415-9280-4b85-881a-b7123515065c",
+      "name": "FIN7 MSIX (NetSupport RAT)",
+      "hashes": {
+        "SHA-256": "001c68b2f71d1fcb9cea1bc42ed0b4c2b6d9fce4b4754d05d6a5a1f28573373a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c78961e5-0a2c-4782-80cc-974a804c7b96",
+      "name": "FakeBat MSIX (ArechClient2/Redline)",
+      "hashes": {
+        "MD5": "09b7d9976824237fc2c5bd461eab7a22"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--057ae125-1376-48a8-90a9-c9ca57e1abbb",
+      "name": "FakeBat MSIX (ArechClient2/Redline)",
+      "hashes": {
+        "MD5": "f5244c0d5c537efb24c9103e866eea26"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "name": "Grammarly MSIX (NetSupport RAT)",
+      "hashes": {
+        "MD5": "6ca002e77ed2c70dd265bea42b89d969"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26dbb045-8449-4037-9436-d547e7552ccd",
+      "relationship_type": "delivers",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "FakeBat loader delivers ArechClient2/Redline malware via malicious MSIX packages."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a27c86a1-dcd2-4c2f-97da-736295ddb1f6",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "BATLOADER is distributed via malvertising campaigns for MSIX malware delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c06bf2a9-ad76-4f88-97af-0c691ca6da0d",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "BATLOADER is distributed via social engineering attacks exploiting collaboration platforms."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45e993fb-ff74-4ce9-bda3-f6b377566686",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "BATLOADER is distributed via SEO poisoning for MSIX malware delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66298e97-6666-4a9d-89d0-df9de2687209",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "BATLOADER is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3a8290f3-d521-4bd0-8ebc-7d38a60cb5fd",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "EugenLoader is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef32a3d3-8748-427f-a9aa-e99e54990684",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "POWERTRASH is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0898743f-c884-4b66-9e17-7e4172d5104f",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "SectopRAT is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--abb52abd-f646-4320-b407-a26a9df57f48",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "NetSupport RAT is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a09ff1b-47cb-4318-a683-1972a3486ea6",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "ArechClient2/Redline is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a16c1d3e-28cb-4474-a5d8-334c7f59d9d9",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "attack-pattern--e9d35a5e-0ed2-4693-96f2-cf991b74a201",
+      "description": "FakeBat is distributed through Loader-as-a-Service operations using MSIX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58f7b232-9de9-4a66-afbc-91c0cd70d9a3",
+      "relationship_type": "uses",
+      "source_ref": "tool--c7295699-6bb7-4e84-8571-840d08234892",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MSIXBuilder is used to create MyApp.msix files for testing and simulation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ded77b44-c7b8-4364-bc68-ec2f8a4cdb5d",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MyApp.msix contains AppxManifest.xml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c53c67a-55e4-40f9-b944-a06698cd6c98",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MyApp.msix contains AppxBlockMap.xml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86ac86a4-29f7-46d3-91f9-e3784b0538da",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MyApp.msix contains AppxSignature.p7x."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad9bf18d-71ab-4cbb-b0b5-509507fba7f3",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MyApp.msix contains [Content_Types].xml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a02cc99-646e-48b4-9791-45bf51d3b40b",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "directory--e7cd0542-c126-4774-8742-862cb247d67e",
+      "description": "MyApp.msix contains Assets/ directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cfe61ab3-1eff-45e5-9d36-095d7e0b6859",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "directory--e7cd0542-c126-4774-8742-862cb247d67e",
+      "description": "MyApp.msix contains VFS/ directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--40cef4ee-6559-4f66-9eba-d217838f249a",
+      "relationship_type": "contains",
+      "source_ref": "directory--e7cd0542-c126-4774-8742-862cb247d67e",
+      "target_ref": "directory--e7cd0542-c126-4774-8742-862cb247d67e",
+      "description": "VFS/ contains ProgramFilesX64/ directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50dcc21a-2fa7-4cb8-911c-66118bd84860",
+      "relationship_type": "contains",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MyApp.msix contains Registry.dat."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bda23c90-93a1-46b6-bd74-cf64563d9fcd",
+      "relationship_type": "drops",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "Advanced Installer MSIX packages may drop AI_STUBS/AiStubX64Elevated.exe (popupwrapper.exe) during execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19862883-f367-4817-85f4-7d35ea46a9f3",
+      "relationship_type": "drops",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "Advanced Installer MSIX packages may drop AI_STUBS/AiStubX86Elevated.exe (popupwrapper.exe) during execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d73ff6de-5f17-4484-96b9-17c8a3fcdd4e",
+      "relationship_type": "drops",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "Advanced Installer MSIX packages may drop AI_STUBS/AiStubX64.exe (popupwrapper.exe) during execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd6ceb64-5e8b-4d41-a622-81e9b7c97e12",
+      "relationship_type": "drops",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "Advanced Installer MSIX packages may drop AI_STUBS/AiStubX86.exe (popupwrapper.exe) during execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c5791e6-f804-482a-84f0-a4819af757f5",
+      "relationship_type": "uses",
+      "source_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "Malicious MSIX packages may execute powershell.exe from WindowsApps directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1da8c789-41f5-4afb-bcae-4e25941013b8",
+      "relationship_type": "uses",
+      "source_ref": "tool--c7295699-6bb7-4e84-8571-840d08234892",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MSIXBuilder is used to create SecurityTest.msix for testing purposes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--236cc1d5-b7f7-466a-b219-5f7b7eebe025",
+      "relationship_type": "uses",
+      "source_ref": "tool--c7295699-6bb7-4e84-8571-840d08234892",
+      "target_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "description": "MSIXBuilder is used to create TestFlowApp_1.0.0.0_neutral__cb5a5h139q78w.msix for testing purposes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82b9001a-c110-4283-ae89-ebe06b1107a5",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Storm-0569 MSIX (BATLOADER) file delivers BATLOADER malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97c57956-6e67-421f-bb00-18e2b6b26614",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Storm-1113 MSIX (EugenLoader) file delivers EugenLoader malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b591d31d-123f-497c-866c-3065224cdfc1",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Sangria Tempest MSIX (Carbanak/POWERTRASH) file delivers POWERTRASH malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2513dc30-9e52-4cf2-82f8-dce0b8c4c525",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Storm-1674 MSIX (SectopRAT/DarkGate) file delivers SectopRAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24c69738-e0bf-46a7-bb0b-fe4244dfd547",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "GoogleMeet.msix (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d5543ae-cdb6-40dd-b9fe-1b0a8656a01a",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "SAPConcur.msix (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63e46546-5dce-4a79-9e6c-2af8d6a947a1",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Asana.msix (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbe8adbf-9f74-40a0-8518-9bdb7ec02a74",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "WSJ.msix (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2fcb986-8457-43e6-9d83-f5cd840fe140",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "CNN.msix (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2df5d1a3-ed01-4d67-a2c9-5d119e41f63b",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "FIN7 MSIX (NetSupport RAT) file delivers NetSupport RAT malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7752d42-cdf7-4093-a4e6-80f3bb16a821",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "FakeBat MSIX (ArechClient2/Redline) file delivers ArechClient2/Redline malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14f060b5-f72c-48db-ab7d-85c65e9ff48b",
+      "relationship_type": "delivers",
+      "source_ref": "file--9d39a495-bebd-4755-9cc7-d9aed48e2fff",
+      "target_ref": "malware--7e3a1c8c-ad53-4569-853b-4d34245beb20",
+      "description": "Grammarly MSIX (NetSupport RAT) file delivers NetSupport RAT malware."
+    }
+  ]
+}

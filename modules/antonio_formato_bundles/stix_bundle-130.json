@@ -1,0 +1,282 @@
+{
+  "type": "bundle",
+  "id": "bundle--3f8ec582-e0c3-43e1-9ee6-922131960d48",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--daf021fd-2964-4c07-818b-02a32a5a52d2",
+      "name": "CVE-2025-55182",
+      "description": "React2Shell is a vulnerability affecting Node.js applications that allow user-supplied JSON data to influence internal JavaScript object structures. Improper validation enables attackers to escalate this into remote command execution via access to process.mainModule.require and child_process.execSync.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182"
+        },
+        {
+          "source_name": "Bitdefender Blog",
+          "url": "https://www.bitdefender.com/en-us/blog/businessinsights/advisory-react2shell-critical-unauthenticated-rce-in-react-cve-2025-55182"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--04a10532-6d19-4562-83aa-3d08511dd2f5",
+      "name": "Malicious IP addresses and URLs for Mirai and Rondo campaigns",
+      "description": "Indicators of compromise for Mirai and Rondo miner campaigns exploiting CVE-2025-55182.",
+      "pattern": "[ipv4-addr:value = '193.34.213.150' OR ipv4-addr:value = '41.231.37.153' OR ipv4-addr:value = '89.144.31.18' OR ipv4-addr:value = '31.56.27.76' OR ipv4-addr:value = '172.237.55.180' OR ipv4-addr:value = '23.228.188.126' OR ipv4-addr:value = '176.117.107.154' OR ipv4-addr:value = '23.132.164.54'] OR [url:value = 'http://193.34.213.150/nuts/x86' OR url:value = 'http://193.34.213.150/nuts/bolts' OR url:value = 'http://89.144.31.18/nuts/x86' OR url:value = 'http://89.144.31.18/nuts/bolts' OR url:value = 'http://31.56.27.76/n2/x86' OR url:value = 'http://172.237.55.180/c' OR url:value = 'http://gfxnick.emerald.usbx.me/bot' OR url:value = 'http://41.231.37.153/rondo.aqu.sh' OR url:value = 'http://23.228.188.126/rondo.aqu.sh' OR url:value = 'http://176.117.107.154/bot' OR url:value = 'http://23.132.164.54/bot' OR url:value = 'https://f003.backblazeb2.com/file/mova12/98201-1-8/bot']",
+      "labels": [
+        "malicious-activity",
+        "botnet",
+        "cryptocurrency-miner"
+      ],
+      "valid_from": "2025-12-09T00:00:00Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "name": "Malicious file hashes for Mirai and Rondo campaigns",
+      "description": "File hashes associated with Mirai and Rondo miner payloads delivered via React2Shell exploitation.",
+      "pattern": "[file:hashes.'MD5' = '622f904bb82c8118da2966a957526a2b' OR file:hashes.'MD5' = 'a51a5c1e7d2bc3f7b2e3489f92a55d46' OR file:hashes.'MD5' = 'aaca45131c5a5a95d384431e415474f7' OR file:hashes.'MD5' = 'ca7f4b8e296fc4ef46ecb07218434e1b' OR file:hashes.'MD5' = 'c50db4734195579e83834b2a84758cea' OR file:hashes.'MD5' = 'e13a61420568eb596224ff8e48ea415a' OR file:hashes.'MD5' = '025f5e04e54497242749ec480310fd7e' OR file:hashes.'MD5' = '3ba4d5e0cf0557f03ee5a97a2de56511' OR file:hashes.'MD5' = 'bf9d7224e709b4ac90a498418af20d3a']",
+      "labels": [
+        "malicious-file",
+        "botnet",
+        "cryptocurrency-miner"
+      ],
+      "valid_from": "2025-12-09T00:00:00Z"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--194bd9dc-19cd-4c30-8c59-9e73e00a6d50",
+      "value": "193.34.213.150"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a9778922-7c8b-43a4-bfcb-6cc482185553",
+      "value": "41.231.37.153"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e6737edf-fd84-434a-92b8-7ae1c6e79719",
+      "value": "89.144.31.18"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--bbd7a524-8c56-4bcb-8996-f43aad7c5ea2",
+      "value": "31.56.27.76"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f5cde0e6-6c4f-4a6f-9c98-119357b2b262",
+      "value": "172.237.55.180"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f60a79f7-1e99-4fa8-a24f-b7b5dad1b356",
+      "value": "23.228.188.126"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0eb3b03c-ce08-4b78-b5c5-b9aff011c888",
+      "value": "176.117.107.154"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6fccc12e-b2ee-4822-aecf-5491a5777e08",
+      "value": "23.132.164.54"
+    },
+    {
+      "type": "url",
+      "id": "url--a3c85f09-032b-44a8-8d2c-fd4b566617b5",
+      "value": "http://193.34.213.150/nuts/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--7c29be59-c901-447e-a2fe-cf83e1dd3838",
+      "value": "http://193.34.213.150/nuts/bolts"
+    },
+    {
+      "type": "url",
+      "id": "url--2eb2be16-090f-4885-92a8-b34b9e447f69",
+      "value": "http://89.144.31.18/nuts/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--56012a9f-8ec3-4353-9715-93b0307447ea",
+      "value": "http://89.144.31.18/nuts/bolts"
+    },
+    {
+      "type": "url",
+      "id": "url--642011cf-59cb-4128-855c-0599ce4d18ee",
+      "value": "http://31.56.27.76/n2/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--93d4aaa8-c02b-474a-917d-f8cb6e22e49a",
+      "value": "http://172.237.55.180/c"
+    },
+    {
+      "type": "url",
+      "id": "url--15ca9f37-f3da-4588-a9ab-a67304f49afa",
+      "value": "http://gfxnick.emerald.usbx.me/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--42206d5c-976e-47e6-b82b-088efdd765ff",
+      "value": "http://41.231.37.153/rondo.aqu.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--0130599f-01aa-4a3c-8e43-463e78ab7780",
+      "value": "http://23.228.188.126/rondo.aqu.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--9438e3e9-5580-495f-a5bf-339f933f1367",
+      "value": "http://176.117.107.154/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--6b7ff0ec-402c-4a71-8d1c-a85dc8aba8c0",
+      "value": "http://23.132.164.54/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--35f0d862-aa49-4498-8844-be3e18ee2e37",
+      "value": "https://f003.backblazeb2.com/file/mova12/98201-1-8/bot"
+    },
+    {
+      "type": "file",
+      "id": "file--f216c2b3-2891-4f5e-9939-4555282629c1",
+      "hashes": {
+        "MD5": "622f904bb82c8118da2966a957526a2b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f4c5cb48-a854-4f13-8e2a-c796e615ab9e",
+      "hashes": {
+        "MD5": "a51a5c1e7d2bc3f7b2e3489f92a55d46"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2cf8de9c-15bc-40fd-b2cb-904698477e32",
+      "hashes": {
+        "MD5": "aaca45131c5a5a95d384431e415474f7"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--21688bc9-efd8-443b-b390-3c5e91b958d4",
+      "hashes": {
+        "MD5": "ca7f4b8e296fc4ef46ecb07218434e1b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8261f264-f947-4daa-bd1b-73e4a6669355",
+      "hashes": {
+        "MD5": "c50db4734195579e83834b2a84758cea"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9455216e-7f0c-4885-90fd-7e1af20acf24",
+      "hashes": {
+        "MD5": "e13a61420568eb596224ff8e48ea415a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6303861e-22d3-47b6-a395-78563083b73d",
+      "hashes": {
+        "MD5": "025f5e04e54497242749ec480310fd7e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e44e4601-8913-4a15-9965-8f89aa8db519",
+      "hashes": {
+        "MD5": "3ba4d5e0cf0557f03ee5a97a2de56511"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--02a9275d-3f9e-4735-85e3-98865be625e2",
+      "hashes": {
+        "MD5": "bf9d7224e709b4ac90a498418af20d3a"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2c2214c-069b-4ec2-9bd7-b05b07eb1ca2",
+      "relationship_type": "exploits",
+      "source_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7",
+      "target_ref": "vulnerability--daf021fd-2964-4c07-818b-02a32a5a52d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab81bf06-95fa-44b9-8d6e-db30925d0433",
+      "relationship_type": "exploits",
+      "source_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7",
+      "target_ref": "vulnerability--daf021fd-2964-4c07-818b-02a32a5a52d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efda4ada-9af0-4ca0-ab75-4b097c89ba3d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1e4eb0b-5df5-4e6a-a84f-f73d242411fd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0085082c-6688-48a5-809f-b650b334287f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34668d12-e210-4bf0-80eb-665b1c6fd7f1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--226094df-8084-4852-9157-0401d6cc33e1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a0d3389-56c8-4e40-87ac-4c5e52ae2dfc",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da94ff5b-b8ce-4a9c-a88c-10c431688223",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7196d581-f9db-41b8-90b7-6058bc7f5ded",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b474c963-50f3-48b4-8821-c7fe506961bc",
+      "target_ref": "malware--4b2cff60-23f3-4a25-bb0b-b60549f294b7"
+    }
+  ]
+}

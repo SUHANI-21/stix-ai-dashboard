@@ -1,0 +1,276 @@
+{
+  "type": "bundle",
+  "id": "bundle--61bed27e-8dc9-4a6a-a5fd-e0bf5bf693fe",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "created": "2026-01-14T10:11:25.353199Z",
+      "modified": "2026-01-14T10:11:25.353199Z",
+      "name": "Datadog Security Labs",
+      "description": "Datadog Security Labs is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T10:11:25.353199Z",
+      "modified": "2026-01-14T10:11:25.353199Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T10:11:25.353199Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e5dfa72a-54ee-3feb-c3e2-4eaa243ad92c",
+      "created": "2026-01-14T10:11:35.436646Z",
+      "modified": "2026-01-14T10:11:35.436646Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "Abuse of Kubernetes ExternalIP Service for Traffic Hijacking",
+      "description": "In this campaign, a hostile actor within a Kubernetes cluster leverages the ability to create service objects with the 'ExternalIP' field. By specifying arbitrary external IP addresses in a service object, the attacker exploits kube-proxy's behavior, which automatically generates iptables rules to redirect traffic destined for those external IPs to pods under the attacker's control. This enables the attacker to hijack network traffic intended for legitimate external websites or services and intercept, manipulate, or exfiltrate the data. The attack is possible because Kubernetes allows any user with permissions to create service objects to specify ExternalIPs, and kube-proxy does not validate the legitimacy of these IPs. This technique is particularly dangerous as it does not require patching of Kubernetes itself and is present in all clusters unless mitigated by admission controllers or policy enforcement.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--36700a58-fe5a-c378-0521-24480d4b6657",
+      "created": "2026-01-14T10:11:35.436804Z",
+      "modified": "2026-01-14T10:11:35.436804Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "Manipulation of kube-proxy iptables Rules for Network Redirection",
+      "description": "The attacker takes advantage of kube-proxy's automatic management of iptables rules to redirect traffic within the cluster. When a service object is created, kube-proxy sets up NAT rules that forward traffic from the service IP (including ExternalIP) to backend pods. By crafting service objects with malicious intent, the attacker can manipulate these iptables chains to reroute traffic from legitimate sources to their own pods, effectively performing a man-in-the-middle attack. This manipulation is possible because the kube-proxy does not differentiate between legitimate and malicious service object creations, and the underlying iptables rules are updated automatically based on the service specification.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "created": "2026-01-14T10:11:40.747420Z",
+      "modified": "2026-01-14T10:11:40.747420Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "Hostile Kubernetes Cluster User",
+      "description": "A hostile actor within a Kubernetes cluster who is able to create service objects. In the context of CVE-2020-8554, this actor can hijack traffic intended for external websites and redirect it to pods under their control.",
+      "threat_actor_types": [
+        "insider",
+        "unknown"
+      ],
+      "goals": [
+        "Hijack traffic within Kubernetes clusters",
+        "Redirect external website traffic to attacker-controlled pods"
+      ],
+      "sophistication": "minimal",
+      "primary_motivation": "unknown"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--ea11065c-99d9-485f-c7fe-03aa1b668c20",
+      "created": "2026-01-14T10:11:50.770408Z",
+      "modified": "2026-01-14T10:11:50.770408Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "kube-proxy",
+      "description": "Attackers abuse the legitimate kube-proxy component to manipulate Kubernetes service networking, specifically by creating malicious service objects that hijack traffic intended for external websites and redirect it to attacker-controlled pods.",
+      "tool_types": [
+        "exploitation",
+        "network-capture"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--83090a9f-3b90-125d-95e9-2dec20df9817",
+      "created": "2026-01-14T10:11:50.770501Z",
+      "modified": "2026-01-14T10:11:50.770501Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "iptables",
+      "description": "The attack leverages iptables, a standard Linux firewall utility, to create and modify NAT rules that redirect network traffic from specified external IPs to attacker-controlled destinations within the cluster.",
+      "tool_types": [
+        "exploitation",
+        "network-capture"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--3e6b2dcd-ce5b-5be4-8733-effafd15d328",
+      "created": "2026-01-14T10:11:50.770560Z",
+      "modified": "2026-01-14T10:11:50.770560Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "IPVS",
+      "description": "IPVS, an alternative to iptables for load balancing in Kubernetes, can also be abused by attackers to reroute traffic via manipulated service objects, enabling traffic hijacking within the cluster.",
+      "tool_types": [
+        "exploitation",
+        "network-capture"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--b63757ae-d2c3-7e6c-5ac5-39e2b69142b7",
+      "created": "2026-01-14T10:11:50.770616Z",
+      "modified": "2026-01-14T10:11:50.770616Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "nftables",
+      "description": "Attackers may exploit nftables, a modern replacement for iptables, to set up malicious network rules that redirect traffic to pods they control, facilitating network interception and manipulation.",
+      "tool_types": [
+        "exploitation",
+        "network-capture"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6ac2842d-4a81-7d73-42e8-ac02f54cecaa",
+      "created": "2026-01-14T10:11:50.770928Z",
+      "modified": "2026-01-14T10:11:50.770928Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "attack-pattern--e5dfa72a-54ee-3feb-c3e2-4eaa243ad92c",
+      "description": "Hostile Kubernetes Cluster User employs 'Abuse of Kubernetes ExternalIP Service for Traffic Hijacking' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac78a814-5234-a42f-2bfc-883264cbbfd8",
+      "created": "2026-01-14T10:11:50.770928Z",
+      "modified": "2026-01-14T10:11:50.770928Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "attack-pattern--36700a58-fe5a-c378-0521-24480d4b6657",
+      "description": "Hostile Kubernetes Cluster User employs 'Manipulation of kube-proxy iptables Rules for Network Redirection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b1b2e444-9e0e-758f-8e86-d15ea397aca9",
+      "created": "2026-01-14T10:11:50.771012Z",
+      "modified": "2026-01-14T10:11:50.771012Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "tool--ea11065c-99d9-485f-c7fe-03aa1b668c20",
+      "description": "Hostile Kubernetes Cluster User uses kube-proxy tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3b3e8fdd-0e56-c622-3301-2860fad9c37e",
+      "created": "2026-01-14T10:11:50.771012Z",
+      "modified": "2026-01-14T10:11:50.771012Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "tool--83090a9f-3b90-125d-95e9-2dec20df9817",
+      "description": "Hostile Kubernetes Cluster User uses iptables tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--48af5cd1-2f96-4be8-f30f-8bb54e223a7b",
+      "created": "2026-01-14T10:11:50.771012Z",
+      "modified": "2026-01-14T10:11:50.771012Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "tool--3e6b2dcd-ce5b-5be4-8733-effafd15d328",
+      "description": "Hostile Kubernetes Cluster User uses IPVS tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--64e8e70c-386f-9025-e359-939514509d58",
+      "created": "2026-01-14T10:11:50.771012Z",
+      "modified": "2026-01-14T10:11:50.771012Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+      "target_ref": "tool--b63757ae-d2c3-7e6c-5ac5-39e2b69142b7",
+      "description": "Hostile Kubernetes Cluster User uses nftables tool in their operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--42c8f64d-84e9-8d8f-d789-f05ccca38c2d",
+      "created": "2026-01-14T10:11:50.771157Z",
+      "modified": "2026-01-14T10:11:50.771157Z",
+      "created_by_ref": "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+      "name": "Unpatchable Vulnerabilities of Kubernetes: CVE-2020-8554 | Datadog Security Labs",
+      "description": "This report contains technical analysis and indicators from: https://securitylabs.datadoghq.com/articles/unpatchable-kubernetes-vulnerabilities-cve-2020-8554/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T10:11:50.771157Z",
+      "object_refs": [
+        "identity--a52a53ac-f21e-d92a-dbc5-d60d84b9edee",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--e5dfa72a-54ee-3feb-c3e2-4eaa243ad92c",
+        "attack-pattern--36700a58-fe5a-c378-0521-24480d4b6657",
+        "threat-actor--37229d79-a4e8-b9af-4f22-7c94345b312f",
+        "tool--ea11065c-99d9-485f-c7fe-03aa1b668c20",
+        "tool--83090a9f-3b90-125d-95e9-2dec20df9817",
+        "tool--3e6b2dcd-ce5b-5be4-8733-effafd15d328",
+        "tool--b63757ae-d2c3-7e6c-5ac5-39e2b69142b7",
+        "relationship--6ac2842d-4a81-7d73-42e8-ac02f54cecaa",
+        "relationship--ac78a814-5234-a42f-2bfc-883264cbbfd8",
+        "relationship--b1b2e444-9e0e-758f-8e86-d15ea397aca9",
+        "relationship--3b3e8fdd-0e56-c622-3301-2860fad9c37e",
+        "relationship--48af5cd1-2f96-4be8-f30f-8bb54e223a7b",
+        "relationship--64e8e70c-386f-9025-e359-939514509d58"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

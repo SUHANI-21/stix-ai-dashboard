@@ -1,0 +1,522 @@
+{
+  "type": "bundle",
+  "id": "bundle--d46663b0-3873-4712-b6f3-c3fe6927c784",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f1d40538-be37-45ca-ab66-41eefecfb3bb",
+      "name": "Windows Management Instrumentation",
+      "description": "ShellClient RAT performs fingerprinting via Windows Management Instrumentation (WMI), gathering hardware details, BIOS data, MAC addresses, installed antivirus products, and networking information.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1047",
+          "url": "https://attack.mitre.org/techniques/T1047/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--80eaec43-aa30-44bf-bc6a-e36e3a611ebd",
+      "name": "System Services: Service Execution",
+      "description": "MalKamak uses PAExec, a redistributable variant of PsExec, to launch CMD shells with SYSTEM privileges, manage services, exfiltrate Active Directory data, verify connectivity, and collect host details.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1569.002",
+          "url": "https://attack.mitre.org/techniques/T1569/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c3c8bbc0-5c3b-4962-99d2-ed23d142de02",
+      "name": "Create or Modify System Process: Windows Service",
+      "description": "ShellClient RAT installs itself as a Windows Service named nhdService ('Network Hosts Detection Service') using InstallUtil.exe, set to start automatically and run as LocalSystem.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1543.003",
+          "url": "https://attack.mitre.org/techniques/T1543/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--df2f8949-80ee-4145-8577-04d4b6d9ee90",
+      "name": "Obfuscated Files or Information: Encrypted/Encoded File",
+      "description": "ShellClient stores most strings, including configuration data, as raw bytes and converts them to Unicode or ASCII only at runtime to evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.013",
+          "url": "https://attack.mitre.org/techniques/T1027/013/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--34be3d59-aac6-4e9c-836f-e0f4301839e9",
+      "name": "Masquerading: Match Legitimate Resource Name or Location",
+      "description": "ShellClient RAT process runs as svchost.exe, with the binary's internal name set to RuntimeBroker.exe to mimic legitimate Windows processes and evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.005",
+          "url": "https://attack.mitre.org/techniques/T1036/005/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ad193cd6-7689-4113-a174-1b01389f3aa9",
+      "name": "OS Credential Dumping: LSASS Memory",
+      "description": "MalKamak deployed and executed lsa.exe to perform credential dumping by extracting the memory of lsass.exe and saving it to debug.bin, possibly a variant of SafetyKatz.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1003.001",
+          "url": "https://attack.mitre.org/techniques/T1003/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f53180c3-ed2a-4c89-86b9-8a5c930f278f",
+      "name": "Data Staged: Local Data Staging",
+      "description": "MalKamak attackers used WinRAR (rar.exe) to compress and stage sensitive files for exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1074.001",
+          "url": "https://attack.mitre.org/techniques/T1074/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390",
+      "name": "Web Service: Bidirectional Communication",
+      "description": "ShellClient RAT communicates with its command and control infrastructure using the Dropbox cloud platform and official Dropbox API, sending encrypted traffic to legitimate Dropbox domains.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1102.002",
+          "url": "https://attack.mitre.org/techniques/T1102/002/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--adc9154e-c6cb-48f9-b9a4-8468b4f206cb",
+      "name": "ShellClient.exe",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      },
+      "description": "Modular RAT used by MalKamak, packed with Costura/zlib, stores strings as raw bytes, and supports AES encryption, fingerprinting, file/registry/process/network operations.",
+      "labels": [
+        "malware",
+        "remote-access-trojan",
+        "packed",
+        "modular"
+      ],
+      "mime_type": "application/x-dosexec"
+    },
+    {
+      "type": "file",
+      "id": "file--912dfd63-1a81-4ed1-ac8a-41f9824ef77c",
+      "name": "ExtensionLib.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "description": "Supporting DLL for ShellClient RAT, contains AES encryption routines.",
+      "labels": [
+        "malware",
+        "library",
+        "encryption"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5441b47c-55ad-4a50-9185-fd8fe525a872",
+      "name": "ClientCore.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "description": "Supporting DLL for ShellClient RAT, provides fingerprinting, file, registry, process, and network operations.",
+      "labels": [
+        "malware",
+        "library"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5064585d-ea3f-4ea4-b68a-95716f7360db",
+      "name": "nhdService",
+      "description": "Windows Service installed by ShellClient RAT (Network Hosts Detection Service), set to start automatically and run as LocalSystem.",
+      "labels": [
+        "service",
+        "persistence",
+        "malware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--e414fed2-7deb-4c21-bc79-0223ed5dc19d",
+      "name": "svchost.exe",
+      "description": "ShellClient RAT masquerades as svchost.exe process.",
+      "labels": [
+        "masquerading",
+        "malware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--f7be4e97-1b4d-4e28-9ab7-25e1e4a9ba09",
+      "name": "RuntimeBroker.exe",
+      "description": "Internal binary name used by ShellClient RAT to mimic legitimate Windows process.",
+      "labels": [
+        "masquerading",
+        "malware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--f88baf82-e582-4ae4-a1ad-740b00c32a17",
+      "name": "lsa.exe",
+      "description": "Credential dumping tool used by MalKamak to extract LSASS memory.",
+      "labels": [
+        "credential-access",
+        "malware"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--bcb97c75-c352-47f4-a2e5-c20a25e13f44",
+      "name": "debug.bin",
+      "description": "Output file containing dumped LSASS memory, possibly a variant of SafetyKatz output.",
+      "labels": [
+        "credential-access",
+        "memory-dump"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5c2718a2-3a42-406a-bba1-736b24992afa",
+      "name": "rar.exe",
+      "description": "WinRAR executable used by attackers to compress and stage data for exfiltration.",
+      "labels": [
+        "collection",
+        "data-staging",
+        "compression"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--527f5773-ce3c-4370-a211-2b9481d80a78",
+      "name": "csvde.exe",
+      "description": "Used to export Active Directory data for exfiltration.",
+      "labels": [
+        "collection",
+        "active-directory",
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8",
+      "name": "PAExec.exe",
+      "description": "Redistributable variant of PsExec used for remote execution and system service management.",
+      "labels": [
+        "execution",
+        "remote-access",
+        "service-management"
+      ]
+    },
+    {
+      "type": "directory",
+      "id": "directory--a1669892-4fbe-4e77-a9cb-3eaf8418dc64",
+      "path": "/AS",
+      "description": "Dropbox folder used to store uploaded information from infected machines.",
+      "labels": [
+        "dropbox",
+        "c2",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "directory",
+      "id": "directory--75b695dd-1078-49bd-8cb2-1331df952d03",
+      "path": "/CS",
+      "description": "Dropbox folder containing command files for ShellClient RAT to fetch, parse, and delete before execution.",
+      "labels": [
+        "dropbox",
+        "c2",
+        "command-repository"
+      ]
+    },
+    {
+      "type": "directory",
+      "id": "directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc",
+      "path": "/RS",
+      "description": "Dropbox folder storing outputs/results generated by victim machines after command execution.",
+      "labels": [
+        "dropbox",
+        "c2",
+        "results"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1f497654-fe38-44f7-a6ff-8a50fdadaf77",
+      "value": "api.dropboxdapi.com",
+      "description": "Legitimate Dropbox domain abused for C2 communication.",
+      "labels": [
+        "command-and-control",
+        "dropbox",
+        "cloud-service"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5677b169-5719-4f99-b1cf-4c5e5cadd8f3",
+      "value": "content.dropboxapi.com",
+      "description": "Legitimate Dropbox domain abused for C2 communication.",
+      "labels": [
+        "command-and-control",
+        "dropbox",
+        "cloud-service"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--211605bf-80ee-443b-9a9e-a1a3a054d170",
+      "value": "ipinfo.io",
+      "description": "Used by ShellClient RAT to query public IP address.",
+      "labels": [
+        "reconnaissance",
+        "networking"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4ed903c5-0f12-4451-8143-0f6ee6c5ae20",
+      "value": "google.com",
+      "description": "Used to verify external connectivity by pinging.",
+      "labels": [
+        "reconnaissance",
+        "networking"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36e1a3e9-83cd-4436-9572-47d0bce2c61e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ca6d5938-164a-482a-9a5b-d96be4ca143e",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1caf089e-0440-4d28-b097-08925069c9f8",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f87e16e-c9e4-4ec6-91e5-16171f940007",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a2585b9-bd3b-49ba-afa4-755ba97be7e0",
+      "relationship_type": "installs",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71d7c007-ab04-4230-ab5a-df8ab138a94d",
+      "relationship_type": "masquerades-as",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--549774dd-3a91-4524-8ce0-bfe4e2737395",
+      "relationship_type": "masquerades-as",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--acda602d-1ef5-48d8-bcd2-6024a4f6f375",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14a26c7f-a879-47c9-9ea2-9d2626e41e6d",
+      "relationship_type": "creates",
+      "source_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60a23ece-aa47-4e6d-bdb0-52de787047f7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--374d80a0-6a2f-44f7-919a-5e14bdd2e00c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14205906-2fac-4e7c-8dff-b7cdfb3262ce",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--99adf6f4-acd7-4eab-bd16-0005d5913911",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--7bde16ab-ef4e-43d5-b3aa-e950cb34ab38",
+      "target_ref": "file--a8e8e14a-2350-4780-9c39-bf3a7aaf4be8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c67840c-269f-4ff5-828e-72993d37c83b",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8241a243-60d0-4fa8-b1f6-564564628c86",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--281f2142-8af8-4ea9-9d6d-dd05c76078ff",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a94594f-db1c-4b83-a961-0a9c5cd6d5c6",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b85453e3-2bff-4b4a-821c-76b118ee74df",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab5ebd26-24a7-431d-a9f2-043335b5a09a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a84ecb92-73a8-4af2-b3a8-5d70486653cf",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45e3cab7-c483-4e5c-9041-9345995a543a",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae5fea2f-3fba-47d5-becc-32766f5460df",
+      "relationship_type": "uses",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "attack-pattern--4ffd4a69-daaa-464b-96bf-de1e470ef390"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3759ab4b-4afa-45ce-87ea-96fb2de7af00",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "domain-name--4ed903c5-0f12-4451-8143-0f6ee6c5ae20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--298f7352-dc8a-47b1-aae4-282477bb85a5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "domain-name--4ed903c5-0f12-4451-8143-0f6ee6c5ae20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1fbc3f9-2a1c-45d0-884d-a42b5f1acdb9",
+      "relationship_type": "queries",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "domain-name--4ed903c5-0f12-4451-8143-0f6ee6c5ae20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--601e2b41-68c4-4b80-9ee8-ea2fbdce2bee",
+      "relationship_type": "queries",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "domain-name--4ed903c5-0f12-4451-8143-0f6ee6c5ae20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b5cd491-9d09-4d60-b248-5eb81a166b15",
+      "relationship_type": "stores",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f23a1db-01cf-4af3-9a80-4b9c328f01d3",
+      "relationship_type": "stores",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f81b6105-b31f-4ef1-8c05-f9a76c2f9141",
+      "relationship_type": "stores",
+      "source_ref": "malware--5145df9f-775c-4c72-8cc9-9b3467489f69",
+      "target_ref": "directory--21b4ec1a-22ef-4a9c-99b8-2c99a90c39fc"
+    }
+  ]
+}

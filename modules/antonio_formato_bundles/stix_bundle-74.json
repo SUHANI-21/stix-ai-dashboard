@@ -1,0 +1,924 @@
+{
+  "type": "bundle",
+  "id": "bundle--b02088cd-a797-46de-93e4-8d4ac6ab4c73",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "name": "Webrat",
+      "description": "Webrat is a backdoor malware family that enables attackers to control infected systems, steal data from cryptocurrency wallets, Telegram, Discord, and Steam accounts, and perform spyware functions such as screen recording, webcam and microphone surveillance, and keylogging. It is distributed via GitHub repositories disguised as exploits, game cheats, and cracked software.",
+      "malware_types": [
+        "backdoor",
+        "spyware",
+        "trojan"
+      ],
+      "is_family": true,
+      "aliases": [],
+      "first_seen": "2025-09",
+      "last_seen": "2025-10",
+      "operating_system_refs": [
+        "windows"
+      ],
+      "external_references": [
+        {
+          "source_name": "securelist",
+          "url": "https://securelist.com/webrat-distributed-via-github/118555/"
+        },
+        {
+          "source_name": "cybersecurefox",
+          "url": "https://cybersecurefox.com/en/webrat-malware-gaming-platforms-threat-analysis/"
+        }
+      ],
+      "labels": [
+        "malware",
+        "backdoor",
+        "spyware",
+        "trojan"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--012af89c-fd06-44d1-884d-2f1b3ecd28d6",
+      "name": "Privilege Escalation via rasmanesc.exe",
+      "description": "The malicious file rasmanesc.exe escalates its privileges to administrator level on the victim's system.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1134.002",
+          "url": "https://attack.mitre.org/techniques/T1134/002/"
+        }
+      ],
+      "labels": [
+        "privilege escalation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7f577127-0a39-4af1-9f37-a20213e3702c",
+      "name": "Disable Windows Defender",
+      "description": "rasmanesc.exe disables Windows Defender to avoid detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1562.001",
+          "url": "https://attack.mitre.org/techniques/T1562/001/"
+        }
+      ],
+      "labels": [
+        "defense evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--06388461-7f97-4082-bd0b-8041f30d3bb7",
+      "name": "Fetch and Execute Malware from Hardcoded URL",
+      "description": "rasmanesc.exe fetches a sample of the Webrat malware family from a hardcoded URL and executes it.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1608.001",
+          "url": "https://attack.mitre.org/techniques/T1608/001/"
+        }
+      ],
+      "labels": [
+        "execution",
+        "command and control"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a0df8c01-a5c7-4642-9140-cb4bb193a683",
+      "name": "Malicious MD5 hash: 61b1fc6ab327e6d3ff5fd3e82b430315",
+      "description": "MD5 hash of the primary malicious file rasmanesc.exe used in the Webrat campaign.",
+      "pattern": "[file:hashes.MD5 = '61b1fc6ab327e6d3ff5fd3e82b430315']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "md5"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--89f8c3c2-f163-41ae-9319-aa0730f097fe",
+      "name": "Malicious MD5 hash: 28a741e9fcd57bd607255d3a4690c82f",
+      "description": "MD5 hash associated with Webrat campaign.",
+      "pattern": "[file:hashes.MD5 = '28a741e9fcd57bd607255d3a4690c82f']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "md5"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--3d3e2e3a-4281-4223-acce-52a20ce550bb",
+      "name": "Malicious MD5 hash: a13c3d863e8e2bd7596bac5d41581f6a",
+      "description": "MD5 hash associated with Webrat campaign.",
+      "pattern": "[file:hashes.MD5 = 'a13c3d863e8e2bd7596bac5d41581f6a']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "md5"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ebfb1097-dc93-41b9-975f-a3b52b3c45b0",
+      "name": "Webrat C2: ezc5510min.temp.swtest.ru",
+      "description": "Command and control server used by Webrat malware.",
+      "pattern": "[url:value = 'http://ezc5510min.temp.swtest.ru']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "c2",
+        "malicious-url"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ef58ec62-6f3b-40ca-842e-098d9b57f500",
+      "name": "Webrat C2: shopsleta.ru",
+      "description": "Command and control server used by Webrat malware.",
+      "pattern": "[url:value = 'http://shopsleta.ru']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "c2",
+        "malicious-url"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--924bbaf2-01c6-4e24-b122-5fee73f5293f",
+      "name": "Malicious GitHub repository: RedFoxNxploits/CVE-2025-10294-Poc",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/RedFoxNxploits/CVE-2025-10294-Poc']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b119f050-cce6-4a18-8ef1-bbcfbfd47dd2",
+      "name": "Malicious GitHub repository: FixingPhantom/CVE-2025-10294",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/FixingPhantom/CVE-2025-10294']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1b32fd00-fce4-404f-9739-88001dda0de0",
+      "name": "Malicious GitHub repository: h4xnz/CVE-2025-10294-POC",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/h4xnz/CVE-2025-10294-POC']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--08786ab3-1387-438c-8715-97b350963548",
+      "name": "Malicious GitHub repository: usjnx72726w/CVE-2025-59295/tree/main",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/usjnx72726w/CVE-2025-59295/tree/main']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--2384b097-db6d-48e0-91b6-5acb6c083929",
+      "name": "Malicious GitHub repository: stalker110119/CVE-2025-59230/tree/main",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/stalker110119/CVE-2025-59230/tree/main']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--8a96a232-47e6-47fd-bde6-f8e5744eefc2",
+      "name": "Malicious GitHub repository: moegameka/CVE-2025-59230",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/moegameka/CVE-2025-59230']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--f8bf6694-40d0-4814-a706-0db3c62cceff",
+      "name": "Malicious GitHub repository: DebugFrag/CVE-2025-12596-Exploit",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/DebugFrag/CVE-2025-12596-Exploit']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--0947a7b8-34b3-4e7d-99cf-bffc29069c26",
+      "name": "Malicious GitHub repository: themaxlpalfaboy/CVE-2025-54897-LAB",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/themaxlpalfaboy/CVE-2025-54897-LAB']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--acd20c1b-7e91-4faf-965f-7bfed0e5f18d",
+      "name": "Malicious GitHub repository: DExplo1ted/CVE-2025-54106-POC",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/DExplo1ted/CVE-2025-54106-POC']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--7e87faea-7a90-43da-8eef-e89a93fbff7c",
+      "name": "Malicious GitHub repository: h4xnz/CVE-2025-55234-POC",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/h4xnz/CVE-2025-55234-POC']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--2bfc290e-c701-4d12-94f4-f0747a0a239c",
+      "name": "Malicious GitHub repository: Hazelooks/CVE-2025-11499-Exploit",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/Hazelooks/CVE-2025-11499-Exploit']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--78e26392-7b36-40dc-acc2-d9d136a8301c",
+      "name": "Malicious GitHub repository: usjnx72726w/CVE-2025-11499-LAB",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/usjnx72726w/CVE-2025-11499-LAB']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--4bead227-6fcd-4210-881f-293ad53976ab",
+      "name": "Malicious GitHub repository: modhopmarrow1973/CVE-2025-11833-LAB",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/modhopmarrow1973/CVE-2025-11833-LAB']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--1dc69291-627c-45b0-8611-9eb1660c7276",
+      "name": "Malicious GitHub repository: rootreapers/CVE-2025-11499",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/rootreapers/CVE-2025-11499']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "name": "Malicious GitHub repository: lagerhaker539/CVE-2025-12595-POC",
+      "description": "GitHub repository used to distribute Webrat malware disguised as exploit.",
+      "pattern": "[url:value = 'https://github.com/lagerhaker539/CVE-2025-12595-POC']",
+      "valid_from": "2025-09-01T00:00:00Z",
+      "labels": [
+        "malicious-repository",
+        "github"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--c61a4b57-efa9-4d92-aa32-7648a9784eb9",
+      "name": "CVE-2025-59295",
+      "description": "Vulnerability with CVSSv3 score 8.8, used as lure in Webrat campaign.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-59295"
+        }
+      ],
+      "labels": [
+        "vulnerability"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--dca4b919-281f-4a2b-98c6-0a14a1803f42",
+      "name": "CVE-2025-10294",
+      "description": "Vulnerability with CVSSv3 score 9.8, used as lure in Webrat campaign.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-10294"
+        }
+      ],
+      "labels": [
+        "vulnerability"
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--887986dd-05a1-43bd-b5c3-481cff11a2d2",
+      "name": "CVE-2025-59230",
+      "description": "Vulnerability with CVSSv3 score 7.8, used as lure in Webrat campaign.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-59230"
+        }
+      ],
+      "labels": [
+        "vulnerability"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--8e9da57e-95bd-47fd-99d5-ad79e4cfa77f",
+      "name": "rasmanesc.exe",
+      "hashes": {
+        "MD5": "61b1fc6ab327e6d3ff5fd3e82b430315"
+      },
+      "description": "Primary malicious file, downloads and executes Webrat"
+    },
+    {
+      "type": "file",
+      "id": "file--2b441560-0161-471d-af28-7b49557fe2b1",
+      "hashes": {
+        "MD5": "28a741e9fcd57bd607255d3a4690c82f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--460397c1-47e7-4e46-90aa-ed95b6ae1df7",
+      "hashes": {
+        "MD5": "a13c3d863e8e2bd7596bac5d41581f6a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--70944be1-8861-4f28-915a-b08201412923",
+      "hashes": {
+        "MD5": "61b1fc6ab327e6d3ff5fd3e82b430315"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--65bf8c54-20bd-4976-87b0-96215fb5736d",
+      "value": "https://github.com/RedFoxNxploits/CVE-2025-10294-Poc"
+    },
+    {
+      "type": "url",
+      "id": "url--7aeebf29-b73c-49e8-8f90-f3b166eef543",
+      "value": "https://github.com/FixingPhantom/CVE-2025-10294"
+    },
+    {
+      "type": "url",
+      "id": "url--802e73f6-c824-4ee8-98cd-a418ea888104",
+      "value": "https://github.com/h4xnz/CVE-2025-10294-POC"
+    },
+    {
+      "type": "url",
+      "id": "url--6bc8bdaf-3c13-4630-b25c-92a02b45687a",
+      "value": "https://github.com/usjnx72726w/CVE-2025-59295/tree/main"
+    },
+    {
+      "type": "url",
+      "id": "url--67c5c077-0657-4f60-b589-cce67b1d3c14",
+      "value": "https://github.com/stalker110119/CVE-2025-59230/tree/main"
+    },
+    {
+      "type": "url",
+      "id": "url--fed2867c-86e2-4e87-8b92-99a57e593903",
+      "value": "https://github.com/moegameka/CVE-2025-59230"
+    },
+    {
+      "type": "url",
+      "id": "url--b6be0857-c02c-4fa1-9e80-f55cebd64129",
+      "value": "https://github.com/DebugFrag/CVE-2025-12596-Exploit"
+    },
+    {
+      "type": "url",
+      "id": "url--59268222-a8d5-4758-9805-c90b4e0fc508",
+      "value": "https://github.com/themaxlpalfaboy/CVE-2025-54897-LAB"
+    },
+    {
+      "type": "url",
+      "id": "url--147a709f-ab2c-4de5-93dd-3dacf8e5005c",
+      "value": "https://github.com/DExplo1ted/CVE-2025-54106-POC"
+    },
+    {
+      "type": "url",
+      "id": "url--ac26671f-746f-40d2-81b3-86844320e7d1",
+      "value": "https://github.com/h4xnz/CVE-2025-55234-POC"
+    },
+    {
+      "type": "url",
+      "id": "url--e710831e-eabc-4518-9c0b-845ebe3cf5f0",
+      "value": "https://github.com/Hazelooks/CVE-2025-11499-Exploit"
+    },
+    {
+      "type": "url",
+      "id": "url--1eb0b928-b06a-47c0-be96-71858ee4e593",
+      "value": "https://github.com/usjnx72726w/CVE-2025-11499-LAB"
+    },
+    {
+      "type": "url",
+      "id": "url--32295d46-1f39-4f78-8a49-a4730172a40e",
+      "value": "https://github.com/modhopmarrow1973/CVE-2025-11833-LAB"
+    },
+    {
+      "type": "url",
+      "id": "url--668a9402-8b82-4e01-88bf-9599191931aa",
+      "value": "https://github.com/rootreapers/CVE-2025-11499"
+    },
+    {
+      "type": "url",
+      "id": "url--72b4c08f-fcca-4532-8cc6-9222c3d3a0e6",
+      "value": "https://github.com/lagerhaker539/CVE-2025-12595-POC"
+    },
+    {
+      "type": "url",
+      "id": "url--aacc53ee-7a3f-4668-b2f8-46fae0f4d99c",
+      "value": "http://ezc5510min.temp.swtest.ru"
+    },
+    {
+      "type": "url",
+      "id": "url--2371b289-3b21-4e0b-b560-82c325570e6c",
+      "value": "http://shopsleta.ru"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d9acccc-6597-4112-99c9-5e13b69d4293",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c2f1b20-2e47-405d-86eb-591509b98654",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d7e74a9-3863-446e-a4fc-01318e3a0de9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--765c15dd-2589-44b3-ae99-eec055438516",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6a7ed3e-4fa1-431c-8411-cb3881663b20",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e25d567-89fe-4811-b8d6-59b6641c0d35",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "file--70944be1-8861-4f28-915a-b08201412923"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19257599-902a-4efa-badd-a0ee79535b98",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b17705e1-e195-4186-bf55-2ff58ed2dab9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ca51673c-ae93-4154-beb0-910983e79517",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba7e2ff7-5f19-4a96-b96c-2a5489292ffe",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d62a737b-daf1-4872-bfaa-23df7ce3bf4e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba6f99d9-8d85-40ab-848e-f44daaef58f7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c3f18d5-d16c-4f87-84ad-80d0989a5163",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--367bccfc-4657-4b56-b4ae-d083faa35f79",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--270cabe8-41a6-4e86-bcb4-5bf8982b5b3d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb922f62-866a-48f7-b270-4a8ac0058936",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--865397b4-94cf-457c-adbe-bebac12eabf9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9a87338-f6bc-4c3f-9c13-1a50566a268e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee5c57d1-84aa-4844-89c7-ca344df74a91",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3132f65a-eac7-47cb-a52b-0656fb479cf7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--611d29a3-6a7f-431b-a0d4-f949d2ead094",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f44e7efc-f4a6-426b-b341-7ac499380fc3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--887a005d-bc02-4e22-bbea-4c8171e828f1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3317acd1-249b-4e01-b626-802d5185bf74",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53646b68-fca4-4171-8f82-709437d4d38a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--212b41af-cb4d-4fef-9ac6-3f6bf8ada625",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3618cbc5-b2b5-4982-a9cd-f4adc859c8e2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9df45143-c8f2-49b7-a3b2-7b3eaf02bb22",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ddfbab2-3353-4697-88e9-7095e7f3f1f2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f8047f5-460b-44a1-8e9e-80c6f9ce4ee5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e020315d-c406-461e-8896-04a2c9fbfbc1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a296d31-b9a3-4cb2-8558-a50e48b885d5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a73f3a6-9130-43c5-b060-e2bea795807b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e597f59f-ba35-4443-b422-13ea5fdeb72e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34632b92-0231-4e8b-8ced-19a4abeb41aa",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6ef38b8-8c25-4c46-bf9d-343ea2c99002",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5e80f22-1aeb-4e4c-bc37-993442f8154e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--29d760fe-c710-4646-8820-726da34d79c1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5aaf6c4-6f8a-40f3-8e08-3d43cef55e70",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a3e4241-29ed-4036-a681-0fbe2283c40a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d930089-6e27-4f5f-9a75-4350c9e46766",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--939d2123-2668-4698-a52c-712ec4ca71d7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--925ec25f-65f1-4ce5-aed3-dddb8c3c66a9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6503e4c-9154-4611-91a3-3eb96e514865",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2857a2f4-212f-47c2-a6b0-709fd4802bf3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--528552e3-2d63-44f0-a341-61c4532b236a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7af803a-aae0-4bcd-9e7d-a717d5d6c719",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--421d9a67-d5ee-42fa-bc3e-dfecb5b859f0",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96aa5ce3-ec42-48c0-9a34-d6cb44312bb2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb9e7de1-8f88-42bd-90a1-7d525ea57601",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2dfb7140-aa01-46df-bd1d-ffb2d41a5657",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3059dd73-3e5b-4698-bea6-84dd56fe3761",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dba11ec4-b20d-4604-ae08-7580c820cacb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c462edf0-2b3d-486e-90ef-da597d3989b5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a0ead97e-56c6-4268-a043-6529e0f82248",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16a280c5-6f13-409b-a1a0-d50de02e2a90",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ff68710e-045f-4ae4-a1bd-b9576e4d88c2",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fedeca3-d5f8-42d5-ac0f-039749ace51e",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "target_ref": "attack-pattern--06388461-7f97-4082-bd0b-8041f30d3bb7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b6ba51c-1de9-44fa-b1a4-c07c23cfb9b3",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "target_ref": "attack-pattern--06388461-7f97-4082-bd0b-8041f30d3bb7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--404f554e-432f-468b-9cb1-d719781c8915",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "target_ref": "attack-pattern--06388461-7f97-4082-bd0b-8041f30d3bb7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25cbd9ff-532f-40a9-8a7d-1ba49972556a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b86a1741-52e5-43c8-9e1a-f752de00d7f1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35",
+      "target_ref": "url--2371b289-3b21-4e0b-b560-82c325570e6c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5752d01c-3991-46df-bd22-0b7436e98d26",
+      "relationship_type": "drops",
+      "source_ref": "file--70944be1-8861-4f28-915a-b08201412923",
+      "target_ref": "malware--3d4a6bd3-e40f-4107-b19c-48c7d5fb9e35"
+    }
+  ]
+}

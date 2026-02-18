@@ -1,0 +1,212 @@
+{
+  "type": "bundle",
+  "id": "bundle--6052ae8b-018b-410b-aaed-f0beea14dad6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--a487ac03-7a33-4391-8985-8550adcf5012",
+      "hashes": {
+        "SHA-256": "0878f3c59755ffaf0b639c1b2f6e8fed552724a50eb2878c3ba21cf8eb4e2ab6"
+      },
+      "name": "icon-theme-materiall.5.29.1.zip",
+      "external_references": [
+        {
+          "source_name": "MalwareBazaar",
+          "url": "https://bazaar.abuse.ch/sample/0878f3c59755ffaf0b639c1b2f6e8fed552724a50eb2878c3ba21cf8eb4e2ab6/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4bfcc393-a4ae-401c-9f29-ab955b660527",
+      "hashes": {
+        "SHA-256": "6ebeb188f3cc3b647c4460c0b8e41b75d057747c662f4cd7912d77deaccfd2f2"
+      },
+      "name": "os.node (PE)",
+      "external_references": [
+        {
+          "source_name": "MalwareBazaar",
+          "url": "https://bazaar.abuse.ch/sample/6ebeb188f3cc3b647c4460c0b8e41b75d057747c662f4cd7912d77deaccfd2f2/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--be11356d-96ad-41b4-a5af-58524b525e20",
+      "hashes": {
+        "SHA-256": "fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda"
+      },
+      "name": "darwin.node (Mach-O)",
+      "external_references": [
+        {
+          "source_name": "MalwareBazaar",
+          "url": "https://bazaar.abuse.ch/sample/fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--09fec908-0dc2-4b46-997c-d20b09dbf265",
+      "hashes": {
+        "SHA-256": "0878f3c59755ffaf0b639c1b2f6e8fed552724a50eb2878c3ba21cf8eb4e2ab6"
+      },
+      "name": "icon-theme-materiall.5.29.1.zip",
+      "extensions": {
+        "zip": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f5e95101-3e63-41bc-8a2d-461d5ff66d94",
+      "hashes": {
+        "SHA-256": "6ebeb188f3cc3b647c4460c0b8e41b75d057747c662f4cd7912d77deaccfd2f2"
+      },
+      "name": "os.node",
+      "mime_type": "application/x-dosexec",
+      "extensions": {
+        "pe": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a0df42f0-19f2-4ad1-9f43-707c9b21e33a",
+      "hashes": {
+        "SHA-256": "fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda"
+      },
+      "name": "darwin.node",
+      "mime_type": "application/x-mach-binary",
+      "extensions": {
+        "macho": {}
+      }
+    },
+    {
+      "type": "directory",
+      "id": "directory--2ca7ed1f-e47b-4014-b353-9e9242750ce1",
+      "path": "icon-theme-materiall.5.29.1/extension/dist/extension/desktop/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--eb951973-0dd8-41e5-b319-049ba04187c8",
+      "path": "/Users/davidioasd/Downloads/rust_implant/"
+    },
+    {
+      "type": "software",
+      "id": "software--a735d79c-4726-45ac-a5cc-d34f3d87bcb5",
+      "name": "Icon Theme: Material",
+      "cpe": "",
+      "vendor": "IconKiefApp",
+      "version": "5.29.1"
+    },
+    {
+      "type": "software",
+      "id": "software--d1e782eb-12ee-491c-a8e5-0a0524db9506",
+      "name": "Material Icon Theme",
+      "cpe": "",
+      "vendor": "PKief"
+    },
+    {
+      "type": "url",
+      "id": "url--2681d02d-cd25-419e-b489-8a4ee2ca7b04",
+      "value": "https://marketplace.visualstudio.com/items?itemName=Iconkieftwo.icon-theme-materiall"
+    },
+    {
+      "type": "url",
+      "id": "url--4690e386-d0d1-4f0d-ab35-8e9af2b7a28d",
+      "value": "https://marketplace.visualstudio.com/items?itemName=PKief.material-icon-theme"
+    },
+    {
+      "type": "url",
+      "id": "url--26a5333a-2ffb-4c94-87e0-4fc1e8104cba",
+      "value": "https://www.virustotal.com/gui/file/eafeccc6925130db1ebc5150b8922bf3371ab94dbbc2d600d9cf7cd6849b056e"
+    },
+    {
+      "type": "url",
+      "id": "url--37247bab-0d2f-447a-94b5-094110b61c58",
+      "value": "https://bazaar.abuse.ch/sample/0878f3c59755ffaf0b639c1b2f6e8fed552724a50eb2878c3ba21cf8eb4e2ab6/"
+    },
+    {
+      "type": "url",
+      "id": "url--f338a04a-ee12-4f38-90a0-48f3e9b425e9",
+      "value": "https://bazaar.abuse.ch/sample/6ebeb188f3cc3b647c4460c0b8e41b75d057747c662f4cd7912d77deaccfd2f2/"
+    },
+    {
+      "type": "url",
+      "id": "url--c26b492e-1b0b-4aae-8588-86c10bb7f3da",
+      "value": "https://bazaar.abuse.ch/sample/fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda/"
+    },
+    {
+      "type": "url",
+      "id": "url--4405ba89-d7bd-4d8f-9ac9-93ca779d2943",
+      "value": "https://valhalla.nextron-systems.com/info/rule/SUSP_Implant_Indicators_Jul24_1"
+    },
+    {
+      "type": "url",
+      "id": "url--1bb4be5a-9313-429d-8847-458678c2a970",
+      "value": "https://valhalla.nextron-systems.com/info/rule/SUSP_HKTL_Gen_Pattern_Feb25_2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f9dfe4f-e796-44b4-bab8-d52cce2aa59f",
+      "relationship_type": "contains",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "file--a487ac03-7a33-4391-8985-8550adcf5012"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--834a5ea1-30f4-4856-ad0b-98daefd5f160",
+      "relationship_type": "delivers",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3ff713f-ff62-410b-b908-8505a616d845",
+      "relationship_type": "delivers",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5639478-7b75-4f47-8767-43bdaded26fe",
+      "relationship_type": "drops",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "file--4bfcc393-a4ae-401c-9f29-ab955b660527"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb07e738-5e31-410f-b645-0e2c2ba37796",
+      "relationship_type": "drops",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "file--be11356d-96ad-41b4-a5af-58524b525e20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb4ea024-6709-4c1f-b6f0-4be8a9514e47",
+      "relationship_type": "related-to",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9affdc59-ab47-4043-b317-73e4e53a1dea",
+      "relationship_type": "related-to",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76429990-d500-44a5-bb78-1b8c0ff9900e",
+      "relationship_type": "related-to",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--073d4819-ca7d-4af7-9081-e0ac10de8d43",
+      "relationship_type": "related-to",
+      "source_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c",
+      "target_ref": "malware--5ccfde6a-d190-4b6f-b7c7-fc19183f6a4c"
+    }
+  ]
+}

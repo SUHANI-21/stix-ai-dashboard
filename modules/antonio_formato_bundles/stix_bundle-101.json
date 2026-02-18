@@ -1,0 +1,122 @@
+{
+  "type": "bundle",
+  "id": "bundle--ad3ea681-b642-4e48-a7c8-9ada666720b4",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--5b4a7944-75a7-432a-a2e4-ad1890eb6d87",
+      "name": "GhostPairing Lookalike Domains",
+      "description": "A set of domains used in GhostPairing attacks to host fake Facebook-style viewer pages. Examples include photobox[.]life, postsphoto[.]life, yourphoto[.]life, photopost[.]live, yourphoto[.]world, top-foto[.]life, and fotoface[.]top. These domains proxy pairing requests and display lure messages.",
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "Gen Digital Blog",
+          "url": "https://www.gendigital.com/blog/ghostpairing-attacks-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--eb525f51-0188-481e-95a1-49aea0e32bf8",
+      "name": "Gen Digital",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.gendigital.com",
+      "description": "Gen Digital is a cybersecurity company whose researchers discovered and published details about the GhostPairing WhatsApp account takeover campaign."
+    },
+    {
+      "type": "identity",
+      "id": "identity--6c320698-d3c6-440f-9a18-cc886ade0f97",
+      "name": "Luis Corrons",
+      "identity_class": "individual",
+      "roles": [
+        "Security Evangelist",
+        "Researcher"
+      ],
+      "description": "Luis Corrons is a Security Evangelist at Gen Digital and co-author of the GhostPairing attack research."
+    },
+    {
+      "type": "identity",
+      "id": "identity--6d6ca029-c7ff-430f-b345-ce84c884458c",
+      "name": "Martin Chlumeck\u00fd",
+      "identity_class": "individual",
+      "roles": [
+        "Malware Researcher"
+      ],
+      "description": "Martin Chlumeck\u00fd is a Malware Researcher and co-author of the GhostPairing attack research."
+    },
+    {
+      "type": "url",
+      "id": "url--55a0d496-c4db-44fd-8f3f-40e16b7ad8cd",
+      "value": "https://photobox.life"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1dc59665-3568-4c15-8ea1-29f6b819e0fc",
+      "value": "photobox.life"
+    },
+    {
+      "type": "url",
+      "id": "url--e1023cad-65e7-45c4-bff0-618c39a72bd6",
+      "value": "https://postsphoto.life"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--859941bc-fb47-4817-9fc9-c1d177e76716",
+      "value": "postsphoto.life"
+    },
+    {
+      "type": "url",
+      "id": "url--b32abc7d-ab30-4401-9edf-eaadc5b6e73f",
+      "value": "https://yourphoto.life"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--02afefcf-6e42-49b4-ae68-572d87b805d9",
+      "value": "yourphoto.life"
+    },
+    {
+      "type": "url",
+      "id": "url--6f781ee3-ac58-4b14-b8d1-2434cfd3dea3",
+      "value": "https://photopost.live"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--25eb7e3e-40d5-42b9-b330-194ae5a63c79",
+      "value": "photopost.live"
+    },
+    {
+      "type": "url",
+      "id": "url--7fab4ba4-4dd9-4ceb-92bc-e973c46dae79",
+      "value": "https://yourphoto.world"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5706d5a1-487e-48b6-8051-58a6bd2f19c6",
+      "value": "yourphoto.world"
+    },
+    {
+      "type": "url",
+      "id": "url--961fda82-f4f6-4ef3-9792-f57b65d7d924",
+      "value": "https://top-foto.life"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ba9b3cf4-03aa-4726-a040-c6742426f8ac",
+      "value": "top-foto.life"
+    },
+    {
+      "type": "url",
+      "id": "url--f215e8da-8211-4a78-ab51-559f8d9d24f4",
+      "value": "https://fotoface.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4e2e1ffd-45a0-4f12-aa5f-c4a36467b0c2",
+      "value": "fotoface.top"
+    }
+  ]
+}

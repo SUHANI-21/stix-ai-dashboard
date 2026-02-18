@@ -1,0 +1,281 @@
+{
+  "type": "bundle",
+  "id": "bundle--0ff7e667-2f20-4f87-ad2d-b4604223c1e8",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e00ccf92-4492-475b-9c97-c28216c3f891",
+      "name": "CVE-2025-8110",
+      "description": "A symlink bypass vulnerability in Gogs (<= 0.13.3) allows authenticated users to overwrite files outside the repository, leading to Remote Code Execution (RCE). The flaw is a bypass of CVE-2024-55947 and arises because the Gogs API fails to validate the destination of symbolic links when writing files.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-8110"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--cb628dcd-c4ae-448f-a8ba-31b263fe2dde",
+      "name": "CVE-2024-55947",
+      "description": "A path traversal vulnerability in the PutContents API of Gogs allowed attackers to write files outside the git repository directory, potentially leading to code execution. The vulnerability was patched by adding input validation on the path parameter.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2024-55947"
+        },
+        {
+          "source_name": "wiz",
+          "url": "https://www.wiz.io/vulnerability-database/cve/cve-2024-55947"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2f2609d1-da8c-45f4-8d40-a1a3b07daaf5",
+      "name": "CVE-2024-56731",
+      "description": "A vulnerability in Gogs related to symbolic link handling, exploited to alter internal files.",
+      "external_references": [
+        {
+          "source_name": "github",
+          "url": "https://github.com/gogs/gogs/security/advisories/GHSA-wj44-9vcg-wjq7"
+        },
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2024-56731"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6",
+      "name": "CVE-2024-54148",
+      "description": "A vulnerability in Gogs related to symbolic link handling, exploited to alter internal files.",
+      "external_references": [
+        {
+          "source_name": "github",
+          "url": "https://github.com/gogs/gogs/security/advisories/GHSA-r7j8-5h9c-f6fx"
+        },
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2024-54148"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--f39a8b69-ae5a-4801-ab60-43873068f943",
+      "name": "Supershell C2 Server",
+      "description": "Command and Control server associated with Supershell malware.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [
+        "119.45.176.196"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "name": "Payload Server",
+      "description": "Infrastructure used to host and deliver malware payloads in the Gogs exploitation campaign.",
+      "infrastructure_types": [
+        "hosting"
+      ],
+      "aliases": [
+        "106.53.108.81",
+        "119.91.42.53"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--68168eef-c3cf-4880-99f1-dc861972d203",
+      "name": "Gogs",
+      "description": "Gogs is a popular self-hosted Git service written in Go. It provides a lightweight alternative to GitLab or GitHub Enterprise and is popular among developers for its ease of deployment and minimal resource usage.",
+      "cpe": "cpe:2.3:a:gogs:gogs:*",
+      "external_references": [
+        {
+          "source_name": "github",
+          "url": "https://github.com/gogs/gogs"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--e90ce522-54dc-4e5d-a8fe-eaa45c07c693",
+      "hashes": {
+        "SHA-1": "d8fcd57a71f9f6e55b063939dc7c1523660b7383"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2a7dce7f-02be-4f7a-a103-73bdfafa3cc4",
+      "hashes": {
+        "SHA-1": "efda81e1100ea977321d0f2eeb0dfa7a6b132abd"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0aab39c7-13e8-4fd5-b019-82bf0ea5c372",
+      "value": "119.45.176.196"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ce6d30d2-4bc5-4b03-8eef-80fefe3b9291",
+      "value": "106.53.108.81"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c",
+      "value": "119.91.42.53"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb6b6fe3-2880-43be-a2b1-8d40a07482bf",
+      "relationship_type": "exploits",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--658b8c66-c906-4654-8c04-ec7712d7ae43",
+      "relationship_type": "exploits",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2da86119-7a77-4697-a045-ea4dd4d3cdd8",
+      "relationship_type": "has",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "file--2a7dce7f-02be-4f7a-a103-73bdfafa3cc4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4c8f6ad-8ae1-415f-b0d8-b73fb9804472",
+      "relationship_type": "has",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "file--2a7dce7f-02be-4f7a-a103-73bdfafa3cc4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d21d9835-776f-4138-a45a-b47caed3f06c",
+      "relationship_type": "has",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "file--2a7dce7f-02be-4f7a-a103-73bdfafa3cc4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73e4ebda-8d5f-4a70-9304-6b67567d3751",
+      "relationship_type": "has",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "file--2a7dce7f-02be-4f7a-a103-73bdfafa3cc4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23ba51ed-ffd0-40b2-9361-0c70a439c24d",
+      "relationship_type": "uses",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "tool--0815434c-48ff-454a-93d7-4edd95e3e09f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8156f78c-7ac9-49c8-89d7-a2cc1e03119b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c458d37-7540-4d35-98a1-1e6507813916",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c8b9b49-8d65-40e8-be27-343a52b8f544",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f67fef9-e512-4ed7-853e-a49f992ce4f4",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7c5337e-1c38-4075-8d41-291d6b6624a9",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f9d92e8-1870-4156-b2f8-aace7c100df2",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e67346f-89f7-495a-98c0-d48269d6f8d1",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a52bb429-41c5-4c26-9a63-10cc15698e45",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--67789568-f683-4cae-ade0-4da3512cf74b",
+      "target_ref": "ipv4-addr--7ee9f5d2-03a9-40d3-b8fb-e4dcb9a7a42c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--089710f3-2163-4cf4-896a-850a612f25c5",
+      "relationship_type": "targets",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dc32cb69-2450-402b-ad8b-9ce6dd1db935",
+      "relationship_type": "targets",
+      "source_ref": "malware--e361987e-7886-477b-b141-4001191e6257",
+      "target_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9334f64-d371-4fb1-8d5b-ab288ab09878",
+      "relationship_type": "has",
+      "source_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73397067-c45a-41a7-ae11-a5567a41dfde",
+      "relationship_type": "has",
+      "source_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5d79def-016d-4060-a7c0-17c957ee36c0",
+      "relationship_type": "has",
+      "source_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--513fa14c-d254-4a09-ba99-4d77735bc9c7",
+      "relationship_type": "has",
+      "source_ref": "software--68168eef-c3cf-4880-99f1-dc861972d203",
+      "target_ref": "vulnerability--857cdca9-f5d8-404d-b5c1-5e4cb1119fe6"
+    }
+  ]
+}

@@ -1,0 +1,249 @@
+{
+  "type": "bundle",
+  "id": "bundle--8f8b18c1-130a-4f16-befb-3aa7e8ba1acd",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6bcb7ac2-d07e-4da7-a724-8ba97daa24ad",
+      "name": "WhatsApp Worm Propagation",
+      "description": "Malware propagates via WhatsApp by automating messaging, stealing contact lists, and distributing malicious files to contacts using personalized greetings and social engineering.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--41f41e06-719d-4757-a4f9-a8dbd0066382",
+      "name": "Banking Overlay Injection",
+      "description": "Malware injects fake overlays over legitimate banking windows to steal credentials, including password prompts and input fields positioned to mimic legitimate applications.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9d9bda64-a595-4c04-9e00-704da23cc1ab",
+      "name": "Credential Harvesting via Process Hollowing",
+      "description": "Malware uses a Delphi injector to perform process hollowing, running the final stealer payload in the context of svchost.exe to harvest credentials from banking, payment, and cryptocurrency applications.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e91985b5-e34b-44e6-8e1f-f4cbebcb244d",
+      "name": "Dynamic C2 Retrieval via IMAP",
+      "description": "Malware retrieves command-and-control server addresses dynamically by logging into email accounts using hardcoded IMAP credentials and extracting the C2 address from emails.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3d638add-7b30-4bfb-8c93-297fbe0fd0af",
+      "name": "Geofencing and Locale Checks",
+      "description": "Malware checks system locale and only executes if the victim's OS is set to Brazilian Portuguese, aborting otherwise. C2 infrastructure restricts access to Brazil and Argentina.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--760911af-7b10-415c-9eda-c6fd0951b252",
+      "name": "Automated Security Product Enumeration",
+      "description": "Malware enumerates running processes, registry uninstall keys, and WMI to detect installed antivirus, firewall, and anti-spyware products for anti-detection and evasion.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b1121a2b-7a31-48e9-af8c-03c4e42eecf5",
+      "name": "System Telemetry and Host Profiling",
+      "description": "Malware gathers system information including computer name, OS version/build, username, IP addresses, installed security software, RAM capacity, and logon domain, sending it to the C2.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6ebd83b9-c35c-4af4-bdeb-936f4554da20",
+      "name": "Encrypted C2 Communications and Command Execution",
+      "description": "Malware uses custom stream cipher and rotating XOR with hardcoded key and salt to encrypt C2 communications and commands, including info collection, overlays, keylogging, file transfer, and chat features.",
+      "external_references": [
+        {
+          "source_name": "Trustwave SpiderLabs",
+          "url": "https://www.trustwave.com/en-us/resources/blogs/spiderlabs-blog/spiderlabs-ids-new-banking-trojan-distributed-through-whatsapp"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--31e60376-7a09-4ead-a9a1-5ce5cc472eab",
+      "hashes": {
+        "SHA-256": "6168d63fad22a4e5e45547ca6116ef68bb5173e17e25fd1714f7cc1e4f7b41e1"
+      },
+      "name": "whats.py"
+    },
+    {
+      "type": "file",
+      "id": "file--bf1dac96-b91e-49ac-9bf2-ef2e80bd9997",
+      "hashes": {
+        "SHA-1": "e1779d9810ad39a45759c856cc85f1148a8f6601"
+      },
+      "name": "malicious VBScript"
+    },
+    {
+      "type": "file",
+      "id": "file--23f120d4-3b58-443b-9f53-b3305db0f4b0",
+      "hashes": {
+        "SHA-1": "e3e24d57163e04ac16a93a698d4c8051473bccb4"
+      },
+      "name": "malicious VBScript"
+    },
+    {
+      "type": "file",
+      "id": "file--8aacf6f4-8f37-48f8-b2d2-d249731263fe",
+      "hashes": {
+        "SHA-1": "8f3b5a0cecd4d50fc6eb52a627fe6a9179e71736"
+      },
+      "name": "whats.py"
+    },
+    {
+      "type": "file",
+      "id": "file--00ad9ae2-6e66-4eb5-9b49-bbc3f142e3cb",
+      "hashes": {
+        "SHA-1": "167cc2d716bfebc440f14ff1affe7f99b8556f2e"
+      },
+      "name": "whats.py"
+    },
+    {
+      "type": "file",
+      "id": "file--5a4fd9f3-db7e-41eb-9af6-dac996ce902d",
+      "hashes": {
+        "SHA-1": "db5545b6136f1197fd5234695cdeff285a99208e"
+      },
+      "name": "payload"
+    },
+    {
+      "type": "file",
+      "id": "file--0ce0a926-c8a1-49e7-9841-6d2059b96957",
+      "hashes": {
+        "SHA-1": "03944933d662f4e96d43750aa29bd287685c6007"
+      },
+      "name": "payload"
+    },
+    {
+      "type": "url",
+      "id": "url--2a09996a-ab12-4920-afcf-90500582c4f4",
+      "value": "https://varegjopeaks.com/altor/teste_obscado.vbs"
+    },
+    {
+      "type": "url",
+      "id": "url--91a319bc-d477-4179-ab26-d1c8d85f2c5f",
+      "value": "http://varegjopeaks.com/altor/whats.py"
+    },
+    {
+      "type": "url",
+      "id": "url--c17a642b-3af9-423b-846e-c3531c71a0fd",
+      "value": "http://centrogauchodabahia123.com/altor/installer.msi"
+    },
+    {
+      "type": "url",
+      "id": "url--27f7eb85-962f-47c1-a303-d3448ee953a8",
+      "value": "http://varegjopeaks.com/altor/installer.msi"
+    },
+    {
+      "type": "url",
+      "id": "url--57d19240-906e-4b94-9122-e4bbae642afc",
+      "value": "https://itrexmssl.com/jasmin/altor/receptor.php"
+    },
+    {
+      "type": "url",
+      "id": "url--3feea074-ab97-4c46-8eaa-4b399e69aacc",
+      "value": "https://alentodolcevitad.com/admin.php"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b48f6d20-3ceb-4032-8040-a6a2343bfa91",
+      "value": "miportuarios.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f3a7a02c-847b-4a9f-b632-db3883dcdb2a",
+      "value": "mazdafinancialsevrices.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--03ebed3a-7354-47c6-9d5b-393decf7579e",
+      "value": "adilsonralfadvocaciad.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fc2153ed-5918-4bc1-8eea-8a380100521d",
+      "value": "domimoveis1.com.br"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ee79207c-9eeb-4f2d-90c9-8177dfa1506b",
+      "value": "serverseistemasatu.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--233d6a8a-9e14-4ef2-b90d-6ba599fad1e7",
+      "value": "103.84.176.107"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--69f190b5-6958-44fd-b2fa-e741e9ab1cc9",
+      "value": "104.21.48.41"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1f904170-8e1b-4fa1-9bc1-9941b68f6ba8",
+      "value": "162.120.71.56"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0deda15-e35f-4785-9971-0a8219f917cf",
+      "value": "185.169.234.139"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d60df8b0-76e2-4372-b9d9-88d1d9faba89",
+      "value": "83.229.17.71"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c3197526-97d0-4ad9-b010-f6dd62c0429b",
+      "value": "140.99.164.172"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4b804cb7-4e21-498c-a2e1-13972a88c0dc",
+      "value": "174.138.187.2"
+    }
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "type": "bundle",
+  "id": "bundle--4b7f12ff-f698-4bcf-b763-45e0c00e8036",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "campaign",
+      "id": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "name": "Coordinated Credential-Based VPN Authentication Attacks (Dec 2023)",
+      "description": "A coordinated, automated campaign targeting enterprise VPN authentication infrastructure, with large-scale scripted credential-based login attempts observed against Cisco SSL VPN and Palo Alto Networks GlobalProtect services. The campaign utilized centralized, cloud-hosted infrastructure (primarily 3xK GmbH IP space) and employed uniform request patterns and reused credentials, indicating automated password spraying or credential stuffing.",
+      "first_seen": "2023-12-11T00:00:00Z",
+      "last_seen": "2023-12-12T23:59:59Z",
+      "objective": "Identify and exploit exposed or weakly protected VPN authentication endpoints via automated credential-based attacks."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e112bc61-5c72-4253-bcfc-76426889ad8e",
+      "name": "Automated Credential-Based Authentication Attack",
+      "description": "Automated login attempts using common username and password combinations to probe VPN authentication endpoints for weak or exposed credentials. Includes scripted password spraying and credential stuffing techniques.",
+      "x_mitre_id": "T1110",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "x_mitre_detection": "Monitor for high volumes of failed authentication attempts, uniform user agent strings, and centralized IP address sources."
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--71ddf5cc-2c80-425a-a6bc-10dd7fd3bc8d",
+      "name": "3xK GmbH Cloud Hosting",
+      "description": "Centralized cloud-hosted infrastructure used to launch coordinated automated credential-based attacks against VPN authentication endpoints. Majority of traffic originated from IP space associated with 3xK GmbH (Germany).",
+      "infrastructure_types": [
+        "hosting-provider",
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--48071689-59e8-4d2e-a7cc-d3ceb561f0f0",
+      "name": "GreyNoise Intelligence",
+      "description": "GreyNoise Intelligence is a threat intelligence provider that tracks and analyzes internet-scale threat activity, including credential-based attacks targeting enterprise VPN infrastructure.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.greynoise.io/"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6711112b-6f58-4820-a232-f331f91985c7",
+      "value": "IP space associated with 3xK GmbH"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--4dafb51a-6abb-49af-af59-83e2200ad513",
+      "account_type": "username",
+      "description": "Common username combinations reused in scripted login attempts"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--aaaf10c2-2bc0-4cce-9273-bdb5da982ff8",
+      "account_type": "password",
+      "description": "Common password combinations reused in scripted login attempts"
+    },
+    {
+      "type": "software",
+      "id": "software--33d32829-00b7-482d-8fd1-e84570c0525b",
+      "name": "Palo Alto Networks GlobalProtect",
+      "description": "VPN authentication portal targeted by automated credential-based campaign"
+    },
+    {
+      "type": "software",
+      "id": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "name": "Cisco SSL VPN",
+      "description": "VPN authentication endpoint targeted by automated credential-based campaign"
+    },
+    {
+      "type": "artifact",
+      "id": "artifact--031d2e4d-4203-4cbd-a56b-538f89e00629",
+      "mime_type": "text/html",
+      "payload_bin": "",
+      "description": "Observed request bodies include CSRF token handling and parameterized username/password fields"
+    },
+    {
+      "type": "x-application",
+      "id": "x-application--3c652059-38d7-4b03-9881-6157da9f2856",
+      "name": "Mozilla Firefox",
+      "description": "User agent used in most observed requests targeting GlobalProtect portals"
+    },
+    {
+      "type": "x-application",
+      "id": "x-application--df88f75f-eea4-4dfb-9e59-eec8a8401fe2",
+      "name": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)",
+      "description": "Dominant user agent in Cisco SSL VPN bruteforce attempts"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6b07499a-a3a5-427e-9539-d2271f821160",
+      "relationship_type": "uses",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "description": "The coordinated credential-based campaign used automated VPN credential probing scripts to conduct large-scale login attempts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89ca7cb5-4205-434f-bb72-9c30724c849f",
+      "relationship_type": "uses",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "attack-pattern--e112bc61-5c72-4253-bcfc-76426889ad8e",
+      "description": "The campaign employed automated credential-based authentication attacks, including password spraying and credential stuffing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d59c336e-a2d3-44e5-b10f-d3cec77e4efc",
+      "relationship_type": "uses",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "infrastructure--71ddf5cc-2c80-425a-a6bc-10dd7fd3bc8d",
+      "description": "The campaign leveraged 3xK GmbH cloud-hosted infrastructure to launch coordinated attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75738818-99d6-4795-ad73-9207fdd254db",
+      "relationship_type": "uses",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "tool--d75e257e-b07e-47de-8d86-8439c5574ce1",
+      "description": "GreyNoise VPN Login Scanner was used to detect and analyze activity associated with the campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e6722c1-931e-43e2-84c6-6622927d7176",
+      "relationship_type": "targets",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "The campaign targeted Palo Alto Networks GlobalProtect VPN authentication portals."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90494e14-7163-4746-a20f-14618b7b2512",
+      "relationship_type": "targets",
+      "source_ref": "campaign--99408139-7c7c-4693-afaf-001b6bf412ab",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "The campaign targeted Cisco SSL VPN authentication endpoints."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--311a40d9-fe39-46c1-b6a3-79821a00f8f4",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "attack-pattern--e112bc61-5c72-4253-bcfc-76426889ad8e",
+      "description": "The automated VPN credential probing script implements automated credential-based authentication attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a2d1c995-015f-4583-8bbb-025693480b2e",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "infrastructure--71ddf5cc-2c80-425a-a6bc-10dd7fd3bc8d",
+      "description": "The probing script was operated from centralized cloud-hosted infrastructure (3xK GmbH)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11c586b2-e3e3-43b0-9ae5-64b09c566ff4",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "user-account--aaaf10c2-2bc0-4cce-9273-bdb5da982ff8",
+      "description": "The probing script reused common username combinations in login attempts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b676bf5-3f77-4ec3-a698-81138f09aed0",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "user-account--aaaf10c2-2bc0-4cce-9273-bdb5da982ff8",
+      "description": "The probing script reused common password combinations in login attempts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--780bfb5e-92a5-4a30-8d3f-eb2d5b46ad3a",
+      "relationship_type": "targets",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "The probing script targeted Palo Alto Networks GlobalProtect VPN portals."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c93b705f-f42c-4cde-93d5-84dd47c0947c",
+      "relationship_type": "targets",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "The probing script targeted Cisco SSL VPN endpoints."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a907b2a-bb90-444d-a642-bf6c6324f89e",
+      "relationship_type": "characterizes",
+      "source_ref": "attack-pattern--e112bc61-5c72-4253-bcfc-76426889ad8e",
+      "target_ref": "artifact--031d2e4d-4203-4cbd-a56b-538f89e00629",
+      "description": "Automated credential-based authentication attacks include request bodies with CSRF token handling and parameterized username/password fields."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e70fa935-d4c6-4e5d-a3f4-4f25b82675e4",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--114f2015-43b8-47ec-a5b9-4bf0eb9008e4",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "Automated credential-based authentication attempts over TCP targeted Palo Alto Networks GlobalProtect VPN endpoints."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bf52789-10ca-47c7-9709-37b93ce6b56e",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--114f2015-43b8-47ec-a5b9-4bf0eb9008e4",
+      "target_ref": "software--22f7579b-c7de-42ec-84b2-3a99be87fd5d",
+      "description": "Automated credential-based authentication attempts over TCP targeted Cisco SSL VPN endpoints."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee912367-a54b-47b3-b959-d43c0be5cdcc",
+      "relationship_type": "originates-from",
+      "source_ref": "network-traffic--114f2015-43b8-47ec-a5b9-4bf0eb9008e4",
+      "target_ref": "ipv4-addr--6711112b-6f58-4820-a232-f331f91985c7",
+      "description": "The network traffic originated from IP space associated with 3xK GmbH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98626153-c8b4-45ab-9340-195284334b54",
+      "relationship_type": "originates-from",
+      "source_ref": "network-traffic--114f2015-43b8-47ec-a5b9-4bf0eb9008e4",
+      "target_ref": "ipv4-addr--6711112b-6f58-4820-a232-f331f91985c7",
+      "description": "The network traffic originated from IP space associated with 3xK GmbH."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae17a3d3-3cc9-43eb-a066-56e51d9478e8",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "x-application--df88f75f-eea4-4dfb-9e59-eec8a8401fe2",
+      "description": "The probing script used a browser-like Firefox user agent in requests targeting GlobalProtect portals."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a25a962-43a9-47d1-8022-6bda3dd55936",
+      "relationship_type": "uses",
+      "source_ref": "malware--316409ba-7700-4c1c-8a77-9efd281f9541",
+      "target_ref": "x-application--df88f75f-eea4-4dfb-9e59-eec8a8401fe2",
+      "description": "The probing script used the user agent Mozilla/5.0 (Windows NT 10.0; Win64; x64) in requests targeting Cisco SSL VPN endpoints."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36060bc4-2053-4f8f-a6f6-2a70356e165c",
+      "relationship_type": "analyzes",
+      "source_ref": "identity--48071689-59e8-4d2e-a7cc-d3ceb561f0f0",
+      "target_ref": "tool--d75e257e-b07e-47de-8d86-8439c5574ce1",
+      "description": "GreyNoise Intelligence analyzes threat activity using its VPN Login Scanner."
+    }
+  ]
+}

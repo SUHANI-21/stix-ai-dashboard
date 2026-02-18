@@ -1,0 +1,433 @@
+{
+  "type": "bundle",
+  "id": "bundle--b90bf1f6-5636-4799-81a3-3f356561d225",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c6a5c908-e04f-43b8-9796-d0c826c45259",
+      "name": "Brand Impersonation via Display Name Spoofing",
+      "description": "Threat actors impersonate WordPress.com in phishing emails by spoofing the display name and using urgency-based language to trick victims into clicking malicious links.",
+      "aliases": [
+        "WordPress Brand Impersonation"
+      ],
+      "external_references": [
+        {
+          "source_name": "malwr-analysis.com",
+          "url": "https://malwr-analysis.com/wp-content/uploads/2025/12/blgde1.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5a86455d-5b42-43ef-a55c-2a29fb671fc4",
+      "name": "Credit Card Phishing",
+      "description": "Victims are lured to a fake payment portal mimicking WordPress, where their credit card information is harvested via JavaScript and exfiltrated to attackers.",
+      "external_references": [
+        {
+          "source_name": "malwr-analysis.com",
+          "url": "https://malwr-analysis.com/wp-content/uploads/2025/12/blgde2.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--240c6014-ef25-4ce4-a51c-77a5f20c83e8",
+      "name": "3-D Secure OTP Interception",
+      "description": "Phishing site simulates a fake 3-D Secure modal to trick victims into entering SMS OTPs, which are then exfiltrated to attackers via Telegram.",
+      "external_references": [
+        {
+          "source_name": "malwr-analysis.com",
+          "url": "https://malwr-analysis.com/wp-content/uploads/2025/12/blgde3.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4a35d360-e1c6-4eac-8635-7399a40501e1",
+      "name": "Telegram-based Data Exfiltration",
+      "description": "Attackers use Telegram bots or channels as command-and-control (C2) infrastructure to receive stolen credit card details, OTPs, and victim metadata.",
+      "external_references": [
+        {
+          "source_name": "malwr-analysis.com",
+          "url": "https://malwr-analysis.com/wp-content/uploads/2025/12/blgde10.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "name": "JavaScript-driven Exfiltration",
+      "description": "Malicious JavaScript on the phishing page collects payment and OTP data, sending it to attacker-controlled endpoints for exfiltration.",
+      "external_references": [
+        {
+          "source_name": "malwr-analysis.com",
+          "url": "https://malwr-analysis.com/wp-content/uploads/2025/12/blgde9.jpg"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--401b2cde-bb61-44f1-b18c-8d8b9b1d9b14",
+      "name": "Phishing Domain",
+      "pattern": "[domain-name:value = 'soyfix.com']",
+      "description": "Domain used to host phishing landing page mimicking WordPress.com.",
+      "labels": [
+        "malicious-website"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--f1f72b75-9016-45c2-9c15-d596b0d0c617",
+      "name": "Phishing Email Sender Domain",
+      "pattern": "[email-message:sender_ref.value = 'theyounginevitables.com']",
+      "description": "Sender domain used in phishing emails impersonating WordPress.",
+      "labels": [
+        "phishing-email"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--2ca7c6fd-101d-4ee7-8bb6-77537718fada",
+      "name": "Phishing Email Originating IP",
+      "pattern": "[ipv4-addr:value = '217.160.125.42']",
+      "description": "Originating IP address for phishing campaign emails.",
+      "labels": [
+        "phishing-email"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--5ab644eb-6639-4b79-9316-98e2774b1d64",
+      "name": "Phishing Email Relay IP",
+      "pattern": "[ipv4-addr:value = '8.219.25.220']",
+      "description": "SMTP relay IP used for sending phishing emails via Alibaba Cloud.",
+      "labels": [
+        "phishing-email"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--4c1135cf-5a5b-464c-afa3-ca40f9b71680",
+      "name": "Phishing Exfiltration Endpoint: send_payment.php",
+      "pattern": "[url:value = 'hxxps://soyfix.com/log/log/send_payment.php']",
+      "description": "Endpoint used for exfiltrating stolen credit card data.",
+      "labels": [
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "name": "Phishing Exfiltration Endpoint: send_sms.php",
+      "pattern": "[url:value = 'hxxps://soyfix.com/log/log/send_sms.php']",
+      "description": "Endpoint used for exfiltrating stolen OTP codes.",
+      "labels": [
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--c17951c0-8c68-45fd-a307-bf07b147d881",
+      "display_name": "WordPress",
+      "value": "noreply@theyounginevitables.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a61c4671-721a-46de-8f22-d032e884b045",
+      "value": "theyounginevitables.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2e30bb66-2d02-4680-93bf-f4da44217729",
+      "value": "217.160.125.42"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--16785061-9fd3-4d85-b9d3-e60f13bd8330",
+      "value": "8.219.25.220"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "value": "soyfix.com"
+    },
+    {
+      "type": "url",
+      "id": "url--36ac8a26-6c37-4d79-a4fd-fe878da53812",
+      "value": "https://soyfix.com/log/log/"
+    },
+    {
+      "type": "url",
+      "id": "url--4bfb2ffd-02e0-4e1d-a29c-21bbcbf0aa6e",
+      "value": "https://soyfix.com/send_payment.php"
+    },
+    {
+      "type": "url",
+      "id": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "value": "https://soyfix.com/send_sms.php"
+    },
+    {
+      "type": "software",
+      "id": "software--385f760e-c248-4d6d-9be2-a7cbbb3732ee",
+      "name": "Telegram",
+      "cpe": "cpe:2.3:a:telegram:telegram:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da4d6c56-9301-4795-82aa-f28921a5ba05",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The WordPress.com Domain Renewal Phishing campaign uses Brand Impersonation via Display Name Spoofing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4059e55e-ddad-4d17-b676-7a2d6b252bf0",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The WordPress.com Domain Renewal Phishing campaign uses Credit Card Phishing to steal payment card details."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a53ac07c-7c07-4bb2-bc90-775ea5eedd44",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The WordPress.com Domain Renewal Phishing campaign uses 3-D Secure OTP Interception to steal SMS OTP codes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a90b2241-d952-47a7-baf0-e8455aa5cb1b",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The WordPress.com Domain Renewal Phishing campaign uses Telegram-based Data Exfiltration for C2 and exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e37dcb4-aa83-4f5e-a93a-2e811d1d6224",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The WordPress.com Domain Renewal Phishing campaign uses JavaScript-driven Exfiltration to collect and transmit victim data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93c8952e-700f-42ed-baff-fae15f0ebac1",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "description": "The campaign uses a fake WordPress payment portal as credential harvesting malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25870fd1-d36a-4859-96b6-ef6947853ff5",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "description": "The campaign uses a Telegram Exfiltration Bot to receive stolen data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4eb0341-cb60-405d-9aeb-a703e62b9191",
+      "relationship_type": "uses",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "tool--bff455ab-a44a-44fd-8d40-a8abf1f3f4f0",
+      "description": "The campaign abuses Telegram as a C2 and exfiltration channel."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56c19999-b85d-4897-a307-5373b55af843",
+      "relationship_type": "delivers",
+      "source_ref": "campaign--fd2a8c61-36c3-4045-ad47-e47ea984906d",
+      "target_ref": "email-message--6db25a11-a0bc-4a1d-911d-dff82ab270b0",
+      "description": "The campaign delivers phishing emails to victims."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a0e045c-a872-4202-87ce-2b91a24eca12",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The phishing payment portal uses JavaScript-driven exfiltration to steal victim data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dad50448-32b6-486c-876f-01b6dc8c38c3",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The phishing payment portal uses Credit Card Phishing techniques."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8343ced4-f423-44b4-9fb1-268e8274a6e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The phishing payment portal uses 3-D Secure OTP Interception techniques."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--124fc040-2ea9-4759-9828-8b8a24143b31",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The phishing payment portal uses Telegram-based Data Exfiltration for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7e41124-8188-4a21-ae0c-e8bbe84af097",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "tool--bff455ab-a44a-44fd-8d40-a8abf1f3f4f0",
+      "description": "The phishing payment portal abuses Telegram for exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f057473-6c72-4d0a-b88b-804b02987739",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "description": "The phishing payment portal is hosted on https://soyfix.com/log/log/."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50467bba-b291-4f00-a302-46f224758dfe",
+      "relationship_type": "exfiltrates-to",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "description": "The phishing payment portal exfiltrates stolen data to the Telegram Exfiltration Bot."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4e8f232-ea48-4f9f-a12b-d1c96c8cd075",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "description": "The phishing payment portal uses send_payment.php endpoint for credit card data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d7690e35-43f1-4ee7-841c-0186bb1f796a",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "description": "The phishing payment portal uses send_sms.php endpoint for OTP exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b11c16c-4540-45c0-a75f-d18224236fd9",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "The phishing payment portal is hosted on soyfix.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24ef0e62-b8dd-4e08-afa3-5f52bd83be6b",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "attack-pattern--6da8d983-21ef-4bf0-896e-b94c1d92f7a3",
+      "description": "The Telegram Exfiltration Bot uses Telegram-based Data Exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12d0b0c0-da37-4b84-9c03-fe28aa14dae5",
+      "relationship_type": "uses",
+      "source_ref": "malware--14c11e08-75d7-4736-9c47-cfdddcd809e0",
+      "target_ref": "tool--bff455ab-a44a-44fd-8d40-a8abf1f3f4f0",
+      "description": "The Telegram Exfiltration Bot uses Telegram platform for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5c2103e-c9ea-48d6-af3f-972649955ea0",
+      "relationship_type": "uses",
+      "source_ref": "tool--bff455ab-a44a-44fd-8d40-a8abf1f3f4f0",
+      "target_ref": "software--385f760e-c248-4d6d-9be2-a7cbbb3732ee",
+      "description": "Telegram tool is based on Telegram software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e50d1bde-4892-4294-bedf-e4121e9101f7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "Phishing Domain indicator points to soyfix.com used in the campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3da6c2c-117d-4de0-b223-641c0818bdac",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "Phishing Email Sender Domain indicator points to theyounginevitables.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81054e14-df5a-43b3-ae7c-e6094bf2afb3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "ipv4-addr--16785061-9fd3-4d85-b9d3-e60f13bd8330",
+      "description": "Phishing Email Originating IP indicator points to 217.160.125.42."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5441c3d-1023-4d2c-aae0-b820d6f00d79",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "ipv4-addr--16785061-9fd3-4d85-b9d3-e60f13bd8330",
+      "description": "Phishing Email Relay IP indicator points to 8.219.25.220."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8cb106a-ab19-4921-8af7-7b9adbadf960",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "description": "Phishing Exfiltration Endpoint indicator points to send_payment.php."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5512e9b7-c263-4300-aba1-54acdca42228",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--35d19a5c-d59c-4326-8055-d23f3dad6bb8",
+      "target_ref": "url--0bb98325-79c1-468c-aae6-53bdcab2ca20",
+      "description": "Phishing Exfiltration Endpoint indicator points to send_sms.php."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e199a2cf-3cb0-495e-9693-b2dfe01a00ad",
+      "relationship_type": "related-to",
+      "source_ref": "email-message--6db25a11-a0bc-4a1d-911d-dff82ab270b0",
+      "target_ref": "email-addr--c17951c0-8c68-45fd-a307-bf07b147d881",
+      "description": "Phishing email sent from noreply@theyounginevitables.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--729082e8-c522-4fe2-b60e-aeb58966f4e1",
+      "relationship_type": "related-to",
+      "source_ref": "email-addr--c17951c0-8c68-45fd-a307-bf07b147d881",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "Phishing sender email is associated with theyounginevitables.com domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e66c974f-182b-41b7-944c-493364c820d3",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--4063f643-4a2e-47df-88ff-2e452c65c6da",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "Network traffic from soyfix.com to soyfix.com over HTTPS for send_payment.php."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69477227-241b-41fe-b0d0-18f487ee6916",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--4063f643-4a2e-47df-88ff-2e452c65c6da",
+      "target_ref": "domain-name--8fcf6585-39fe-4d37-bee2-f86140e61fed",
+      "description": "Network traffic from soyfix.com to soyfix.com over HTTPS for send_sms.php."
+    }
+  ]
+}

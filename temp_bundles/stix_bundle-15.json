@@ -1,0 +1,293 @@
+{
+  "type": "bundle",
+  "id": "bundle--15e52322-ce15-4cbc-bb1e-d42ee035564d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--57868880-0347-4ec8-b4ea-a7e87631c53d",
+      "name": "Phishing: Spearphishing Attachment",
+      "description": "Attackers use targeted phishing emails with malicious attachments (archives containing executable files, DLLs, LNK files, and decoy PDFs) to gain initial access.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1566/001",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--12e50bc2-bfda-405b-8f2e-07c0f90e4081",
+      "name": "User Execution: Malicious File",
+      "description": "Victims are required to unpack an archive and execute an EXE or LNK file to initiate the compromise process.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1204/002",
+          "external_id": "T1204.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3f6023fa-6efe-423f-b67d-3d999bb82d2f",
+      "name": "Component Object Model Hijacking",
+      "description": "Attackers use COM hijacking for persistence by registering malicious DLLs under specific CLSIDs in the Windows registry.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1546/015",
+          "external_id": "T1546.015"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5bdc1068-f240-4070-822e-37a3c273a1bd",
+      "name": "DLL Side-Loading",
+      "description": "Attackers use DLL side-loading to execute malicious code by loading a malicious DLL through a legitimate executable.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1574/002",
+          "external_id": "T1574.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b71f6a79-bb78-4b3d-9c68-ddae983172ba",
+      "name": "Obfuscated Files or Information",
+      "description": "Attackers obfuscate code and configuration data using techniques like Base36, Base64, RC4 encryption, and VMProtect packing.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1027",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--82ebd5d2-ad7b-4a37-9356-f0bd26425903",
+      "name": "Application Layer Protocol: DNS",
+      "description": "TunnelRAT uses DNS tunneling for C2 communication, including custom domain generation and encoding.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1071/004",
+          "external_id": "T1071.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cab946a0-c0b9-471a-9214-2b92e9de0c40",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Malware uses HTTPS and HTTP for C2 communication.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1071/001",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9841c958-7e2b-40f8-bd0f-e693c621b22f",
+      "name": "Web Service: Bidirectional Communication",
+      "description": "EmojiRAT uses Telegram Bot API for bidirectional C2 communication.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1102/002",
+          "external_id": "T1102.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d9ecf559-728f-4b13-b4a5-c5768bcd0e84",
+      "name": "File and Directory Discovery",
+      "description": "Malware collects information about files and directories on the compromised host.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1083",
+          "external_id": "T1083"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f01608d8-5563-4ee6-a5a8-ed0f86e8e274",
+      "name": "System Information Discovery",
+      "description": "Malware collects system information such as domain name, computer name, username, and IP addresses.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1082",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00024bda-b7b1-463d-9812-620a8019a4b2",
+      "name": "Exfiltration Over C2 Channel",
+      "description": "TunnelRAT and EmojiRAT exfiltrate data over their C2 communication channels.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1041",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--54eb2f35-b01c-4c29-bbc8-244a91763be6",
+      "name": "Data Encoding: Non-Standard Encoding",
+      "description": "EmojiRAT encodes data using a custom emoji symbol table for C2 communication.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1132/002",
+          "external_id": "T1132.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4ca200fa-125e-4404-a98e-e791c2616896",
+      "name": "Data Encoding: Standard Encoding",
+      "description": "TunnelRAT encodes data using Base36 and SSF client uses Base64 encoding for configuration data.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1132/001",
+          "external_id": "T1132.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c2435468-2db0-4c26-9977-8dd7ffa17652",
+      "name": "Hide Artifacts: Hidden Files and Directories",
+      "description": "Attackers set the 'hidden' attribute for loader DLL files to evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1564/001",
+          "external_id": "T1564.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9a5e6953-2e33-4db7-bedc-ef0eb739fc0d",
+      "name": "Hijack Execution Flow: DLL",
+      "description": "Attackers use DLL side-loading to hijack execution flow via legitimate executables.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1574/002",
+          "external_id": "T1574.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c243595f-9271-44ab-b9ef-072970511a17",
+      "name": "Virtualization/Sandbox Evasion: System Checks",
+      "description": "Loader and reconnaissance malware check for specific substrings in the USERDOMAIN environment variable to evade analysis.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1497/001",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f445f909-3995-4bfe-950d-61b22b95303e",
+      "name": "Indicator Removal: File Deletion",
+      "description": "Loader second stage checks for certain command-line arguments and deletes its own DLL file if found.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1070/004",
+          "external_id": "T1070.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--518e0118-690b-4113-9e8f-364b1c3b36f7",
+      "name": "Indicator Removal: Clear Persistence",
+      "description": "Loader second stage checks for command-line arguments and removes COM object registry values used for persistence.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1070/006",
+          "external_id": "T1070.006"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--229e5a27-421e-41c7-b6e0-a5c58f8e33ae",
+      "name": "Dynamic Resolution: Domain Generation Algorithms",
+      "description": "TunnelRAT uses custom algorithms to generate domains for DNS-based C2 communication.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1568/002",
+          "external_id": "T1568.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0f77c52b-487e-496f-9874-806ff2236cbe",
+      "name": "Encrypted Channel: Asymmetric Cryptography",
+      "description": "Modified SSF client uses TLS for encrypted C2 channels.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1040",
+          "external_id": "T1040"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a275072f-9384-497a-88c5-b3a4fe0dc3dc",
+      "name": "Proxy",
+      "description": "Modified SSF client enables SOCKS proxy functionality for attackers.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1090/002",
+          "external_id": "T1090.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4a8b195f-add7-4d30-ad37-8cd1a95491a4",
+      "name": "Ingress Tool Transfer",
+      "description": "TunnelRAT and EmojiRAT are used to upload files to the compromised host.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1105",
+          "external_id": "T1105"
+        }
+      ]
+    }
+  ]
+}

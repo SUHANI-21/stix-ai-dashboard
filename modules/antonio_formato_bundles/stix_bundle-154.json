@@ -1,0 +1,361 @@
+{
+  "type": "bundle",
+  "id": "bundle--ec32c39c-a09d-4386-95e4-0a64cf6fc464",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--7ee6cef2-108f-41e1-b917-a517ccb92600",
+      "hashes": {
+        "MD5": "675D475B5C02CA834E83BE009E09DB7C"
+      },
+      "name": "Parent File",
+      "description": "Parent file of the Masked in Memory malware. Detected as Trojan(0001140e1)."
+    },
+    {
+      "type": "file",
+      "id": "file--4cf749c9-cc85-4443-9bd8-a4518138c62b",
+      "hashes": {
+        "MD5": "33DD6D8FCFF3CA256F44A371FA3CF819"
+      },
+      "name": "Injected File",
+      "description": "Injected .NET module mapped into cvtres.exe's address space. Detected as Trojan(700000201)."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--61242ab4-65d9-4db6-b852-b1efeb1024b1",
+      "name": "Process Injection",
+      "description": "Injects malicious code into a legitimate Windows process (cvtres.exe) for stealth and persistence.",
+      "external_references": [
+        {
+          "source_name": "K7 Labs Blog",
+          "url": "https://labs.k7computing.com/index.php/masked-in-memory-a-hidden-pyc-fragment-utilises-cvtres-exe-to-communicate-with-cc/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--13f654ee-acfa-43fc-b12a-4a8cef096c52",
+      "name": "Masquerading File Types",
+      "description": "Disguises malicious files as harmless file types (e.g., .png as RAR archive, .sys as password-protected RAR) to evade detection.",
+      "external_references": [
+        {
+          "source_name": "K7 Labs Blog",
+          "url": "https://labs.k7computing.com/index.php/masked-in-memory-a-hidden-pyc-fragment-utilises-cvtres-exe-to-communicate-with-cc/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5eeace25-c7db-4483-825e-5f2086ebc525",
+      "name": "Multi-layer Obfuscation",
+      "description": "Uses multiple encoding and compression layers (Base64, BZ2, Zlib, marshal) to conceal the malicious payload.",
+      "external_references": [
+        {
+          "source_name": "K7 Labs Blog",
+          "url": "https://labs.k7computing.com/index.php/masked-in-memory-a-hidden-pyc-fragment-utilises-cvtres-exe-to-communicate-with-cc/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "name": "Command and Control (C2) Communication",
+      "description": "Establishes persistent, encrypted TCP communication with a remote C2 infrastructure using an injected .NET component.",
+      "external_references": [
+        {
+          "source_name": "K7 Labs Blog",
+          "url": "https://labs.k7computing.com/index.php/masked-in-memory-a-hidden-pyc-fragment-utilises-cvtres-exe-to-communicate-with-cc/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--c32faae5-6e7f-4e6e-83f5-059d220b1690",
+      "name": "Interput.json",
+      "path": "C:\\DragonAntivirus\\Interput.json"
+    },
+    {
+      "type": "file",
+      "id": "file--d2eb5da5-acaf-488f-9666-b9ca33c982c6",
+      "name": "Install.bat",
+      "path": "C:\\DragonAntivirus\\Install.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--64776106-6e0f-4841-af82-be27186887f1",
+      "name": "Inx",
+      "path": "C:\\DragonAntivirus\\Inx"
+    },
+    {
+      "type": "file",
+      "id": "file--6b7b9f1a-4d34-4420-87c5-c6aee90b1bf7",
+      "name": "ex.exe",
+      "path": "C:\\DragonAntivirus\\ex.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ea08eeec-a26e-4a0c-adff-dfcb133e7fa8",
+      "name": "ntoskrnl.exe",
+      "path": "C:\\Users\\Public\\WindowsSecurityA\\ntoskrnl.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0c2ab9e5-ce04-4edc-91cf-1c86161ad8f5",
+      "name": "image",
+      "path": "C:\\Users\\Public\\WindowsSecurityA\\Lib\\image"
+    },
+    {
+      "type": "file",
+      "id": "file--40742f88-1480-4a42-8080-538bf8764b48",
+      "name": "cvtres.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4839a605-bfca-4f9d-a8a9-ffc556c45f9e",
+      "name": "PDF Decoy"
+    },
+    {
+      "type": "file",
+      "id": "file--166bc0f5-f00a-4056-9643-39cf92856ba0",
+      "name": "Parent File",
+      "hashes": {
+        "MD5": "675D475B5C02CA834E83BE009E09DB7C"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "name": "Injected File",
+      "hashes": {
+        "MD5": "33DD6D8FCFF3CA256F44A371FA3CF819"
+      }
+    },
+    {
+      "type": "directory",
+      "id": "directory--50238d5d-da7f-47b9-8cf6-f679c512866f",
+      "path": "C:\\DragonAntivirus"
+    },
+    {
+      "type": "directory",
+      "id": "directory--b451a6f3-cc05-49c0-8531-b2f21f50005e",
+      "path": "C:\\Users\\Public\\WindowsSecurityA\\"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddab6ebc-a249-4d02-9e41-2f12a38f8222",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "description": "Masked in Memory malware uses process injection to run code inside legitimate Windows processes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a7bab75-3e83-4454-b233-2af5b82e677c",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "description": "Masked in Memory malware uses masquerading file types to evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8231c568-3969-464d-a81c-450ec9c7b100",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "description": "Masked in Memory malware uses multi-layer obfuscation to conceal its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec24531e-ac0d-4e97-8183-0448341cc21d",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "description": "Masked in Memory malware establishes persistent, encrypted C2 communication using an injected .NET component."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6db678ab-982f-48f7-baec-b62a649d15d7",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops config.bat to disk during its execution chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dcc02a8b-3b48-484e-8a13-2107f6c62020",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops AsusMouseDriver.sys as a disguised password-protected RAR archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28765e5f-4d60-49d7-a584-8a4c27c54401",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops Interput.json, which is later renamed and executed as Install.bat."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fe8d101-332d-4319-a72d-26051de9244c",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops Inx, a legitimate WinRAR executable used to extract password-protected archives."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3407b4f3-ec2d-4fde-8d8b-188c11419fa1",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops ex.exe, which is used to extract AsusMouseDriver.sys."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e15f84a-8339-4304-a10b-936958d7dcb6",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops ntoskrnl.exe, a bundled Python runtime masquerading as a Windows kernel file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8de497a-be04-41c5-83b7-3b70c831906d",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops image, the main obfuscated Python payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34746753-9320-41d3-8e9b-3745a16941ed",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory drops a PDF decoy to distract the user after infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e713f6b5-0cc9-4710-8a1e-8a28c2ab42b0",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "directory--b451a6f3-cc05-49c0-8531-b2f21f50005e",
+      "description": "Masked in Memory creates the C:\\DragonAntivirus directory during its infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf28f5d7-92dd-4a93-a390-0372fd12c7ca",
+      "relationship_type": "drops",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "directory--b451a6f3-cc05-49c0-8531-b2f21f50005e",
+      "description": "Masked in Memory creates the C:\\Users\\Public\\WindowsSecurityA\\ directory to hold extracted payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c927954a-f475-4eb1-8324-18086c4862df",
+      "relationship_type": "injects-into",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "process--8ea247f9-abd3-41a6-85b5-6cf0fc9dfe60",
+      "description": "Masked in Memory injects malicious code into the cvtres.exe process for stealth and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7bd3bd5-3c76-4829-8b73-c41c2d5d8379",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory executes ntoskrnl.exe with specific arguments to begin de-obfuscation and payload execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd4a518c-e71d-4c5b-aad1-06cd35ae1c9b",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "config.bat delivers AsusMouseDriver.sys, Interput.json, and Inx by downloading and extracting them."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aba7b7df-6cbe-4b75-a07d-69b5e7bfc28a",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Install.bat delivers ntoskrnl.exe and image by extracting them into WindowsSecurityA."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0560f8f7-3477-4c8c-a332-709d95fed394",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Install.bat delivers the PDF decoy to distract the user after infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--088b25c7-fe90-4c7d-aeb1-cd31d6d807e2",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "AsusMouseDriver.sys delivers ntoskrnl.exe and image after extraction."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--716681cb-3123-44e2-83c7-4f2eebc78b25",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Inx is used to extract AsusMouseDriver.sys using a hardcoded password."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--030924b1-8d89-46dc-88da-f1e9b0476b4b",
+      "relationship_type": "delivers",
+      "source_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "ex.exe is used to extract AsusMouseDriver.sys as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7fd92fc-4bb9-466d-8c49-cbd648a6df29",
+      "relationship_type": "uses",
+      "source_ref": "process--8ea247f9-abd3-41a6-85b5-6cf0fc9dfe60",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "ntoskrnl.exe process uses the image file to read and de-obfuscate the malicious payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9cc511ee-93ed-4ce2-9db4-a80b8fccd393",
+      "relationship_type": "uses",
+      "source_ref": "process--8ea247f9-abd3-41a6-85b5-6cf0fc9dfe60",
+      "target_ref": "attack-pattern--d1402a16-659f-4f94-96bc-c1b79ce35149",
+      "description": "cvtres.exe process is used for process injection by the malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--391693e4-d5d6-43bc-948a-35c726696f88",
+      "relationship_type": "uses",
+      "source_ref": "process--8ea247f9-abd3-41a6-85b5-6cf0fc9dfe60",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "cvtres.exe process contains the injected .NET module for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--764d5627-6ea7-4d25-8b03-34b5bb9986a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory malware is detected as Trojan(0001140e1) in the Parent File."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--718f1442-dab0-4ba0-81dd-f74ca011591a",
+      "relationship_type": "uses",
+      "source_ref": "malware--f9a31e67-aa29-4a5e-9b92-8024a8e20308",
+      "target_ref": "file--6e4b5abf-efef-4c05-8b62-3a3ca5ec15f5",
+      "description": "Masked in Memory malware is detected as Trojan(700000201) in the Injected File."
+    }
+  ]
+}

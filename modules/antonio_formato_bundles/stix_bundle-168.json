@@ -1,0 +1,89 @@
+{
+  "type": "bundle",
+  "id": "bundle--f03082b8-69eb-4cf2-9386-ead71b89979e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--07a49438-9270-4cea-af38-c151e14ea52d",
+      "name": "Sophos",
+      "identity_class": "organization",
+      "description": "Sophos threat research and analysis team."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--10bfbd75-f53f-4f6a-959a-2916c315d4e7",
+      "value": "manoelimoveiscaioba.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--68d53f5a-df24-4a63-87c4-1a0343d58045",
+      "value": "varegjopeaks.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--00fb2af4-819c-4002-8b4d-5baef42d6a1a",
+      "value": "docsmoonstudioclayworks.online"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--884505e0-44d7-4f56-8e9d-89e852d5c79d",
+      "value": "shopeeship.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--103a66fa-2130-4640-8104-bd9e599d2499",
+      "value": "miportuarios.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0791fd77-a02b-475b-be68-38a24cdf137f",
+      "value": "borizerefeicoes.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9101fc75-54ff-4c20-8f74-8e3806d0a510",
+      "value": "clhttradinglimited.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--88e89116-aad1-4531-9290-569be7382573",
+      "value": "lefthandsuperstructures.com"
+    },
+    {
+      "type": "software",
+      "id": "software--84df0743-e696-4840-a27c-c9bf1326625e",
+      "name": "Astaroth",
+      "aliases": [
+        "Guildma"
+      ],
+      "types": [
+        "malware"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--be3d8b7c-27ea-4e4b-a663-63a190ed88d1",
+      "name": "Maverick",
+      "types": [
+        "malware"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--d19f06aa-aafb-4008-b864-c55269d6d13b",
+      "name": "Selenium Chrome WebDriver",
+      "types": [
+        "tool"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--bba74e0a-5f3b-4f4a-b96b-0bf15f564ab5",
+      "name": "WPPConnect JavaScript library",
+      "types": [
+        "tool"
+      ]
+    }
+  ]
+}

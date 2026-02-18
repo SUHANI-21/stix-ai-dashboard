@@ -1,0 +1,467 @@
+{
+  "type": "bundle",
+  "id": "bundle--02aef6e0-ac47-42d7-b5f3-9a5133ea89bc",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4b150058-6165-431e-bfca-7f0119655b00",
+      "name": "DLL Side-Loading",
+      "description": "The campaign abuses Foxit PDF Reader by including a renamed FoxitPDFReader.exe and a malicious msimg32.dll in archive files. The executable loads the malicious DLL through DLL side-loading, enabling execution of ValleyRAT.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1574.002",
+          "url": "https://attack.mitre.org/techniques/T1574/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fc8adfba-30b2-4f60-be9b-22556e8bc1f6",
+      "name": "Spearphishing Attachment",
+      "description": "Attackers use email-based lures targeting job seekers and HR professionals, sending archive files disguised as HR documents (e.g., job applications, skills assessments) containing malicious executables and DLLs.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1566.001",
+          "url": "https://attack.mitre.org/techniques/T1566/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6f4036d7-6fc0-4ece-83ba-bbe660c03c60",
+      "name": "Obfuscated Files or Information",
+      "description": "The campaign uses deeply nested directory paths, hidden folders, and files with misleading names (e.g., document.docx as a disguised 7zip executable) to conceal malicious components and evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1027",
+          "url": "https://attack.mitre.org/techniques/T1027/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9592687a-28dd-4640-842e-69c069c6bb1b",
+      "name": "User Execution: Malicious File",
+      "description": "Victims are lured into executing disguised executables that appear to be legitimate documents, triggering the infection chain.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1204.002",
+          "url": "https://attack.mitre.org/techniques/T1204/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6d886279-5e3c-42da-a1cc-8006f5938226",
+      "name": "Command and Scripting Interpreter: Windows Command Shell",
+      "description": "A batch file (document.bat) is used to automate extraction and execution of the malicious payload, invoking the Python interpreter to run further scripts.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1059.003",
+          "url": "https://attack.mitre.org/techniques/T1059/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--37a44b20-45d7-41d7-83db-1b4728d4f4ca",
+      "name": "Command and Scripting Interpreter: Python",
+      "description": "The infection chain includes a disguised Python environment and scripts, enabling execution of malicious Python code even if Python is not pre-installed.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1059.006",
+          "url": "https://attack.mitre.org/techniques/T1059/006/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--95f85353-c817-495a-a1fd-5474c6820d64",
+      "name": "Persistence via Registry Run Keys",
+      "description": "The renamed Python executable (zvchost.exe) creates an autorun registry entry to maintain persistence on the infected system.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1547.001",
+          "url": "https://attack.mitre.org/techniques/T1547/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "name": "Exfiltration from Web Browsers",
+      "description": "ValleyRAT steals data from the user's internet browsers after successful infection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1539",
+          "url": "https://attack.mitre.org/techniques/T1539/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--6ac03317-f268-4423-8c32-f4116abb8a3f",
+      "hashes": {
+        "SHA-1": "ebcfc4f6c6e63b75dc407f5e76c9d96c69c3c1b6",
+        "SHA-256": "a32fa6ba08db96ebd611f6ee06da44b419d569a6bac43ed00c68d6ca674004c3"
+      },
+      "name": "ValleyRAT .NET exe in memory",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--732ad0d0-70fb-47be-ae29-cd3d8ccbbf7b",
+      "hashes": {
+        "SHA-1": "5cb888c87b15ec998c638892ad382dc68efb7f94",
+        "SHA-256": "7e8415e2744be160b7d7c600a401de41554c1357c2d2d35c85f8be8068cbc649"
+      },
+      "name": "ValleyRAT .NET DLL loader",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--54066562-00ff-4a8e-88df-42ddd0d1ec48",
+      "hashes": {
+        "SHA-1": "65fec70eaca638cbd10a6774e4e67f2d55f63959",
+        "SHA-256": "9b0afe79696ccb263b8a00c75c021d115f152283714c0e4c5075aad4e52b94f9"
+      },
+      "name": "document.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--bc52aba5-20ec-406a-bfe3-1dda7786eaad",
+      "hashes": {
+        "SHA-1": "de263d9374d90fb7f51b19a036cb75a3d2072342",
+        "SHA-256": "ce1be9e4b2fd0f3958720f9bc2ae9d545bc0e27dcf1042b64a70f1fc62884610"
+      },
+      "name": "msimg32.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4359fe4b-6447-435c-919e-263e6fb8e884",
+      "name": "Compensation_Benefits_Commission.exe",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b7c786e6-d3bd-4b84-861f-48cbdd88f05c",
+      "name": "FoxitPDFReader.exe",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--aafba436-8746-4ab0-9230-2967d5cf15fa",
+      "name": "document.docx"
+    },
+    {
+      "type": "file",
+      "id": "file--f5d88169-bfb4-4bc9-9472-c053b19ea7b3",
+      "name": "document.pdf"
+    },
+    {
+      "type": "file",
+      "id": "file--205f89dd-9600-4836-9be9-e01f65a03487",
+      "name": "Shortcut.lnk"
+    },
+    {
+      "type": "file",
+      "id": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "name": "zvchost.exe"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--407f1c41-971e-4646-a728-1ee92a76a3ee",
+      "value": "196.251.86.145"
+    },
+    {
+      "type": "url",
+      "id": "url--04ca47e9-34d4-4217-bcb3-050edc7af210",
+      "value": "http://196.251.86.145/huna"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7688cc06-246d-4d2d-bea0-2a91df98f46c",
+      "value": "51.79.214.125"
+    },
+    {
+      "type": "url",
+      "id": "url--52647dc2-9c9d-42f6-a01d-4fd63de8a661",
+      "value": "http://51.79.214.125/huna"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5c2d42b6-692a-46b7-bbb5-71659fd14791",
+      "value": "154.90.58.164"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--86d09ec2-f118-4b4a-bb28-5f458afe8ba4",
+      "value": "huna"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--1e210d7a-182d-4986-903d-ff44540cf9ef",
+      "subject": "CN=Zbtrprwgxex",
+      "issuer": "CN=Zbtrprwgxex",
+      "validity_not_before": "2025-04-02T17:01:00Z",
+      "validity_not_after": "9999-12-31T23:59:00Z",
+      "hashes": {
+        "SHA-1": "7e3f5ac90b8154af5070f01c05b6a4ce633c58ee"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77ed91c5-1b58-419f-996e-7ab385e0780d",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT uses DLL Side-Loading for execution via a renamed FoxitPDFReader.exe and malicious msimg32.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d96bf8ad-18da-406c-9326-3a43bf4fd161",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT uses spearphishing attachments to deliver malicious archive files to job seekers and HR professionals."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e30b95c-481a-4c6d-8f57-065e55ec7eca",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT campaign employs obfuscated files and information, such as deeply nested directories and disguised executables."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90a20abb-80d5-4bca-87e3-e41cbd29366f",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT relies on user execution of malicious files disguised as legitimate documents."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91b109b9-9475-4f03-a3d4-37b857e5e3ea",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT leverages Windows command shell via batch files (document.bat) for payload execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22f02a8d-e847-4c33-9433-2ff769c3a1d6",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT campaign uses Python scripts and environments for payload execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b62511d0-f6e6-4877-8e8e-fc7c929a1414",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT achieves persistence via registry run keys created by zvchost.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--736722e0-cf01-43c0-af37-904f7ee8bc0e",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "attack-pattern--550e9e28-873c-4bb2-8e1f-b7437f97ac02",
+      "description": "ValleyRAT exfiltrates data from web browsers after infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39a47a14-0b5f-415c-92ca-061c9553fd55",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e844c704-4aeb-44e8-a2ed-2b5cb3ff2204",
+      "target_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "description": "File hashes indicate the presence of ValleyRAT malware and related components."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13239c05-dd83-49c9-8efa-5420e37cc299",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e844c704-4aeb-44e8-a2ed-2b5cb3ff2204",
+      "target_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "description": "Network indicators (C2 and download URLs) are associated with ValleyRAT campaign infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a522cf49-ae3e-4611-b439-27db9c1e69b1",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "tool--5135a2a1-449c-4556-b62c-c71ff45cee23",
+      "description": "ValleyRAT campaign abuses Foxit PDF Reader for DLL side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90367699-5dc0-4100-8763-b88816f55b9e",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "ValleyRAT uses a .NET exe in memory as part of its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95240a42-6905-4fb6-8f5f-eac30fdb224e",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "ValleyRAT uses a .NET DLL loader for execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c103ffeb-dadf-4480-a827-6314a6111965",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "ValleyRAT campaign uses document.bat for automation and execution of malicious scripts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2a4e411-cc29-41dd-bc5f-30e9a149ea9a",
+      "relationship_type": "uses",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "ValleyRAT campaign uses msimg32.dll as the malicious DLL for side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--541d99b1-083a-460e-be38-2012592b4b9d",
+      "relationship_type": "downloads",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "url--52647dc2-9c9d-42f6-a01d-4fd63de8a661",
+      "description": "ValleyRAT campaign downloads encoded Python scripts from http://196.251.86.145/huna."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4234361d-8cd0-4d4f-9d45-3acce9ddb0f3",
+      "relationship_type": "downloads",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "url--52647dc2-9c9d-42f6-a01d-4fd63de8a661",
+      "description": "ValleyRAT campaign downloads files from http://51.79.214.125/huna."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92b7415f-9f4f-402a-9adc-9e842654042d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--8c3884a9-b2c5-4f60-aa5f-7c329109980f",
+      "target_ref": "ipv4-addr--5c2d42b6-692a-46b7-bbb5-71659fd14791",
+      "description": "ValleyRAT communicates with C2 server at 154.90.58.164."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbc9eff1-c413-4823-a6e1-fa777a6eccaa",
+      "relationship_type": "contains",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "Overview_of_Work_Expectations.zip contains FoxitPDFReader.exe and msimg32.dll as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--37239e97-1d39-4166-babf-13bda80163aa",
+      "relationship_type": "contains",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "Candidate_Skills_Assessment_Test.rar contains FoxitPDFReader.exe and msimg32.dll as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9f18b6e-b3b4-46e9-9816-7a2573139f13",
+      "relationship_type": "contains",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "Authentic_Job_Application_Form.zip contains FoxitPDFReader.exe and msimg32.dll as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60c0726d-31b7-4d44-9626-e9d53efd2aca",
+      "relationship_type": "drops",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "FoxitPDFReader.exe drops or loads msimg32.dll via DLL side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d5389ec-d82f-4c18-a1d4-977bfd553ada",
+      "relationship_type": "drops",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "Compensation_Benefits_Commission.exe drops or loads msimg32.dll via DLL side-loading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--763b1e40-6073-444b-a90e-dd07b94ccb60",
+      "relationship_type": "drops",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "document.bat invokes zvchost.exe to execute Python scripts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd71414a-1e75-48e4-92f3-0d1e37aca513",
+      "relationship_type": "uses",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "document.docx is a disguised 7zip executable used to extract contents from document.pdf."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46cd931c-8076-4c27-a9a7-657cb59155e1",
+      "relationship_type": "uses",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "document.bat uses document.docx to extract the contents of document.pdf."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7be0c054-523c-469b-844d-0b3e2b0bb7d2",
+      "relationship_type": "uses",
+      "source_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "target_ref": "file--c34c1e8c-3c03-4169-bc41-cced09b56631",
+      "description": "document.bat uses zvchost.exe (renamed python.exe) to run malicious Python scripts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9567e667-0b62-431e-9d43-c4719fe58277",
+      "relationship_type": "communicates-with",
+      "source_ref": "network-traffic--2b5ee056-a72c-4482-8f69-ccefe987a44d",
+      "target_ref": "ipv4-addr--5c2d42b6-692a-46b7-bbb5-71659fd14791",
+      "description": "Network traffic to 154.90.58.164:56001 observed as ValleyRAT C2 communication."
+    }
+  ]
+}

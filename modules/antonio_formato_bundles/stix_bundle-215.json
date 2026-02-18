@@ -1,0 +1,279 @@
+{
+  "type": "bundle",
+  "id": "bundle--26f711bb-19da-4fcf-bdc7-665489b1571c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1b36f2a9-5118-4b91-a6e0-5fa3ba9b89b1",
+      "name": "Process Doppelganging",
+      "description": "Process Doppelganging is an evasion technique where malware creates a new transaction, writes its payload to a file, creates a section backed by the file, and then aborts the transaction so the file never appears on disk, allowing execution of malicious code without leaving traces.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1186/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c965849c-679d-49d4-93ca-b399bd29253f",
+      "name": "DLL Search-Order Hijacking",
+      "description": "DLL search-order hijacking is a technique where malware places a malicious DLL in a location that is searched before the legitimate DLL, causing the application to load the malicious DLL instead.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1574/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b52c4caf-9c1d-4f7c-910d-1e3a4e1aa79b",
+      "name": "Heaven\u2019s Gate",
+      "description": "Heaven's Gate is a technique used by malware to switch between 32-bit and 64-bit code execution, often to evade detection and analysis tools.",
+      "external_references": [
+        {
+          "source_name": "Heaven's Gate Technique",
+          "url": "https://www.fireeye.com/blog/threat-research/2014/07/32-bit-and-64-bit-heavens-gate.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--171ff9a0-3985-4883-8a06-bcbbfcb6bab6",
+      "name": "API Hashing",
+      "description": "API hashing is an evasion technique where malware resolves API addresses dynamically using hash values instead of clear-text names, making analysis and detection more difficult."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--250b8369-e1cb-4506-8684-01bb8c3f7985",
+      "name": "Shellcode Injection into System DLLs",
+      "description": "Malware injects shellcode into the .text section of legitimate system DLLs (such as pla.dll, vssapi.dll, d3d9.dll) and executes code from those libraries to evade detection."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--50cce54c-3e98-47f8-bfa4-67eb27e3f7e4",
+      "name": "Social Engineering via Malicious SVG",
+      "description": "Attackers use a malicious SVG file containing embedded JavaScript that drops a password-protected archive and displays the password to the user, prompting them to extract and execute the contained malware."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d9f044a0-50bf-49f7-94de-b9a6357caf6e",
+      "name": "Persistence via Startup Folder Shortcut",
+      "description": "Malware achieves persistence by dropping a .lnk shortcut in the user's Startup folder, pointing to a loader executable that initiates the infection chain."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0b8b15ca-4d5d-4146-bc19-c4b6179980a8",
+      "name": "Antimalware Process Monitoring",
+      "description": "Malware monitors running processes by enumerating them and comparing their names (via hash or checksum) against a blocklist of antimalware products, altering execution if a match is found."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--33d13025-85eb-47ba-b55c-7797d3c6c151",
+      "name": "Anti-Hooking",
+      "description": "Malware loads a clean copy of ntdll.dll, compares exported function bytes to the in-memory copy, and restores original bytes to bypass userland hooks and debugger breakpoints."
+    },
+    {
+      "type": "file",
+      "id": "file--a3a4206c-ddb8-4ea5-a91c-e34162995c5b",
+      "name": "dragon_util.dll",
+      "description": "Malicious DLL used for side-loading and code injection. Tampered version with invalid certificate.",
+      "hashes": {
+        "SHA256": "82b19747645326479e2068fe08d850e1696e021f39fdf1a71874fe91b71fbee5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e2b78a23-18e5-4395-9cc8-25b6be796d88",
+      "name": "SVG File",
+      "description": "Malicious SVG file containing embedded JavaScript that drops a password-protected archive.",
+      "hashes": {
+        "SHA256": "f92c67fae2dfe9ed08efa09ab96432cc58e759803233ca5121aba93836e2c87d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ad1a86c4-6dce-4f02-a7a4-eedc5284d2ba",
+      "name": "Password Protected Archive File",
+      "description": "Archive dropped by malicious SVG. Contains HijackLoader payload. Password: 89G4UYYT.",
+      "hashes": {
+        "SHA256": "7730eb8eb3728e2192570204b0c0ea1019dc63c1c65d5188bd711f0f2603f7d6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--050b193a-5d67-4a99-8897-33407c8c3439",
+      "name": "dragon_helper.exe",
+      "description": "Benign executable used for DLL side-loading. Signed by Comodo Security Solutions Inc.",
+      "hashes": {
+        "SHA256": "4c51bc3a44b63bd7104998d7d473edcd4acca8165b4b6a16ebbc5101146ca989"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5b5942df-8784-4979-8537-83a38966368a",
+      "name": "PDFPreviewHandlerHost.exe (TController128.exe)",
+      "description": "Benign executable renamed by malware for code injection and C2 communication. Signed by FOXIT SOFTWARE INC.",
+      "hashes": {
+        "SHA256": "36ecf37aaa72e402f55fda4530854b34390ed78b4ff933f25fbaf769c1aaf357"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f431ee1e-ac32-4049-8447-07b31010913d",
+      "name": "Chime.exe",
+      "description": "Benign executable used for code injection. Signed by Amazon.com Services LLC.",
+      "hashes": {
+        "SHA256": "adb8347dfa1b1df1ca2211fe4d7e82f27ced939f1bf3d52548e52bc9e23fc52c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--41bd48d1-d13a-49e4-9dc7-9764e3f9506b",
+      "name": "Eet.pt",
+      "description": "Encoded shellcode blob used in the infection chain.",
+      "hashes": {
+        "SHA256": "f562ee8a770865c86d0d3bdabd5968f1164a2fde91f538c3beb6e6b18063cf6f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2ad4cd84-92fb-409c-8d09-a8d160a5d0f5",
+      "name": "Mearsheeg.yj",
+      "description": "Encoded shellcode blob used in the infection chain.",
+      "hashes": {
+        "SHA256": "b02b56277afab343a7566571fc84ab596c7b1a37f3c50aceba9ed48118235d35"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6d32ae73-8066-4c37-a222-8fe9ee17cd11",
+      "name": "Final payload injected in TController128.exe",
+      "description": "Payload injected into TController128.exe using process doppelganging and Heaven's Gate techniques.",
+      "hashes": {
+        "SHA256": "dac93dfd8c68df93ec710d481c2cd530c3f9cb4f0ab0d82953ed63fb313044de"
+      }
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--54e3e073-f08c-4447-8df9-26442fe5d45a",
+      "name": "HijackLoader C2 Server",
+      "description": "Command and control server used by HijackLoader for remote control and data exfiltration.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "ip_addresses": [
+        "192.159.99.232"
+      ],
+      "ports": [
+        4448
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--87f21f17-d102-458d-a59a-e9d830be334d",
+      "hashes": {
+        "SHA-256": "f92c67fae2dfe9ed08efa09ab96432cc58e759803233ca5121aba93836e2c87d"
+      },
+      "name": "malicious.svg",
+      "mime_type": "image/svg+xml"
+    },
+    {
+      "type": "file",
+      "id": "file--4afcc7b9-8a81-402a-a442-90535a656095",
+      "hashes": {
+        "SHA-256": "7730eb8eb3728e2192570204b0c0ea1019dc63c1c65d5188bd711f0f2603f7d6"
+      },
+      "name": "archive.zip",
+      "password": "89G4UYYT"
+    },
+    {
+      "type": "file",
+      "id": "file--3ffea127-be95-4409-a8bc-33771c615cb3",
+      "hashes": {
+        "SHA-256": "4c51bc3a44b63bd7104998d7d473edcd4acca8165b4b6a16ebbc5101146ca989"
+      },
+      "name": "dragon_helper.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--52b921b4-bf0d-455e-b2e4-ec43d63326c6",
+      "hashes": {
+        "SHA-256": "82b19747645326479e2068fe08d850e1696e021f39fdf1a71874fe91b71fbee5"
+      },
+      "name": "dragon_util.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--72db23e0-ecd4-4527-860b-cd62d120f559",
+      "hashes": {
+        "SHA-256": "36ecf37aaa72e402f55fda4530854b34390ed78b4ff933f25fbaf769c1aaf357"
+      },
+      "name": "PDFPreviewHandlerHost.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--daf18b7b-3a78-40a3-b905-4ee1b83053f6",
+      "hashes": {
+        "SHA-256": "adb8347dfa1b1df1ca2211fe4d7e82f27ced939f1bf3d52548e52bc9e23fc52c"
+      },
+      "name": "Chime.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e59890ac-e9c4-4408-a565-989f2b08c8e4",
+      "hashes": {
+        "SHA-256": "f562ee8a770865c86d0d3bdabd5968f1164a2fde91f538c3beb6e6b18063cf6f"
+      },
+      "name": "Eet.pt"
+    },
+    {
+      "type": "file",
+      "id": "file--93dfab45-a92b-48d9-ae49-f5400a651e50",
+      "hashes": {
+        "SHA-256": "b02b56277afab343a7566571fc84ab596c7b1a37f3c50aceba9ed48118235d35"
+      },
+      "name": "Mearsheeg.yj"
+    },
+    {
+      "type": "file",
+      "id": "file--ede12058-4753-4e4b-827a-846b7fc92684",
+      "hashes": {
+        "SHA-256": "dac93dfd8c68df93ec710d481c2cd530c3f9cb4f0ab0d82953ed63fb313044de"
+      },
+      "name": "final_payload.bin"
+    },
+    {
+      "type": "file",
+      "id": "file--70391acc-65dc-4bb8-97cd-2c836b7fc5d3",
+      "name": "pla.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--fcdbf60e-00bb-46c6-a090-11ff394dc485",
+      "name": "vssapi.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--6bb1e633-8b81-44ba-9512-70dec69c9a52",
+      "name": "d3d9.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--340001bd-7105-45f1-8068-7257db6d6702",
+      "name": "kernel32.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--1933cefd-2540-4adf-a5dc-0c3e4dcac8db",
+      "name": "ntdll.dll"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3f9bb120-070a-4a00-889a-790a0d56b74c",
+      "value": "192.159.99.232"
+    }
+  ]
+}

@@ -1,0 +1,804 @@
+{
+  "type": "bundle",
+  "id": "bundle--402739fc-418b-4dea-956c-e22ec5dd4cf4",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6f10cbfa-c0be-45e3-befd-59f6c2bab503",
+      "name": "DNS over TLS (DoT) for C2 communication",
+      "description": "Kimwolf uses DNS over TLS to encapsulate DNS requests, evading traditional security detection and making C2 infrastructure more resilient to blocking.",
+      "external_references": [
+        {
+          "source_name": "Cloudflare DNS over TLS",
+          "url": "https://developers.cloudflare.com/radar/glossary/#domain-rankings"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dd71a64c-caa8-457c-803d-1a7d096eff9a",
+      "name": "Blockchain-based C2 infrastructure (ENS/EtherHiding)",
+      "description": "Kimwolf leverages Ethereum Name Service (ENS) and EtherHiding technology to store and update C2 information on the blockchain, making takedown and blocking extremely difficult.",
+      "external_references": [
+        {
+          "source_name": "ENS",
+          "url": "https://ens.domains/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1adab40f-65c0-44f7-9e7c-1b10ae2a93f5",
+      "name": "Elliptic Curve Digital Signature for C2 Authentication",
+      "description": "Kimwolf implements a digital signature protection mechanism based on elliptic curves, requiring bots to verify C2 instructions before accepting commands, protecting C2 from takeover."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--366da583-4b76-47e6-ab86-f6033f881acf",
+      "name": "Stack XOR String Encryption",
+      "description": "Kimwolf encrypts sensitive strings such as C2 domains and DNS resolvers using a simple Stack XOR operation, complicating static analysis and detection."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9d1cad0e-c401-466f-8520-cfa420afcd50",
+      "name": "Single Instance Control via Unix Domain Socket",
+      "description": "Kimwolf ensures only one instance runs per device by creating a Unix domain socket named '@niggaboxv[number]', and disguises its process name as 'netd_services' or 'tv_helper'."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6e7042c3-ca3e-4886-8341-514a09532d0a",
+      "name": "TLS-encrypted C2 Communication",
+      "description": "Kimwolf uses TLS encryption for all network communication, including websocket handshakes and custom protocol headers."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d9f2d592-e70d-4584-a7b6-19ba88dc31cd",
+      "name": "Mirai-style DDoS Attacks",
+      "description": "Kimwolf supports 13 DDoS attack methods, using a structure derived from Mirai for attack payloads and command execution."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "name": "Proxy Monetization via ByteConnect SDK",
+      "description": "Infected devices are monetized using ByteConnect SDK, which forms a proxy network and generates revenue for attackers."
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--1ef7a21d-761f-4ed9-b9ce-2d5ad22b7f1f",
+      "name": "Kimwolf/Aisuru Group",
+      "description": "A threat actor group operating the Kimwolf and Aisuru botnets, responsible for large-scale infections, DDoS attacks, and proxy monetization. The group demonstrates advanced infrastructure resilience and rapid evolutionary capability.",
+      "aliases": [
+        "Aisuru",
+        "Kimwolf"
+      ],
+      "external_references": [
+        {
+          "source_name": "XLab Blog",
+          "url": "https://blog.xlab.qianxin.com/super-large-scale-botnet-aisuru/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5d5a7a9f-b9f3-4720-afb7-be859172fcca",
+      "hashes": {
+        "MD5": "887747dc1687953902488489b805d965"
+      },
+      "name": "aisuru.apk"
+    },
+    {
+      "type": "file",
+      "id": "file--fdf39689-5c9e-4049-b395-43ae3e2519fd",
+      "hashes": {
+        "MD5": "b688c22aabcd83138bba4afb9b3ef4fc"
+      },
+      "name": "aisuru.apk"
+    },
+    {
+      "type": "file",
+      "id": "file--8d836ba5-8e5d-47cb-b5e5-247b01308e63",
+      "hashes": {
+        "MD5": "2fd5481e9d20dad6d27e320d5464f71e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9a278a04-c5b9-4cf2-a4e1-04d1e09c7306",
+      "hashes": {
+        "MD5": "5f4ed952e69abb337f9405352cb5cc05"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8c978bff-8116-43f3-a38e-f173fc4d247e",
+      "hashes": {
+        "MD5": "4cd750f32ee5d4f9e335751ae992ce64"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--48652d89-aa46-4643-8f23-329c791a8643",
+      "hashes": {
+        "MD5": "8011ed1d1851c6ae31274c2ac8edfc06"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2e6dce86-28e3-4cf8-81bf-938686f1aa12",
+      "hashes": {
+        "MD5": "95efbc9fdc5c7bcbf469de3a0cc35699"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1d5281e2-227d-464d-8c05-847c9ce2048a",
+      "hashes": {
+        "MD5": "bda398fcd6da2ddd4c756e7e7c47f8d8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d296ceb1-bca8-4503-be48-c2d2ff8f0d2c",
+      "hashes": {
+        "MD5": "ea7e4930b7506c1a5ca7fee10547ef6b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3e7035a5-9d8e-435a-b2e5-062360da73e8",
+      "hashes": {
+        "MD5": "dfe8d1f591d53259e573b98acb178e84"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a36f26d4-6038-4b4c-bd0f-5647289486a6",
+      "hashes": {
+        "MD5": "3a172e3a2d330c49d7baa42ead3b6539"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2711f1aa-17ec-4dc7-8c5e-1ee2e6a1a98f",
+      "hashes": {
+        "MD5": "726557aaebee929541f9c60ec86d356e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c541b1f1-b41c-4c90-b30d-97e83af55320",
+      "hashes": {
+        "MD5": "bf06011784990b3cca02fe997ff9b33d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e9235502-66f3-41f9-9f1f-0f308248d737",
+      "hashes": {
+        "MD5": "d086086b35d6c2ecf60b405e79f36d05"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ea163a61-b5d7-4726-862b-efa8f707f4d4",
+      "hashes": {
+        "MD5": "2078af54891b32ea0b1d1bf08b552fe8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fe378742-5235-47fe-94a9-e7c3fbf88438",
+      "hashes": {
+        "MD5": "b89ee1304b94f0951af31433dac9a1bd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bf22927b-5541-4201-abe1-eb51a5da5389",
+      "hashes": {
+        "MD5": "34dfa5bc38b8c6108406b1e4da9a21e4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d5151545-4a62-4a42-8d4d-c9ce25aa5dfe",
+      "hashes": {
+        "MD5": "51cfe61eac636aae33a88aa5f95e5185"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--085905f9-e836-458d-b48d-79dc304a495e",
+      "hashes": {
+        "MD5": "1c03d82026b6bcf5acd8fc4bcf48ed00"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bd8b458e-e888-4059-a0bb-785f2b4b3b47",
+      "hashes": {
+        "MD5": "e96073b7ed4a8eb40bed6980a287bc9f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d54cb598-9ff7-4231-ba45-b23def30c3d9",
+      "hashes": {
+        "MD5": "f8a70ca813a6f5123c3869d418f00fe5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9ef8fadb-96fb-4b0f-8dc8-f0c0941ff775",
+      "hashes": {
+        "MD5": "33435ec640fbd3451f5316c9e45d46e8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7d247ec4-8f27-4499-9407-c36bc9af7ad9",
+      "hashes": {
+        "MD5": "9053cef2ea429339b64f3df88cad8e3f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--226ef6ac-270a-4abc-be0a-e406b7cc360e",
+      "hashes": {
+        "MD5": "85ba20e982ed8088bb1ba7ed23b0c497"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8aa284e6-1535-49a1-8b5a-e5b8b66e7082",
+      "hashes": {
+        "MD5": "9b37f3bf3b91aa4f135a6c64aba643bd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f4774380-c1c8-4113-aec2-b8b6addec01d",
+      "hashes": {
+        "MD5": "b1d4739d692d70c3e715f742ac329b05"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7fe425ac-b864-4fe5-b3c0-e023d24278ab",
+      "hashes": {
+        "MD5": "5490fb81cf24a2defa87ea251f553d11"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5676450b-fbfc-4a86-b042-f4009f22b502",
+      "hashes": {
+        "MD5": "cf7960034540cd25840d619702c73a26"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "hashes": {
+        "MD5": "e4be95de21627b8f988ba9b55c34380c"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--34f77c27-dfad-4e28-8a74-cdefdd2fc048",
+      "value": "14emeliaterracewestroxburyma02132.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a29613c-bd55-4e1f-9783-06cd119ddfd4",
+      "value": "api.groksearch.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2bf56e76-7e71-4fce-a758-d32fc04749e1",
+      "value": "nnkjzfaxkjanxzk.14emeliaterracewestroxburyma02132.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--984beb0a-968b-4719-9409-c06942b7cfff",
+      "value": "zachebt.chachasli.de"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d79cfa20-d5e7-4585-bc74-0b9cda4402c6",
+      "value": "zachebt.groksearch.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--94a95125-629e-4260-9f32-b4536f83f11c",
+      "value": "rtrdedge1.samsungcdn.cloud"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cf46c820-5cff-4134-9a3c-98a848afc786",
+      "value": "fuckzachebt.meowmeowmeowmeowmeow.meow.indiahackgod.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--94aa5fdb-aaf3-4c6c-80c9-f391f45588ce",
+      "value": "staging.pproxy1.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7879cc22-d4c4-478a-87e7-c4f523d792d3",
+      "value": "sdk-dl-prod.proxiessdk.online"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cdd1a187-934d-42ce-b36e-e9d86124a76c",
+      "value": "sdk-dl-production.proxiessdk.store"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8a01b97e-44ec-4380-9c94-ec415ca338f6",
+      "value": "lol.713mtauburnctcolumbusoh43085.st"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--38f74088-ecf3-4464-ab94-719f27437cf1",
+      "value": "pawsatyou.eth"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8ada43f5-d406-4b29-bc42-22849582c5cc",
+      "value": "lolbroweborrowtvbro.713mtauburnctcolumbusoh43085.st"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--df970232-2093-42bb-a315-0d594314f741",
+      "value": "fuckbriankrebs.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--41123518-8041-4505-92ab-f3f220f6dc69",
+      "value": "fuckyoukrebs1.briankrabs.seanobrien[redacted]ssn[redacted].su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f235996c-9a6b-4260-9bf8-f9659af9dae6",
+      "value": "proxy-sdk.14emeliaterracewestroxburyma02132.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "value": "sdk-bright.14emeliaterracewestroxburyma02132.su"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--972fb614-ca61-4298-abc8-33ec5583cd9d",
+      "value": "93.95.112.50"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ec629ee7-10d5-48f8-be76-9fb72f9ca9d5",
+      "value": "93.95.112.51"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--35dcabe1-fc2d-4c7e-97f1-fb269aab8033",
+      "value": "93.95.112.52"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ce0080f7-092b-4c7b-b0a6-ac013dee9969",
+      "value": "93.95.112.53"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4ca2af32-3840-4761-9a30-dd8f3573545f",
+      "value": "93.95.112.54"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7e492bf6-c1a3-4437-8626-f0af04fb7bed",
+      "value": "93.95.112.55"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "value": "93.95.112.59"
+    },
+    {
+      "type": "software",
+      "id": "software--402e153f-f3d9-4b00-98cd-a44b1b7143a6",
+      "name": "Kimwolf",
+      "cpe": "cpe:/a:kimwolf"
+    },
+    {
+      "type": "software",
+      "id": "software--b5c08b70-60f9-4ebb-87e1-29e8449487fb",
+      "name": "Aisuru",
+      "cpe": "cpe:/a:aisuru"
+    },
+    {
+      "type": "software",
+      "id": "software--eb8a8ec3-7d45-4212-bc95-87419698c94f",
+      "name": "ByteConnect SDK"
+    },
+    {
+      "type": "software",
+      "id": "software--e846d91d-de2b-4fd0-bb95-f97251e4d128",
+      "name": "Command Client"
+    },
+    {
+      "type": "x-ethereum-smart-contract",
+      "id": "x-ethereum-smart-contract--781297a9-d601-4e62-bd73-d6392ac392a1",
+      "address": "0xde569B825877c47fE637913eCE5216C644dE081F",
+      "ens_domain": "pawsatyou.eth"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--791985f5-7e6c-49db-b939-228073f3c821",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf uses DNS over TLS (DoT) for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--914c9499-a606-4048-9bbb-90651b1a2107",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf uses blockchain-based C2 infrastructure (ENS/EtherHiding) for resilient command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe50ec66-49c5-42e6-a4bb-beb789781413",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf uses elliptic curve digital signature for C2 authentication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fbb54c59-8c22-4791-a4b0-8fc2d5368299",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf encrypts sensitive strings using Stack XOR string encryption."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--615c9b0f-adc3-461c-b5b5-b10e23c436a2",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf controls single instance execution via Unix domain socket."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf5648a3-b0e3-4267-85b9-7fe5b85a3e0f",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf uses TLS-encrypted C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2341c2d7-a917-42d4-a9f3-09270e6f39a5",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf supports Mirai-style DDoS attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64daab6a-c24f-4cba-8911-e713bfc5e1fe",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "attack-pattern--44444b34-34b7-4f0f-88d5-f4b6d75ed340",
+      "description": "Kimwolf monetizes infected devices via ByteConnect SDK proxy network."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec094318-72e4-4057-87ad-8978f7ea86b6",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Kimwolf is closely associated with Aisuru, sharing code, infrastructure, and operators."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0cf6eed-f9c1-45c1-a55b-31cdf6de67ef",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Kimwolf uses ByteConnect SDK for proxy monetization."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1614a8d-389d-447d-80bb-71c19670d215",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Kimwolf uses Kimwolf Command Client for proxy network operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f22d75a-11e9-4e24-8b2c-ba83118af07b",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "description": "Kimwolf is delivered via Downloader Script."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6da46051-1a14-4271-9231-73698c8a7bf1",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain 14emeliaterracewestroxburyma02132.su."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50b3ab64-cac2-4365-9cda-edbe1ac5cdeb",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain nnkjzfaxkjanxzk.14emeliaterracewestroxburyma02132.su."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66c64b9c-059d-4f06-aadf-72a6e48d95dc",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain rtrdedge1.samsungcdn.cloud."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--270bdafb-1f16-42ed-9bab-c2a6b914af9d",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain staging.pproxy1.fun."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69f01b8d-9873-4195-bec7-7905f7f07d65",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain pawsatyou.eth (ENS)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff28b7b9-fff1-4aea-a5c5-88b9d480c80b",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain fuckbriankrebs.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--946559b6-8af2-4f75-a0f5-b3519273b908",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf uses C2 domain fuckyoukrebs1.briankrabs.seanobrien[redacted]ssn[redacted].su."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cede2ba4-791d-4c7a-9c51-472b35a1065c",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf Command Client uses proxy-sdk.14emeliaterracewestroxburyma02132.su as C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d61ecbe-d88b-4d76-8dfc-4fe6e1ba9c2c",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "domain-name--a05bfb27-70b8-47a6-9616-6cd633136689",
+      "description": "Kimwolf Command Client uses sdk-bright.14emeliaterracewestroxburyma02132.su as C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbe9893b-6549-4642-b957-d1dd2463dec6",
+      "relationship_type": "delivers",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Downloader Script delivers Kimwolf."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dc145baf-fa44-4216-a462-33e9c50b820c",
+      "relationship_type": "delivers",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Downloader Script delivers Aisuru."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1115117a-e0cc-47d5-923d-94e5b94d5327",
+      "relationship_type": "delivers",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Downloader Script delivers ByteConnect SDK."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce6fc894-45fe-405a-af0b-3ed23259a2f5",
+      "relationship_type": "delivers",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "description": "Downloader Script delivers Kimwolf Command Client."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e95e4ae-f1c7-47ea-a8f3-6cbd9acda7c1",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "x-ethereum-smart-contract--781297a9-d601-4e62-bd73-d6392ac392a1",
+      "description": "Kimwolf uses Ethereum smart contract for ENS domain pawsatyou.eth."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d69d7f51-434e-48bb-a76a-55ba05deb3af",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "intrusion-set--1ef7a21d-761f-4ed9-b9ce-2d5ad22b7f1f",
+      "description": "Kimwolf is operated by the Kimwolf/Aisuru Group."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--18224ab0-528d-42a8-8aa0-e44a9c717bc0",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "intrusion-set--1ef7a21d-761f-4ed9-b9ce-2d5ad22b7f1f",
+      "description": "Aisuru is operated by the Kimwolf/Aisuru Group."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33261b78-0878-42b7-95c9-f86e02c92b57",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file 887747dc1687953902488489b805d965 (aisuru.apk)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7919f2f-7e24-463c-a606-ec1acc336a46",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file b688c22aabcd83138bba4afb9b3ef4fc (aisuru.apk)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4fcf811-7d2b-48a1-99f6-fc5286f277f2",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file 8011ed1d1851c6ae31274c2ac8edfc06."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65e2b36e-faa6-4428-b876-3703ea3a24f3",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file 2078af54891b32ea0b1d1bf08b552fe8."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a4fe85f-caf4-4b44-aaa0-baa52588b2f1",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file 1c03d82026b6bcf5acd8fc4bcf48ed00."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d234fee7-7b7a-4c98-b522-73af96bf3427",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file 726557aaebee929541f9c60ec86d356e."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c727d592-5af0-4c49-8fb8-2a50666fae18",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file bf06011784990b3cca02fe997ff9b33d."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d12cb5e5-3d22-4fd8-8c67-1e1eb8c6736c",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf uses file d086086b35d6c2ecf60b405e79f36d05."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b523e55-965d-43c1-a6a6-547e794a3666",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf Command Client uses file b1d4739d692d70c3e715f742ac329b05."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd865fa1-5b3b-4c79-8adb-d7d29203054b",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf Command Client uses file 5490fb81cf24a2defa87ea251f553d11."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1499cf4-be70-4a62-8898-1b1cf510633b",
+      "relationship_type": "uses",
+      "source_ref": "malware--2d26a76c-ca6f-4561-a9ae-63be9f24c189",
+      "target_ref": "file--19c8b436-257c-41bf-af74-8405c886a2e7",
+      "description": "Kimwolf Command Client uses file cf7960034540cd25840d619702c73a26."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f26f945-7c47-4535-8e13-8c66630f7b9e",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.59."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8af52f3-9783-490b-ad8b-6d43ab336a3e",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.50."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25892862-0bf3-492d-87f5-a25bbbbc48ed",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.51."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9567fde7-f711-49e5-8e71-d65761fde966",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.52."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d283f15-a0ca-4548-b577-553201e0a6d6",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.53."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33c9ff05-c1bb-4ad2-a0ea-0e5b1c32baba",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.54."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fb91856-91d2-47b5-8e35-f03088dc7de2",
+      "relationship_type": "uses",
+      "source_ref": "tool--1c17bc67-aaf9-4199-aced-b6d9b9e0f94f",
+      "target_ref": "ipv4-addr--58e0e232-24e7-4958-b61a-d06207048dd0",
+      "description": "Downloader Script observed on server 93.95.112.55."
+    }
+  ]
+}

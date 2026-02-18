@@ -1,0 +1,447 @@
+{
+  "type": "bundle",
+  "id": "bundle--6c5e7650-e881-4e5e-af29-a4c49ab20aa0",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--749d3792-a4cc-4f3b-bac0-05fdfc9420ad",
+      "name": "VNC-Based Remote Access",
+      "description": "Malware installs and activates a VNC-based remote access module, enabling real-time interaction and full device takeover. Attackers use this to control the device UI, perform fraudulent transactions, and monitor user activity.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--24c7b097-38c8-406f-a3b0-f159c6cadd02",
+      "name": "Overlay Attack",
+      "description": "Malware deploys overlay screens to impersonate legitimate applications or system updates, harvesting credentials such as banking passwords and crypto wallet seed phrases. Overlays include system update screens, black screens for concealment, and targeted overlays for specific financial apps.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7052e4ed-5dd5-471f-8809-7c867734fdb9",
+      "name": "Dropper Application",
+      "description": "Malware uses dropper applications distributed via social engineering lures and fake Google Play pages. The dropper obtains critical permissions and installs the final payload on the compromised device.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--811ebfcd-30b1-4c97-8c32-9c7b2b081fac",
+      "name": "On-Device Fraud (ODF)",
+      "description": "Malware enables attackers to execute fraudulent actions directly within legitimate banking or cryptocurrency apps on the victim's device, bypassing authentication and fraud-detection mechanisms.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b24dcec6-0fd2-495d-be45-1cb204522f1f",
+      "name": "Accessibility Abuse",
+      "description": "Malware abuses Android Accessibility Services to gain enhanced control over the device, interact with UI elements, and bypass screen recording protections such as FLAG_SECURE.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--06f3e775-6573-4a39-b0aa-f6e7bb0ae5f5",
+      "name": "Command and Control via TCP Socket",
+      "description": "Malware establishes persistent C2 communication over unencrypted TCP sockets, using structured JSON objects for command parsing and data exfiltration. Implements handshake, heartbeat, and various device manipulation commands.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3f186637-3c59-40e1-b2db-fe74d1469943",
+      "name": "Obfuscated Delivery and Dynamic Unpacking",
+      "description": "Malware employs code obfuscation and dynamic unpacking techniques (e.g., JSONPacker) to evade static detection during initial installation and payload delivery.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91",
+      "name": "Credential Harvesting",
+      "description": "Malware targets banking and cryptocurrency applications using overlays and remote access to harvest user credentials, including passwords and seed phrases.",
+      "x_mitre_platforms": [
+        "Android"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--36147b43-4b97-4340-a3f6-f9a097a6dacc",
+      "name": "Albiriox C2 Server",
+      "description": "C2 infrastructure for Albiriox malware, using persistent TCP socket connections for command and control.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "ip_addresses": [
+        "194.32.79.94"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cleafy",
+          "url": "https://www.cleafy.com/eura"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "name": "Albiriox Delivery Infrastructure",
+      "description": "Phishing and malware delivery infrastructure using domains that impersonate Google Play Store for distributing dropper APKs.",
+      "infrastructure_types": [
+        "malware-distribution"
+      ],
+      "domain_names": [
+        "google-app-download.download",
+        "google-get.download",
+        "google-aplication.download",
+        "play.google-get.store",
+        "google-app-get.com",
+        "google-get-app.com",
+        "google-app-install.com"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cleafy",
+          "url": "https://www.cleafy.com/eura"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--218d7e2c-1188-42f1-ba21-3607b3452b71",
+      "name": "Russian-speaking Threat Actors",
+      "description": "Suspected developers and operators of Albiriox, active in Russian-speaking cybercrime forums and Telegram channels.",
+      "identity_class": "individual",
+      "sectors": [
+        "financial-services",
+        "cryptocurrency"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cleafy",
+          "url": "https://www.cleafy.com/eura"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--1d412d04-cb84-4817-835e-e8c541cbc76e",
+      "name": "PENNY (dropper)",
+      "hashes": {
+        "MD5": "b6bae028ce6b0eff784de1c5e766ee33"
+      },
+      "extensions": {
+        "android-app-ext": {
+          "package_name": "com.example.myapplication"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--994b15bb-ce24-4948-b4a7-20d6a44dd144",
+      "name": "PENNY (dropper)",
+      "hashes": {
+        "MD5": "61b59eb41c0ae7fc94f800812860b22a"
+      },
+      "extensions": {
+        "android-app-ext": {
+          "package_name": "com.example.myapplication"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3546a2ee-2f30-4cee-818d-85bdfc9a410e",
+      "name": "PENNY (dropper)",
+      "hashes": {
+        "MD5": "f09b82182a5935a27566cdb570ce668f"
+      },
+      "extensions": {
+        "android-app-ext": {
+          "package_name": "com.example.myapplication"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d0d5f30e-15e1-4ca1-8bd0-50ff266a7c2d",
+      "name": "nmz.nmz",
+      "hashes": {
+        "MD5": "f5b501e3d766f3024eb532893acc8c6c"
+      },
+      "extensions": {
+        "android-app-ext": {
+          "package_name": "com.nmz.nmz"
+        }
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--98d279bd-b3d6-4966-b1f5-775aed507438",
+      "value": "194.32.79.94"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bda3d84e-0ef1-470a-80fb-259a8284dc8c",
+      "value": "google-app-download.download"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6ff82253-5c57-442c-8083-d6d5274f2f4d",
+      "value": "google-get.download"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--60d88d82-4408-4d68-ac92-f52d7f9023d9",
+      "value": "google-aplication.download"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d4850109-2a6c-43c6-982f-274b1d8b5be4",
+      "value": "play.google-get.store"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e67b7f05-7306-4c93-b901-96ce06cff3d8",
+      "value": "google-app-get.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4e3425ac-5b89-492f-80df-0b22d5d6b92e",
+      "value": "google-get-app.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9",
+      "value": "google-app-install.com"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f86af57c-b4cb-4461-9e51-a7d0c34f1fbf",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--102770b6-a1eb-4d8f-bed5-8250d6113ac0",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--516231df-2f12-447e-a718-1da1dfe72b18",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ac2c2c5-22d7-4fa3-b3ed-72d599f3e00c",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eab649b3-72d3-47ef-a74a-80744cd8dbab",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--325d6819-a4ce-4164-80aa-cd891feb361d",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c52e19b-d4f4-4e2c-8bea-940e1777fc55",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2684011a-3197-41d3-ad7a-b325fe323a46",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1550502d-a2b6-41e5-8daf-32587757c641",
+      "relationship_type": "targets",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "campaign--15f5966a-9463-43b4-b876-48a02bf2c4e1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2882a1e-c52e-47f1-baec-ad6f66a6435d",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--688deba1-cd04-4b98-9d35-662dd6a42eeb",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1801b9a-dfa0-4bb0-8eac-153f755175a4",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "identity--218d7e2c-1188-42f1-ba21-3607b3452b71"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cffbb7ac-4cef-4be0-a20e-ff696944340a",
+      "relationship_type": "delivers",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--122d53bf-f302-4817-9ee0-72b9b3a06b1a",
+      "relationship_type": "delivers",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a57096ab-ebb2-43ce-b9d8-b54f967a5ac9",
+      "relationship_type": "delivers",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a28a059-77a1-4244-82c9-b644c874a3f8",
+      "relationship_type": "delivers",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--78342bad-e4ef-4c0c-b6e0-4d5668d27225",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4892dd9-cf5f-4038-b58c-d27e18cf9350",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "file--d0d5f30e-15e1-4ca1-8bd0-50ff266a7c2d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7aa84e04-bf49-4420-a3db-ca20215fc3f6",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "file--d0d5f30e-15e1-4ca1-8bd0-50ff266a7c2d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec1d82e7-9c3d-4753-9b4a-326f5192cc6a",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "file--d0d5f30e-15e1-4ca1-8bd0-50ff266a7c2d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb367ff3-09dc-48f4-8b15-98bc9c00f1aa",
+      "relationship_type": "related-to",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "file--d0d5f30e-15e1-4ca1-8bd0-50ff266a7c2d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddd73d36-fdaf-49d4-b582-39bf73f711ab",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "network-traffic--45e10147-ba45-4028-8418-20a5714868b3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a746e9f-8cac-46a6-ae92-4b87dc26bd99",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "ipv4-addr--98d279bd-b3d6-4966-b1f5-775aed507438"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b23e4c3-0fd3-45b9-bf8f-40dad47037dc",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1830cb43-b064-49a4-9c42-b10e30fb3895",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dbbe0d52-cf2b-4d11-baaa-8961498a23ae",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a3a29c8-393a-4669-80b1-fc6f16ffb091",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4047d95c-1fe6-402d-8ea5-832064e2b4f7",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3bd7465c-5207-4f48-b42a-8d22b54119fa",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce02d875-5d7a-42aa-9ff0-8fcf1a165842",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--24c02129-e5d2-478a-a228-f3a8a5066bd1",
+      "target_ref": "domain-name--d5b469f1-e0ee-4f6b-b7fc-b8ed1fa59aa9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00a7df5d-4afd-4591-9203-d7aa4d535fd7",
+      "relationship_type": "uses",
+      "source_ref": "malware--7c9b2588-83d2-4434-b1ef-668b63c7030d",
+      "target_ref": "attack-pattern--65786e8d-3545-4b8b-92a6-76efb902ba91"
+    }
+  ]
+}

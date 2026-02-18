@@ -1,0 +1,95 @@
+{
+  "type": "bundle",
+  "id": "bundle--5a539661-2c09-4f3c-be3a-cc6043b4048d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "name": "CVE-2025-55182",
+      "description": "Critical vulnerability in the Flight protocol used by React Server Components, allowing unsafe deserialization and arbitrary code execution on the server. Affects react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack versions 19.0, 19.1.0, 19.1.1, 19.2.0. Fixed in 19.0.1, 19.1.2, 19.2.1.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-55182"
+        },
+        {
+          "source_name": "React Blog",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--999c920d-4646-4871-a9ea-56b707cf932f",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "XMRig is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe14faea-117f-4d9f-9eda-6cea8157e7ff",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "RustoBot is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22ffec49-233b-4e14-adcb-fa9248075dac",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "Kaiji is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2bc676e6-f7f0-4a68-9ce0-b56bc69c4613",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "Sliver is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0915a6d1-3238-4d47-8294-98a252066e8a",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "CrossC2 Cobalt Strike is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7f21d6e-b6b9-4666-ab15-3988142f27ce",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "Tactical RMM is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00a18f97-43a4-4767-a07f-2c61ad7b95d5",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "VShell is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5aa9d432-2c40-4f21-8e00-915bd277a628",
+      "relationship_type": "exploits",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "vulnerability--52566596-c1cb-4c98-a6ad-de485bedf153",
+      "description": "EtherRAT is deployed in attacks exploiting CVE-2025-55182 (React2Shell)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f731509e-1668-43ad-ba31-3278f60d8298",
+      "relationship_type": "drops",
+      "source_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "target_ref": "malware--b56b0597-45ae-4544-9f41-471ca030a23c",
+      "description": "RustoBot drops XMRig miner as part of its infection chain."
+    }
+  ]
+}

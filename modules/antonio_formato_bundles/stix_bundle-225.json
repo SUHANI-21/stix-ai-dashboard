@@ -1,0 +1,702 @@
+{
+  "type": "bundle",
+  "id": "bundle--567db604-1922-495d-be60-c06d0463069c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "name": "bridle.exe",
+      "hashes": {
+        "SHA-256": "aa49d14ddd6c0c24febab8dce52ce3835eb1c9280738978da70b1eae0d718925"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--1d5f8f32-1ecb-4ebf-adca-dc7d836f5aaf",
+      "value": "https://upload.bullethost.cloud/download/68f55d7834645ddd64ba3e3e"
+    },
+    {
+      "type": "url",
+      "id": "url--5ee82165-6415-41ac-8a17-b1809adee9f5",
+      "value": "https://upload.bullethost.cloud/download/68f5503834645ddd64ba3e17"
+    },
+    {
+      "type": "url",
+      "id": "url--256fa73f-e55b-46d1-b48b-1f283ec5f203",
+      "value": "https://upload.bullethost.cloud/download/68f775f734645ddd64ba99f4"
+    },
+    {
+      "type": "url",
+      "id": "url--703d874d-c127-431d-9b9f-37505b789e1d",
+      "value": "https://upload.bullethost.cloud/download/68f77d1134645ddd64ba9a5e"
+    },
+    {
+      "type": "url",
+      "id": "url--6e88d5e2-c4d2-4a75-9251-20996e5a09e3",
+      "value": "https://upload.bullethost.cloud/download/68f7b14734645ddd64ba9b6e"
+    },
+    {
+      "type": "url",
+      "id": "url--9f894665-e319-4588-9f74-ef3cd6c728d2",
+      "value": "https://upload.bullethost.cloud/download/68f7c68a34645ddd64ba9b9d"
+    },
+    {
+      "type": "url",
+      "id": "url--ff11e14f-8ac1-4e70-8017-dda5b9f915ba",
+      "value": "https://upload.bullethost.cloud/download/68f7de3834645ddd64ba9c00"
+    },
+    {
+      "type": "url",
+      "id": "url--aa54a8de-5c0c-46d8-b620-a277f08f9bd9",
+      "value": "https://files.catbox.moe/awktpw.zip"
+    },
+    {
+      "type": "url",
+      "id": "url--a01ee464-22f4-459d-8eda-6ca2588622f9",
+      "value": "https://nv.d.khabeir.com"
+    },
+    {
+      "type": "url",
+      "id": "url--d9998823-1062-43a2-aa5a-225fa6278945",
+      "value": "https://telegram.me/s/sre22qe"
+    },
+    {
+      "type": "url",
+      "id": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "value": "https://steamcommunity.com/profiles/76561198777118079"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--143f4e5c-46c8-400e-ae07-6735bce49228",
+      "value": "a.t.rizbegadget.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fdc81927-be5d-430f-802c-733e2ac9f9b8",
+      "value": "cvt.technicalprorj.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--295ab736-d61d-499c-b88e-6d45ddbee1d4",
+      "value": "ftp.nadimgadget.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ce498459-3167-4608-8deb-2879db709a83",
+      "value": "gor.technicalprorj.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c48824d-65d5-4445-97a3-4b566a9afd48",
+      "value": "gra.khabeir.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a1cd5243-5de6-4863-9c8e-5f1defd8ad2a",
+      "value": "gra.nadimgadget.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--46bcfeb4-d7ec-4f14-a0a4-0773944e336d",
+      "value": "gz.technicalprorj.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--665d7127-efbf-447e-80b9-50036c62234f",
+      "value": "iu.server24x.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fc34604c-6b10-429d-81ae-930275799618",
+      "value": "p.x.rizbegadget.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c19325a0-da07-4497-aa36-fa2f490e03ad",
+      "value": "stg.mistonecorp.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--39a1b9ef-cebb-49ed-a3cb-60d4ace888a3",
+      "value": "stg.server24.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--906e6aa2-6964-4cd1-b29a-2d2079b2a61c",
+      "value": "stg.server24x.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a83969d2-33db-4f3d-8780-6df86f632c95",
+      "value": "t.y.server24x.com"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--a05e8246-3fb7-4295-9220-ae294020e4e2",
+      "account_login": "aartje",
+      "account_type": "npm",
+      "email": "aartrabens@gmail.com"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "account_login": "saliii229911",
+      "account_type": "npm",
+      "email": "saliii229911@gmail.com"
+    },
+    {
+      "type": "software",
+      "id": "software--dfad822b-c137-4255-8f00-0d8e729b0a3c",
+      "name": "abeya-tg-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--3d162744-6143-468a-89fd-7404de843c80",
+      "name": "bael-god-admin",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--6993792c-377f-44eb-beef-64d5d1da4279",
+      "name": "bael-god-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--fbb5c484-ab71-4926-818d-c23a05503c7b",
+      "name": "bael-god-thanks",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--30211876-e518-4d14-a6f6-9b87ec356870",
+      "name": "botty-fork-baby",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--cab950de-859a-4acf-956e-b180971efaaf",
+      "name": "cursor-ai-fork",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--cb9a7e56-cb4d-4cd0-a277-993f0074ae3d",
+      "name": "cursor-app-fork",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--0789f57f-50fa-45c4-bd1c-6d6fa4840033",
+      "name": "custom-telegram-bot-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--9809dd69-3363-4c9c-8347-9b7492444620",
+      "name": "custom-tg-bot-plan",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--0d8aa0bf-c890-43ea-90d8-08933cfdf05f",
+      "name": "custom-tg-bot-plan",
+      "cpe": "",
+      "version": "1.0.1"
+    },
+    {
+      "type": "software",
+      "id": "software--e2bece69-e1d9-42f1-88a7-3c23cf5d39f8",
+      "name": "icon-react-fork",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--d31dfe1a-0b73-44e8-acfa-6837c9119e10",
+      "name": "react-icon-pkg",
+      "cpe": "",
+      "version": "1.3.9"
+    },
+    {
+      "type": "software",
+      "id": "software--014239cf-a490-4b9e-b14d-b0370c1577a9",
+      "name": "react-icon-pkg",
+      "cpe": "",
+      "version": "1.4.2"
+    },
+    {
+      "type": "software",
+      "id": "software--76cdbe01-8e81-4512-9f46-b287fdcb2d14",
+      "name": "react-icon-pkg",
+      "cpe": "",
+      "version": "1.4.9"
+    },
+    {
+      "type": "software",
+      "id": "software--f7ba1488-9283-44ae-b832-dd0efe2b684c",
+      "name": "react-icon-pkg",
+      "cpe": "",
+      "version": "1.5.2"
+    },
+    {
+      "type": "software",
+      "id": "software--440a2e37-a3c7-4284-895a-71a958c22e7a",
+      "name": "sabaoa-tg-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--3b6f7ffc-d4f5-44a1-90bc-f265664a5d27",
+      "name": "sabay-tg-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--fe675fc2-6d13-4285-b27b-db744b279ff0",
+      "name": "sai-tg-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--d89bc0a4-c9f7-4c5d-8b27-31a9dbad9d59",
+      "name": "salli-tg-api",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--0a8e4ec9-7e39-4ca0-8054-1f14e9f3db89",
+      "name": "telegram-bot-start",
+      "cpe": "",
+      "version": "1.0.0"
+    },
+    {
+      "type": "software",
+      "id": "software--4be98a26-d046-4bd9-8e27-1b6adb306bc7",
+      "name": "telegram-bot-starter",
+      "cpe": "",
+      "version": "1.2.5"
+    },
+    {
+      "type": "software",
+      "id": "software--706cf77a-1d2b-4423-b7d1-3c62b1f8d327",
+      "name": "telegram-bot-starter",
+      "cpe": "",
+      "version": "1.2.6"
+    },
+    {
+      "type": "software",
+      "id": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "name": "telegram-bot-starter",
+      "cpe": "",
+      "version": "1.2.7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fbe42b9-0838-4177-8143-6eb4aaa6b868",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "custom-tg-bot-plan@1.0.1 downloads a ZIP archive from this URL as part of its postinstall script."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f5167bc-72a3-4109-9d74-021319830916",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "custom-tg-bot-plan@1.0.1 downloads a ZIP archive from this URL as part of its postinstall script (PowerShell variant)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0f8ec9c-73a6-45e8-86e6-e42828be2e12",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5ba45ba-0ef4-4eb2-85f1-44f129f45d0f",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed2c89b8-0570-43bf-bd28-80816f60caec",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72f47b82-a6d1-48cf-94eb-98979aebe9c1",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86abc192-cfd3-41b3-b4aa-e9881bb1d51e",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddb4d136-89ec-4921-8ce1-1fba464af26d",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--585d058e-906b-4448-b8be-c23bf79c7e93",
+      "relationship_type": "downloads",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "url--65a13a7e-5785-4f40-9e32-a9a6eb8b84ff",
+      "description": "Other campaign packages download Vidar payload ZIP from this URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b372ab28-b8cd-4eae-9a41-4913dc1b1062",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "custom-tg-bot-plan@1.0.1 extracts and executes bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4606383f-1da5-4829-b21d-27702f055b01",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de589c08-aaf3-43cf-b880-a98921136ff8",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0130505-e7b0-4b9a-a26c-a60ffe17146c",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e150b560-3287-41ca-bd74-05528bf0eedf",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4dbafe54-ac50-4d2b-a886-a28b44710498",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--68ced7bd-9fc5-4e99-8db0-2f237154f239",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e0c4893-be4f-4dd1-a199-ad517724d5c5",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f126174e-dac6-4294-beaf-3e3ac8da0cb6",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8f8737d-88aa-4f0a-ab28-ffb4649d5861",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e16c584b-7197-41fb-8d91-9329e1f3ecd1",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fffc07a1-db14-4aa1-ba6b-3ffb120d7976",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c02dc5d-4b8c-4692-a03e-7a72b7f11e0b",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6482da57-b925-4ffc-a991-e0f6d694646f",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--654fdcd7-d069-4ac3-a81e-5cadf941d4c6",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c346e887-9db8-4832-809d-824d4fda06e9",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dbc5c5a9-c17c-4f5d-9017-e7957584fbcb",
+      "relationship_type": "drops",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "file--ed1215dd-1fe9-440a-81d4-b56bc20a1678",
+      "description": "Other campaign packages extract and execute bridle.exe (Vidar infostealer) from the downloaded ZIP archive."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8090858a-1be9-4194-89d8-b0d58078617a",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "abeya-tg-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2052db32-a0f9-43f7-9a6b-ca2ad33080f7",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "bael-god-admin@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fffb3869-fc1a-4af2-bb4e-187a69e91599",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "bael-god-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--936aff82-2a1a-4fa0-a0fe-f1f2ba359c2e",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "bael-god-thanks@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a48d7552-ec66-4453-a313-d41eb41e99d2",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "botty-fork-baby@1.0.0 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6d31499d-9b2d-48d1-b1c0-ff77032d341d",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "cursor-ai-fork@1.0.0 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb0676af-4df8-476f-b9ad-c06953ca1520",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "cursor-app-fork@1.0.0 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e1e891d-994c-44ee-841a-d1a192cd9330",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "custom-telegram-bot-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0cc4cfab-4df7-49e4-9f9c-142a5592e13c",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "custom-tg-bot-plan@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d2f79e7-89fe-4c36-bacf-b511ab292897",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "custom-tg-bot-plan@1.0.1 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e702a68-a850-4d4b-9b6d-434ed410aece",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "icon-react-fork@1.0.0 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a0eedde-9ad7-4937-bfbd-9fdc043160b5",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "react-icon-pkg@1.3.9 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8ca74d0-610e-480e-ae0e-6ba672ebf1e2",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "react-icon-pkg@1.4.2 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2589af79-4ae7-4b82-8b19-ab32639b0513",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "react-icon-pkg@1.4.9 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b1c88c1-9ed4-4c6d-b58b-c4631333fb3e",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "react-icon-pkg@1.5.2 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e5d0f43-84b7-4626-903a-079a96d4ed48",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "sabaoa-tg-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02d43db1-3a73-4519-9c0c-b26827c92b09",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "sabay-tg-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2cd8e8a6-00d3-40d4-b1ec-14444f76fcd2",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "sai-tg-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57d9a942-6582-4c7a-9b92-52de2b3bafb6",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "salli-tg-api@1.0.0 was authored by npm user saliii229911."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc4cd69b-3985-4c28-b7c4-72c670dfb14a",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "telegram-bot-start@1.0.0 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9527b779-a6a0-4b5e-b9c6-4beb224bad30",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "telegram-bot-starter@1.2.5 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72a39eaf-d97a-4c95-92be-c9c065eab1d3",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "telegram-bot-starter@1.2.6 was authored by npm user aartje."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cca83da4-65c9-4002-82de-61e6642c64dc",
+      "relationship_type": "authored-by",
+      "source_ref": "software--b63be8c2-2765-4894-8cd2-07f4440fb7e3",
+      "target_ref": "user-account--d4ff1981-8f53-4779-8e71-794efa4486d3",
+      "description": "telegram-bot-starter@1.2.7 was authored by npm user aartje."
+    }
+  ]
+}

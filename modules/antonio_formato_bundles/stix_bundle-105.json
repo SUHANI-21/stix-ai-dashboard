@@ -1,0 +1,355 @@
+{
+  "type": "bundle",
+  "id": "bundle--e43a82af-87d7-4c76-a873-071b254a1d0b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--bddb0b9b-dbdf-43c3-8ce8-c0818ce627bb",
+      "name": "CVE-2025-43529",
+      "description": "WebKit use-after-free remote code execution flaw exploitable by processing maliciously crafted web content."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7bb277a7-8997-4c8e-8f26-8abaa4a19c81",
+      "name": "CVE-2025-14174",
+      "description": "WebKit memory corruption flaw that could lead to memory corruption; also identified as out-of-bounds memory access in ANGLE in Google Chrome."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--91006915-bc84-4d9c-b274-cbea89d975e2",
+      "name": "CVE-2025-24085",
+      "description": "Zero-day vulnerability patched by Apple in January 2025."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--5cf7fef8-6a35-4ea5-add0-4a5869f08ce8",
+      "name": "CVE-2025-24200",
+      "description": "Zero-day vulnerability patched by Apple in February 2025."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2fed6557-1761-465d-846c-eb0a7dc887be",
+      "name": "CVE-2025-24201",
+      "description": "WebKit zero-day vulnerability patched by Apple in March 2025."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--206c6511-269f-490b-963c-616bfd8ea2d4",
+      "name": "CVE-2025-31200",
+      "description": "Zero-day vulnerability patched by Apple in April 2025."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--68931337-75a8-405b-9021-1ee887a8c4db",
+      "name": "CVE-2025-31201",
+      "description": "Zero-day vulnerability patched by Apple in April 2025."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "name": "CVE-2025-43300",
+      "description": "Zero-day vulnerability backported by Apple in September 2025 for older devices running iOS 15.8.5 / 16.7.12 and iPadOS 15.8.5 / 16.7.12."
+    },
+    {
+      "type": "software",
+      "id": "software--17e9e67c-f4d2-4576-b049-28be7268a826",
+      "name": "WebKit",
+      "description": "Browser engine used by Apple Safari and Google Chrome on iOS."
+    },
+    {
+      "type": "software",
+      "id": "software--7d875f31-6390-454a-9c01-f3b6475a1edf",
+      "name": "Safari",
+      "description": "Web browser developed by Apple."
+    },
+    {
+      "type": "software",
+      "id": "software--65a7c994-996e-4fc8-82dd-58d00ac04f6e",
+      "name": "Google Chrome",
+      "description": "Web browser developed by Google."
+    },
+    {
+      "type": "software",
+      "id": "software--21bc2a3c-43cc-4e9e-ae39-0d252afb204a",
+      "name": "ANGLE",
+      "description": "Graphics engine used in Google Chrome."
+    },
+    {
+      "type": "software",
+      "id": "software--ace39b2c-410a-4494-9cf6-6643172a5963",
+      "name": "iOS",
+      "description": "Operating system for iPhone and iPad devices."
+    },
+    {
+      "type": "software",
+      "id": "software--4ece2020-37c3-4819-a008-6d775dc468a0",
+      "name": "iPadOS",
+      "description": "Operating system for iPad devices."
+    },
+    {
+      "type": "software",
+      "id": "software--67443be3-747d-4b79-a753-e432d61cee9b",
+      "name": "macOS Tahoe",
+      "description": "Operating system for Apple Mac computers."
+    },
+    {
+      "type": "software",
+      "id": "software--b0c58097-5180-4e07-86f9-093566c095d9",
+      "name": "tvOS",
+      "description": "Operating system for Apple TV devices."
+    },
+    {
+      "type": "software",
+      "id": "software--bd27dab7-d323-43ba-86a0-52837fd544c2",
+      "name": "watchOS",
+      "description": "Operating system for Apple Watch devices."
+    },
+    {
+      "type": "software",
+      "id": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "name": "visionOS",
+      "description": "Operating system for Apple Vision devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9384491f-30c8-47a9-9ac1-be811baa46ca",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "WebKit contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--895fca09-62ea-4f4d-99ef-53d82f5d3352",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "WebKit contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e73d7c5a-a370-492e-b20a-30dc0403a06a",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "Safari contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3cfeac85-82f9-4fce-9414-4f7e7281dda9",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "Safari contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4ef3f6e-27a4-43c4-8fd8-6674a287bc45",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "Google Chrome contains vulnerability CVE-2025-14174 as out-of-bounds memory access in ANGLE."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75721298-6105-483b-85d1-00b041258e01",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--226724bd-fa60-4082-8232-ecb6a13106e5",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfde8a4e-512c-425b-950c-9f6acff94b4b",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-24085."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5a6861d-8b9b-4f52-ba4b-7ccef6e4d272",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-24200."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77d6b525-cabd-48ef-911f-b14b5dcfcccf",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-24201."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e18a5316-1784-4bce-b92f-16ab31870f01",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-31200."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e12ed535-034e-42ae-bf46-5684fc7c2c0e",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-31201."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ce7292c-6f91-4c7a-9fff-dac4f50de54f",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iOS contains vulnerability CVE-2025-43300."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e276777a-c52c-4dc7-96ea-eb104a892dea",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d42a5b0-1b98-43e5-8ec6-767dae42e3c6",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7404afa3-7c59-4174-a702-4bdf087a7241",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-24085."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f66a712-9c73-4723-8561-de93ada6de30",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-24200."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6194aec-9b24-4389-97f5-e269c8a96cf8",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-24201."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0165a0d4-2d13-4b1a-a0ce-e74c7881177d",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-31200."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e43a5276-3ae4-4ca7-bedc-ff4d15cfa5e2",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-31201."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c537d2e1-980a-4f7a-9687-4a21cb979e72",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "iPadOS contains vulnerability CVE-2025-43300."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0683a8e7-3b08-4105-894d-47f7c94c218b",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "macOS Tahoe contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67f4f627-5e0f-4b07-bc3e-9c8167d7cef7",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "macOS Tahoe contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d83f8b92-c2bf-47f0-be2f-5e3d98077342",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "tvOS contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e06b738c-3327-4862-acf8-13a88687ed3d",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "tvOS contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05d3b166-1471-4772-bf8c-9ccc184bd65d",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "watchOS contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a8ceeb7-c381-4931-9090-b086765287d7",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "watchOS contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19308485-804e-4d51-8035-64e8cc5b5d5c",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "visionOS contains vulnerability CVE-2025-43529."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--047ba4b2-e644-472a-9684-3e1a181859a8",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "visionOS contains vulnerability CVE-2025-14174."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa27c30a-bbcc-4fe8-a2af-ce1d78ad6cb3",
+      "relationship_type": "has",
+      "source_ref": "software--f199fee0-c9a2-4759-8e96-456a6b884d07",
+      "target_ref": "vulnerability--8a05905a-5c65-4190-919e-fc1374122c5d",
+      "description": "ANGLE contains vulnerability CVE-2025-14174."
+    }
+  ]
+}

@@ -1,0 +1,751 @@
+{
+  "type": "bundle",
+  "id": "bundle--2b310108-362a-48fe-8436-4bffc3c920ad",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "created": "2026-01-14T06:12:19.793702Z",
+      "modified": "2026-01-14T06:12:19.793702Z",
+      "name": "Infoblox",
+      "description": "Infoblox is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T06:12:19.793702Z",
+      "modified": "2026-01-14T06:12:19.793702Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T06:12:19.793702Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--40440693-5b4b-e2f8-abac-911f0343e385",
+      "created": "2026-01-14T06:12:41.387678Z",
+      "modified": "2026-01-14T06:12:41.387678Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Abuse of Residential Proxy Services for Network Probing",
+      "description": "Kimwolf operators leverage residential proxy services to relay malicious commands and probe for vulnerable devices on local Wi-Fi networks. By exploiting the infrastructure of proxy networks, which route traffic through consumer devices and ISPs, Kimwolf masks its scanning activity as legitimate residential traffic. This technique allows the botnet to bypass traditional perimeter defenses and reach internal networks that would otherwise be inaccessible from the public internet. The abuse is facilitated by compromised devices and mobile apps that unwittingly enroll endpoints into proxy networks, turning them into scanning nodes. This approach enables large-scale, distributed reconnaissance and lateral movement attempts, targeting a wide range of organizations across multiple industries.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--fbdc8d76-ffcc-c262-ee74-184a234abdd0",
+      "created": "2026-01-14T06:12:41.387795Z",
+      "modified": "2026-01-14T06:12:41.387795Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Mobile App Proxy Monetization Component as Infection Vector",
+      "description": "Kimwolf takes advantage of mobile applications that include proxy-monetization SDKs, such as Byteconnect, to covertly add user devices to residential proxy networks. End users are often unaware that their devices have become proxy endpoints, which can then be used by threat actors to scan local networks for vulnerable devices. This technique leverages the widespread adoption of certain mobile apps to silently expand the botnet’s reach, as infected devices become unwitting participants in malicious network activities. The integration of proxy components into legitimate apps provides Kimwolf with a stealthy and scalable method to infiltrate enterprise and institutional environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+      "created": "2026-01-14T06:12:41.387963Z",
+      "modified": "2026-01-14T06:12:41.387963Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "DNS-based Probing for Vulnerable Devices",
+      "description": "Kimwolf utilizes DNS queries to specific domains as a method for probing networks and identifying vulnerable devices. By sending DNS requests from compromised proxy endpoints, the botnet can scan local networks for devices susceptible to takeover. The DNS queries are often directed at domains associated with the botnet’s infrastructure, and the responses (including non-routable IPs) help operators map out potential targets. This technique allows for stealthy reconnaissance, as DNS traffic is commonly permitted and less likely to trigger security alerts compared to other scanning methods. The use of DNS telemetry also enables Kimwolf to track the spread and effectiveness of its probing activities across diverse environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1046/",
+          "external_id": "T1046"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "created": "2026-01-14T06:12:41.388030Z",
+      "modified": "2026-01-14T06:12:41.388030Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Command and Control via DNS TXT Records",
+      "description": "The Aisuru botnet, referenced in the context of Kimwolf’s activity, employs DNS TXT records to deliver command-and-control (C2) locations to compromised devices. Infected endpoints query specific domains for TXT records, which contain the instructions or addresses needed to connect to the botnet’s C2 infrastructure. This technique leverages the ubiquity and flexibility of DNS, allowing for covert communication that can bypass traditional network monitoring. By embedding C2 information in DNS records, the botnet can dynamically update its infrastructure and maintain control over a distributed network of compromised devices.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1071/004/",
+          "external_id": "T1071.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+      "created": "2026-01-14T06:12:41.388085Z",
+      "modified": "2026-01-14T06:12:41.388085Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Use of DNS-over-HTTPS (DOH) for C2 Evasion",
+      "description": "Aisuru botnet, as mentioned in the report, utilizes Google DNS-over-HTTPS (DOH) to obscure its command-and-control communications. By sending DNS queries over encrypted HTTPS connections, the botnet can evade detection by security tools that monitor traditional DNS traffic. This technique complicates efforts to identify and block malicious domains, as DOH traffic blends in with legitimate encrypted web traffic and may bypass local DNS filtering policies. The use of DOH enables the botnet to maintain resilient and stealthy communications with its infrastructure, even in environments with strict DNS controls.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1071/001/",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7c1eb438-d3d9-1102-1168-c38bd92284b2",
+      "created": "2026-01-14T06:12:41.388140Z",
+      "modified": "2026-01-14T06:12:41.388140Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Lateral Movement via Proxy Endpoint Network Scanning",
+      "description": "Kimwolf leverages compromised proxy endpoints within enterprise and institutional networks to perform lateral scans for vulnerable devices. Once a device is enrolled in a residential proxy network, it can be used by the botnet to probe its local subnet, searching for other devices (such as Android TVs) that may be susceptible to compromise. This lateral movement is facilitated by the trusted position of the proxy endpoint within the network, allowing Kimwolf to bypass external defenses and target internal assets. The success of this technique depends on the presence of vulnerable devices and the ability to resolve DNS queries within the local environment.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1210/",
+          "external_id": "T1210"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1dc59747-55eb-5998-0013-45b566354da6",
+      "created": "2026-01-14T06:12:41.388267Z",
+      "modified": "2026-01-14T06:12:41.388267Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Return of Non-Routable IPs to Obfuscate Scanning Activity",
+      "description": "Kimwolf’s infrastructure sometimes responds to DNS queries with non-routable IP addresses (e.g., 127.0.0.1 or 0.0.0.0). This behavior serves to obfuscate the botnet’s scanning activity and may help evade detection by security monitoring systems. By returning benign or invalid IPs, Kimwolf can mask the true intent of its DNS-based probes, making it harder for defenders to distinguish between legitimate and malicious traffic. This technique also complicates attribution and analysis, as the scanning appears less suspicious and may be dismissed as misconfiguration or harmless activity.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "created": "2026-01-14T06:12:48.301137Z",
+      "modified": "2026-01-14T06:12:48.301137Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Kimwolf",
+      "description": "Kimwolf is a botnet that spreads by abusing residential proxy services and compromised devices, particularly targeting vulnerable consumer devices such as Android TVs. It leverages mobile apps and proxy endpoints to scan local networks and propagate itself, monetizing its footprint through proxy networks.",
+      "malware_types": [
+        "botnet"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "lateral-movement",
+        "command-and-control",
+        "remote-access",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "created": "2026-01-14T06:12:48.301369Z",
+      "modified": "2026-01-14T06:12:48.301369Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Aisuru",
+      "description": "Aisuru is a botnet known for using DNS TXT records to deliver command-and-control (C2) information to compromised devices. It has been observed targeting ISPs and leveraging DNS-over-HTTPS for stealthy communications.",
+      "malware_types": [
+        "botnet"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "remote-access",
+        "persistence"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "created": "2026-01-14T06:12:55.077709Z",
+      "modified": "2026-01-14T06:12:55.077709Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Kimwolf Botnet Operators",
+      "description": "Operators behind the Kimwolf botnet, responsible for leveraging residential proxy services and compromised devices to scan and infect vulnerable devices globally. They utilize DNS tricks and proxy-monetization components in mobile apps to expand their botnet footprint.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "aliases": [
+        "Kimwolf"
+      ],
+      "goals": [
+        "Expand botnet footprint",
+        "Monetize compromised devices via proxy services",
+        "Probe networks for vulnerable devices"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "created": "2026-01-14T06:12:55.077799Z",
+      "modified": "2026-01-14T06:12:55.077799Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Aisuru Botnet Operators",
+      "description": "Operators behind the Aisuru botnet, known for using DNS TXT records and Google DNS-over-HTTPS to deliver C2 locations to compromised devices and conduct DDoS attacks. Their infrastructure was observed probing networks and leveraging open resolvers.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "aliases": [
+        "Aisuru"
+      ],
+      "goals": [
+        "Deliver C2 instructions to compromised devices",
+        "Conduct DDoS attacks",
+        "Expand botnet reach"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+      "created": "2026-01-14T06:13:00.696412Z",
+      "modified": "2026-01-14T06:13:00.696412Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Residential Proxy Services",
+      "description": "Residential proxy services such as IPIDEA and Plainproxies are abused by Kimwolf operators to relay malicious commands and probe vulnerable devices on local networks, leveraging their legitimate infrastructure to mask malicious traffic as originating from residential users.",
+      "tool_types": [
+        "remote-access",
+        "information-gathering",
+        "resource-development"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+      "created": "2026-01-14T06:13:00.696499Z",
+      "modified": "2026-01-14T06:13:00.696499Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Google DNS-over-HTTPS (DOH)",
+      "description": "Google's DNS-over-HTTPS service is used by the Aisuru botnet to covertly deliver command-and-control (C2) information to compromised devices, bypassing traditional DNS monitoring and filtering mechanisms.",
+      "tool_types": [
+        "command-and-control",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+      "created": "2026-01-14T06:13:00.696553Z",
+      "modified": "2026-01-14T06:13:00.696553Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Byteconnect SDK",
+      "description": "The Byteconnect SDK, a legitimate developer tool for integrating proxy capabilities into mobile apps, is abused to add end-user devices to proxy networks without their knowledge, turning them into unwitting infection vectors for botnet activity.",
+      "tool_types": [
+        "resource-development",
+        "remote-access"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7eafdca8-cbdc-f31e-5f59-a8015b28114e",
+      "created": "2026-01-14T06:13:00.696823Z",
+      "modified": "2026-01-14T06:13:00.696823Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "description": "Kimwolf Botnet Operators uses Kimwolf malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--40173302-613a-e40d-5f50-010a37125859",
+      "created": "2026-01-14T06:13:00.696823Z",
+      "modified": "2026-01-14T06:13:00.696823Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "description": "Kimwolf Botnet Operators uses Aisuru malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--af923d37-9596-4420-dd9f-1511af98898a",
+      "created": "2026-01-14T06:13:00.696823Z",
+      "modified": "2026-01-14T06:13:00.696823Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "description": "Aisuru Botnet Operators uses Kimwolf malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--967e1b67-ab2c-c2e9-cbec-469d83aed3de",
+      "created": "2026-01-14T06:13:00.696823Z",
+      "modified": "2026-01-14T06:13:00.696823Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "description": "Aisuru Botnet Operators uses Aisuru malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5a9196e2-6ae5-9afd-947b-bb678da21978",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--40440693-5b4b-e2f8-abac-911f0343e385",
+      "description": "Kimwolf Botnet Operators employs 'Abuse of Residential Proxy Services for Network Probing' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6e3feaf5-123b-0dda-5d38-578b51db20b4",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--fbdc8d76-ffcc-c262-ee74-184a234abdd0",
+      "description": "Kimwolf Botnet Operators employs 'Mobile App Proxy Monetization Component as Infection Vector' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac0461aa-5702-6e1e-5a12-44880756535f",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+      "description": "Kimwolf Botnet Operators employs 'DNS-based Probing for Vulnerable Devices' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d15d04ea-019b-37bd-dd63-8d30afb122bf",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "Kimwolf Botnet Operators employs 'Command and Control via DNS TXT Records' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6ba2ec4d-1dd6-8f26-3bd0-c125b5520333",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+      "description": "Kimwolf Botnet Operators employs 'Use of DNS-over-HTTPS (DOH) for C2 Evasion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0a79cc55-a361-8c2b-1037-3daadf33fd8b",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--7c1eb438-d3d9-1102-1168-c38bd92284b2",
+      "description": "Kimwolf Botnet Operators employs 'Lateral Movement via Proxy Endpoint Network Scanning' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d018f934-5dd3-1e5f-9a09-f5f23fad714b",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "attack-pattern--1dc59747-55eb-5998-0013-45b566354da6",
+      "description": "Kimwolf Botnet Operators employs 'Return of Non-Routable IPs to Obfuscate Scanning Activity' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--be9ed6db-039d-04ca-72c2-4792f4ae2240",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--40440693-5b4b-e2f8-abac-911f0343e385",
+      "description": "Aisuru Botnet Operators employs 'Abuse of Residential Proxy Services for Network Probing' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2df600a3-f4ee-0d40-2f7d-26936d7fcd7f",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--fbdc8d76-ffcc-c262-ee74-184a234abdd0",
+      "description": "Aisuru Botnet Operators employs 'Mobile App Proxy Monetization Component as Infection Vector' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--53b24511-fb94-8180-8bb9-ae400280277a",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+      "description": "Aisuru Botnet Operators employs 'DNS-based Probing for Vulnerable Devices' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--778af802-14f9-2162-8fe5-7ea5502f5435",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "Aisuru Botnet Operators employs 'Command and Control via DNS TXT Records' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--de7af448-3c60-255f-ca24-402befbd44ce",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+      "description": "Aisuru Botnet Operators employs 'Use of DNS-over-HTTPS (DOH) for C2 Evasion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0f3650e1-a15c-2f36-55c8-46d45a87d61d",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--7c1eb438-d3d9-1102-1168-c38bd92284b2",
+      "description": "Aisuru Botnet Operators employs 'Lateral Movement via Proxy Endpoint Network Scanning' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0c0e9c3-bd27-1592-c80c-e03c97692b5c",
+      "created": "2026-01-14T06:13:00.696914Z",
+      "modified": "2026-01-14T06:13:00.696914Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "attack-pattern--1dc59747-55eb-5998-0013-45b566354da6",
+      "description": "Aisuru Botnet Operators employs 'Return of Non-Routable IPs to Obfuscate Scanning Activity' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--67605c26-adb9-6c40-990a-d7c402f30f68",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+      "description": "Kimwolf Botnet Operators uses Residential Proxy Services tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--af9e1cb8-e1cb-6338-2c15-ecb5032b0dcb",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+      "description": "Kimwolf Botnet Operators uses Google DNS-over-HTTPS (DOH) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--49378730-636f-5621-f9e2-40965d3cd7db",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+      "target_ref": "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+      "description": "Kimwolf Botnet Operators uses Byteconnect SDK tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2ee05560-ae4b-81c6-705c-38938d857ede",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+      "description": "Aisuru Botnet Operators uses Residential Proxy Services tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--48fe0ee0-1ea6-37ae-ab54-6104c4a05451",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+      "description": "Aisuru Botnet Operators uses Google DNS-over-HTTPS (DOH) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ced917ac-5f41-a0c4-1159-a4bcffef0f54",
+      "created": "2026-01-14T06:13:00.698121Z",
+      "modified": "2026-01-14T06:13:00.698121Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+      "target_ref": "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+      "description": "Aisuru Botnet Operators uses Byteconnect SDK tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3b38b43b-822d-ba91-d9c1-7d7ce514799e",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "target_ref": "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+      "description": "Kimwolf uses Residential Proxy Services for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--eaebf51f-1c94-5a7f-3822-8927eabcd51f",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "target_ref": "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+      "description": "Kimwolf uses Google DNS-over-HTTPS (DOH) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bd2cde4e-9d3a-ba41-f92c-922980cefa6c",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+      "target_ref": "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+      "description": "Kimwolf uses Byteconnect SDK for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--34e34535-9d9f-5329-3322-78a55fcfbad5",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "target_ref": "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+      "description": "Aisuru uses Residential Proxy Services for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0d2d4320-4b51-37b2-978f-77732d06dffd",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "target_ref": "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+      "description": "Aisuru uses Google DNS-over-HTTPS (DOH) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--01d649bc-d566-3a38-2e55-9c84e4980c36",
+      "created": "2026-01-14T06:13:00.698345Z",
+      "modified": "2026-01-14T06:13:00.698345Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+      "target_ref": "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+      "description": "Aisuru uses Byteconnect SDK for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--fdeea821-37b9-3a5f-e97d-83d31c93caf9",
+      "created": "2026-01-14T06:13:00.702269Z",
+      "modified": "2026-01-14T06:13:00.702269Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Kimwolf Botnet Risks for Enterprises and Institutions",
+      "description": "This report contains technical analysis and indicators from: https://www.infoblox.com/blog/threat-intelligence/kimwolf-howls-from-inside-the-enterprise/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T06:13:00.702269Z",
+      "object_refs": [
+        "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--40440693-5b4b-e2f8-abac-911f0343e385",
+        "attack-pattern--fbdc8d76-ffcc-c262-ee74-184a234abdd0",
+        "attack-pattern--507c5097-afe2-ccc0-e3f3-9421f6f3646d",
+        "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+        "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+        "attack-pattern--7c1eb438-d3d9-1102-1168-c38bd92284b2",
+        "attack-pattern--1dc59747-55eb-5998-0013-45b566354da6",
+        "malware--b630d6e2-880b-74d7-f9e3-31169b99c2cf",
+        "malware--08a2da65-31e4-80b1-5175-4f988b9eef9b",
+        "threat-actor--32ef2beb-9843-0da7-000e-be6527f96e91",
+        "threat-actor--bf25ad8c-7067-2c18-cb8f-930114a4f7e7",
+        "tool--2d1bd2b7-1c07-042a-2fb0-b9ec46a5d656",
+        "tool--7e765876-28c8-92d0-44da-e0aba44e5a44",
+        "tool--02f3cbed-c07a-9ddd-410a-5e12f14df080",
+        "relationship--7eafdca8-cbdc-f31e-5f59-a8015b28114e",
+        "relationship--40173302-613a-e40d-5f50-010a37125859",
+        "relationship--af923d37-9596-4420-dd9f-1511af98898a",
+        "relationship--967e1b67-ab2c-c2e9-cbec-469d83aed3de",
+        "relationship--5a9196e2-6ae5-9afd-947b-bb678da21978",
+        "relationship--6e3feaf5-123b-0dda-5d38-578b51db20b4",
+        "relationship--ac0461aa-5702-6e1e-5a12-44880756535f",
+        "relationship--d15d04ea-019b-37bd-dd63-8d30afb122bf",
+        "relationship--6ba2ec4d-1dd6-8f26-3bd0-c125b5520333",
+        "relationship--0a79cc55-a361-8c2b-1037-3daadf33fd8b",
+        "relationship--d018f934-5dd3-1e5f-9a09-f5f23fad714b",
+        "relationship--be9ed6db-039d-04ca-72c2-4792f4ae2240",
+        "relationship--2df600a3-f4ee-0d40-2f7d-26936d7fcd7f",
+        "relationship--53b24511-fb94-8180-8bb9-ae400280277a",
+        "relationship--778af802-14f9-2162-8fe5-7ea5502f5435",
+        "relationship--de7af448-3c60-255f-ca24-402befbd44ce",
+        "relationship--0f3650e1-a15c-2f36-55c8-46d45a87d61d",
+        "relationship--b0c0e9c3-bd27-1592-c80c-e03c97692b5c",
+        "relationship--67605c26-adb9-6c40-990a-d7c402f30f68",
+        "relationship--af9e1cb8-e1cb-6338-2c15-ecb5032b0dcb",
+        "relationship--49378730-636f-5621-f9e2-40965d3cd7db",
+        "relationship--2ee05560-ae4b-81c6-705c-38938d857ede",
+        "relationship--48fe0ee0-1ea6-37ae-ab54-6104c4a05451",
+        "relationship--ced917ac-5f41-a0c4-1159-a4bcffef0f54",
+        "relationship--3b38b43b-822d-ba91-d9c1-7d7ce514799e",
+        "relationship--eaebf51f-1c94-5a7f-3822-8927eabcd51f",
+        "relationship--bd2cde4e-9d3a-ba41-f92c-922980cefa6c",
+        "relationship--34e34535-9d9f-5329-3322-78a55fcfbad5",
+        "relationship--0d2d4320-4b51-37b2-978f-77732d06dffd",
+        "relationship--01d649bc-d566-3a38-2e55-9c84e4980c36"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

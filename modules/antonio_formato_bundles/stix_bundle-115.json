@@ -1,0 +1,504 @@
+{
+  "type": "bundle",
+  "id": "bundle--d50ba2d1-0b52-46a8-9203-47db63e141fb",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--312984aa-5863-433c-98a6-8a8a49197fec",
+      "name": "CVE-2025-55182",
+      "description": "An unauthenticated remote code execution (RCE) vulnerability in React Server Components, also known as React2Shell. Allows attackers to execute arbitrary code with the privileges of the user running the affected web server process. Affects react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack versions 19.0, 19.1.0, 19.1.1, and 19.2.0. CVSS v3.x score: 10.0, CVSS v4 score: 9.3.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--34ed5dfb-c89d-4364-9bfb-5ea0c28ca45b",
+      "name": "CVE-2025-55183",
+      "description": "React Server Components information disclosure vulnerability. Limited impact, restricted information disclosure.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55183"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3dae96ca-55ad-4843-8e1c-c8d76f37138d",
+      "name": "CVE-2025-55184",
+      "description": "React Server Components denial-of-service (DoS) vulnerability. Causes DoS condition.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55184"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "name": "CVE-2025-67779",
+      "description": "React Server Components denial-of-service (DoS) vulnerability due to incomplete patch for CVE-2025-55184.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-67779"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--fd8aab9f-3db5-4a4c-9c39-fb9109a6bc92",
+      "name": "UNC5454 (Earth Lamia)",
+      "description": "China-nexus threat group tracked by GTIG, reported by AWS as actively exploiting CVE-2025-55182.",
+      "aliases": [
+        "Earth Lamia"
+      ],
+      "external_references": [
+        {
+          "source_name": "AWS Security Blog",
+          "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--38b5cc06-4313-4131-93e1-2df019feb8c0",
+      "name": "Jackpot Panda",
+      "description": "China-nexus threat group reported by AWS as exploiting CVE-2025-55182. No public indicators available to assess group relationship.",
+      "aliases": [
+        "Jackpot Panda"
+      ],
+      "external_references": [
+        {
+          "source_name": "AWS Security Blog",
+          "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--285e63c6-cac3-4886-90f4-45438a2a8ed5",
+      "name": "UNC6600",
+      "description": "China-nexus espionage cluster observed exploiting CVE-2025-55182 to deliver MINOCAT tunneler.",
+      "external_references": [
+        {
+          "source_name": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--79e8dfae-41e3-47be-b6bb-507aa0e86225",
+      "name": "UNC6586",
+      "description": "Suspected China-nexus actor observed exploiting CVE-2025-55182 to deliver SNOWLIGHT downloader.",
+      "external_references": [
+        {
+          "source_name": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--3c52a7d7-29e8-496e-bdb1-981ad536673c",
+      "name": "UNC6588",
+      "description": "China-nexus threat actor observed exploiting CVE-2025-55182 to deliver COMPOOD backdoor.",
+      "external_references": [
+        {
+          "source_name": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--5e3eefdf-7c73-40e2-a306-02cef5c91168",
+      "name": "UNC6603",
+      "description": "China-nexus actor observed deploying updated HISONIC backdoor targeting cloud infrastructure in APAC.",
+      "external_references": [
+        {
+          "source_name": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "name": "UNC6595",
+      "description": "China-nexus actor observed exploiting CVE-2025-55182 to deploy ANGRYREBEL.LINUX, targeting international VPS infrastructure.",
+      "external_references": [
+        {
+          "source_name": "Google Threat Intelligence Group",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0441f01c-0928-4a10-881c-af87e71f769f",
+      "value": "reactcdn.windowserrorapis.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--aedb7998-381a-4ad9-9205-1846713cfe1d",
+      "value": "82.163.22.139"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b9314913-3e50-4962-8472-17b65900cc28",
+      "value": "216.158.232.43"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a8e0f737-0e2a-447a-9315-3f10303d6ee7",
+      "value": "45.76.155.14"
+    },
+    {
+      "type": "file",
+      "id": "file--17d51781-1a11-439f-a232-278a608f9770",
+      "hashes": {
+        "SHA-256": "df3f20a961d29eed46636783b71589c183675510737c984a11f78932b177b540"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fab0b77a-578f-40c1-9d5d-c7f4d207b336",
+      "hashes": {
+        "SHA-256": "92064e210b23cf5b94585d3722bf53373d54fb4114dca25c34e010d0c010edf3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9ef3ad4b-9e9c-4fc9-ae0b-60b47e7972e0",
+      "hashes": {
+        "SHA-256": "0bc65a55a84d1b2e2a320d2b011186a14f9074d6d28ff9120cb24fcc03c3f696"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--80973a53-96cf-492b-847a-da374eb2ffc7",
+      "hashes": {
+        "SHA-256": "13675cca4674a8f9a8fabe4f9df4ae0ae9ef11986dd1dcc6a896912c7d527274"
+      },
+      "name": "sex.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--30ca88bb-61a5-4d78-9846-62822576c7f9",
+      "hashes": {
+        "SHA-256": "7f05bad031d22c2bb4352bf0b6b9ee2ca064a4c0e11a317e6fedc694de37737a"
+      },
+      "name": "linux_amd64"
+    },
+    {
+      "type": "file",
+      "id": "file--8307f6d4-c56e-4c31-a531-4dd3729933e7",
+      "hashes": {
+        "SHA-256": "776850a1e6d6915e9bf35aa83554616129acd94e3a3f6673bd6ddaec530f4273"
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--cd190376-6096-44bf-92b4-4047e4c5fb8c",
+      "name": "MINOCAT",
+      "cpe": "",
+      "description": "64-bit ELF tunneler for Linux with custom NSS wrapper and embedded Fast Reverse Proxy (FRP) client."
+    },
+    {
+      "type": "software",
+      "id": "software--9aebc018-310a-4de0-b604-3c35fdd88ce5",
+      "name": "SNOWLIGHT",
+      "cpe": "",
+      "description": "Downloader payload, component of VSHELL, a multi-platform backdoor written in Go."
+    },
+    {
+      "type": "software",
+      "id": "software--a2c3ab87-6726-4848-8373-adad9b22fbd1",
+      "name": "COMPOOD",
+      "cpe": "",
+      "description": "Backdoor masquerading as Vim, historically linked to China-nexus espionage activity."
+    },
+    {
+      "type": "software",
+      "id": "software--5095d9d8-4233-4cfc-810c-9fd7764134a7",
+      "name": "HISONIC",
+      "cpe": "",
+      "description": "Go-based implant utilizing cloud services (Cloudflare Pages, GitLab) to retrieve encrypted configuration."
+    },
+    {
+      "type": "software",
+      "id": "software--74edb147-bbf8-4e3e-ae17-544991d8662e",
+      "name": "ANGRYREBEL.LINUX",
+      "cpe": "",
+      "description": "Malware masquerading as OpenSSH daemon (sshd) in /etc/, uses timestomping and anti-forensics."
+    },
+    {
+      "type": "software",
+      "id": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "name": "XMRIG",
+      "cpe": "",
+      "description": "Cryptocurrency miner deployed for illicit mining."
+    },
+    {
+      "type": "file",
+      "id": "file--11c14466-aede-4e5f-9e30-0ebceb3da95f",
+      "name": ".systemd-utils",
+      "path": "$HOME/.systemd-utils"
+    },
+    {
+      "type": "file",
+      "id": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "name": "vim",
+      "path": "/tmp/vim"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2225d03e-12f8-4096-8fb9-236aa5c5900f",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC5454 (Earth Lamia) exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f6ed524-ed93-4bb2-8a46-92702e60c804",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "Jackpot Panda exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26bcf518-7c52-4c38-a7f0-b261fcfd82ba",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC6600 exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3207a7cb-81e8-4392-bf8c-8a50ee8a08aa",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC6586 exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2da1738a-5ff6-46b7-b71f-cda0cd5735d2",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC6588 exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f0a0c65-0723-4c40-8d4f-31a3398431f1",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC6603 exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3db2fd24-5d5c-45a6-b8a1-7bb1a5c69ac9",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "vulnerability--8342400e-70aa-4b36-8c38-3be4a22b7bc3",
+      "description": "UNC6595 exploits CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c707afc-d8d4-49a0-bbb7-ef6b6f1ad3fb",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "description": "UNC6600 delivers MINOCAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02f6cee9-8df2-49b7-960d-a17b1aba7da0",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "description": "UNC6586 delivers SNOWLIGHT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f26fc1c-36fa-45c9-99ab-bb3b9d2a950d",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "description": "UNC6588 delivers COMPOOD."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af4f9b03-eb8c-43a1-8443-c0b9a8d104c8",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "description": "UNC6603 delivers HISONIC."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--169509d5-f9b7-4f44-b6d7-3216ca3aae36",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--6173729d-451c-4063-93ef-abedb5cf4fcb",
+      "target_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "description": "UNC6595 delivers ANGRYREBEL.LINUX."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2217312d-4be6-41ac-9cd9-9286860798a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "MINOCAT sample with SHA256 776850a1e6d6915e9bf35aa83554616129acd94e3a3f6673bd6ddaec530f4273."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f301f09-b4ad-4381-9f4a-2cec192779ed",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "SNOWLIGHT sample with SHA256 7f05bad031d22c2bb4352bf0b6b9ee2ca064a4c0e11a317e6fedc694de37737a."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66bbdeef-ca32-4da3-be82-491682a46070",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "HISONIC sample with SHA256 df3f20a961d29eed46636783b71589c183675510737c984a11f78932b177b540."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--150b0dcc-9cde-400e-8f64-2de6f3889dae",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "HISONIC sample with SHA256 92064e210b23cf5b94585d3722bf53373d54fb4114dca25c34e010d0c010edf3."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6d5cda9-7341-48a1-9506-9e1489ab7d10",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "ANGRYREBEL.LINUX sample with SHA256 0bc65a55a84d1b2e2a320d2b011186a14f9074d6d28ff9120cb24fcc03c3f696."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7448fec-5cba-4524-8d2f-1b79e1c54921",
+      "relationship_type": "uses",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "XMRIG downloader script sex.sh with SHA256 13675cca4674a8f9a8fabe4f9df4ae0ae9ef11986dd1dcc6a896912c7d527274."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc65ed1b-a254-4056-87e6-e2936310d1e6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "domain-name--0441f01c-0928-4a10-881c-af87e71f769f",
+      "description": "SNOWLIGHT communicates with C2 domain reactcdn.windowserrorapis.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--42641dad-5e25-4535-a8ba-eb704e0a7bd1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "ipv4-addr--a8e0f737-0e2a-447a-9315-3f10303d6ee7",
+      "description": "SNOWLIGHT communicates with C2 server 82.163.22.139."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--364b6202-5c4f-4470-b854-0a64f7f22259",
+      "relationship_type": "downloads",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "SNOWLIGHT downloads payload linux_amd64 (SHA256: 7f05bad031d22c2bb4352bf0b6b9ee2ca064a4c0e11a317e6fedc694de37737a)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0010d80-d300-49a4-874b-de238ecca0a5",
+      "relationship_type": "downloads",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "XMRIG is downloaded via script sex.sh (SHA256: 13675cca4674a8f9a8fabe4f9df4ae0ae9ef11986dd1dcc6a896912c7d527274)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d7ae446-3864-449a-a441-c41f0ed2fb0a",
+      "relationship_type": "downloads",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "COMPOOD is downloaded as /tmp/vim."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--35976f0e-d86f-40b7-8b51-09f3fe8d117c",
+      "relationship_type": "downloads",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "file--a500afdb-029a-4748-8737-dfb225c373e3",
+      "description": "MINOCAT is installed in hidden directory .systemd-utils."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55333b07-2c8f-498e-aba7-90c7a7cddc2d",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "MINOCAT malware is the same as MINOCAT software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c4f220a-48dc-46d7-9962-3330c8d39911",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "SNOWLIGHT malware is the same as SNOWLIGHT software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f3136ae6-f80e-47f8-b452-de48a705aacc",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "COMPOOD malware is the same as COMPOOD software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2972f6a2-9b31-40bb-a26b-9002a9ef9693",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "HISONIC malware is the same as HISONIC software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dec968d9-d0bd-40bb-b202-8578fd7dc454",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "ANGRYREBEL.LINUX malware is the same as ANGRYREBEL.LINUX software."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b1e70e6-00b7-4f2a-aa90-c00031f7e0d9",
+      "relationship_type": "controls",
+      "source_ref": "malware--9e4732bd-dabe-498b-a29e-b0aff614f1c3",
+      "target_ref": "software--864ac444-7026-4dbe-b3cc-03bcf2bbeff2",
+      "description": "XMRIG malware is the same as XMRIG software."
+    }
+  ]
+}

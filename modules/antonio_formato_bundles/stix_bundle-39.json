@@ -1,0 +1,325 @@
+{
+  "type": "bundle",
+  "id": "bundle--55c3d8c2-6700-4dc5-a276-008a3a144411",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--feb46d3c-475b-4cb9-9fc0-984cb7a7c606",
+      "name": "Phishing: Spearphishing Attachment",
+      "description": "Attackers send spear-phishing emails spoofed as official Income Tax Department notices with malicious PDF attachments to gain initial access.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0f808c2f-f8f7-499a-8413-6cd459d8d9f0",
+      "name": "Phishing: Spearphishing Link",
+      "description": "PDF attachment directs user to a fake ITD portal URL, triggering auto-download of malware ZIP.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1a7ec4a8-edaf-4b16-87f5-52b34416984a",
+      "name": "User Execution",
+      "description": "Victim manually runs extracted executable setup_Ir5swQ3EpeuBpePEpew=.exe.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--148998c8-ef2d-458f-a40e-e8072d98ec8b",
+      "name": "Signed Binary Proxy Execution",
+      "description": "Digitally signed NSIS installers are used to appear legitimate and evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1218"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--63912d84-92e4-4f3e-89e6-367e77c609b2",
+      "name": "Subvert Trust Controls: Code Signing",
+      "description": "Chinese code-signed payloads are used to bypass security checks.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1553.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5fe79025-0dab-4d3c-90aa-4f5894e8ddab",
+      "name": "Artifact Deletion",
+      "description": "First-stage loader deletes dropped files and temp folders after execution to evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ce66baea-5e8c-43d4-973b-2dd07af76e0a",
+      "name": "Obfuscated/Encrypted Payloads",
+      "description": "Multi-stage NSIS wrapping with hidden components and protected directories for defense evasion.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--295bc42b-d31f-4608-9ed1-9adf2816a6d7",
+      "name": "Create/Modify System Process: Windows Service",
+      "description": "NSecRTS.exe registered as a persistent background service using Windows Real-time Protection Service name.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1543.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2d0d3efd-6b89-4c5d-b928-b5154fdd9519",
+      "name": "Boot/Logon Autostart Execution",
+      "description": "Service automatically runs at boot without user interaction for persistence.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1547.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b17d07d8-6208-4080-a5f6-a133e5bfc2bd",
+      "name": "System Information Discovery",
+      "description": "Harvests OS version, machine details, hardware, and services from victim machine.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9254d385-fef8-4a30-b22e-8be2c748ea78",
+      "name": "Software Discovery",
+      "description": "Collects installed application details from victim machine.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1518"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ee85452e-4449-4cb6-8aa1-cb40083e3c2a",
+      "name": "Web Protocols",
+      "description": "Uses HTTP/HTTPS with UID registration to maintain network communication with C2.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--65fdaff0-8308-4d24-97cb-889f62bee492",
+      "name": "Non-Application Layer Protocol",
+      "description": "C2 uses multiple non-standard ports (48991/48992/3898 etc.) for communication.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1095"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--276ae5af-83eb-4f46-8d9a-d4b070e495b7",
+      "name": "Commonly Used Port",
+      "description": "Alternative fallback communication via port 80 on two additional C2 IPs.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1043"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dfdfdbbd-4f06-4174-84b1-d0fabec841bf",
+      "name": "Exfiltration Over Web Services",
+      "description": "Harvested telemetry posted back via HTTP POST to primary C2.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1567.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1a9d3a32-3904-4eb6-9f7e-c42ed1201af4",
+      "name": "Scheduled Transfer",
+      "description": "Data uploaded regularly as suspicious process continues to run in the background.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1029"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--463f9419-85eb-43b1-9548-4ddc89255368",
+      "name": "Remote Access Tools",
+      "description": "NSecRTS.exe enables remote command reception, tasking, and persistence.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1219"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b2bc6545-07ec-4d3d-8847-8db438620da3",
+      "name": "NSecRTS.exe RAT Indicators",
+      "description": "Indicators associated with NSecRTS.exe RAT campaign targeting Indian businesses.",
+      "pattern": "[file:hashes.'MD5' = '4001854be1ae8e12b6dda124679a4077' OR file:hashes.'MD5' = 'F00F824FCAFBA9B26675AE8242F0B6A0' OR url:value = 'hxxps://www.akjys.top/' OR ipv4-addr:value = '154.91.84.3' OR ipv4-addr:value = '45.113.192.102' OR ipv4-addr:value = '103.235.46.102']",
+      "valid_from": "2025-10-03T00:00:00Z",
+      "labels": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--2ace70ea-3a99-409e-9941-16f30d5616ec",
+      "name": "Indian Income Tax-Themed Phishing and RAT Delivery",
+      "description": "A multi-stage phishing and malware campaign targeting Indian businesses during the Income Tax Return (ITR) filing season. Attackers impersonate the Income Tax Department, using spear-phishing emails, malicious PDFs, and fake portals to deliver NSecRTS.exe RAT.",
+      "aliases": [
+        "ITD Phishing Campaign"
+      ],
+      "first_seen": "2025-10-03T00:00:00Z",
+      "objective": "Compromise Indian business endpoints for remote access, data exfiltration, and persistent control.",
+      "external_references": [
+        {
+          "source_name": "Seqrite Blog",
+          "url": "https://www.seqrite.com/blog/indian-income-tax-themed-phishing-campaign-targets-local-businesses"
+        }
+      ]
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--9a64da96-8419-4ce3-863e-9580195521f9",
+      "value": "unknown@outlook.com"
+    },
+    {
+      "type": "file",
+      "id": "file--1fb5e08d-e45f-41a7-9ee4-0cab05ad4144",
+      "name": "Review Annexure.pdf"
+    },
+    {
+      "type": "file",
+      "id": "file--9d0aa541-9f60-4735-b012-e3c185bbc08f",
+      "name": "Review Annexure.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--45f0643f-58f1-414f-a2e0-6e083ec14a43",
+      "name": "setup_Ir5swQ3EpeuBpePEpew=.exe",
+      "hashes": {
+        "MD5": "4001854be1ae8e12b6dda124679a4077"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f93e1c71-9054-4e86-8bd7-13f3cb2a13eb",
+      "name": "setup_Ir5swQ3EpeuBpePEpew=.exe",
+      "hashes": {
+        "MD5": "F00F824FCAFBA9B26675AE8242F0B6A0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--66ff5f89-4dfd-4958-8e52-2557e07a5df1",
+      "name": "Sibuia.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0dbb62ef-d0eb-448f-9617-51ff790c5742",
+      "name": "NSecRTS.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c7285e75-05a4-4252-a368-2aa0308aa5d4",
+      "name": "buildin.cfg"
+    },
+    {
+      "type": "file",
+      "id": "file--ba5e3128-1d73-477c-bbaa-7f7742a76c7d",
+      "name": "curl.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2ae54424-9791-4a09-9be7-a846bf6f1570",
+      "name": "certutil.exe"
+    },
+    {
+      "type": "directory",
+      "id": "directory--30966ec0-0745-4e5a-8671-0369f444fcf9",
+      "path": "C:\\Program Files\\Common Files\\NSEC"
+    },
+    {
+      "type": "directory",
+      "id": "directory--9d1daae4-f835-45a9-813c-535d7b7d6a4e",
+      "path": "C:\\Program Files (x86)\\Common Files\\NSEC\\Data"
+    },
+    {
+      "type": "url",
+      "id": "url--812e3aba-21e1-4bd3-8c12-f1716b9e961d",
+      "value": "https://www.akjys.top/"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e2327ac1-5640-448d-8d88-3eae302f0ca5",
+      "value": "154.91.84.3"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--71d7d6a0-041d-463b-ab0e-9369132b1eb6",
+      "value": "45.113.192.102"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--cf6d4f5b-f740-4260-a61f-e1ed895f1b64",
+      "value": "103.235.46.102"
+    }
+  ]
+}

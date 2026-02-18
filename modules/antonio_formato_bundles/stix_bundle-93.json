@@ -1,0 +1,215 @@
+{
+  "type": "bundle",
+  "id": "bundle--c214198a-54d4-478e-af03-d7934e9147f8",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--0a050bab-af02-4aa8-8e99-110d998ea395",
+      "name": "Cisco Talos",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://blog.talosintelligence.com/"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "name": "UAT-9686 Command and Control Infrastructure",
+      "description": "Infrastructure used by UAT-9686 for command and control, including servers for reverse SSH tunnels and HTTP-based backdoor communications.",
+      "created_by_ref": "identity--",
+      "labels": [
+        "c2",
+        "reverse-ssh",
+        "http"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cisco Talos",
+          "url": "https://blog.talosintelligence.com/"
+        }
+      ],
+      "ip_addresses": [
+        "172.233.67.176",
+        "172.237.29.147",
+        "38.54.56.95"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4e26b64d-56fd-48e5-bf25-e83346fc6276",
+      "value": "172.233.67.176"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--08bd124d-5db3-4c0d-93f7-0c6d876874a3",
+      "value": "172.237.29.147"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--824af2c5-71fc-4a69-bd89-13c342b8a47c",
+      "value": "38.54.56.95"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89ec0aba-0c27-4501-a1d7-51beb907aeb8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a57b47e-98aa-4b70-81b6-056405f670cb",
+      "target_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "description": "UAT-9686 uses AquaShell for persistent access to compromised Cisco appliances."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b39d527-2226-4fd8-b175-7a93115753e6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a57b47e-98aa-4b70-81b6-056405f670cb",
+      "target_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "description": "UAT-9686 uses AquaTunnel for reverse SSH tunneling and unauthorized remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c425337-26aa-4ebf-a087-033edc0ede0d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a57b47e-98aa-4b70-81b6-056405f670cb",
+      "target_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "description": "UAT-9686 uses AquaPurge to clear log files and evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e4a09c59-5154-4a0e-a889-0033f69a3b2e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a57b47e-98aa-4b70-81b6-056405f670cb",
+      "target_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "description": "UAT-9686 uses Chisel to proxy traffic and pivot into internal environments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5b9663d-2913-4aba-a7cd-6e6a9099dc32",
+      "relationship_type": "uses",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "attack-pattern--4bf37bab-e4f2-40aa-ab88-135f4d70d2bc",
+      "description": "AquaShell is a web-based backdoor implant embedded in a Python web server file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db6b1d0b-d6c3-4823-861a-9bf00b00ccc6",
+      "relationship_type": "uses",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "attack-pattern--4bf37bab-e4f2-40aa-ab88-135f4d70d2bc",
+      "description": "AquaTunnel establishes a reverse SSH tunnel for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--62f09d69-9770-4793-9451-6edfbeda653f",
+      "relationship_type": "uses",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "attack-pattern--4bf37bab-e4f2-40aa-ab88-135f4d70d2bc",
+      "description": "AquaPurge clears log files to aid attacker evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--afd52cde-506e-402a-bbbc-565a443e23ad",
+      "relationship_type": "uses",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "attack-pattern--4bf37bab-e4f2-40aa-ab88-135f4d70d2bc",
+      "description": "Chisel proxies network traffic via compromised edge devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--38907794-db2b-4563-a5e7-eb508816f2c7",
+      "relationship_type": "delivers",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "file--1047efdf-e07e-449a-9fba-a82d1c126801",
+      "description": "AquaShell backdoor is delivered and embedded into index.py within the web server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66783bf9-d36b-46fe-80c1-19181b003c17",
+      "relationship_type": "delivers",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "file--1047efdf-e07e-449a-9fba-a82d1c126801",
+      "description": "AquaTunnel is delivered as a compiled GoLang ELF binary file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27700b14-ebf2-400e-a4e1-ea74b0608748",
+      "relationship_type": "delivers",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "file--1047efdf-e07e-449a-9fba-a82d1c126801",
+      "description": "AquaPurge is delivered as a log-clearing utility file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fe227d7-fbe3-4afd-9f71-0a8e163cd9b0",
+      "relationship_type": "delivers",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "file--1047efdf-e07e-449a-9fba-a82d1c126801",
+      "description": "Chisel is delivered as an open-source tunneling tool file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae9dfc71-9b0e-41dc-a6e0-b741d0d36ba2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "description": "AquaTunnel establishes reverse SSH connections to UAT-9686 command and control infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6a68f9f-e578-41ff-8a9e-bc54354c9428",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "description": "AquaShell communicates with UAT-9686 command and control infrastructure over HTTP."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--114e40db-3d3b-46bc-bbb6-ba40a768b51d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "description": "Chisel proxies traffic through UAT-9686 command and control infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ed20913-e719-40e7-be33-8595203cfaa3",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "target_ref": "ipv4-addr--824af2c5-71fc-4a69-bd89-13c342b8a47c",
+      "description": "UAT-9686 command and control infrastructure includes IP address 172.233.67.176."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b30b17a-696c-4060-ba37-5cea26b71601",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "target_ref": "ipv4-addr--824af2c5-71fc-4a69-bd89-13c342b8a47c",
+      "description": "UAT-9686 command and control infrastructure includes IP address 172.237.29.147."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30d35e15-8899-4090-90a1-c0e26007bb9b",
+      "relationship_type": "has",
+      "source_ref": "infrastructure--0ad7c2c3-8858-4692-88ee-b7692ab1cffc",
+      "target_ref": "ipv4-addr--824af2c5-71fc-4a69-bd89-13c342b8a47c",
+      "description": "UAT-9686 command and control infrastructure includes IP address 38.54.56.95."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cb3f87f-8c88-48fb-a4be-c39a313b713d",
+      "relationship_type": "derived-from",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "tool--76b5e339-82e2-49c8-8f61-14973729466c",
+      "description": "AquaTunnel is based on the open-source ReverseSSH tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--060c5d34-67e3-4c5f-b9b7-ff7cdab19b13",
+      "relationship_type": "derived-from",
+      "source_ref": "malware--25418440-a38b-423e-a186-6b53dd145d9d",
+      "target_ref": "tool--76b5e339-82e2-49c8-8f61-14973729466c",
+      "description": "Chisel malware is based on the open-source Chisel tool."
+    }
+  ]
+}

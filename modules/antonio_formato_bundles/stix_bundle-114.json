@@ -1,0 +1,392 @@
+{
+  "type": "bundle",
+  "id": "bundle--347610c6-4a73-4ba4-b14e-a8255a10fdb9",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1ec929df-39e1-434a-a5d7-5d05a575dba6",
+      "name": "Malvertising via Sponsored Search Results",
+      "description": "Threat actors use sponsored Google search results to redirect users to malicious LLM shared chats containing obfuscated commands and links to payloads.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Observed as initial infection vector in Shamus campaign."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fa714a1a-907b-4fc4-ae3a-f7a7e8fb4b19",
+      "name": "Social Engineering via LLM Shared Chats",
+      "description": "Attackers configure public LLM shared chats to provide malicious terminal commands for common troubleshooting queries, exploiting user trust.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Used in Shamus campaign to distribute malicious instructions."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0a335677-c694-43bf-a78f-5372c9c957f0",
+      "name": "Credential Harvesting via Fake Password Prompts",
+      "description": "Malware prompts users for their system password via terminal loops and fake macOS dialogs, validates and stores credentials for privilege escalation.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Implemented in Shamus AppleScript payload."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--58650915-9cab-42e8-86a5-b68307251588",
+      "name": "Persistence via LaunchDaemon Installation",
+      "description": "Malware installs a LaunchDaemon plist in /Library/LaunchDaemons to achieve root-level persistence and automatic execution after reboot.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Shamus campaign uses com.finder.helper LaunchDaemon for persistence."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--bcb9eccc-f9bf-4d1f-ae88-3bb661b9989d",
+      "name": "Application Trojanization",
+      "description": "Malware replaces legitimate cryptocurrency wallet applications (e.g., Ledger Live, Trezor Suite) with trojanized versions to intercept transactions and maintain long-term access.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Observed in Shamus campaign targeting Ledger Live and Trezor Suite."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7a78ef53-1b31-484b-a7a7-eb3a684d2c50",
+      "name": "Data Exfiltration via HTTP POST",
+      "description": "Stolen data is archived and exfiltrated to attacker-controlled C2 servers using HTTP POST requests with custom headers.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Shamus campaign exfiltrates to http://45.94.47.205/contact."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4a7b44b0-1e78-4fe6-ba13-43c05e203e6b",
+      "name": "VM/Sandbox Detection",
+      "description": "Malware performs environment checks for virtualization or sandbox indicators and exits if detected to evade analysis.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Shamus AppleScript checks for QEMU, VMware, KVM, and specific hardware strings."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3f472659-cb6c-4cb9-b545-f57cdc2c1e2e",
+      "name": "Browser and Wallet Data Theft",
+      "description": "Malware targets browser profiles (Chromium, Firefox) and desktop cryptocurrency wallet directories to steal cookies, credentials, extension data, and wallet files.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Shamus campaign targets Chrome, Brave, Edge, Opera, Firefox, Electrum, Exodus, Ledger Live, Trezor Suite, and more."
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718",
+      "name": "Terminal Hiding and Process Detachment",
+      "description": "Malware hides its activity by detaching from the terminal and killing the Terminal process to avoid user detection.",
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Shamus AppleScript uses 'disown; pkill Terminal'."
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--8ef686a2-ca2c-4e1e-9ca6-691de6a92b26",
+      "name": "nonnida.com",
+      "description": "Domain used for initial payload delivery and malware download in Shamus campaign.",
+      "infrastructure_types": [
+        "hosting"
+      ],
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Malware downloaded from https://nonnida.com/cleangpt, /wallet, /crypto/update."
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f",
+      "name": "45.94.47.205",
+      "description": "C2 server used for data exfiltration in Shamus campaign.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "Miguel Twitter",
+          "description": "Data exfiltration endpoint: http://45.94.47.205/contact."
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--2860038c-118a-4b4b-adf8-0a1a79979f7c",
+      "value": "https://nonnida.com/cleangpt"
+    },
+    {
+      "type": "url",
+      "id": "url--d9ea6976-4483-4cac-8e83-3e934c2de2e2",
+      "value": "https://nonnida.com/wallet"
+    },
+    {
+      "type": "url",
+      "id": "url--eebf6272-d8ba-4236-92d5-144ba9fd6818",
+      "value": "https://nonnida.com/crypto/update"
+    },
+    {
+      "type": "url",
+      "id": "url--20c268e4-3253-4e5d-9c50-3ac93c649713",
+      "value": "http://45.94.47.205/contact"
+    },
+    {
+      "type": "process",
+      "id": "process--d28027dc-14e8-4d7e-87d3-c00c860b4bfd",
+      "command_line": "~/.helper"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--de61309b-c643-4595-b112-af6e08aec519",
+      "value": "nonnida.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--34fdec88-d3c5-4b8b-9e90-0d2ba56fb850",
+      "value": "45.94.47.205"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf8ed141-80b7-4502-a590-c95bfa67c9c7",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2c1e5a2-42d3-4812-9edd-e456aeb75fa6",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3342ba2b-1cdb-4148-a377-9cf6b41368e5",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--138db37b-179f-48b2-aeef-7d4257791d87",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2eda980-1cf1-4fcf-8c6f-4fcb1d568b05",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e02a906f-263a-4203-a658-f5ba1574cf47",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--adae559d-db37-4af8-9a2f-c58d250dbbaa",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82f916f2-50f6-4224-9884-cb11c45525b2",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b39b23e3-0a90-4d40-ade0-bc31b1f1f864",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b79fd643-3a6d-45b1-bc3f-22e5f60e004d",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "attack-pattern--5999c6b2-e3e3-44e5-b75a-a702fd890718"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dea891e7-3b11-4302-bab6-1f902d09185f",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75c64610-8705-45dd-893f-517034aaec3e",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5827ec6d-21d7-4058-a5dd-287aa5123831",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0625a5c-97ae-41b3-abc0-bb7e7a435b94",
+      "target_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a4f8dc2-4872-4b96-8de7-ffc955b0d962",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0625a5c-97ae-41b3-abc0-bb7e7a435b94",
+      "target_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d913a26-5c32-4f8b-af46-ba044e322959",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f0625a5c-97ae-41b3-abc0-bb7e7a435b94",
+      "target_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2cbd62b-2e4a-41a8-ba12-624b28ae90b7",
+      "relationship_type": "related-to",
+      "source_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f",
+      "target_ref": "domain-name--de61309b-c643-4595-b112-af6e08aec519"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--add2a996-430d-47b7-9060-b311c1f82457",
+      "relationship_type": "related-to",
+      "source_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f",
+      "target_ref": "ipv4-addr--34fdec88-d3c5-4b8b-9e90-0d2ba56fb850"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c990137-77be-41a0-8434-e732713d687f",
+      "relationship_type": "downloaded-from",
+      "source_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f",
+      "target_ref": "url--20c268e4-3253-4e5d-9c50-3ac93c649713"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bdfaf49b-5c89-4325-9d5f-ba6c0d29fe8a",
+      "relationship_type": "downloaded-from",
+      "source_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f",
+      "target_ref": "url--20c268e4-3253-4e5d-9c50-3ac93c649713"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed3eff92-1c10-4963-92d3-78f6bbc43300",
+      "relationship_type": "downloaded-from",
+      "source_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f",
+      "target_ref": "url--20c268e4-3253-4e5d-9c50-3ac93c649713"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--352c286b-5ca7-4180-82ea-0373a841c011",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c77ffb5-ac57-47db-8e12-7a3f91ef3045",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "infrastructure--acbeab42-b28a-4096-9a55-c97f78d94f8f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2fca7ef-1d5b-4cd9-b8eb-210ce80c255d",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--917a2a28-8840-4d25-836c-e1af726015c0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa96779b-f0a6-453c-830f-eb1be6516fb8",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4af52530-cff6-4f0a-961a-e7b49ef9d70f",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21bf68d8-0fa3-4a96-8837-a38229c5f9dd",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5670ee17-b2e9-467b-bbfd-77cebedc2d96",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4ae2d37-35d2-4b4d-86da-750eb89c78af",
+      "relationship_type": "uses",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "file--78f85fd6-74a0-47a8-bb7a-ef44534a596f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bb65d73-9d20-4d90-b23e-76de74c90238",
+      "relationship_type": "spawns",
+      "source_ref": "malware--ff6f9b33-4fd1-4a98-8579-d19bb40a55a3",
+      "target_ref": "process--d28027dc-14e8-4d7e-87d3-c00c860b4bfd"
+    }
+  ]
+}

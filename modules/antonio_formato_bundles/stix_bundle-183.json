@@ -1,0 +1,1065 @@
+{
+  "type": "bundle",
+  "id": "bundle--6d032443-3f6c-4c33-98cb-0eef5440dbdf",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--9604efa4-1621-474f-ad04-eb3d8ac17748",
+      "name": "GoRed",
+      "aliases": [
+        "Bulldog Backdoor"
+      ],
+      "description": "GoRed is an advanced backdoor malware written in Go, first observed in 2023 and used for cyberespionage campaigns targeting Russian organizations, especially in the software development sector. It is attributed by some security companies to ExCobalt and Shedding Zmiy, and tracked by Kaspersky as Red Likho. GoRed supports multiple protocols for C2 communication, including DNS, ICMP, QUIC, and WSS, and includes modules for DNS tunneling, data packing, proxy mode, command execution, file system monitoring, information collection, beacon mode, ICMP tunneling, data exfiltration, reverse shell, and configuration retrieval.",
+      "malware_types": [
+        "backdoor",
+        "remote access trojan"
+      ],
+      "is_family": true,
+      "first_seen": "2023",
+      "last_seen": "2025",
+      "operating_system_refs": [
+        "windows",
+        "linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "PT Security",
+          "url": "https://ptsecurity.com/research/pt-esc-threat-intelligence/ex-cobalt-go-red-tehnika-skrytogo-tunnelya/"
+        },
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/gored/"
+        }
+      ],
+      "labels": [
+        "cyberespionage",
+        "backdoor",
+        "APT",
+        "Red Likho"
+      ],
+      "version": "v1.1.5-34ab",
+      "sample_hashes": [
+        "171f79a92688202e44eaf0fdbb02c062",
+        "9a13e49aa221dcbaa78117590c1d43c2",
+        "5ee25c44600c70c5d813d21976613d88",
+        "ac8b643c105919d68d3209c18ef634fd",
+        "eff70b577b21280bb88f8e368efca3b2",
+        "3ca48982c4eab32b960b9dc28031603b",
+        "e7e110ee83c7511c9b935d64d119fe7a",
+        "08fe36ae0f16513d3b8ccc538c0d24e5",
+        "438a6ef42b1967df33bed2663bb84466",
+        "27b10f9e32d8685d7c78ca7fb2dfbba3",
+        "6ce0ac6fa8d810cc70b38ea3e6a10526",
+        "f844030f4c0dd0a2f609db86ef6d4d94",
+        "f4f0124409bd305757472b96386038b5",
+        "ecd9d61acb6804425491ff6802a3e6e9",
+        "0136fcdd8a252f8f8a4c566d2444e5a1",
+        "45f65f0badbcf2939b7014d6306b293e",
+        "516e4977359a13f4aea267f8dd49a4e6",
+        "6b2bbf265cc08d75af3c667e8cfa81b4",
+        "aae0bfba7078b7db8b64794376690044"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--e2c2093f-ae0f-4ce2-bdf2-130d0da572c5",
+      "name": "Cobalt Strike",
+      "description": "Cobalt Strike is a commercial penetration testing tool that is widely abused by threat actors for post-exploitation, lateral movement, and C2 operations. In this campaign, Cobalt Strike was deployed using GoRed and trojanized Sysinternals tools, including Sysmon and Process Explorer.",
+      "malware_types": [
+        "remote access trojan",
+        "post-exploitation framework"
+      ],
+      "is_family": true,
+      "sample_hashes": [
+        "a8d909623d517be7a33b0e59ba7a4f08",
+        "7d129195fa3cea013031ae5b1b6292ed",
+        "7cd621d083e6c7f4c6de3204629e7ef0",
+        "7dbc170a15aa1b8ba0d1ae978b171b3a",
+        "b05598733db5c1eae424d969079e02c8",
+        "bde423299c74b49fd1fbb7c4fd4d3d6d",
+        "f20cc7378b941400a2824209b73dcf0e",
+        "40126441561fd9fc7df93c36d6f04c05"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/cobaltstrike/"
+        }
+      ],
+      "labels": [
+        "post-exploitation",
+        "C2",
+        "trojanized Sysinternals"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--185ea2be-e62f-4cc6-ae0c-3e1e0311349a",
+      "name": "Tuoni",
+      "description": "Tuoni is an advanced C2 framework agent observed since February 2024, deployed by trojanized Sysinternals tools instead of Cobalt Strike. It communicates with its C2 server via shellcode listeners and named pipes, with observed pipe names VKJWPWSYI, AWJZRPGJW, and ZNTICNMLN. Tuoni was used for reconnaissance and is linked to BO Team operations.",
+      "malware_types": [
+        "C2 framework",
+        "backdoor"
+      ],
+      "is_family": true,
+      "first_seen": "2024-02",
+      "sample_hashes": [
+        "bf053820a006de8e7a816a63a54bd33f",
+        "6ee8109a7ccad4fcd8e8ab240870d6dc",
+        "a84e37d444a261b7db8df0add98198ca",
+        "4b3b5b773fb302b0a728d81fe2bf57a0"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/bo-team/"
+        }
+      ],
+      "labels": [
+        "C2",
+        "named pipes",
+        "BO Team"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "name": "Leaked Wallpaper",
+      "description": "Leaked Wallpaper is a privilege escalation tool that extracts NetNTLM hashes from any session on a computer by changing the desktop wallpaper. It exploits CVE-2024-38100, a vulnerability in explorer.exe and DCOM Desktop Wallpaper objects. First seen in August 2024, it is inspired by the Fake Potato technique and used primarily in Red Team projects.",
+      "malware_types": [
+        "privilege escalation tool"
+      ],
+      "is_family": true,
+      "first_seen": "2024-08",
+      "sample_hashes": [
+        "e12995271d84c13a0da6f0770d2a3f95"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/leaked-wallpaper/"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38100"
+        }
+      ],
+      "labels": [
+        "privilege escalation",
+        "NetNTLM",
+        "Red Team"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "name": "BO Team",
+      "description": "BO Team is a hacktivist group known for targeting Russian organizations and collaborating with other hacktivist clusters such as Ukrainian Cyber Alliance. BO Team is linked to the use of Tuoni and Cobalt Strike in attacks and is suspected of sharing tools and knowledge with Red Likho.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/bo-team/"
+        }
+      ],
+      "labels": [
+        "hacktivist",
+        "collaboration",
+        "APT"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--00e04298-3be3-4873-bbe1-31682c3c4978",
+      "name": "CrackMapExec",
+      "description": "CrackMapExec is a post-exploitation tool used for dumping registry hives (SAM, SYSTEM, SECURITY) and credential discovery. In this campaign, it was used to dump registry hives and perform lateral movement.",
+      "tool_types": [
+        "post-exploitation",
+        "credential access"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/crackmapexec/"
+        }
+      ],
+      "labels": [
+        "credential access",
+        "lateral movement"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--926022aa-f4ff-4e60-bd9e-1ebc008a5339",
+      "name": "Keepass_discover.py",
+      "description": "Keepass_discover.py is a CrackMapExec module used to discover KeePass files and processes on compromised machines.",
+      "tool_types": [
+        "credential access"
+      ],
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/crackmapexec/"
+        }
+      ],
+      "labels": [
+        "KeePass",
+        "credential access"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b06e9810-8f48-4bfc-9998-767f84e7a469",
+      "name": "Supply Chain Compromise",
+      "description": "Attackers targeted Russian software development companies, indicating a focus on supply chain compromise.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky",
+          "url": "https://securelist.ru/tag/supply-chain-attack/"
+        }
+      ],
+      "labels": [
+        "supply chain",
+        "initial access"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--15977e8b-46d2-483e-a505-15cd4db9db1d",
+      "name": "Exploitation of ProxyShell Vulnerabilities",
+      "description": "Attackers exploited Microsoft Exchange vulnerabilities (CVE-2021-34473, CVE-2021-34523, CVE-2021-31207) known as ProxyShell to gain initial access and deploy web shells.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34473"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-34523"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2021-31207"
+        }
+      ],
+      "labels": [
+        "initial access",
+        "exploit",
+        "ProxyShell"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d97673d9-0c25-42a9-8fa5-dc22cceb04d4",
+      "name": "Privilege Escalation via Leaked Wallpaper (CVE-2024-38100)",
+      "description": "Privilege escalation by exploiting a vulnerability in explorer.exe (CVE-2024-38100) using the Leaked Wallpaper tool to extract NetNTLM hashes.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2024-38100"
+        }
+      ],
+      "labels": [
+        "privilege escalation",
+        "exploit",
+        "NetNTLM"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2cb118a3-e29a-49e2-9996-44dda2f7af96",
+      "name": "Trojanization of Sysinternals Tools",
+      "description": "Attackers deployed trojanized versions of Sysinternals tools (Sysmon, Process Explorer) to deliver Cobalt Strike and Tuoni agents.",
+      "labels": [
+        "trojanized tools",
+        "defense evasion",
+        "execution"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--98342648-bb47-4add-88db-afb723696cd1",
+      "name": "Registry Hive Dumping",
+      "description": "Attackers performed registry hive dumps (SAM, SYSTEM, SECURITY) using reg.exe and CrackMapExec for credential harvesting.",
+      "labels": [
+        "credential access",
+        "registry dump"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--beff9033-ba6a-4a11-9f61-a7a1446bdfdf",
+      "name": "LSASS Process Dumping",
+      "description": "Attackers dumped LSASS process memory using procdump64.exe and PowerShell for credential extraction.",
+      "labels": [
+        "credential access",
+        "process dump"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--62780f0a-4f15-439c-a28c-6f676ac07f66",
+      "name": "KeePass File and Process Discovery",
+      "description": "Attackers used PowerShell and CrackMapExec modules to discover KeePass files and processes.",
+      "labels": [
+        "credential access",
+        "file discovery"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "name": "Web Shell Deployment",
+      "description": "Attackers deployed web shells (.aspx) to compromised Exchange servers for initial reconnaissance and malware delivery.",
+      "labels": [
+        "initial access",
+        "web shell"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--03c168db-5bb4-48c7-b060-26df39d8dce9",
+      "name": "postgres.exe",
+      "path": "c:\\program files\\postgresql\\12.5-3.1c\\bin\\postgres.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5f64514b-d9d5-43cd-a76f-630077530a0d",
+      "name": "cmd.exe",
+      "path": "c:\\windows\\system32\\cmd.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0421f010-9463-42aa-ba97-f1e1c87178eb",
+      "name": "decodeh.vbs",
+      "path": "%APPDATA%\\decodeh.vbs"
+    },
+    {
+      "type": "file",
+      "id": "file--abc42695-86b8-4f5f-a66e-d0bf178208bc",
+      "name": "d.vbb",
+      "path": "%APPDATA%\\d.vbb"
+    },
+    {
+      "type": "file",
+      "id": "file--f51a102f-58f3-4a15-b93b-e8df1be3b655",
+      "name": "d.vbh",
+      "path": "%APPDATA%\\d.vbh"
+    },
+    {
+      "type": "file",
+      "id": "file--91b498e5-d721-4582-8f52-1d0264b2bdba",
+      "name": "d.vbs",
+      "path": "%APPDATA%\\d.vbs"
+    },
+    {
+      "type": "file",
+      "id": "file--3a18e622-3196-4c11-9639-d4b66898870f",
+      "name": "6b7241386979593772515555754c394244666f4d31413d3d.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--fe9db500-b05b-49de-b40c-6c8e878154c7",
+      "name": "login.aspx",
+      "path": "c:\\inetpub\\wwwroot\\aspnet_client\\system_web\\4_0_30319\\login.aspx"
+    },
+    {
+      "type": "file",
+      "id": "file--6ac51858-95f4-43a3-af91-27e00bbb2948",
+      "name": "sam.save"
+    },
+    {
+      "type": "file",
+      "id": "file--c173b112-31eb-432d-b920-1d242032f55d",
+      "name": "system.save"
+    },
+    {
+      "type": "file",
+      "id": "file--4318f272-a02b-4577-a48f-18690977748b",
+      "name": "lsass.dmp"
+    },
+    {
+      "type": "file",
+      "id": "file--bae1a7f0-5ddd-4887-8526-7b532612569b",
+      "name": "KeePass.config.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--237acac8-55cd-4dd4-92e0-b744c20f6454",
+      "name": "KeePass.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--31723328-6fcc-4532-a058-5d2cf9b7b697",
+      "name": "*.kdbx"
+    },
+    {
+      "type": "file",
+      "id": "file--c15fa1b8-8234-4f5d-8662-59fdc2b3f66e",
+      "name": "me3dc.exe",
+      "path": "C:\\windows\\appreadiness\\me3dc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2eb3bf5b-98e8-408b-96b0-c4143ebf19fb",
+      "name": "Sysmon64.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\Sysmon64.exe",
+      "hashes": {
+        "MD5": "a8d909623d517be7a33b0e59ba7a4f08"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bb8a0009-b8b2-4325-9b7d-25c948595e6d",
+      "name": "7z.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\7z.exe",
+      "hashes": {
+        "MD5": "7cd621d083e6c7f4c6de3204629e7ef0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e93ff373-b7d0-4ef2-b5e4-981b1a8ee63d",
+      "name": "sysmp.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\sysmp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0e8d869e-76ca-4c2b-8f5e-b280bac4a832",
+      "name": "procexp.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\procexp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d15ec76c-d772-4952-97b5-53005c65fb5d",
+      "name": "sysmon.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\sysmon.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9ac7c573-6ee3-4096-ae2f-e01f25c67dc2",
+      "name": "sysmn.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\sysmn.exe",
+      "hashes": {
+        "MD5": "7dbc170a15aa1b8ba0d1ae978b171b3a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--77368235-292c-448b-bef8-dd608a673696",
+      "name": "mpd.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\mpd.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3bba1dc8-75fc-4c44-aa60-7385ed98cb4e",
+      "name": "mpp.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\mpp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--21a3e982-3831-48aa-9dde-974eb520bedd",
+      "name": "procexporer.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\procexporer.exe",
+      "hashes": {
+        "MD5": "b05598733db5c1eae424d969079e02c8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bb92f897-8732-4404-93a2-54684fdd35a1",
+      "name": "mdbtsc.exe",
+      "path": "C:\\Users\\[User]\\Pictures\\mdbtsc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--be82fb02-486f-4dee-9201-ab05fbb81f29",
+      "name": "l.exe",
+      "path": "c:\\Windows\\serviceprofiles\\networkservice\\l.exe",
+      "hashes": {
+        "MD5": "E12995271D84C13A0DA6F0770D2A3F95"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--193ca442-2ab1-439f-847d-707148d8d5ec",
+      "name": "MPS.exe",
+      "hashes": {
+        "MD5": "bf053820a006de8e7a816a63a54bd33f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--df9c6257-01e1-41d1-bdad-2d432419ee00",
+      "name": "mpsys.exe",
+      "hashes": {
+        "MD5": "6ee8109a7ccad4fcd8e8ab240870d6dc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7da60f48-bbfc-474a-893e-529a1514140c",
+      "name": "agent_1740215853109.x64.exe",
+      "hashes": {
+        "MD5": "a84e37d444a261b7db8df0add98198ca"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7377743b-ec35-41c0-a9b5-0cf1a92ee9a6",
+      "name": "binbuddy.exe",
+      "hashes": {
+        "MD5": "4b3b5b773fb302b0a728d81fe2bf57a0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--367d82fe-915a-4999-83f4-96798186c7a6",
+      "name": "CS Reflective Loader",
+      "hashes": {
+        "MD5": "bde423299c74b49fd1fbb7c4fd4d3d6d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d414a9e5-381e-490c-a09d-509390e16e6e",
+      "name": "CS Reflective Loader",
+      "hashes": {
+        "MD5": "f20cc7378b941400a2824209b73dcf0e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8e9de80c-1d6c-4d07-874c-bb74840ab628",
+      "name": "CS Reflective Loader",
+      "hashes": {
+        "MD5": "40126441561fd9fc7df93c36d6f04c05"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--103f2276-323b-4367-8399-45992745b5f1",
+      "name": "GoRed (Linux)",
+      "hashes": {
+        "MD5": "171f79a92688202e44eaf0fdbb02c062"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b95f07b5-b304-4dec-a11d-bf17eef41dae",
+      "name": "GoRed (Linux)",
+      "hashes": {
+        "MD5": "9a13e49aa221dcbaa78117590c1d43c2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--20f6cdc3-f0d8-45a8-bb34-c12b63938bc2",
+      "name": "GoRed (Linux)",
+      "hashes": {
+        "MD5": "5ee25c44600c70c5d813d21976613d88"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e4ccad7c-2241-4a49-823b-35795d0e9245",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "ac8b643c105919d68d3209c18ef634fd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ebd0e6a3-350a-45af-92e1-b6a603222d4e",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "eff70b577b21280bb88f8e368efca3b2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--58ce0c19-027b-4358-90e1-1304e8e06863",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "3ca48982c4eab32b960b9dc28031603b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a3b868bf-6937-4cf8-90a5-c3a7746010bd",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "e7e110ee83c7511c9b935d64d119fe7a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--862f17ab-cb08-4fb2-9e72-67fbab74afc0",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "08fe36ae0f16513d3b8ccc538c0d24e5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d7a3a9af-154e-4027-9170-f2fe585262ce",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "438a6ef42b1967df33bed2663bb84466"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3c7939e8-dabf-4d39-8285-1f63d3b27400",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "27b10f9e32d8685d7c78ca7fb2dfbba3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4ab69c38-faee-40b1-8c6d-7dc4c8f3851c",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "6ce0ac6fa8d810cc70b38ea3e6a10526"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4b4dc113-c5aa-48f4-80da-be93c0c56d41",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "f844030f4c0dd0a2f609db86ef6d4d94"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3dce7302-b01f-46bd-b19c-181976e97885",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "f4f0124409bd305757472b96386038b5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c9d3b7ef-1d39-40a5-89f6-7388aea407e4",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "ecd9d61acb6804425491ff6802a3e6e9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5e03dd4d-1582-4577-aa39-84cb48271c0f",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "0136fcdd8a252f8f8a4c566d2444e5a1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7030fe7d-1cbd-4085-865a-63e83dd617c6",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "45f65f0badbcf2939b7014d6306b293e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--99dd56c6-6120-49e3-9b94-37fcd952a646",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "516e4977359a13f4aea267f8dd49a4e6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--277e42c8-36d0-4dab-8045-c37380b73039",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "6b2bbf265cc08d75af3c667e8cfa81b4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6f002377-9585-4182-800b-5812de05d019",
+      "name": "GoRed (Windows)",
+      "hashes": {
+        "MD5": "aae0bfba7078b7db8b64794376690044"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7d4045e3-dc6c-414e-802f-da211dddfe92",
+      "value": "c4h10o.autos"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d0ddd28c-f1f5-4317-9dc3-85b12b67e294",
+      "value": "4702c6.mom"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--12a174a8-0dcd-4f3d-833c-0ba7de6132bb",
+      "value": "uck3n.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1f9119a9-23ab-4a06-97aa-567fde3e66e6",
+      "value": "v01d1t.lol"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1fdff669-e0b9-4b43-b32a-11a682cd5100",
+      "value": "zafurilo.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e60f79ea-2c17-4236-a5ed-82fdf4ac25aa",
+      "value": "jruby33.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6607d594-e329-40fe-8dcd-8c9fa05e0c38",
+      "value": "bitf9r.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--55d6762a-3877-4448-99cc-75602637566c",
+      "value": "topgear.lol"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--38eabb1c-2658-459c-8093-3e064e83e189",
+      "value": "hexa10.biz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--303f0946-7528-4bc5-9ada-7e32059871e7",
+      "value": "xy7ozq.info"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ec1ad825-ae4d-40b5-93e4-e0c73c115b61",
+      "value": "45.151.62.65"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--722fc004-5c20-4759-8ba3-e62268701131",
+      "value": "45.151.62.69"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--bc8da98d-2b9b-410e-806e-564c59382334",
+      "value": "89.23.113.79"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--74d72f7e-3112-4297-90ce-b5714002e31a",
+      "value": "193.233.20.79"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--31bd073b-676b-4dd4-8016-c47286741c3e",
+      "value": "45.87.246.5"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d845f8f4-3e03-4f95-be1e-091102a2f171",
+      "value": "176.124.193.64"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b7e90ad1-681f-421a-ab8c-eb6749ea3022",
+      "value": "45.87.247.159"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a9382522-32a1-4124-9773-ca9234d9a799",
+      "value": "45.140.19.138"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fb4458af-2032-4871-94e0-0f33046cc7df",
+      "value": "103.71.23.102"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1c359bda-eeae-492c-b4ea-03a47154f016",
+      "value": "176.124.192.19"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d67ca4c6-cf94-4218-a721-7f40becd8675",
+      "value": "176.124.192.127"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--02f5caba-20b4-4fde-8a96-f913c9dc7260",
+      "value": "82.202.173.167"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b6918c98-42f1-4946-813c-56f4368094bb",
+      "value": "176.124.222.65"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ea9c315-4553-4d3e-9573-d391b5771ec1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "target_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "description": "Red Likho uses GoRed backdoor in cyberespionage campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--638cf4b7-df41-4d0c-8dd1-fc3c52c9a504",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "description": "GoRed is attributed to Red Likho (also known as ExCobalt and Shedding Zmiy)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f228924f-f439-4eee-9b0b-03531d47f370",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "Red Likho targets Russian software development companies via supply chain compromise."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a388e129-b503-44ca-b702-0a268d6051d1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "Red Likho exploits ProxyShell vulnerabilities for initial access and web shell deployment."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--290c4265-26dd-4276-a4f2-7208de08b591",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed is delivered via exploitation of ProxyShell vulnerabilities and web shell deployment."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21826151-760f-499e-9b1f-d82b4e393cfc",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed is used for registry hive dumping and LSASS process dumping for credential harvesting."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fc04e64-b799-435d-8f1d-00a8dc8f13be",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed is delivered using trojanized Sysinternals tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--882998ce-97f5-4b88-b2d3-17babb70ea7c",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "description": "GoRed is used to deploy Cobalt Strike on compromised hosts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8670a678-b826-4c60-b50c-f1bcab607bea",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "description": "Trojanized Sysinternals tools are used to deploy Tuoni agent instead of Cobalt Strike."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04d039ea-009d-44a0-ae40-62ece704b6b0",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "tool--926022aa-f4ff-4e60-bd9e-1ebc008a5339",
+      "description": "GoRed operators use CrackMapExec for registry hive dumping and credential access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7850119-8b0a-473a-a728-c3df45a70a03",
+      "relationship_type": "uses",
+      "source_ref": "tool--926022aa-f4ff-4e60-bd9e-1ebc008a5339",
+      "target_ref": "tool--926022aa-f4ff-4e60-bd9e-1ebc008a5339",
+      "description": "CrackMapExec uses Keepass_discover.py module for KeePass file and process discovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31969364-f2b8-4e0b-9982-85ddb47bcda3",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed operators use PowerShell and CrackMapExec modules for KeePass file and process discovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba323c37-7b05-49b3-9bcc-f8e621e1b5b7",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed is delivered via web shell deployment on Exchange servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a0559b1-cbf3-4b68-8f99-1e3af6742ebf",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "GoRed is used for privilege escalation via Leaked Wallpaper (CVE-2024-38100)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c878610b-226c-4e3b-8467-c78e92196624",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "description": "Leaked Wallpaper is used for privilege escalation and NetNTLM hash extraction."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb26b34a-7a9a-4e0a-aefa-011ee09b7cce",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "Leaked Wallpaper exploits CVE-2024-38100 for privilege escalation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae022724-70db-4ae2-8926-3ee932df54ff",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "domain-name--303f0946-7528-4bc5-9ada-7e32059871e7",
+      "description": "GoRed communicates with C2 domains including c4h10o.autos, 4702c6.mom, uck3n.xyz, v01d1t.lol, zafurilo.xyz, jruby33.xyz, bitf9r.xyz, topgear.lol, hexa10.biz, xy7ozq.info."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ffa0398-4f5b-40f6-ad2f-99c824ea73ed",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "ipv4-addr--b6918c98-42f1-4946-813c-56f4368094bb",
+      "description": "GoRed communicates with C2 IPs including 45.151.62.65, 45.151.62.69, 89.23.113.79, 193.233.20.79, 45.87.246.5, 176.124.193.64, 45.87.247.159, 45.140.19.138, 103.71.23.102, 176.124.192.19."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5f0fa09-09f3-49fc-b276-06c262bd2c88",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "Cobalt Strike is delivered via trojanized Sysinternals tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--370deb53-0e8c-4db7-89d3-4f9bd61c4f0d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "ipv4-addr--b6918c98-42f1-4946-813c-56f4368094bb",
+      "description": "Cobalt Strike communicates with C2 IPs including 176.124.192.127 and 82.202.173.167."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67260697-e31c-40a5-8464-6ee86c52f836",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "attack-pattern--8b27dd0f-7b11-4c16-ae75-663a2cc8d558",
+      "description": "Tuoni is delivered via trojanized Sysinternals tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab716566-270a-43a9-8399-cdabe447a800",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "ipv4-addr--b6918c98-42f1-4946-813c-56f4368094bb",
+      "description": "Tuoni communicates with C2 IP 176.124.222.65."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5ea8b24-35db-49a0-a6cf-b585a1df160d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "target_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "description": "BO Team uses Tuoni and Cobalt Strike in attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fb6566c-c156-46ee-a853-9844e4a47e99",
+      "relationship_type": "collaborates-with",
+      "source_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "target_ref": "intrusion-set--42974abf-7a95-4edc-9b7f-d1fa54f9bea2",
+      "description": "Red Likho and BO Team collaborate and share tools and knowledge."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1695396-84c7-424e-b823-a3fad47d0e93",
+      "relationship_type": "uses",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "GoRed is delivered via decodeh.vbs, d.vbb, d.vbh, d.vbs, and 6b7241386979593772515555754c394244666f4d31413d3d.exe files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f2d68cb-75cf-47f9-a3ad-013d72d1a378",
+      "relationship_type": "drops",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "GoRed drops sam.save, system.save, lsass.dmp, KeePass.config.xml, KeePass.exe, and *.kdbx files for credential harvesting."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a5d778a-2b89-46cc-9805-14610d15fa06",
+      "relationship_type": "drops",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "GoRed drops login.aspx web shell for initial access and malware delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--84693e2f-38fa-489d-90d9-fa798ce85fcc",
+      "relationship_type": "drops",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "Cobalt Strike is deployed as Sysmon64.exe, 7z.exe, sysmp.exe, procexp.exe, sysmon.exe, sysmn.exe, mpd.exe, mpp.exe, procexporer.exe, mdbtsc.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c04996d5-271a-4dce-b61b-1e1f9179506e",
+      "relationship_type": "drops",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "Leaked Wallpaper is deployed as l.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df882456-95df-46cb-8d5f-10d430e78cee",
+      "relationship_type": "drops",
+      "source_ref": "malware--fc80815c-7cd1-47fa-87c5-d70f300b1d83",
+      "target_ref": "file--6f002377-9585-4182-800b-5812de05d019",
+      "description": "Tuoni is deployed as MPS.exe, mpsys.exe, agent_1740215853109.x64.exe, binbuddy.exe."
+    }
+  ]
+}

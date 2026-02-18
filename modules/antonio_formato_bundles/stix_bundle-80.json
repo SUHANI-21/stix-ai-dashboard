@@ -1,0 +1,163 @@
+{
+  "type": "bundle",
+  "id": "bundle--86b3df19-409a-45e4-ac01-ccfaf9eeb131",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "name": "Fortinet FortiCloud SSO Login Authentication Bypass",
+      "description": "An Improper Verification of Cryptographic Signature vulnerability (CWE-347) in FortiOS, FortiWeb, FortiProxy and FortiSwitchManager allows improper access control via FortiCloud SSO login authentication bypass. The vulnerability is present when FortiCloud SSO login is enabled, which is not the default setting but may be enabled during device registration. Impact includes improper access control.",
+      "created": "2025-12-09T00:00:00.000Z",
+      "modified": "2025-12-09T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59718"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59719"
+        },
+        {
+          "source_name": "Fortinet PSIRT",
+          "url": "https://filestore.fortinet.com/fortiguard/psirt/csaf_multiple-fortinet-products-forticloud-sso-login-authentication-bypass.json"
+        },
+        {
+          "source_name": "CVSSv3",
+          "url": "https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C&version=3.1"
+        }
+      ],
+      "labels": [
+        "improper-verification-of-cryptographic-signature",
+        "improper-access-control",
+        "authentication-bypass"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ed4b6673-e281-47ae-baa6-e02782d136f7",
+      "name": "Authentication Bypass via Improper Verification of Cryptographic Signature",
+      "description": "Attackers may exploit improper verification of cryptographic signatures in Fortinet products to bypass FortiCloud SSO login authentication, gaining unauthorized administrative access.",
+      "external_references": [
+        {
+          "source_name": "CWE",
+          "external_id": "CWE-347"
+        }
+      ],
+      "labels": [
+        "authentication-bypass",
+        "cryptographic-signature"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--25bf35a3-38e4-485d-8c77-a4330ea342e2",
+      "name": "FortiOS",
+      "description": "Fortinet's operating system for security appliances. Vulnerable versions: 7.6.0-7.6.3, 7.4.0-7.4.8, 7.2.0-7.2.11, 7.0.0-7.0.17.",
+      "cpe": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+      "labels": [
+        "security-appliance-os"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--1584aba2-5784-4544-a576-f20b0ae5e788",
+      "name": "FortiProxy",
+      "description": "Fortinet's proxy solution. Vulnerable versions: 7.6.0-7.6.3, 7.4.0-7.4.10, 7.2.0-7.2.14, 7.0.0-7.0.21.",
+      "cpe": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
+      "labels": [
+        "proxy"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--bd6474f0-b7aa-405a-8786-e76a9d87072d",
+      "name": "FortiSwitchManager",
+      "description": "Fortinet's switch management solution. Vulnerable versions: 7.2.0-7.2.6, 7.0.0-7.0.5.",
+      "cpe": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+      "labels": [
+        "switch-management"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--57ba08b8-b3c4-4ce9-bbef-51e89903d9fe",
+      "name": "FortiWeb",
+      "description": "Fortinet's web application firewall. Vulnerable versions: 8.0.0, 7.6.0-7.6.4, 7.4.0-7.4.9.",
+      "cpe": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+      "labels": [
+        "web-application-firewall"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--24428441-411e-40ff-8c7f-2449dbc8be75",
+      "name": "FortiOS",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--63bb08ac-40f0-4d1d-adbc-edfd398a62fa",
+      "name": "FortiWeb",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--abc415ba-0960-42e1-8ded-f9d7cc4ec9bc",
+      "name": "FortiProxy",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--883f5667-5bee-4724-a6e4-8e0807695b8e",
+      "name": "FortiSwitchManager",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "url",
+      "id": "url--954592c7-a750-4e75-8203-b647216c1d3a",
+      "value": "https://docs.fortinet.com/upgrade-tool"
+    },
+    {
+      "type": "url",
+      "id": "url--86fe6379-718e-4c97-916a-bfab14e3dd83",
+      "value": "https://nvd.nist.gov/vuln-metrics/cvss/v3-calculator?vector=AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H/E:F/RL:O/RC:C&version=3.1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6ac17dc-c256-438a-87e7-e7b7bd625605",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "target_ref": "attack-pattern--ed4b6673-e281-47ae-baa6-e02782d136f7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--baf7352c-4ad7-4ba5-9d3e-c872050f98e9",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "target_ref": "software--883f5667-5bee-4724-a6e4-8e0807695b8e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64721df6-60bc-4801-ad06-cfda3450f028",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "target_ref": "software--883f5667-5bee-4724-a6e4-8e0807695b8e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4b1a7fe-6ed7-4d3a-9778-17e171fb2e96",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "target_ref": "software--883f5667-5bee-4724-a6e4-8e0807695b8e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6564d015-3533-44d8-b69c-4c666dae99cf",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--7bd5da71-ab7e-4b37-8a81-6a6d220d0536",
+      "target_ref": "software--883f5667-5bee-4724-a6e4-8e0807695b8e"
+    }
+  ]
+}

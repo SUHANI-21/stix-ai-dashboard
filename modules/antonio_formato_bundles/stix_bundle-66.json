@@ -1,0 +1,109 @@
+{
+  "type": "bundle",
+  "id": "bundle--ad93891b-703a-4ba8-9eaf-61abf740e43b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--b4d4fcc7-bd38-45ec-911c-ea9e810d71a5",
+      "name": "PDF Editor.exe",
+      "path": "%USERPROFILE%\\PDF Editor.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3218de8d-08ab-4c58-9c80-901fab8d49c0",
+      "name": "pdfeditor.js",
+      "description": "Main, heavily obfuscated JavaScript file responsible for malicious activity and limited UI."
+    },
+    {
+      "type": "file",
+      "id": "file--5b7d24bd-27d6-4899-8c3b-f2be06c7ee9a",
+      "name": "Utilityaddon.node",
+      "description": "Custom NodeJS module (native x64 DLL) used to create/delete registry entries and scheduled tasks."
+    },
+    {
+      "type": "file",
+      "id": "file--5ff1b2eb-2800-4bf4-bb64-720ac3ce7133",
+      "name": "app.asar",
+      "description": "Electron archive containing bundled scripts and modules for PDF Editor and S3-Forge."
+    },
+    {
+      "type": "file",
+      "id": "file--231a721f-6703-4010-8d87-1062acbd03cf",
+      "name": "appsuite-print.js",
+      "description": "Obfuscated JavaScript file used in AppSuite Print decoy application."
+    },
+    {
+      "type": "file",
+      "id": "file--7a7e6bba-4265-4133-8408-e05e7a256632",
+      "name": "S3-Forge",
+      "description": "Unsigned binary for S3-Forge decoy application."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6aaadfd1-16d3-4bab-95c6-fc4d52f7e7c9",
+      "value": "vault.appsuites.ai"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--31795b11-f1f9-4ced-9d9c-b11585db11b4",
+      "value": "pdf-tool.appsuites.ai"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--08798096-2bd4-48ad-8573-6291ab77782b",
+      "value": "freeonlinetools.info"
+    },
+    {
+      "type": "software",
+      "id": "software--074af880-e0bf-4901-a349-fd561a717b06",
+      "name": "AppSuite PDF Editor",
+      "cpe": "cpe:2.3:a:appsuite:pdf_editor:*:*:*:*:*:*:*:*",
+      "description": "Electron-based PDF editor application used as a decoy for TamperedChef malware campaign."
+    },
+    {
+      "type": "software",
+      "id": "software--788731e8-8f47-48b3-9168-5cbbf5ec8521",
+      "name": "AppSuite Print",
+      "description": "Electron-based print utility application, similar to PDF Editor, abandoned by threat actors."
+    },
+    {
+      "type": "software",
+      "id": "software--262d8900-9ebd-43ff-96e1-a9743ee0fb94",
+      "name": "S3-Forge",
+      "description": "Successor decoy application based on PDF Editor concept, under development."
+    },
+    {
+      "type": "software",
+      "id": "software--80e00d3f-1e2c-46cc-ba0c-b53093b4101d",
+      "name": "Utilityaddon.node",
+      "description": "Custom NodeJS module for registry and scheduled task manipulation."
+    },
+    {
+      "type": "registry-key",
+      "id": "registry-key--5aeebb3f-d443-41bd-8851-43d9e305a8b9",
+      "key": "HKCU\\Software\\Microsoft\\Windows\\CurrentVersion\\Run\\PDF Editor",
+      "description": "Autorun registry entry created for persistence."
+    },
+    {
+      "type": "url",
+      "id": "url--aa37f3bd-8a68-46b4-bc3e-835cf88ccf91",
+      "value": "https://vault.appsuites.ai"
+    },
+    {
+      "type": "url",
+      "id": "url--77bd4dd3-7744-49ad-8a34-6ec5ab6d6818",
+      "value": "https://pdf-tool.appsuites.ai"
+    },
+    {
+      "type": "url",
+      "id": "url--fd406606-1c75-42ff-972a-0eeee81181ff",
+      "value": "https://pdf-tool.appsuites.ai/en/print"
+    },
+    {
+      "type": "url",
+      "id": "url--f0fda69a-b84d-418b-b68f-7ed9dfec91f1",
+      "value": "https://freeonlinetools.info"
+    }
+  ]
+}

@@ -1,0 +1,777 @@
+{
+  "type": "bundle",
+  "id": "bundle--1854c1e5-18e0-474f-b4be-de89d0fee54d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c97a6923-6dbe-4dab-8a9d-754c08b5f925",
+      "name": "Scheduled Task/Job",
+      "description": "Persistence via Android JobScheduler service.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1603"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--56b15f08-e204-4361-9482-7666deb9cf9a",
+      "name": "Device Administrator Permissions",
+      "description": "Privilege escalation by obtaining device admin rights.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1401"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--12eb0830-d894-4249-b001-c2553a935372",
+      "name": "Virtualization / Sandbox Evasion",
+      "description": "Defense evasion by detecting emulators or virtualized environments.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1633"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8b46383a-ea16-43c6-9fd4-d6d56129cf4a",
+      "name": "Input Injection",
+      "description": "Execution by automating UI navigation, clicks, swipes, and gestures.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1516"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--58b763e4-827d-4cf1-8d11-7cf27a5efa1e",
+      "name": "GUI Input Capture",
+      "description": "Collection of user input via accessibility abuse.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1417.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--70907602-a77d-46f5-97b0-b76ee1c00c89",
+      "name": "Screen Capture",
+      "description": "Collection of screen contents and UI metadata.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1513"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b2c9cc71-d8a7-4a70-b8b9-bf61b4c68505",
+      "name": "Clipboard Data",
+      "description": "Collection of clipboard contents to steal sensitive information.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1414"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--60544e94-6945-44d0-9ea9-bf810d8de88d",
+      "name": "Capture SMS Messages",
+      "description": "Collection of SMS messages from infected device.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1412"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--923e4a03-af74-4fce-bdaa-dccab27d6534",
+      "name": "Software Discovery / Application Enumeration",
+      "description": "Discovery of installed applications on the device.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1418"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c52080a0-aaca-4fd0-9e33-0458d71a1d4c",
+      "name": "Web Protocols",
+      "description": "Command and control via HTTP and WebSocket protocols.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1437.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--80e7d4fe-92da-4ec6-908b-bb2829017d6d",
+      "name": "Exfiltration Over C2 Channel",
+      "description": "Exfiltration of data via C2 communication channels.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1646"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c",
+      "name": "Call Control",
+      "description": "Impact by enabling or cancelling call forwarding using MMI codes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1616"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--b9909cd3-1690-4a68-a3e6-5ba65e85331b",
+      "name": "IdentitasKependudukanDigital.apk",
+      "size": 25039234,
+      "hashes": {
+        "SHA-256": "cb25b1664a856f0c3e71a318f3e35eef8b331e047acaf8c53320439c3c23ef7c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f8fc07de-43b1-45da-9859-588735b4509a",
+      "name": "identitaskependudukandigital.apk",
+      "size": 25039234,
+      "hashes": {
+        "SHA-256": "19456fbe07ae3d5dc4a493bac27921b02fc75eaa02009a27ab1c6f52d0627423"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9",
+      "name": "identitaskependudukandigital.apk",
+      "size": 25039230,
+      "hashes": {
+        "SHA-256": "a4126a8863d4ff43f4178119336fa25c0c092d56c46c633dc73e7fc00b4d0a07"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9b622017-7886-4a45-b720-82120f041060",
+      "value": "ping.ynrkone.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0e8f0043-b846-4471-9bb6-109479e059a1",
+      "value": "plp.foundzd.vip"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2bf8d124-9412-42dc-ac47-ec656974c010",
+      "value": "plp.e1in2.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e",
+      "value": "plp.en1inei2.top"
+    },
+    {
+      "type": "software",
+      "id": "software--9619e699-d807-4d75-a7e5-9c25c29396e2",
+      "name": "Android/BankBot-YNRK",
+      "cpe": "cpe:2.3:a:android:bankbot-ynrk:-:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--b067b8fc-3ce5-4a48-ae64-4768942fb8d4",
+      "name": "nmm-protect"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--b0c8669c-b689-438e-9bdd-4cfde83e42ab",
+      "name": "MoMo",
+      "package_name": "com.mservice.momotransfer"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--75e6a1e2-5c37-476a-af92-8bfaf4bc62d2",
+      "name": "SCB Mobile Banking",
+      "package_name": "com.vnpay.SCB"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--57215193-3b3d-4de1-86a8-e2f1e87d97af",
+      "name": "MyVIB",
+      "package_name": "com.vib.myvib2"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--dea741f1-db16-475e-8621-368e1633478a",
+      "name": "COB OMNI",
+      "package_name": "com.ocb.omniextra"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--afd436f9-75e6-4110-85e9-97217b8b4ce9",
+      "name": "Open Banking",
+      "package_name": "ops.namabank.com.vn"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--2c6fdf2d-6211-455e-8a9f-c8f103d8983d",
+      "name": "Sacombank pay",
+      "package_name": "com.sacombank.ewallet"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--d826df39-c52f-4899-94c7-f3676e589dcd",
+      "name": "SHB Mobile",
+      "package_name": "vn.shb.mbanking"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1b8d9b08-6842-4275-9b56-4999989c7bfd",
+      "name": "Techcombank",
+      "package_name": "vn.com.techcombank.bb.app"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--7eff1d06-2491-4399-912f-93561a7062df",
+      "name": "TPBank Mobile",
+      "package_name": "com.tpb.mb.gprsandroid"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--218aa180-1597-4c62-8dc9-0cd2c54d5320",
+      "name": "VCB Digidank",
+      "package_name": "com.VCB"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--6b53a503-ed38-4827-b8ba-a76e42f09bf1",
+      "name": "Vietin Bank",
+      "package_name": "com.vietinbank.ipay"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--41633634-7f5a-4a8a-90e4-7666bc59f86e",
+      "name": "VPBank NEO",
+      "package_name": "com.vnpay.vpbankonline"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--c8cb4bba-37a1-4886-b2d2-e17c61a2220b",
+      "name": "CAKE BANK",
+      "package_name": "xyz.be.cake"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--2a5326bc-7249-4568-8bda-016f8c7df4e9",
+      "name": "zalopay",
+      "package_name": "vn.com.vng.zalopay"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--780df4f4-92a9-4641-8e7d-ee7a2ca9e75a",
+      "name": "ACB ONE",
+      "package_name": "mobile.acb.com.vn"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--f29d9250-7d33-4a60-ba10-b062514968c3",
+      "name": "Agribank",
+      "package_name": "com.vnpay.Agribank3g"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--e5792abd-43e2-4ba3-8172-4a85a6cc1eb7",
+      "name": "Smart Banking",
+      "package_name": "com.vnpay.bidv"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--98f475b8-fc83-4bd1-b2e2-103d2ea7b805",
+      "name": "MB Bank",
+      "package_name": "com.mbmobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1bf8bbed-3fb6-4455-a2a9-bf6da36fa3fe",
+      "name": "chrome",
+      "package_name": "com.android.chrome"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--265e9325-879e-4c9e-b2d0-31b96daa8fd9",
+      "name": "Sacombank mBanking",
+      "package_name": "src.com.sacombank"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--7a2def1d-2d9b-4179-af46-91bafe9b1efe",
+      "name": "Namabank",
+      "package_name": "ops.namabank.com.vn"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--efc869b5-36ef-44d9-9ef4-dfd4a6771c05",
+      "name": "UCMobile",
+      "package_name": "com.UCMobile.intl"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--3e20bf21-f93a-497b-8d93-1716132e76f2",
+      "name": "Maybank",
+      "package_name": "com.maybank2u.life"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--6a0b63ae-8ae6-4091-8028-7ec103f5994b",
+      "name": "Hong Leong",
+      "package_name": "my.com.hongleongconnect.mobileconnect"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--b03a6135-a1eb-4777-9cb9-03a836fac341",
+      "name": "Public Bank",
+      "package_name": "com.engage.pbb.pbengage2my.release"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1717935f-43ba-4a62-b810-5919a7762e28",
+      "name": "CimB Bank",
+      "package_name": "my.com.cimb.ngb"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--23791b1d-b2a3-4c4b-a13c-f7d72726adcd",
+      "name": "RHB Bank",
+      "package_name": "com.rhbgroup.rhbmobilebanking"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--7b4a22a0-400f-4c5b-90f6-dd7c73a82199",
+      "name": "Ambank Bank",
+      "package_name": "com.ambank.ambankonline"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--4ec372c5-1fdc-422f-9667-2fe1b479ee5b",
+      "name": "BSN Bank",
+      "package_name": "com.bsn.mybsn"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1246bd74-e441-449a-8f10-2694480484d0",
+      "name": "Affin Bank",
+      "package_name": "com.affin.AffinMobileBanking"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--e0479ca0-ee9b-43b9-be18-bd18645e4891",
+      "name": "Bank Islam",
+      "package_name": "com.iexceed.CBS"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--71ceecb4-8377-4720-afa1-6a7d0b50119a",
+      "name": "Alliance Bank",
+      "package_name": "com.alliance.AOPMobileApp"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1ce13fbf-3f5e-4a0c-ae0d-330e047e14a7",
+      "name": "Uob Bank",
+      "package_name": "com.uob.my.infinity"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--9c18f3ec-50bd-41ca-95c1-04f559b56fa3",
+      "name": "SBI Yono",
+      "package_name": "com.sbi.lotusintouch"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--f7b81e85-8921-47fc-80a4-b77e72d9e564",
+      "name": "SBI Yono Lite",
+      "package_name": "com.sbi.SBIFreedomPlus"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--a9defefb-8bc9-45be-b4cc-7a93ec7a7f24",
+      "name": "ICICI",
+      "package_name": "com.csam.icici.bank.imobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--f58d572f-faec-445b-95b5-4f42e5d8db74",
+      "name": "HDFC",
+      "package_name": "com.snapwork.hdfc"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--a70c10a0-689f-40e0-b4ef-8ad329d83597",
+      "name": "AXIS",
+      "package_name": "com.axis.mobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--29a91641-acb4-43a2-9ca8-39ae3289d5b2",
+      "name": "Bank Of Baroda",
+      "package_name": "com.bankofbaroda.mconnect"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--943b54b1-307a-4f28-9d41-add21027a160",
+      "name": "Kotak Bank",
+      "package_name": "com.msf.kbank.mobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--18046bca-b751-4f9f-9771-e9bc07bbbd4c",
+      "name": "test",
+      "package_name": "com.mobile.test"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--e04093c5-9053-4e30-ae1c-7d6e349b0de7",
+      "name": "BCA",
+      "package_name": "com.bca"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--57a62ed6-ed9a-41da-81cb-244a4c3bd90e",
+      "name": "D-Bank PRO",
+      "package_name": "com.dbank.mobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--be06878f-e7e4-4635-9c13-427b24dcf1fb",
+      "name": "MobilePanin",
+      "package_name": "com.panin.mobilepanin"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--0b4146bd-b0ee-4e54-96b6-e5c96bce544b",
+      "name": "OCTO Mobile by CIMB Niaga",
+      "package_name": "id.co.cimbniaga.mobile.android"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--1f511a88-272b-4416-9200-efbdb975b8a8",
+      "name": "BRILink Mobile",
+      "package_name": "id.co.bri.brilinkmobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--82cbd189-5956-490d-abb7-9580c8b8838b",
+      "name": "Livin\u2019 by Mandiri",
+      "package_name": "id.bmri.livin"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--5243dc91-09e2-4bb6-a2bd-34bea8e23cb2",
+      "name": "SeaBank",
+      "package_name": "id.co.bankbkemobile.digitalbank"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--e4424be1-811c-4757-acd5-724422bcd6f5",
+      "name": "BNI Mobile Banking",
+      "package_name": "src.com.bni"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--a540875b-0acc-469e-b4c8-aecc5c07ffb2",
+      "name": "BTN",
+      "package_name": "com.dimasdev.btnppid_v2"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--3e9a88bd-313e-48e6-ace7-97d141699f0d",
+      "name": "BANK NEO",
+      "package_name": "com.bnc.finance"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--c980c6b2-c74d-497c-8116-1b29539969be",
+      "name": "BNI",
+      "package_name": "src.com.bni"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--92341bdf-e671-474a-bbc9-b47d8272df23",
+      "name": "BSI",
+      "package_name": "com.bsm.activity2"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--47adb6f3-e862-4793-88d4-d2ce26e4c750",
+      "name": "CIMB",
+      "package_name": "id.co.cimbniaga.mobile.android"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--aea19125-76cc-4e5d-9d90-93b15bfde5dc",
+      "name": "BRI",
+      "package_name": "id.co.bri.brimo"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--eec98f5c-67bf-42d8-88a6-93ae1b807454",
+      "name": "OCBC",
+      "package_name": "com.ocbcnisp.onemobileapp"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--c00a726b-ee0e-4da2-8979-ef48ccbd12e5",
+      "name": "JATIM",
+      "package_name": "co.id.bankjatim.prioritashaihaiproduction"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--fcf59085-18b6-4a93-a35f-868951417c3b",
+      "name": "DBS",
+      "package_name": "com.dbs.sg.dbsmbanking"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--e6650c44-40fd-4ba9-bd78-f0244c7123c9",
+      "name": "MAYBANK",
+      "package_name": "id.com.uiux.mobile"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--99265332-9196-48a7-87b8-d92a3431d731",
+      "name": "PERMATABANK",
+      "package_name": "net.myinfosys.PermataMobileX"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--a57ece73-74da-44ca-bd61-6669b2caaad9",
+      "name": "JENIUS",
+      "package_name": "com.btpn.dc"
+    },
+    {
+      "type": "android-app",
+      "id": "android-app--f262da71-154d-4317-8ace-0c362dc855b3",
+      "name": "MUALAMAT",
+      "package_name": "com.muamalatdin"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbdf6b87-8ae2-4a84-8259-2c6d1255f2d3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77a75247-fc11-48bb-b7f5-a0a396ba99da",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01733e7d-4e4b-43da-900d-ee9d16c3b5fc",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1245b69-b1b4-4803-b60a-a2e7d22ec54b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a417e6d-4759-46cb-8cc7-55c07e896465",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b9a7cd19-a6c1-4bbf-bd24-6e9e164ebedf",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b432f80e-b006-4210-82b2-61103f352535",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--b4363a15-8b76-4b0c-9c33-706734da8b51",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19debb04-7365-45df-aefd-b51d874d8954",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5839a171-1266-434c-aa9c-58003ff7fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8fb65d1-4d6f-44fc-8972-d0c2b0edec65",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c65d144-878b-4bac-8281-3e742446abb3",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--164bd1cc-6cab-4919-8928-3efa543026c8",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9f1491c-0f91-4dfb-b730-f9a99699d85d",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c2fad1e-73f1-4412-973c-876e2390d4fc",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--887c2d79-9ea9-4d20-a5a4-1a68ed65e11e",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00e50175-d8e2-43ab-bc6e-77ed76e3b04a",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--638394f8-59d2-4d58-9a76-ef98546261fe",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d525ae8d-dd9a-4eb7-a4d7-01b4af604ce5",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb56f698-2d07-40e5-95f3-2cb742db3338",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "attack-pattern--05c2cf53-7665-4d3b-8937-5e7034aec59c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--869fe4b1-cae6-4d3c-b934-b54f9dcc0923",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "software--b067b8fc-3ce5-4a48-ae64-4768942fb8d4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85c9c4e5-9371-4f8b-b5d3-aa5f932e19c7",
+      "relationship_type": "uses",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "software--b067b8fc-3ce5-4a48-ae64-4768942fb8d4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--982f8f2c-f41d-426c-b0f1-e044d8096386",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05f9ce01-7fd4-46dc-a791-3ca396611b04",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b063fdbd-a1a5-4412-a098-80974ec9aea6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96ffa09c-aafe-4c5b-a2f0-d3312fe44665",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "domain-name--ef767226-c070-46cd-b2c6-166e91528c7e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f12903a-6a3d-4440-9fe0-5e874eabd1d0",
+      "relationship_type": "delivers",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67ffc39d-7a3d-4637-be5b-64f1cfe76677",
+      "relationship_type": "delivers",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0de224d0-c270-47a0-901c-4817a634c4d9",
+      "relationship_type": "delivers",
+      "source_ref": "malware--07b6b0d0-4a33-4be2-8272-ac786b8a2540",
+      "target_ref": "file--1cde5d8c-a006-4b32-b366-bd2bc89d97f9"
+    }
+  ]
+}

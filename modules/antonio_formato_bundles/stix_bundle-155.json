@@ -1,0 +1,747 @@
+{
+  "type": "bundle",
+  "id": "bundle--8427f7c1-9737-4186-aedc-686fe18eebfb",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "name": "APT41",
+      "aliases": [
+        "Wicked Panda",
+        "Brass Typhoon",
+        "BARIUM",
+        "Amoeba",
+        "BRONZE ATLAS",
+        "BRONZE EXPORT",
+        "Blackfly",
+        "Double Dragon",
+        "Earth Baku",
+        "G0044",
+        "G0096",
+        "Grayfly",
+        "HOODOO",
+        "LEAD",
+        "Leopard Typhoon",
+        "Red Kelpie",
+        "TA415",
+        "TG-2633",
+        "WICKED PANDA",
+        "WICKED SPIDER",
+        "Winnti",
+        "Pigfish"
+      ],
+      "description": "APT41 is a prolific and highly skilled threat actor, active since at least 2007, known for both cyber espionage and financially motivated cybercrime. The group targets a wide range of sectors, including U.S. state governments, shipping, logistics, technology, and media. APT41 is noted for its agility in weaponizing vulnerabilities, including rapid exploitation of newly disclosed flaws such as Log4Shell (CVE-2021-44228). Their operations feature persistence, living off the land, multi-stage payload delivery, credential theft, and defense evasion through obfuscation and stealthy exfiltration to cloud services. They use both web-based and DNS-based C2 channels, proxies, and encrypted payloads to maintain resilient communication.",
+      "first_seen": "2007-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage",
+        "Financially motivated cybercrime"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "financial gain"
+      ],
+      "external_references": [
+        {
+          "source_name": "Google Cloud Blog",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/apt41-dual-espionage-and-cyber-crime-operation"
+        },
+        {
+          "source_name": "Group-IB",
+          "url": "https://www.group-ib.com/blog/apt41-world-tour-2021/"
+        },
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/apt41-cyber-attacks-history-operations-and-full-ttp-analysis"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--3e72b231-1a14-4fd3-9016-b835420b676d",
+      "name": "COMSysUpdate.exe",
+      "path": "C:\\users\\Public\\COMSysUpdate.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--eff77bb2-0b53-4ed6-a771-8398a71a89b4",
+      "name": "install.bat",
+      "path": "c:\\users\\Public\\install.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--282dd0da-d9b4-4365-bdd9-357c4358c29e",
+      "name": "dns.txt",
+      "path": "C:\\dns.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--feedad20-f4ef-4dcb-9882-bb865d22f948",
+      "name": "dns.exe",
+      "path": "C:\\dns.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0a5f7575-08e3-482f-8230-7c18db7d2cf3",
+      "name": "update.dll",
+      "path": "C:\\Users\\Public\\Music\\update.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--14da7c05-acf9-48bd-8972-846cc1eec33c",
+      "name": "SecurityHealthSystray.exe",
+      "path": "c:\\users\\public\\SecurityHealthSystray.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5faa5122-c253-4c18-8ed3-abd0d0a8faab",
+      "name": "vmserver.exe",
+      "path": "C:\\PerfLogs\\vmserver.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--cc788f50-a5eb-442f-bdf1-0bb091c35e8e",
+      "name": "LxpSvc.exe",
+      "path": "\\\\192.168.100.4\\c$\\Users\\administrator.{redacted}\\AppData\\Roaming\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\LxpSvc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3d2a2199-97d2-4952-91c3-761289001b99",
+      "name": "BadPotatoNet4.exe",
+      "path": "c:\\users\\public\\BadPotatoNet4.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--48827411-bc33-4ef4-b834-6af61463dd05",
+      "name": "SecurityHealthSystray.dll",
+      "path": "\\\\172.16.2.21\\c$\\users\\Public\\SecurityHealthSystray.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--4ad155b5-e22b-458f-9778-9375f6dd621e",
+      "name": "SecurityHealthSystra.ocx",
+      "path": "\\\\172.16.2.21\\c$\\users\\Public\\SecurityHealthSystra.ocx"
+    },
+    {
+      "type": "file",
+      "id": "file--1af31b68-6d81-4ba1-9dbc-472399a47da6",
+      "name": "mwt.evtx",
+      "path": "C:\\PerfLogs\\mwt.evtx"
+    },
+    {
+      "type": "file",
+      "id": "file--6f1a0846-a0d7-403d-a5f3-79f5d233f7b2",
+      "name": "test2.asp",
+      "path": "\\\\192.168.0.243\\c$\\www\\{redacted}\\test2.asp"
+    },
+    {
+      "type": "file",
+      "id": "file--7a55f14a-145a-4727-8a91-834a43b0538e",
+      "name": "lsass.dmp",
+      "path": "lsass.dmp"
+    },
+    {
+      "type": "file",
+      "id": "file--8cbc7c41-d163-44e4-b8c0-80f1b29f87e4",
+      "name": "mi.exe",
+      "path": "C:\\mi.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--f4044746-75c8-4e90-8f6e-39b7c1abeb99",
+      "name": "log.tx",
+      "path": "C:\\log.tx"
+    },
+    {
+      "type": "file",
+      "id": "file--aee0e807-659d-4ee3-8316-8e8df05e044f",
+      "name": "sam.save",
+      "path": "C:\\perflogs\\sam.save"
+    },
+    {
+      "type": "file",
+      "id": "file--b6c991e2-0a78-4556-9465-6ce7b1d1a9e2",
+      "name": "SAM",
+      "path": "c:\\users\\public\\SAM"
+    },
+    {
+      "type": "file",
+      "id": "file--55f69412-ce54-415f-b20b-473b716ab647",
+      "name": "ntds.dit",
+      "path": "C:\\perflogs\\temp\\ntds.dit"
+    },
+    {
+      "type": "file",
+      "id": "file--11e352a3-c9a6-4932-8620-8f2cdb8b9ed8",
+      "name": "iis.txt",
+      "path": "iis.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--b3984829-d70b-4cd7-bf25-24c0a3be9a3b",
+      "name": "cping40.exe",
+      "path": "C:\\PerfLogs\\cping40.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ef158f88-68de-4604-b378-517fed97a957",
+      "name": "7z.exe",
+      "path": "C:\\perflogs\\7z.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--757561cb-39fa-477b-9dbb-5a67c8249b0a",
+      "name": "syslog.7z",
+      "path": "syslog.7z"
+    },
+    {
+      "type": "file",
+      "id": "file--12f22818-4fb4-471f-a002-59143270a29c",
+      "name": "iislog.7z",
+      "path": "iislog.7z"
+    },
+    {
+      "type": "file",
+      "id": "file--d57d84e6-98ef-4a94-84d6-38b7f0974865",
+      "name": "Ops.7z",
+      "path": "C:\\PerfLogs\\Ops\\Ops.7z"
+    },
+    {
+      "type": "file",
+      "id": "file--f04d2a14-9a19-4988-9388-5e181dddde40",
+      "name": "nt.zip",
+      "path": "C:\\perflogs\\nt.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--49210909-17b8-48a7-8b18-2fbad1351664",
+      "name": "frcp.exe",
+      "path": "frcp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7683dde9-1212-4161-9627-d770d9835a1f",
+      "name": "frcp.ini",
+      "path": "frcp.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--b9fb4b25-5928-4a51-8393-3265dd7f7f8d",
+      "name": "COMSysUpdate.ocx",
+      "path": "C:\\Users\\Administrator\\Desktop\\cs\\dns\\COMSysUpdate.ocx"
+    },
+    {
+      "type": "file",
+      "id": "file--0030b753-afbc-4647-9b2e-b7ad53a3bc84",
+      "name": "uploada4.aspx",
+      "path": "C:\\Users\\Administrator\\Desktop\\webshell\\uploada4.aspx"
+    },
+    {
+      "type": "file",
+      "id": "file--6e3fc017-46c6-49c3-89af-fcfb1827e3ec",
+      "name": "smb.exe",
+      "path": "c:\\users\\alex\\desktop\\smb.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--db683510-5053-4842-9a73-958d69c72f60",
+      "name": "SecurityHealthSystray.dll",
+      "path": "C:\\Users\\Administrator\\Desktop\\cs\\SecurityHealthSystray.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--a902ac4e-a6ca-4c12-9257-347911549fce",
+      "name": "install.bat",
+      "path": "C:\\Users\\Administrator\\Desktop\\cs\\install.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--0421b22e-da28-4793-9a57-3b2740f17979",
+      "name": "install.bat",
+      "path": "C:\\Users\\jack\\Desktop\\tmp\\cs\\_shell\\server\\install.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--13c6de58-79cc-44d6-9e00-3fc03789730e",
+      "name": "bthsvc64.dll",
+      "path": "C:\\Users\\jack\\Desktop\\tmp\\cs\\_shell\\server\\bthsvc64.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--afb472c4-ab67-4add-a954-8be4c2d35ed1",
+      "name": "procdump64.exe",
+      "path": "C:\\Users\\jack\\Desktop\\tmp\\procdump64.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--1250c97b-4c92-4e51-ac8f-723415077902",
+      "name": "mciwave32.dll",
+      "path": "C:\\Users\\jack\\Desktop\\{redacted}\\244\\mciwave32.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--bd763fb0-6150-4965-ae2d-9c2ce08e2331",
+      "name": "LxpSvc.exe",
+      "path": "C:\\Users\\Admin\\Desktop\\HTTPS\\LxpSvc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e3bdd5cf-19f2-488a-a61c-dd7d8e1c20f4",
+      "name": "Webshell",
+      "path": "C:\\Users\\Admin\\Desktop\\Webshell"
+    },
+    {
+      "type": "file",
+      "id": "file--074930e7-a761-482b-a91b-d47d7b2e86df",
+      "name": "test4.aspx",
+      "path": "C:\\Users\\Admin\\Desktop\\{redacted}\\webshell\\test4.aspx"
+    },
+    {
+      "type": "file",
+      "id": "file--2dc87f97-c913-4c78-8386-f19b0a64139d",
+      "name": "install.bat",
+      "path": "C:\\Users\\Admin\\Desktop\\{redacted}\\\u8fdc\u63a7\\service\\install.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--f922ec99-58bf-40a6-9544-a42b109dd1fd",
+      "name": "LxpSrvc.dll",
+      "path": "C:\\Users\\Admin\\Desktop\\{redacted}\\LxpSrvc.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--84525599-cfa7-44f0-8212-762d4952bc3a",
+      "name": "dfss.dll",
+      "path": "C:\\Users\\Admin\\Desktop\\{redacted}\\\u8fdc\u63a7\\exe\\dfss.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--ad33883e-6822-406f-a615-930be038fea1",
+      "name": "BadPotatoNet4.exe",
+      "path": "C:\\Users\\Administrator\\Desktop\\BadPotatoNet4.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ea3d8422-c436-4a75-b85a-6d98dd01414b",
+      "name": "web.config",
+      "path": "D:\\projects\\{redacted}\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--89881d7f-b2c6-434d-8dfb-91ede25e2042",
+      "name": "help.txt",
+      "path": "D:\\projects\\{redacted}\\css\\help.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--6edcc3ab-f395-4650-a06d-a2c757d15488",
+      "name": "002.dat",
+      "path": "D:\\System Volume Information\\002.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--0663282a-fde5-425d-9365-c7dbaadde5c4",
+      "name": "Web.config",
+      "path": "D:\\projects\\{redacted}\\Web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--ddc29fe6-1d50-4095-9bf1-c615060d21e1",
+      "name": "{redacted}20210301120008.txt",
+      "path": "D:\\{redacted}\\{redacted}20210301120008.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--a4e3ac75-fb74-472a-a75a-826b76eb2273",
+      "name": "ftpcmd.dat",
+      "path": "c:\\ftpcmd.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--fe435f6e-d833-4f48-a814-821a47e7d085",
+      "name": "AppTextFile.txt",
+      "path": "c:\\AppTextFile.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--b6339232-be29-4eb3-83ec-3e7017afb362",
+      "name": "OfcNTCer.dat",
+      "path": "c:\\Users\\Administrator\\Desktop\\OfcNTCer.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--961eb441-2377-4629-8018-53a520c08e2b",
+      "name": "172.16.11.103.png",
+      "path": "c:\\Users\\{redacted}\\Desktop\\172.16.11.103.png"
+    },
+    {
+      "type": "file",
+      "id": "file--bccd00fb-0b48-4448-b79f-66adb7e16ef1",
+      "name": "ftp_servername.bat",
+      "path": "c:\\Users\\{redacted}\\Desktop\\FTP batch\\ftp_servername.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--1e827eaf-cfda-40e0-b832-ddc0c34aa625",
+      "name": "[redacted].bat",
+      "path": "c:\\Users\\{redacted}\\Desktop\\FTP batch\\[redacted].bat"
+    },
+    {
+      "type": "file",
+      "id": "file--e84ef558-d682-477b-90cd-3df8e55fde88",
+      "name": "tm remote chat.txt",
+      "path": "c:\\Users\\{redacted}\\Desktop\\tm remote chat.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--609932d7-f56e-48cb-ba95-f53b45842291",
+      "name": "netstat.txt",
+      "path": "c:\\Temp\\netstat.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--511b6c01-4583-4dd9-bb52-7b600d4c6915",
+      "name": "web.config",
+      "path": "c:\\Program Files (x86)\\Trend Micro\\OfficeScan\\PCCSRV\\Admin\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--c341bc5d-b17d-41d4-83be-fbb915bd82b4",
+      "name": "web.config",
+      "path": "c:\\Program Files (x86)\\Trend Micro\\OfficeScan\\PCCSRV\\Admin\\Utility\\SQL\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--ce65da8c-30e0-4bca-adb5-f018b97c1013",
+      "name": "web.config",
+      "path": "c:\\Program Files (x86)\\Trend Micro\\OfficeScan\\PCCSRV\\Web\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--112830c9-dd93-47f0-bcd3-126dbd3f9850",
+      "name": "web.config",
+      "path": "c:\\Program Files (x86)\\Trend Micro\\OfficeScan\\PCCSRV\\Web_OSCE\\Web_console\\HTML\\widget_old\\repository\\inc\\class\\common\\crypt\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--f98f6e3b-0354-40d8-bd1b-8e593d2c83af",
+      "name": "web.config",
+      "path": "c:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\ASP.NETWebAdminFiles\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--48c9f078-734b-42dc-bf69-03fb87fd5b81",
+      "name": "web.config",
+      "path": "c:\\Windows\\Microsoft.NET\\Framework\\v2.0.50727\\CONFIG\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--1af77988-d0ca-4246-ab7e-6092676846c6",
+      "name": "web.config",
+      "path": "c:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\ASP.NETWebAdminFiles\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--1f623e1f-2178-41fa-94c3-c96a7f99e4bf",
+      "name": "web.config",
+      "path": "c:\\Windows\\Microsoft.NET\\Framework64\\v2.0.50727\\CONFIG\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--ef45ac4d-a4b9-4265-9017-8d2eb5016b52",
+      "name": "web.config",
+      "path": "c:\\Windows\\WinSxS\\amd64_clientdeployment-connectsite_31bf3856ad364e35_10.0.14393.0_none_d2443e4100c72a7c\\web.config"
+    },
+    {
+      "type": "file",
+      "id": "file--c0c509c2-6594-4ced-bf22-0304212b5689",
+      "name": "AosBackup.txt",
+      "path": "c:\\Users\\{redacted}\\Desktop\\Office Scan Backup\\Private\\AosBackup.txt"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0cff49db-a4e7-4714-91da-c6cd9006e3c7",
+      "value": "cs.colunm.tk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--98c17bef-170e-4859-969c-cb8d651526b2",
+      "value": "javaupdate.biguserup.workers.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--80ffe4bb-429e-451f-8b54-87559f5f9aa1",
+      "value": "mute-pond-371d.zalocdn.workers.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0f97ea03-e0c5-43ca-90b2-ab6c76894559",
+      "value": "gentle-voice-65e3.bsnl.workers.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bfab6024-a397-442f-9514-fb464f3a77db",
+      "value": "www.cs16.dns04.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9af45180-7207-4637-8bd9-58645c464ef1",
+      "value": "ns1.colunm.tk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5ed7c60e-aa9f-4d2e-9f58-b207e0a164e2",
+      "value": "ns2.colunm.tk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b354acb9-8f84-4129-82f1-1220a4d78f58",
+      "value": "ns1.delaylink.tk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "value": "ns2.delaylink.tk"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--30ca0bd7-b9c3-4844-b263-82339bcd2e8e",
+      "value": "185.118.166.66"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2ad47964-c322-44b8-a4ba-50190722b634",
+      "value": "45.142.214.242"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--03f7cdf1-e80a-4dda-b48a-dedb37de1b7e",
+      "value": "45.142.214.56"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6efd7c1-6f85-46dd-be11-c7e3bd509e7d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses ShadowPad for persistent access and control over victim networks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b575e203-cc2a-40f3-a310-c0e5977fcbea",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses DUSTPAN to stealthily load BEACON payloads and maintain persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--739b8e5d-034e-4ebc-8ac2-e15f05a07a77",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 delivers BEACON payloads for command and control and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a9796d7-03f3-41b3-a9cb-a5909f2169f9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 deploys ANTSWORD web shell for persistence and remote command execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d06c0b6-20ce-4489-ba91-1ed69b4521f4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses BLUEBEAM web shell for persistence on compromised servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92ea6411-ce27-4aac-ba79-93e6e0b87864",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses DUSTTRAP for DLL side-loading, encrypted payloads, and defense evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e000b2c-016b-42d1-9f2e-fb272b6dfa15",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 abuses Cobalt Strike for payload delivery, lateral movement, and C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--916322ff-4a86-4c85-9422-c08683fa361c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses Mimikatz for credential dumping and Pass-the-Hash attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a51a1e57-bdb9-424c-a2f8-2dd46f7b9acd",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "APT41 uses BrowserGhost to obtain credentials from web browsers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5507253b-6ebc-4c41-8ebe-6713aa5e8f61",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses Nmap for active scanning and service discovery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ecc9f29c-4c2a-4ed4-bf34-f26cbbe85e57",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses Acunetix for vulnerability scanning."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a5008ba-cc70-4f90-8a0b-fa351d6631fe",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses JexBoss for scanning and exploiting JBoss servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a82a58a-8417-440e-bbfe-4def5dd4fa91",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses SQLmap for SQL injection and file manipulation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d80d269-acdc-4a90-9b2f-03189edae4b1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses YSoSerial.NET to generate malicious .NET deserialization payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1193fa1b-a028-48a2-992f-f3c974090f96",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--aef03c54-ed36-4a0c-b2c9-897ef9eba00b",
+      "target_ref": "tool--73120dd4-f839-4b53-8d3a-47f976b42dfd",
+      "description": "APT41 uses FRPC to proxy traffic during attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f6d8e48-7e14-498e-9996-5ab20fcf701c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "DUSTPAN dropper delivers BEACON payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0175e1f5-d0ba-477c-a74d-1a220f664fed",
+      "relationship_type": "delivers",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "ANTSWORD web shell delivers DUSTPAN dropper."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a17b2458-1370-4da5-a38f-8c201bcd7b8b",
+      "relationship_type": "delivers",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "description": "DUSTTRAP malware delivers its encrypted payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e2430ff-7901-4980-bb4c-79599883cf38",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with C2 domain cs.colunm.tk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--573676bd-52d0-444f-90af-d80c6a8c4df2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with C2 domain javaupdate.biguserup.workers.dev."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82f882b5-4454-46eb-b227-04fe6678db2f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with C2 domain mute-pond-371d.zalocdn.workers.dev."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef490336-0bc6-4c96-8f8f-34c81f9ff37c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with C2 domain gentle-voice-65e3.bsnl.workers.dev."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e1697d2-af17-4cf9-971c-e953630f7f16",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with C2 domain www.cs16.dns04.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27888906-74cd-49e2-b16d-0ae1533a2afe",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with DNS tunnel domains ns1.colunm.tk and ns2.colunm.tk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8020f01c-68a2-414f-a3b5-7d0f3208701a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "domain-name--1469dd34-7178-42f3-a8f3-92128debc4ac",
+      "description": "BEACON payload communicates with DNS tunnel domains ns1.delaylink.tk and ns2.delaylink.tk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20d14297-df65-488a-ad3c-aef794ffd1cc",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "ipv4-addr--03f7cdf1-e80a-4dda-b48a-dedb37de1b7e",
+      "description": "BEACON payload communicates with C2 IP 185.118.166.66."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8560c91-ed3f-46d9-a274-6f705f03c972",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "ipv4-addr--03f7cdf1-e80a-4dda-b48a-dedb37de1b7e",
+      "description": "BEACON payload communicates with C2 IP 45.142.214.242."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d33f5ca5-bf8a-4cc7-b517-32377cc2c55f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--2c73a4f7-8791-454a-a626-c1463f6bf512",
+      "target_ref": "ipv4-addr--03f7cdf1-e80a-4dda-b48a-dedb37de1b7e",
+      "description": "BEACON payload communicates with C2 IP 45.142.214.56."
+    }
+  ]
+}

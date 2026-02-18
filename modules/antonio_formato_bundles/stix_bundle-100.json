@@ -1,0 +1,453 @@
+{
+  "type": "bundle",
+  "id": "bundle--f9f57891-9bf2-472c-bcaa-b67230a36448",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--738d2856-cb89-446a-8aff-ded8f5ed35e9",
+      "name": "Typosquatting",
+      "description": "Threat actors register lookalike domains (typosquats) of popular brands to lure users into visiting malicious parked domains. Examples include scotaibank[.]com (Scotiabank), gmai[.]com (Gmail), and domaincntrol[.]com (GoDaddy)."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--489ff9ab-0475-4cd8-b695-a3f80ea9cb90",
+      "name": "Malvertising via Parked Domains",
+      "description": "Malicious advertisers deliver scams, malware, and unwanted content to users redirected from parked domains through advertising networks and traffic distribution systems (TDSs)."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c6dc8b13-c08a-47ff-9c97-fd3ab18f1bfe",
+      "name": "Device Fingerprinting for Traffic Distribution",
+      "description": "Actors use device fingerprinting and IP geolocation to selectively redirect visitors from parked domains to malicious content, decoy pages, or further profiling systems."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a6b45b60-04b7-4835-a51c-fc1c320d10e0",
+      "name": "Double Fast Flux DNS",
+      "description": "Actors rapidly rotate both authoritative name servers and IP addresses for parked domains to evade detection and blocking, as seen with ic3[.]org and related infrastructure."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--945033be-e303-4523-a1af-6fe77cb11b21",
+      "name": "Business Email Compromise via Typosquat MX Records",
+      "description": "Actors configure MX records for typosquat domains (e.g., gmai[.]com) to collect misdirected emails and conduct business email compromise campaigns."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "name": "Exploitation of DNS Configuration Typos",
+      "description": "Actors register domains similar to major DNS providers (e.g., domaincntrol[.]com vs domaincontrol[.]com) to capture traffic from DNS misconfigurations and redirect users to malicious content."
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--33c1d9a2-2e61-47dc-b958-a2f9dd631c2a",
+      "name": "Torresdns[.]com Name Server Infrastructure",
+      "description": "Name servers under torresdns[.]com are used by a domain portfolio holder to serve nearly three thousand lookalike domains, including scotaibank[.]com and gmai[.]com, and perform visitor profiling and selective redirection.",
+      "infrastructure_types": [
+        "dns"
+      ],
+      "aliases": [
+        "torresdns"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--6cdd9f20-99ac-436c-aa54-e7dd6837c229",
+      "name": "Koaladns[.]com and Associated Fast Flux Name Servers",
+      "description": "Name servers such as koaladns[.]com, weaponizedcow[.]com, numbatdns[.]com, and others are used by a domain portfolio actor to implement double fast flux DNS for parked domains including ic3[.]org.",
+      "infrastructure_types": [
+        "dns"
+      ],
+      "aliases": [
+        "koaladns",
+        "weaponizedcow",
+        "numbatdns",
+        "quokkadns",
+        "emu-dns",
+        "echidns",
+        "magpiedns",
+        "kirklanddc",
+        "hastydns",
+        "milesmx"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--8d469876-2fcb-4ebd-b800-127b22b8b2e4",
+      "name": "Domaincntrol[.]com Name Server Infrastructure",
+      "description": "Domaincntrol[.]com is a typosquat of GoDaddy's domaincontrol[.]com and is used to capture DNS traffic from misconfigured domains and selectively target Cloudflare DNS users for device fingerprinting and redirection to malicious content.",
+      "infrastructure_types": [
+        "dns"
+      ],
+      "aliases": [
+        "domaincntrol"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--512deea1-eecd-48c9-8c50-d9fbb04bd697",
+      "name": "Traffic Distribution Systems (TDS)",
+      "description": "Third-party advertising platforms and TDSs such as Zeropark, Trillion Direct Search, ExplorAds, AdventureFeeds, click-v4.junclikrmedi[.]com, quotes[.]com, www[.]toroexoclk[.]com are used to funnel traffic from parked domains to malicious content.",
+      "infrastructure_types": [
+        "advertising-network"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "name": "Malicious Parked Domains",
+      "description": "Parked domains such as scotaibank[.]com, ic3[.]org, gmai[.]com, domaincntrol[.]com, chatterjamtagbirdfile[.]monster, sportswear[.]homes, and others are used to deliver scams, malware, and unwanted content to users.",
+      "infrastructure_types": [
+        "hosting-target"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--44a175a7-255e-4ca3-a544-38250888e02c",
+      "value": "ic3.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--912bdc9c-276f-4f27-a9f6-c2aa4dad482c",
+      "value": "ic3.gov"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--57bfb3ab-3625-4a7d-a967-8c9a5c9b93db",
+      "value": "scotaibank.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1774a38f-b8f4-4748-b6aa-4670d55389f3",
+      "value": "scotiabank.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1832362a-cb2c-4be3-8827-6481e0be5333",
+      "value": "gmai.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a6533bc3-2b81-49f1-88a3-4638ff743c89",
+      "value": "mail.h-email.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--428a6e97-b38c-4327-95cb-0fda04f6e694",
+      "value": "torresdns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b4228cf6-48c0-4acf-87fb-ba4851e72566",
+      "value": "ww1.scotaibank.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--df68caf9-07bf-49fc-a73d-948c3f85c636",
+      "value": "9145.searchmagnified.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9c2a1a8d-c256-435f-b6f2-c2eeed20a136",
+      "value": "skenzo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--33d2fef1-16be-40d2-a84a-838fe650253e",
+      "value": "arentmarket.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6c424093-69e4-4766-850b-6bd2dd1b498d",
+      "value": "chatterjamtagbirdfile.monster"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ff63aa4e-3423-4687-a3ff-f0f43e9f9db4",
+      "value": "mega.nz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0b6a77bf-ba69-4e46-9ae8-a1d25aa5b2aa",
+      "value": "aliExpress.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2a5e51bd-043f-4bbb-a41d-23602bc0dea1",
+      "value": "domaincntrol.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--349309e9-48a2-439e-b551-1284b53417fe",
+      "value": "domaincontrol.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3fd14839-1f3e-4356-a2f0-19f7a0107ba0",
+      "value": "uasecho.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4993a828-0195-4919-94d0-b8ed47117264",
+      "value": "usaconnect.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--28266d53-1c0c-4e2d-b2c6-7e3bcb601fc0",
+      "value": "sportswear.homes"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--44cde983-00eb-477e-b034-304f58045686",
+      "value": "lemaymotors.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e307b2ff-b187-42d5-8695-6c25fdc44230",
+      "value": "nojs.domaincntrol.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d262198e-aa3d-4356-a381-dba766c5549d",
+      "value": "mavilibeyazajans.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cf0c8605-c1b0-4626-bc8d-a73c943cf798",
+      "value": "koaladns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--53c284f0-5c9e-44d9-adfa-2f93377e940f",
+      "value": "weaponizedcow.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1fdd3113-5429-4111-ad30-1fe2da72a4f6",
+      "value": "numbatdns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--27494de9-d413-4f97-b65f-408fed785cc9",
+      "value": "quokkadns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ad7a22e3-97ab-49d5-addf-97d21df28648",
+      "value": "emu-dns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--32dab258-0c95-4ed3-9d7a-bd85da331739",
+      "value": "echidns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--105bd820-a933-455e-acbe-ab45fe2fd59e",
+      "value": "magpiedns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ee86c0f3-fe28-47c9-b12d-2c747baeaf80",
+      "value": "kirklanddc.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--933cf9b3-3edc-40c5-a90e-3d57262a50d1",
+      "value": "hastydns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4b2bf7fd-e785-4664-8f59-0820fa1bf45d",
+      "value": "milesmx.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ea8e8725-31a3-4210-a5f5-02e56a9f3392",
+      "value": "brainydns.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1ec3176a-962a-4ca3-b969-aafd0eae3c34",
+      "value": "click-v4.junclikrmedi.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b80cc2cf-7ebb-4c1c-b54e-7a42fd0c8a7e",
+      "value": "quotes.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e27b5d50-050b-46d1-ad4b-1e0a4e64e155",
+      "value": "www.toroexoclk.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--90ea1fb6-aa42-40cd-aa59-85b8185186e7",
+      "value": "gambel.law"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--353c3ee8-275f-40ec-8891-58666fde8cf3",
+      "value": "safezonefirewall.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--505b4ad7-e5be-4013-a919-b73496567f75",
+      "value": "digesttech.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--013cd485-e58a-4791-ac85-1d036563c8b0",
+      "value": "colaureat.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--28532345-9eeb-46ff-ad29-08be42392513",
+      "value": "velixnero.co.in"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2b31441f-771b-45de-9191-57f36edf5277",
+      "value": "drizzledrape.co"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d2863b7a-ccc7-4879-be9b-dd1e031db90a",
+      "value": "installupdate.online"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3171782a-30a7-48d1-8bde-f07627201fd6",
+      "value": "64.225.91.73"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9cb634be-fa70-49bd-9ceb-2c07e0a02ab1",
+      "value": "85.209.129.9"
+    },
+    {
+      "type": "file",
+      "id": "file--50e6f22c-d354-4a69-8e78-2859b3a8dcd4",
+      "hashes": {
+        "SHA-256": "86586f6954da38e5a5df7e56334ef98e74838dee68de0355ae4fe03d36c82502"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--262f0d9e-8884-4688-b14b-0f1e979298a9",
+      "hashes": {
+        "SHA-256": "4a3497d66a64c22342d855d2da370c9a4351e6403bbd224093c4b348bd611df4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "hashes": {
+        "SHA-256": "c3f1f456419f39f19c9e0d5aae2b50f701abe517a3cc2952869e516b260dbf88"
+      }
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--9ce50b0a-c3b9-45eb-8ded-27617d227e0b",
+      "value": "sales@gmai.com"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dcc9786f-2a0d-441e-bcdb-b0333bff6972",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c3e5af78-ab51-425b-8af2-330ee1a8bb83",
+      "target_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "description": "Tedy malware sample indicator matches file hash."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--446bd1d4-77d0-42f4-bfb3-7989aa9d3211",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c3e5af78-ab51-425b-8af2-330ee1a8bb83",
+      "target_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "description": "Babar malware sample indicator matches file hash."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--186926df-f757-4629-aa98-50785d393a5e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c3e5af78-ab51-425b-8af2-330ee1a8bb83",
+      "target_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "description": "Trojan sample (Bank Swiftcopy.rar) indicator matches file hash."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f08ce88-1883-441b-afcb-95c1bbc8cc22",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "target_ref": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "description": "Malvertising via Parked Domains uses Traffic Distribution Systems (TDS) infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dd15cb2d-2b69-4c93-ae4c-646f8cc61f6c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "target_ref": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "description": "Device Fingerprinting for Traffic Distribution uses Torresdns[.]com name server infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36af5115-1a46-4dde-9518-f75ddf985406",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "target_ref": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "description": "Double Fast Flux DNS uses Koaladns[.]com and associated fast flux name servers infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb92280e-22a2-4bd9-b986-3691d0e2fedf",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "target_ref": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "description": "Business Email Compromise via Typosquat MX Records uses Torresdns[.]com name server infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef9d348b-34bc-4ba0-a3cd-823c836a9f07",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--dfd5cc01-a9a9-420d-a913-ede42cce0bf5",
+      "target_ref": "infrastructure--1f68e721-2e6d-4edb-8b78-928128e0977c",
+      "description": "Exploitation of DNS Configuration Typos uses Domaincntrol[.]com name server infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56a6f2dd-6f0b-4c64-9b87-68ca9cb000a7",
+      "relationship_type": "delivers",
+      "source_ref": "email-addr--9ce50b0a-c3b9-45eb-8ded-27617d227e0b",
+      "target_ref": "malware--c768f1df-180d-490d-aea2-f9f234788016",
+      "description": "Email address sales@gmai.com delivered unknown trojan malware in BEC campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6a42e53-590e-49b5-9f21-a70c3e691449",
+      "relationship_type": "delivers",
+      "source_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "target_ref": "malware--c768f1df-180d-490d-aea2-f9f234788016",
+      "description": "File with SHA256 86586f6954da38e5a5df7e56334ef98e74838dee68de0355ae4fe03d36c82502 is a sample of Tedy malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c4f576e-e668-4ee8-98d2-1b78573cf10a",
+      "relationship_type": "delivers",
+      "source_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "target_ref": "malware--c768f1df-180d-490d-aea2-f9f234788016",
+      "description": "File with SHA256 4a3497d66a64c22342d855d2da370c9a4351e6403bbd224093c4b348bd611df4 is a sample of Babar malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc024476-fce1-4fae-b589-708307339c84",
+      "relationship_type": "delivers",
+      "source_ref": "file--05ac59d1-d93a-41d9-9238-e5b5758a1142",
+      "target_ref": "malware--c768f1df-180d-490d-aea2-f9f234788016",
+      "description": "File with SHA256 c3f1f456419f39f19c9e0d5aae2b50f701abe517a3cc2952869e516b260dbf88 is a sample of unknown trojan malware."
+    }
+  ]
+}

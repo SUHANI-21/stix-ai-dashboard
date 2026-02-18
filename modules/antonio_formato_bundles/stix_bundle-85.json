@@ -1,0 +1,55 @@
+{
+  "type": "bundle",
+  "id": "bundle--d7c5b420-70ea-47e6-b490-07273a301cbb",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--18f6a71e-9ef2-4cda-ac79-73e4497050c0",
+      "name": "CVE-2025-61882",
+      "description": "Oracle E-Business Suite vulnerability exploited by ShinyHunters and other threat actors for data exfiltration/extortion."
+    },
+    {
+      "type": "software",
+      "id": "software--b75c1ada-0608-40dc-955e-0fe7e9da9885",
+      "name": "Accellion FTA",
+      "description": "File Transfer Application exploited by Cl0p ransomware group."
+    },
+    {
+      "type": "software",
+      "id": "software--cb489b61-d1c6-4022-9088-d31aff2bbc3c",
+      "name": "GoAnywhere MFT",
+      "description": "Managed File Transfer application exploited by Cl0p ransomware group."
+    },
+    {
+      "type": "software",
+      "id": "software--b610ecc1-0fc5-4291-af41-c3708abb3f89",
+      "name": "MOVEit Transfer",
+      "description": "File transfer application exploited by Cl0p ransomware group."
+    },
+    {
+      "type": "software",
+      "id": "software--e9b14e15-8941-473a-adca-bbc43a967c93",
+      "name": "Cleo",
+      "description": "Application targeted in Cl0p-related exploitation campaigns."
+    },
+    {
+      "type": "software",
+      "id": "software--39d18288-9640-4cd4-b086-c20897ab81f8",
+      "name": "Snowflake",
+      "description": "Cloud data platform exploited by ShinyHunters for data exfiltration."
+    },
+    {
+      "type": "software",
+      "id": "software--917bad09-79b0-46af-a209-68d1f68153fb",
+      "name": "Salesforce",
+      "description": "CRM platform exploited by ShinyHunters for data exfiltration."
+    },
+    {
+      "type": "software",
+      "id": "software--77c34a95-4ffa-4ed3-b6d4-ddf1cebb7404",
+      "name": "Oracle E-Business Suite",
+      "description": "Enterprise application suite affected by CVE-2025-61882."
+    }
+  ]
+}

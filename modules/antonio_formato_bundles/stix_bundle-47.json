@@ -1,0 +1,669 @@
+{
+  "type": "bundle",
+  "id": "bundle--93ffa7b9-4345-4af9-9c2f-69dd4a598fff",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--365598fe-8dfd-4be6-9859-bc08de5a585c",
+      "name": "CTG Server Limited Hosting",
+      "description": "Primary infrastructure used by the threat actor, consisting of two main IPs (134.122.136.119, 134.122.136.96) under AS152194, a Hong Kong-registered provider with a history of abuse, phishing, and poor network hygiene.",
+      "infrastructure_types": [
+        "hosting"
+      ],
+      "aliases": [
+        "FUNNULL CDN"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "name": "ProjectDiscovery Interactsh OAST Platform",
+      "description": "Out-of-band application security testing (OAST) platform used for callback verification during exploitation. Domains include oast.pro, oast.site, oast.me, oast.online, oast.fun, oast.live.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [
+        "Interactsh"
+      ],
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1025d164-8eab-4deb-acae-5ac4db6df55b",
+      "value": "134.122.136.119"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ec81381e-309e-487b-84de-2f462206221d",
+      "value": "134.122.136.96"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a30ac0ba-2831-4516-b168-a315865d5ecc",
+      "value": "23.234.85.20"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--74e1461a-919a-408e-a16e-c6179a2565bd",
+      "value": "38.225.206.87"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--644620b4-aa6c-466f-8e66-ce1dab8ceda7",
+      "value": "38.225.206.88"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--82f698d7-1127-4fdf-82f2-c086c1c80ca7",
+      "value": "172.81.132.99"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--82c692f6-d79a-40f7-84fb-458ad9f9660b",
+      "value": "172.68.119.26"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--58c54e03-5b93-4670-8260-f8672f527d73",
+      "value": "162.159.110.4"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--96aff970-e6f3-4a5b-9b2e-dc0ed2c2deb3",
+      "value": "oast.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4f3392b6-f0d0-4f12-b118-88386d7c0f21",
+      "value": "oast.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--881a736c-78d2-4a78-9052-dcd445709634",
+      "value": "oast.me"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--306e7278-70f5-458d-a000-938b4b345bbf",
+      "value": "oast.online"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4ac2701f-e858-4ca9-a2ce-123ffb8fbbf1",
+      "value": "oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--02c10464-913c-4538-b18a-31aaec196057",
+      "value": "oast.live"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--583258dd-8976-4ec1-a3a0-2393426d3587",
+      "value": "d4rrp47fn3bphsg36ktgrnxs88i793xh8.oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6e7c64aa-e190-47e2-a5f3-7ef5253e2b82",
+      "value": "d4rrp47fn3bphsg36ktgwmhg6gs184cgp.oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db537252-45dc-4765-87cc-78715a7cc311",
+      "value": "d4ttv6m52uktrcfij1mg4z1sxco79xbrx.oast.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fee414de-b36b-4780-a28f-30684c5dfd69",
+      "value": "d4ttv6m52uktrcfij1mgretwywufsexrr.oast.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4927acaa-c358-4af2-8a2a-c31260bcb451",
+      "value": "d560h4t0mm9g3ve8u8007go4bggx4mfip.oast.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85d59b28-baa2-4a88-ae5b-9ee7fbc2e879",
+      "value": "d560h4t0mm9g3ve8u800f5ujdfhi58ty7.oast.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ace86624-06fd-46b3-9db3-8e0b6762630b",
+      "value": "d565pronu06u9lln5rug1mt8wad5fbgrk.oast.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b19078a1-ddf8-4875-a1a1-6fd0e0af0621",
+      "value": "d565pronu06u9lln5rugt8mt8gngf4m1m.oast.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bbffba1e-bef7-48b7-b6e8-0c0762e15f28",
+      "value": "d56bg80or2rkvmbdrmq04dqz3ahrwu8ft.oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be",
+      "value": "d56bg80or2rkvmbdrmq0gszxyj9npxnx5.oast.fun"
+    },
+    {
+      "type": "file",
+      "id": "file--fc28b528-053a-4b8a-a5b7-650316d7f189",
+      "name": "passwd",
+      "path": "/etc/passwd"
+    },
+    {
+      "type": "file",
+      "id": "file--0a92bc2a-b9e4-492e-9b76-5b9ce6a5cb8b",
+      "name": "password.properties",
+      "path": "i/../lib/password.properties"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14c24f61-b7da-4fcc-9247-ba0ac482dff3",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--b35f98e5-dec5-46be-bd7a-6c9cb2e35825",
+      "target_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--180f370f-3768-4e6e-9492-3c8cdb335cae",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b81fe28f-4bc2-4906-8d89-f13f0d7a6ad0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc44bfe0-ce41-4f27-a407-57dec635bcc3",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9231f9c7-afea-4536-9088-32625078972d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7516dc6-4b7a-49cb-9ef0-da4b026a516f",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96f6093e-9c52-490c-927c-b1f040c2375c",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0565513-d789-49d2-b76c-8c95d63b999c",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46b98be5-82c5-4cc1-b0d9-878988f3d654",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb40c859-1982-4e45-b283-ba308207bf4b",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--e07fa964-131a-4e52-a5f6-39c4481d4f94",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--befe3bbe-e6ef-4049-be1f-7d35ba5686de",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "ipv4-addr--58c54e03-5b93-4670-8260-f8672f527d73"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19d3a6e2-e423-47bf-80c5-d3846029a05a",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "ipv4-addr--58c54e03-5b93-4670-8260-f8672f527d73"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e44a338c-b20a-447d-91c7-beb54d8ffe8f",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d1a5edc-b679-4619-a8f6-33a2fb53f2e6",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b9e62aad-2522-4f06-a00a-55684b050f1e",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9c5a1d7-87ed-4237-8b20-3e3203824c45",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--111b5aa3-b853-46e5-b0d3-ff57f1a57cbd",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce1e5ea6-a549-4ae6-b5a3-3a5b7d88eb9b",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0181c26-c8c9-4833-a940-c309df8c41b4",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0278ec1-24a9-4678-bdf6-063222b49fc7",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86cf5856-d903-400d-a0e9-d3d65d5542ad",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c3d2fbc-0ce3-4dc6-ae6c-958696b7e97c",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--123c88b7-64a6-4018-a042-95fb8732176a",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8d79f9c-a853-4225-b860-df006ce4bb74",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19a7aa86-f896-44ec-b9b7-0bd6aa05071e",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb6026ad-0392-482f-845f-d4ec2bf446f1",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1329ec3e-d1f9-4e2a-9f36-21037d04103f",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--83bdc659-dbcc-4d87-8982-ed1dd519b68b",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89ba8f0c-7941-4f59-a712-8f584796f107",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34dcb481-a09d-471a-a72c-59f459c40ee1",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5244e08e-f0e7-4af3-b2bf-ca002d2808aa",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--442e86e0-902e-4dee-a13d-009052df3204",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27347441-3e91-405d-9ec8-f4339de031fa",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c8a21eb-02f2-4a3b-b192-ff6e183f5b3f",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23d6433e-614a-4072-8888-75eecb619ee7",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe70a8e4-8192-4a6d-ac53-42532a8973e6",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50c3c112-0392-476d-ab8a-553290d25aaa",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f975414b-bb05-4006-9733-77b76f68b352",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44fba2b0-26dc-4ddd-801d-5e4884f3501b",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf912115-fd41-444d-9c2b-91cbe3401194",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--166c3407-06b8-4dee-bfd4-f9aec9515490",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13816545-dff5-46a1-8a89-a46d4fc17846",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5a6eeb2-6e1d-480f-81b0-b1bb0d3019c4",
+      "relationship_type": "exploits",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "vulnerability--de0a83f6-b5db-4cd7-b352-a13626f03e63"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cdc06463-e1ef-439f-b99a-bf0a14d562f2",
+      "relationship_type": "downloads",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "file--0a92bc2a-b9e4-492e-9b76-5b9ce6a5cb8b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e92b5fb-8ef3-4f38-828e-744dd22e576f",
+      "relationship_type": "downloads",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "file--0a92bc2a-b9e4-492e-9b76-5b9ce6a5cb8b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ec4a597-5f57-410a-ae8d-1ad87a14fa25",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "infrastructure--dc420f97-eb08-4a3e-9a82-c9298194b1c8"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d7fc0a8c-4a16-46e8-8fb7-820fbb8917d4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b6fc878-c918-4971-9fd5-23116818e748",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b90d838c-701d-4629-949d-3b296c86db07",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5fb1c6c-d228-4780-aef5-ac56140939d1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f67cea49-71a9-4b2f-ac1a-9d2934c6b5ad",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c170293a-9a1d-415e-b7d2-fe4397560992",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ded4ff0-4e8d-4efb-8275-d0c05d573b74",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--906af62d-979e-4670-9611-0bb4000c9869",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c59adaf3-bc55-4ac1-9253-08bf43f45a2e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aff976bc-c71c-4460-a91e-84b3c3f021f8",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e993255b-c116-41f4-8e58-c66fe7fabbd3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19aa1c1e-3c1b-45d6-ac4f-9cbdbb4561cf",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f2381a1-3ac2-4b0a-92a9-72a448626c0f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c694d43-8012-49d0-b127-996dd2553bee",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--948293be-684a-4223-b553-cce40801f545",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e798126-ce44-49b8-b685-9b116fbd9c13",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--249a6e4e-40df-479a-b39f-df3a60762e7e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d50f47f9-ee2e-4442-baa7-e2860fcdd530",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02c93673-2fd7-4317-9df3-9240a2f7a2f4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--1e9c47a9-5cbc-4175-8b31-c6a6ccb7e04c",
+      "target_ref": "domain-name--5f2af16f-e3f1-4fc6-ac51-4311a3a865be"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--afe10e88-84fc-4537-9e55-f8a97cb374d5",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19738a85-f674-4a94-80f9-c0f65ed0d5ff",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60ae7c65-f041-4f6c-a1ff-2011ccf89bfe",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a0f07a4-3088-45ae-a485-fa7da513811c",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9a96d31-e20c-42a3-8492-74a4db783093",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b67d8141-70cf-46c1-b40c-cbc1380ca3a8",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b319816d-a1aa-43b1-a60d-54d80d92d970",
+      "relationship_type": "characterizes",
+      "source_ref": "network-traffic--36390c63-1f01-4748-85af-eadba904433f",
+      "target_ref": "tool--1bd7ee63-95ef-4bcb-a186-5323de7bc0e2"
+    }
+  ]
+}

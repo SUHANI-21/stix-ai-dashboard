@@ -1,0 +1,1288 @@
+{
+  "type": "bundle",
+  "id": "bundle--165be809-b19b-4309-9520-f29371ead023",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--dd18e091-687e-4c38-8f9f-71b898421d80",
+      "name": "SwimSnake",
+      "aliases": [
+        "\u6e38\u86c7",
+        "\u94f6\u72d0",
+        "\u8c37\u843d\u5927\u76d7"
+      ],
+      "malware_types": [
+        "remote-access-trojan",
+        "trojan"
+      ],
+      "description": "SwimSnake (\u6e38\u86c7/\u94f6\u72d0) is a remote access trojan (RAT) and malware family operated by a Chinese-speaking cybercriminal group. It is distributed via multi-stage loader and multi-layer encryption and packing techniques. It primarily targets Chinese domestic users for fraud and credential theft, and leverages phishing, SEO poisoning, and fake download sites for delivery. SwimSnake uses a variety of anti-detection and anti-EDR techniques, including kernel-level drivers, process hiding, and BYOVD (Bring Your Own Vulnerable Driver) attacks. The malware can execute a wide range of functions, including screen capture, keylogging, audio monitoring, remote shell, DDoS, and proxy operations.",
+      "is_family": true,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "implementation_languages": [
+        "C",
+        "C++",
+        "VBS"
+      ],
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "SwimSnake",
+        "\u6e38\u86c7",
+        "\u94f6\u72d0",
+        "Gh0st",
+        "Winos",
+        "remote-access-trojan",
+        "trojan"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "name": "SwimSnake Group",
+      "aliases": [
+        "\u6e38\u86c7\u56e2\u4f19",
+        "\u94f6\u72d0",
+        "\u8c37\u843d\u5927\u76d7"
+      ],
+      "description": "SwimSnake Group (\u6e38\u86c7\u56e2\u4f19/\u94f6\u72d0/\u8c37\u843d\u5927\u76d7) is a Chinese-speaking cybercriminal organization active since at least 2022. The group operates SwimSnake RAT and related malware, targeting domestic Chinese users for fraud, credential theft, and data exfiltration. They employ phishing emails, SEO poisoning, fake download sites, and social engineering via instant messaging platforms (WeChat, QQ) to lure victims. The group is known for Fraud-as-a-Service (FaaS) operations, selling or leasing attack tools and infrastructure to other criminal affiliates.",
+      "goals": [
+        "fraud",
+        "credential theft",
+        "data exfiltration"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "\u6e38\u86c7\u56e2\u4f19",
+        "\u94f6\u72d0",
+        "\u8c37\u843d\u5927\u76d7",
+        "FaaS",
+        "Fraud-as-a-Service"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--12fcd640-0287-4e33-9d5d-d9fad4a470b0",
+      "name": "SEO Poisoning for Malware Delivery",
+      "description": "The attacker creates fake download sites for popular software (e.g., WPS Office, \u6709\u9053\u7ffb\u8bd1) and leverages SEO techniques to push these sites to the top of search engine results. Victims searching for legitimate software are lured into downloading trojanized installers that deliver SwimSnake malware.",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "SEO poisoning",
+        "phishing",
+        "fake software download",
+        "malware delivery"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3e5f2709-42e4-4d6f-80b1-cb3f62962a3b",
+      "name": "Phishing via Instant Messaging",
+      "description": "The attacker sends phishing messages and malicious files via instant messaging platforms (WeChat, QQ, \u4f01\u4e1a\u5fae\u4fe1) to lure users into joining fraudulent groups and downloading malware.",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "phishing",
+        "social engineering",
+        "instant messaging",
+        "WeChat",
+        "QQ"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f74ae647-2d4f-4346-b628-e17cf6696dff",
+      "name": "Multi-stage Loader with Multi-layer Encryption",
+      "description": "Malicious installers (MSI, EXE) drop legitimate software and hidden VBS scripts. These scripts decrypt and load further components, using multiple layers of encryption and packing to evade detection. Core payloads include encrypted DLLs and configuration files with embedded C2 addresses.",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "multi-stage loader",
+        "encryption",
+        "packing",
+        "defense evasion"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8da31c1e-1ce3-4fc5-baee-3047ca564f4b",
+      "name": "BYOVD (Bring Your Own Vulnerable Driver)",
+      "description": "The attacker abuses legitimate but vulnerable drivers (e.g., NVIDIA.exe, BdApiUtil64.sys) to gain kernel-level privileges and terminate security software processes, evade EDR detection, and hide malicious activities.",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "BYOVD",
+        "kernel-level",
+        "defense evasion",
+        "driver abuse"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "name": "Process and Network Connection Hiding",
+      "description": "The malware uses malicious drivers (Cndom6.sys, XiaoH.sys) to hook Windows kernel APIs and hide its processes and network connections, preventing detection and analysis by security software.",
+      "external_references": [
+        {
+          "source_name": "Antiy",
+          "url": "https://www.antiy.cn/research/notice&report/research_report/SwimSnake_Analysis_202404.html"
+        }
+      ],
+      "labels": [
+        "process hiding",
+        "network hiding",
+        "kernel API hooking"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--ea3f7e71-39ff-4764-b079-c135f3907aba",
+      "name": "Gh0st RAT (variant)",
+      "aliases": [
+        "Gh0st",
+        "NHQDX.jpg",
+        "NH.dat"
+      ],
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "description": "A variant of Gh0st RAT used by SwimSnake Group, delivered as an encrypted DLL (NHQDX.jpg) and configuration file (NH.dat), supporting plugin-based execution and multiple C2 addresses.",
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "implementation_languages": [
+        "C",
+        "C++"
+      ],
+      "labels": [
+        "Gh0st",
+        "remote-access-trojan",
+        "SwimSnake"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "name": "Winos RAT",
+      "aliases": [
+        "Winos"
+      ],
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "description": "Winos is a RAT derived from Gh0st, used by SwimSnake Group. It supports plugin-based execution, process injection, and configuration via encrypted modules and files. It is used for remote control, data theft, and persistence.",
+      "is_family": false,
+      "operating_system_refs": [
+        "windows"
+      ],
+      "implementation_languages": [
+        "C",
+        "C++"
+      ],
+      "labels": [
+        "Winos",
+        "remote-access-trojan",
+        "SwimSnake"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--1e1e9f31-1524-4154-8bb9-62246a5e9d4f",
+      "name": "BYOVD Driver Tool",
+      "description": "Legitimate drivers with vulnerabilities (e.g., NVIDIA.exe, BdApiUtil64.sys) abused to gain kernel-level access and terminate security processes.",
+      "labels": [
+        "BYOVD",
+        "driver",
+        "defense evasion"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--425209fb-8a2a-4372-88ca-7da5a3e612e1",
+      "name": "PowerShell",
+      "description": "Used for adding paths to Microsoft Defender exclusions and executing malicious commands for persistence and evasion.",
+      "labels": [
+        "PowerShell",
+        "defense evasion",
+        "persistence"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--b23c4594-e8d8-4c5b-bf78-73e2ff1d8bd4",
+      "name": "bypass.exe",
+      "description": "Tool used to bypass UAC protections and execute privileged operations.",
+      "labels": [
+        "UAC bypass",
+        "privilege escalation"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "name": "Antiy \u4e13\u9879\u6392\u67e5\u5de5\u5177",
+      "description": "Antiy's detection tool for SwimSnake malware, available at https://vs2.antiy.cn for scanning and remediation.",
+      "labels": [
+        "detection tool",
+        "SwimSnake",
+        "Antiy"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--096a5ae4-a03c-4139-a368-63e5a094dd19",
+      "name": "SwimSnake Malware Hashes",
+      "description": "File hashes associated with SwimSnake malware samples.",
+      "pattern": "[file:hashes.'MD5' = '05946B9848551EB738C9FDF748AF0FF2' OR file:hashes.'MD5' = '42DDB89706155089A04B9EBA5E661516' OR file:hashes.'MD5' = 'DDB9A28B72098EE0EC2308D90F2E0334' OR file:hashes.'MD5' = 'E4234ABFFC87519AFAC9705CA73B7C30' OR file:hashes.'MD5' = '04264646287BB028AD5280CF4DA39358' OR file:hashes.'MD5' = 'DA0D77E9AC7A60F67D55256E55307713' OR file:hashes.'MD5' = '0D9B54B8BFE67CE90A98102D763345F9' OR file:hashes.'MD5' = '5231A08C5286803E300AC657E37272F8' OR file:hashes.'MD5' = '8A7442439EF37055D790A724BA48BEE0' OR file:hashes.'MD5' = 'C2A1E8510738DDF23B839EEF223F7BEC' OR file:hashes.'MD5' = '893EDFA3A3A71D71CA670424E554E04C' OR file:hashes.'MD5' = 'C416A4664A84A5BD4F8F032472E56CDD' OR file:hashes.'MD5' = '0462F77AE086E8CDC48F9A21758FD67E' OR file:hashes.'MD5' = '212FC4B489C15436DE3E34AC96E1207B' OR file:hashes.'MD5' = '08CFAAC200ED8052A63020F115C6A75A' OR file:hashes.'MD5' = '07C8B3BF5EF18BDD646980F765DE0FC6' OR file:hashes.'MD5' = 'E059CF1F9169302A0FF91B0061DA1C14' OR file:hashes.'MD5' = '234CCBCB8460721AA990A350D2237036' OR file:hashes.'MD5' = '0D7D0CF8A31422CD9A88FA90AD7560EB' OR file:hashes.'MD5' = 'B6EDE7ECBB980723EC43C7B1BDE059B9' OR file:hashes.'MD5' = '8DC9C86CF33FC0CBC20CFD3CB6F5D3A3' OR file:hashes.'MD5' = '1C993A7B64D9E7C3379AB8849D6F17D4' OR file:hashes.'MD5' = '0C9B34B15361B87B738DC06FC4194086' OR file:hashes.'MD5' = '5B81E82E3C4594D82085F6A0E0563A07' OR file:hashes.'MD5' = '18A4DFF46A1BAE8E317A999A1837F8F2']",
+      "labels": [
+        "malware hash",
+        "SwimSnake"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "name": "SwimSnake C2 Infrastructure",
+      "description": "C2 servers and URLs associated with SwimSnake malware.",
+      "pattern": "[url:value = 'https://www.bg-wps.com' OR url:value = 'https://pub-3d7ecf8d8ed94374b9fb10d61138bd72.r2.dev/Wjfrpsl.zip' OR ipv4-addr:value = '154.86.0.40' OR domain-name:value = 'ydbao6.cyou']",
+      "labels": [
+        "C2",
+        "SwimSnake",
+        "infrastructure"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--c1dd8847-70fa-44e6-8453-a99b4b7b4bd1",
+      "name": "youd_fanyiK\u043f_2.0.msi",
+      "hashes": {
+        "MD5": "42DDB89706155089A04B9EBA5E661516"
+      },
+      "size": 232657920,
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "installer"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5939b1b5-4249-4f3d-b59e-402d9783663c",
+      "name": "Wcnhguhyr.exe",
+      "hashes": {
+        "MD5": "05946B9848551EB738C9FDF748AF0FF2"
+      },
+      "size": 111626778,
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9e4c7372-cafa-48a5-9215-6c752a0bc99a",
+      "name": "main.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--a596501e-0f89-4be5-ad80-66b1fb5a588e",
+      "name": "rwdriver.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--bf68d797-e53e-4d82-bbda-fdf7ace18ced",
+      "name": "NVIDIA.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ab8a2594-a0f9-4219-b870-ea6b3e32fe47",
+      "name": "KGseKKdKce.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3d8372cf-0bb8-49ea-b8c7-05f3fac60a07",
+      "name": "BdApiUtil64.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--205f64fa-64b9-442d-a043-3ba41b781e1c",
+      "name": "bypass.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--55d8875f-8530-42c3-bcd7-2da42899f58b",
+      "name": "NtHandleCallback.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0e3f1872-bd4a-427f-a2a6-711b972ac5bf",
+      "name": "log.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--3312e6a4-b4ac-40fa-9e98-60c5ec1d7a71",
+      "name": "Server.log"
+    },
+    {
+      "type": "file",
+      "id": "file--243d4122-2270-4afd-8996-fa3deb4780a4",
+      "name": "Cndom6.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--afe68847-315b-42fa-a161-4a165265147b",
+      "name": "XiaoH.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--fddbfd44-3ed9-4c33-946e-c19e080da204",
+      "name": "stardict-editor.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--2044b6f8-8984-4852-b161-397a18258a7c",
+      "name": "dll1.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--8250a17f-2b47-41f4-b4a6-155f2db72965",
+      "name": "_8"
+    },
+    {
+      "type": "file",
+      "id": "file--7517d172-69ea-4b43-9316-9318fe8419a8",
+      "name": "NHQDX.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--64ffd681-fd0e-4dfb-b448-5dd60fb09ec8",
+      "name": "NH.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--1999eb51-b39c-4756-a832-1c88cdd8d4fe",
+      "name": "instal.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--e2966554-1e3a-4bba-b1d8-f9f0317340ac",
+      "name": "Consys21.png"
+    },
+    {
+      "type": "file",
+      "id": "file--fe942ab8-467c-4065-a7ad-b74a54612ff9",
+      "name": "Consys21.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--3ba8eebc-20df-4cc1-875f-4a5493455876",
+      "name": "funzip.U"
+    },
+    {
+      "type": "file",
+      "id": "file--31e87ef7-e8e3-4f1b-92c1-9efba2b49398",
+      "name": "main.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--71d1f694-fdf3-4488-92bc-5d663fa2a3a1",
+      "name": "men.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--39902f75-b524-479c-bad3-365a5f5c7dba",
+      "name": "setup.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4b9e74a4-1c40-4650-9d28-b0b0653d1725",
+      "name": "Binary._BF84D321CFCEFEA02F92AC3F19AB7EFD"
+    },
+    {
+      "type": "file",
+      "id": "file--c046df3e-f34b-4e51-8f16-54dcdc876eb0",
+      "name": "xfYecK61gv.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--65589cbe-357d-4470-bbc1-f9c5ef4d418e",
+      "name": "Server.log"
+    },
+    {
+      "type": "file",
+      "id": "file--5361d988-b18f-4ece-9096-3730877fb58f",
+      "name": "NtHandleCallback.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--735f37ec-b3fa-4408-ae06-c4146f819aad",
+      "name": "[\u968f\u673a\u547d\u540d].sys"
+    },
+    {
+      "type": "file",
+      "id": "file--af911a88-ab9c-40b2-9dfc-fde2a195bf52",
+      "name": "NVIDIA.lnk"
+    },
+    {
+      "type": "file",
+      "id": "file--99ef2601-6e47-4d8f-b1a4-8a03547c4691",
+      "name": "QQ***.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5ee6fd97-6eaf-4d07-a03f-e3606ac26b6e",
+      "name": "360***.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--56cb7014-6264-40eb-904f-122d06bbc5d8",
+      "name": "Hips***.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ecfe82df-ccdf-42a6-a254-76153a67d534",
+      "name": "men.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7e8d2cba-4c0a-4b23-915e-f66687b55fd4",
+      "name": "setup.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--bfc96da4-3681-4bd1-808f-c6c78fefa271",
+      "name": "main.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--1d083b2b-a64b-4f02-bfc5-661afc67628d",
+      "name": "rwdriver.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--3f2672ef-0b77-4a79-b24b-19190120edba",
+      "name": "NVIDIA.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4ed89f21-c3c3-4662-b52d-24910077f89f",
+      "name": "KGseKKdKce.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--150d849f-be7a-4aed-b4fb-c0f1e1fca8b6",
+      "name": "BdApiUtil64.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--4d8fcb0a-ca80-43e6-a553-401d8e43b647",
+      "name": "bypass.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--24f8c8ff-165d-4f45-8919-e8e3bb52bea9",
+      "name": "NtHandleCallback.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9ea52d3b-87fd-4fe5-8a39-7243a4afd40d",
+      "name": "log.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--5414694b-697e-4074-8f2a-ad36f2adb5a8",
+      "name": "Server.log"
+    },
+    {
+      "type": "file",
+      "id": "file--cd8837b5-618a-49d1-9a28-f6e537f67186",
+      "name": "Cndom6.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--c000b239-1196-4711-9ca5-58fa966e75f0",
+      "name": "XiaoH.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--6c20ebaa-0d18-4e12-846e-c4e1b44dd56a",
+      "name": "stardict-editor.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--3ea6b2cc-f012-4b9d-9569-c6db8a4dced0",
+      "name": "dll1.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--082bdd44-9fa0-4dfc-adf5-c5dfcde30576",
+      "name": "_8"
+    },
+    {
+      "type": "file",
+      "id": "file--19e02d8f-1bbe-4fd1-bd5b-5bff3da96bf0",
+      "name": "NHQDX.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--b7a4dd45-6e16-4166-9017-5e2c7bb8d33e",
+      "name": "NH.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--67398f77-78fb-4da8-aae8-bd289648bd73",
+      "name": "instal.ini"
+    },
+    {
+      "type": "file",
+      "id": "file--af7d83c6-7385-49b0-862d-f70436e9a9be",
+      "name": "Consys21.png"
+    },
+    {
+      "type": "file",
+      "id": "file--445aabea-8a64-49cd-9045-75fa0798c9cc",
+      "name": "Consys21.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--cb85cce5-6b50-42bd-a264-c22e57826de1",
+      "name": "funzip.U"
+    },
+    {
+      "type": "file",
+      "id": "file--ac2d6e18-0cae-48a8-85ad-46a5f974cfc6",
+      "name": "main.xml"
+    },
+    {
+      "type": "file",
+      "id": "file--fa9d18ac-ca60-4ef6-ae8c-852104f5c154",
+      "name": "men.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ccaed917-9abc-4f1f-8321-c6045adcf28b",
+      "name": "setup.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d723fd20-d92e-42ff-977d-c8e026787e6d",
+      "name": "Binary._BF84D321CFCEFEA02F92AC3F19AB7EFD"
+    },
+    {
+      "type": "file",
+      "id": "file--1829f7ca-2501-4ce7-a0d1-32ac2e0695d3",
+      "name": "xfYecK61gv.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--aacc5dc1-d5ff-484f-b485-36d58e1fe3a9",
+      "name": "Server.log"
+    },
+    {
+      "type": "file",
+      "id": "file--03e96437-f771-4201-8d41-338069dbeba7",
+      "name": "NtHandleCallback.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2ddedea2-ce37-4135-8e36-d70964ef44df",
+      "name": "[\u968f\u673a\u547d\u540d].sys"
+    },
+    {
+      "type": "file",
+      "id": "file--0b42fc4b-1583-4b2b-9175-33e2590ec28c",
+      "name": "NVIDIA.lnk"
+    },
+    {
+      "type": "file",
+      "id": "file--160b1243-c934-4e8a-8322-62e1f834b1bb",
+      "name": "QQ***.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--3326708c-7f40-40e2-a97e-5eade20b7d34",
+      "name": "360***.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ecd1e4ee-c497-40f2-b679-bbf8ce6ef471",
+      "name": "Hips***.exe"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d81c6a4b-97a2-4b09-80d7-73de8ce6d65d",
+      "value": "154.86.0.40"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--781b02fe-a309-40b1-a988-e59041001ec4",
+      "value": "www.bg-wps.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e86ddc06-3f3e-45f7-858e-0a03fa364bf9",
+      "value": "ydbao6.cyou"
+    },
+    {
+      "type": "url",
+      "id": "url--414d2b75-1f09-43ef-904e-3fedcb0a8c33",
+      "value": "https://pub-3d7ecf8d8ed94374b9fb10d61138bd72.r2.dev/Wjfrpsl.zip"
+    },
+    {
+      "type": "url",
+      "id": "url--d12e7eaa-af4a-4475-938b-5ce9d796124a",
+      "value": "https://mp.weixin.qq.com/s?__biz=MjM5MTA3Nzk4MQ==&mid=2650212676&idx=1&sn=c0da7bef0ea5c9139a00f7e66c26f3e9&scene=21#wechat_redirect"
+    },
+    {
+      "type": "url",
+      "id": "url--4e124380-9d3c-4bba-8cc6-8e9d8226e6db",
+      "value": "https://vs2.antiy.cn"
+    },
+    {
+      "type": "file",
+      "id": "file--ad68e1c0-20c3-4246-9056-96c0109eeffc",
+      "hashes": {
+        "MD5": "DDB9A28B72098EE0EC2308D90F2E0334"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0e3b7e49-f9dd-4bc0-8c9e-e4700070f603",
+      "hashes": {
+        "MD5": "E4234ABFFC87519AFAC9705CA73B7C30"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--98752e91-e1d5-40da-9091-662361c657df",
+      "hashes": {
+        "MD5": "04264646287BB028AD5280CF4DA39358"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d7615419-56ad-4610-8388-a0bc32ffce1c",
+      "hashes": {
+        "MD5": "DA0D77E9AC7A60F67D55256E55307713"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3b7c8f1d-b240-4bc8-870c-ce50788b821f",
+      "hashes": {
+        "MD5": "0D9B54B8BFE67CE90A98102D763345F9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2e32dd01-483c-4014-ada7-810a26dfab47",
+      "hashes": {
+        "MD5": "5231A08C5286803E300AC657E37272F8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--43810f7c-9a6c-4a2c-a079-7fce03545668",
+      "hashes": {
+        "MD5": "8A7442439EF37055D790A724BA48BEE0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a89e9d4d-54ab-4258-a6ab-bca015884ca5",
+      "hashes": {
+        "MD5": "C2A1E8510738DDF23B839EEF223F7BEC"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--50bc1c0e-a185-41e2-a7e4-2632f81d086b",
+      "hashes": {
+        "MD5": "893EDFA3A3A71D71CA670424E554E04C"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c3cee473-9dcf-4e82-be2f-0855f5aff92c",
+      "hashes": {
+        "MD5": "C416A4664A84A5BD4F8F032472E56CDD"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4c695bb7-6ac4-44ce-b3a8-15c33b3d07a1",
+      "hashes": {
+        "MD5": "0462F77AE086E8CDC48F9A21758FD67E"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5370ad40-2df1-40fa-85dd-284efc63b2a6",
+      "hashes": {
+        "MD5": "212FC4B489C15436DE3E34AC96E1207B"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4fae763e-0a4c-4711-82ce-ab59c7d81218",
+      "hashes": {
+        "MD5": "08CFAAC200ED8052A63020F115C6A75A"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8ed47b77-a18e-44f6-8ac0-ad86c938d71c",
+      "hashes": {
+        "MD5": "07C8B3BF5EF18BDD646980F765DE0FC6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--28392877-6f1d-4e3a-9613-40df4ff1c647",
+      "hashes": {
+        "MD5": "E059CF1F9169302A0FF91B0061DA1C14"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0bc2fbf5-8961-4560-9461-cc52a54602a0",
+      "hashes": {
+        "MD5": "234CCBCB8460721AA990A350D2237036"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--70c89d90-21e1-461e-93d7-df018df9a737",
+      "hashes": {
+        "MD5": "0D7D0CF8A31422CD9A88FA90AD7560EB"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8020867d-2378-4988-8700-9448d493f522",
+      "hashes": {
+        "MD5": "B6EDE7ECBB980723EC43C7B1BDE059B9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--23589776-2308-4711-86da-c457ed422e19",
+      "hashes": {
+        "MD5": "8DC9C86CF33FC0CBC20CFD3CB6F5D3A3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d3f976a7-abdb-4ea9-a6b0-df1414b04e05",
+      "hashes": {
+        "MD5": "1C993A7B64D9E7C3379AB8849D6F17D4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a045054d-a245-41fe-9892-e544607dbba3",
+      "hashes": {
+        "MD5": "0C9B34B15361B87B738DC06FC4194086"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e7d29410-8a2a-4a0c-a99f-9f3a93a5cf10",
+      "hashes": {
+        "MD5": "5B81E82E3C4594D82085F6A0E0563A07"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "hashes": {
+        "MD5": "18A4DFF46A1BAE8E317A999A1837F8F2"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--207f72ce-5c9b-4a40-9d54-8ef8e52a9a5c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "SwimSnake Group operates and distributes the SwimSnake malware family for fraud, credential theft, and data exfiltration.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8c87985-52a5-4e41-9680-ff579a769be2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "SwimSnake Group uses Gh0st RAT variant as a core payload, delivered via encrypted DLLs.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8bad986a-e012-496b-9460-bcb061848768",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "SwimSnake Group uses Winos RAT, a Gh0st-derived RAT, for remote control and persistence.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5d2f5f3-030c-4bc2-89fc-f7920d63e367",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake Group employs SEO poisoning by creating fake download sites pushed to top search results to deliver malware.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9f71169-324d-4965-835f-b89820749891",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake Group sends phishing messages and malicious files via instant messaging platforms to lure victims.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee48cd2e-6c4c-4fe3-9176-741dc850a72c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake Group employs multi-stage loaders with multi-layer encryption and packing to deliver core malware payloads.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eed12dfd-2c8b-4b18-b426-def078068f97",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake Group leverages BYOVD techniques, abusing vulnerable drivers to gain kernel-level privileges and evade EDR.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5e8f7ce-18a3-4358-8f97-594d5445e66b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--bf0582a3-4c93-4677-9967-b7f112c06cbd",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake Group uses malicious drivers to hide malware processes and network connections.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e927771b-5261-49ad-bfd0-fc076eb5c762",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "SwimSnake malware delivers and executes Gh0st RAT variant as a core payload.",
+      "labels": [
+        "drops",
+        "loads"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da1f8e6e-5b45-43e3-95f0-9c9f4d078d78",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "SwimSnake malware delivers and executes Winos RAT as a core payload for remote control.",
+      "labels": [
+        "drops",
+        "loads"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ceded25-89c3-4ead-9b45-dfcc3bdaa12a",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake uses SEO poisoning to lure victims to download trojanized installers.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07738c60-f820-48e0-862f-8e5c3c53b43c",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake uses phishing via instant messaging to distribute malicious files.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--602b4459-1979-42ff-8381-80dabf4615ff",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake uses multi-stage loaders and multi-layer encryption to evade detection.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91d57230-c4f2-4e17-a49a-2e7caf3ca90f",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake abuses vulnerable drivers for kernel-level defense evasion.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de40179e-e187-427c-add9-0f9fb9fb415d",
+      "relationship_type": "uses",
+      "source_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "target_ref": "attack-pattern--d55fc04e-2f0d-4013-a128-4b6b0cb7e7a2",
+      "description": "SwimSnake uses malicious drivers to hide processes and network connections.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3164fd8-2aab-4474-9a46-26dc930f281b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "These file hashes indicate the presence of SwimSnake malware samples.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ce477b5-ed58-4811-8c8e-7e2b16fd1409",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "These C2 servers and URLs are associated with SwimSnake malware infrastructure.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad1fcf18-ca3b-4beb-990e-b856028b0924",
+      "relationship_type": "delivers",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "youd_fanyiK\u000f_2.0.msi is a trojanized installer that delivers SwimSnake malware.",
+      "labels": [
+        "delivers"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9097e52-a649-4353-b244-3cd8c413ab66",
+      "relationship_type": "delivers",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "Wcnhguhyr.exe is a trojanized installer that delivers SwimSnake malware.",
+      "labels": [
+        "delivers"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8418ee2-45fd-489d-8409-b1748888cf0a",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "youd_fanyiK\u000f_2.0.msi drops Binary._BF84D321CFCEFEA02F92AC3F19AB7EFD, which executes hidden VBS scripts.",
+      "labels": [
+        "drops"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58716ed1-892b-4c41-9ce0-64cf8c61890e",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "youd_fanyiK\u000f_2.0.msi drops stardict-editor.dll and dll1.dll, which decrypt further payloads.",
+      "labels": [
+        "drops"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--879c79eb-e3bf-4daf-8f4e-b7badf924392",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "youd_fanyiK\u000f_2.0.msi drops _8, which is an encrypted payload.",
+      "labels": [
+        "drops"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff8eff82-b731-47b9-86ca-9bd43aa8b46f",
+      "relationship_type": "decrypts",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "stardict-editor.dll decrypts _8 to obtain NHQDX.jpg (Gh0st RAT DLL).",
+      "labels": [
+        "decrypts"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6dc42162-d19c-47ed-81dc-e04db9ab7d9a",
+      "relationship_type": "decrypts",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "dll1.dll loads decrypted payload from NHQDX.jpg.",
+      "labels": [
+        "loads"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e6d6005f-d2ac-41cb-a839-ea7b3f80bfce",
+      "relationship_type": "reads",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "NHQDX.jpg reads instal.ini to select C2 addresses.",
+      "labels": [
+        "reads"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c4727bd-61d4-4a36-a5b1-4a0c030db9ad",
+      "relationship_type": "decrypts",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "NHQDX.jpg decrypts Consys21.png to obtain Consys21.dll (remote plugin DLL).",
+      "labels": [
+        "decrypts"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fe589e0-cc49-4720-a6b9-f533731e85c8",
+      "relationship_type": "loads",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "NHQDX.jpg loads Consys21.dll and executes plugin functions.",
+      "labels": [
+        "loads"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63a19b32-36a3-47f1-a280-8efc3ad004ea",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "men.exe drops main.exe, rwdriver.sys, and other core malicious components.",
+      "labels": [
+        "drops"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d4e5989-49ee-47bc-9a0e-391488b1ef11",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "men.exe drops KGseKKdKce.exe and BdApiUtil64.sys for BYOVD attacks.",
+      "labels": [
+        "drops"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49eef9c6-7547-4745-96fe-e9659c0e044d",
+      "relationship_type": "drops",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "NtHandleCallback.exe loads log.dll, which decrypts Server.log (Winos RAT module).",
+      "labels": [
+        "loads",
+        "decrypts"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce83a2c8-8ad2-4c97-898d-1cc8579a78e8",
+      "relationship_type": "uses",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "description": "KGseKKdKce.exe uses BdApiUtil64.sys (BYOVD Driver Tool) to terminate security software processes.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--478ca89c-b3f2-4b3f-a3f6-a4937bd566ab",
+      "relationship_type": "uses",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "description": "NVIDIA.exe uses vulnerable driver for BYOVD kernel-level attacks.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13de11ba-f420-4fdf-bef8-5cb4f5fedba2",
+      "relationship_type": "uses",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "description": "log.dll uses Cndom6.sys and XiaoH.sys to hide processes and network connections.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4fcb49b-eb59-4d01-9f0a-b4af591c3318",
+      "relationship_type": "uses",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "description": "bypass.exe is used to bypass UAC protections and execute privileged operations.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3da469a-be6b-4887-b156-6b88e971827d",
+      "relationship_type": "uses",
+      "source_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "target_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "description": "log.dll executes PowerShell commands to add paths to Microsoft Defender exclusions.",
+      "labels": [
+        "uses"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b8cd902-ec74-4108-b17f-f489a45f3d3d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "file--1a9f8f01-7ecb-42f3-94f7-4b3336271e99",
+      "description": "These file hashes are indicators for malicious files used in SwimSnake campaigns.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c38bb9e-e8a8-44b3-b05c-f1eedf607d17",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "domain-name--e86ddc06-3f3e-45f7-858e-0a03fa364bf9",
+      "description": "Domain www.bg-wps.com is used as fake download site for malware delivery.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7b4979a-58a8-4a82-8191-3970c1569bee",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "domain-name--e86ddc06-3f3e-45f7-858e-0a03fa364bf9",
+      "description": "Domain ydbao6.cyou is used as C2 infrastructure for SwimSnake malware.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0cb5cd5-dac9-4260-b818-529cdd72940d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "ipv4-addr--d81c6a4b-97a2-4b09-80d7-73de8ce6d65d",
+      "description": "IP 154.86.0.40 is used as C2 infrastructure for SwimSnake malware.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--18876911-4daf-4702-9b64-af9f0efd79f9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--e3225b23-ba1c-4ad6-964c-ef30eab48d4a",
+      "target_ref": "url--4e124380-9d3c-4bba-8cc6-8e9d8226e6db",
+      "description": "URL https://pub-3d7ecf8d8ed94374b9fb10d61138bd72.r2.dev/Wjfrpsl.zip is used for malware delivery in SwimSnake campaigns.",
+      "labels": [
+        "indicates"
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8165a49-1d9b-4269-bd05-c2436f4b5d86",
+      "relationship_type": "detects",
+      "source_ref": "tool--3a4ccf9a-6da6-4c99-bdab-10b625db11ed",
+      "target_ref": "malware--c87f3c33-288a-43ea-b453-6a0c7c63aee2",
+      "description": "Antiy detection tool scans and detects SwimSnake malware on infected hosts.",
+      "labels": [
+        "detects"
+      ]
+    }
+  ]
+}

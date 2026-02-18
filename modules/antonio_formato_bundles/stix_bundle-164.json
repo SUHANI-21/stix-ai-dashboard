@@ -1,0 +1,501 @@
+{
+  "type": "bundle",
+  "id": "bundle--890437b2-c9cf-4c6c-90e0-ae74b3735ecc",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "name": "PlushDaemon",
+      "aliases": [
+        "PlushDaemon APT"
+      ],
+      "description": "PlushDaemon is a China-aligned threat actor active since at least 2018, engaging in espionage operations against individuals and entities in China, Taiwan, Hong Kong, Cambodia, South Korea, the United States, and New Zealand. The group uses custom backdoors such as SlowStepper and leverages adversary-in-the-middle attacks via network implants like EdgeStepper to hijack legitimate update mechanisms.",
+      "first_seen": "2018-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Compromise software updates",
+        "Supply-chain attacks"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "financial gain"
+      ],
+      "external_references": [
+        {
+          "source_name": "ESET Research",
+          "url": "https://www.welivesecurity.com/en/eset-research/plushdaemon-compromises-network-devices-for-adversary-in-the-middle-attacks/"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--075ed3bb-86e0-4a9c-8cb3-f7ab8e28d45c",
+      "name": "Adversary-in-the-middle via DNS hijacking",
+      "description": "PlushDaemon compromises network devices (e.g., routers) and deploys EdgeStepper to redirect DNS queries to malicious nodes, hijacking traffic intended for legitimate software update infrastructure.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1659",
+          "external_id": "T1659"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cc3dc97d-e2a6-48de-9256-b857253e4b4c",
+      "name": "Supply-chain compromise",
+      "description": "PlushDaemon performed a supply-chain attack in 2023, compromising the update mechanism of a South Korean VPN service.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1195",
+          "external_id": "T1195"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0c96ab8e-df69-43f1-9113-3368d9e124c2",
+      "name": "Downloader execution via hijacked update",
+      "description": "Hijacking nodes process redirected traffic and instruct legitimate software to download and execute malware such as LittleDaemon.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1608.001",
+          "external_id": "T1608.001"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e56cebaf-b37f-4306-9596-bb96f703b163",
+      "name": "Masquerading and encrypted payloads",
+      "description": "DaemonicLogistics and SlowStepper's loader decrypt files that masquerade as ZIP and GIF files, and embed encrypted components.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1036.008",
+          "external_id": "T1036.008"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1027.013",
+          "external_id": "T1027.013"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--84f804ef-e840-45d0-8ae8-37203bb96b34",
+      "name": "Discovery of security software and network configuration",
+      "description": "DaemonicLogistics checks for security software (360tray.exe), lists processes, and obtains MAC addresses for identification.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1518.001",
+          "external_id": "T1518.001"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1016",
+          "external_id": "T1016"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1057",
+          "external_id": "T1057"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "name": "Command and Control via HTTP and encrypted channels",
+      "description": "LittleDaemon and DaemonicLogistics use HTTP to communicate with hijacking nodes, downloading encrypted payloads and hiding infrastructure by using legitimate domains.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1071.001",
+          "external_id": "T1071.001"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1573",
+          "external_id": "T1573"
+        },
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1665",
+          "external_id": "T1665"
+        }
+      ],
+      "object_marking_refs": []
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--59f479e1-dae3-495c-9748-86644a0f7bc2",
+      "name": "bioset ELF file",
+      "pattern": "[file:sha1 = '8F569641691ECB3888CD4C11932A5B8E13F04B07']",
+      "description": "EdgeStepper Linux implant sample.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-elf",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--58250ade-8b74-4ff2-ad7c-835fe448f228",
+      "name": "bioset.conf",
+      "pattern": "[file:sha1 = '06177810D61A69F34091CC9689B813740D4C260F']",
+      "description": "EdgeStepper encrypted configuration file.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-config",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--97c03802-b1cf-469a-9155-fe5ccb07ee6f",
+      "name": "popup_4.2.0.2246.dll",
+      "pattern": "[file:sha1 = '69974455D8C13C5D57C1EE91E147FF9AED49AEBC']",
+      "description": "LittleDaemon DLL sample.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-dll",
+        "LittleDaemon"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--aac97eb1-6f78-401d-a6dd-10301c119d60",
+      "name": "sogou_wubi_15.4.0.2508_0000.exe",
+      "pattern": "[file:sha1 = '2857BC730952682D39F426D185769938E839A125']",
+      "description": "LittleDaemon executable sample.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-exe",
+        "LittleDaemon"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--a18d0934-11cf-4fbb-bf45-05849f7da819",
+      "name": "ds20221202.dsc.wcsset[.]com",
+      "pattern": "[domain-name:value = 'ds20221202.dsc.wcsset.com']",
+      "description": "Malicious DNS/hijacking node domain used by PlushDaemon.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-domain",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ab6f5436-8414-44fd-a438-4968b196e081",
+      "name": "test.dsc.wcsset[.]com",
+      "pattern": "[domain-name:value = 'test.dsc.wcsset.com']",
+      "description": "Malicious DNS/hijacking node domain used by PlushDaemon.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-domain",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--97dd63ec-9468-4801-83c9-d4409ce28bd3",
+      "name": "8.212.132.120",
+      "pattern": "[ipv4-addr:value = '8.212.132.120']",
+      "description": "IP address for PlushDaemon DNS/hijacking node.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-ip",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b1bbb65c-d071-4c29-b9a0-974e841eaf46",
+      "name": "47.242.198.250",
+      "pattern": "[ipv4-addr:value = '47.242.198.250']",
+      "description": "IP address for PlushDaemon DNS/hijacking node.",
+      "valid_from": "2024-07-12T00:00:00Z",
+      "labels": [
+        "malicious-ip",
+        "EdgeStepper"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--f38eb0ad-727f-4d1e-bf5e-d592e393d252",
+      "hashes": {
+        "SHA-1": "8F569641691ECB3888CD4C11932A5B8E13F04B07"
+      },
+      "name": "bioset"
+    },
+    {
+      "type": "file",
+      "id": "file--e6ec17f3-349e-4cd4-b05e-6f5e8ced2694",
+      "hashes": {
+        "SHA-1": "06177810D61A69F34091CC9689B813740D4C260F"
+      },
+      "name": "bioset.conf"
+    },
+    {
+      "type": "file",
+      "id": "file--6ce08e0c-38a1-4c04-9c2c-d1d8da719e15",
+      "hashes": {
+        "SHA-1": "69974455D8C13C5D57C1EE91E147FF9AED49AEBC"
+      },
+      "name": "popup_4.2.0.2246.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--93ea4468-9ded-4526-a5a5-c2893602f1ba",
+      "hashes": {
+        "SHA-1": "2857BC730952682D39F426D185769938E839A125"
+      },
+      "name": "sogou_wubi_15.4.0.2508_0000.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a46ac06-627c-49e4-813b-1103d109f72a",
+      "value": "ds20221202.dsc.wcsset.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6d2429c1-3678-4b9c-add3-aa328dd9e305",
+      "value": "test.dsc.wcsset.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fb6393ca-c401-431f-be7d-0287d01bd984",
+      "value": "ime.sogou.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--07177f01-1bf0-400e-8158-bf7dce2a47f7",
+      "value": "mobads.baidu.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--49b401f5-02da-4838-9022-b1e038ee3a83",
+      "value": "8.212.132.120"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0bb022d-26ac-453e-a614-3761f8a19216",
+      "value": "47.242.198.250"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0e2a7fc-31d2-41d0-bb8c-6528f6bc10fb",
+      "value": "119.136.153.0"
+    },
+    {
+      "type": "url",
+      "id": "url--3799e804-4860-4532-bac4-cbf69bf3bd25",
+      "value": "http://ime.sogou.com/popup_4.2.0.2246.dll"
+    },
+    {
+      "type": "url",
+      "id": "url--458baf49-e4fb-4e00-91f8-3374f9028a05",
+      "value": "ime.sogou.com/update/updateInfo.bzp"
+    },
+    {
+      "type": "url",
+      "id": "url--10642f43-829e-42e0-a75a-60a655aa8dfa",
+      "value": "mobads.baidu.com/update/updateInfo.bzp"
+    },
+    {
+      "type": "url",
+      "id": "url--7c84da0e-9927-4bde-9b57-f1c2b77dfc1b",
+      "value": "ime.sogou.com/update/latest/new_version?tp=2&c=0&s=<OS_ID_number>&mac=<identifier>"
+    },
+    {
+      "type": "url",
+      "id": "url--c00d7731-b1a8-4dcb-ac5e-2809fb3fc9c8",
+      "value": "ime.sogou.com/update/latest/new_version?tp=1&g=15&c=0"
+    },
+    {
+      "type": "url",
+      "id": "url--a2dd150f-db11-4372-a987-2dcb373d761f",
+      "value": "ime.sogou.com/update/file6.bdat"
+    },
+    {
+      "type": "url",
+      "id": "url--0b1bfb82-68db-4830-a996-36bbc513d18e",
+      "value": "ime.sogou.com/update/file2.bdat"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03e51538-7577-4b01-abde-0108ec645c7f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "PlushDaemon uses EdgeStepper network implant for adversary-in-the-middle attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93657d8f-a061-4b91-a573-2902f06d84de",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "PlushDaemon uses LittleDaemon as a first-stage downloader deployed through hijacked updates."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8d95b04-a63f-42d8-a46d-242350e4f341",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "PlushDaemon uses DaemonicLogistics, downloaded by LittleDaemon, to deploy the SlowStepper backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--826b6fa7-a1d6-41b7-ba0d-b1370a73eedb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "PlushDaemon uses SlowStepper custom backdoor for persistence and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d16c6027-be10-4cc9-8571-18de67f13fbb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon compromises network devices and deploys EdgeStepper to perform adversary-in-the-middle attacks via DNS hijacking."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d79f1de-6136-4a2d-a7ac-ba23da845917",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon performed a supply-chain compromise against a South Korean VPN service."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ca59655-08dd-4921-bbc6-bdc716604cbc",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon hijacking nodes process redirected traffic and instruct legitimate software to download and execute malware such as LittleDaemon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9536bf6c-6922-4483-867d-4cb4d77b1f11",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon uses masquerading and encrypted payloads to evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70c001b7-8e41-417b-b7a5-30183bc80380",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon uses DaemonicLogistics to discover security software and network configuration on victim machines."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e628f3b9-6ca3-41ab-a18e-39c85747ab57",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--df7bf2c4-d5b0-49c8-a597-95ccc7cf6e24",
+      "target_ref": "attack-pattern--1c50c65b-de64-4461-b27b-5d95d29e71b1",
+      "description": "PlushDaemon uses HTTP and encrypted channels for command and control via LittleDaemon and DaemonicLogistics."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d1577ed-3363-4eaf-be28-851eb77679d6",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "file--93ea4468-9ded-4526-a5a5-c2893602f1ba",
+      "description": "EdgeStepper Linux implant sample is bioset ELF file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c83be7e0-18a5-402a-a45a-7447764c04e7",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "file--93ea4468-9ded-4526-a5a5-c2893602f1ba",
+      "description": "EdgeStepper uses bioset.conf as its encrypted configuration file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e58fa9a4-dbd0-4664-8d44-86e5b663a79e",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "domain-name--07177f01-1bf0-400e-8158-bf7dce2a47f7",
+      "description": "EdgeStepper forwards DNS queries to ds20221202.dsc.wcsset.com as a malicious DNS/hijacking node."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93da18cf-900f-4de4-8116-c8c0f121bef0",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "domain-name--07177f01-1bf0-400e-8158-bf7dce2a47f7",
+      "description": "EdgeStepper configuration references test.dsc.wcsset.com as a malicious DNS/hijacking node."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fba478aa-ce3b-4897-8fef-82182094c0e7",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "ipv4-addr--b0e2a7fc-31d2-41d0-bb8c-6528f6bc10fb",
+      "description": "EdgeStepper uses 8.212.132.120 as DNS/hijacking node IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a96be0c0-a945-4e33-9f39-5ab0b908a5c0",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "ipv4-addr--b0e2a7fc-31d2-41d0-bb8c-6528f6bc10fb",
+      "description": "EdgeStepper uses 47.242.198.250 as DNS/hijacking node IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ce67bd2-e25d-4b52-8a79-23429e4375c6",
+      "relationship_type": "drops",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "LittleDaemon downloads and executes DaemonicLogistics if SlowStepper is not present."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59698c4b-f1c7-4a7d-a874-20acf677f947",
+      "relationship_type": "drops",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "description": "DaemonicLogistics downloads and deploys the SlowStepper backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eaedfbc0-294a-4a26-9045-7a51a844f57f",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "file--93ea4468-9ded-4526-a5a5-c2893602f1ba",
+      "description": "LittleDaemon DLL sample is popup_4.2.0.2246.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13cb18fb-a378-45f3-8e13-fdc281641a20",
+      "relationship_type": "uses",
+      "source_ref": "malware--12d12800-3faa-4e19-8f96-540e391442e1",
+      "target_ref": "file--93ea4468-9ded-4526-a5a5-c2893602f1ba",
+      "description": "LittleDaemon executable sample is sogou_wubi_15.4.0.2508_0000.exe."
+    }
+  ]
+}

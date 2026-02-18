@@ -1,0 +1,352 @@
+{
+  "type": "bundle",
+  "id": "bundle--f9c07ea3-6d50-4e7d-8aa1-e8e1f545aef5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7a42068c-bd8a-4b15-9190-0b18ac1dd7c5",
+      "name": "Kernel-mode rootkit injection",
+      "description": "Deploying a kernel-mode driver to inject user-mode payloads and backdoors, protect malicious files, registry keys, and processes, and evade security tools.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1014/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fd591abc-fcd3-4701-820d-378308b3d95c",
+      "name": "Process Injection",
+      "description": "Injecting malicious payloads into legitimate processes (e.g., svchost) to evade detection and maintain persistence.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1055/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b9c00015-8a6b-4461-acb1-d26c3a5723ec",
+      "name": "Registry Key Protection",
+      "description": "Protecting malicious registry keys from modification or deletion by intercepting registry operations and denying access.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1112/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5a39c848-5110-4a99-acbe-ee115fb90c13",
+      "name": "File Protection via Mini-Filter",
+      "description": "Using mini-filter drivers to intercept and block file operations such as rename or delete to prevent removal of malicious components."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "name": "Obfuscated API Resolution",
+      "description": "Dynamically resolving API addresses using hashing algorithms to obfuscate malware behavior and hinder analysis."
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--a603a36f-879c-4cd9-9332-cadb66ab663c",
+      "name": "ToneShell C2 Infrastructure",
+      "description": "Command-and-control servers used by ToneShell backdoor for remote access and data exfiltration.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "first_seen": "2024-09",
+      "last_seen": "2025-06",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        }
+      ],
+      "aliases": [
+        "ToneShell C2"
+      ],
+      "x_infrastructure_hosts": [
+        "avocadomechanism.com",
+        "potherbreference.com"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--fa142881-2fbd-4be9-81c6-f7f18f66fd07",
+      "name": "Guangzhou Kingteller Technology Co., Ltd.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "description": "Organization whose digital certificate was compromised and used to sign malicious drivers.",
+      "external_references": [
+        {
+          "source_name": "Kaspersky Securelist",
+          "url": "https://securelist.com/honeymyte-kernel-mode-rootkit/118590/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--111c80ce-5ad6-43b0-a97c-966af32fab76",
+      "name": "ProjectConfiguration.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--e3d51c46-ab65-4c24-84d2-1d38b6c21de3",
+      "name": "AppvVStram_.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--13268975-227e-47cb-8f63-88ec2ab92333",
+      "name": "C:\\ProgramData\\MicrosoftOneDrive.tlb"
+    },
+    {
+      "type": "file",
+      "id": "file--ed3c4325-554a-4aed-9b3c-9dc0c3328867",
+      "hashes": {
+        "MD5": "36f121046192b7cac3e4bec491e8f1b5"
+      },
+      "name": "AppvVStram_.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--584ed6a7-4257-4a4d-8c62-1a2c3feafdff",
+      "hashes": {
+        "MD5": "fe091e41ba6450bcf6a61a2023fe6c83"
+      },
+      "name": "AppvVStram_.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "hashes": {
+        "MD5": "abe44ad128f765c14d895ee1c8bad777"
+      },
+      "name": "ProjectConfiguration.sys"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--37411825-8830-49e6-baf7-1371108e0243",
+      "value": "avocadomechanism.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--de6244a4-ac95-4df2-81ab-ddae5df90058",
+      "value": "potherbreference.com"
+    },
+    {
+      "type": "certificate",
+      "id": "certificate--d21ea41e-6c78-4f5c-b8ef-2f7a0d071fad",
+      "issuer": "Guangzhou Kingteller Technology Co., Ltd.",
+      "serial_number": "08 01 CC 11 EB 4D 1D 33 1E 3D 54 0C 55 A4 9F 7F",
+      "validity_not_before": "2012-08",
+      "validity_not_after": "2015"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9cc3f6e-f188-4ab0-a028-6161ad2b0d05",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--0ccea901-94ad-4787-bca0-f5d0e17c422c",
+      "target_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "description": "HoneyMyte uses ToneShell backdoor in its cyberespionage campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4cb31349-be19-424d-a568-9fbaba79f5c3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--0ccea901-94ad-4787-bca0-f5d0e17c422c",
+      "target_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "description": "HoneyMyte uses ProjectConfiguration.sys kernel-mode driver for payload injection and rootkit capabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--82534588-5235-44fb-acad-16c3a66d9c98",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--0ccea901-94ad-4787-bca0-f5d0e17c422c",
+      "target_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "description": "HoneyMyte uses PlugX remote access Trojan in its operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76c6f170-88ab-4061-9588-a39e8e386154",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--0ccea901-94ad-4787-bca0-f5d0e17c422c",
+      "target_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "description": "HoneyMyte uses ToneDisk USB worm for lateral movement and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbc8a7ff-e523-4c20-8969-98817495801f",
+      "relationship_type": "delivers",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "description": "ProjectConfiguration.sys kernel-mode driver delivers the ToneShell backdoor by injecting it into user-mode processes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--389e0e8f-0773-46b2-8318-66a6c87521eb",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "description": "ProjectConfiguration.sys is the malicious driver file deployed on victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e2eb91b-c0d1-4de1-93c5-2ec6b8b0a30e",
+      "relationship_type": "signed-by",
+      "source_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "target_ref": "certificate--d21ea41e-6c78-4f5c-b8ef-2f7a0d071fad",
+      "description": "ProjectConfiguration.sys file is signed by a compromised digital certificate from Guangzhou Kingteller Technology Co., Ltd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--119f1dbb-899f-4265-86ed-04170266223c",
+      "relationship_type": "signed-by",
+      "source_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "target_ref": "certificate--d21ea41e-6c78-4f5c-b8ef-2f7a0d071fad",
+      "description": "AppvVStram_.sys file is signed by a compromised digital certificate from Guangzhou Kingteller Technology Co., Ltd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96301b05-3b48-4490-ac41-7f9356c8c1c7",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "description": "ProjectConfiguration.sys uses kernel-mode rootkit injection techniques to deliver payloads and evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76036d8a-a0c0-4507-824f-3df8b0b37ad5",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "description": "ProjectConfiguration.sys uses process injection to inject ToneShell into svchost.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd263657-f8dc-4730-8b72-bc42df8ae2c0",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "description": "ProjectConfiguration.sys protects malicious registry keys by intercepting registry operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbc75f95-0afb-4454-aced-849e510cabe2",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "description": "ProjectConfiguration.sys uses mini-filter drivers to protect its file from deletion or renaming."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59a7c4ab-a53d-4463-818a-1cd9da8fd90a",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "attack-pattern--324d57dc-997a-4aff-841f-fb750f0afb1b",
+      "description": "ProjectConfiguration.sys uses obfuscated API resolution via hashing to hinder analysis."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f6f0111-04de-43b0-a65d-fe729d55570c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "infrastructure--a603a36f-879c-4cd9-9332-cadb66ab663c",
+      "description": "ToneShell backdoor communicates with ToneShell C2 Infrastructure for command-and-control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce38b7d9-cdd8-4571-9e6c-7f8059b3f305",
+      "relationship_type": "consists-of",
+      "source_ref": "infrastructure--a603a36f-879c-4cd9-9332-cadb66ab663c",
+      "target_ref": "domain-name--de6244a4-ac95-4df2-81ab-ddae5df90058",
+      "description": "ToneShell C2 Infrastructure consists of the domain avocadomechanism.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c9dbe9c-6b04-4662-83b7-5622749bc784",
+      "relationship_type": "consists-of",
+      "source_ref": "infrastructure--a603a36f-879c-4cd9-9332-cadb66ab663c",
+      "target_ref": "domain-name--de6244a4-ac95-4df2-81ab-ddae5df90058",
+      "description": "ToneShell C2 Infrastructure consists of the domain potherbreference.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddaa631c-aca6-4714-9210-e267936e7407",
+      "relationship_type": "drops",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "description": "ToneShell backdoor creates and uses the file C:\\ProgramData\\MicrosoftOneDrive.tlb as a host identifier marker."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--abac85f6-bb8c-47c2-b800-65a8722f4185",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6319ffac-ca74-4467-80ce-e0499f82325c",
+      "target_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "description": "Indicator for ProjectConfiguration.sys file hash."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44093892-e6e6-4847-9327-988932f0903c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6319ffac-ca74-4467-80ce-e0499f82325c",
+      "target_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "description": "Indicator for AppvVStram_.sys file hash (MD5: 36f121046192b7cac3e4bec491e8f1b5)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c96a54f-f56b-45d3-888a-2e0375a05abd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6319ffac-ca74-4467-80ce-e0499f82325c",
+      "target_ref": "file--c38d706b-080d-4e2e-9c93-b0b200eff63f",
+      "description": "Indicator for AppvVStram_.sys file hash (MD5: fe091e41ba6450bcf6a61a2023fe6c83)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1595b9b-4b5b-41ab-976f-e2cf4f77ec7c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6319ffac-ca74-4467-80ce-e0499f82325c",
+      "target_ref": "domain-name--de6244a4-ac95-4df2-81ab-ddae5df90058",
+      "description": "Indicator for ToneShell C2 domain avocadomechanism.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dac07813-bbda-4077-bc71-2d37c4bfc0f9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--6319ffac-ca74-4467-80ce-e0499f82325c",
+      "target_ref": "domain-name--de6244a4-ac95-4df2-81ab-ddae5df90058",
+      "description": "Indicator for ToneShell C2 domain potherbreference.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3103362-474c-48c9-bd28-f73b88c27c44",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--0ccea901-94ad-4787-bca0-f5d0e17c422c",
+      "target_ref": "identity--fa142881-2fbd-4be9-81c6-f7f18f66fd07",
+      "description": "HoneyMyte targeted systems using a certificate issued to Guangzhou Kingteller Technology Co., Ltd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db92340d-88c7-4596-9978-34b67864491a",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "process--06f37c42-f3b4-4439-8290-79ebe75b7986",
+      "description": "ProjectConfiguration.sys injects payloads into svchost.exe process for execution and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ac40c45-da97-4c1c-9ec4-8d59996391a1",
+      "relationship_type": "uses",
+      "source_ref": "malware--c0078597-f2c5-445c-9409-20a9614ee6bf",
+      "target_ref": "process--06f37c42-f3b4-4439-8290-79ebe75b7986",
+      "description": "ToneShell backdoor is injected and executed within svchost.exe process."
+    }
+  ]
+}

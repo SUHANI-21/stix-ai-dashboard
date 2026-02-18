@@ -1,0 +1,45 @@
+{
+  "type": "bundle",
+  "id": "bundle--6259e082-f45c-44b0-a756-8dff8f787c6a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--69df4c33-8bbf-4fac-8eb6-af72c733d4cd",
+      "name": "Kimsuky",
+      "description": "Kimsuky is a North Korean advanced persistent threat (APT) group known for targeting South Korean Android users with remote reset attacks and abusing KakaoTalk.",
+      "aliases": [
+        "Kimsuky"
+      ],
+      "goals": [
+        "espionage",
+        "disruption"
+      ],
+      "external_references": [
+        {
+          "source_name": "Dark Reading",
+          "url": "https://www.darkreading.com/remote-workforce/kimsuky-apt-south-korean-androids-abuses-kakaotalk"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--614498c4-b3f4-4f27-a80d-0dbcfd247106",
+      "name": "Cl0p",
+      "description": "Cl0p is a ransomware group that lists major organizations as victims, including Logitech, The Washington Post, Cox Enterprises, Pan American Silver, LKQ Corporation, and Copeland. Cl0p is known for targeting Oracle EBS and other high-profile organizations.",
+      "aliases": [
+        "Cl0p"
+      ],
+      "goals": [
+        "financial gain",
+        "extortion"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/nearly-30-alleged-victims-of-oracle-ebs-hack-named-on-cl0p-ransomware-site/"
+        }
+      ]
+    }
+  ]
+}

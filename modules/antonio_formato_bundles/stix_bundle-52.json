@@ -1,0 +1,34 @@
+{
+  "type": "bundle",
+  "id": "bundle--a930b822-9278-4a2a-9182-b471139d6f4a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--a147a659-20d2-4c5c-881e-0b115c8534e7",
+      "name": "Frogblight",
+      "extensions": {
+        "android-app-extension": {
+          "package": "fraudulent app",
+          "platform": "Android"
+        }
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--fccfe5e1-0ca6-4c24-ac78-3facc7bbfc53",
+      "name": "Frogblight",
+      "cpe": "cpe:2.3:a:frogblight:frogblight:-:*:*:*:*:android:*:*",
+      "categories": [
+        "malware",
+        "spyware"
+      ]
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--3e0e07ce-5459-46cf-9114-cbbb06826dee",
+      "account_type": "banking",
+      "display_name": "banking credentials"
+    }
+  ]
+}

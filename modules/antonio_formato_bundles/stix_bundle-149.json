@@ -1,0 +1,156 @@
+{
+  "type": "bundle",
+  "id": "bundle--972ede24-0e7a-45fd-9b87-8d2d70794ea6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--39c9771d-5418-44c5-a5d0-efc2349680a6",
+      "name": "Exploitation of IoT Device Vulnerabilities for Malware Delivery",
+      "description": "Attackers exploit vulnerabilities in IoT devices (DD-WRT, D-Link, DigiEver, TBK, TP-Link) to deliver downloader scripts and install ShadowV2 malware, enabling remote control and DDoS attacks.",
+      "external_references": [
+        {
+          "source_name": "FortiGuard Labs",
+          "url": "https://www.fortinet.com/blog/threat-research/shadowv2-casts-a-shadow-over-iot-devices"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--410941e7-ac15-40d7-bd89-3bbeea490423",
+      "name": "ShadowV2 C2 Infrastructure",
+      "description": "Command and control infrastructure used by ShadowV2 malware, including domain silverpath.shadowstresser.info and IP address 81.88.18.108.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [
+        "silverpath.shadowstresser.info"
+      ],
+      "external_references": [
+        {
+          "source_name": "FortiGuard Labs",
+          "url": "https://www.fortinet.com/blog/threat-research/shadowv2-casts-a-shadow-over-iot-devices"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--a517e7ad-191b-4cc3-b979-ad50c3601f2c",
+      "hashes": {
+        "SHA-256": "7dfbf8cea45380cf936ffdac18c15ad91996d61add606684b0c30625c471ce6a"
+      },
+      "name": "binary.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--a880e35a-9efd-4335-b4b0-d24778f50360",
+      "hashes": {
+        "SHA-256": "0408d57c5ded5c79bf1c5b15dfde95547e17b81214dfc84538edcdbef4e61ffe"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--0a1dcf9f-b0d3-40b9-846d-6d039229f184",
+      "hashes": {
+        "SHA-256": "dfaf34b7879d1a6edd46d33e9b3ef07d51121026b8d883fdf8aced630eda2f83"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--55f59e09-1d8d-4cfc-87c5-530d8d67ebbc",
+      "hashes": {
+        "SHA-256": "6f1a5f394c57724a0f1ea517ae0f87f4724898154686e7bf64c6738f0c0fb7b6"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--82fb3a53-7eb3-4171-8db0-0daeefd480e9",
+      "hashes": {
+        "SHA-256": "5b5daeaa4a7e89f4a0422083968d44fdfe80e9a32f25a90bf023bca5b88d1e30"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--a563f2e3-e265-49d4-957a-f4759b0861ef",
+      "hashes": {
+        "SHA-256": "c0ac4e89e48e854b5ddbaef6b524e94cc86a76be0a7a8538bd3f8ea090d17fc2"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--63002441-7da9-4466-8794-36be719f0a7d",
+      "hashes": {
+        "SHA-256": "499a9490102cc55e94f6a9c304eea86bbe968cff36b9ac4a8b7ff866b224739f"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--f81e7fe2-9a6e-4d8f-a89a-dcf5d5652666",
+      "hashes": {
+        "SHA-256": "bb326e55eb712b6856ee7741357292789d1800d3c5a6be4f80e0cb1320f4df74"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--d43bbb41-5853-4325-a305-1e7b7b502407",
+      "hashes": {
+        "SHA-256": "24ad77ed7fa9079c21357639b04a526ccc4767d2beddbd03074f3b2ef5db1b69"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--270fb359-a0a9-40d8-a116-1e5f28e0119e",
+      "hashes": {
+        "SHA-256": "80ee2bf90545c0d539a45aa4817d0342ff6e79833e788094793b95f2221a3834"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--eca367c5-13c7-4882-97aa-c0f9819ba37c",
+      "hashes": {
+        "SHA-256": "cb42ae74216d81e87ae0fd51faf939b43655fe0be6740ac72414aeb4cf1fecf2"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--cce2d7b9-057f-4113-a849-2ae82513c952",
+      "hashes": {
+        "SHA-256": "22aa3c64c700f44b46f4b70ef79879d449cc42da9d1fe7bad66b3259b8b30518"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "file",
+      "id": "file--b3a3469f-1370-42e5-9958-a2090789bd18",
+      "hashes": {
+        "SHA-256": "c62f8130ef0b47172bc5ec3634b9d5d18dbb93f5b7e82265052b30d7e573eef3"
+      },
+      "name": "shadow.x86_64"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--af880d7b-a2fc-493b-9910-694519fdac17",
+      "value": "81.88.18.108"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0e8f4abf-4d73-437f-a994-1317c6affdb7",
+      "value": "198.199.72.27"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bf5abcca-9cb1-439e-ac6b-03dce5e391bd",
+      "value": "silverpath.shadowstresser.info"
+    }
+  ]
+}

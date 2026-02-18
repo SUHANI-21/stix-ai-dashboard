@@ -1,0 +1,1272 @@
+{
+  "type": "bundle",
+  "id": "bundle--a6fa198d-5ca2-4871-b354-2d09da3b98e4",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "created": "2026-01-17T20:53:33.355015Z",
+      "modified": "2026-01-17T20:53:33.355015Z",
+      "name": "AhnLab SEcurity intelligence Center (ASEC)",
+      "description": "AhnLab SEcurity intelligence Center (ASEC) is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T20:53:33.355015Z",
+      "modified": "2026-01-17T20:53:33.355015Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T20:53:33.355015Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--180be54f-28b7-267c-e4a3-a90330342356",
+      "created": "2026-01-17T20:53:53.128125Z",
+      "modified": "2026-01-17T20:53:53.128125Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Web Shell Deployment for Remote Command Execution",
+      "description": "In this campaign, attackers likely gained initial access to Windows IIS web servers by deploying web shells. The evidence shows that malicious commands were executed via the 'w3wp.exe' process, which is the IIS worker process, indicating that the attackers leveraged a web shell to interact with the compromised server. Through this web shell, they were able to execute various system commands to enumerate users, sessions, network connections, running processes, and system information. The web shell provided persistent remote access and control, enabling the attackers to further their objectives on the compromised host.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1505/003/",
+          "external_id": "T1505.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b1397215-1f4e-29f7-4790-bac6266668b8",
+      "created": "2026-01-17T20:53:53.128208Z",
+      "modified": "2026-01-17T20:53:53.128208Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PowerShell Abuse for Payload Download and Execution",
+      "description": "After gaining access to the IIS server, the attackers used PowerShell to download additional malicious payloads from external sources. This technique allowed them to fetch and execute files such as TigerRAT, ProcDump, PetitPotato, and PrintSpoofer directly on the compromised system. By leveraging PowerShell, which is a trusted and commonly used administrative tool, the attackers were able to evade basic security controls and execute their malware without raising immediate suspicion. This step facilitated the deployment of multiple attack tools for further exploitation and post-compromise activities.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1059/001/",
+          "external_id": "T1059.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e30bb176-cdb3-ed72-fd32-347a939dcbcf",
+      "created": "2026-01-17T20:53:53.128262Z",
+      "modified": "2026-01-17T20:53:53.128262Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Privilege Escalation via Potato Exploit Tools",
+      "description": "The attackers utilized privilege escalation tools such as PetitPotato and PrintSpoofer on compromised Windows web servers. These tools exploit specific vulnerabilities in Windows privilege management to elevate the attacker's privileges from a lower-level user to SYSTEM or administrator. By running these exploits, the attackers gained higher-level access, which enabled them to bypass security restrictions, access sensitive resources, and deploy additional payloads with elevated permissions. This step was crucial for maintaining persistence and executing further malicious activities on the server.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1068/",
+          "external_id": "T1068"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5165ba5f-d72c-9ffd-5682-dbc0ec6ed080",
+      "created": "2026-01-17T20:53:53.128312Z",
+      "modified": "2026-01-17T20:53:53.128312Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Credential Dumping Using ProcDump",
+      "description": "In this campaign, attackers used ProcDump, a legitimate Windows Sysinternals tool, to dump process memory and extract credentials from the compromised server. ProcDump was likely used to target the LSASS process, which stores authentication credentials in memory. By obtaining these credentials, the attackers could move laterally within the network or access additional resources. This technique demonstrates the abuse of legitimate tools for malicious purposes, making detection more challenging for defenders.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1003/001/",
+          "external_id": "T1003.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "created": "2026-01-17T20:53:53.128361Z",
+      "modified": "2026-01-17T20:53:53.128361Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Backdoor Deployment with TigerRAT",
+      "description": "The attackers installed TigerRAT, a custom backdoor used by the Andariel group, on compromised IIS servers. TigerRAT enables remote command execution, keylogging, SOCKS tunneling, and screen capture functionalities. It communicates with a command-and-control (C&C) server using a custom authentication protocol, where specific request and response strings are exchanged before commands are accepted. This backdoor provides persistent remote access and allows attackers to maintain control over the compromised system, exfiltrate data, and perform additional malicious actions.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1105/",
+          "external_id": "T1105"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c7a58671-7a5f-0ee0-61aa-e10672461736",
+      "created": "2026-01-17T20:53:53.128439Z",
+      "modified": "2026-01-17T20:53:53.128439Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Custom C&C Authentication Protocol in TigerRAT",
+      "description": "TigerRAT employs a unique authentication protocol when establishing communication with its C&C server. Before accepting commands, the RAT sends a specific request string ('HTTP 1.1 /index.php?member=sbi2009 SSL3.3.7') and expects a particular response ('HTTP 1.1 200 OK SSL2.1'). This handshake ensures that only legitimate C&C servers can issue commands to the backdoor, making it harder for defenders to hijack or disrupt the communication channel. This custom protocol is a distinguishing feature of TigerRAT and is reused across multiple campaigns by the Andariel group.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--025016b0-19ea-9bc7-41f0-df32c5334b60",
+      "created": "2026-01-17T20:53:53.128485Z",
+      "modified": "2026-01-17T20:53:53.128485Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Event Log Deletion for Defense Evasion",
+      "description": "After deploying TigerRAT and conducting malicious activities, the attackers deleted Windows event logs on the compromised server. This action was intended to erase evidence of their intrusion, command execution, and privilege escalation activities. By removing these logs, the attackers hindered forensic investigations and made it more difficult for defenders to reconstruct the attack timeline or identify the methods used. This step is a common defense evasion tactic to cover tracks and prolong the attacker's presence on the system.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1070/001/",
+          "external_id": "T1070.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1aadd1c4-0f97-4195-587d-67d229fb8ce1",
+      "created": "2026-01-17T20:53:53.129245Z",
+      "modified": "2026-01-17T20:53:53.129245Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "System and Network Discovery via Native Commands",
+      "description": "The attackers executed a series of native Windows commands (such as 'query', 'whoami', 'qwinsta', 'netstat', 'tasklist', 'systeminfo', 'ipconfig', 'query user', and 'appcmd list apppool') to gather information about the compromised server. These commands provided details on user sessions, network connections, running processes, system configuration, and IIS application pools. This reconnaissance allowed the attackers to assess the environment, identify valuable targets, and plan subsequent actions such as privilege escalation or lateral movement.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1082/",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ddafb5d8-1dee-b633-f1ea-94cd15de380d",
+      "created": "2026-01-17T20:53:53.129528Z",
+      "modified": "2026-01-17T20:53:53.129528Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Remote Desktop Event Monitoring",
+      "description": "Using TigerRAT, the attackers specifically queried and monitored events related to the Windows Remote Desktop Service. This allowed them to track user logins, session changes, and other activities associated with remote access. By monitoring these events, the attackers could identify active sessions, potential administrative users, and opportunities for further exploitation or lateral movement. This targeted event monitoring is a specialized reconnaissance technique used to maximize the attacker's control over the compromised system.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "created": "2026-01-17T20:54:02.433738Z",
+      "modified": "2026-01-17T20:54:02.433738Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "TigerRAT",
+      "description": "TigerRAT is a backdoor used by the Andariel group to control infected systems. In this attack, it was deployed on IIS web servers to execute commands, perform keylogging, capture screens, and establish SOCKS tunnels for remote access.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan",
+        "keylogger"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "remote-access",
+        "keylogger",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "created": "2026-01-17T20:54:02.433823Z",
+      "modified": "2026-01-17T20:54:02.433823Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "XMRig",
+      "description": "XMRig is a cryptocurrency mining malware deployed on compromised Windows web servers. Attackers use it to mine Monero by exploiting server resources for financial gain.",
+      "malware_types": [
+        "coinminer"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "created": "2026-01-17T20:54:02.433874Z",
+      "modified": "2026-01-17T20:54:02.433874Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Potato",
+      "description": "Potato and PetitPotato are privilege escalation tools used maliciously to gain higher permissions on compromised servers. Attackers leverage these tools to facilitate lateral movement and execute further payloads.",
+      "malware_types": [
+        "privilege-escalation-tool"
+      ],
+      "is_family": true,
+      "aliases": [
+        "PetitPotato"
+      ],
+      "x_capabilities": [
+        "privilege-escalation",
+        "lateral-movement"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "created": "2026-01-17T20:54:02.433920Z",
+      "modified": "2026-01-17T20:54:02.433920Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Proxy",
+      "description": "Proxy malware is used to route attacker traffic through compromised servers, enabling covert communication and further attacks. It is commonly deployed after initial compromise for persistence and control.",
+      "malware_types": [
+        "proxy-tool"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "remote-access"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "created": "2026-01-17T20:54:02.433966Z",
+      "modified": "2026-01-17T20:54:02.433966Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PrintSpoofer",
+      "description": "PrintSpoofer is a privilege escalation exploit used to obtain SYSTEM-level access on Windows servers. Attackers use it to bypass security controls and execute malicious payloads with elevated privileges.",
+      "malware_types": [
+        "privilege-escalation-tool"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "privilege-escalation"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "created": "2026-01-17T20:54:02.434011Z",
+      "modified": "2026-01-17T20:54:02.434011Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "ProcDump",
+      "description": "ProcDump is a legitimate tool abused by attackers to dump process memory and extract credentials from compromised servers. It is used in the credential theft phase of the attack.",
+      "malware_types": [
+        "credential-theft-tool"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "credential-theft"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "created": "2026-01-17T20:54:05.728478Z",
+      "modified": "2026-01-17T20:54:05.728478Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Andariel",
+      "description": "Andariel is explicitly mentioned as the group responsible for the TigerRAT attack on Windows web servers in Q4 2025. The group used TigerRAT and other tools to gain control over IIS servers, execute commands, and exfiltrate information.",
+      "threat_actor_types": [
+        "nation-state"
+      ],
+      "aliases": [
+        "Andariel Group"
+      ],
+      "goals": [
+        "Compromise Windows web servers",
+        "Establish persistent remote access via TigerRAT",
+        "Collect system and credential information",
+        "Delete event logs to cover tracks"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "created": "2026-01-17T20:54:13.366944Z",
+      "modified": "2026-01-17T20:54:13.366944Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PowerShell",
+      "description": "PowerShell was abused by the attacker to download additional payloads such as TigerRAT, ProcDump, PetitPotato, and PrintSpoofer from external sources, enabling further compromise and post-exploitation actions.",
+      "tool_types": [
+        "exploitation",
+        "execution",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "created": "2026-01-17T20:54:13.367030Z",
+      "modified": "2026-01-17T20:54:13.367030Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "ProcDump",
+      "description": "ProcDump, a legitimate Microsoft Sysinternals utility, was used by the attacker to dump process memory and facilitate credential theft from the compromised Windows web server.",
+      "tool_types": [
+        "credential-exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "created": "2026-01-17T20:54:13.367082Z",
+      "modified": "2026-01-17T20:54:13.367082Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PrintSpoofer",
+      "description": "PrintSpoofer, a dual-use tool, was leveraged to escalate privileges on the compromised system by exploiting Windows Print Spooler vulnerabilities.",
+      "tool_types": [
+        "privilege-escalation",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "created": "2026-01-17T20:54:13.367129Z",
+      "modified": "2026-01-17T20:54:13.367129Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "PetitPotato",
+      "description": "PetitPotato, a dual-use privilege escalation tool, was used to gain elevated permissions on the infected Windows server by exploiting token impersonation vulnerabilities.",
+      "tool_types": [
+        "privilege-escalation",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "created": "2026-01-17T20:54:13.367176Z",
+      "modified": "2026-01-17T20:54:13.367176Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "IIS (Internet Information Services)",
+      "description": "The IIS web server's process (w3wp.exe) was abused to execute attacker-controlled commands and facilitate webshell installation for remote control and further exploitation.",
+      "tool_types": [
+        "execution",
+        "remote-access"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "created": "2026-01-17T20:54:13.367222Z",
+      "modified": "2026-01-17T20:54:13.367222Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd)",
+      "description": "Standard Windows command-line utilities were used by the attacker for system and network reconnaissance, user enumeration, and information gathering on the compromised server.",
+      "tool_types": [
+        "information-gathering",
+        "discovery"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c4ca2645-9971-1891-b0bf-9704d4775c99",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "description": "Andariel uses TigerRAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--15013c65-8fe4-6cb2-ba57-160e161b79a9",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "description": "Andariel uses XMRig malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78aa6d06-ab0c-e20e-1702-3aab673042b1",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "description": "Andariel uses Potato malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--308470e6-5a53-c8c8-67b9-2b98f137bcd9",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "description": "Andariel uses Proxy malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9c2acbd4-58c8-16e3-ab0c-41dfd377093a",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "Andariel uses PrintSpoofer malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b3344774-6f30-54d0-b00b-189ca33a7e5b",
+      "created": "2026-01-17T20:54:13.367651Z",
+      "modified": "2026-01-17T20:54:13.367651Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "Andariel uses ProcDump malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cb5b0d27-6564-f169-faff-2928a9fab041",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--180be54f-28b7-267c-e4a3-a90330342356",
+      "description": "Andariel employs 'Web Shell Deployment for Remote Command Execution' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--243bc64d-a823-b080-4f27-0189a9725201",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--b1397215-1f4e-29f7-4790-bac6266668b8",
+      "description": "Andariel employs 'PowerShell Abuse for Payload Download and Execution' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4e3d1b25-2fbe-94c1-040a-046468d96b5b",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--e30bb176-cdb3-ed72-fd32-347a939dcbcf",
+      "description": "Andariel employs 'Privilege Escalation via Potato Exploit Tools' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ae3ccbaf-6d5e-ce59-e063-dec9f375ade6",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--5165ba5f-d72c-9ffd-5682-dbc0ec6ed080",
+      "description": "Andariel employs 'Credential Dumping Using ProcDump' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8501ebe3-b8a4-8e5a-7ddb-450a3e56a79d",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "description": "Andariel employs 'Backdoor Deployment with TigerRAT' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3bf2cb47-5be9-3600-879e-c742cf9e9c50",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--c7a58671-7a5f-0ee0-61aa-e10672461736",
+      "description": "Andariel employs 'Custom C&C Authentication Protocol in TigerRAT' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--21e88e6f-c6df-e3b0-c143-ee52fa5b79e7",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--025016b0-19ea-9bc7-41f0-df32c5334b60",
+      "description": "Andariel employs 'Event Log Deletion for Defense Evasion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--93bc6b37-98e9-ffd6-74e9-12f0fa2556c3",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--1aadd1c4-0f97-4195-587d-67d229fb8ce1",
+      "description": "Andariel employs 'System and Network Discovery via Native Commands' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b47d1d8d-a6dc-457a-e035-bd78ad8df66a",
+      "created": "2026-01-17T20:54:13.367780Z",
+      "modified": "2026-01-17T20:54:13.367780Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "attack-pattern--ddafb5d8-1dee-b633-f1ea-94cd15de380d",
+      "description": "Andariel employs 'Remote Desktop Event Monitoring' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0054fc9d-4a55-e3ff-f670-2cc113009043",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Andariel uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--736f5368-d4f5-7141-6b47-3d0ae6e84f17",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "Andariel uses ProcDump tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--48e8353c-25ae-0a1e-6136-55f06b4e7c55",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "Andariel uses PrintSpoofer tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--136fe2ba-98c4-0053-00c9-6a9fe7605c4c",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "Andariel uses PetitPotato tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9787c319-7561-5c4c-8fac-306b0075f35f",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "Andariel uses IIS (Internet Information Services) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a3aa14bd-8775-ae84-bcab-8c4fe4ebb339",
+      "created": "2026-01-17T20:54:13.368069Z",
+      "modified": "2026-01-17T20:54:13.368069Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "Andariel uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2bf13ba9-28b6-7501-5549-3ed9b8cc3372",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "TigerRAT uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0685e1e4-8636-f589-dc3f-55d8c863c577",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "TigerRAT uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--63d1634d-d35d-5d4c-b9ac-126209a8c905",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "TigerRAT uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--031a1df1-494a-f926-4746-fea5abd455a7",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "TigerRAT uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1a7f6d97-66cd-e57c-d5ad-c7e9854dad87",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "TigerRAT uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b390fd69-8e78-29e3-7c5b-61dc6a1ad8a1",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "TigerRAT uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fac24553-fb48-2edc-97a7-ba351446e58e",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "XMRig uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5c87f137-25e1-148f-401b-4c1d5209456d",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "XMRig uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bf3c6bd8-81cd-c806-3553-33a9c99f2b47",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "XMRig uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6be68991-a37f-89e0-65af-a624a81dcef2",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "XMRig uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff432814-10af-716f-5d88-49f81d46ee3a",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "XMRig uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ff1fa41b-ecf8-1e49-c832-be91a63f7f3c",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "XMRig uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5d39bfaf-1b05-6235-3f69-630c1ffa856c",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Potato uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5d148631-5418-de6f-1b05-633511ce16c6",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "Potato uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--18b6801f-a7e1-7108-3c16-66669fe64390",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "Potato uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d10bf1bb-e8a4-9991-14c8-215fc293043d",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "Potato uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5d6ac1d9-12ca-f125-071f-6dbe8f5c7ecb",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "Potato uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--53c16077-5b5f-c185-2ad4-35433b3e2dd9",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "Potato uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3cc0571e-3efb-30f1-f19b-30d5f5a92894",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Proxy uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c587cab5-67d2-d560-7544-ae23759a7985",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "Proxy uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0b55dbd2-d12a-dd17-2232-57c480df2753",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "Proxy uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7f1d573e-0582-6c7f-1d0a-342b49da2ec3",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "Proxy uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adc919ca-ee04-f1eb-ff10-2e2349ac4d36",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "Proxy uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--09e63a50-fd88-e374-c7e8-9b1ec6bbfdfd",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "Proxy uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--52588c86-e6af-5b8e-b53b-45ee39922991",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "PrintSpoofer uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--872e2b94-5104-5dfa-39f8-18204776adb3",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "PrintSpoofer uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2f423d2f-bbc8-169c-a6ce-f0cba7d6a44d",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "PrintSpoofer uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1269e4b2-c61c-c3c9-4054-d33f90855e8f",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "PrintSpoofer uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a395a707-7514-353f-6693-d0100f4899b3",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "PrintSpoofer uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c48a9a45-ef00-0e8d-afb4-35b585658258",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "PrintSpoofer uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2c250bc4-a182-dcd8-1127-4a8e2f754cbe",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "ProcDump uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9dc9995d-a986-32dd-e52e-13bad0d2c5e7",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "description": "ProcDump uses ProcDump for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7768dce1-06de-f326-9cb0-808b8c4d13b0",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+      "description": "ProcDump uses PrintSpoofer for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a1ef1340-749c-ef86-0375-cce2f7a585f1",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+      "description": "ProcDump uses PetitPotato for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--67f47980-bf47-e456-ea5a-bf10120d2fee",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+      "description": "ProcDump uses IIS (Internet Information Services) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--54903428-29c0-9b42-ec68-db32da64459d",
+      "created": "2026-01-17T20:54:13.368149Z",
+      "modified": "2026-01-17T20:54:13.368149Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+      "target_ref": "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+      "description": "ProcDump uses Windows System Utilities (query, whoami, qwinsta, netstat, tasklist, systeminfo, ipconfig, appcmd) for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--de441b9b-adc4-280b-ce41-bbfb9d165307",
+      "created": "2026-01-17T20:54:13.368458Z",
+      "modified": "2026-01-17T20:54:13.368458Z",
+      "created_by_ref": "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+      "name": "2025년 4분기 윈도우 웹 서버 대상 악성코드 통계 보고서 - ASEC",
+      "description": "This report contains technical analysis and indicators from: https://asec.ahnlab.com/ko/91970/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T20:54:13.368458Z",
+      "object_refs": [
+        "identity--c2e554c8-827c-3026-b5a9-b2ed4c3794e0",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--180be54f-28b7-267c-e4a3-a90330342356",
+        "attack-pattern--b1397215-1f4e-29f7-4790-bac6266668b8",
+        "attack-pattern--e30bb176-cdb3-ed72-fd32-347a939dcbcf",
+        "attack-pattern--5165ba5f-d72c-9ffd-5682-dbc0ec6ed080",
+        "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+        "attack-pattern--c7a58671-7a5f-0ee0-61aa-e10672461736",
+        "attack-pattern--025016b0-19ea-9bc7-41f0-df32c5334b60",
+        "attack-pattern--1aadd1c4-0f97-4195-587d-67d229fb8ce1",
+        "attack-pattern--ddafb5d8-1dee-b633-f1ea-94cd15de380d",
+        "malware--5d37c236-9183-fbdd-fef1-ea51817f8494",
+        "malware--98f261bf-bad2-c4a2-20b1-86cab7610e68",
+        "malware--8ee20279-8391-5ec7-8acc-45027d874316",
+        "malware--431387eb-7262-e1cf-c79b-125eb8a67c60",
+        "malware--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+        "malware--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+        "threat-actor--b347d101-0c74-d7b5-20e3-abeda837818f",
+        "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+        "tool--ed1205fd-5a89-7934-d89d-a9e92016e2d0",
+        "tool--e707c52c-be6f-4c95-a24e-f9001dfadc55",
+        "tool--4e1e8796-3ba4-6341-edbc-83b5405d4527",
+        "tool--ff17a246-8ec7-559d-8641-e0db15358651",
+        "tool--6cef2221-a480-4f46-58b9-d116dbb8c19c",
+        "relationship--c4ca2645-9971-1891-b0bf-9704d4775c99",
+        "relationship--15013c65-8fe4-6cb2-ba57-160e161b79a9",
+        "relationship--78aa6d06-ab0c-e20e-1702-3aab673042b1",
+        "relationship--308470e6-5a53-c8c8-67b9-2b98f137bcd9",
+        "relationship--9c2acbd4-58c8-16e3-ab0c-41dfd377093a",
+        "relationship--b3344774-6f30-54d0-b00b-189ca33a7e5b",
+        "relationship--cb5b0d27-6564-f169-faff-2928a9fab041",
+        "relationship--243bc64d-a823-b080-4f27-0189a9725201",
+        "relationship--4e3d1b25-2fbe-94c1-040a-046468d96b5b",
+        "relationship--ae3ccbaf-6d5e-ce59-e063-dec9f375ade6",
+        "relationship--8501ebe3-b8a4-8e5a-7ddb-450a3e56a79d",
+        "relationship--3bf2cb47-5be9-3600-879e-c742cf9e9c50",
+        "relationship--21e88e6f-c6df-e3b0-c143-ee52fa5b79e7",
+        "relationship--93bc6b37-98e9-ffd6-74e9-12f0fa2556c3",
+        "relationship--b47d1d8d-a6dc-457a-e035-bd78ad8df66a",
+        "relationship--0054fc9d-4a55-e3ff-f670-2cc113009043",
+        "relationship--736f5368-d4f5-7141-6b47-3d0ae6e84f17",
+        "relationship--48e8353c-25ae-0a1e-6136-55f06b4e7c55",
+        "relationship--136fe2ba-98c4-0053-00c9-6a9fe7605c4c",
+        "relationship--9787c319-7561-5c4c-8fac-306b0075f35f",
+        "relationship--a3aa14bd-8775-ae84-bcab-8c4fe4ebb339",
+        "relationship--2bf13ba9-28b6-7501-5549-3ed9b8cc3372",
+        "relationship--0685e1e4-8636-f589-dc3f-55d8c863c577",
+        "relationship--63d1634d-d35d-5d4c-b9ac-126209a8c905",
+        "relationship--031a1df1-494a-f926-4746-fea5abd455a7",
+        "relationship--1a7f6d97-66cd-e57c-d5ad-c7e9854dad87",
+        "relationship--b390fd69-8e78-29e3-7c5b-61dc6a1ad8a1",
+        "relationship--fac24553-fb48-2edc-97a7-ba351446e58e",
+        "relationship--5c87f137-25e1-148f-401b-4c1d5209456d",
+        "relationship--bf3c6bd8-81cd-c806-3553-33a9c99f2b47",
+        "relationship--6be68991-a37f-89e0-65af-a624a81dcef2",
+        "relationship--ff432814-10af-716f-5d88-49f81d46ee3a",
+        "relationship--ff1fa41b-ecf8-1e49-c832-be91a63f7f3c",
+        "relationship--5d39bfaf-1b05-6235-3f69-630c1ffa856c",
+        "relationship--5d148631-5418-de6f-1b05-633511ce16c6",
+        "relationship--18b6801f-a7e1-7108-3c16-66669fe64390",
+        "relationship--d10bf1bb-e8a4-9991-14c8-215fc293043d",
+        "relationship--5d6ac1d9-12ca-f125-071f-6dbe8f5c7ecb",
+        "relationship--53c16077-5b5f-c185-2ad4-35433b3e2dd9",
+        "relationship--3cc0571e-3efb-30f1-f19b-30d5f5a92894",
+        "relationship--c587cab5-67d2-d560-7544-ae23759a7985",
+        "relationship--0b55dbd2-d12a-dd17-2232-57c480df2753",
+        "relationship--7f1d573e-0582-6c7f-1d0a-342b49da2ec3",
+        "relationship--adc919ca-ee04-f1eb-ff10-2e2349ac4d36",
+        "relationship--09e63a50-fd88-e374-c7e8-9b1ec6bbfdfd",
+        "relationship--52588c86-e6af-5b8e-b53b-45ee39922991",
+        "relationship--872e2b94-5104-5dfa-39f8-18204776adb3",
+        "relationship--2f423d2f-bbc8-169c-a6ce-f0cba7d6a44d",
+        "relationship--1269e4b2-c61c-c3c9-4054-d33f90855e8f",
+        "relationship--a395a707-7514-353f-6693-d0100f4899b3",
+        "relationship--c48a9a45-ef00-0e8d-afb4-35b585658258",
+        "relationship--2c250bc4-a182-dcd8-1127-4a8e2f754cbe",
+        "relationship--9dc9995d-a986-32dd-e52e-13bad0d2c5e7",
+        "relationship--7768dce1-06de-f326-9cb0-808b8c4d13b0",
+        "relationship--a1ef1340-749c-ef86-0375-cce2f7a585f1",
+        "relationship--67f47980-bf47-e456-ea5a-bf10120d2fee",
+        "relationship--54903428-29c0-9b42-ec68-db32da64459d"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

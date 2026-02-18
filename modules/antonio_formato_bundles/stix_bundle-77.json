@@ -1,0 +1,739 @@
+{
+  "type": "bundle",
+  "id": "bundle--86c394fe-08e6-4146-9137-1ebfe7ea507e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--427e15f6-9dd1-4d25-ae31-e0b70ef6ea6a",
+      "name": "FortiCloud SSO Authentication Bypass",
+      "description": "Critical authentication bypass vulnerabilities in Fortinet products (FortiOS, FortiProxy, FortiSwitchManager, FortiWeb) tracked as CVE-2025-59718 and CVE-2025-59719. Attackers exploit these flaws via malicious SAML messages to gain admin-level access to web management interfaces and download system configuration files.",
+      "created": "2025-12-09T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59718"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59719"
+        },
+        {
+          "source_name": "Fortinet Advisory",
+          "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-critical-forticloud-sso-login-auth-bypass-flaws/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d116028d-ee07-47ff-af62-e96e2943b905",
+      "name": "FortiWeb Zero-Day Vulnerabilities",
+      "description": "FortiWeb zero-day vulnerabilities tracked as CVE-2025-58034 and CVE-2025-64446 have been exploited in the wild, including silent patching and widespread attacks.",
+      "created": "2025-11-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-58034"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-64446"
+        },
+        {
+          "source_name": "Fortinet Advisory",
+          "url": "https://www.bleepingcomputer.com/news/security/fortinet-warns-of-new-fortiweb-zero-day-exploited-in-attacks/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--4c3a256e-f398-4a8b-9b1d-2d76fbefee46",
+      "name": "Volt Typhoon",
+      "description": "A Chinese cyber-espionage group known for exploiting Fortinet vulnerabilities, including FortiOS SSL VPN flaws, to compromise government and military networks.",
+      "aliases": [
+        "Volt Typhoon"
+      ],
+      "external_references": [
+        {
+          "source_name": "BleepingComputer",
+          "url": "https://www.bleepingcomputer.com/news/security/chinese-hackers-hid-in-us-infrastructure-network-for-5-years/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f4e5f697-b077-44e8-bbe5-722881d57c8e",
+      "name": "FortiOS SSL VPN Vulnerabilities",
+      "description": "FortiOS SSL VPN vulnerabilities tracked as CVE-2023-27997 and CVE-2022-42475, exploited by threat actors such as Volt Typhoon to backdoor networks.",
+      "created": "2023-02-01T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2023-27997"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2022-42475"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--668e68a9-bec5-4441-a8d9-20790af2c4ec",
+      "name": "CVE-2025-59718",
+      "description": "Critical authentication bypass vulnerability in FortiOS, FortiProxy, and FortiSwitchManager affecting FortiCloud SSO login feature."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2414ad5c-869b-41c8-b433-fcc556697452",
+      "name": "CVE-2025-59719",
+      "description": "Critical authentication bypass vulnerability in FortiWeb affecting FortiCloud SSO login feature."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--9d41d3f0-3c3e-40ae-a472-f010014ae54f",
+      "name": "CVE-2023-27997",
+      "description": "FortiOS SSL VPN flaw exploited by Volt Typhoon hacking group."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a9534bba-f6cc-4683-bd72-e8b3f7e5cc83",
+      "name": "CVE-2022-42475",
+      "description": "FortiOS SSL VPN flaw exploited by Volt Typhoon hacking group."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--47b049fa-f90a-4347-8216-1ec0bd4bc5a0",
+      "name": "CVE-2025-58034",
+      "description": "FortiWeb zero-day vulnerability exploited in the wild."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "name": "CVE-2025-64446",
+      "description": "FortiWeb zero-day vulnerability silently patched and abused in widespread attacks."
+    },
+    {
+      "type": "device",
+      "id": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46",
+      "device_type": "network device",
+      "manufacturer": "Fortinet",
+      "model": "FortiCloud SSO",
+      "description": "Fortinet devices with FortiCloud SSO enabled, exposed online and vulnerable to authentication bypass."
+    },
+    {
+      "type": "account",
+      "id": "account--b4bd8389-c340-43bf-a2ba-3dbc0ad9d0ab",
+      "account_type": "admin",
+      "description": "Admin accounts on Fortinet devices targeted via malicious single sign-on (SSO) logins."
+    },
+    {
+      "type": "file",
+      "id": "file--22775ee4-0754-4213-a992-c613c5dd3c36",
+      "name": "system configuration file",
+      "description": "System configuration files downloaded from Fortinet devices, exposing vulnerable interfaces, hashed passwords, internet-facing services, network layouts, and firewall policies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5170d75c-8d9e-4b0a-9b86-7ae3901fb5c0",
+      "relationship_type": "has",
+      "source_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46",
+      "target_ref": "account--b4bd8389-c340-43bf-a2ba-3dbc0ad9d0ab"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01c3ef8c-48e8-4c43-9a75-a257b83536a5",
+      "relationship_type": "has",
+      "source_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46",
+      "target_ref": "file--22775ee4-0754-4213-a992-c613c5dd3c36"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13389173-c197-44d3-98a1-f6fe77d6fbd2",
+      "relationship_type": "has",
+      "source_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46",
+      "target_ref": "network-traffic--93a8772e-83ab-482f-9a8f-3ae9adf3cda5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d7d880c-1821-4e4f-8df4-cdcfc63870fe",
+      "relationship_type": "has",
+      "source_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46",
+      "target_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b397348-34ea-48cb-9ac4-d2358fbee677",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7871525-19bd-4726-902d-3ab064529e1c",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9af73f7-a04e-45f3-91c1-57fd84138b73",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5c2d95d-1e66-45fe-abff-b4b5a4be0585",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c669a98-743d-41d6-8cc6-22129eb49048",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e51b559-71e9-4176-b8e5-1a5824f0a2e3",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b61d0ee0-519d-49c3-bca8-6a3c3331298d",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0982ad6f-4e77-4a95-bfde-b64dd3ec1491",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f9dc4d6-739e-4315-9a36-7c342bd88271",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--466a4fd2-2fe4-4e45-8dae-3246e9482ca9",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9aa681d-c26a-4524-9c22-50fa0c0f2d6a",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70ee50bf-c39b-4059-828e-118dad08d579",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b5b5054-68ed-48d1-94db-dcd6c4f9c97f",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1f483b8-8bec-43ee-b33a-31f63fe47b06",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45ec0f18-d19b-4130-b155-4abb1979bc17",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f313ad26-f7af-455a-8200-73111db2fb3b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd23b695-1620-497c-b760-03d78f1de9a3",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6588ba4-35eb-4fcb-ab8b-bed6d41d59ac",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05e717b3-7330-4a25-836b-f20685058c18",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d2d2291-a7f5-44a9-9473-ec9460a70573",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b8d19a2-9cc9-4f9b-813e-f20234bf191e",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--74aaf900-a5bb-4cee-9669-a37ebedd7c98",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d0624d2-8008-4b7b-8b7c-dfaf1a5e02ce",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60f118bd-f2c1-44de-a328-b2576869deb6",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ded0a43-350a-4301-bd36-8b7aa40b8d6a",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51e17904-3a28-43cd-9957-a0555cf48a2e",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e12d4df-82ac-49a9-8202-d501dd28c8ec",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34cd7523-d0dd-4d65-90d5-6851786060ca",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3648b62-771e-4230-9ee1-0b0758ffb18a",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13fa6025-5ed8-4262-9c76-77e4ca1930ee",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d730f2d-ee1f-42af-83c7-ddf1ef25aed2",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c19a2ebd-a7a2-425d-b335-94de3249b6ab",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc7694a8-6939-48b7-9e0e-374ade60af58",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f6eca99-f9cd-47f4-b2cc-b366657f303e",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49fa6f57-698c-4350-bb59-fc83c3237607",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0056a90b-587e-4f0d-bae8-82e80bb742a2",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c79fca0-07a1-4c4f-80d9-b119a83d4def",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab7f909a-802a-4b1b-80b1-3148e57658a8",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54f1cfb0-4cb0-4313-b800-3853daae60c8",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ba8712a-e7a0-4860-99b3-f17ae263ef68",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73be0b3b-c76a-4807-b6a5-6e899fb80cb9",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c419ed1c-5236-4eaf-837d-3cb1278ee34b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc5376ab-0353-4e58-88f8-4035c09463d2",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6567de61-efe9-4f11-9276-aed54c0139e6",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c539c8b7-0821-41d8-b96a-8102b18c2f9f",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e808fedb-64c3-4ecd-acb1-75b9bc09e9a9",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64697f5b-152e-4400-8cee-ad7ebfa76223",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04fcf39f-8a0a-48ae-8bbf-2211b858e5b7",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf0f0400-8c7f-414a-9346-2980ccbefdc0",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05b26686-7fad-4e22-b83c-78b12f4e60b5",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e127c00-90cb-4083-b271-2ee94c63f886",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--73fdc9a4-04f2-466e-a740-7c1923768d3a",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ce90011-c8ba-4510-ba8c-db0983cb8903",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d9bbea7-2f7e-4799-87e8-8f9ae0c9b4ef",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af85480f-ade0-4cae-98da-0feb56d19399",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1c84d93-7df2-4fa7-843f-d440a571c48d",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6cafbca0-edda-4f6a-83d2-f478f43d7969",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--072107fc-2421-4ba0-bc0d-ba17c0b1fb3e",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49197fad-7f2c-4607-9359-2bf5bfc9080d",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08402167-d800-48d3-8026-1fc692c65032",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b998b5da-1e66-455a-b87a-73281422cc7d",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff59cab8-6faf-480f-a4a6-398a14a1267e",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05a4b90b-f47f-4750-a153-f1084ae6273f",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c357668-be98-4507-a2c9-086f8bb4d973",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--578d850e-6280-4135-bce2-6b19a32cd197",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44af6c2e-634d-4180-a27a-bb9160428d9b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a9c568e-e82c-493e-aa9b-2c60a71892ee",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0344ed2c-9cb2-46e1-9a3c-996525c7198c",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--727df807-4c8b-49ed-9ada-6afeb7ee9d6b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92d09f08-fd0d-4c1c-a63a-2a2d686b6a53",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c331d29f-94d5-4643-be36-41ab0b3aed85",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--103a70e1-5dda-478e-b145-28df45e4d686",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d28ce95c-4b48-4c76-815e-2838469cf626",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4bce8631-1fe4-4bf8-b68f-b7f7424739bf",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6e95c3a-6239-4a1e-b72f-3bf927e0bd8a",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1cc9e4de-0211-46f0-9d6b-09975d59d678",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f232b44-5116-4e2f-a677-9f74c0c1a062",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ac5a2e6d-f131-4157-9336-cf0341866429",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a99d8890-0fe8-4b73-9e84-24bbbd0dccd8",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "device--cdbf1c85-83ea-4769-aa82-c742d2e0ba46"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--490aab22-feff-4e50-9cca-f424b7c80946",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--4c3a256e-f398-4a8b-9b1d-2d76fbefee46",
+      "target_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--240e96b9-22ad-49eb-8c31-1a3ca54ad7ca",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--4c3a256e-f398-4a8b-9b1d-2d76fbefee46",
+      "target_ref": "malware--1b3cab6f-2981-4321-91ef-a4c674c02c7a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efe96bff-6341-478e-b589-e3b46750d368",
+      "relationship_type": "delivers",
+      "source_ref": "vulnerability--695fdcb5-878c-42db-bce2-296e90ac90eb",
+      "target_ref": "malware--1b3cab6f-2981-4321-91ef-a4c674c02c7a"
+    }
+  ]
+}

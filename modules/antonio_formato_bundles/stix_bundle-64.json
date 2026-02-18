@@ -1,0 +1,131 @@
+{
+  "type": "bundle",
+  "id": "bundle--48d97d14-3d43-40d3-8249-0307957745b2",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--9ff48348-960a-414b-92bb-40ad5ba37c43",
+      "name": "MongoDB log file",
+      "extensions": {
+        "file-extension": {
+          "extension_types": [
+            "log",
+            "json"
+          ]
+        }
+      },
+      "path": "/var/log/mongodb/*.log*, /var/log/mongod.log*, /var/log/mongo*.json*"
+    },
+    {
+      "type": "software",
+      "id": "software--c2ceb680-2c88-4aab-8815-36064a07f87c",
+      "name": "MongoDB",
+      "cpe": "cpe:2.3:a:mongodb:mongodb:*:*:*:*:*:*:*:*",
+      "versions": [
+        "8.2.0-8.2.2",
+        "8.0.0-8.0.16",
+        "7.0.0-7.0.27",
+        "6.0.0-6.0.26",
+        "5.0.0-5.0.31",
+        "4.4.0-4.4.29",
+        "4.2.x",
+        "4.0.x",
+        "3.6.x"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--bad70440-6464-4547-a2a7-500d7c74e991",
+      "value": "Source IP observed in MongoDB logs"
+    },
+    {
+      "type": "process",
+      "id": "process--07163aa5-ad87-419d-b1ba-d2892ea0298f",
+      "name": "mongod",
+      "command_line": "mongod [options]",
+      "extensions": {
+        "docker": {
+          "container_name_pattern": "mongo*, *mongodb*, prod-mongo-*"
+        }
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5cebed2e-92d2-48fa-a308-da71965e299b",
+      "relationship_type": "exploits",
+      "source_ref": "malware--41bb42b8-91cf-48a6-8fac-8464da613ea4",
+      "target_ref": "vulnerability--e36303a4-1519-43ef-8b90-1c062cc5a0a7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--026a8d77-2df7-4aaa-b36b-ab5876606222",
+      "relationship_type": "targets",
+      "source_ref": "malware--41bb42b8-91cf-48a6-8fac-8464da613ea4",
+      "target_ref": "software--c2ceb680-2c88-4aab-8815-36064a07f87c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aabe63df-223a-4d11-9d38-df3e7822e798",
+      "relationship_type": "uses",
+      "source_ref": "malware--41bb42b8-91cf-48a6-8fac-8464da613ea4",
+      "target_ref": "attack-pattern--b93710dc-f56e-4bbe-9254-08f9c0e90d99"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0052a63a-469f-436b-8cc8-61fe5f32145b",
+      "relationship_type": "uses",
+      "source_ref": "malware--41bb42b8-91cf-48a6-8fac-8464da613ea4",
+      "target_ref": "network-traffic--db29dafd-aefb-4129-beb7-5ea4b7429f20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddd4e45f-704f-460e-a391-a1339ee7f201",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--b93710dc-f56e-4bbe-9254-08f9c0e90d99",
+      "target_ref": "network-traffic--db29dafd-aefb-4129-beb7-5ea4b7429f20"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--078ed8c5-c343-45ed-82e5-a2fa732e2cd5",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--b93710dc-f56e-4bbe-9254-08f9c0e90d99",
+      "target_ref": "software--c2ceb680-2c88-4aab-8815-36064a07f87c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8997a2da-ca44-4fcd-8681-8abf57f660bc",
+      "relationship_type": "has",
+      "source_ref": "software--c2ceb680-2c88-4aab-8815-36064a07f87c",
+      "target_ref": "process--07163aa5-ad87-419d-b1ba-d2892ea0298f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--551942d8-10dd-4703-86c2-a35db09a71ea",
+      "relationship_type": "has",
+      "source_ref": "software--c2ceb680-2c88-4aab-8815-36064a07f87c",
+      "target_ref": "file--9ff48348-960a-414b-92bb-40ad5ba37c43"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c29d8722-1653-49b4-a92a-cdef852c19f3",
+      "relationship_type": "analyzes",
+      "source_ref": "tool--a20436cc-138e-4ed0-9705-757fd3d96bfa",
+      "target_ref": "file--9ff48348-960a-414b-92bb-40ad5ba37c43"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b88cea9-a4aa-4f05-8750-a3e12708b838",
+      "relationship_type": "detects",
+      "source_ref": "tool--a20436cc-138e-4ed0-9705-757fd3d96bfa",
+      "target_ref": "malware--41bb42b8-91cf-48a6-8fac-8464da613ea4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02a66e84-2005-464a-a839-2b11293154d4",
+      "relationship_type": "detects",
+      "source_ref": "tool--a20436cc-138e-4ed0-9705-757fd3d96bfa",
+      "target_ref": "attack-pattern--b93710dc-f56e-4bbe-9254-08f9c0e90d99"
+    }
+  ]
+}

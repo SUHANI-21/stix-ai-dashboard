@@ -1,0 +1,500 @@
+{
+  "type": "bundle",
+  "id": "bundle--46d05e9f-4f31-44d6-9301-a5cd5e1fdf5c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--34dc6596-3050-40e5-b20c-d6188ff59886",
+      "hashes": {
+        "MD5": "11bf1232bfef7377916cf665a9524398"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b5d9f947-8e78-45ff-b92d-29bbc7c93f1a",
+      "hashes": {
+        "MD5": "4cf6b6611ef61e114bdf697339972315"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7e0d4cde-d1fc-4d9c-b423-91fc9e4a71b3",
+      "hashes": {
+        "MD5": "ebfa0f0a9c1fe1feeea166a6ff933d0b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3a8a86f1-744f-4fbd-b0c8-3a5e3eea2d82",
+      "hashes": {
+        "MD5": "5f421f404c7eb7d78a797031b0bd0e14"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e7a84881-f4e8-4dd0-a3da-ef93b7eb80d4",
+      "hashes": {
+        "MD5": "deb35616612fe2ba7b496cb290983ee0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--88f0b608-fa21-46cb-84f0-61cc7a67e3b7",
+      "hashes": {
+        "MD5": "feb7613b75e90c22c57a484acae15e1a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2875dfb7-de4e-4043-9b3e-7b1c7fce8fd0",
+      "hashes": {
+        "MD5": "908959dd4ad7d7a5e677b0d4daa5c6a0"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7332ca73-cdab-41f9-a305-12d051525bb7",
+      "value": "fh67k.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8bc6f3fd-4f97-482b-a893-3e5c73897b19",
+      "value": "eybyyffs.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--acd298ec-4db6-45c8-98d7-12ba00bb0af4",
+      "value": "gey87.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c9de9fbd-6659-4c51-90dd-91e86ef4a9d1",
+      "value": "fk6u1.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7b0959da-b314-458e-84f3-e5cebee6d23d",
+      "value": "hty73.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c476fb6d-f876-4129-9961-1a5f572925f4",
+      "value": "rh6yd.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--39759ba4-7e76-460c-9378-acc3c02d41bf",
+      "value": "djt86.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1d696442-2bac-4bb1-8a0b-876bc89c34da",
+      "value": "n3yj6.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--72209041-49a3-485d-8a93-c51c74b300cf",
+      "value": "3d5d6.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--576eff77-b634-470c-b3a3-172672384744",
+      "value": "k5jy8.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8ca698df-f3f8-4f36-b460-8baf561fcfe6",
+      "value": "h7np2.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bcfb8104-2f11-4221-b253-222618197820",
+      "value": "g8ht6.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d4dd545b-a0f1-49c1-a143-8e9a1d98b80d",
+      "value": "e78y.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--44fa65bf-cb98-45fa-8c90-ecb24796c89b",
+      "value": "api.g6ht.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ea312044-0a17-4a9c-af90-1435364b825f",
+      "value": "cjtab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d3d3544d-4072-45fc-9596-2f3cfbe5ec4f",
+      "value": "d.giw36.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f8b88689-355b-4ae2-9f92-4f7e7dfbfd92",
+      "value": "sg-xj-1306567145.cos.ap-guangzhou.myqcloud.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "value": "mltab-1306567145.cos.ap-guangzhou.myqcloud.com"
+    },
+    {
+      "type": "file",
+      "id": "file--11c873c7-3b29-48c1-90c0-2abf9d303d43",
+      "name": "OfficeAid.Main.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--25480bf0-5ee7-479c-b3ee-13dd629e7e4f",
+      "name": "OfficeTeamAddin.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--ebddebf7-6847-4775-8590-048645c55102",
+      "name": "OfficeTeam.Installer.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--e3252e4d-fdaa-46d3-b019-e9478d159fb9",
+      "name": "logkit.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--8e93ca9d-1322-4571-bb44-a4a3965973d2",
+      "name": "background.js"
+    },
+    {
+      "type": "file",
+      "id": "file--10793f9f-752b-40ea-b397-fc936bf19e80",
+      "name": "newtab.html"
+    },
+    {
+      "type": "file",
+      "id": "file--befc7dfb-b5ad-45b3-b474-2dacdbf69e6c",
+      "name": "myload.js"
+    },
+    {
+      "type": "file",
+      "id": "file--2ec6edce-39f3-471f-8df6-281789fd0109",
+      "name": "new_tab_page.js"
+    },
+    {
+      "type": "file",
+      "id": "file--10941f9b-3586-4cb6-b9a3-6ae3285fa561",
+      "name": "MLNewtab.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "name": "Secure Preferences"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f125202c-0d0c-4662-adaa-7398e5e39c1a",
+      "relationship_type": "delivers",
+      "source_ref": "tool--cb67521e-898c-4158-add4-31f1e4f21daf",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "OfficeAid was compromised in its supply chain and used to deliver the Mltab malicious browser extension plugin."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be984fb2-00cc-40f3-842e-1ed3fcba7a84",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "Mltab uses OfficeTeamAddin.dll as a malicious plugin dropped by the compromised OfficeAid.Main.exe process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ba5b63c-dc97-4ad0-9c6e-87f167e4b4a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "Mltab uses OfficeTeam.Installer.dll to load additional payloads and facilitate infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85a9d13e-ddf2-4363-83a9-2892b6f6a182",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "OfficeTeam.Installer.dll loads logkit.dll as a payload for further malicious activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4328366e-b5db-4241-8e73-d36e311302ac",
+      "relationship_type": "delivers",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "logkit.dll delivers the final Mltab malicious browser extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c703f06-a763-4bdf-9ef9-d0ff55adba08",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "Mltab installs MLNewtab (MadaoL Newtab) browser extension as part of its infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33462847-4391-4e5d-9949-e1985c2998a8",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "attack-pattern--2fd6f2be-47ce-473a-9510-d1c2626a73a6",
+      "description": "Mltab is distributed via a supply chain compromise of OfficeAid."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6bab7967-563d-44a0-8310-1850436fcbfb",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "attack-pattern--2fd6f2be-47ce-473a-9510-d1c2626a73a6",
+      "description": "Mltab hijacks browser extensions to control new tab pages and user activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2752e776-fc7a-457c-b991-0fc709f7983a",
+      "relationship_type": "uses",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "attack-pattern--2fd6f2be-47ce-473a-9510-d1c2626a73a6",
+      "description": "Mltab collects and exfiltrates user data to attacker-controlled C2 servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be6bfede-b069-40f8-a103-88f8a73ffc24",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ba0dfcef-485a-492b-855b-e7545b755acc",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "Malicious MD5 hashes indicate files associated with the Mltab supply chain attack."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fdddd77a-4e6b-4a13-b66c-2f57a27b60cc",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--ba0dfcef-485a-492b-855b-e7545b755acc",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "Malicious C2 domains indicate command and control infrastructure used by Mltab and related payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3dfabd1d-8fce-4e14-9872-ab69bec33fb6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with fh67k.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ada925f-d67d-425e-b510-575e0e33ddb9",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with eybyyffs.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9f2c2ab-148a-4f8d-bf46-169b1810567e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with gey87.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e9f7fd0-a4c6-4d65-bda8-2e454cabc7b4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with fk6u1.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02f57388-2f99-4f2b-951b-9f23214dc00f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with hty73.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6eb9de26-2095-406d-9857-18848284b53f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with rh6yd.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--574a5c52-9bd8-4f22-904b-78659b90b7b2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with djt86.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63939f84-6ca2-4d09-9d39-76949d979dba",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with n3yj6.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--526b0861-4a57-4d96-b00f-6804a203c1f4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with 3d5d6.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c141cce1-03d9-4229-8ed5-068dd23a94db",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with k5jy8.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--920a7b93-2825-48a7-9964-7a0ff53035e3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with h7np2.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7219c8eb-1943-419c-824a-8d4021fb3738",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with g8ht6.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ffaded1-b530-40f1-af6b-fa370a39985c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with e78y.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34c98da3-b311-46ab-ac8d-3de809f3cbd7",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with api.g6ht.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0da119fb-338d-4976-9a5c-16deb024b033",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with cjtab.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--66e4f744-be1f-49ac-aacb-b455b82746d1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with d.giw36.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7decd180-7d07-4492-8317-a18e40b9f4a3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with sg-xj-1306567145.cos.ap-guangzhou.myqcloud.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--323a9d64-f4e4-4839-9ca7-6c6dd0392b3f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "domain-name--c5dab2e5-808c-4842-a149-e2a3fc317581",
+      "description": "Mltab and its components communicate with mltab-1306567145.cos.ap-guangzhou.myqcloud.com for C2 and payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ec74b62-b72c-4449-b123-31a87a5983be",
+      "relationship_type": "drops",
+      "source_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "OfficeAid.Main.exe drops OfficeTeamAddin.dll as a malicious plugin."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2986fc12-bf8a-48c1-abff-9f4a53a8af0f",
+      "relationship_type": "drops",
+      "source_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "OfficeAid.Main.exe drops OfficeTeam.Installer.dll as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c180624a-2adb-4de9-9678-a27f29fdbf37",
+      "relationship_type": "drops",
+      "source_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "target_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "description": "OfficeTeam.Installer.dll loads logkit.dll as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bb22332-2e13-400f-95b0-2676ba2bd8ae",
+      "relationship_type": "drops",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab installs background.js as part of the browser extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21d462e9-83f7-4c12-8ca0-80fe66c215c1",
+      "relationship_type": "drops",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab installs newtab.html as part of the browser extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e8b10f4-d8b7-49ad-82f4-decce494b16b",
+      "relationship_type": "drops",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab installs myload.js as part of the browser extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--270018b2-3280-4189-bbf7-82ed3b23880e",
+      "relationship_type": "drops",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab installs new_tab_page.js as part of the browser extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--15c55f48-2011-47de-a934-2e65ebb87590",
+      "relationship_type": "drops",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab downloads MLNewtab.dat as a configuration file for redirect rules."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58e9dd2d-d0aa-4b9f-86ae-f67c7e55ce5f",
+      "relationship_type": "modifies",
+      "source_ref": "malware--0de51703-fdad-4502-98fe-e5bcdb89ca43",
+      "target_ref": "file--d6b2404e-0244-4eb9-a0a6-a56d54b2d2df",
+      "description": "Mltab modifies Secure Preferences file in the browser to hijack user settings and links."
+    }
+  ]
+}

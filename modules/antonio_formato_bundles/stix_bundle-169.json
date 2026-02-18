@@ -1,0 +1,50 @@
+{
+  "type": "bundle",
+  "id": "bundle--f3b63e18-2051-4150-a75e-cce319aeec21",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--f73aae6e-201b-49eb-b0fb-16e693958aec",
+      "name": "Didier Stevens",
+      "description": "Senior handler and security researcher, author of tools for malware analysis and decoding.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology",
+        "security"
+      ],
+      "contact_information": "blog.DidierStevens.com"
+    },
+    {
+      "type": "software",
+      "id": "software--582e4eed-1203-48d9-bf5b-28a8236f2bf8",
+      "name": "Formbook",
+      "description": "Malware mentioned as delivered through multiple scripts."
+    },
+    {
+      "type": "software",
+      "id": "software--03ad641d-1586-41aa-9791-715d8b8bffbc",
+      "name": "POWERSHELL",
+      "description": "String decoded from obfuscated numeric array."
+    },
+    {
+      "type": "script",
+      "id": "script--2aeb2257-c9aa-4238-abe0-dcb530b9dada",
+      "name": "numbers-to-hex.py",
+      "description": "Tool that extracts numbers from text files and converts them to hexadecimal.",
+      "src": "https://github.com/DidierStevens/DidierStevensSuite/blob/master/numbers-to-hex.py"
+    },
+    {
+      "type": "script",
+      "id": "script--b337c37f-2ee9-45e2-820d-2ba5af2a4dd3",
+      "name": "hex-to-bin.py",
+      "description": "Tool that converts hexadecimal numbers to binary.",
+      "src": "https://github.com/DidierStevens/DidierStevensSuite/blob/master/hex-to-bin.py"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--206be0c7-4476-4d9f-bfa2-8c5bb958ecf5",
+      "value": "Didier Stevens <blog.DidierStevens.com>"
+    }
+  ]
+}

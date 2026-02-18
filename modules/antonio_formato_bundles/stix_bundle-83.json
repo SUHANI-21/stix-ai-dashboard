@@ -1,0 +1,17 @@
+{
+  "type": "bundle",
+  "id": "bundle--fa9a917c-c1d7-41c1-812f-9fbceda80441",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "url",
+      "id": "url--ff18c8cd-ca84-4aa2-b2d0-dcb5cae2942a",
+      "value": "https://cyble.com/blog/stealth-in-layers-unmasking-loader-in-targeted-email-campaigns/"
+    },
+    {
+      "type": "url",
+      "id": "url--29293c27-682a-4555-8487-4b2d95960701",
+      "value": "https://cyble.com/wp-content/uploads/2025/12/Why-Agentic-AI-Cybersecurity-Is-the-Next-Big-Leap-in-Digital-Defense-1.jpg"
+    }
+  ]
+}

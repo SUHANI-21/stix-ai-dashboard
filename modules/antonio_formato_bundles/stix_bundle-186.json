@@ -1,0 +1,286 @@
+{
+  "type": "bundle",
+  "id": "bundle--ea1c8689-a386-4c40-a535-9f4586d8aba5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--edd661ed-e804-4935-93b7-9a186f3ae641",
+      "hashes": {
+        "SHA-256": "13f0bf908679bea560806fd3c14ef581b3cadbab2ff07a6adf04d97995924707"
+      },
+      "name": "shielders.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--ac65c1b7-71bd-4cec-9267-d233953e35e3",
+      "hashes": {
+        "SHA-256": "b0c9d619256fdf220fbb39945fac5a040b5e836f1eae0459b4fcbf2b451420a7"
+      },
+      "name": "DpiChrysler.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--08a857ca-31d3-41c3-9130-7650c54e7dad",
+      "hashes": {
+        "SHA-256": "bc2508708feb0ccc652494f8e28620bd871a8b6e1d26c7cdd61ab070f2594bbc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--252f16b3-34dc-4e79-884d-7030152b3517",
+      "hashes": {
+        "SHA-256": "ccdd8a6dc97eeba07e586f059eae7944dd767519f2c3b2233ff90d3dc4e8e3f0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--14bffa4f-89c2-4640-ab12-575d2f096725",
+      "hashes": {
+        "SHA-256": "ff14b28408121ebe4a5d0c2f14b9dc99e987e89b56392dc214481197d4815456"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c4b160f8-4411-43bf-be47-a6704099e21a",
+      "hashes": {
+        "SHA-256": "c9026ffc02f11204ac1eb1183376a5cee74f7897d948bdcd59c06f31de2671fa"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--5fddaea2-66f3-43f3-b6e7-a6140e09c8da",
+      "value": "hxxps://84[.]200[.]80[.]8/gateway/53c06hop.fp0g1"
+    },
+    {
+      "type": "url",
+      "id": "url--f1dabeb5-4268-4748-8e2b-bd05570437dd",
+      "value": "hxxps://google[.]strike-submit[.]com/DMCA_Notice.hta"
+    },
+    {
+      "type": "url",
+      "id": "url--b39354ef-547a-4cda-9264-0e5b4bf3aecd",
+      "value": "hxxps://google[.]strike-submit[.]com/DMCA_Notice[.]hta"
+    },
+    {
+      "type": "url",
+      "id": "url--4ef69088-87dd-427d-bda4-95ad73550741",
+      "value": "hxxps://google[.]strike-submit[.]com/agreeses[.]bin"
+    },
+    {
+      "type": "url",
+      "id": "url--301e7557-179c-46b5-bafc-95e9eb27cd44",
+      "value": "hxxps://85[.]192[.]61[.]140/gateway/h2u7sp2d[.]ab87a"
+    },
+    {
+      "type": "url",
+      "id": "url--ffdb96e5-e78e-4928-923a-e71c72d13f0d",
+      "value": "hxxps://policy[.]video"
+    },
+    {
+      "type": "url",
+      "id": "url--ed51f874-dcc0-4473-9b9f-ab862638ea3d",
+      "value": "hxxps://support-review[.]org/"
+    },
+    {
+      "type": "url",
+      "id": "url--bfc769f7-8cb3-41f0-b9d7-d48d62de8516",
+      "value": "hxxps://appeal[.]strike-submit[.]com"
+    },
+    {
+      "type": "url",
+      "id": "url--0074b888-4310-466a-9a73-5112e1e5ee03",
+      "value": "hxxp://141[.]0x62[.]80[.]175/kick[.]dat"
+    },
+    {
+      "type": "url",
+      "id": "url--4e68b46a-efac-4ff4-aa54-cb636abc199e",
+      "value": "http://xoiiasdpsdoasdpojas[.]com/"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--07273de9-ccb8-46a2-ab07-5c9164b3caed",
+      "value": "security.flacergurad.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7af2d818-d635-4342-9b71-e8e9596f9a96",
+      "value": "security.flaegrudad.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d31ab341-25f6-4cf5-9f50-751ec706000e",
+      "value": "security.flaezguerad.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c126fe36-2981-4d53-ba14-3eb9d10aca92",
+      "value": "security.flaezguered.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--48cedeb6-8874-4cb2-9b03-3341a985c7cf",
+      "value": "security.flavregurads.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fa89bb50-672d-450e-90b4-d5536d719340",
+      "value": "security.flheregurend.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2d1e8b47-c4f3-4e66-9243-0e5071ae71f9",
+      "value": "security.flqaergwaard.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a05a3d44-45fb-41fc-b91c-b4d7a65d584d",
+      "value": "security.flsaregursd.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f8835ade-ef6e-4403-b129-a8940917f9e7",
+      "value": "security.gueradflwre.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b1643a5c-c17f-482d-9ae3-b0f65fb5e0a9",
+      "value": "theguardshield.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3a75a30c-4864-46aa-a2f5-47fb5e89fc42",
+      "value": "flheregurend.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--244d1637-99af-42cf-b5b1-21bdc58640a5",
+      "value": "flsaregursd.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7280df9e-6e31-4612-8055-1f9d3912918a",
+      "value": "flaezguerad.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--98d10537-844c-492c-b59b-1acfb3df4b1e",
+      "value": "flaezguered.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e73942ce-67fa-468d-9dc1-752419d41b40",
+      "value": "flcreagurade.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--67a57239-17fd-4af3-8462-de6baf047898",
+      "value": "flnaresgurard.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8167cd8a-6bec-4f11-8e2e-5da794e31702",
+      "value": "flaxergaurds.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b4c32f49-f394-4a55-9249-cb429b5cea1a",
+      "value": "cloudwardena.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fb269e57-c39d-4feb-b969-6cf33818106d",
+      "value": "flenieregurd.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e6bc9c7d-7746-4c47-8ebf-ce1c4656f475",
+      "value": "Budparbanjarnegara.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--78684049-6dad-42a2-b25b-d005c39f769b",
+      "value": "support-review.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b54d3bc3-e7db-4117-9477-8b54159fdf7e",
+      "value": "trust-review.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c65d0f24-a1a0-4558-b7d8-1687feb97751",
+      "value": "compliance-review.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b8939838-9aa6-475d-859b-92f28bbcb8a0",
+      "value": "channel-review.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--57c64e1d-3911-4cb1-bbf5-d740e63068b5",
+      "value": "application-review.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d8124b27-5fb2-49fc-8672-212cc98b48ea",
+      "value": "strike-submit.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2b12d7bd-4f07-4f3c-9e00-2a026896a48e",
+      "value": "submit-appeal.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d37ce30c-a301-42f5-bf0d-e7c1c15f16c4",
+      "value": "policy.video"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ec400cd0-da36-41cf-b378-b052582b9c1d",
+      "value": "tdsworkout.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--712b54b0-7a78-4f16-852f-8152de8aed54",
+      "value": "cashorix.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e830731a-34f2-49b1-84c1-7e2b75271ebe",
+      "value": "xpoalswwkjddsljsy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ef5bdbf2-aa34-4d38-b86d-816bb306cd10",
+      "value": "galaxyswapper.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--65f30273-3bf3-4a58-ac39-3f74d0ddf16d",
+      "value": "xoiiasdpsdoasdpojas.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a357e6e3-2274-4996-a2b6-d35ac551d070",
+      "value": "103.136.68.61"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ec0e8ced-751a-4b3e-94dc-c2fcb411e535",
+      "value": "193.24.211.233"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fe4da418-1689-43b0-a30d-998e563ed7f6",
+      "value": "141.98.80.175"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0664b4d1-8025-42e4-ae75-4b98f3658ab0",
+      "value": "193.221.200.93"
+    }
+  ]
+}

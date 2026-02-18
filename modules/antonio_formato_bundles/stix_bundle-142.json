@@ -1,0 +1,488 @@
+{
+  "type": "bundle",
+  "id": "bundle--db952a82-febc-400d-bb66-fd39e62727c2",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--51a44b95-7ed4-49fd-9d2b-63be75486bc7",
+      "name": "Drive-By Compromise",
+      "description": "Compromises legitimate websites and injects malicious JavaScript to lure victims into downloading fake software updates.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1189"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f7049511-7cae-4f74-92b6-6f0c065202bf",
+      "name": "Command and Scripting Interpreter: JavaScript",
+      "description": "Malicious JavaScript executes on the victim machine, downloads the loader, and initiates follow-on payloads.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1059.007"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--edc117bf-93d8-4e34-8b78-02e7796446be",
+      "name": "Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder",
+      "description": "SocGholish loaders create registry entries or startup scripts to maintain persistence after reboot.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1547.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e083f3de-ca4c-4ef3-819d-255ec8ff8171",
+      "name": "Scheduled Task / Job",
+      "description": "VIPERTUNNEL scheduled task is created for persistence.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1053.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f23317cc-7ead-4ec9-9a2f-c673c4b8e3f8",
+      "name": "Hijack Execution Flow: DLL",
+      "description": "msedge.dll is run upon msedge.exe execution.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1574.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c0dec32d-afec-4131-a1c7-80af8a24a6be",
+      "name": "Modify Registry",
+      "description": "CLSID abused to force execution of msedge.dll upon execution of desired application.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1112"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "name": "Application Layer Protocol: Web Protocols (HTTP/S)",
+      "description": "The malware communicates with its C2 servers over HTTP/S for tasking, payload download, and reporting.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--407c5fd7-a90c-4cd8-a3f4-96065f9870a8",
+      "name": "Arctic Wolf Labs",
+      "identity_class": "organization",
+      "description": "Arctic Wolf Labs is a group of elite security researchers, data scientists, and security development engineers who deliver cutting-edge threat research on new and emerging adversaries."
+    },
+    {
+      "type": "file",
+      "id": "file--f18afedf-f764-4ffb-b121-7e5502b916e5",
+      "name": "Chome_Latest_Version.js",
+      "hashes": {
+        "MD5": "9912bb2d82218ba504c28e96816315b3",
+        "SHA-256": "f7605fc8a1ee5f21aec55da04dbaa95a05db95b5e7851b172a5d30c7fb1da885"
+      },
+      "size": 21274
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3f15c90e-b8d2-411e-884f-b5160fa9d6ef",
+      "value": "orlandoscreenenclosure.net"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0f0a65b5-1eda-4c68-b4e8-c76b73b7a3e8",
+      "value": "135.125.255.39"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c8dd293b-cfe2-45a7-8218-3020cc09d9f9",
+      "value": "basilic.info"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9b87e9b8-1deb-4efa-88b4-68ad1acfd317",
+      "value": "88.119.174.128"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--521df7a2-d23e-4580-9bde-d313283a60c2",
+      "value": "ozivoice.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8af31fa1-52e9-4545-bf67-9a46bf90641d",
+      "value": "193.233.205.14"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a17a67d8-d189-48de-8852-fd7455f2b1da",
+      "value": "solarrayes.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7a6fa2f4-f688-4976-b6e6-bce668fb1c29",
+      "value": "162.248.227.182"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d8d57b53-d76d-4aac-b55d-705743620620",
+      "value": "imprimerie-agp.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f0e6e578-b81d-4164-b897-caa981053641",
+      "value": "104.238.61.141"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9afad763-9744-4fa8-9669-80764abef442",
+      "value": "srlaptop.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--371e5158-d405-4aa2-a266-0af97ceaf741",
+      "value": "194.36.209.127"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--26bec78e-9178-4585-bef2-c4573e688089",
+      "value": "carnesmemdesa.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7185af47-99a8-4666-96e7-af4b8d6d363e",
+      "value": "38.114.101.139"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0d0cd0a3-cffe-4eac-89b2-8f9731b10f12",
+      "value": "realty.yourpgcountyliving.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--21e7a3a4-d128-417b-abd8-1ab1a9bb85f4",
+      "value": "virtual.urban-orthodontics.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9330c12d-46ca-4fa7-94d5-7c6ceda7b5bc",
+      "value": "africa.thesmalladventureguide.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "value": "email.smashingboss.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1bf7898d-9de3-428e-86d6-7db737a6b5c1",
+      "value": "157.254.167.144"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "value": "2.59.161.132"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--151d096f-72a9-46a0-b719-06176efd769e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f7e515d5-eabb-48ec-a6f1-2ecbdc198e3a",
+      "target_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "description": "TA569 operates and deploys SocGholish."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72dd464d-cece-413a-af7e-31c6a85ba976",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f7e515d5-eabb-48ec-a6f1-2ecbdc198e3a",
+      "target_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "description": "RomCom threat group uses RomCom Loader for targeted attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9aae97d-f5a6-44c6-8c4b-112b659b4545",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f7e515d5-eabb-48ec-a6f1-2ecbdc198e3a",
+      "target_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "description": "GRU Unit 29155 utilizes SocGholish to target victims."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--746b7554-ec0e-44c7-8d30-04cc66c23995",
+      "relationship_type": "delivers",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "description": "SocGholish delivers RomCom Loader as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6545caca-9afc-4702-b550-c8470aaccac9",
+      "relationship_type": "delivers",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "description": "SocGholish delivers VIPERTUNNEL as a secondary payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59db4ef2-3d4f-48f9-8081-f018b74a6d83",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "tool--58aab740-ec24-4856-9bf9-69076cfda18c",
+      "description": "RomCom Loader uses Mythic C2 for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ca6e8f3-6370-4671-8af6-76e7a2607d72",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "SocGholish uses Drive-By Compromise (T1189) by injecting malicious JavaScript into legitimate websites."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5ff63be-9e38-4423-85fd-2300d65e5b9f",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "SocGholish uses Command and Scripting Interpreter: JavaScript (T1059.007) for execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--35cb4606-f86c-4447-9c17-3d7ffb004873",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "SocGholish loaders use Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder (T1547.001) for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3742c122-f0b3-4aae-9e16-9252e4645da9",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "SocGholish uses Scheduled Task / Job (T1053.005) to schedule VIPERTUNNEL for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c74279cf-f5a1-49f1-bdd1-f087fe8febee",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "RomCom Loader uses Hijack Execution Flow: DLL (T1574.001) to execute msedge.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20f8fb7e-014c-42a1-9aaa-adeb182dca6a",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "RomCom Loader uses Modify Registry (T1112) to abuse CLSID for execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22f17efd-1431-47f8-8d2e-fd80003a4cf2",
+      "relationship_type": "uses",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "attack-pattern--76ede093-4499-4658-9968-1f81b70f573c",
+      "description": "SocGholish and RomCom Loader use Application Layer Protocol: Web Protocols (HTTP/S) (T1071.001) for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fcc6ba9-feaf-4a5c-b962-f1850d9923b1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with orlandoscreenenclosure.net as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98bcf62c-9cdc-4329-95c6-7a080b82f540",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 135.125.255.39 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54456209-098f-42c4-8472-b89d2ffeab53",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with basilic.info as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--136e990d-a3dc-4fab-aef0-103621fcf9e6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 88.119.174.128 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52328739-00fb-468f-99c2-bb6398898d5d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with ozivoice.com as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1239f5ca-1ab0-4bab-88f7-f7e12a565f8b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 193.233.205.14 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13f07a4a-025b-4422-9322-b2f34c4751a2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with solarrayes.com as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae54406e-ef6b-4c16-800e-2f1f2d92aab9",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 162.248.227.182 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--995b9ac8-d231-4995-92de-267f324d36a0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with imprimerie-agp.com as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4a00136-618e-4ff3-a591-23eb2a8c95ed",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 104.238.61.141 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--808e0387-9033-4cce-8a46-ae7b422d2e09",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with srlaptop.com as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d23df40-2a28-4f84-8cab-841716f9f599",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 194.36.209.127 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--102097b6-ce61-4bc9-813d-e9ea867500c0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "RomCom Loader communicates with carnesmemdesa.com as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3173f7a6-9372-4c39-8585-fea9fe7fb424",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "RomCom Loader communicates with IP 38.114.101.139 as Mythic C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e209a4a8-dc83-4eb5-a297-0613f3b9eeca",
+      "relationship_type": "downloads",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "file--f197bf26-c5d6-45ac-b202-8cd1d2125b73",
+      "description": "SocGholish downloads Chome_Latest_Version.js as a malicious JavaScript payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--310efb88-c62c-475e-944b-5935c2d29146",
+      "relationship_type": "drops",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "file--f197bf26-c5d6-45ac-b202-8cd1d2125b73",
+      "description": "SocGholish drops msedge.dll as RomCom Loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5879369-dfde-4f14-aadf-bbdca3c11df3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "SocGholish communicates with realty.yourpgcountyliving.com as a payload server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46f4766e-045d-4e42-bf0b-416de97b7d34",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "SocGholish communicates with virtual.urban-orthodontics.com as a payload server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80926cee-7e47-4f6c-818c-f58538bfe93a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "SocGholish communicates with africa.thesmalladventureguide.com as a payload server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f10c7b8-e980-450f-82e9-caf17a792717",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "domain-name--4a0a6b12-7185-4198-b6ae-96bdd93de092",
+      "description": "SocGholish communicates with email.smashingboss.com as a payload server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6afb9b02-07c4-4d38-a0ef-02c1f27cc54b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "SocGholish communicates with 157.254.167.144 as C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f65a0f03-836b-45b7-a6cb-538f890743d0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4152c424-b211-450d-912a-c295a70ac49e",
+      "target_ref": "ipv4-addr--d1baf2e8-ea4d-4c42-a955-9e916fbc4be1",
+      "description": "SocGholish communicates with 2.59.161.132 as C2."
+    }
+  ]
+}

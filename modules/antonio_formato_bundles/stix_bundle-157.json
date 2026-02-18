@@ -1,0 +1,535 @@
+{
+  "type": "bundle",
+  "id": "bundle--737b3375-cf52-4d83-81f8-a9c5aa907a08",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c437df7b-5b74-4caa-aa62-a0cf104ff59b",
+      "name": "ClickFix Social Engineering",
+      "description": "ClickFix is a social engineering technique that tricks users into pasting and running a malicious command (typically via Win+R and Ctrl+V) in the Windows Run prompt. It is used to initiate multi-stage malware execution chains.",
+      "aliases": [
+        "ClickFix Lure"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c3b20c9b-3347-45b2-a142-cfc300561873",
+      "name": "Steganographic Loader",
+      "description": "A custom loader that uses steganography to conceal malware payloads within the pixel data of PNG images. The loader extracts and decrypts shellcode from specific colour channels, complicating detection and analysis.",
+      "aliases": [
+        "Stego Loader"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6290fb7b-f46f-4148-8b3e-32150b370671",
+      "name": "Process Injection via Reflective .NET Assembly",
+      "description": "Malicious .NET assemblies are dynamically decrypted and reflectively loaded to inject shellcode into target processes (such as explorer.exe) using Win32 API calls.",
+      "x_mitre_platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b8e15d82-bb7c-40e3-a5c7-2606de523b65",
+      "name": "Donut Shellcode Packing",
+      "description": "Malware payloads are packed using Donut shellcode, which allows .NET assemblies to be executed in-memory and evades traditional detection mechanisms.",
+      "external_references": [
+        {
+          "source_name": "github",
+          "url": "https://github.com/TheWover/donut"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "name": "User Execution via Windows Run Box",
+      "description": "Threat actors instruct victims to manually execute malicious commands by pasting them into the Windows Run prompt, leveraging social engineering to bypass technical controls.",
+      "x_mitre_platforms": [
+        "Windows"
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--41257909-e902-4769-9c39-c5b401c70c95",
+      "value": "https://f6b04000.consent-verify.pages.dev/"
+    },
+    {
+      "type": "url",
+      "id": "url--4344ad74-c4da-45db-8563-f846b7227548",
+      "value": "http://81.90.29.64/ebc/rps.gz"
+    },
+    {
+      "type": "file",
+      "id": "file--d50eea0f-0d28-40ba-8c70-bf2d5c135c2c",
+      "name": "rps.gz"
+    },
+    {
+      "type": "url",
+      "id": "url--61164ea3-2e42-4382-9cc2-52e8567eda5d",
+      "value": "http://corezea.com/ebc"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--318998bc-fec7-4a3d-b838-dbc0916fc179",
+      "value": "corezea.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--95a1ed0e-b406-405a-933a-c7bda2e000f9",
+      "value": "81.90.29.64"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--872353ee-48b8-4cb8-bf52-2c33fe2cdaa0",
+      "value": "hypudyk.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85d008fc-3678-4229-bdd2-78706c93f69b",
+      "value": "squatje.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8db161d0-f796-4831-ae0c-07c2bef98333",
+      "value": "bendavo.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--12b56210-74e0-4523-99f6-73033a0e4c6d",
+      "value": "conxmsw.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--acd5c375-5bb6-4b88-9e90-787aa4b8ad31",
+      "value": "narroxp.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--80fde93c-219f-4abb-bc2c-764a033702a1",
+      "value": "squeaue.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b136a894-6ddd-4fd3-b6ae-99d63f98202a",
+      "value": "ozonelf.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--06b4644b-8e37-439d-9c2f-ce5959437fe6",
+      "value": "exposqw.su"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--aa1340a7-a730-42ba-8e35-ea37098a1bb6",
+      "value": "vicareu.su"
+    },
+    {
+      "type": "url",
+      "id": "url--b7c40b55-57cd-4129-8135-8de622dac3db",
+      "value": "http://141.98.80.175/tick.odd"
+    },
+    {
+      "type": "file",
+      "id": "file--b3fc21c2-3d4f-471c-9550-1f8399c917a4",
+      "name": "tick.odd"
+    },
+    {
+      "type": "url",
+      "id": "url--f77677e9-984e-40d0-889d-c9c1fba1a553",
+      "value": "http://141.98.80.175/gpsc.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--ce9a11d8-33a8-4478-bbcf-19704ebc54af",
+      "name": "gpsc.dat"
+    },
+    {
+      "type": "url",
+      "id": "url--7669fd65-cbe8-49ad-84ce-6b59d8eef9a2",
+      "value": "http://141.98.80.175/ercx.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--53937a97-e0ee-4664-a203-7ad2fb21591b",
+      "name": "ercx.dat"
+    },
+    {
+      "type": "url",
+      "id": "url--11a37f62-e24e-4391-8ea8-afedd66d9daf",
+      "value": "http://141.98.80.175/rtdx.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--b508e5fa-a9e6-4241-b034-c1b0e7f7d062",
+      "name": "rtdx.dat"
+    },
+    {
+      "type": "url",
+      "id": "url--d6224c9b-f20b-4a3b-af21-70db31621bf7",
+      "value": "http://141.98.80.175/very.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--cf4a0f01-dfbf-491b-ac7e-028121432a81",
+      "name": "very.dat"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b9c5f33a-ab5c-4dd3-8732-6d399f3627d7",
+      "value": "securitysettings.live"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--32d9810c-9502-4c32-80c1-ef7dd3614ef7",
+      "value": "xoiiasdpsdoasdpojas.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8cae8327-3c20-4a6d-959d-bb83e0832531",
+      "value": "xmcniiadpwqw.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--00215688-f3ea-4b30-88a2-40085ba93d5b",
+      "value": "xcvcxoipoeww.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c5cfe67a-9cf3-40ee-aef5-50b8f4d1e4af",
+      "value": "xpoalswwkjddsljsy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--91efa87a-7190-4913-8e8c-380ed4e72bfd",
+      "value": "galaxyswapper.pro"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5944494d-3a93-4117-9c27-069c58c3bc93",
+      "value": "141.98.80.175"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9bb9fcc8-8093-4923-8c9b-d3349ff7c91d",
+      "value": "cmevents.live"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--23f28609-2272-4817-8455-5b7b6172ecc6",
+      "value": "cmevents.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2a1db7f-6847-401d-bc5a-430e2b2d8cd1",
+      "value": "cosmicpharma-bd.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e19ac641-fcc3-4200-bdf6-37e7f9e76ad1",
+      "value": "groupewadesecurity.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5d0c05e8-8fff-4cf1-8fce-8b12fdcfc498",
+      "value": "sportsstories.gr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--61a86937-b808-428a-b504-2c71742621bc",
+      "value": "virhtechgmbh.com"
+    },
+    {
+      "type": "url",
+      "id": "url--86e82757-770a-4326-bc05-feb931cc6fa8",
+      "value": "http://94.74.164.136/fifx.odd"
+    },
+    {
+      "type": "file",
+      "id": "file--b473547d-37ee-45c3-a2c7-a80dcdb3f1cc",
+      "name": "fifx.odd"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2d981616-1932-4341-b67f-78443227525d",
+      "value": "94.74.164.136"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ee28655c-168d-42d0-9009-164332f49f5f",
+      "value": "1e442295.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ad4896ed-bceb-4419-9581-ed9946f03447",
+      "value": "5df43170.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8eb3ccc0-bd0f-4712-8137-2ab4a1e96a12",
+      "value": "3b4ce6c9.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9aa8290c-7804-4851-a203-e965b1346fb0",
+      "value": "6b04000.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--24b58555-00ac-42da-ae2f-5a6d64cc7aa1",
+      "value": "f6b04000.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3e3aecd8-b406-4fe4-9dd2-079a1e1cc5a7",
+      "value": "3e6eb645.consent-verify.pages.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c217768f-ccbf-475b-85ce-f1c01857c99e",
+      "value": "d9e71335.consent-verify.pages.dev"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efa9b056-e826-4dca-92e6-aeb2e10e3052",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Windows Update Lure campaign uses the ClickFix social engineering technique to trick users into running malicious commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fe24e39-a853-44e5-9e85-40f038d6da68",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Windows Update Lure campaign uses Steganographic Loader techniques to conceal payloads within PNG images."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd46679b-d2c0-4865-89af-504f156ccdd9",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Windows Update Lure campaign uses process injection via reflective .NET assemblies to execute malware payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8525a504-786e-4822-a130-db2ceb3b5dab",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Windows Update Lure campaign uses Donut shellcode packing to deliver final payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fb974ad-0882-4863-b042-e3ad1a74ba6e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Windows Update Lure campaign relies on user execution via the Windows Run box as an initial infection vector."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f24b24d-7c27-4e77-a828-78c9dfcadf8a",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "The ClickFix Windows Update Lure campaign delivers Rhadamanthys infostealer via a multi-stage execution chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f39ece7-0ea0-4adc-a91d-349cb536cbb8",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "The ClickFix Windows Update Lure campaign uses a Steganographic Loader to extract and inject shellcode."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1944401a-3d18-4be0-a2cb-0a3418a5c5ca",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Windows Update ClickFix Domains indicator identifies infrastructure used in the ClickFix Windows Update Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7896aa29-27b9-4993-baac-fce7931383c9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Stage 1 URLs indicator identifies initial payload delivery infrastructure for the ClickFix Windows Update Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cf29d2e4-2350-49f2-bdfd-af0ca099414e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Stage 2 URLs indicator identifies PowerShell loader infrastructure for the ClickFix Windows Update Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2532b29-f495-4f1a-9dae-97a3b9ef8dd2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Additional Windows Update Lure Domains indicator identifies further infrastructure for the ClickFix Windows Update Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5cc74ad-c827-46bd-88a3-89d229ea2e78",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "The ClickFix Robot Verification Lure campaign delivers LummaC2 infostealer via a multi-stage execution chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d92cc6a-912e-4ed8-9a3b-d4518ab6e1a5",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Robot Verification Lure campaign uses the ClickFix social engineering technique to trick users into running malicious commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4eaf7204-44b3-4d9b-9539-0cb2e510c0ec",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Robot Verification Lure campaign uses Steganographic Loader techniques to conceal payloads within PNG images."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f8d384d-4b1d-402b-8a7e-e2086bf81f80",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Robot Verification Lure campaign uses process injection via reflective .NET assemblies to execute malware payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d285351-de15-4821-84b5-dabe552e631d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Robot Verification Lure campaign uses Donut shellcode packing to deliver final payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec0a56bc-8ecb-4125-8d9f-b8ba13f539e5",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "The ClickFix Robot Verification Lure campaign relies on user execution via the Windows Run box as an initial infection vector."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--403638a6-a3fc-4ea0-8bd8-9678dd607976",
+      "relationship_type": "uses",
+      "source_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "The ClickFix Robot Verification Lure campaign uses a Steganographic Loader to extract and inject shellcode."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4d000e3-c2dc-49bb-a02c-0e41360ac1ef",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "ClickFix Lure Websites indicator identifies infrastructure used in the ClickFix Robot Verification Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--520508ab-2730-4ffb-b3c0-f4c93058f1a5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Stage 1 URLs indicator identifies initial payload delivery infrastructure for the ClickFix Robot Verification Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f618c4de-d8dc-4a33-a912-82d55f26ff8d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "campaign--b768d2db-dc2f-42f4-9299-c342c3c4cbee",
+      "description": "Stage 2 URLs indicator identifies PowerShell loader infrastructure for the ClickFix Robot Verification Lure campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4eca7e69-84c9-4576-9406-9cc875d73fdd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--23a810e4-adac-4829-b466-84fda31ead0f",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "C2 Domains indicator identifies command and control infrastructure for LummaC2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8682261-4218-4dc7-b461-eda50b8249b7",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "LummaC2 is delivered via Donut shellcode packing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48f76dad-c6b7-4681-84e3-442c02cdeb28",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "LummaC2 is delivered via Steganographic Loader techniques."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2942407d-54c4-428a-952f-8083b57c1dda",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "Rhadamanthys is delivered via Steganographic Loader techniques."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d019e7c-4719-4a6c-b4af-16de4b959013",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "Rhadamanthys is delivered via Donut shellcode packing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ad1688d-adc1-4990-a0f8-74a80301c9b1",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "Steganographic Loader uses process injection via reflective .NET assemblies to execute shellcode."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0c65580-c0f7-4418-a562-b7084c572db3",
+      "relationship_type": "delivers",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "Steganographic Loader delivers LummaC2 as a final payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7797b21-f4ec-4df5-85b6-e1e5e6bb548e",
+      "relationship_type": "delivers",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "description": "Steganographic Loader delivers Rhadamanthys as a final payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1cdb5b41-66db-406c-a5be-fadb8e77d4f0",
+      "relationship_type": "uses",
+      "source_ref": "malware--f7fcccb2-2e4a-4bef-b0af-290154bb9673",
+      "target_ref": "attack-pattern--067857a7-7678-4363-9a24-d02c05852c41",
+      "description": "Steganographic Loader uses Steganographic Loader attack pattern to extract shellcode from PNG images."
+    }
+  ]
+}

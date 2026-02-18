@@ -1,0 +1,233 @@
+{
+  "type": "bundle",
+  "id": "bundle--5f0476f5-c9a8-4b2f-9929-1176f0465b06",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--bf007409-1581-4fd0-b9dc-74cf26f09bb8",
+      "name": "Qianxin Threat Intelligence Center",
+      "description": "Threat intelligence provider and incident observer.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "file",
+      "id": "file--abc8ebc1-f86d-4c5f-bc76-03ef7ddfe899",
+      "hashes": {
+        "MD5": "a27731876e769ff19e225700085967bf"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5bb01da3-98cf-4d7c-a07d-f9c9444a433d",
+      "hashes": {
+        "MD5": "6a4554509ce27efe5c6b8e58431f60d8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c605edcb-3dd2-49cb-9f33-59c4bdeb956c",
+      "name": "sandbox.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--8d7afc5b-3e6f-4a0a-8853-d88317d7e9c7",
+      "name": "system.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--d1e6eba1-9040-4dbc-a085-69e77f8249f0",
+      "name": "array.bin"
+    },
+    {
+      "type": "file",
+      "id": "file--3c82d80b-282e-4c8a-b5bc-8226ab186de5",
+      "name": "background.js"
+    },
+    {
+      "type": "software",
+      "id": "software--a2fbb094-e8c5-4c34-8886-875ff065b65d",
+      "name": "EmEditor"
+    },
+    {
+      "type": "software",
+      "id": "software--d50c291e-89ab-49d7-be72-b1aab2101fd0",
+      "name": "Zoho Mail"
+    },
+    {
+      "type": "software",
+      "id": "software--78532ab4-4745-4958-9663-19937646c143",
+      "name": "Evernote"
+    },
+    {
+      "type": "software",
+      "id": "software--7bff2ab2-36ce-43bb-a5d7-0e4a10863bd2",
+      "name": "Notion"
+    },
+    {
+      "type": "software",
+      "id": "software--a6661d2c-1739-458d-9fd8-c38fccd8fe27",
+      "name": "Discord"
+    },
+    {
+      "type": "software",
+      "id": "software--a016d8c0-3a40-411f-9630-a47b84dca014",
+      "name": "Slack"
+    },
+    {
+      "type": "software",
+      "id": "software--dec0c899-4ebb-477d-b4b9-5d73f544f617",
+      "name": "Mattermost"
+    },
+    {
+      "type": "software",
+      "id": "software--25a9403d-dfd2-42b5-bcb0-5a48aeca8779",
+      "name": "Skype"
+    },
+    {
+      "type": "software",
+      "id": "software--bb649dbb-f522-4dc5-ab90-b1c8cecb6537",
+      "name": "LiveChat"
+    },
+    {
+      "type": "software",
+      "id": "software--28cd3b85-a669-48be-a6e2-00831fb1db6e",
+      "name": "MSTeams"
+    },
+    {
+      "type": "software",
+      "id": "software--bd10a6bb-d0a2-4a4a-b991-382582af7b37",
+      "name": "Zoom"
+    },
+    {
+      "type": "software",
+      "id": "software--297eb3ef-659f-4f97-92cf-227fa37ea0b4",
+      "name": "WinSCP"
+    },
+    {
+      "type": "software",
+      "id": "software--a4c1868f-5f57-4529-8821-a43f239cb90b",
+      "name": "PuTTY"
+    },
+    {
+      "type": "software",
+      "id": "software--a6e12893-bfe0-42a7-8e93-a25cd5d58ea1",
+      "name": "Steam"
+    },
+    {
+      "type": "software",
+      "id": "software--f4d2e206-e987-422f-a0e8-ea419737957b",
+      "name": "Telegram"
+    },
+    {
+      "type": "browser",
+      "id": "browser--0ef8fc77-4ced-45ca-a670-47a5a47f53a3",
+      "name": "Browser",
+      "extensions": [
+        {
+          "name": "Google Drive Caching"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--06fd0317-60fe-4f95-b4c4-59788bc793a2",
+      "value": "emedjp.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--37be2117-3924-478d-834f-30028a729e95",
+      "value": "emeditorde.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--23d527c7-5a77-47b2-ad3c-0d30dc99f5b3",
+      "value": "emedorg.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7c27e231-71a3-4db7-8da8-3dbdb00116b9",
+      "value": "emeditorjapan.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--72786497-bd3c-4868-b21c-34ddd6d8b4cc",
+      "value": "emeditorjp.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--be4e42e1-4c8c-4e3a-a1e5-579d65d114a2",
+      "value": "cachingdrive.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ad2ba2ff-9ed0-4444-b0a1-7f5c8b29e7af",
+      "value": "brt461jnbjvm52mw.biz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e8ed7673-aa82-4107-88ac-4e5d3d5ef571",
+      "value": "1a298k7iqspq52l4r9e.space"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6425fa2e-684a-45af-b54f-47d20bdf466b",
+      "value": "z2ctmmm61dm0c3wfic.store"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9bee2a22-39df-4df2-ba05-493272027dec",
+      "value": "afdwtyy38efzk.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a86d3980-69b3-40bf-b599-1f93d22c1aaf",
+      "value": "08qodmaloshm5zrwhww.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6cd85d13-c49e-4657-9991-4495b949673a",
+      "value": "gs9uuz4h0510qhob.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a0c878d9-b586-4211-9404-17a0f3f170df",
+      "value": "973jgnzjgnwupd1nu.space"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--650d8abf-6616-46ae-80ca-96e5198e7285",
+      "value": "daj54smzpklt5kjq.space"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fbcb8c02-dc82-4e90-b6d1-f73bd93109ea",
+      "value": "8mfi71rtud8fov5.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5bd19d9a-5e6d-4fd5-be8c-e60daf561cab",
+      "value": "0xax86xdizce7kg9cpdk.online"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--468771a7-30b9-455a-9b04-ee9932a2be03",
+      "value": "147.45.50.54"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--bddbd1df-3275-4998-a94e-e6963f207809",
+      "value": "5.101.82.118"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--95466d3d-3120-46d4-8728-142b79dc981f",
+      "value": "46.28.70.245"
+    },
+    {
+      "type": "url",
+      "id": "url--c13bddd2-69b5-4886-80bc-3255c0c62edb",
+      "value": "https://emeditorgb.com/take/mg8heP0r/"
+    }
+  ]
+}

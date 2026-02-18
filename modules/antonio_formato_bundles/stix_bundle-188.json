@@ -1,0 +1,330 @@
+{
+  "type": "bundle",
+  "id": "bundle--e251fa2c-500a-4f7f-855a-4f4f12bac945",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "name": "MuddyWater",
+      "aliases": [
+        "Static Kitten",
+        "MERCURY"
+      ],
+      "description": "MuddyWater is a suspected Iran-backed APT group active since at least early 2017. It primarily targets the Middle East, but also attacks Europe and North America, focusing on government, military, telecommunications, and oil industries. The group is known for phishing attacks using highly obfuscated techniques and custom malware payloads, including the UDPGangster and Phoenix backdoors.",
+      "first_seen": "2017-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Data theft",
+        "Long-term access"
+      ],
+      "resource_level": "government",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "identity",
+      "id": "identity--e8d1039e-2f92-4bf5-9705-0a571da46f9e",
+      "name": "360 Advanced Threat Research Institute",
+      "description": "360 Advanced Threat Research Institute is the core threat research division of 360, focused on discovering, preventing, handling, and researching advanced threats, including APTs.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology",
+        "government",
+        "security"
+      ],
+      "contact_information": "https://www.360.cn/"
+    },
+    {
+      "type": "file",
+      "id": "file--a55018b4-adef-4811-b045-3d73bb7c0171",
+      "hashes": {
+        "MD5": "bed77abc7e12230439c0b53dd68ffaf7"
+      },
+      "name": "Transfer receipt #27789.pdf .exe",
+      "size": 2417152
+    },
+    {
+      "type": "file",
+      "id": "file--8ef1f37b-e1c2-483d-a1e1-553103843bbc",
+      "hashes": {
+        "MD5": "561b2983d558283c446ff674ff6138c3"
+      },
+      "name": "Transfer receipt #27790.doc",
+      "size": 4021248
+    },
+    {
+      "type": "file",
+      "id": "file--f703dd9e-512c-4ee2-a3d0-46fffe40688d",
+      "hashes": {
+        "MD5": "7bfbc76c7eeb652d73b85c99ee83b339"
+      },
+      "name": "novaservice.exe",
+      "size": 1902080
+    },
+    {
+      "type": "file",
+      "id": "file--1b0fea53-9373-42f7-8bd2-9bba4ab08932",
+      "hashes": {
+        "MD5": "a546d2363a4b94e361d0874b690c853b"
+      },
+      "name": "71csc2c.exe",
+      "size": 857088
+    },
+    {
+      "type": "file",
+      "id": "file--df4a5b2d-dbaf-45fb-a6ea-2f6a772c4920",
+      "hashes": {
+        "MD5": "07502104c6884e6151f6e0a53966e199"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--390d6add-4312-4a53-af84-049c9f875b98",
+      "hashes": {
+        "MD5": "aa75a0baebc93d4ca7498453ef64128a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4599b44e-511b-49ba-865b-0c064a45de9e",
+      "hashes": {
+        "MD5": "409d02d6153af220e527fd72256ee3a5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ee79086e-4555-4127-9c2f-7d0d8fff28cd",
+      "hashes": {
+        "MD5": "9e06b36f4da737b8d699a6846c2540e9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e0cefac1-111e-407f-bbf3-1cd7ff696a2a",
+      "hashes": {
+        "MD5": "e09a720574a6594b1444ebc1d6cca969"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a58238cb-6a48-42e3-86ae-704e8014aaee",
+      "hashes": {
+        "MD5": "dd6af28d1a03193fc76001b04d5827cc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9cb0130a-a32c-40f5-a34b-b666e14b1d28",
+      "hashes": {
+        "MD5": "a39f74247367e0891f18b7662c8e69b5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e659cc93-dd85-476e-9603-cf6417943ed4",
+      "hashes": {
+        "MD5": "e5dd608292b6f421b0c108816d25fc5e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "hashes": {
+        "MD5": "a9235540208fa6a25614c24a59e19199"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--49fadde4-d7c2-4cab-beee-eb469d560351",
+      "value": "64.7.198.12"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3904143c-a749-489f-a238-5cbab06dad97",
+      "value": "157.20.182.75"
+    },
+    {
+      "type": "url",
+      "id": "url--f37d338b-1e4a-423d-88ab-fffe4c1bbc51",
+      "value": "http://64.7.198.12:8080/request"
+    },
+    {
+      "type": "url",
+      "id": "url--1f18c184-1d40-426f-b20e-373edd1a2cac",
+      "value": "http://64.7.198.12:8080/register"
+    },
+    {
+      "type": "url",
+      "id": "url--b708ba81-c6b8-4152-a66a-a669c0709c6c",
+      "value": "http://64.7.198.12:8080/imalive"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--495924c3-af19-48ad-bb9d-e9c09117a10e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses UDPGangster backdoor in its campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39e96c1e-18dd-4f01-a36e-7792af5255c0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses Phoenix backdoor in its campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a030b615-acff-46bc-8603-834063491015",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater previously used BugSleep backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9ca7e18-8116-48b5-a9ca-547f64ca9174",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses novaservice.exe as a loader for UDPGangster."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--102ee587-cca1-4f52-be2d-2b03393f7d96",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses Transfer receipt #27789.pdf .exe as a disguised dropper for UDPGangster."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c23d8be-2c4d-46c9-b444-e7f14a3162f5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses Transfer receipt #27790.doc as a macro-laden dropper for UDPGangster."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19283f03-1617-4ce2-9057-90f2c7d64c8d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--79cea690-70be-4e26-a251-cc908f449271",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MuddyWater uses 71csc2c.exe as a Phoenix backdoor sample."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44d38384-6984-40ee-9115-79aae1987d91",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d39bd273-c00f-4e60-b3e3-21b42fa33d76",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "MD5 hashes indicator points to UDPGangster, Phoenix, BugSleep, novaservice.exe, Transfer receipt #27789.pdf .exe, Transfer receipt #27790.doc, and 71csc2c.exe samples."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e92e57bb-f044-4292-b71e-eabae2df60eb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d39bd273-c00f-4e60-b3e3-21b42fa33d76",
+      "target_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "description": "C2 server indicator points to UDPGangster and Phoenix backdoor communications."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--851d58b0-812b-493f-96de-6d330349f9e5",
+      "relationship_type": "authored-by",
+      "source_ref": "indicator--d39bd273-c00f-4e60-b3e3-21b42fa33d76",
+      "target_ref": "identity--e8d1039e-2f92-4bf5-9705-0a571da46f9e",
+      "description": "MD5 hashes indicator was authored by 360 Advanced Threat Research Institute."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df80a3f5-029e-4ba8-adf2-716220493f0e",
+      "relationship_type": "authored-by",
+      "source_ref": "indicator--d39bd273-c00f-4e60-b3e3-21b42fa33d76",
+      "target_ref": "identity--e8d1039e-2f92-4bf5-9705-0a571da46f9e",
+      "description": "C2 server indicator was authored by 360 Advanced Threat Research Institute."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5d58e3d-22db-407f-9208-a7b9bc3e9ede",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "Transfer receipt #27789.pdf .exe drops UDPGangster payload (file MD5: de14abbda6a649d9ec90a816847f95db)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93c4a8af-66db-4cae-8675-24169b5bd59d",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "Transfer receipt #27790.doc drops novaservice.exe (file MD5: 7bfbc76c7eeb652d73b85c99ee83b339)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d382c4e-f424-4654-8c18-a9c94174c6e0",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "novaservice.exe loads UDPGangster payload (file MD5: d84812961fc7cd8340031efd7b5508a8)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fd2d8cf-f655-4df3-8bc0-18cef349fceb",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "Transfer receipt #27789.pdf .exe is represented by file MD5: bed77abc7e12230439c0b53dd68ffaf7."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ee26b16-372b-476a-8e33-aa9f47a33ede",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "Transfer receipt #27790.doc is represented by file MD5: 561b2983d558283c446ff674ff6138c3."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--18bc33c9-7a06-44e0-a061-51c52e81d9f7",
+      "relationship_type": "drops",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "file--147e2661-ef2c-48ed-8454-8437e08bf3b5",
+      "description": "71csc2c.exe is represented by file MD5: a546d2363a4b94e361d0874b690c853b."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07b3021b-e83e-4f2d-8bd1-b34bc330899f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "ipv4-addr--3904143c-a749-489f-a238-5cbab06dad97",
+      "description": "UDPGangster communicates with C2 server 64.7.198.12."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33c66814-73d7-4143-b31e-9a1ade7abd01",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "ipv4-addr--3904143c-a749-489f-a238-5cbab06dad97",
+      "description": "Phoenix communicates with C2 server 64.7.198.12."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe1d9e9b-07d7-4b84-a20f-a0df4e8309a0",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "ipv4-addr--3904143c-a749-489f-a238-5cbab06dad97",
+      "description": "Phoenix communicates with C2 server 157.20.182.75."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--492be040-5025-4195-b7e7-32488e154044",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--491a54f1-03a3-47f9-92b6-da631757c18d",
+      "target_ref": "url--b708ba81-c6b8-4152-a66a-a669c0709c6c",
+      "description": "UDPGangster and Phoenix communicate with C2 URLs http://64.7.198.12:8080/request, http://64.7.198.12:8080/register, and http://64.7.198.12:8080/imalive."
+    }
+  ]
+}

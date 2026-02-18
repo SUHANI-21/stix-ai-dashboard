@@ -1,0 +1,722 @@
+{
+  "type": "bundle",
+  "id": "bundle--08f394d1-31dc-4f30-860d-3cf70a27528c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "name": "Kimsuky",
+      "aliases": [
+        "APT43"
+      ],
+      "description": "A North Korean threat actor focused on cyber-espionage, credential theft, and information operations, often using spearphishing and credential harvesting tools.",
+      "goals": [
+        "Espionage",
+        "Credential Access"
+      ],
+      "primary_motivation": "intelligence gathering",
+      "resource_level": "nation-state"
+    },
+    {
+      "type": "malware",
+      "id": "malware--ad382ce6-00ea-4043-b86c-d4ee53b00b4f",
+      "name": "Badcall",
+      "labels": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "description": "A backdoor used by Lazarus Group, including a new Linux variant that logs activity to /tmp/sslvpn.log. Used in the 3CX supply chain attack and other campaigns.",
+      "operating_system_refs": [
+        "windows",
+        "linux"
+      ],
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "hashes": {
+        "SHA-256": "a3876a2492f3c069c0c2b2f155b4c420d8722aa7781040b17ca27fdd4f2ce6a9"
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--3a87cafc-601e-478d-b31e-d4293750db8a",
+      "name": "Badcall (old variant)",
+      "labels": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "description": "Older Linux variant of the Badcall backdoor used by Lazarus Group.",
+      "operating_system_refs": [
+        "linux"
+      ],
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": false,
+      "hashes": {
+        "SHA-256": "cc307cfb401d1ae616445e78b610ab72e1c7fb49b298ea003dd26ea80372089a"
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--d72a9166-500a-484c-bc43-bc1914d9bb16",
+      "name": "Poolrat",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "A backdoor attributed to Lazarus Group, with multiple observed hashes.",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": true,
+      "hashes": {
+        "SHA-256": [
+          "a5350b1735190a9a275208193836432ed99c54c12c75ba6d7d4cb9838d2e2106",
+          "ff32bc1c756d560d8a9815db458f438d63b1dcb7e9930ef5b8639a55fa7762c9",
+          "85045d9898d28c9cdc4ed0ca5d76eceb457d741c5ca84bb753dde1bea980b516"
+        ]
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--27dc946a-d007-414f-a93f-d4264b121350",
+      "name": "MailPassView",
+      "labels": [
+        "credential-access",
+        "password-dumper"
+      ],
+      "description": "A credential theft tool used by Lazarus Group for extracting email passwords.",
+      "malware_types": [
+        "password-dumper"
+      ],
+      "is_family": false,
+      "hashes": {
+        "SHA-256": "bc7bd27e94e24a301edb3d3e7fad982225ac59430fc476bda4e1459faa1c1647"
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--3d38c780-907b-4948-adf4-61e220555083",
+      "name": "WebBrowserPassView",
+      "labels": [
+        "credential-access",
+        "password-dumper"
+      ],
+      "description": "A tool used by Lazarus Group to extract browser passwords from victim systems.",
+      "malware_types": [
+        "password-dumper"
+      ],
+      "is_family": false,
+      "hashes": {
+        "SHA-256": "36541fad68e79cdedb965b1afcdc45385646611aa72903ddbe9d4d064d7bffb9"
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--28ff05cd-1237-4caf-a40f-734c87653958",
+      "name": "FastReverseProxy (FRP)",
+      "labels": [
+        "tunneling",
+        "proxy",
+        "command-and-control"
+      ],
+      "description": "A legitimate open-source tunneling tool abused by Lazarus Group for C2 and lateral movement, deployed in uniform fashion across multiple VPS hosts.",
+      "malware_types": [
+        "tunneling",
+        "proxy"
+      ],
+      "is_family": false,
+      "hashes": {
+        "SHA-256": "24d5dd3006c63d0f46fb33cbc1f576325d4e7e03e3201ff4a3c1ffa604f1b74a"
+      }
+    },
+    {
+      "type": "malware",
+      "id": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "name": "Quasar RAT",
+      "labels": [
+        "remote-access-trojan",
+        "credential-access"
+      ],
+      "description": "A remote access trojan found in Lazarus Group open directories, used for persistent access and credential theft.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--09ebff74-95a8-4da0-a097-cb0134634f94",
+      "name": "Lazarus Badcall Host",
+      "infrastructure_types": [
+        "server"
+      ],
+      "description": "Host serving Badcall backdoor (new Linux variant) at http://23.27.140.49:8080.",
+      "aliases": [
+        "23.27.140.49:8080"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--14783462-cb6a-48fd-8534-06699efb86b1",
+      "name": "Lazarus Badcall C2 Server",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "description": "C2 server used by Badcall backdoor, observed at 23.27.177.183 and 23.254.211.230.",
+      "aliases": [
+        "23.27.177.183",
+        "23.254.211.230"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--31645b14-875b-43e8-8f42-1f5f08cecbab",
+      "name": "Open Directory - MacStadium, Dublin",
+      "infrastructure_types": [
+        "staging",
+        "server"
+      ],
+      "description": "Open directory at 207.254.22.248:8800 used for staging credential theft kits and other offensive tools. Identified as Mythic C2 server.",
+      "aliases": [
+        "207.254.22.248:8800"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--3bd57c4b-5d7f-41b5-89ec-d3b63fa28008",
+      "name": "Open Directory - Vultr, Singapore",
+      "infrastructure_types": [
+        "staging",
+        "server"
+      ],
+      "description": "Open directory at 149.28.139.62:8080 hosting Quasar RAT, credential theft tools, and exfiltration utilities.",
+      "aliases": [
+        "149.28.139.62:8080"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--fc294fd5-0d5c-4127-bb3c-e363b5836112",
+      "name": "Open Directory - LARUS Limited, Hong Kong",
+      "infrastructure_types": [
+        "staging",
+        "server"
+      ],
+      "description": "Open directory at 154.216.177.215:8080 with over 10,000 files including offensive security tools, password stealers, and operator artifacts.",
+      "aliases": [
+        "154.216.177.215:8080"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--df4061e5-39b5-4e19-9f36-4382770d975a",
+      "name": "Lazarus FRP Infrastructure",
+      "infrastructure_types": [
+        "proxy",
+        "command-and-control"
+      ],
+      "description": "Cluster of VPS hosts running identical FRP binaries for tunneling and C2. Observed at: 182.136.123.102:9999, 119.6.56.194:9999, 182.136.120.52:9999, 118.123.54.71:9999, 61.139.89.11:9999, 125.67.171.158:9999, 125.65.88.195:9999, 119.6.121.143:9999.",
+      "aliases": [
+        "182.136.123.102:9999",
+        "119.6.56.194:9999",
+        "182.136.120.52:9999",
+        "118.123.54.71:9999",
+        "61.139.89.11:9999",
+        "125.67.171.158:9999",
+        "125.65.88.195:9999",
+        "119.6.121.143:9999"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--f46fefef-2746-486b-b817-69d0e4343b01",
+      "name": "Lazarus Certificate-linked Infrastructure",
+      "infrastructure_types": [
+        "server",
+        "command-and-control"
+      ],
+      "description": "Cluster of IPs tied to certificate subject 'hwc-hwp-7779700', many exposing RDP (3389) and HTTPS (443), used for operator access and C2. Includes: 23.254.128.114, 104.168.198.145, 23.254.164.50, 192.236.146.20, 142.11.209.109, 192.236.233.162, 192.236.176.164, 192.236.236.100, 192.236.146.22, 192.236.233.165, 192.119.116.231, 104.168.151.116.",
+      "aliases": [
+        "23.254.128.114",
+        "104.168.198.145",
+        "23.254.164.50",
+        "192.236.146.20",
+        "142.11.209.109",
+        "192.236.233.162",
+        "192.236.176.164",
+        "192.236.236.100",
+        "192.236.146.22",
+        "192.236.233.165",
+        "192.119.116.231",
+        "104.168.151.116"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "name": "Lazarus Pivot Domain",
+      "infrastructure_types": [
+        "domain"
+      ],
+      "description": "Domain secondshop.store used as a pivot to identify Lazarus-linked infrastructure.",
+      "aliases": [
+        "secondshop.store"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ef16cb83-dfb2-4987-86ee-b9c5a1d7ee4f",
+      "hashes": {
+        "SHA-256": "a3876a2492f3c069c0c2b2f155b4c420d8722aa7781040b17ca27fdd4f2ce6a9"
+      },
+      "name": "nvd",
+      "size": 98304
+    },
+    {
+      "type": "file",
+      "id": "file--1dcae284-36ed-4573-b851-ea59ef632e26",
+      "hashes": {
+        "SHA-256": "cc307cfb401d1ae616445e78b610ab72e1c7fb49b298ea003dd26ea80372089a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--68e02ade-674c-4233-a8e6-470f756dda81",
+      "hashes": {
+        "SHA-256": "a5350b1735190a9a275208193836432ed99c54c12c75ba6d7d4cb9838d2e2106"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a2199ebf-b242-4743-a22b-1600e96311c8",
+      "hashes": {
+        "SHA-256": "ff32bc1c756d560d8a9815db458f438d63b1dcb7e9930ef5b8639a55fa7762c9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--cca3d554-ee8f-43ee-aabc-9ae7c7dbfb84",
+      "hashes": {
+        "SHA-256": "85045d9898d28c9cdc4ed0ca5d76eceb457d741c5ca84bb753dde1bea980b516"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1a234016-921f-4dd7-844d-db4d62385477",
+      "hashes": {
+        "SHA-256": "bc7bd27e94e24a301edb3d3e7fad982225ac59430fc476bda4e1459faa1c1647"
+      },
+      "name": "MailPassView",
+      "size": 371712
+    },
+    {
+      "type": "file",
+      "id": "file--a0df3cc5-f46e-4e17-a249-947a9fd29918",
+      "hashes": {
+        "SHA-256": "36541fad68e79cdedb965b1afcdc45385646611aa72903ddbe9d4d064d7bffb9"
+      },
+      "name": "WebBrowserPassView",
+      "size": 430080
+    },
+    {
+      "type": "file",
+      "id": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "hashes": {
+        "SHA-256": "24d5dd3006c63d0f46fb33cbc1f576325d4e7e03e3201ff4a3c1ffa604f1b74a"
+      },
+      "name": "frp",
+      "size": 10485760
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--40c1f005-1ab1-49b4-a2ea-475139ebb1c5",
+      "value": "23.27.140.49"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6fc10acd-c48b-4c73-a89a-c19d101ac0a1",
+      "value": "23.27.177.183"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5f596ffc-55b7-436f-9f3f-c657851845e8",
+      "value": "23.254.211.230"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4b380ed1-36a1-495a-950e-1fa151007c3f",
+      "value": "207.254.22.248"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5b1810fd-0afa-4c97-be2f-5c818222eb9e",
+      "value": "149.28.139.62"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ce3466cf-6dbf-4fea-aaf3-cdb694f03904",
+      "value": "154.216.177.215"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4ef1932c-5005-4a07-b6ab-3d9225cefc7c",
+      "value": "182.136.123.102"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--de02defd-743a-4b7e-875d-6944a785002e",
+      "value": "119.6.56.194"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7d2b6260-4da9-497d-ae78-13bb49d478bb",
+      "value": "182.136.120.52"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--29c7b2a7-262b-4348-9aa2-3d7ddee9a034",
+      "value": "118.123.54.71"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6be45dc9-b36d-4ef5-b031-e7c4b91f80a4",
+      "value": "61.139.89.11"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6ca6e188-cfa6-40d9-84dd-98fdf982a0c3",
+      "value": "125.67.171.158"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--43c54c36-1e57-4c36-a491-66d85370beab",
+      "value": "125.65.88.195"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9ec257d4-f2fb-4a02-beb4-be832cb59265",
+      "value": "119.6.121.143"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bae41968-bae3-4840-9d4a-9c97c2fe953d",
+      "value": "secondshop.store"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7928ebb3-c0d2-44e3-ae39-0adc72d5ff83",
+      "value": "23.254.128.114"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--696e4e9b-aa3f-420d-b2ea-aacff8b097fe",
+      "value": "104.168.198.145"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--49a706fe-2e40-4024-9d64-c72c029282df",
+      "value": "23.254.164.50"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--55acbeea-a7c0-4747-b934-4196bf810f51",
+      "value": "192.236.146.20"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--55c28874-9fcd-4afd-9400-972d35e6adcb",
+      "value": "142.11.209.109"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4246bcc7-fde0-4cb3-8e5b-b24d840e3da3",
+      "value": "192.236.233.162"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f1895c01-680c-4634-a1ea-7fd456ea7516",
+      "value": "192.236.176.164"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--142d66e7-8cb0-4a7c-871d-7164653640db",
+      "value": "192.236.236.100"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2ab49011-1242-4ce6-9fe3-dbbf843ed0bc",
+      "value": "192.236.146.22"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--08af560a-2a43-491a-baa9-72617cca3c4f",
+      "value": "192.236.233.165"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a22feb79-d0a9-47b2-9c3d-1e92acc17bc6",
+      "value": "192.119.116.231"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1768b10b-1d68-44e2-9dc5-157f4cfe048d",
+      "value": "104.168.151.116"
+    },
+    {
+      "type": "url",
+      "id": "url--f6ff2f4b-0572-4005-9123-dbf624a013a8",
+      "value": "http://23.27.140.49:8080"
+    },
+    {
+      "type": "url",
+      "id": "url--368e8b39-a547-4a1e-87fd-543feeb8fb9f",
+      "value": "http://207.254.22.248:8800"
+    },
+    {
+      "type": "url",
+      "id": "url--62832135-e873-48ba-93ec-8b73358b365a",
+      "value": "http://149.28.139.62:8080"
+    },
+    {
+      "type": "url",
+      "id": "url--af843c26-d84a-4efb-b4b2-39c55dd8000e",
+      "value": "http://154.216.177.215:8080"
+    },
+    {
+      "type": "url",
+      "id": "url--c0204562-057b-4a17-b0bd-35f16d13ba8b",
+      "value": "http://182.136.123.102:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--f67e9cd4-673c-4284-bf6f-16fa08a69377",
+      "value": "http://119.6.56.194:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--5367b09b-43e8-4e32-97e7-269d1020f634",
+      "value": "http://182.136.120.52:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--96cec556-a430-4a97-81b1-14413a136dad",
+      "value": "http://118.123.54.71:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--a1bd70a9-c75e-4ce4-93c7-e84708875362",
+      "value": "http://61.139.89.11:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--e55eaff2-8900-426e-905c-7a4489b5c4bb",
+      "value": "http://125.67.171.158:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--8e138273-dcd3-4bd2-8302-39d8bac2c944",
+      "value": "http://125.65.88.195:9999"
+    },
+    {
+      "type": "url",
+      "id": "url--5e616801-8780-4388-b5cb-8c320e8cabb3",
+      "value": "http://119.6.121.143:9999"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2294266a-f4cb-4e2e-8274-94baa3fadf47",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses Badcall backdoor (new Linux variant) in campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--958994dc-9e38-459c-9aa9-0c96218bf060",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses Badcall (old variant) backdoor in campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6759c5ee-dea0-4b9f-98c6-3ba27efd530f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses Poolrat backdoor in campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc77f877-5b70-42c1-9989-bdbbf02e94b3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses MailPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0604daf3-ac97-40ff-aa80-d890af7f2171",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses WebBrowserPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba1d09d6-1f88-4e87-9403-cba02d11dad8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses FastReverseProxy (FRP) for tunneling and C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddea0daa-7b73-49de-bf2e-2810ecfa0bbb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "description": "Lazarus Group uses Quasar RAT for persistent access and credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae595418-d040-4068-9e74-8d794fb293e0",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Lazarus Badcall Host infrastructure hosts the Badcall backdoor (new Linux variant) file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6d1f6a9f-4508-4f21-8a55-de0d55db4d38",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--87a7a732-8b57-4d6b-bf1b-823d15c3404a",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Badcall backdoor communicates with Lazarus Badcall C2 Server infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33a42c2b-a47b-4e86-9d96-5594d50a8923",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Open Directory - MacStadium, Dublin hosts MailPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a926c6b7-83da-4ccf-970a-1b8a13ffb0c5",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Open Directory - MacStadium, Dublin hosts WebBrowserPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c8c61cc-7641-4d6a-b804-fcb6d10040ad",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Open Directory - Vultr, Singapore hosts MailPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a81bd2c-b905-4f4a-8d02-259b67f56644",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Open Directory - Vultr, Singapore hosts WebBrowserPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9afe17bc-4aae-43a0-825f-e3a149e49001",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Open Directory - LARUS Limited, Hong Kong hosts WebBrowserPassView credential theft tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c88ae036-2b99-405e-8391-0046bab6436e",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "target_ref": "file--f74a7730-e1f9-4077-9f1d-55cc17eaea85",
+      "description": "Lazarus FRP Infrastructure hosts FastReverseProxy (FRP) binary."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a030326-f870-45d5-98eb-5e5fdf78107f",
+      "relationship_type": "resolves-to",
+      "source_ref": "domain-name--bae41968-bae3-4840-9d4a-9c97c2fe953d",
+      "target_ref": "ipv4-addr--1768b10b-1d68-44e2-9dc5-157f4cfe048d",
+      "description": "Domain secondshop.store resolves to Lazarus certificate-linked infrastructure IP 23.254.128.114."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc3d3ba5-dc43-4f83-9e68-bd186fdefde9",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Lazarus Badcall Host infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd04da07-0569-4a46-9593-e682b8e5130b",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Lazarus Badcall C2 Server infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ebd52cc-bf98-483e-8c05-315ff8a55a15",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Open Directory - MacStadium, Dublin."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2242178e-084a-4236-aae4-5d0d8e1a4870",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Open Directory - Vultr, Singapore."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--137895d0-82bd-4c4a-87c4-71823e49ba73",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Open Directory - LARUS Limited, Hong Kong."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--02e21dad-fc7b-4b64-9b16-12a2b91dcd92",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Lazarus FRP Infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--665a88b1-ac16-4248-bed5-7fbbfb7ae36e",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Lazarus Certificate-linked Infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebefe7bb-1ebc-4d12-86eb-46c2a109c384",
+      "relationship_type": "controls",
+      "source_ref": "intrusion-set--f2b4d705-6cc0-4d48-ba4b-1f25d3fd9507",
+      "target_ref": "infrastructure--bf188475-3592-4c1e-b37c-7ae0f2d94fd1",
+      "description": "Lazarus Group controls Lazarus Pivot Domain."
+    }
+  ]
+}

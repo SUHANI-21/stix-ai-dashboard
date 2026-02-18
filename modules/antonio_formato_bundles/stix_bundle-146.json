@@ -1,0 +1,580 @@
+{
+  "type": "bundle",
+  "id": "bundle--f14a4c09-db3a-4fed-95ec-ef9e1a2b5e85",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--189dd06b-1c20-467d-85a0-c7c3d56e3ec5",
+      "name": "DarkCloud",
+      "description": "DarkCloud is a stealer malware first observed in 2022, widely distributed via phishing campaigns and malvertising. It is sold on underground forums, often with transactions coordinated via Telegram. DarkCloud is typically delivered through phishing emails containing documents, compressed files, or scripts (JAR, BAT, PowerShell, VBS, AutoIT). The infection chain involves loaders that download, decrypt, and inject the stealer into memory, often using obfuscation and packing techniques. The malware targets HR departments and general users, sometimes distributed alongside other malware such as DbatLoader or ClipBanker.",
+      "malware_types": [
+        "stealer"
+      ],
+      "is_family": true,
+      "first_seen": "2022-01-01T00:00:00Z",
+      "last_seen": "2023-12-31T00:00:00Z",
+      "aliases": [],
+      "operating_system_refs": [
+        "windows--"
+      ],
+      "capabilities": [
+        "credential theft",
+        "keylogging",
+        "screen capture",
+        "browser data theft",
+        "system information discovery",
+        "process injection",
+        "email collection",
+        "clipboard data theft",
+        "persistence via registry and scheduled tasks",
+        "virtualization/sandbox evasion"
+      ],
+      "external_references": [
+        {
+          "source_name": "AnyRun",
+          "url": "https://app.any.run/tasks/f3c56abe-04b8-432a-8011-4135871daedc"
+        },
+        {
+          "source_name": "AnyRun",
+          "url": "https://app.any.run/tasks/b3aa2be4-c06e-4bfc-a05a-00b6b5a32c88"
+        },
+        {
+          "source_name": "AnyRun",
+          "url": "https://app.any.run/tasks/4e1b98c5-2d9d-4eca-80cf-42d7de800376"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://gist.github.com/michaelkeevildown/9096cd3aac9029c4e6e05588448a8841"
+        }
+      ],
+      "sample_refs": [
+        "file--970791d129721273f0d53c1b4c352c689d3992ec3a236bfa5b4c39804821f64d",
+        "file--20dc4ffc31f978e2c822878b11a4d59c3ad6da9898a7028d75d3c9079598de18",
+        "file--5e45f400b15d22d484430e07d36c9b01eef5bc3069faa8c9fa8b1b88be93ef9a"
+      ],
+      "labels": [
+        "malware",
+        "stealer",
+        "darkcloud"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--23fc4cb7-03e7-4cca-8560-3ce112f1b3c7",
+      "name": "Phishing for Initial Access",
+      "description": "DarkCloud is primarily distributed via phishing campaigns, often targeting HR departments, using emails with malicious attachments or links.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1566.001"
+        }
+      ],
+      "labels": [
+        "phishing",
+        "initial-access"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f713b280-a26e-4668-84ef-51117fc3e1ab",
+      "name": "Command and Scripting Interpreter",
+      "description": "DarkCloud uses various script loaders, including PowerShell, JAR, BAT, VBS, and AutoIT, to execute malicious code and download additional payloads.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1059"
+        }
+      ],
+      "labels": [
+        "execution",
+        "script"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d5192187-aecc-4c38-92a4-93c480a11a84",
+      "name": "Persistence via Registry Run Keys / Startup Folder",
+      "description": "DarkCloud establishes persistence by creating VBS scripts in startup folders and modifying registry RunOnce keys.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1547.001"
+        }
+      ],
+      "labels": [
+        "persistence"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--13cebd37-a09a-4198-a803-7efe6b252ce8",
+      "name": "Process Injection",
+      "description": "DarkCloud injects its stealer payload into legitimate processes such as svchost, InstallUtil, MSBuild, or itself to evade detection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1055"
+        }
+      ],
+      "labels": [
+        "defense-evasion",
+        "process-injection"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ce1a8f17-e5b1-4db9-9e85-a2152012dfaa",
+      "name": "Obfuscated Files or Information",
+      "description": "DarkCloud employs multiple obfuscation and packing techniques, including Base64 and TripleDES encryption, to hide its code and payloads.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1027"
+        }
+      ],
+      "labels": [
+        "defense-evasion",
+        "obfuscation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2d7a907b-9c0e-4032-b0cf-00a87d1aead1",
+      "name": "Credential Access via Browser Data Theft",
+      "description": "DarkCloud steals credentials from browsers and password managers by accessing files such as Login Data, WebData, logins.json, and key databases.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1555"
+        }
+      ],
+      "labels": [
+        "credential-access",
+        "browser-data"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b2696bf6-32b1-4152-9099-cf2c1c2e0ccd",
+      "name": "Keylogging",
+      "description": "DarkCloud logs keystrokes on infected systems to capture sensitive information.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1056.001"
+        }
+      ],
+      "labels": [
+        "credential-access",
+        "keylogger"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b23c7b8f-a878-4b63-8710-bca6349b8d7d",
+      "name": "Screen Capture",
+      "description": "DarkCloud captures screenshots of infected systems to gather additional information.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1113"
+        }
+      ],
+      "labels": [
+        "collection",
+        "screen-capture"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4402ed49-e174-42b9-99d6-cdddbd06525e",
+      "name": "Application Layer Protocol: Telegram Bot Communication",
+      "description": "DarkCloud communicates with Telegram bots via HTTPS to exfiltrate stolen data and receive commands.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1071"
+        }
+      ],
+      "labels": [
+        "command-and-control",
+        "telegram"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6db74890-6ab6-4f5f-972f-87d7db7dd6f4",
+      "name": "Software Discovery",
+      "description": "DarkCloud enumerates installed software such as browsers, email clients, and FTP clients to target for credential theft.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1518"
+        }
+      ],
+      "labels": [
+        "discovery",
+        "software-discovery"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e6931aba-4ce3-4de3-bac2-fd7607708c8a",
+      "name": "System Information Discovery",
+      "description": "DarkCloud collects system information, including computer name, users, running processes, and logical disks.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "external_id": "T1082"
+        }
+      ],
+      "labels": [
+        "discovery",
+        "system-info"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--c86b3271-ee69-4f23-a8e4-06d12b102ae6",
+      "hashes": {
+        "SHA-256": "970791d129721273f0d53c1b4c352c689d3992ec3a236bfa5b4c39804821f64d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6f478f59-aaa2-47d8-ab19-76af68fdedfd",
+      "hashes": {
+        "SHA-256": "20dc4ffc31f978e2c822878b11a4d59c3ad6da9898a7028d75d3c9079598de18"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--525373f1-6707-42a2-a0ef-c38f4bd03394",
+      "hashes": {
+        "SHA-256": "5e45f400b15d22d484430e07d36c9b01eef5bc3069faa8c9fa8b1b88be93ef9a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e5bef660-5508-4e30-bf1e-92c0db4a83df",
+      "hashes": {
+        "SHA-256": "ecbdaea604f259a7535b32c7abcd25139af9b8abe04a45d24614212c9d8ea67c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c7b8a0dc-582a-4aed-87e4-94ba931d1e77",
+      "hashes": {
+        "SHA-256": "930715d4311f4b71e77c5baf6a90d5e9383dbb8d2557e8316054d4e46f019404"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c4b4f997-5397-44e5-9212-05ddc66a6426",
+      "hashes": {
+        "SHA-256": "8eed39069dfa0574b41e3e3f426809e29f9b108d5106670e07b2c1524085b6e6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9addba5e-8e02-4eea-97a3-6ddcbdc5b5ca",
+      "hashes": {
+        "SHA-256": "869ab9858bfbbb0e479ec4f2f3776ec952cdada4898e9f26d3322cb931c75cab"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a0cfb4cf-e898-455d-b32e-14194710d257",
+      "hashes": {
+        "SHA-256": "78c596ef6b627c0210c528adda497162ef323dcb880edc19a1baa67c34e04906"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bb1910b9-20d6-4336-9958-5d551c1ef265",
+      "hashes": {
+        "SHA-256": "3477d3838f634d4e5489d7d16de56b91bf0bf31b32ac7e2dbccf657a24d487bc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bf894158-6023-490f-8a10-068895309c04",
+      "hashes": {
+        "SHA-256": "9687a5f5f5b2625642144b433b807c37f968ba696722c1c173a0d7d5ece4d0d9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--15fb653e-e3a3-409c-967c-94ce5bc12238",
+      "hashes": {
+        "SHA-256": "89b0fa84da8c99eed3aba8a931afb5a032ea0a47cb4b692a15e7b3aef7104ba8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d43fcbb9-896f-4afd-9840-4135da9653a1",
+      "hashes": {
+        "SHA-256": "b07a092954cc148342cdd4725f5e9d487155d22b794b273dc874dcf5f144de4e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--afabe759-797e-4749-a926-8228246bf382",
+      "hashes": {
+        "SHA-256": "e25450236e49bbb61e175e39eb46a2f3a1258e8ba8fe7a2c6d8b2f17e85cc167"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0ab97559-494a-4719-b3a7-f1590ad870e9",
+      "hashes": {
+        "SHA-256": "f18d276ce3ec088f6d446e409489bad5c9b613d6c1f10a6538724749c7cf2af6"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dcfa0fef-177a-4b46-be64-a18ae99ec49c",
+      "hashes": {
+        "SHA-256": "73ea9482307e2db84538256bcee3a207fbc8bf512715316c82f3b4cebe46d8b1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c2d9cb55-c620-4b1c-9c4c-a7033ec623a2",
+      "hashes": {
+        "SHA-256": "d148996c99c0e59c40792ce17a1531480168eb0e05d015ddd6f0fed9ce9478e5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fea062b7-1255-4091-afe0-3e87d45e1e88",
+      "hashes": {
+        "SHA-256": "d59dbca0d404218e0f1729294f30c85d7f61b6e28cc7872d8ce1afb94cb3be42"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--862f2e24-dc56-4385-b4d4-a4d1163fc20c",
+      "hashes": {
+        "SHA-256": "aa653ad0d107b2d7ab98d4ede0eef147b73fbd7eb2f522f0bf608f833daebe34"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--16253a66-abe1-4026-bf1a-9d1b5e905bbb",
+      "hashes": {
+        "SHA-256": "688c929b7be5c31a2a5410394024f9dea1bcfc62af0c24237d2b23b8fea70055"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9ae7346f-54b0-4670-8596-05c1fe50b146",
+      "hashes": {
+        "SHA-256": "80742a25d1550dd0f7ccb299672a5d9de889f57c0e53e3e8eea0e50d6b7ae33b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c4dd6384-2a3f-4a1d-8a8b-8833efa28dc1",
+      "hashes": {
+        "SHA-256": "b7d2a499355e0ff23ee3abd5dcf62b27bfa1a993cb8e53b8a0600c0e4d4e4c56"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--02bf1797-e4ee-4fd2-b218-7373c3c8f024",
+      "hashes": {
+        "SHA-256": "093f9c611518f42f00826d8134b4860080b690678b27a469a33a529f7706b87f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ff2887e0-b37b-4029-957d-07b49858e6be",
+      "hashes": {
+        "SHA-256": "dda65ed23373504099b4ef1fd883eca088c8664db398909dda87af9d4a02bdf1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3155938c-7a1b-46bd-b3a4-999efd30b9eb",
+      "hashes": {
+        "SHA-256": "a23430fb24ff7cf5506c58a46a33a1572a5c724fd9b4e0e88228584f6ec6001e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dfb6bf8b-2d86-40b4-981f-95f7d6de4584",
+      "hashes": {
+        "SHA-256": "250fa7da2da2ff7e1e1f7e3bb2ff9ae8b363facb00973455e9fe1900e6195c41"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4225ba11-df92-4a25-9d89-806aa85c1e94",
+      "hashes": {
+        "SHA-256": "8306710e0292b8c88b537bf427a9d651cfdf4d86ad2f7690b47f766b4354faaa"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5f8aa11f-b55c-458c-ba00-b145944f1e1a",
+      "hashes": {
+        "SHA-256": "45b104579f856aba3d99b5370360240a3f9f95b82969e3f7ba12c14b0d7abb7f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c12a56ea-27c4-4d52-b383-4672c31c1919",
+      "hashes": {
+        "SHA-256": "7c8bcd4345ec5eb572bf25a4831ebf09c98bc92c0847662fd68f7cfefce4a27f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0a97ab9d-17e1-4a44-9113-0ecc753af689",
+      "hashes": {
+        "SHA-256": "afce524a6ff12252be335bfa95209bc37ca8de86e45b2c34634cc6223fe83263"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c046cadc-51bb-445b-9e75-5c0ee7533834",
+      "hashes": {
+        "SHA-256": "8616ff3374bcb45c5eda66c11ffa3fbef9e7e00e2ad21e752c10bf94bdd7a28d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--82848552-1648-4440-899b-d9e96c9a3aff",
+      "hashes": {
+        "SHA-256": "db03cf79dd756e39c7036b3541c2b560b4b3a7f0ccd4b896de47ba743745726d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d43146b9-3eb3-4051-8e6f-618587d05bc0",
+      "hashes": {
+        "SHA-256": "b4bb90f3a33ac5c78672efc80987f80e0885753b8559bf1d258acf99d04dfd1b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e539c65b-bcae-438c-868d-f45c297bc3ec",
+      "hashes": {
+        "SHA-256": "b2fe3bf20cb54f650d4b191315cf9247b653a5c3552f9f3d6598990b58139114"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--728a6271-715b-4d27-b311-630e7fb33a3a",
+      "hashes": {
+        "SHA-256": "dd12a49d57b0dbc1acbfc1493529128a8c9017835a5a008397be8ba2641cbfee"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5aeaf5e6-9c7f-4708-8c40-e133594ebb9d",
+      "hashes": {
+        "SHA-256": "9726f460c40a7274eb35203cec6400f3d3de9dcf5e841ffc78bec26057cc2d6e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bb12bd18-89b6-42e3-8983-cade9cf5682e",
+      "hashes": {
+        "SHA-256": "782529daacf0b40364707f5b98f01b13a2a5f3d2b48fee351723495affc03940"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--72cc5e42-8b60-4b3b-a7cf-73e06935d7c7",
+      "value": "196.251.92.64"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a56cb107-7297-4f3a-9448-cdba031cd218",
+      "value": "144.91.79.54"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9ba0dbb6-d401-4864-9cd5-234807672d10",
+      "value": "87.120.120.56"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6b7f1b6e-1d22-4898-86c5-457de98b4fc4",
+      "value": "161.132.98.130"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--624f343f-b64b-4795-abf7-e0aacd0296e3",
+      "value": "165.154.217.184"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--af9e8e99-f65f-4196-8c2c-392cba02b0f2",
+      "value": "204.44.192.90"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8ff819dd-3aa6-4f2b-b226-ea46f72614c5",
+      "value": "190.171.170.94"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f9b17f79-0b07-4d8a-b497-ce722d63cf54",
+      "value": "176.65.144.3"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7171dbbc-b223-4d24-8909-8e2e52af5c5c",
+      "value": "krupasindhudevelopers.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e6a18fb8-d7a7-49fd-a7ec-447699d5dbb9",
+      "value": "arandelasespeciales.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--be01b91d-5990-4d78-b718-e3823a02aba2",
+      "value": "alcomax.com.co"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--652abef5-680c-46ab-99cb-5edaf08bffc8",
+      "value": "toyscenter.cl"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1a83dc41-76dc-4446-801d-7e2a6931f092",
+      "value": "centuryharvestlink.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3ac2282a-542b-44f1-9f51-9f33d74859dd",
+      "value": "gugaequiposyservicios.com.mx"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ec6cb26a-d069-487e-b17d-bbfdcd0fd89c",
+      "value": "hngandpartners.com"
+    },
+    {
+      "type": "url",
+      "id": "url--079f0840-a978-49c5-a539-2dcd7875facf",
+      "value": "http://showip.net"
+    },
+    {
+      "type": "url",
+      "id": "url--691920a1-7db0-4af5-88d1-310723496018",
+      "value": "http://www.mediacollege.com/internet/utilities/show-ip.shtml"
+    },
+    {
+      "type": "url",
+      "id": "url--4002bfb5-8879-41b1-9bea-5e5a896dca56",
+      "value": "https://api.telegram.org/bot"
+    }
+  ]
+}

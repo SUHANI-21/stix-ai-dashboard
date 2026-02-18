@@ -1,0 +1,173 @@
+{
+  "type": "bundle",
+  "id": "bundle--7b59da87-21e6-4b8f-9449-71759b66d418",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--33efe5d7-296c-4860-b7b9-22ac8aba570e",
+      "name": "React Server Components Unsafe Deserialization",
+      "description": "A remote code execution vulnerability in React Server Components due to unsafe deserialization, actively exploited in the React2Shell campaign.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--df880bc6-4808-4d29-b6fc-46546ea118d1",
+      "value": "bewildered-cock-lover.online"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--648029ec-b3f2-4fbf-b67d-2d3ac02badd9",
+      "value": "200.4.115.1"
+    },
+    {
+      "type": "file",
+      "id": "file--98e6e6b9-c94c-4a08-b6fc-6a8501d660d3",
+      "name": "httpd",
+      "parent_directory": "/tmp",
+      "hashes": {
+        "MD5": "267b27460704e41e27d6f2591066388f"
+      },
+      "size": 10955043,
+      "extensions": {}
+    },
+    {
+      "type": "url",
+      "id": "url--3207a3d6-a899-4c8f-9948-24db1990bd72",
+      "value": "http://200.4.115.1/promocionao.php"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2880b54-ee46-45ea-b6fe-8adaef563d87",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses the WormBoner malware as part of its exploitation attempts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36764581-f849-4a57-82b5-41184be024ea",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Mirai Variant malware in hybrid payloads for IoT botnet operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e65106e-c6be-4b66-ab8a-957d97598fad",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Crypto Mining Payloads as secondary stage payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2039fce5-60f5-4eca-9fee-a34ac60a608e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Denial of Service Payloads to perform DoS attacks after initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b461b6a-718b-48c4-bf6f-e28287f11a27",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Web Shell payloads for automated proof of execution and basic command execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--38ec966f-3b44-43f7-9a82-64cb58cf9b40",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Reverse Shell payloads to establish remote access on compromised systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9bbee63b-4442-4d0f-9468-136a4331ca3b",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Proof of Execution Payloads to verify exploit success."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ee4a4ef-fc86-423b-bf04-97fa50323706",
+      "relationship_type": "uses",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "description": "The React2Shell campaign uses Non-destructive RCE Demonstration Scripts for security research and bug bounty demonstration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00089278-2e9c-481a-b7e1-7e06d6ba2061",
+      "relationship_type": "targets",
+      "source_ref": "campaign--1ed97a93-e6fd-48c1-bc06-c8c6cf0bc5be",
+      "target_ref": "vulnerability--33efe5d7-296c-4860-b7b9-22ac8aba570e",
+      "description": "The React2Shell campaign targets the unsafe deserialization vulnerability in React Server Components (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6daae97-de93-4d5d-ad80-bb0367a85357",
+      "relationship_type": "downloads",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "file--98e6e6b9-c94c-4a08-b6fc-6a8501d660d3",
+      "description": "The WormBoner malware downloads and saves the WormBoner binary to /etc when executed as root."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0559af5-eed5-4b0a-af43-57952c6f68ce",
+      "relationship_type": "downloads",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "file--98e6e6b9-c94c-4a08-b6fc-6a8501d660d3",
+      "description": "The WormBoner malware downloads and saves the WormBoner binary to /home/xx when executed as a normal user."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cca7ed87-f3b3-4d6f-ab26-3a163b36a25a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "domain-name--df880bc6-4808-4d29-b6fc-46546ea118d1",
+      "description": "The WormBoner malware communicates with the domain bewildered-cock-lover.online to download its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21d7be73-d173-46d2-a7e1-0983cfa10f3b",
+      "relationship_type": "downloads",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "file--98e6e6b9-c94c-4a08-b6fc-6a8501d660d3",
+      "description": "The Mirai Variant malware downloads and saves the httpd binary to /tmp."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--104f91af-1c22-4b9b-a53e-ab60cc1c70ac",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "ipv4-addr--648029ec-b3f2-4fbf-b67d-2d3ac02badd9",
+      "description": "The Mirai Variant malware communicates with the IP address 200.4.115.1 as part of its C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa7aad26-d5f1-421a-b1a0-369e0c719356",
+      "relationship_type": "downloads",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "file--98e6e6b9-c94c-4a08-b6fc-6a8501d660d3",
+      "description": "The Mirai Variant malware downloads the httpd binary from a remote source."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47f0322e-8f05-4a7f-b4ed-80b13fcf3c4a",
+      "relationship_type": "downloads",
+      "source_ref": "malware--b3a58f42-7a87-4a1e-a925-73b18b85048f",
+      "target_ref": "url--3207a3d6-a899-4c8f-9948-24db1990bd72",
+      "description": "The Mirai Variant malware downloads additional payloads from http://200.4.115.1/promocionao.php."
+    }
+  ]
+}

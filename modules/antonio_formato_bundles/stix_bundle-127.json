@@ -1,0 +1,244 @@
+{
+  "type": "bundle",
+  "id": "bundle--5b07452b-7bd9-411e-b79c-4613d30e475a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a92fed32-9493-4ac3-82e3-1d637efa61fc",
+      "name": "CVE-2025-55182",
+      "description": "CVE-2025-55182 is a deserialization and object traversal vulnerability in the React Server Component (RSC) protocol, also known as the Flight protocol. The vulnerability arises from missing validation of traversal paths in the RSC parser, allowing attackers to craft custom paths that traverse JavaScript's prototype chain. This enables arbitrary code execution on the server, leading to full compromise. Applications using RSC in Next.js are especially vulnerable.",
+      "created": "2025-12-01T00:00:00.000Z",
+      "modified": "2025-12-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182"
+        },
+        {
+          "source_name": "Seqrite Blog",
+          "url": "https://www.seqrite.com/blog/category/technical/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde",
+      "name": "Prototype Pollution via Flight Protocol Path Traversal",
+      "description": "Attackers exploit the RSC Flight protocol by submitting crafted multipart/form-data requests containing malicious path markers, such as $1:__proto__ and $1:constructor. This enables prototype pollution and traversal of the JavaScript object graph, leading to arbitrary code execution.",
+      "created": "2025-12-01T00:00:00.000Z",
+      "modified": "2025-12-01T00:00:00.000Z"
+    },
+    {
+      "type": "software",
+      "id": "software--666cc3ff-3fe3-4ce5-82fa-afed214498df",
+      "name": "React",
+      "cpe": "",
+      "vendor": "Meta",
+      "description": "A popular JavaScript library used to build modern, interactive web interfaces."
+    },
+    {
+      "type": "software",
+      "id": "software--f6e947fa-5f25-4527-a85b-7aa309af0af6",
+      "name": "Next.js",
+      "cpe": "",
+      "vendor": "",
+      "description": "A full-stack framework built on React, adds server-side capabilities and uses React Server Components (RSC)."
+    },
+    {
+      "type": "software",
+      "id": "software--d30105d6-249c-41ba-9476-dab2454c076c",
+      "name": "React Server Components (RSC)",
+      "cpe": "",
+      "vendor": "",
+      "description": "System used by frameworks like Next.js to render parts of a webpage on the server and stream results to the client, using the Flight protocol."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "name": "CVE-2025-55182",
+      "description": "Deserialization and object traversal vulnerability inside the React Server Component (RSC) protocol, also known as the flight protocol.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-55182"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--0d0d0abb-3a68-412b-8169-c555e8382893",
+      "name": "multipart/form-data",
+      "mime_type": "multipart/form-data",
+      "description": "Crafted multipart/form-data request used to exploit CVE-2025-55182."
+    },
+    {
+      "type": "artifact",
+      "id": "artifact--2172b789-c6e0-4fbf-a4c5-e070aaae3377",
+      "mime_type": "application/http",
+      "payload_bin": "",
+      "description": "HTTP multipart request containing malicious RSC path markers exploiting CVE-2025-55182."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d073a971-9456-4c6a-bd5e-a327e3885111",
+      "relationship_type": "exploits",
+      "source_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662",
+      "target_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e22755e6-20a8-46a5-88b0-54dba2307cf7",
+      "relationship_type": "uses",
+      "source_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662",
+      "target_ref": "file--0d0d0abb-3a68-412b-8169-c555e8382893"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a98d0ad-9f55-4c6c-b98c-f20aeae30ee6",
+      "relationship_type": "uses",
+      "source_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662",
+      "target_ref": "process--4c23ac45-3662-43f3-8a04-0387e515bb7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f88362c-68e8-42b9-a804-b454daefe079",
+      "relationship_type": "uses",
+      "source_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662",
+      "target_ref": "artifact--2172b789-c6e0-4fbf-a4c5-e070aaae3377"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a336dbfd-b290-4c55-ac42-4eb6a3e1f14e",
+      "relationship_type": "uses",
+      "source_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662",
+      "target_ref": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a72fbff-8e70-4a79-b7d3-0898a78e990b",
+      "relationship_type": "delivers",
+      "source_ref": "artifact--2172b789-c6e0-4fbf-a4c5-e070aaae3377",
+      "target_ref": "malware--c75b715c-7c04-4bc9-b679-8b9805fbd662"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d73fafc4-7cbe-4cdd-986f-187e9d9b418e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde",
+      "target_ref": "file--0d0d0abb-3a68-412b-8169-c555e8382893"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ee3ff39-f039-49ce-8b2e-0f20824cc281",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde",
+      "target_ref": "artifact--2172b789-c6e0-4fbf-a4c5-e070aaae3377"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cf369002-aa80-4292-8aaa-57e71a8189a8",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde",
+      "target_ref": "process--4c23ac45-3662-43f3-8a04-0387e515bb7f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6cf9a913-5a3c-4802-85c3-e06fc3983be6",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--72cbf86a-3d78-47d8-9b1f-2eb431da7bde",
+      "target_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ca8a9f42-2cb9-4d28-a5d3-5650ed5b67f9",
+      "relationship_type": "has",
+      "source_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd3ab6dd-d7df-4f54-9082-aa876d54e468",
+      "relationship_type": "has",
+      "source_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d23b53fd-b48c-4798-8bb0-deb18bc46536",
+      "relationship_type": "has",
+      "source_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--905f0c70-768a-4f60-9a8a-7597fe5f6662",
+      "relationship_type": "uses",
+      "source_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e453fb9-85a4-448b-9742-d225e38f9c0e",
+      "relationship_type": "uses",
+      "source_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94282470-2a80-4a1d-8ed1-4ba5e1bfbc3d",
+      "relationship_type": "has",
+      "source_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9e6c0b9-fa65-46f4-bf99-6482c48435aa",
+      "relationship_type": "has",
+      "source_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--095f2d5c-09a8-4d42-863b-6ac4fccecb82",
+      "relationship_type": "has",
+      "source_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1b4ba53-79fb-4281-beae-4dc154fe3fae",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e5c1dbd-5686-4e0a-8760-a9c93f544a66",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "target_ref": "tool--37b931bd-ec68-4b9d-9021-65a3a05b1c3f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ee5206c-3e5b-43a4-89ce-052d2b2a1aea",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4217659-dd05-486d-ad50-71dab521b847",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4f4c0de-5a81-4c17-82d1-e57b106392e9",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--e1f088ef-fa0b-4f30-a840-e6de9c37b1f0",
+      "target_ref": "software--d30105d6-249c-41ba-9476-dab2454c076c"
+    }
+  ]
+}

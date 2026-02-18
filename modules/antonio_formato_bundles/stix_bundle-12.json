@@ -1,0 +1,362 @@
+{
+  "type": "bundle",
+  "id": "bundle--07807272-d501-44f5-a095-2cc7a1861275",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "created": "2026-01-18T18:51:00.049154Z",
+      "modified": "2026-01-18T18:51:00.049154Z",
+      "name": "heilancoos.github.io",
+      "description": "heilancoos.github.io is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-18T18:51:00.049154Z",
+      "modified": "2026-01-18T18:51:00.049154Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-18T18:51:00.049154Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6ef42d9f-f8cf-3145-8411-f3442ed4de00",
+      "created": "2026-01-18T18:51:18.510436Z",
+      "modified": "2026-01-18T18:51:18.510436Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Unauthenticated API Access",
+      "description": "Attackers target Kubernetes clusters by accessing the Kubernetes API server without valid authentication credentials. In this campaign, adversaries exploit misconfigurations or default settings that leave the API server exposed to the network, allowing them to send unauthenticated requests. This can result in full control over cluster resources, including the ability to create, modify, or delete pods, services, and other objects. The technique is particularly dangerous because the API server is the central management point for the cluster, and unauthenticated access can bypass all intended security controls. Attackers may use tools like kubectl or custom scripts to interact with the API endpoint directly, leveraging the lack of authentication to enumerate resources and launch further attacks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+      "created": "2026-01-18T18:51:18.510523Z",
+      "modified": "2026-01-18T18:51:18.510523Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Overly Permissive Role-based Access Control",
+      "description": "Adversaries abuse misconfigured Role-based Access Control (RBAC) policies within Kubernetes clusters. In this threat scenario, attackers either obtain credentials for a legitimate user or exploit service accounts with excessive permissions. The RBAC misconfiguration allows them to escalate privileges, access sensitive resources, or perform administrative actions. For example, an attacker who compromises a low-privileged account may find that RBAC rules grant it cluster-admin privileges or access to all namespaces. This enables lateral movement, resource manipulation, and persistence. The technique is commonly used in Kubernetes attacks due to the complexity of RBAC configuration and the prevalence of overly broad roles in production environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1078/004/",
+          "external_id": "T1078.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--730b5c47-6351-74d5-48b6-80f4de5f79b0",
+      "created": "2026-01-18T18:51:18.510689Z",
+      "modified": "2026-01-18T18:51:18.510689Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Service Account Token Abuse",
+      "description": "Attackers exploit Kubernetes service account tokens to gain unauthorized access to cluster resources. In this campaign, adversaries obtain service account tokens either by accessing them directly from mounted volumes within pods or by compromising a pod that has a token assigned. These tokens are then used to authenticate API requests, allowing attackers to interact with the API server under the identity of the compromised service account. If the service account has broad permissions, the attacker can enumerate resources, modify configurations, or escalate privileges. The abuse of service account tokens is a common technique due to their widespread use and frequent over-permissioning in Kubernetes environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1528/",
+          "external_id": "T1528"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e0c29c46-1636-ef8a-0795-357c457cf160",
+      "created": "2026-01-18T18:51:18.510788Z",
+      "modified": "2026-01-18T18:51:18.510788Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Malicious Admission Controllers",
+      "description": "Adversaries deploy or modify Kubernetes admission controllers to inject malicious logic into the cluster's resource creation process. Admission controllers are components that intercept API requests before they are persisted, allowing for validation or mutation of resources. In this threat scenario, attackers compromise or create a custom admission controller that automatically modifies incoming resource definitions to include backdoors, privilege escalation mechanisms, or persistence techniques. This enables attackers to maintain control over the cluster and evade detection, as every new resource can be automatically altered to suit their objectives.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e6d0dca1-7a51-ed8d-3f27-0b1a8726023a",
+      "created": "2026-01-18T18:51:18.510872Z",
+      "modified": "2026-01-18T18:51:18.510872Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "CoreDNS Poisoning",
+      "description": "Attackers manipulate the CoreDNS configuration or data within a Kubernetes cluster to redirect or intercept network traffic. CoreDNS is responsible for internal DNS resolution, and poisoning its records allows adversaries to reroute service requests to malicious endpoints, facilitate man-in-the-middle attacks, or disrupt cluster operations. In this campaign, attackers gain access to the CoreDNS ConfigMap or directly modify DNS records, impacting service discovery and communication between pods. This can lead to data exfiltration, credential theft, or further compromise of cluster resources.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ca68d844-4556-44cd-eb4b-f308b07d985e",
+      "created": "2026-01-18T18:51:18.510988Z",
+      "modified": "2026-01-18T18:51:18.510988Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Writable Volume Mounts Abuse",
+      "description": "Adversaries exploit writable volume mounts in Kubernetes pods to gain persistence or access sensitive data. In this scenario, attackers target pods with volumes mounted in write mode, allowing them to store malicious payloads, modify application files, or harvest credentials and secrets. Writable mounts can also be used to escape container isolation by writing to host-mounted volumes or other shared resources. This technique is particularly effective in environments where volume permissions are not tightly controlled, enabling attackers to maintain a foothold or facilitate lateral movement within the cluster.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3f713cb4-7ebc-1e58-324a-5a20bca405c0",
+      "created": "2026-01-18T18:51:18.511078Z",
+      "modified": "2026-01-18T18:51:18.511078Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "Kubernetes Golden Ticket",
+      "description": "Attackers create or steal Kubernetes credentials (such as KubeConfig files or client certificates) that grant unrestricted access to the cluster, similar to the 'Golden Ticket' concept in Active Directory attacks. In this campaign, adversaries obtain or forge credentials that allow them to impersonate cluster administrators, bypassing all RBAC and authentication controls. With these credentials, attackers can perform any action within the cluster, including creating privileged pods, accessing secrets, and modifying critical configurations. The technique relies on either credential theft from compromised endpoints or the generation of fraudulent certificates using access to the certificate authority.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--0f12ee5c-9f1d-d901-5858-0f1c292b0d37",
+      "created": "2026-01-18T18:51:31.117099Z",
+      "modified": "2026-01-18T18:51:31.117099Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "kubectl",
+      "description": "Attackers can abuse kubectl to interact with the Kubernetes API server, modify cluster configurations, enumerate resources, and execute commands within containers after gaining access to a cluster or credentials.",
+      "tool_types": [
+        "remote-access",
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9fecae9d-dc56-cc36-8ceb-64850611e7bf",
+      "created": "2026-01-18T18:51:31.117187Z",
+      "modified": "2026-01-18T18:51:31.117187Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "etcdctl",
+      "description": "Malicious actors can use etcdctl to directly access and manipulate the etcd key-value store, potentially extracting secrets, service account tokens, or modifying cluster state for privilege escalation or persistence.",
+      "tool_types": [
+        "information-gathering",
+        "credential-exploitation",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--c7c1d7b6-819d-7256-038e-4c27fd390a3c",
+      "created": "2026-01-18T18:51:31.117239Z",
+      "modified": "2026-01-18T18:51:31.117239Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "etcdutl",
+      "description": "etcdutl can be leveraged to interact with etcd for backup, restore, and direct data manipulation, which attackers may use to exfiltrate sensitive data or alter cluster state.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--b4cffed0-92eb-2261-677e-6f35f1797ab5",
+      "created": "2026-01-18T18:51:31.117289Z",
+      "modified": "2026-01-18T18:51:31.117289Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "microk8s",
+      "description": "microk8s, a legitimate Kubernetes deployment tool, can be abused by attackers to deploy malicious workloads, escalate privileges, or manipulate cluster configuration if they gain access to the host.",
+      "tool_types": [
+        "exploitation",
+        "privilege-escalation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--054358ce-fa61-ead5-9519-90079af92856",
+      "created": "2026-01-18T18:51:31.117336Z",
+      "modified": "2026-01-18T18:51:31.117336Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "minikube",
+      "description": "minikube, typically used for local Kubernetes cluster setup, may be abused by attackers to create isolated environments for testing malicious configurations or persistence mechanisms.",
+      "tool_types": [
+        "exploitation",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--8adf56ad-116b-e901-bc1c-46fc138f5e35",
+      "created": "2026-01-18T18:51:31.117383Z",
+      "modified": "2026-01-18T18:51:31.117383Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "K3s",
+      "description": "K3s, a lightweight Kubernetes distribution, can be exploited by attackers to quickly deploy and control clusters for malicious purposes, including lateral movement or persistence.",
+      "tool_types": [
+        "exploitation",
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--739b7458-33fb-c0b3-6022-a8c61e5a2825",
+      "created": "2026-01-18T18:51:31.117429Z",
+      "modified": "2026-01-18T18:51:31.117429Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "kubeadm",
+      "description": "kubeadm, used for initializing and managing Kubernetes clusters, can be abused to reconfigure clusters, add rogue nodes, or alter cluster state if attackers gain administrative access.",
+      "tool_types": [
+        "exploitation",
+        "privilege-escalation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--703e9c64-0b9e-3ea6-30f6-687938e43c9a",
+      "created": "2026-01-18T18:51:31.117503Z",
+      "modified": "2026-01-18T18:51:31.117503Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "kubelet",
+      "description": "Attackers can abuse kubelet to execute commands in containers, access sensitive data, or manipulate workloads running on nodes after compromising credentials or exploiting misconfigurations.",
+      "tool_types": [
+        "remote-access",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--3639754e-fbd4-d269-2aa1-bbf75a677c49",
+      "created": "2026-01-18T18:51:31.117823Z",
+      "modified": "2026-01-18T18:51:31.117823Z",
+      "created_by_ref": "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+      "name": "A Brief Deep-Dive into Attacking and Defending Kubernetes - Heilan Cyber",
+      "description": "This report contains technical analysis and indicators from: https://heilancoos.github.io/research/2025/12/16/kubernetes.html",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-18T18:51:31.117823Z",
+      "object_refs": [
+        "identity--40e30188-5929-89cc-8dba-dcd0fce6a28a",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--6ef42d9f-f8cf-3145-8411-f3442ed4de00",
+        "attack-pattern--68059210-09f0-e5e3-ac4f-02e3b99654be",
+        "attack-pattern--730b5c47-6351-74d5-48b6-80f4de5f79b0",
+        "attack-pattern--e0c29c46-1636-ef8a-0795-357c457cf160",
+        "attack-pattern--e6d0dca1-7a51-ed8d-3f27-0b1a8726023a",
+        "attack-pattern--ca68d844-4556-44cd-eb4b-f308b07d985e",
+        "attack-pattern--3f713cb4-7ebc-1e58-324a-5a20bca405c0",
+        "tool--0f12ee5c-9f1d-d901-5858-0f1c292b0d37",
+        "tool--9fecae9d-dc56-cc36-8ceb-64850611e7bf",
+        "tool--c7c1d7b6-819d-7256-038e-4c27fd390a3c",
+        "tool--b4cffed0-92eb-2261-677e-6f35f1797ab5",
+        "tool--054358ce-fa61-ead5-9519-90079af92856",
+        "tool--8adf56ad-116b-e901-bc1c-46fc138f5e35",
+        "tool--739b7458-33fb-c0b3-6022-a8c61e5a2825",
+        "tool--703e9c64-0b9e-3ea6-30f6-687938e43c9a"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

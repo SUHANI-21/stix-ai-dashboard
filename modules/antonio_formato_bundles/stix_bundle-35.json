@@ -1,0 +1,259 @@
+{
+  "type": "bundle",
+  "id": "bundle--2880ca4c-e538-4c22-a981-1beedde13e0c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "campaign",
+      "id": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "name": "Recurring Credential-Based Attacks Targeting Palo Alto and SonicWall",
+      "description": "A campaign involving high-volume login and bruteforce attempts targeting Palo Alto Networks GlobalProtect portals and SonicWall SonicOS API endpoints. The campaign is characterized by the use of three identical client fingerprints across multiple events and infrastructure, indicating tooling continuity. Activity was observed in late September to mid-October 2025, with a resurgence in December 2025.",
+      "first_seen": "2025-09-20T00:00:00Z",
+      "last_seen": "2025-12-03T00:00:00Z",
+      "objective": "Credential harvesting and unauthorized access to network infrastructure.",
+      "aliases": [
+        "Palo Alto Networks Login Scanner",
+        "SonicWall SonicOS API Scanner"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--159c3b8e-da39-4b25-8fe4-e239a9aa5081",
+      "name": "Client Fingerprint Credential Attackers",
+      "description": "An intrusion set responsible for credential-based attacks against Palo Alto Networks GlobalProtect portals and SonicWall SonicOS API endpoints. The group is identified by the recurring use of three unique client fingerprints and shifting infrastructure across several ASNs.",
+      "aliases": [
+        "GlobalProtect/SonicWall Credential Attackers"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f19486c9-e619-47b0-b9f4-7054be9b3082",
+      "name": "Brute Force Credential Attack Against Network Authentication Portals",
+      "description": "Attackers attempt to gain unauthorized access to network authentication portals (e.g., Palo Alto GlobalProtect, SonicWall SonicOS API) using high-volume login and brute-force techniques.",
+      "x_mitre_id": "T1110",
+      "aliases": [
+        "Login Scanner",
+        "API Scanner"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--e7e4b6ef-cb20-4a21-aac6-b0ac64ccc217",
+      "name": "3xK GmbH Hosting Infrastructure",
+      "description": "Hosting infrastructure operated by 3xK GmbH used as the source of credential-based attacks on Palo Alto Networks GlobalProtect portals in December 2025.",
+      "aliases": [
+        "3xK GmbH"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--4653a03b-de6a-44e3-8a59-264929dc73b5",
+      "name": "NForce Entertainment B.V. (AS43350)",
+      "description": "ASN used as part of credential-based attacks targeting GlobalProtect portals in late September to mid-October 2025.",
+      "aliases": [
+        "AS43350"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--efbff0ff-4e6e-4776-bd61-7df3377184d2",
+      "name": "Data Campus Limited (AS215929)",
+      "description": "ASN used as part of credential-based attacks targeting GlobalProtect portals in late September to mid-October 2025.",
+      "aliases": [
+        "AS215929"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--e48e01fd-607b-4097-99fe-2202cef998f5",
+      "name": "Flyservers S.A. (AS209588)",
+      "description": "ASN used as part of credential-based attacks targeting GlobalProtect portals in late September to mid-October 2025.",
+      "aliases": [
+        "AS209588"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "name": "Internet Solutions & Innovations LTD. (AS211632)",
+      "description": "ASN used as part of credential-based attacks targeting GlobalProtect portals in late September to mid-October 2025.",
+      "aliases": [
+        "AS211632"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5f92b515-1fea-4317-a3e0-43cb02a05b09",
+      "value": "IP addresses used in campaign",
+      "description": "Over 7,000 IPs observed attempting logins to Palo Alto Networks GlobalProtect portals on 2 December 2025; linked to scanning against SonicWall SonicOS API endpoints."
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--145d8444-0435-441f-a38a-bbc4b365eabc",
+      "number": 43350,
+      "name": "NForce Entertainment B.V."
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--f9a4a444-248a-47f7-8b5b-43d1d9dcc6fb",
+      "number": 215929,
+      "name": "Data Campus Limited"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--9556c8e2-fe39-4a78-a864-f4c5bf633531",
+      "number": 209588,
+      "name": "Flyservers S.A."
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--f2c401bc-8403-4a8f-a38f-78c24a0f67b2",
+      "number": 211632,
+      "name": "Internet Solutions & Innovations LTD."
+    },
+    {
+      "type": "software",
+      "id": "software--65682a7d-5d2d-4469-baf3-310b915d2e98",
+      "name": "Palo Alto Networks GlobalProtect",
+      "description": "VPN portal targeted by credential-based attacks and login attempts."
+    },
+    {
+      "type": "software",
+      "id": "software--0a5ad867-a5d3-4d8a-9300-ce39214c1740",
+      "name": "SonicWall SonicOS",
+      "description": "API endpoints targeted by scanning activity using recurring client fingerprints."
+    },
+    {
+      "type": "user-agent",
+      "id": "user-agent--166649e1-09bc-4471-b8e7-082cd546a79d",
+      "name": "Recurring Client Fingerprints",
+      "description": "Three identical client fingerprints observed across multiple campaigns, indicating tooling continuity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07bb9a0b-4007-4c90-99f4-7288799cc8b9",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "intrusion-set--159c3b8e-da39-4b25-8fe4-e239a9aa5081"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1695d18-c0c5-4e91-88f0-1d9fee9d5770",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--159c3b8e-da39-4b25-8fe4-e239a9aa5081",
+      "target_ref": "tool--f162644b-3d8a-4eb6-a3b4-8a129389fac1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae4a75bc-c97f-43ad-8158-cfed63c9dd21",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "tool--f162644b-3d8a-4eb6-a3b4-8a129389fac1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1deaec15-a1a5-4ee7-9b83-99d2ab0ad04f",
+      "relationship_type": "uses",
+      "source_ref": "tool--f162644b-3d8a-4eb6-a3b4-8a129389fac1",
+      "target_ref": "user-agent--166649e1-09bc-4471-b8e7-082cd546a79d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1f7e01c-2d5c-4f3c-82f3-56f35b8d9495",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "attack-pattern--f19486c9-e619-47b0-b9f4-7054be9b3082"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43a28055-1d30-49bf-8e47-58d2a5192d87",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a40a158-dbeb-42e3-9675-c4f224de6da7",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d12e00ee-a410-48c0-abf0-7658f3f27a20",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ae89d18-8676-40d8-9386-846aac497919",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--75d9b95d-9e34-4647-b76f-7b011ef80097",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f86f687-422a-4908-9bd8-f4100d053ba9",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "ipv4-addr--5f92b515-1fea-4317-a3e0-43cb02a05b09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--83539020-262e-4587-9a2b-2ffbb899a4e3",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "software--0a5ad867-a5d3-4d8a-9300-ce39214c1740"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a998e085-9f4b-4633-872c-1ed18b30d75f",
+      "relationship_type": "uses",
+      "source_ref": "campaign--9e6b4862-947d-4b88-ad0a-67dcbd7a41b7",
+      "target_ref": "software--0a5ad867-a5d3-4d8a-9300-ce39214c1740"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--807eb96c-c5fc-4a53-b691-75d248c931f6",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "target_ref": "autonomous-system--248dc4cd-4520-4713-9760-3f28babf2ea9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27f1abee-bae0-4380-8ce2-0eb7d9b4ab44",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "target_ref": "autonomous-system--248dc4cd-4520-4713-9760-3f28babf2ea9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7b2d800-e0ee-4c86-8aaf-29950b8c9881",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "target_ref": "autonomous-system--248dc4cd-4520-4713-9760-3f28babf2ea9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13af5084-372b-4bfd-bc32-6e0ae8b8ec8f",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "target_ref": "autonomous-system--248dc4cd-4520-4713-9760-3f28babf2ea9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81423f01-04cb-4d18-a965-169df7ad457a",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--11b6dd6c-9b13-47f3-b2b3-a4d35c34245d",
+      "target_ref": "autonomous-system--248dc4cd-4520-4713-9760-3f28babf2ea9"
+    }
+  ]
+}

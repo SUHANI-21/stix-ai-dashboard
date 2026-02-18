@@ -1,0 +1,121 @@
+{
+  "type": "bundle",
+  "id": "bundle--aef7cb78-9dfb-4074-912f-17c5608bd300",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--d691f948-3db3-40bc-8c99-7634d9166246",
+      "name": "AI Website Builders",
+      "description": "AI-powered platforms used to create and host scam and phishing websites. Notable providers include Lovable, Elementor, Flazio, Softr, Webflow, WebWave, among others. These platforms offer automated design, localization, hosting, and APIs for streamlined webpage creation.",
+      "infrastructure_types": [
+        "hosting",
+        "web-service",
+        "automation"
+      ],
+      "created_by_ref": "identity--",
+      "labels": [
+        "ai-web-builder",
+        "hosting",
+        "automation"
+      ],
+      "external_references": [
+        {
+          "source_name": "Avast VibeScams Research",
+          "url": "https://github.com/avast/ioc/tree/master/VibeScams"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--580e050e-9f13-4372-a921-c99f9c9b8be3",
+      "name": "Avast Threat Research Team",
+      "description": "Threat research team investigating AI-generated phishing and scam websites (VibeScams).",
+      "identity_class": "organization",
+      "sectors": [
+        "technology",
+        "security"
+      ],
+      "contact_information": "https://github.com/avast/ioc/tree/master/VibeScams",
+      "labels": [
+        "research",
+        "security"
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2185a0e0-3e72-4291-8e13-1acb0c0b5659",
+      "value": "auth-binance.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9f2666b0-f982-4474-aa89-fbac8f77e611",
+      "value": "binance-cdn-auth.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ca55189a-6806-4d50-ba04-ae4a1d2432ea",
+      "value": "coinbase-wallet-verify.replit.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--45356e41-898f-4ae5-bcdb-ee8c601e7790",
+      "value": "coinbase-wallet.squarespace.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dde68f11-a07d-4091-8dae-625d3c5ce789",
+      "value": "auth-coinbase-login.typedream.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6c29009c-ef9c-46b6-adbe-fc0f736b5e20",
+      "value": "chrome-coinbase-extension.typedream.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b63d2865-1bc7-44c0-a73d-f4ff2a1e3f8f",
+      "value": "wallet-coinbase.typedream.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--eeeac791-7ca8-4dae-92a7-8ac8afb0af7d",
+      "value": "microsoft-teams-login.elementor.cloud"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5d7feb35-278d-4b72-89c1-e03685668749",
+      "value": "microsoft-outlookserver.odoo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d04013e1-1232-413f-b843-964e87190c1d",
+      "value": "cz-microsoft.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1c1854a9-4e44-4cfa-b6ab-a78296b03fb1",
+      "value": "updateaccount-microsoft.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bba4538e-bcff-4b2e-a9c4-55bd201df396",
+      "value": "app\u2014trrezor-wallet.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85af0a30-87c5-4e4c-90d1-6fa692f13f5c",
+      "value": "app-atomiic-wallet.webflow.io"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--29765ff4-3ded-4812-8960-429d77f74c10",
+      "value": "coiinbase-com-wallet.typedream.app"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9309e575-fcb5-4ca1-b9a8-7228d3d14878",
+      "value": "connect-metamesk-wallet.typedream.app"
+    }
+  ]
+}

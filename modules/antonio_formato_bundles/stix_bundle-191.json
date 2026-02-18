@@ -1,0 +1,340 @@
+{
+  "type": "bundle",
+  "id": "bundle--3b69e01e-9fd7-4d97-a0e7-205a43bc9959",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a3af34e9-090e-46f4-ac6d-6011638bf167",
+      "name": "Website Defacement",
+      "description": "Defacement of Rwandan government subdomains (naeb.gov.rw and minagri.gov.rw) in January 2025, indicating unauthorized modification of official websites.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a23ea29c-e6da-46ce-bfc8-b7ff7be4d2aa",
+      "name": "Distributed Denial of Service (DDoS)",
+      "description": "Telegram-based solicitation and execution of DDoS attacks against the National Bank of Rwanda website in May 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cfab7392-94a1-407f-af2d-694e6059592c",
+      "name": "Data Exfiltration",
+      "description": "Exfiltration and sale of large data dumps (52\u201353 GB) from the Rwandan Ministry of Health, including documents, CVs, emails, and SQL files, by ransomware affiliates in May and September 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--473e4c37-a6b5-4619-871e-b5d899b2b732",
+      "name": "Credential Theft via Stealer Malware",
+      "description": "Use of stealer malware (Acreed, Rhamadanthys, Vidar) to compromise credentials for multiple Rwandan government domains in August\u2013October 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "name": "Resurfacing and Amplification of Historic Leaks",
+      "description": "Coordinated campaign by ransomware-affiliated groups to republish and monetize historic Rwandan government data leaks from 2023 on Telegram and dark web forums in February\u2013March 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ff72e964-db7d-42b5-9dd1-565e52cc13de",
+      "value": "moh.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2e60cd31-6aa4-4237-8a6a-63bf032e8c61",
+      "value": "hmis.moh.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a59f8261-b815-47c4-8bb9-7fbdac8ae093",
+      "value": "bnr.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--23588d3d-eba0-4b3a-91b3-e823ee9cb5b9",
+      "value": "irembo.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--413d68b9-80de-4006-ad92-6a1f528fbf7f",
+      "value": "rra.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--69762e86-a54e-41ac-ba34-6e6e3cc27732",
+      "value": "mifotra.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0bdda037-cf5a-40e3-a4cb-1260ee1ed0ea",
+      "value": "naeb.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a226b873-1389-4167-b2ad-2bcfc7550397",
+      "value": "minagri.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9b87dc88-1ed5-475a-8019-aa9ec84b7c80",
+      "value": "cheno.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5d497c91-6708-40a8-a885-1ca151b88624",
+      "value": "cnlg.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b428f68c-339b-45ec-b2d1-3b42e8002f30",
+      "value": "nurc.gov.rw"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "value": "yego.gov.rw"
+    },
+    {
+      "type": "file",
+      "id": "file--53f8b49a-332c-4194-9f47-997fa6548171",
+      "name": "cheno.gov.rw.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--010d0bba-8e35-4f83-a6d3-1643f50ae335",
+      "name": "cnlg.gov.rw.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--679739e2-df52-41ac-a6a8-d5a4a59c0625",
+      "name": "nurc.gov.rw.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--74ea1605-82a3-4ecc-9f6e-f7aa38a2542f",
+      "name": "yego.gov.rw.zip"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f09a1c7f-1ee2-4794-af95-f2836ed7e95a",
+      "value": "197.243.23.144"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0acc1017-d17d-4352-8eb1-a29e7f8b96ff",
+      "value": "197.243.19.232"
+    },
+    {
+      "type": "url",
+      "id": "url--da0f0fc2-1a62-4e6e-8644-3e0205497d0d",
+      "value": "https://www.oes.naeb.gov.rw/ynr.html"
+    },
+    {
+      "type": "url",
+      "id": "url--4c9ae28f-6006-4781-8764-1c5d5d40a855",
+      "value": "https://eralis.minagri.gov.rw/ynr.html"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--993317b8-92f0-4dc8-b1b9-ffd48f1a0d56",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "ynR used website defacement against naeb.gov.rw and minagri.gov.rw in January 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a2c37dde-012b-4464-a387-8e3dca2ac6be",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Website defacement targeted naeb.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d741302d-c9da-4b65-bfe0-a17fbaffab5c",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Website defacement targeted minagri.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a39bd57-7c83-424e-9501-0fa1978bbc55",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Babuk Locker 2.0 Ransomware Affiliates used resurfacing and amplification of historic leaks in February\u2013March 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44882998-ff81-4c7c-89c6-4e6e77e22b82",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Vasa Locker Affiliate used data exfiltration against the Rwandan Ministry of Health in May 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c0146c17-31fc-4131-84f2-aa64a3d2de43",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Data exfiltration targeted moh.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e1af4c4-3cd3-4ad0-9e3f-160de4a0f515",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Data exfiltration targeted hmis.moh.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43665c06-0d23-4d6b-8fec-a1ca453620e4",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "koko used data exfiltration to advertise and sell a 53 GB data dump from Rwanda's Ministry of Health in September 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ef98e94-4d2a-4def-a6b7-e2712d7716cf",
+      "relationship_type": "uses",
+      "source_ref": "malware--c576f806-fd91-492b-9ade-bf2f0ba4c250",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Acreed stealer malware used credential theft via stealer malware against Rwandan government and telecom networks in August\u2013October 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e332c12-ee0e-4bbe-a407-f1248563b9ab",
+      "relationship_type": "uses",
+      "source_ref": "malware--c576f806-fd91-492b-9ade-bf2f0ba4c250",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Rhamadanthys stealer malware used credential theft via stealer malware against Rwandan government domains in August\u2013October 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57745109-4db9-41d6-aaad-56e2ceb5e2f5",
+      "relationship_type": "uses",
+      "source_ref": "malware--c576f806-fd91-492b-9ade-bf2f0ba4c250",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Vidar stealer malware used credential theft via stealer malware against .gov.rw domains in August\u2013October 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53f2f135-0e72-4656-9e5d-d196f3afa5c2",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Credential theft via stealer malware targeted irembo.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5dedb552-0369-4861-b978-75667aade0f8",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Credential theft via stealer malware targeted rra.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47eb85ac-8a51-4c78-ad93-e95333716117",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "domain-name--5a459bb5-f572-496b-ac56-5b2840ec7456",
+      "description": "Credential theft via stealer malware targeted mifotra.gov.rw.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f298bebf-9650-4b82-a021-6660c79a2414",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "hacxx used resurfacing and amplification of historic leaks by posting Rwandan government archives on a dark forum in November 2023.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1acb514c-8782-44c8-905e-bf8f02f2caf1",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "file--74ea1605-82a3-4ecc-9f6e-f7aa38a2542f",
+      "description": "Resurfacing and amplification of historic leaks targeted cheno.gov.rw.zip.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fa7de63-0aa2-421a-b995-476fceb5a848",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "file--74ea1605-82a3-4ecc-9f6e-f7aa38a2542f",
+      "description": "Resurfacing and amplification of historic leaks targeted cnlg.gov.rw.zip.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c57ca13-fdd3-41aa-ab10-9ba97bcdfabe",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "file--74ea1605-82a3-4ecc-9f6e-f7aa38a2542f",
+      "description": "Resurfacing and amplification of historic leaks targeted nurc.gov.rw.zip.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85af5236-0caa-4fcc-89bc-1b2f83a2476b",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "target_ref": "file--74ea1605-82a3-4ecc-9f6e-f7aa38a2542f",
+      "description": "Resurfacing and amplification of historic leaks targeted yego.gov.rw.zip.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--185e95bc-65b7-4c79-b756-79e32e4cc10b",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Babuk Locker used resurfacing and amplification of historic leaks via affiliates and Telegram channels.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe163a64-6107-4c8c-9918-1ed900be14a9",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Babuk Locker used data exfiltration and credential theft against Rwandan government infrastructure in 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55f1ef01-4712-4b98-aa32-14beb439238b",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--128ac3fe-de7c-477c-8620-3f594641a715",
+      "target_ref": "attack-pattern--45bc5486-5c7c-4cdc-b16f-8093ca290871",
+      "description": "Babuk Locker 2.0 Ransomware Affiliates used credential theft via stealer malware in August\u2013October 2025.",
+      "created": "2025-10-31T00:00:00Z"
+    }
+  ]
+}

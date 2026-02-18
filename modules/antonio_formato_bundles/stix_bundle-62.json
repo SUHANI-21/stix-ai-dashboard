@@ -1,0 +1,846 @@
+{
+  "type": "bundle",
+  "id": "bundle--d7ad4e5a-f585-4fff-affa-3ce877a23262",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--971916c3-4906-4d64-8ff9-650166c026e4",
+      "name": "React2Shell",
+      "description": "React2Shell (CVE-2025-55182) is a critical vulnerability in React server components that allows unauthenticated remote code execution through crafted HTTP POST requests. The vulnerability is innate in affected versions of React and can be exploited before any authentication, enabling attackers to execute arbitrary commands on vulnerable servers.",
+      "created": "2025-11-30T00:00:00Z",
+      "modified": "2025-12-03T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-55182"
+        }
+      ],
+      "labels": [
+        "remote-code-execution",
+        "web-application",
+        "critical"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--99cb3deb-ba7b-43cd-857e-3dda6f325463",
+      "name": "xmrig",
+      "description": "xmrig is a legitimate Monero cryptocurrency mining application that is heavily abused by threat actors for cryptojacking. In this campaign, xmrig was deployed to compromised Windows servers to mine Monero and deposit it into the C3pool mining pool.",
+      "malware_types": [
+        "cryptominer"
+      ],
+      "is_family": false,
+      "labels": [
+        "monero",
+        "cryptojacking",
+        "resource-theft"
+      ],
+      "external_references": [
+        {
+          "source_name": "C3pool",
+          "url": "https://auto.c3pool.org"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--6326f211-e1d1-4d24-92de-96f5f893c5b6",
+      "name": "PowerShell Reverse Shell",
+      "description": "A rudimentary PowerShell reverse shell was observed as a persistence mechanism after other remote access software was blocked. It enabled remote access to compromised Windows hosts.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": false,
+      "labels": [
+        "reverse-shell",
+        "powershell",
+        "windows"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--2422d604-2fd4-40cc-adc8-761fda46034a",
+      "name": "AnyDesk",
+      "description": "AnyDesk is a legitimate remote access software that was downloaded and attempted to be executed for persistence on compromised hosts. Execution was blocked by application control.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": false,
+      "labels": [
+        "remote-access",
+        "persistence",
+        "windows"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--86775477-8480-4e61-8dfe-269a8e549086",
+      "name": "Cryptojacking via React2Shell",
+      "description": "Attackers exploit React2Shell (CVE-2025-55182) by sending malicious HTTP POST requests to IIS servers running vulnerable React server components. After gaining code execution, they deploy cryptomining malware, attempt persistence through remote access tools, and use evasion techniques such as process hiding, tool renaming, and disabling firewalls.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182"
+        }
+      ],
+      "labels": [
+        "initial-access",
+        "execution",
+        "persistence",
+        "defense-evasion",
+        "cryptojacking"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--640b002e-1992-4068-963c-b1e8131f39f0",
+      "name": "Malicious File Hashes - React2Shell Cryptojacking Campaign",
+      "description": "Hashes of files used in the React2Shell cryptojacking campaign.",
+      "pattern": "[file:hashes.'SHA-256' = '4E628F3CF63563340D8BBCA977F2C6A631129A6B679D463A6690EC223EC2580A' OR file:hashes.'SHA-256' = 'D3A5AE68B714FE3F575E7F9AFFB65C66EE9E16849C28FA040BD66F553D0FF7B5' OR file:hashes.'SHA-256' = '75D25AD8CEDB8DB31F2B34B87B8EC67DBD1893DDBD0AC551A96E8834E9E181EE' OR file:hashes.'SHA-256' = '5EC5CB22734683121D6BD84D3C0BB7C8ED7B48F510BB1798B4DF4367907E7D22' OR file:hashes.'SHA-256' = 'E4E170691634D841E8976AE918D2DF223FEB359DB7F4B1C11A6669618BCE648D' OR file:hashes.'SHA-256' = 'D40E2061DE8AAA414A34CB989D7163493017F5189423F81F16A299EAFC7D5AA8' OR file:hashes.'SHA-256' = 'AE4991476ED082920E674457F4ECEB71367265F4D2150B89214ABCEB9EBF2407' OR file:hashes.'SHA-256' = '23EDED51DC1D8E053BB50249FBF36A2F57CF6F138626E33891E958E8C842FB71' OR file:hashes.'SHA-256' = '2530EBC8E77C784FFE628B3588739FF096A2AF4437656144983D1BA04B11538F' OR file:hashes.'SHA-256' = 'D2942D3B9B2E2DC98A34DC5A0D35C0FF7CB5AB419DFBA7B1FCA32FB6927732C4']",
+      "labels": [
+        "file-hash",
+        "cryptojacking",
+        "react2shell"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--ffa9de10-00bc-4632-aa0a-a436c3e3ee9e",
+      "name": "Malicious IP Addresses - React2Shell Cryptojacking Campaign",
+      "description": "IP addresses contacted or used in the React2Shell cryptojacking campaign.",
+      "pattern": "[ipv4-addr:value = '154.89.152.168' OR ipv4-addr:value = '154.89.152.151' OR ipv4-addr:value = '154.89.152.170' OR ipv4-addr:value = '115.42.60.97' OR ipv4-addr:value = '115.42.60.126' OR ipv4-addr:value = '92.246.87.48' OR ipv4-addr:value = '45.144.55.111' OR ipv4-addr:value = '39.59.59.33' OR ipv4-addr:value = '23.27.143.210' OR ipv4-addr:value = '205.185.126.196' OR ipv4-addr:value = '178.63.67.153' OR ipv4-addr:value = '178.63.67.106' OR ipv4-addr:value = '149.248.44.88' OR ipv4-addr:value = '139.59.59.33' OR ipv4-addr:value = '128.199.194.97' OR ipv4-addr:value = '104.18.50.34' OR ipv4-addr:value = '64.79.148.161' OR ipv4-addr:value = '59.7.217.245' OR ipv4-addr:value = '37.114.37.94' OR ipv4-addr:value = '37.114.37.82']",
+      "labels": [
+        "ip-address",
+        "cryptojacking",
+        "react2shell"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "name": "Malicious Domains - React2Shell Cryptojacking Campaign",
+      "description": "Domains used in the React2Shell cryptojacking campaign.",
+      "pattern": "[domain-name:value = 'pub-dc84e32afcfa417fa04d36454032549b.r2.dev' OR domain-name:value = 'kf.layuijs.top' OR domain-name:value = 'data-sugar-undefined-unsubscribe.trycloudflare.com' OR domain-name:value = 'commons-taylor-prayers-lunch.trycloudflare.com' OR domain-name:value = 'Clearskyspark.top' OR domain-name:value = 'Deepcloudspark.top' OR domain-name:value = 'Greenhillmatrix.top' OR domain-name:value = 'Silentmountcode.top' OR domain-name:value = 'meomeoli.mooo.com' OR domain-name:value = 'auto.c3pool.org' OR domain-name:value = 'mooo.com']",
+      "labels": [
+        "domain",
+        "cryptojacking",
+        "react2shell"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--4491bc12-2aa2-4395-a265-cc91505d179b",
+      "name": "curl",
+      "description": "curl is a command-line tool used to transfer data to or from a server. In this campaign, it was renamed to 'cual' for evasion.",
+      "labels": [
+        "data-transfer",
+        "evasion",
+        "tool-rename"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--b17cc877-56bd-4336-bad5-ad7a5d0d5e52",
+      "name": "wget",
+      "description": "wget is a command-line utility for downloading files from the web. In this campaign, it was renamed to 'wgat' for evasion.",
+      "labels": [
+        "data-transfer",
+        "evasion",
+        "tool-rename"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--8b0eb3f2-2c8c-4e6a-9faa-74c4f2318577",
+      "name": "iptables",
+      "description": "iptables is a Linux utility for configuring network packet filtering rules. Attackers used it to accept all connections and then flush all rules for evasion and disabling host firewalls.",
+      "labels": [
+        "firewall",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--460bda6f-3c20-4b36-9ba0-69cccb87d983",
+      "name": "UFW (Uncomplicated Firewall)",
+      "description": "UFW is a user-friendly interface for managing firewall rules on Linux. Attackers disabled UFW as part of their evasion tactics.",
+      "labels": [
+        "firewall",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528",
+      "name": "Aliyun Threat Detection Software",
+      "description": "Alibaba's Threat Detection Software (TDS, previously known as Aliyun) was specifically targeted for removal by attackers, who downloaded uninstall files and blocked associated IP addresses.",
+      "labels": [
+        "defense-evasion",
+        "security-software-target"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--37553f1c-668a-40d7-89d2-dcc58f2a08b7",
+      "name": "Tool Renaming for Evasion",
+      "description": "Attackers rename commonly monitored tools such as curl and wget to evade detection by security platforms.",
+      "labels": [
+        "defense-evasion",
+        "tool-rename"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "name": "Process Hiding via Bind Mount",
+      "description": "Attackers use bind mount techniques to link the mining process directory to a kernel thread directory, hiding it from process listing utilities such as ps.",
+      "labels": [
+        "defense-evasion",
+        "process-hiding",
+        "linux"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--e58ef9be-c40f-4a5c-a5f4-393decc81c7d",
+      "name": "vxy4gk2t.dll",
+      "hashes": {
+        "SHA-256": "4E628F3CF63563340D8BBCA977F2C6A631129A6B679D463A6690EC223EC2580A"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d103154c-8fb0-43fe-9e6b-86b87f1dfad8",
+      "name": "a.exe",
+      "hashes": {
+        "SHA-256": "D3A5AE68B714FE3F575E7F9AFFB65C66EE9E16849C28FA040BD66F553D0FF7B5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bc3d33b7-7ff1-4a4c-bcea-66a03299260f",
+      "name": "aa.exe",
+      "hashes": {
+        "SHA-256": "75D25AD8CEDB8DB31F2B34B87B8EC67DBD1893DDBD0AC551A96E8834E9E181EE"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--baba3d68-2b91-4f45-a3b0-59de61746571",
+      "name": "alive.sh",
+      "hashes": {
+        "SHA-256": "5EC5CB22734683121D6BD84D3C0BB7C8ED7B48F510BB1798B4DF4367907E7D22"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a87185de-8bed-476b-a0e2-be680707fa6f",
+      "name": "bolts.sh",
+      "hashes": {
+        "SHA-256": "E4E170691634D841E8976AE918D2DF223FEB359DB7F4B1C11A6669618BCE648D"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--de0f87cc-b97c-402a-9de4-292dd8fa3ea0",
+      "name": "lived.sh",
+      "hashes": {
+        "SHA-256": "D40E2061DE8AAA414A34CB989D7163493017F5189423F81F16A299EAFC7D5AA8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--96658799-0db9-49ee-ab10-6cdaf1b8e028",
+      "name": "setup2.sh",
+      "hashes": {
+        "SHA-256": "AE4991476ED082920E674457F4ECEB71367265F4D2150B89214ABCEB9EBF2407"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fb1b42b7-3fb7-4640-b231-0fc2e9976323",
+      "name": "sex.sh",
+      "hashes": {
+        "SHA-256": "23EDED51DC1D8E053BB50249FBF36A2F57CF6F138626E33891E958E8C842FB71"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a5efd85a-6f9d-43d8-a5dd-a2da07311831",
+      "name": "x",
+      "hashes": {
+        "SHA-256": "2530EBC8E77C784FFE628B3588739FF096A2AF4437656144983D1BA04B11538F"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d90a4695-69b5-4248-8e37-404e695da45a",
+      "name": "x86",
+      "hashes": {
+        "SHA-256": "D2942D3B9B2E2DC98A34DC5A0D35C0FF7CB5AB419DFBA7B1FCA32FB6927732C4"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--213b66e7-2d4a-4b21-aa1a-fa0c39fb4275",
+      "value": "154.89.152.168"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7f4c872d-43e9-4002-bae4-d1e1a6a653c8",
+      "value": "154.89.152.151"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7d275b67-0b3d-45ea-be2b-740e76610918",
+      "value": "154.89.152.170"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e7cd09fb-fc3a-4f75-90ca-87838f32c934",
+      "value": "115.42.60.97"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c3902dab-2add-4de5-85ce-063407158b4a",
+      "value": "115.42.60.126"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7919a26f-b650-4091-8e2c-b8f96ae00d11",
+      "value": "92.246.87.48"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--af354edd-139d-470c-b162-9e3b5766b207",
+      "value": "45.144.55.111"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f441f4f2-41f5-4f25-b805-378b29ea872e",
+      "value": "39.59.59.33"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--20548437-8abf-4cb7-9902-2c3bd5ec566a",
+      "value": "23.27.143.210"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2653e200-f575-4787-8bea-ec53db9534c0",
+      "value": "205.185.126.196"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0c82446-fb2e-4d3f-b748-f08cb271f3bb",
+      "value": "178.63.67.153"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1e1ee03a-dbf0-4bf6-8b22-1749c724ecf0",
+      "value": "178.63.67.106"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c100b4bc-fba8-4913-aa02-f6bd61903fc4",
+      "value": "149.248.44.88"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9d695b3d-4bb6-4faa-9b8e-925cd8b53fb4",
+      "value": "139.59.59.33"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b81902c6-93c7-413a-a92c-fab98ad72f8f",
+      "value": "128.199.194.97"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--376faa85-2383-4728-91f1-c9a679729b55",
+      "value": "104.18.50.34"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a1c4bef4-1a48-4398-bba4-455e51a61d88",
+      "value": "64.79.148.161"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3eeca016-337c-48f6-a6c3-3e535013c046",
+      "value": "59.7.217.245"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--973c1533-91b4-4731-9670-0d3e0e879527",
+      "value": "37.114.37.94"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1",
+      "value": "37.114.37.82"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5fec1d8d-fc86-471f-a372-d2036a63dce6",
+      "value": "pub-dc84e32afcfa417fa04d36454032549b.r2.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1d2649f5-d9c2-4fbe-b964-233549ef1963",
+      "value": "kf.layuijs.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e6799287-570d-49ff-ba6b-64c78e242460",
+      "value": "data-sugar-undefined-unsubscribe.trycloudflare.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--83711dcb-a9da-4bf7-8aa1-1972cfb429ed",
+      "value": "commons-taylor-prayers-lunch.trycloudflare.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9e3cf11f-b336-450d-9862-c5197be331c4",
+      "value": "Clearskyspark.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c762498b-f28b-4947-aeac-0cad835d0ebe",
+      "value": "Deepcloudspark.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--674943c2-97cc-4916-a0bc-3f3a08944f30",
+      "value": "Greenhillmatrix.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--18a6840e-c533-417e-95f8-f498d57466df",
+      "value": "Silentmountcode.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6fbdde7e-0c7d-45d1-84ed-9720db3f9f26",
+      "value": "meomeoli.mooo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ed176759-9f5c-48d9-b473-3e44b2fb2121",
+      "value": "auto.c3pool.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747",
+      "value": "mooo.com"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--99baf181-c7b3-43bb-9962-92a574f9ca08",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "vulnerability--971916c3-4906-4d64-8ff9-650166c026e4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97c85e46-fe5e-4119-97ba-12e70757a70d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "malware--2422d604-2fd4-40cc-adc8-761fda46034a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--859c818a-75c2-4c42-b307-36bd66ba1f6d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "malware--2422d604-2fd4-40cc-adc8-761fda46034a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5448766-e9e8-433f-ab4a-b194fc13d873",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "malware--2422d604-2fd4-40cc-adc8-761fda46034a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d35a6727-5b8c-4d41-8cde-9878ed51304a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9373e758-c7b4-4c25-a655-69321372c510",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd966746-98e6-4276-be0d-6f1622d29489",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--131dcdbc-3c98-41c6-839b-61a4c3d8a06b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1b8ddb5-fcd7-405a-a476-7945b92e76db",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f70a0fdf-bfc9-4ac9-a339-2760dc0771eb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--979ca349-996b-4cf8-ac9d-d90af91c586f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e1ef9557-203a-4f31-91fa-f6e0c871194f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--859e0a39-8d29-4643-8dd6-719ac3ad17f4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--843855f6-573a-4a58-a864-dff307387718",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--500706c6-7a3e-45e4-896b-9c408b256c25",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "file--d90a4695-69b5-4248-8e37-404e695da45a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--033fe602-2a68-4b04-a77b-ff609defc1a3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19820712-87e6-4bfc-b4f1-b824ca92a1b1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ea1168ab-fa62-470e-b4a3-bacd4f5506bf",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--526e53e2-2e06-40bd-adfb-dba6e8a7a0d4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4888e5e9-2072-4174-9f06-78a7b823cb57",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45c19a8f-74a2-4456-a3ee-8eb3e7a4f858",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20888550-8499-495f-bb6b-f2f9739334f1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5bd2848c-b5d5-405e-97a1-1b66bb148c6f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fafe2758-2e11-4488-86b7-312791ca227e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39955a8d-3c55-4faf-9e69-e8ddb2a99e63",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a17b4144-6224-4588-b876-7e7138e73722",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a737e136-a611-4652-8450-3ba9b399bf8c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8d4d3463-bec9-4a81-ae83-7246721d31af",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5be7c42-cef8-4452-900c-15cb5fd46f2c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ce73a68-0e13-4dba-970f-6498a968124b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e531bffb-6ef0-42ee-b58c-5c951592086a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28577ebc-45d9-49c3-9238-bbd2853cdf1e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eaedda98-cebd-4087-b102-889506764696",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b86cc366-1c1c-4bf4-b901-8f547d0a42b2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57fcbaf8-0a5a-4e2b-8fca-b9f9bc006a3f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23fc9dcb-9f28-4202-a584-4c2bbdc0a868",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30a830a8-5304-452b-9db5-111bf8c9bd18",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb18bd0a-9ccb-4901-911c-1bee5a9b3e8e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f2cf8f9-6518-4df3-9c2c-411187ce7314",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "ipv4-addr--3d15c8c8-aa59-416b-80e4-5ff6f4d0a2a1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5e2da0a-f6c4-4474-83a5-688162be1681",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33eb8917-22de-4644-904b-9cd4835f65b6",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ea3bd184-a393-4e33-a352-ff1704efbcfb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cf8716b-6c0c-45dd-97fa-23536eeaa2d3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30722edc-4934-4c22-9f63-e8d917954e30",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e14566e5-6d94-453f-bd1e-991c3d4eb99e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c23d039-f20d-435b-87a5-211a0993121e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--503d7fd6-1218-4cde-a078-264d03e218f1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63692a66-462f-4366-be7f-f6ee02a26d7a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7638959a-fdec-4393-907e-bd26e13bc8a7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d89c9c42-1d86-4b89-97ae-f4ec2e033cfb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d336454-acb2-4d86-a31e-88a505ff0bba",
+      "target_ref": "domain-name--c9718e62-634f-4173-a4b5-1ada73d88747"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31331029-5ebc-44b9-99b6-26b12774a36c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fd936ef1-bd45-48d7-83c0-d9529df2966d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3e9f87c-a0f4-4daa-a876-8a0bafc865fe",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08524dd1-2bbc-4837-a2aa-11f28a1605a5",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edc19b25-d7ba-4877-badc-95a06cc607d3",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86c4fba6-a4f9-433d-b95a-37541b800fa0",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "tool--5d95ddb1-9e53-46d9-bc36-a9c1051c8528"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ffefb765-4142-40d5-873b-98dfcadb47dd",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6cd81410-c6f8-4c30-ac48-56154e964f63",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133",
+      "target_ref": "attack-pattern--58edb0eb-9942-4eef-9441-482064c9e133"
+    }
+  ]
+}

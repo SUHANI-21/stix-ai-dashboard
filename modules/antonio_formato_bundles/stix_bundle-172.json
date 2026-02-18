@@ -1,0 +1,292 @@
+{
+  "type": "bundle",
+  "id": "bundle--a5bc2337-70b1-4f9f-9cd8-cf96d946fff8",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--b4e0033f-ebde-4785-b7a1-2e4cf9d0206a",
+      "name": "Gamaredon",
+      "aliases": [
+        "Primitive Bear"
+      ],
+      "description": "Gamaredon is a Russian-aligned advanced persistent threat (APT) group active since at least 2013, primarily focused on cyber espionage. The group is believed to be part of Russia's Federal Security Service (FSB) 18th Information Security Center. Gamaredon has conducted more than 5000 cyber-attacks, mostly targeting Ukrainian government agencies, and has expanded operations to include NATO member states, likely aiming to disrupt military aid to Ukraine.",
+      "first_seen": "2013-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage",
+        "Hybrid warfare"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "disruption"
+      ],
+      "external_references": [
+        {
+          "source_name": "Security Service of Ukraine",
+          "url": "https://ssu.gov.ua/en/novyny/sbu-vstanovyla-khakeriv-fsb-yaki-zdiisnyly-ponad-5-tys-kiberatak-na-derzhavni-orhany-ukrainy"
+        },
+        {
+          "source_name": "ESET",
+          "url": "https://www.welivesecurity.com/en/eset-research/cyberespionage-gamaredon-way-analysis-toolset-used-spy-ukraine-2022-2023/"
+        }
+      ],
+      "country": "Russia"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--a9b884bb-d0a8-4d6e-b517-ecaa516ac209",
+      "name": "Lazarus Group",
+      "aliases": [
+        "Lazarus",
+        "Hidden Cobra"
+      ],
+      "description": "Lazarus is a state-sponsored threat actor active since 2009 and widely believed to operate under North Korea\u2019s government. Initially focused on cyber espionage and destructive attacks, Lazarus later shifted toward financially motivated operations to fund future campaigns. The group is linked to North Korea\u2019s Reconnaissance General Bureau (RGB) and has been responsible for high-profile cryptocurrency thefts and espionage campaigns.",
+      "first_seen": "2009-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage",
+        "Financial theft",
+        "Destructive attacks"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "financial gain",
+        "sabotage"
+      ],
+      "external_references": [
+        {
+          "source_name": "US Department of Justice",
+          "url": "https://www.justice.gov/archives/opa/pr/north-korean-regime-backed-programmer-charged-conspiracy-conduct-multiple-cyber-attacks-and"
+        },
+        {
+          "source_name": "FBI Stake.com",
+          "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-lazarus-group-cyber-actors-as-responsible-for-theft-of-41-million-from-stakecom"
+        },
+        {
+          "source_name": "FBI AtomicWallet",
+          "url": "https://www.fbi.gov/news/press-releases/fbi-identifies-cryptocurrency-funds-stolen-by-dprk"
+        },
+        {
+          "source_name": "Business Today WazirX",
+          "url": "https://www.businesstoday.in/technology/news/story/wazirx-hacked-north-korean-hackers-behind-235-million-theft-from-indian-investors-report-reveals-439240-2024-07-29"
+        },
+        {
+          "source_name": "Neobanque Bybit",
+          "url": "https://neobanque.ch/blog/bybit-1-4-billion-hack-lazarus-group-2025/"
+        }
+      ],
+      "country": "North Korea"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--7da07726-91d8-4fcf-86c4-17cc7b7f1eb7",
+      "name": "Kimsuky",
+      "aliases": [],
+      "description": "Kimsuky is a North Korean APT group active since around 2012, assessed to operate under the Reconnaissance General Bureau (RGB). The group specializes in advanced cyber-espionage campaigns, primarily targeting government entities and consumer-facing organizations.",
+      "first_seen": "2012-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "Mandiant",
+          "url": "https://cloud.google.com/blog/topics/threat-intelligence/mapping-dprk-groups-to-government"
+        }
+      ],
+      "country": "North Korea"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--c7d42dee-b59c-4688-aea6-288dd97a6186",
+      "name": "DoNot",
+      "aliases": [
+        "APT-C-35"
+      ],
+      "description": "DoNot is a state-sponsored APT group believed to have been active since 2013 with ties to the Indian government and a primary focus on cyber espionage.",
+      "first_seen": "2013-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "Amnesty International",
+          "url": "https://www.amnesty.org/en/latest/news/2021/10/togo-activist-targeted-with-spyware-by-notorious-hacker-group/"
+        }
+      ],
+      "country": "India"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "name": "SideWinder",
+      "aliases": [],
+      "description": "SideWinder is a state-sponsored APT group active since 2012, believed to have ties to the Indian government and a primary focus on cyber espionage.",
+      "first_seen": "2012-01-01T00:00:00Z",
+      "goals": [
+        "Cyber espionage"
+      ],
+      "resource_level": "nation-state",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "AT&T Cybersecurity",
+          "url": "https://cdn-cybersecurity.att.com/docs/global-perspective-of-the-sidewinder-apt.pdf"
+        }
+      ],
+      "country": "India"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3e8e6b71-5527-4aaa-ae73-688ccd0c11f4",
+      "value": "144.172.112.106"
+    },
+    {
+      "type": "file",
+      "id": "file--c8b9e0d6-d568-48e9-a7d1-46d5ba039f0f",
+      "hashes": {
+        "SHA-256": "128da948f7c3a6c052e782acfee503383bf05d953f3db5c603e4d386e2cf4b4d"
+      },
+      "name": "InvisibleFerret"
+    },
+    {
+      "type": "url",
+      "id": "url--cbada003-f90e-4d09-85aa-267222bcefa6",
+      "value": "http://144.172.112.106/payload/99/81"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "value": "216.219.87.41"
+    },
+    {
+      "type": "file",
+      "id": "file--b0373320-bf5c-40ed-a759-ba5a73ce023f",
+      "hashes": {
+        "SHA-256": "cce27340fd6f32d96c65b7b1034c65d5026d7d0b96c80bcf31e40ab4b8834bcd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d9b38409-a6c5-4e0b-b4e8-5ab9894896a5",
+      "hashes": {
+        "SHA-256": "8bb089d763d5d4b4f96ae59eb9d8f919e6a49611c183f636bfd5c01696447938"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "hashes": {
+        "SHA-256": "f4d10604980f8f556440460adc71883f04e24231d0a9a3a323a86651405bedfb"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6bd7fb22-873b-4058-94dc-1fda669b5a2a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "description": "Lazarus Group used InvisibleFerret malware, which was observed in 2025 hosted on infrastructure overlapping with Gamaredon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--096e734f-234f-48eb-9567-04c9b19ccfe3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "description": "Lazarus Group used ContagiousInterview malware in campaigns targeting job seekers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--095a6102-9c76-4b1e-98ef-117c7b0944ed",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "description": "Gamaredon used IP address 144.172.112.106 for Command-and-Control infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--452d7d70-c36e-4abc-bc0f-9d273982844c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "description": "Lazarus Group used IP address 144.172.112.106 for hosting InvisibleFerret malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7f222e5-76eb-4e03-9d04-9a943d0ddf4b",
+      "relationship_type": "uses",
+      "source_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "target_ref": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "description": "InvisibleFerret malware is represented by the file with SHA256: 128da948f7c3a6c052e782acfee503383bf05d953f3db5c603e4d386e2cf4b4d."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c183a74-8859-49b6-b59c-6125030dec15",
+      "relationship_type": "uses",
+      "source_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "target_ref": "url--cbada003-f90e-4d09-85aa-267222bcefa6",
+      "description": "InvisibleFerret malware was delivered via the URL http://144.172.112.106/payload/99/81."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--06947feb-74a7-4f59-bf79-3e5ee497a806",
+      "relationship_type": "uses",
+      "source_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "target_ref": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "description": "InvisibleFerret malware was hosted on IP address 144.172.112.106."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d42d4f2-9378-4f7c-bd6f-151ff1dbf530",
+      "relationship_type": "uses",
+      "source_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "target_ref": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "description": "ContagiousInterview malware delivered a payload represented by the file with SHA256: cce27340fd6f32d96c65b7b1034c65d5026d7d0b96c80bcf31e40ab4b8834bcd."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e9d38b8-f280-4cf6-a79b-aae7b40e34e4",
+      "relationship_type": "uses",
+      "source_ref": "malware--43d2bf95-3bc9-4be1-b1b6-b0393058f803",
+      "target_ref": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "description": "ContagiousInterview malware was delivered via infrastructure at IP address 216.219.87.41."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a7d2568-4ba3-4d0b-8076-739cc53b7315",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "ipv4-addr--25c561a1-2db5-48be-b480-9b044c835490",
+      "description": "Kimsuky used IP address 216.219.87.41 in its campaigns, indicating infrastructure overlap with Lazarus."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03b7cb8f-552d-4372-afd6-0730f95b6ff8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "description": "Kimsuky used the file with SHA256: cce27340fd6f32d96c65b7b1034c65d5026d7d0b96c80bcf31e40ab4b8834bcd in its campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23c8682b-6f77-4798-9c10-253bd27c622f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "description": "DoNot used the file with SHA256: 8bb089d763d5d4b4f96ae59eb9d8f919e6a49611c183f636bfd5c01696447938 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3dbc2af-e224-424e-8833-55bad312ac28",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3eabf971-4ce6-4a9e-abf8-58e95a5a1528",
+      "target_ref": "file--75ad5a02-422f-4c6d-82e0-21d784342551",
+      "description": "SideWinder used the file with SHA256: f4d10604980f8f556440460adc71883f04e24231d0a9a3a323a86651405bedfb as a loader."
+    }
+  ]
+}

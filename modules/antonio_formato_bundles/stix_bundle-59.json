@@ -1,0 +1,291 @@
+{
+  "type": "bundle",
+  "id": "bundle--144d6882-673c-4c0a-961d-2366ce7e0379",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d1176460-a37d-4399-b9c1-2d5cdbcc953b",
+      "name": "Typosquatting in Maven Central",
+      "description": "Attackers publish a malicious package under a namespace nearly identical to a popular library (org.fasterxml.jackson.core vs com.fasterxml.jackson.core), exploiting Java's reverse-domain convention and TLD prefix swaps to trick developers into installing the malware.",
+      "external_references": [
+        {
+          "source_name": "Aikido Security Blog",
+          "url": "https://www.aikido.dev/blog/maven-central-jackson-typosquatting-malware"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dd3f12ea-35ea-4f8e-b770-fcf068b5dc87",
+      "name": "Domain Typosquatting",
+      "description": "Malicious infrastructure uses a domain (fasterxml.org) that closely mimics the legitimate vendor's domain (fasterxml.com) to evade casual inspection and facilitate command-and-control.",
+      "external_references": [
+        {
+          "source_name": "Aikido Security Blog",
+          "url": "https://www.aikido.dev/blog/maven-central-jackson-typosquatting-malware"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f",
+      "name": "Multi-stage Payload Delivery",
+      "description": "Malware contacts a C2 server to retrieve AES-encrypted configuration, selects platform-specific payload URLs, downloads payloads, and executes them with suppressed output. Establishes persistence via marker file.",
+      "external_references": [
+        {
+          "source_name": "Aikido Security Blog",
+          "url": "https://www.aikido.dev/blog/maven-central-jackson-typosquatting-malware"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--3c2d65b8-e03c-4c70-b3e7-741121044392",
+      "name": "Charlie Eriksen",
+      "description": "Security Researcher at Aikido Security, author of the analysis.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.aikido.dev/team-members/charlie-eriksen"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--da7ed928-1b5c-4dc6-9092-545f13b75960",
+      "value": "fasterxml.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb",
+      "value": "m.fasterxml.org"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--973d2bb8-e277-4f9c-a6c7-62fd0c54ca2e",
+      "value": "103.127.243.82"
+    },
+    {
+      "type": "url",
+      "id": "url--8f6484a2-7dad-4509-93d2-0d621a9701fa",
+      "value": "http://m.fasterxml.org:51211/config.txt"
+    },
+    {
+      "type": "url",
+      "id": "url--e4f77655-b60e-44d4-bdb1-ab1fd5c7a0b6",
+      "value": "http://103.127.243.82:8000/http/192he23/svchosts.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037",
+      "value": "http://103.127.243.82:8000/http/192he23/update"
+    },
+    {
+      "type": "file",
+      "id": "file--fd704ec0-b301-4d12-9e6e-eaaf67876e6e",
+      "name": "svchosts.exe",
+      "hashes": {
+        "SHA-256": "8bce95ebfb895537fec243e069d7193980361de9d916339906b11a14ffded94f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a56669f0-e13e-46b2-b744-a3e8c0d75353",
+      "name": "update",
+      "hashes": {
+        "SHA-256": "702161756dfd150ad3c214fbf97ce98fdc960ea7b3970b5300702ed8c953cafd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0d69b442-4c14-4087-ad62-30c1a80d6e99",
+      "name": ".idea.pid"
+    },
+    {
+      "type": "file",
+      "id": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869",
+      "name": "payload.bin"
+    },
+    {
+      "type": "software",
+      "id": "software--3f47cd6a-5c12-42dd-b0df-c0a485dd3e23",
+      "name": "org.fasterxml.jackson.core/jackson-databind",
+      "cpe": "cpe:2.3:a:org.fasterxml.jackson.core:jackson-databind:*"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9afe22e-1a0a-49a7-a06e-8fd3fcba6a51",
+      "relationship_type": "uses",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97af16b5-362d-4993-a9f5-8293972fdcc9",
+      "relationship_type": "uses",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70f0228f-1d09-4f32-aafb-7e7a9aa2a535",
+      "relationship_type": "uses",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1019ae6a-d3cf-4a25-a25f-252481937baa",
+      "relationship_type": "uses",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "software--3f47cd6a-5c12-42dd-b0df-c0a485dd3e23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77797e3f-3ab4-43f7-b43f-bfa0890b48fb",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5608db7d-2d2a-4be2-8a8e-d9e43606e21f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bdb31cc2-964f-4448-81c2-a14c0b7ed8c1",
+      "relationship_type": "downloads",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0eda8640-eb7f-4d61-8043-1c61e669cd95",
+      "relationship_type": "downloads",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10f22ea4-0dfd-40af-9efc-51b5dde43305",
+      "relationship_type": "downloads",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6289f3a6-e161-4cd2-ab8c-ec70ab58b7b2",
+      "relationship_type": "downloads",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85be4d79-d9b3-4b5e-a923-e6ae8ba641ec",
+      "relationship_type": "downloads",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19fd523e-308a-49b4-92c3-a002979f9e1d",
+      "relationship_type": "creates",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6668e87e-0676-4629-8fa1-43bad9078610",
+      "relationship_type": "creates",
+      "source_ref": "malware--209c96dc-3e75-494a-9a79-aa79f915688a",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbb0c404-02ca-4e28-af0d-dba3e64b6ba5",
+      "relationship_type": "uses",
+      "source_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869",
+      "target_ref": "tool--e6f2c8b9-278c-4696-95d2-893e8b8ac56a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9eb70e15-8873-45b4-b1b7-5c8373278172",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddfdd148-911c-46bf-b740-8f9dd3ba4991",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4091fe84-0922-499a-8a6b-57c0962f9b36",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--a598cc8a-b32a-4b49-aad5-0306f497e28f",
+      "target_ref": "software--3f47cd6a-5c12-42dd-b0df-c0a485dd3e23"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89ba9315-123c-4645-8861-3da2b8e8d494",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c66ffc4-fe8c-4dcd-84d5-f35e7e91e000",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "domain-name--c9c64680-e381-4949-8f58-3a61cd953edb"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dcbb62f9-0b50-4f3f-8211-e4accd27334f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "ipv4-addr--973d2bb8-e277-4f9c-a6c7-62fd0c54ca2e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f134839c-8ca9-40ab-9afb-6b4db8581ab3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3fb8f0fd-d477-456d-a00f-a0ad7592ffa9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6702dc40-d0eb-41ea-b0ea-4bae7bb36afe",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "url--3b27b5b7-6ef6-4620-80f4-573a574c8037"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d29027c6-10d2-4c9b-9f34-61e7eca29c95",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c165133-787b-45cd-9df5-ec7b2d762fd7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--738b0d0e-0ea4-4065-b59e-14d72a02882e",
+      "target_ref": "file--773db90e-e925-4ce6-acd9-7f61bb3f4869"
+    }
+  ]
+}

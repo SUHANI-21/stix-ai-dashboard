@@ -1,0 +1,235 @@
+{
+  "type": "bundle",
+  "id": "bundle--ce26a601-aeac-4bc7-8cfd-852fcedeeeb7",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--47f20f59-c90f-41b1-adc2-b337a28b4880",
+      "hashes": {
+        "SHA-256": "da2c58308e860e57df4c46465fd1cfc68d41e8699b4871e9a9be3c434283d50b"
+      },
+      "name": "klklznuah.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--5ee2fc09-4024-439e-91ed-7b4fe05595e2",
+      "hashes": {
+        "SHA-256": "82794015e2b40cc6e02d3c1d50241465c0cf2c2e4f0a7a2a8f880edaee203724"
+      },
+      "name": "Snieoatwtregoable.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0cf9d83c-8d7e-4a5f-8ded-a924f35244e2",
+      "hashes": {
+        "SHA-256": "c65170be2bf4f0bd71b9044592c063eaa82f3d43fcbd8a81e30a959bcaad8ae5"
+      },
+      "name": "Snieoatwtregoable.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--29430b86-5363-4b31-b96d-1cfccdc99d30",
+      "hashes": {
+        "SHA-256": "2515b546125d20013237aeadec5873e6438ada611347035358059a77a32c54f5"
+      },
+      "name": "ollama.sys",
+      "signatures": [
+        {
+          "certificate_issuer": "Kunming Wuqi E-commerce Co., Ltd.",
+          "valid_from": "2025-02-03",
+          "valid_to": "2026-02-03"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--9281e15d-41c9-45f5-bfa5-48b40bff6b44",
+      "hashes": {
+        "SHA-256": "1613a913d0384cbb958e9a8d6b00fffaf77c27d348ebc7886d6c563a6f22f2b7"
+      },
+      "name": "tp.png"
+    },
+    {
+      "type": "file",
+      "id": "file--b820d8c4-bcb5-4af3-8811-1ba9b2054863",
+      "hashes": {
+        "SHA-256": "395f835731d25803a791db984062dd5cfdcade6f95cc5d0f68d359af32f6258d"
+      },
+      "name": "1.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--32edbff4-e713-45be-a253-e47059ca640b",
+      "hashes": {
+        "SHA-256": "1c1528b546aa29be6614707cbe408cb4b46e8ed05bf3fe6b388b9f22a4ee37e2"
+      },
+      "name": "fhq.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--2594d548-038d-429c-a83a-b27f4b13e697",
+      "hashes": {
+        "SHA-256": "4d5beb8efd4ade583c8ff730609f142550e8ed14c251bae1097c35a756ed39e6"
+      },
+      "name": "1.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--c183464f-4078-49f3-be33-0e5fae0de09e",
+      "hashes": {
+        "SHA-256": "96f401b80d3319f8285fa2bb7f0d66ca9055d349c044b78c27e339bcfb07cdf0"
+      },
+      "name": "{31351756-3F24-4963-8380-4E7602335AAE}.cip"
+    },
+    {
+      "type": "file",
+      "id": "file--aa22fa8e-0e3b-48f3-b2a1-4aa7bfecdbe8",
+      "hashes": {
+        "SHA-256": "33b494eaaa6d7ed75eec74f8c8c866b6c42f59ca72b8517b3d4752c3313e617c"
+      },
+      "name": "goldendays.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--1fc2f479-d02a-42f0-b35b-f928c4d603f2",
+      "hashes": {
+        "SHA-256": "fc63f5dfc93f2358f4cba18cbdf99578fff5dac4cdd2de193a21f6041a0e01bc"
+      },
+      "name": "trustinstaller.bin"
+    },
+    {
+      "type": "file",
+      "id": "file--c6634d48-9d3f-4c37-95c6-d1a54b9fd8ec",
+      "hashes": {
+        "SHA-256": "fd4dd9904549c6655465331921a28330ad2b9ff1c99eb993edf2252001f1d107"
+      },
+      "name": "Enpug.bin"
+    },
+    {
+      "type": "file",
+      "id": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "hashes": {
+        "SHA-256": "3dd470e85fe77cd847ca59d1d08ec8ccebe9bd73fd2cf074c29d87ca2fd24e33"
+      },
+      "name": "6uf9i.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b646dd6e-3e95-453f-bf3e-11f58506f77f",
+      "value": "qaqkongtiao.com"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c6dab2a-033c-4b19-a108-902f0a7fc532",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "The initial NSIS installer klklznuah.msi drops Snieoatwtregoable.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfa920c1-bc59-415d-a2c3-505bd83caf96",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "The malicious installer Snieoatwtregoable.exe drops Snieoatwtregoable.dll and tp.png."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4af320e-cfa3-4c6b-bfa2-b32f31e68c35",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "Snieoatwtregoable.exe drops Snieoatwtregoable.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--260609a9-3689-4792-9b96-91315fe5d678",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "Snieoatwtregoable.exe drops tp.png."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57d70c5a-15b5-4a4b-9652-b06eb821a5d4",
+      "relationship_type": "loads",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "Snieoatwtregoable.dll loads and decrypts tp.png."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--caa47ec9-bc56-49d0-86c4-6b91c1b0e2f0",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "tp.png contains shellcode that loads the next stage, which includes writing the driver ollama.sys to disk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b5986f4-08c5-4d84-898e-0298e4b7d2bc",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "tp.png stage writes ollama.sys to disk for process termination."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1a4181e4-413e-4cc6-81cc-2ffa1b50ad5c",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "tp.png stage writes 1.bat, fhq.bat, and 1.dll as embedded files in custom archive containers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--35df3b59-186f-46a0-a569-6955f9be3be3",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "tp.png stage writes the WDAC policy {31351756-3F24-4963-8380-4E7602335AAE}.cip to disk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b743aa9f-a8c4-41f6-9d69-93df17b03e4a",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "tp.png stage writes goldendays.dll, trustinstaller.bin, and Enpug.bin as part of the multi-stage loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ed98aa6-e690-4132-a2f3-850f07b345b9",
+      "relationship_type": "drops",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "goldendays.dll is executed via regsvr32.exe and loads trustinstaller.bin."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe20f5ec-ed36-4724-93f9-9bc569efb914",
+      "relationship_type": "loads",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "trustinstaller.bin injects Enpug.bin into a trusted system process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3001edbb-34d1-42e2-bd07-c36ba9fab043",
+      "relationship_type": "loads",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "description": "Enpug.bin loads the final payload 6uf9i.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5a23ada-67ec-4ad4-9b0f-c02c4cf8f763",
+      "relationship_type": "communicates-with",
+      "source_ref": "file--cd6d8ece-6bcf-4502-80d9-d9cc7e63f860",
+      "target_ref": "domain-name--b646dd6e-3e95-453f-bf3e-11f58506f77f",
+      "description": "The final payload 6uf9i.exe communicates with the C2 domain qaqkongtiao.com."
+    }
+  ]
+}

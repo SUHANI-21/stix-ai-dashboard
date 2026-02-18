@@ -1,0 +1,341 @@
+{
+  "type": "bundle",
+  "id": "bundle--1034080f-7edc-4616-9a68-a02f06c4f9d5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9bf7540c-b54f-4a4a-891e-81739c0fecde",
+      "name": "Phishing: Attachment",
+      "description": "Phishing emails with malicious attachments used for initial access.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f5eab2df-205d-4fe0-880b-039a6c3b3c6a",
+      "name": "User Execution: Malicious File",
+      "description": "Execution of malicious files by users.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--33af43e1-c77d-47c1-b46f-2de6aaee49a9",
+      "name": "Drive-by Social Engineering",
+      "description": "Social engineering techniques used to trick users into executing malware.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1654"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--aa073a38-992e-423a-a0d3-8a60c548a370",
+      "name": "Native API Execution / Binary Execution",
+      "description": "Malware execution using native APIs or binary files.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1106"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4fa4e43c-36b0-43df-9065-be273adbae37",
+      "name": "Encrypted/Obfuscated Payload",
+      "description": "Payloads are encrypted or obfuscated to evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a5d281a5-a980-42cc-bcbb-12e100d61f76",
+      "name": "Steganography / Payload in Image",
+      "description": "Payload hidden in images using steganography.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a6529f91-02a8-4d72-92a0-a588dec1d2d6",
+      "name": "Virtualization/Sandbox Evasion",
+      "description": "Techniques to evade detection in virtualized or sandboxed environments.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00eb6025-6ab5-402f-ac0d-3ddf0aab4f86",
+      "name": "Masquerading",
+      "description": "Malware disguises itself as legitimate files or processes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e583048a-5262-4f1a-bcbc-6fefe6c99577",
+      "name": "Self-Deletion",
+      "description": "Malware deletes itself after execution to evade detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1070.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f1b743f1-2522-4ed4-a256-f76503774299",
+      "name": "DLL Injection",
+      "description": "Malware injects DLLs into running processes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d11bc14f-14e5-4175-be5f-18548bd2330d",
+      "name": "Reflective Loading / In-Memory Execution",
+      "description": "Malware loads payloads into memory without writing to disk.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1620"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a154dd78-4c67-471d-b659-56ccc81cec8b",
+      "name": "Credential Access from Web Browsers",
+      "description": "Malware steals credentials from web browsers.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--decdf060-93a8-4437-a76d-90229e92ad9d",
+      "name": "System Information Discovery",
+      "description": "Discovery of system information by malware.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--977fb4be-0b23-47ef-87bc-95709b4296f0",
+      "name": "Process Discovery",
+      "description": "Malware enumerates running processes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1057"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fb239fe9-6ad5-45ac-81fe-7e368872e7ed",
+      "name": "Security Software Discovery",
+      "description": "Malware checks for security software on the system.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1518.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6ba31c29-5bd9-4c62-bc07-ceeed398afa5",
+      "name": "Keylogging",
+      "description": "Malware captures keystrokes from infected systems.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dac25720-8b28-4504-9e34-e18e6c7b6672",
+      "name": "Clipboard Collection",
+      "description": "Malware collects clipboard data.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1115"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a0f5b6aa-9ff2-4597-a58f-1ff9c4942ad9",
+      "name": "File Collection",
+      "description": "Malware collects files from the victim system.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1039"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--263b9ddd-e920-4ede-b331-546ebc666a62",
+      "name": "Browser Data Collection",
+      "description": "Malware collects browser data such as passwords, cookies, and credit cards.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1119"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--39ef6f83-558b-4825-b060-c4f12ddb316b",
+      "name": "Application Token Theft (Discord)",
+      "description": "Malware steals Discord authentication tokens.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1528"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e7282a88-dfc4-49ad-8df4-aaed02c08a4e",
+      "name": "Cryptocurrency Wallet Theft",
+      "description": "Malware steals data from cryptocurrency wallets.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dacb4137-8a5c-4954-9b1e-87e7fc2b3ba8",
+      "name": "Exfiltration Over Web Services (Telegram)",
+      "description": "Malware exfiltrates data via Telegram bot API.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1567.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d802f0fc-fe08-4e48-b44a-04248132be46",
+      "name": "Exfiltration to Cloud/Webhook (Discord)",
+      "description": "Malware exfiltrates data via Discord webhook.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1530"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2e51a152-f6ec-43d2-8442-e6b799571710",
+      "name": "Exfiltration Over Unencrypted/FTP Channels",
+      "description": "Malware exfiltrates data via FTP.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1048"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f9576fe0-36bf-4b50-aa7c-b6bbcad871aa",
+      "name": "Data Staged in Archive (ZIP)",
+      "description": "Malware stages collected data in ZIP archives before exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1560.001"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--5541d6e9-b092-4424-8148-a49f3cc558ff",
+      "name": "Seqrite Labs Researcher Team",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.seqrite.com/blog/category/technical/",
+      "description": "Seqrite Labs Researcher Team continuously monitors global cyber threat activity and authored the analysis of Operation MoneyMount-ISO.",
+      "external_references": [
+        {
+          "source_name": "Seqrite Labs",
+          "url": "https://www.seqrite.com/blog/category/technical/"
+        }
+      ]
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--cd98bce9-7c6e-4d25-8f46-60f328588fee",
+      "value": "achepeleva@iskra-svarka[.]ru",
+      "display_name": ""
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--a01f8b5f-7170-4b4a-8429-89dd5aa0b8b6",
+      "value": "agrariy@agroterminal[.]c",
+      "display_name": "Anton Vladimirovich Demyanenko"
+    },
+    {
+      "type": "url",
+      "id": "url--c6c85116-699f-4b3b-bc51-c6ff5fc56703",
+      "value": "hxxps://discordapp.com/api/webhooks/143138186644\u2026EPOWJm74GOZpqJMIKIKTAAWsSKMiUIaLaShpn_VTGWZPjJNYj6_ioSs-BQNZt1WK"
+    }
+  ]
+}

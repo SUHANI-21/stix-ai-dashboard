@@ -1,0 +1,104 @@
+{
+  "type": "bundle",
+  "id": "bundle--b78bd948-efc1-46a4-be0f-2f9a447cf1ea",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--f50a13fc-cadc-4318-8e2a-27ff9a499639",
+      "name": "Imperva Threat Research",
+      "description": "Imperva Threat Research team investigates and publishes security vulnerabilities and threat intelligence.",
+      "identity_class": "organization",
+      "external_references": [
+        {
+          "source_name": "Imperva Blog",
+          "url": "https://www.imperva.com/blog/?category=labs"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--699059fb-28d9-43d9-a568-ab68e930d00a",
+      "name": "docker-compose.yaml"
+    },
+    {
+      "type": "directory",
+      "id": "directory--b418ed3b-64d7-4d9b-aff3-257a750fb937",
+      "path": "~/.ssh"
+    },
+    {
+      "type": "software",
+      "id": "software--43e40413-c5dd-47ff-b6e5-f9af95338863",
+      "name": "Docker Compose",
+      "version": "v2.40.2"
+    },
+    {
+      "type": "software",
+      "id": "software--e336799c-a102-49ee-9d1d-39fa4fdcf996",
+      "name": "Docker Compose"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--945a4e1a-8519-40b1-b855-5e4cf8bf032a",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--974b3403-61e2-4ed9-a0fa-6fd506c61f7e",
+      "target_ref": "vulnerability--f2556c78-dc04-4246-9d64-f4a55d45c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--306e8727-7aab-419b-b9e4-40ed9651bce4",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--974b3403-61e2-4ed9-a0fa-6fd506c61f7e",
+      "target_ref": "tool--e6086e0f-e52f-466d-9ff7-062876ada7b3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5092e558-cc10-454f-889b-dcaae1635b44",
+      "relationship_type": "uses",
+      "source_ref": "tool--e6086e0f-e52f-466d-9ff7-062876ada7b3",
+      "target_ref": "software--e336799c-a102-49ee-9d1d-39fa4fdcf996"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94424165-6116-4bef-b029-eb231fd8bc83",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--974b3403-61e2-4ed9-a0fa-6fd506c61f7e",
+      "target_ref": "artifact--1d478c88-d0c0-45bb-b893-249823098a94"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0cd4122-e7a4-4269-93c4-86962ecbe694",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--974b3403-61e2-4ed9-a0fa-6fd506c61f7e",
+      "target_ref": "artifact--1d478c88-d0c0-45bb-b893-249823098a94"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11d8a6a1-147a-4f9c-bf96-edcc009ea68e",
+      "relationship_type": "drops",
+      "source_ref": "attack-pattern--974b3403-61e2-4ed9-a0fa-6fd506c61f7e",
+      "target_ref": "file--a43327e3-d41b-4e22-8816-b86e10346f85"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4cd9303c-1a0d-4370-a17f-c89db77666b5",
+      "relationship_type": "contains",
+      "source_ref": "directory--b418ed3b-64d7-4d9b-aff3-257a750fb937",
+      "target_ref": "file--a43327e3-d41b-4e22-8816-b86e10346f85"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--731801f2-4d60-4928-b5bb-276b13bddeb7",
+      "relationship_type": "has",
+      "source_ref": "software--e336799c-a102-49ee-9d1d-39fa4fdcf996",
+      "target_ref": "vulnerability--f2556c78-dc04-4246-9d64-f4a55d45c744"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41dcc86a-bfc5-478e-ade7-d8d72d4221ad",
+      "relationship_type": "has",
+      "source_ref": "software--e336799c-a102-49ee-9d1d-39fa4fdcf996",
+      "target_ref": "vulnerability--f2556c78-dc04-4246-9d64-f4a55d45c744"
+    }
+  ]
+}

@@ -1,0 +1,449 @@
+{
+  "type": "bundle",
+  "id": "bundle--9628a1ca-6ad7-4cbc-a76f-6f0463257c2d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "created": "2026-01-16T06:20:00.570004Z",
+      "modified": "2026-01-16T06:20:00.570004Z",
+      "name": "Infoblox",
+      "description": "Infoblox is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-16T06:20:00.570004Z",
+      "modified": "2026-01-16T06:20:00.570004Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-16T06:20:00.570004Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--3082c373-c9df-2696-244e-0ae52be779d0",
+      "created": "2026-01-16T06:20:25.372533Z",
+      "modified": "2026-01-16T06:20:25.372533Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Domain Hijacking via Lame DNS Delegation",
+      "description": "In this campaign, the threat actor neglected to maintain proper DNS hygiene, resulting in misconfigured DNS delegations (specifically, lame delegations). The researchers were able to claim abandoned domains at the DNS provider, effectively hijacking the domains without direct compromise of the infrastructure. This allowed them to receive all traffic intended for the threat actor’s push notification servers, including detailed device information and message logs from victim devices. The technique relies on the fact that the domain owner failed to update or secure their DNS records, enabling an attacker (or researcher) to take control simply by registering the domain and configuring the name servers. This method is notable for its simplicity and effectiveness, and is referenced as a “Sitting Ducks” attack in prior research. The same technique is used by other threat actors, such as Vacant Viper, to hijack dormant domains for malicious traffic distribution and malware delivery.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+      "created": "2026-01-16T06:20:25.372619Z",
+      "modified": "2026-01-16T06:20:25.372619Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Deceptive Push Notification Lures",
+      "description": "The push notification network analyzed in this campaign delivers high volumes of deceptive messages to victim devices, often exceeding 140 notifications per day per user. These notifications are crafted to entice users to click on embedded links by leveraging themes of fear, hope, urgency, and impersonation of legitimate brands (such as banks and payment services). Messages are localized in over 60 languages and include clickbait referencing scandals, financial rewards, and account alerts. The intent is to drive user engagement and clicks, which are monetized through affiliate advertising schemes. While the notifications themselves do not directly deliver malware in this observed campaign, their deceptive nature is central to the operation’s success and is used to manipulate victims into interacting with potentially malicious or fraudulent content.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1566/001/",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dbc2c912-eecc-e3e8-b53f-4e3dedc67b10",
+      "created": "2026-01-16T06:20:25.372812Z",
+      "modified": "2026-01-16T06:20:25.372812Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Brand Impersonation in Push Notifications",
+      "description": "A core technique in this campaign is the impersonation of well-known financial institutions and services within push notification messages. The threat actor crafts notifications that appear to originate from trusted entities such as Bradesco, Sparkasse, MasterCard, and others, often including urgent calls to action or alerts about account status. This brand impersonation increases the likelihood that victims will trust the notification and click on the provided links. The impersonation is not limited to one region or language, but is global in scope, with messages tailored to the local context and language of the victim. This technique exploits user trust in familiar brands to facilitate engagement with fraudulent or deceptive content.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1656/",
+          "external_id": "T1656"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ddbff4e8-def1-ebbd-e631-d736504fa581",
+      "created": "2026-01-16T06:20:25.372917Z",
+      "modified": "2026-01-16T06:20:25.372917Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "High-Volume Push Notification Bombardment",
+      "description": "Victims in this campaign are subjected to an unusually high volume of push notifications, with a median of 140 messages per day and some users receiving thousands over the lifetime of their subscription. This bombardment is designed to increase the probability of user interaction by overwhelming the victim with repeated lures. The notifications are varied in content and language, ensuring continued engagement and reducing the likelihood of users ignoring the messages. This technique leverages psychological fatigue and curiosity, making it more likely that a user will eventually click on a link, even if they initially ignore the notifications.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--19187753-0e2c-1f94-64ab-cbc72e35deba",
+      "created": "2026-01-16T06:20:25.373001Z",
+      "modified": "2026-01-16T06:20:25.373001Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Global Localization of Deceptive Content",
+      "description": "The threat actor demonstrates sophisticated targeting by localizing deceptive push notification content in over 60 languages, with particular focus on regions such as South Asia (Bangladesh, India, Indonesia, and Pakistan). Notifications are tailored to local cultural references, financial institutions, and language, increasing the effectiveness of the lures. This global localization allows the campaign to reach a diverse victim base and maximize click-through rates by ensuring messages are relevant and believable to each recipient.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5003b7ee-bcbc-eadd-ac32-27a64d21107f",
+      "created": "2026-01-16T06:20:25.373081Z",
+      "modified": "2026-01-16T06:20:25.373081Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Click-Through Rate Tracking and Optimization",
+      "description": "The campaign encodes click-through rate (CTR) estimates in each notification, allowing the operator to monitor and optimize the effectiveness of different lures. By analyzing user clicks and adjusting notification content, the threat actor can refine their tactics to maximize monetization. The data collected includes user interactions, which are used to assess which messages are most successful in driving engagement. This feedback loop enables continuous improvement of lure effectiveness and targeting strategies.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+      "created": "2026-01-16T06:20:30.242645Z",
+      "modified": "2026-01-16T06:20:30.242645Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "404TDS",
+      "description": "404TDS is a malicious traffic distribution system used by threat actors to deliver a variety of malware payloads after hijacking domains. In the context of the article, it is referenced as a system used by the Vacant Viper actor to distribute malware via abandoned domains.",
+      "malware_types": [
+        "downloader",
+        "dropper",
+        "adware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "created": "2026-01-16T06:20:33.937890Z",
+      "modified": "2026-01-16T06:20:33.937890Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Vacant Viper",
+      "description": "Vacant Viper is a DNS threat actor explicitly mentioned in the article as hijacking domains through DNS misconfiguration and using them for 404TDS, a malicious traffic distribution system known to deliver a variety of malware.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Hijack abandoned domains",
+        "Distribute malware via 404TDS",
+        "Exploit DNS misconfigurations for malicious traffic distribution"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--03446388-aaff-3811-87f4-e254485acaf0",
+      "created": "2026-01-16T06:20:39.988786Z",
+      "modified": "2026-01-16T06:20:39.988786Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "DNS Provider Services",
+      "description": "The threat actor abused legitimate DNS provider infrastructure by exploiting misconfigured delegations and abandoned domains to hijack control, redirecting victim device traffic to their own servers for information collection and push notification delivery.",
+      "tool_types": [
+        "exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--c0c31587-12dc-7206-c9bf-44af50f2aa15",
+      "created": "2026-01-16T06:20:39.988872Z",
+      "modified": "2026-01-16T06:20:39.988872Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Push Notification Platform",
+      "description": "A legitimate push notification service was used to send deceptive, scam, and impersonation messages to victim devices globally, abusing its infrastructure for fraudulent advertising and information collection.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--c85903e7-b8cb-7fa9-a030-2e8a318f88b3",
+      "created": "2026-01-16T06:20:39.988926Z",
+      "modified": "2026-01-16T06:20:39.988926Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "JSON Data Format",
+      "description": "The actor utilized standard JSON data structures to collect and transmit detailed device and user interaction information from victim devices to their servers, facilitating large-scale data analysis and tracking.",
+      "tool_types": [
+        "information-gathering",
+        "collection"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6ec48262-74d2-862d-6c77-3de200d27952",
+      "created": "2026-01-16T06:20:39.989232Z",
+      "modified": "2026-01-16T06:20:39.989232Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+      "description": "Vacant Viper uses 404TDS malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--23a4ff1f-d7d9-2897-dc49-c2900d67991a",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--3082c373-c9df-2696-244e-0ae52be779d0",
+      "description": "Vacant Viper employs 'Domain Hijacking via Lame DNS Delegation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bc575a4b-ee9c-7bb8-8ab4-52c8462819c7",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+      "description": "Vacant Viper employs 'Deceptive Push Notification Lures' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--35da3868-8849-0bee-5ef9-b76f8f093cd2",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--dbc2c912-eecc-e3e8-b53f-4e3dedc67b10",
+      "description": "Vacant Viper employs 'Brand Impersonation in Push Notifications' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d2565774-d530-8fcf-f493-46479bb0594d",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--ddbff4e8-def1-ebbd-e631-d736504fa581",
+      "description": "Vacant Viper employs 'High-Volume Push Notification Bombardment' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--600a5b33-ae37-feb5-12ba-51cd8d52ddbf",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--19187753-0e2c-1f94-64ab-cbc72e35deba",
+      "description": "Vacant Viper employs 'Global Localization of Deceptive Content' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ceda0b94-324d-10fa-9cc9-2ded0f25801a",
+      "created": "2026-01-16T06:20:39.989296Z",
+      "modified": "2026-01-16T06:20:39.989296Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "attack-pattern--5003b7ee-bcbc-eadd-ac32-27a64d21107f",
+      "description": "Vacant Viper employs 'Click-Through Rate Tracking and Optimization' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ed5d2ff3-45db-e51f-d52c-c8352aa2fcf6",
+      "created": "2026-01-16T06:20:39.989553Z",
+      "modified": "2026-01-16T06:20:39.989553Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "tool--03446388-aaff-3811-87f4-e254485acaf0",
+      "description": "Vacant Viper uses DNS Provider Services tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dffe7dc6-2935-69e0-2963-99d9e0f17d94",
+      "created": "2026-01-16T06:20:39.989553Z",
+      "modified": "2026-01-16T06:20:39.989553Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "tool--c0c31587-12dc-7206-c9bf-44af50f2aa15",
+      "description": "Vacant Viper uses Push Notification Platform tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fba746b0-3e75-9343-c393-165edb0ee3df",
+      "created": "2026-01-16T06:20:39.989553Z",
+      "modified": "2026-01-16T06:20:39.989553Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+      "target_ref": "tool--c85903e7-b8cb-7fa9-a030-2e8a318f88b3",
+      "description": "Vacant Viper uses JSON Data Format tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd1ca915-31f2-a805-efa0-b62bd989dc6c",
+      "created": "2026-01-16T06:20:39.989615Z",
+      "modified": "2026-01-16T06:20:39.989615Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+      "target_ref": "tool--03446388-aaff-3811-87f4-e254485acaf0",
+      "description": "404TDS uses DNS Provider Services for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9adf1087-7d8c-1d5b-31b5-1aa2de0328e7",
+      "created": "2026-01-16T06:20:39.989615Z",
+      "modified": "2026-01-16T06:20:39.989615Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+      "target_ref": "tool--c0c31587-12dc-7206-c9bf-44af50f2aa15",
+      "description": "404TDS uses Push Notification Platform for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a91961a4-f87f-e0cb-ec7e-edd14b1e4feb",
+      "created": "2026-01-16T06:20:39.989615Z",
+      "modified": "2026-01-16T06:20:39.989615Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "relationship_type": "uses",
+      "source_ref": "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+      "target_ref": "tool--c85903e7-b8cb-7fa9-a030-2e8a318f88b3",
+      "description": "404TDS uses JSON Data Format for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--be4cad17-b5cf-b817-44ec-3b4c198da3ad",
+      "created": "2026-01-16T06:20:39.989769Z",
+      "modified": "2026-01-16T06:20:39.989769Z",
+      "created_by_ref": "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+      "name": "Inside a Malicious Push Network: What 57M Logs Taught Us",
+      "description": "This report contains technical analysis and indicators from: https://www.infoblox.com/blog/threat-intelligence/inside-a-malicious-push-network-what-57m-logs-taught-us/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-16T06:20:39.989769Z",
+      "object_refs": [
+        "identity--4358b98f-3a2e-a388-d870-075d62c93606",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--3082c373-c9df-2696-244e-0ae52be779d0",
+        "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+        "attack-pattern--dbc2c912-eecc-e3e8-b53f-4e3dedc67b10",
+        "attack-pattern--ddbff4e8-def1-ebbd-e631-d736504fa581",
+        "attack-pattern--19187753-0e2c-1f94-64ab-cbc72e35deba",
+        "attack-pattern--5003b7ee-bcbc-eadd-ac32-27a64d21107f",
+        "malware--13dd9afa-b96e-fa09-4cde-f8b3d39e6682",
+        "threat-actor--38af1b13-1624-2758-d83f-e8c7d351239a",
+        "tool--03446388-aaff-3811-87f4-e254485acaf0",
+        "tool--c0c31587-12dc-7206-c9bf-44af50f2aa15",
+        "tool--c85903e7-b8cb-7fa9-a030-2e8a318f88b3",
+        "relationship--6ec48262-74d2-862d-6c77-3de200d27952",
+        "relationship--23a4ff1f-d7d9-2897-dc49-c2900d67991a",
+        "relationship--bc575a4b-ee9c-7bb8-8ab4-52c8462819c7",
+        "relationship--35da3868-8849-0bee-5ef9-b76f8f093cd2",
+        "relationship--d2565774-d530-8fcf-f493-46479bb0594d",
+        "relationship--600a5b33-ae37-feb5-12ba-51cd8d52ddbf",
+        "relationship--ceda0b94-324d-10fa-9cc9-2ded0f25801a",
+        "relationship--ed5d2ff3-45db-e51f-d52c-c8352aa2fcf6",
+        "relationship--dffe7dc6-2935-69e0-2963-99d9e0f17d94",
+        "relationship--fba746b0-3e75-9343-c393-165edb0ee3df",
+        "relationship--dd1ca915-31f2-a805-efa0-b62bd989dc6c",
+        "relationship--9adf1087-7d8c-1d5b-31b5-1aa2de0328e7",
+        "relationship--a91961a4-f87f-e0cb-ec7e-edd14b1e4feb"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

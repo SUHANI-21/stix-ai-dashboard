@@ -1,0 +1,251 @@
+{
+  "type": "bundle",
+  "id": "bundle--600a1780-4640-4f3c-996e-9317a0edc82c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--625171cd-700c-4790-af6d-903dbe3e36c0",
+      "name": "Double Extortion Ransomware",
+      "description": "Attackers breach networks, exfiltrate data, encrypt files, and threaten to leak stolen data if ransom is not paid.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1486/",
+          "external_id": "T1486"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--49a1e256-9d55-499c-933e-2dc9bb92bda3",
+      "name": "Group Policy Object Manipulation",
+      "description": "Manipulation of Group Policy Objects to propagate malware and disable security controls.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1484/",
+          "external_id": "T1484"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--95a8601c-f6fb-446a-8995-1c149ba84a97",
+      "name": "Bring Your Own Vulnerable Driver (BYOVD)",
+      "description": "Threat actors introduce vulnerable drivers to disable security mechanisms and facilitate ransomware execution.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1211/",
+          "external_id": "T1211"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--926711f7-009d-469c-bd56-be5d7b9b66e5",
+      "name": "Disabling Security Software",
+      "description": "Disables Windows Defender and other backup/database services prior to encryption.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1562/001/",
+          "external_id": "T1562.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d81b3481-ae93-4874-821f-ddb487737369",
+      "name": "Log and Trace Deletion",
+      "description": "Deletes logs and system traces to hinder investigation and recovery.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1070/",
+          "external_id": "T1070"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09",
+      "name": "Ransom Note and Psychological Pressure",
+      "description": "Creates ransom note ('README-GENTLEMEN.txt') in all encrypted directories, threatens data leak, and offers to decrypt sample files to pressure victims.",
+      "external_references": [
+        {
+          "source_name": "AhnLab ASEC",
+          "url": "https://asec.ahnlab.com/en/tag/ransomnote-en/",
+          "description": "Ransom note tactics used by Gentlemen ransomware."
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--94c1ed27-9d9a-443b-b15e-a5faa53d0757",
+      "hashes": {
+        "MD5": "adf675ffc1acb357f2d9f1a94e016f52"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--80f633c0-09ba-4eef-a98d-0ea9c8900505",
+      "hashes": {
+        "MD5": "de1a114a2c5552387a1bbb61501bf129"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--eda4bcf5-8fdd-449b-a734-b1bc133a13cd",
+      "name": "README-GENTLEMEN.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--a4bab6ae-8ee0-4297-b2bf-812cdc6acf38",
+      "hashes": {
+        "MD5": "adf675ffc1acb357f2d9f1a94e016f52"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--64836f88-ca53-4732-8f9e-ab9028f5e099",
+      "hashes": {
+        "MD5": "de1a114a2c5552387a1bbb61501bf129"
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--8ad9a315-9e0d-4ca7-95d7-9c77b2b0a6b9",
+      "name": "Gentlemen",
+      "cpe": "cpe:2.3:a:gentlemen:ransomware:*:*:*:*:*:*:*:*",
+      "languages": [
+        "Go"
+      ]
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--e0bf718f-e3bc-4523-a675-d71fdf484db6",
+      "description": "Threat actor's public key encoded within Gentlemen ransomware, used for X25519 ECDH operation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--69e9cc9a-9587-422e-9d7c-5e71f52875ab",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9813bc28-fb8e-4dc8-9821-21560e05f94e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f495682a-59c2-4c4c-a49d-c255b86d51d5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f36939f1-760e-4df9-89f6-9db3ddef90cd",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2088ba8c-0310-4210-9fcd-3d1052ff3490",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11738935-e93b-4686-a534-9e806c1f1cc5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85089134-9085-4acf-8784-2e437050d195",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--82e184c5-d147-465a-bc67-f7776bc99d9e",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c87175b-178d-404a-9ae4-5b54d6c33595",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91a950bb-72b5-41ce-97c8-33e008c3c731",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52e590a3-16e5-4c8a-b741-dd3dfc6ca8be",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce633377-bf2e-47f3-a6bc-ede9a1237516",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--757c6d64-2703-4f61-9b70-28a7194cfdc1",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f07c85d-8dfe-451c-b197-36591f1a35bc",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "attack-pattern--64ab9ef4-92f8-4723-af6a-c9d47f7aba09"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c06fe2ff-40eb-4ef4-8cff-87b2fdbf652a",
+      "relationship_type": "drops",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "file--94c1ed27-9d9a-443b-b15e-a5faa53d0757"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1055920a-7a6e-4125-b879-8728326e071f",
+      "relationship_type": "drops",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "file--80f633c0-09ba-4eef-a98d-0ea9c8900505"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ba9aa7b-3437-4c8c-9c3e-890950ea336c",
+      "relationship_type": "drops",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "file--64836f88-ca53-4732-8f9e-ab9028f5e099"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a124a21-02c1-4bfc-98f6-88579f60ab08",
+      "relationship_type": "uses",
+      "source_ref": "malware--97fcee33-3b19-44b8-b055-d1043ce4f172",
+      "target_ref": "cryptographic-key--e0bf718f-e3bc-4523-a675-d71fdf484db6"
+    }
+  ]
+}

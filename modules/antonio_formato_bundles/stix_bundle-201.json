@@ -1,0 +1,360 @@
+{
+  "type": "bundle",
+  "id": "bundle--cda8234f-990b-44c2-a2bc-4c5854ba609b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0636f6a3-f9ce-4ac9-a854-b8851d0e5589",
+      "name": "Spear-phishing via LNK file",
+      "description": "Attackers deliver a ZIP archive containing a malicious Windows LNK shortcut file via spear-phishing email. When executed, the LNK file launches a browser to a legitimate-looking site to distract the user while executing malicious actions in the background.",
+      "external_references": [
+        {
+          "source_name": "GBHackers",
+          "url": "https://gbhackers.com/mastastealer-exploits-windows/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6efa6b9e-85eb-47c7-8e19-d07bc3369e8f",
+      "name": "MSI-based malware deployment",
+      "description": "Malicious MSI installer is downloaded from a typosquatting domain and executed to decompress contents in a temporary directory and drop the actual payload (dwm.exe) into the Windows directory.",
+      "external_references": [
+        {
+          "source_name": "GBHackers",
+          "url": "https://gbhackers.com/mastastealer-exploits-windows/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4b04f30b-f060-4e9a-a51b-67f1a13fa6eb",
+      "name": "PowerShell Defender exclusion",
+      "description": "During MSI installation, a PowerShell command (Add-MpPreference -ExclusionPath ...) is executed to add the malware installation path to the Windows Defender exclusion list, disabling real-time protection for the payload.",
+      "external_references": [
+        {
+          "source_name": "GBHackers",
+          "url": "https://gbhackers.com/mastastealer-exploits-windows/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "name": "Typosquatting for malware delivery",
+      "description": "The campaign uses a typosquatting domain (anydesk[.]net) to host and deliver the malicious MSI installer, mimicking the legitimate AnyDesk site.",
+      "external_references": [
+        {
+          "source_name": "GBHackers",
+          "url": "https://gbhackers.com/mastastealer-exploits-windows/"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "name": "MastaStealer C2 Infrastructure",
+      "description": "Command-and-control servers used in MastaStealer campaign. Domains use randomized naming conventions to evade domain-reputation filtering and DNS-based threat intelligence.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "external_references": [
+        {
+          "source_name": "GBHackers",
+          "url": "https://gbhackers.com/mastastealer-exploits-windows/"
+        }
+      ],
+      "aliases": [
+        "cmqsqomiwwksmcsw[.]xyz",
+        "ykgmqooyusggyyya[.]xyz"
+      ],
+      "x_infrastructure_ips": [
+        "38.134.148.74",
+        "155.117.20.75"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--3fb0fcb3-622e-40e5-acd6-12d30db1bbd6",
+      "name": "dwm.exe",
+      "path": "%LOCALAPPDATA%\\Microsoft\\Windows\\dwm.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--eab86201-753d-41b5-842c-15ec62563347",
+      "name": "files.cab",
+      "path": "%LOCALAPPDATA%\\Temp\\MW-<UUID>\\files.cab"
+    },
+    {
+      "type": "file",
+      "id": "file--4a5b1338-c4c4-4e3d-aec0-90720a2c6093",
+      "name": "dwm.exe",
+      "path": "%LOCALAPPDATA%\\Microsoft\\Windows\\dvm.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0f07811f-ad6d-42b4-a84a-147a9af20380",
+      "name": "",
+      "path": "",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2ed525c4-8ddc-4ecb-82fb-6efa77d60e64",
+      "name": "",
+      "path": "",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "msi"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--73bc0d56-a751-4535-9f6f-7538fa637a1d",
+      "name": "",
+      "path": "",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "lnk"
+        }
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6dcb9535-ff78-4231-b9b8-0eb28ba6ad9d",
+      "value": "anydesk.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2675218-790f-4e80-bbda-791af65df738",
+      "value": "anydesk.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0da69810-dd9a-483c-8668-70eb2ec1c92a",
+      "value": "cmqsqomiwwksmcsw.xyz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--27b74c44-b377-4812-ba99-f65f5f31631b",
+      "value": "ykgmqooyusggyyya.xyz"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--17392ec9-74d8-42d5-8e5c-947176c68460",
+      "value": "38.134.148.74"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--476203a5-a58e-476b-a686-527fe29060e8",
+      "value": "155.117.20.75"
+    },
+    {
+      "type": "email-message",
+      "id": "email-message--dce06b75-1b3e-415c-be42-9f4cbfd1c3ee",
+      "is_multipart": false,
+      "body": "",
+      "subject": "",
+      "additional_header_fields": {
+        "archive": "ZIP",
+        "attachment": ".lnk"
+      }
+    },
+    {
+      "type": "process",
+      "id": "process--c0e15473-afca-4a0c-9a7e-05b8f09720e7",
+      "name": "powershell.exe",
+      "command_line": "Add-MpPreference -ExclusionPath \"C:\\Users\\admin\\AppData\\Local\\Microsoft\\Windows\\dvm.exe\""
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5052dc64-f82c-47ce-9c64-fbf6f8cad9ba",
+      "relationship_type": "uses",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "description": "MastaStealer uses spear-phishing via LNK file for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b71c0229-6e7a-4d7f-b283-765dd70c87e3",
+      "relationship_type": "uses",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "description": "MastaStealer uses MSI-based malware deployment to deliver its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2840fe19-264e-4331-be92-0824eb365d0f",
+      "relationship_type": "uses",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "description": "MastaStealer uses PowerShell Defender exclusion to evade detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20d53503-f1e0-4f5d-8b87-b2345eccd175",
+      "relationship_type": "uses",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "description": "MastaStealer uses typosquatting for malware delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cebb1615-3e89-4947-8f88-b7fded55af02",
+      "relationship_type": "uses",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "description": "MastaStealer communicates with its C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c1ab8aa-33ad-4f60-b4fe-c92cd6289564",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d016a82b-b2c2-444a-a9f3-a83af16f255c",
+      "target_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "description": "C2 domains indicator points to MastaStealer C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfc67831-d593-477c-b118-4d432747f1a6",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d016a82b-b2c2-444a-a9f3-a83af16f255c",
+      "target_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "description": "C2 IPs indicator points to MastaStealer C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfa718f2-f33a-415b-9f90-e7950b59a3f5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d016a82b-b2c2-444a-a9f3-a83af16f255c",
+      "target_ref": "process--6681d449-a43b-4ce2-9ac8-11fbccfbd26e",
+      "description": "Indicator for PowerShell Defender exclusion command."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b943d302-c229-4634-927a-445d692a805f",
+      "relationship_type": "drops",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "file--73bc0d56-a751-4535-9f6f-7538fa637a1d",
+      "description": "MastaStealer drops dwm.exe as its payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9fa417e-8802-4b55-9c40-39b2410eb550",
+      "relationship_type": "drops",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "file--73bc0d56-a751-4535-9f6f-7538fa637a1d",
+      "description": "MastaStealer drops dwm.exe to %LOCALAPPDATA%\\Microsoft\\Windows\\dwm.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--228403f0-fef2-45af-95aa-47733198b400",
+      "relationship_type": "drops",
+      "source_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "target_ref": "file--73bc0d56-a751-4535-9f6f-7538fa637a1d",
+      "description": "MastaStealer MSI decompresses files.cab into temp directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fe3f0e8-715c-4d70-bfb4-94fb487b31e4",
+      "relationship_type": "delivers",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "description": "Spear-phishing via LNK file delivers MastaStealer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76e82fa7-92ec-4acd-8ac3-1007e61b3ccf",
+      "relationship_type": "delivers",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "malware--1eea7dbb-ee78-41eb-ab65-61110ff48318",
+      "description": "MSI-based malware deployment delivers MastaStealer payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4f564a0-ee5c-4286-aa99-e93542eecf92",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "process--6681d449-a43b-4ce2-9ac8-11fbccfbd26e",
+      "description": "PowerShell Defender exclusion attack pattern uses powershell.exe process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--493568f5-fb71-4617-b5f6-cbab974fa2e6",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "process--6681d449-a43b-4ce2-9ac8-11fbccfbd26e",
+      "description": "MSI-based malware deployment uses msiexec.exe process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3f6d7062-c60f-441e-abf4-c27543a73bf7",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "process--6681d449-a43b-4ce2-9ac8-11fbccfbd26e",
+      "description": "Spear-phishing via LNK file uses MicrosoftEdge.exe process."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d86150cf-110e-47a1-b96a-98026eb644d3",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "domain-name--27b74c44-b377-4812-ba99-f65f5f31631b",
+      "description": "Typosquatting for malware delivery uses anydesk.net domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--439ed94f-f90c-4f64-8cf7-2507728dfa27",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--482bb5b5-e767-4550-a85d-1c84ef736d21",
+      "target_ref": "domain-name--27b74c44-b377-4812-ba99-f65f5f31631b",
+      "description": "Spear-phishing via LNK file uses anydesk.com as decoy."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ef16d3d-43c6-4f6a-be9f-05695b9f6b6a",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "target_ref": "domain-name--27b74c44-b377-4812-ba99-f65f5f31631b",
+      "description": "MastaStealer C2 infrastructure uses cmqsqomiwwksmcsw.xyz domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c7ca02c-547d-46ac-92fb-c6aaadda39c9",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "target_ref": "domain-name--27b74c44-b377-4812-ba99-f65f5f31631b",
+      "description": "MastaStealer C2 infrastructure uses ykgmqooyusggyyya.xyz domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2bb97db2-bcd9-437a-8bb1-1f2759965995",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "target_ref": "ipv4-addr--476203a5-a58e-476b-a686-527fe29060e8",
+      "description": "MastaStealer C2 infrastructure uses 38.134.148.74."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5acb61bb-2cbb-4ff7-97fa-732bee6db828",
+      "relationship_type": "uses",
+      "source_ref": "infrastructure--d500d63e-e98d-4130-8896-a7584878a66e",
+      "target_ref": "ipv4-addr--476203a5-a58e-476b-a686-527fe29060e8",
+      "description": "MastaStealer C2 infrastructure uses 155.117.20.75."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d239b4b9-bbc3-4d5e-8db4-d2a77a5087d0",
+      "relationship_type": "contains",
+      "source_ref": "email-message--dce06b75-1b3e-415c-be42-9f4cbfd1c3ee",
+      "target_ref": "file--73bc0d56-a751-4535-9f6f-7538fa637a1d",
+      "description": "Spear-phishing email contains a ZIP archive with a .lnk file."
+    }
+  ]
+}

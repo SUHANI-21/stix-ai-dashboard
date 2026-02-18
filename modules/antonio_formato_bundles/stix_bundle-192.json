@@ -1,0 +1,257 @@
+{
+  "type": "bundle",
+  "id": "bundle--683dd345-a646-4bad-9e3d-6e2e799e0a44",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--c9e348aa-5d65-4e34-95d2-35020a640c10",
+      "name": "pwndefend.com",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.pwndefend.com/"
+    },
+    {
+      "type": "identity",
+      "id": "identity--0a972a9b-92da-4172-b2d2-7760cb8ad11c",
+      "name": "watchTowr",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://twitter.com/watchtowrcyber"
+    },
+    {
+      "type": "identity",
+      "id": "identity--92e298d1-1718-4377-99e8-8132c5384bb0",
+      "name": "Defused Cyber",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://defusedcyber.com"
+    },
+    {
+      "type": "software",
+      "id": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe",
+      "name": "Fortinet FortiWeb",
+      "description": "Fortinet FortiWeb is a web application firewall affected by a suspected path traversal vulnerability allowing unauthorized user creation.",
+      "created_by_ref": "identity--",
+      "cpe": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+      "external_references": [
+        {
+          "source_name": "Fortinet",
+          "url": "https://community.fortinet.com/t5/FortiGate/Technical-Tip-How-to-show-super-admin-user-via-REST-API-Admin/ta-p/283704"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--94afe42c-0ea1-4e25-ae6c-1a02dc1ca119",
+      "value": "107.152.41.19"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--11e9293c-63f3-48bb-b779-bf642f6908de",
+      "value": "144.31.1.63"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1e36e45c-be4e-4d27-88f8-925313fb607e",
+      "value": "89.169.55.168"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--623d9d7d-8c69-4ee3-916b-5f4c29d3790e",
+      "value": "185.192.70.33"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--30de28e0-08aa-49b7-b546-3b52bfd663a1",
+      "value": "185.192.70.53"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f63781b8-41c7-49ff-b520-55f9811030d1",
+      "value": "185.192.70.43"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--090c8500-468c-49d4-9d8a-39f5bc3ea159",
+      "value": "185.192.70.25"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5f1c6b37-4a47-47a8-90af-68d031d8b056",
+      "value": "185.192.70.36"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5a7c8513-4efe-4bd3-9e7b-7f48f5ee1725",
+      "value": "185.192.70.49"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9daa910f-0d64-4e66-ae7e-f7db302d255d",
+      "value": "185.192.70.39"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f758c489-a1ee-4b55-a730-42c44b84721b",
+      "value": "185.192.70.57"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--41356a97-fd11-4732-8d7c-8fcf1573a74b",
+      "value": "185.192.70.50"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d238299b-df4a-47be-82c8-b4a35042b41b",
+      "value": "185.192.70.46"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7f8e2274-e34b-48b6-aede-bc658fea623a",
+      "value": "185.192.70.31"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2e7ec296-79ae-40cd-9e73-6ebfa9acf09b",
+      "value": "64.95.13.8"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--847f5e4f-1f49-49e2-a5e2-65a8c45c2258",
+      "user_id": "Testpoint",
+      "account_type": "local",
+      "credential": "AFodIUU3Sszp5"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--7d898dfe-a7f3-4d8f-8dcb-28747a8862f5",
+      "user_id": "trader1",
+      "account_type": "local",
+      "credential": "3eMIXX43"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--b0fc163a-2524-48ba-80a6-13a6c887d804",
+      "user_id": "trader",
+      "account_type": "local",
+      "credential": "3eMIXX43"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--2c8530c4-7c81-4ee4-9706-130851df0042",
+      "user_id": "test1234point",
+      "account_type": "local",
+      "credential": "AFT3$tH4ck"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--a43b291d-b06c-4ab2-a4eb-4203d2a4055f",
+      "user_id": "Testpoint",
+      "account_type": "local",
+      "credential": "AFT3$tH4ck"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--ae060795-6953-4b96-bb0b-cca537111092",
+      "user_id": "Testpoint",
+      "account_type": "local",
+      "credential": "AFT3$tH4ckmet0d4yaga!n"
+    },
+    {
+      "type": "url",
+      "id": "url--25748c93-7964-4f33-8bc8-c1f153904ecc",
+      "value": "/api/v2.0/cmdb/system/admin%3F/../../../../../cgi-bin/fwbcgi"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2a8dd71-1aed-4943-ab5c-a7fe700aa294",
+      "relationship_type": "has",
+      "source_ref": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe",
+      "target_ref": "vulnerability--6fea129e-7587-4e15-8186-8943012ba61a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d432c1c0-f732-4c8e-8ef2-a8c748ca36b1",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--3c930594-0896-49e2-9b01-cd08c90fb13a",
+      "target_ref": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9726ec3c-77e5-4cd7-87ef-ce60dbed443e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--3c930594-0896-49e2-9b01-cd08c90fb13a",
+      "target_ref": "vulnerability--6fea129e-7587-4e15-8186-8943012ba61a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aad30371-b0fa-47ca-a6cc-97fd0bca8ed5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "attack-pattern--3c930594-0896-49e2-9b01-cd08c90fb13a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5931d528-7ea3-43d6-997c-98727b7fc342",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "attack-pattern--3c930594-0896-49e2-9b01-cd08c90fb13a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a9c4c2c-519e-44c8-a7a9-5b0a535d7ccd",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "attack-pattern--3c930594-0896-49e2-9b01-cd08c90fb13a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e69e8294-992e-46aa-a790-d358dfad164f",
+      "relationship_type": "uses",
+      "source_ref": "tool--d88f07d3-df0f-40af-a63b-c7c657697e7c",
+      "target_ref": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c6736dc-69d1-47a4-a484-3e7dc7425c99",
+      "relationship_type": "detects",
+      "source_ref": "tool--d88f07d3-df0f-40af-a63b-c7c657697e7c",
+      "target_ref": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27cb9326-31f9-4f78-b480-cd90f83351e0",
+      "relationship_type": "detects",
+      "source_ref": "tool--d88f07d3-df0f-40af-a63b-c7c657697e7c",
+      "target_ref": "software--f99f14c2-02d9-4149-9a73-a8865fe8ccbe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--550e29a5-70b6-40da-bccf-d3d24d29109a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "ipv4-addr--2e7ec296-79ae-40cd-9e73-6ebfa9acf09b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--454b377e-c0d7-4133-8817-fc0c0a4f59e3",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "user-account--ae060795-6953-4b96-bb0b-cca537111092"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51e039c4-dcbe-477d-aff0-54e04f960de5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--4d525e36-6abd-4ce7-815e-d4908e3ef8c4",
+      "target_ref": "url--25748c93-7964-4f33-8bc8-c1f153904ecc"
+    }
+  ]
+}

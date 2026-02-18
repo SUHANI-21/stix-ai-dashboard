@@ -1,0 +1,29 @@
+{
+  "type": "bundle",
+  "id": "bundle--1c2918ee-c108-4350-babb-88cb10f7af39",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0dab5201-1737-46c8-a758-b81dc80c392a",
+      "name": "Brand Impersonation",
+      "description": "Threat actors impersonate legitimate brands to deceive users, often for phishing, fraud, or social engineering attacks.",
+      "external_references": [
+        {
+          "source_name": "Cyble",
+          "url": "https://cyble.com/knowledge-hub/brand-impersonation-2025-threats-2026/"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--ac0849d5-d06f-4497-9eeb-53726ba444c7",
+      "value": "https://cyble.com/wp-content/uploads/2025/12/Brand-Impersonation.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--25cb8d10-0e24-4797-bcdb-6e46e94dea47",
+      "value": "https://cyble.com/knowledge-hub/brand-impersonation-2025-threats-2026/"
+    }
+  ]
+}

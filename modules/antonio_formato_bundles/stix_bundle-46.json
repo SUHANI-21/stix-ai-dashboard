@@ -1,0 +1,53 @@
+{
+  "type": "bundle",
+  "id": "bundle--cbd1d7d4-bd56-4e93-b9d1-81e556c2cec8",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--8f55d706-3cf2-48d8-a8c4-cdfa1a760699",
+      "name": "staff record pdf.exe",
+      "description": "An NSIS executable file disguised as a PDF document, delivered inside a RAR archive and used to deploy Guloader malware.",
+      "hashes": {
+        "MD5": "c95f2a7556902302f352c97b7eed4159"
+      },
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "artifact",
+      "id": "artifact--0923ceef-4e6d-4d1c-bd99-ba6796f3a713",
+      "mime_type": "application/x-rar-compressed",
+      "payload_bin": "",
+      "description": "RAR archive containing staff record pdf.exe, used to deliver Guloader malware.",
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "file",
+      "id": "file--345491b3-fe12-4151-a70a-12dc9cc5ee96",
+      "name": "staff record pdf.exe",
+      "hashes": {
+        "MD5": "c95f2a7556902302f352c97b7eed4159"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--74609909-5398-400e-bcc8-d2a90b7c73c3",
+      "name": "RAR compressed file"
+    },
+    {
+      "type": "file",
+      "id": "file--9c948ec2-0c44-4f08-8268-3b176fa073e2",
+      "name": "Remcos RAT"
+    },
+    {
+      "type": "url",
+      "id": "url--054b6df1-008a-4135-8042-3e408db6de1e",
+      "value": "hxxps://drive.google[.]com/uc?export=download&id=1bzvByYrIHy24oMCIX7Cv41gP9ZY3pRsgv"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--66cfce53-92a5-4c3c-b8cf-c2eb08442739",
+      "value": "196.251.116.219"
+    }
+  ]
+}

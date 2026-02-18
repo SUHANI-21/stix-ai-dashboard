@@ -1,0 +1,467 @@
+{
+  "type": "bundle",
+  "id": "bundle--1bbe7eb8-361c-4da7-8943-d451b03d0071",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "name": "Scattered Spider",
+      "aliases": [
+        "Scattered Lapsus$ Hunters",
+        "ShinyHunters"
+      ],
+      "description": "Scattered Spider (also known as Scattered Lapsus$ Hunters, which includes ShinyHunters) is a threat actor group responsible for the Gainsight breach and previously the Salesloft Drift hack. The group leverages supply chain attacks, targeting OAuth integrations and API keys to exfiltrate sensitive data and extort victims.",
+      "first_seen": "2025-08-01T00:00:00Z",
+      "goals": [
+        "Data theft",
+        "Extortion",
+        "Public exposure of stolen information"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b0ee79d8-78cb-4aa0-aea7-6446f7642014",
+      "name": "Compromise of OAuth Tokens for API Access",
+      "description": "Threat actors compromise OAuth tokens and digital keys used by third-party applications to access Salesforce data, enabling unauthorized access and data exfiltration without direct user credential theft.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a42417b1-dfd2-4aa9-bf77-cdd8eab1154a",
+      "name": "Supply Chain Attack via Third-Party SaaS Integrations",
+      "description": "Threat actors exploit the trust relationship between platforms and third-party integrations, leveraging stolen data and compromised tokens to move laterally and compromise additional systems.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d68fca23-a06b-4247-9fb4-1cca7b58468a",
+      "name": "Bulk Data Exfiltration via API Abuse",
+      "description": "Attackers use legitimate API access provided by compromised OAuth tokens to perform large-scale data retrieval, including bulk exports of reports and sensitive information such as passwords and access keys.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--17ca624e-6aeb-44cc-868a-1f9aceadc4f5",
+      "name": "Credential Stuffing and Brute Force Attacks",
+      "description": "Threat actors attempt to compromise accounts by performing credential stuffing and brute force attacks against Salesforce authentication mechanisms.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b284aa91-50a0-4619-904e-b2d8eb2b9bf6",
+      "name": "Administrator Account Impersonation",
+      "description": "Attackers attempt to impersonate Salesforce administrator accounts to escalate privileges and facilitate further compromise.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--acbbfa01-40f9-41c4-8346-86237789c046",
+      "name": "Suspicious Apex Code Execution",
+      "description": "Attackers execute unusual or suspicious Apex code within Salesforce environments, potentially establishing backdoor access or facilitating data theft.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae",
+      "name": "REST API Query Abuse",
+      "description": "Threat actors abuse Salesforce REST API query patterns to access and exfiltrate sensitive data.",
+      "x_mitre_platforms": [
+        "SaaS"
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--76549a45-0867-46a4-8560-81c469151135",
+      "name": "Gainsight Breach (2025)",
+      "description": "A SaaS supply chain attack targeting Gainsight-published applications integrated with Salesforce. Attackers maintained access for nearly three months, leveraging compromised OAuth tokens and stolen data from previous campaigns (Salesloft Drift) to exfiltrate sensitive information from hundreds of organizations.",
+      "first_seen": "2025-08-01T00:00:00Z",
+      "last_seen": "2025-11-21T00:00:00Z",
+      "objective": "Exfiltration of Salesforce data, extortion, and public exposure of victim information."
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "name": "Salesloft Drift Hack (2025)",
+      "description": "A precursor campaign to the Gainsight breach, where attackers compromised Salesloft Drift and used stolen data to access additional systems, enabling a cascading supply chain compromise.",
+      "first_seen": "2025-08-01T00:00:00Z",
+      "last_seen": "2025-09-30T00:00:00Z",
+      "objective": "Initial access and data theft for use in subsequent supply chain attacks."
+    },
+    {
+      "type": "identity",
+      "id": "identity--8d27ae25-c9f2-4a99-a442-f7092dfacee0",
+      "name": "Salesforce",
+      "identity_class": "organization",
+      "description": "Salesforce is a cloud-based software company providing customer relationship management (CRM) services and a platform for third-party integrations."
+    },
+    {
+      "type": "identity",
+      "id": "identity--cd7b6f15-6769-499a-94aa-18952b2ccc9b",
+      "name": "Gainsight",
+      "identity_class": "organization",
+      "description": "Gainsight is a SaaS provider whose published applications were compromised in the 2025 supply chain attack targeting Salesforce integrations."
+    },
+    {
+      "type": "identity",
+      "id": "identity--af06417c-83c8-4fc9-8453-eb0bed622f45",
+      "name": "ShinyHunters",
+      "identity_class": "group",
+      "description": "ShinyHunters is a threat actor group involved in the Gainsight breach and Salesloft Drift hack, operating as part of Scattered Spider."
+    },
+    {
+      "type": "software",
+      "id": "software--5742dea3-a57c-4177-9404-e111e8567f28",
+      "name": "Salesforce",
+      "vendor": "Salesforce",
+      "categories": [
+        "customer-relationship-management"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--e251300f-9ba2-49cb-9cec-b79036053949",
+      "name": "Gainsight",
+      "categories": [
+        "customer-success-management"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--d9516910-ae29-4d52-ac02-982c4b7b6118",
+      "name": "Salesloft Drift",
+      "categories": [
+        "sales-automation"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--390e461b-71f2-43de-8acf-ea93d372f920",
+      "name": "Snowflake",
+      "categories": [
+        "cloud-data-platform"
+      ]
+    },
+    {
+      "type": "account",
+      "id": "account--67e148a1-a468-4f10-82e2-5ffc09e198c7",
+      "account_type": "oauth-token"
+    },
+    {
+      "type": "account",
+      "id": "account--f4a58dae-29a3-4af9-b11b-dce46737b7a4",
+      "account_type": "aws-access-key"
+    },
+    {
+      "type": "account",
+      "id": "account--e03d1803-2789-437a-9db0-64a38db9477d",
+      "account_type": "password"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9b4f785-5bc6-4454-bc70-91e491b6b1b2",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d22f548-bb30-4d88-863d-7888ceddb0ce",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2947b22-3774-4f9e-9928-aa6a3d9cf67d",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b029bbdc-f63f-47db-bd2c-7988571560fa",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3f6da97-570f-434b-8357-ca666ba32e8d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--40883e17-36b2-4941-b04a-bb56ea24fd68",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11c6cb9c-fb04-4a18-a2a7-ce0222c39476",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11686f4f-b8f1-4f36-b772-6bbb0ed532af",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7e51b52-51a6-4af3-a115-0853601e7480",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddbbf947-f9d4-40b4-aa3e-522799567d48",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0edc5119-44fe-4183-b5e9-78be7d25971a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e56db308-a427-45f6-bb28-7ed28c1f5995",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8f22019-aa8e-4b08-b231-38f294e4eebe",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5a4d0b7-2e2b-4740-bc10-44e1f5d494e4",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--84a76e26-a3bf-46ed-ac02-e0a36bf6f690",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ce47722-335b-445a-af35-073f54aef0cc",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7e9555b-9f32-4e69-bf1d-2be3e84ee168",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c776ff40-d7f4-41ef-95f8-2f3a3902cdaa",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e84a8dc-7789-4078-99d8-fbc0700a5d63",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67ea24d2-cf61-4078-b34b-6c386559648a",
+      "relationship_type": "targets",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "identity--af06417c-83c8-4fc9-8453-eb0bed622f45"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c04f2760-2406-4840-af64-5504a63f5cd8",
+      "relationship_type": "targets",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "identity--af06417c-83c8-4fc9-8453-eb0bed622f45"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff95914b-78fe-404c-8a77-2e7a418df210",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "software--390e461b-71f2-43de-8acf-ea93d372f920"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c624791d-0ff5-496f-8a66-0eaa44512f83",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "software--390e461b-71f2-43de-8acf-ea93d372f920"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b30db327-84a0-480d-b8c3-c975a0e4f890",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6bc3c7d1-8fd9-4a7a-8f99-8724b41a0638",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec0391ae-d7e0-4c95-a9e3-0b4d85ef4477",
+      "relationship_type": "uses",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa04dec5-cdc3-4f0a-bdd8-9fcaf9c12453",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3c65966-610d-4e6c-bf1b-dbca53d35f93",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--3cbee785-7825-40eb-bf48-bd324c4906c7",
+      "target_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ebb6eef-1995-4539-b74a-e6c2a20c1993",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d40352ae-a2da-465d-adf8-66dc91b19495",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b7dd114-16e1-4e42-9ed8-b13b5d58bfc9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b78f3adb-3a2d-40f1-83ae-02e07998c222",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e99ff2d-1c84-4cea-b118-a084278977f3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2a9bf9a-9e31-4a2e-9518-a6de2118de54",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77c5c5b6-1fb2-4831-85af-98cc6ac66488",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--152c4b79-33e6-4f5f-bb65-da6a40013a52",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe2221f9-6a58-430c-b67c-78edb01b4cd7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "attack-pattern--6322741e-d54e-49bb-89ec-3188341881ae"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa45c1f5-c8f4-4fdf-b6bb-93bc6226a17e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "software--390e461b-71f2-43de-8acf-ea93d372f920"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cda53c5-657f-42ca-9725-61af5b06deaa",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "software--390e461b-71f2-43de-8acf-ea93d372f920"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d03f7bd3-3d1f-4658-9f0b-159d2956b048",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d055abe-f25b-4bcc-b15b-ad826ec6581c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57dcc00b-7524-4dc6-8108-30b2f066c3ce",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--eff3e122-a239-4100-a5fc-89e837df2242",
+      "target_ref": "account--e03d1803-2789-437a-9db0-64a38db9477d"
+    }
+  ]
+}

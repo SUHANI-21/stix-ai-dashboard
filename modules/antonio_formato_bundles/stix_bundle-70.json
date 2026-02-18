@@ -1,0 +1,325 @@
+{
+  "type": "bundle",
+  "id": "bundle--f03ec127-6fa9-439b-be42-19fcf916f7e6",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--5b71e529-065f-475e-9e25-027125019df0",
+      "name": "CVE-2025-55182",
+      "description": "Unauthenticated remote code execution vulnerability in React Server Components (RSC) affecting React.js and Next.js, allowing threat actors to exploit how payloads are decoded by React Server Function endpoints.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--106f6f41-0211-4bcc-a243-9f02ca30cfc9",
+      "name": "CVE-2025-55182",
+      "description": "Unauthenticated remote code execution vulnerability in React Server Components (RSC) affecting React.js and Next.js via payload decoding in React Server Function endpoints.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e990e8d8-351a-40c6-8bca-6486c72983d4",
+      "name": "CVE-2025-66478",
+      "description": "Duplicate/rejected vulnerability entry related to CVE-2025-55182.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-66478"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--408d892c-41cc-481f-9480-53ded972158e",
+      "value": "89.144.31.18"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--44aeb32c-473f-44ea-a1f7-419b0738ba85",
+      "value": "41.231.37.153"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--c78eb902-e504-472c-8521-f91ba69aaf65",
+      "value": "23.132.164.155"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--06af76ce-4f94-4ede-9a4d-e9e2b0bdd2ee",
+      "value": "144.31.5.11"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1fb38d31-db15-43e5-ac24-39e398b29811",
+      "value": "193.56.28.202"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--72df7351-6eb4-4c71-af1e-527a7b6b55b8",
+      "value": "176.117.107.158"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d945a9ed-5700-48a2-8fb5-4911d1b888cb",
+      "value": "176.117.107.154"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fac14c65-acbc-40eb-a9c5-98af80a4c735",
+      "value": "213.209.143.115"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f077cf09-7873-45f0-a028-15ad978a720a",
+      "value": "158.94.209.210"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d1167f85-94a8-4681-b504-ac0aa3c18d66",
+      "value": "59.7.217.245"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--710303e4-56cb-4519-b556-64712bb6d679",
+      "value": "31.56.27.97"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b710e032-585d-4d8b-801f-35a80eb7f30a",
+      "value": "gfxnick.emerald.usbx.me"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--44ec5881-df23-47f3-aed3-4335585d9fe8",
+      "value": "f003.backblazeb2.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8baf60a0-5cda-4eab-bf11-cf130068b4f5",
+      "value": "raw.githubusercontent.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b0e8f0d1-fd47-41d4-ae92-69792febaa8a",
+      "value": "monero.hashvault.pro"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9426ae7b-b40c-4ab1-bef3-dbc4b0b6acca",
+      "value": "react2shell.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--62955b3b-0a92-4530-9e68-c79ab5168bc4",
+      "value": "github.com"
+    },
+    {
+      "type": "file",
+      "id": "file--c40e8325-3e8a-4dfb-9c89-9cbff2bf71c8",
+      "name": "poop",
+      "parent_directory": "/dev/shm"
+    },
+    {
+      "type": "file",
+      "id": "file--c51dbe18-2eb7-4908-9f18-10a22e641af2",
+      "name": "x86",
+      "parent_directory": "/dev"
+    },
+    {
+      "type": "file",
+      "id": "file--44d8f38b-8f8b-4ab3-89b2-72439c9bce9b",
+      "name": "rondo.aqu.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--6b132a10-299a-47fb-87b0-5065f68c99e3",
+      "name": "notrooter.pl"
+    },
+    {
+      "type": "file",
+      "id": "file--3a027a16-68e4-41d1-a7ac-733603df6f9b",
+      "name": "bk.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--c8396602-e396-4b7b-b04f-2aae8724b7d2",
+      "name": "bot",
+      "parent_directory": "/tmp"
+    },
+    {
+      "type": "file",
+      "id": "file--082bab1d-65f5-4d6a-8f0a-3ad741d94052",
+      "name": "r.sh",
+      "parent_directory": "/tmp"
+    },
+    {
+      "type": "file",
+      "id": "file--681ae473-f1a9-4669-b517-d3ba3cefcac8",
+      "name": "c.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--c7dd8255-dec0-4fa3-b334-f82c56ed20bf",
+      "name": "98201-1-8/bot"
+    },
+    {
+      "type": "file",
+      "id": "file--7c028ae2-c458-45e3-8baa-b460930a5939",
+      "name": "setup_c3pool_miner.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--26ae68e2-fc2c-42ca-9e0d-7aeb255a3385",
+      "name": "4thepool_miner.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--476e2ded-7c0f-4141-943d-acbeabdfc484",
+      "name": "UnHAnaAW.x86"
+    },
+    {
+      "type": "file",
+      "id": "file--8fc10ce7-950e-4a37-889a-6753b01138cc",
+      "name": ".systemd",
+      "parent_directory": "/tmp"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3bdc6b0e-9f53-40e1-bc09-55555016f18f",
+      "relationship_type": "exploits",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "vulnerability--e990e8d8-351a-40c6-8bca-6486c72983d4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7433c16-ada9-45f7-a344-8e7c08c5e0b7",
+      "relationship_type": "exploits",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "vulnerability--e990e8d8-351a-40c6-8bca-6486c72983d4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8951cfd4-dbbb-45e0-8b49-e4e0e2937fb0",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7fc7136-4424-420b-b467-ddd755dde955",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05339f55-9076-4084-b25b-d67da1d7ba7b",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--625d6188-568f-4ebc-8029-a29f6ed616b8",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c988da1-4028-4347-87bd-66cf3df218a6",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7c5fffa-c772-40c7-a28b-6b3e9ae28a92",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4de6a331-12fc-4a22-8ab7-25e49ee9f8fd",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f355e935-6078-4bda-bf5c-900f9b87727c",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed206749-ca67-4e90-99eb-fbc4f192746d",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f3198f9-2d15-446a-bd3e-d4b10851cdad",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b90f57bf-522e-4064-b1b4-3eefa7a28795",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45405a22-6c39-4cbb-ba3f-c1b6655f18f1",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21f7fc9f-ef67-426d-8cfe-a969473e8c62",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f0d9e50-ae2f-46d9-a1f5-19b53e48bd85",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cf7e957-b8c7-4224-a582-ebed818e1add",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--075e4ec3-bf47-4632-8eff-72d72b44d4d6",
+      "relationship_type": "uses",
+      "source_ref": "malware--80a782ea-3eb5-44ca-a226-f35f32593a66",
+      "target_ref": "file--8fc10ce7-950e-4a37-889a-6753b01138cc"
+    }
+  ]
+}

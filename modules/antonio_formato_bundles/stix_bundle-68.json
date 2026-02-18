@@ -1,0 +1,593 @@
+{
+  "type": "bundle",
+  "id": "bundle--69f5efc1-20cc-4827-8423-2d4e859a877c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--4ef38d0f-eda5-4eee-a110-ec8dd88e3ddb",
+      "name": "WEBJACK",
+      "aliases": [
+        "BadIIS"
+      ],
+      "description": "An evolving IIS hijacking campaign abusing SEO for fraud and monetization. Operators compromise IIS servers to deploy malicious modules, conduct SEO poisoning, redirect users to gambling sites, and monetize traffic. The campaign uses Chinese red-team tools and targets high-profile sites, predominantly in Vietnam, Latin America, and Asia.",
+      "goals": [
+        "SEO poisoning",
+        "fraud",
+        "monetization",
+        "traffic redirection",
+        "concealment"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial",
+      "secondary_motivations": [
+        "fraud"
+      ],
+      "external_references": [
+        {
+          "source_name": "WithSecure STINGR",
+          "url": "https://www.enable-javascript.com/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "name": "DragonRank",
+      "description": "A Chinese-speaking threat actor known for SEO poisoning, fraud, and promoting services globally. Associated with ttseo66[.]com and Telegram contact ggfa55. Activity cluster related but distinct from WEBJACK.",
+      "goals": [
+        "SEO poisoning",
+        "fraud",
+        "promotion of services"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial",
+      "external_references": [
+        {
+          "source_name": "ttseo66[.]com",
+          "url": "https://ttseo66.com/"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2708a9bd-19a4-4d4f-9d5c-753fd76cefc8",
+      "value": "79.142.76.244"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7a6df2e3-1445-4d01-b6be-05add13bb46f",
+      "value": "tdk.hunanduodao.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f190dd85-81ac-457b-b17a-b18fd44e7319",
+      "value": "tdk.jmfwy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a9beeddd-38c7-453e-8d35-6c59dbac02b4",
+      "value": "jiankong.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dfea03ba-2211-4981-bab9-d21becc02f61",
+      "value": "seo.667759.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f024129b-c356-4b1a-bc5f-2d4cab16bca8",
+      "value": "google2.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--40f48a82-43b3-4918-adbe-c178d77f8428",
+      "value": "kaifa.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ae40d23a-ef9b-4d14-acb5-a8bdc846f4fb",
+      "value": "w3c.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e4ae60fe-a57b-4651-8383-a54b28a3685f",
+      "value": "w5c.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--34efa5d3-1329-439f-94b8-2640f123cef3",
+      "value": "w5r.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85af62ce-66e2-40b8-882e-d9825f5f3e2e",
+      "value": "google.sneaws.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "value": "jk.667759.com"
+    },
+    {
+      "type": "file",
+      "id": "file--26c75bf3-a162-4276-8bea-603b9ba8ef28",
+      "name": "fasthttp.dll",
+      "hashes": {
+        "SHA-256": "11265422e79f2cd057ee1ae38a16e5db54039711ae8cdb9e177aebfde5666f32"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8631a84a-2ca4-4f86-9e4f-72045e7b75c2",
+      "name": "fashttp.dll",
+      "hashes": {
+        "SHA-256": "c9b4657b6aea927bb0f601f2063e743f8702408c98d01ca3332692b29c4d90ca"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2c4ce375-0be8-4e2d-a14a-e36c801087d0",
+      "name": "fashttp.dll",
+      "hashes": {
+        "SHA-256": "c65dea5d6ab244520a794de0bc9a232050b632b391b3cd3a616661f03d9d2619"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8574c293-266d-4d1e-9b14-8f6924c6f504",
+      "name": "fashttp.dll",
+      "hashes": {
+        "SHA-256": "b0842c9916449de6d4b4159d6c5af747d6fb40609510d6a8d2eb669932c1f661"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--99638ece-29e5-4c5e-a677-099a3591e9e8",
+      "name": "cgihttp.dll",
+      "hashes": {
+        "SHA-256": "72cf397738724b1f555c147005c61c058619405846460a60b02a2af75b57a81e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e33b6cf4-206e-4ecb-9977-2d904af4d550",
+      "name": "cgihttp.dll",
+      "hashes": {
+        "SHA-256": "c17d1bb654bfa9ff9f612d37c1204585cfc76d663818a23aac78ba43e35e3df0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1db82e1a-d4e4-4eeb-9604-d065a66cfc5d",
+      "name": "cgihttp.dll",
+      "hashes": {
+        "SHA-256": "9a2fd34e22c5f3d3d5fb96e3cd514dad7b03ed7bf53a87e7d8d9b73987d02ece"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--15b05cfe-9d86-437a-9b44-123a97297b76",
+      "name": "cgihttp.dll",
+      "hashes": {
+        "SHA-256": "98d4d3de1af9d8568ededbddad4ed5a2072393985421462f44d12e482a1a36af"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--aa3ef34d-c9d3-4981-b6e3-7deeca633fe8",
+      "name": "cgihttp.dll",
+      "hashes": {
+        "SHA-256": "6b60b6df8a1a95f51ffe57255c05d26eb9e113857efac3b29d6ef080b8d414f3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--ea906623-87b5-4fd8-a188-4cc682786806",
+      "name": "Cobalt Strike Beacon",
+      "hashes": {
+        "SHA-256": "561fcf1a2d6cc2170d2b538f416e95d981663984e384da51b36ffe97d2653dcd"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--638f0e5f-57d5-47eb-a5ab-bf99212e22a5",
+      "name": "Cobalt Strike Beacon",
+      "hashes": {
+        "SHA-256": "767576a2b67a3a53883b174a50c83192d0930a4ce213af5f5093e6ee26910d2b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c57e2471-e973-4637-8c0a-2c9e4d7778fa",
+      "name": "XlAnyLoader",
+      "hashes": {
+        "SHA-256": "ffbad7beab3e0888d6957637f2ec80156402ad540e9c92ebb243fe27bea1f598"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--43d3ad1f-ce91-4ff4-a5e7-84a365611513",
+      "name": "SoftEther VPN",
+      "hashes": {
+        "SHA-256": "00c7efe65ab90c03678359f5ba6b24d9f938a28205652dd61f15d7a31323cf1b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--80d458e1-c63d-42fc-8ba5-8b3e200520dc",
+      "name": "SoftEther VPN",
+      "hashes": {
+        "SHA-256": "bab9a644aff24cf313210cc6632f71d935a428ea0efb3823c0dbe6dccabe4b73"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a341d497-9c74-4380-bbc4-4801d2bb8aaf",
+      "name": "SoftEther VPN",
+      "hashes": {
+        "SHA-256": "cbbe63d47e377ab93a39d11554b3024760868bf667db388efc62e6f2850b5d89"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--111b224c-56a7-4a70-bf5b-5301684bad57",
+      "name": "FScan",
+      "hashes": {
+        "SHA-256": "86b8605b4870be8c3e83e51b4e3ee80e781a7c5a0104ffa656da651a03579c5a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c2ae2ec3-1414-404b-9e40-1bb615a06843",
+      "name": "Sharp4RemoveLog",
+      "hashes": {
+        "SHA-256": "d8c0ef6dbf7d4572f92d3a492f32061ab8f3dd46beb9ff5a0bf9bf550935458c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2ce832a8-c39d-49f5-88f3-5eed3e7b30f5",
+      "name": "CnCrypt Protect",
+      "hashes": {
+        "SHA-256": "48ec6530470b295db455bf2c72dc4fbd18672725f45821304f966d436b428865"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--75ea5399-e1a3-41c3-bb2f-58601d0183c5",
+      "name": "GoToHTTP",
+      "hashes": {
+        "SHA-256": "e51ea911a281097be040ac2871134e6c7d5c3b37c8b46d2267ad40a18a05d2ec"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "name": "httpcgi.dat",
+      "hashes": {
+        "SHA-256": "ffa835cd05558fa52a12e91136c4e8a3e7393b3155a6be7877812c6e7d1ff811"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5bd8792b-9e62-4940-b7ae-350e9f93f380",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK operators deployed BadIIS malicious IIS modules to compromised servers for SEO poisoning, fraud, and monetization."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--372066e5-4322-418b-ba82-f512ea56326b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign utilized XlAnyLoader as a shellcode loader for executing payloads such as ca.bin, Cobalt Strike, and Mimikatz."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50bfc324-b0d3-4e76-bb2a-fb4be551f7f6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign abused SoftEther VPN for remote access and tunneling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bebc9d3a-1dfb-487c-9aee-4a9e6bf939c1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign used FScan for internal network scanning and reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c5114ac-1285-47c8-8cac-d484154e7706",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign used Sharp4RemoveLog to clear Windows event logs and erase forensic traces."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8c3fba6-06b2-43b2-beee-74337bbcfa52",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign abused CnCrypt Protect to hide malicious files and support DLL redirection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d237b8d2-27cf-4148-8a03-b1f78b4571c6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign used GoToHTTP as a remote-control/C2 utility."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e15764d-1d86-4b04-978a-9f3ff4a6b17b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "description": "WEBJACK campaign used Cobalt Strike Beacon for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f42066f-e0d0-407a-9776-c8e2d8b77630",
+      "relationship_type": "uses",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "tool--5efad0c7-dac2-44fd-8f06-b56982707944",
+      "description": "XlAnyLoader uses Donut to convert PE files to shellcode for in-memory execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fa05639-9d68-404e-bea5-c8acccd49548",
+      "relationship_type": "related-to",
+      "source_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "target_ref": "intrusion-set--e597d667-06c4-48c8-99bf-de729a0ae5b6",
+      "description": "WEBJACK and DragonRank are related activity clusters with similar objectives and TTPs, but are tracked as separate groups."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01fc19f9-1da5-4c45-8e9e-2e095f30b43e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "ipv4-addr--2708a9bd-19a4-4d4f-9d5c-753fd76cefc8",
+      "description": "Cobalt Strike Beacon observed communicating with external IP 79.142.76.244."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16f9a87a-4ac8-4005-9525-207ec5d82e1c",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including tdk.hunanduodao.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d999f097-919b-4325-b9b4-e01d6ce68f16",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including tdk.jmfwy.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26eb8276-a129-40b7-b222-4c1f8a520f41",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including jiankong.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2604e906-f1c6-44c2-9b3e-74464d93f6dc",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including seo.667759.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc16852a-de10-4c2d-8ac3-2f11933ab507",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including google2.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e781a3ba-de40-4893-98b8-0dea218b201b",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including kaifa.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58a0bfb6-bab1-4a9b-bec0-a2d7de4f4dbf",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including w3c.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0170d738-6940-443f-9fdb-4d0e2c03e823",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including w5c.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58785b16-bce0-449f-b36b-37a0c44551f7",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including w5r.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d42f1cf-9460-450d-8505-686383001f24",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including google.sneaws.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3593279a-1731-46cc-9233-833acd9e06ca",
+      "relationship_type": "downloads",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "domain-name--fe1bb2fd-5080-4fcf-9e2a-9e6cbb49c162",
+      "description": "BadIIS modules download injected content and redirector logic from attacker infrastructure, including jk.667759.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--557671a9-a15c-494d-bd89-e7784643688b",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including fasthttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7639efaf-e4c9-4667-84f8-c1992b14a441",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including fashttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d2e9d2e-f961-4fc6-bcf7-6d9d5cc2d333",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including cgihttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--621002a5-e78b-4566-9aaf-da6c27c50740",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including cgihttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b34fb843-21dc-4ec7-b596-1f64cf1a17ab",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including cgihttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4efc9ed-4264-4883-89bf-be68ba32df42",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including cgihttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f662793-99f5-475f-a9b0-88056403845c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "BadIIS malware family is implemented as malicious IIS modules, including cgihttp.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc27561d-7f1c-4739-bae9-27ca2ab6b502",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "Cobalt Strike Beacon malware is delivered as Cobalt Strike Beacon files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89f22c51-fdab-47f1-a28c-b10ecc0061fe",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "Cobalt Strike Beacon malware is delivered as Cobalt Strike Beacon files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46a99078-3c41-47a8-8c49-6c96cf8ec28d",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "XlAnyLoader malware is delivered as XlAnyLoader file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07eec58a-2d39-4928-89b5-2e9e3c8b3a0f",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "SoftEther VPN malware is delivered as SoftEther VPN file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de29553a-4b1e-4d59-adf2-000eb084138c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "SoftEther VPN malware is delivered as SoftEther VPN file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e69cfdd3-3bda-4188-ab60-21bf492baa10",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "SoftEther VPN malware is delivered as SoftEther VPN file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddc9abda-c617-4628-8280-af7d5df2d59c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "FScan malware is delivered as FScan file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51c09be7-727e-48ee-9189-33996349aa06",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "Sharp4RemoveLog malware is delivered as Sharp4RemoveLog file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4341126-2b86-49aa-befe-1541ed49ca0d",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "CnCrypt Protect malware is delivered as CnCrypt Protect file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9113d7aa-a3f5-4f0f-90c4-a0626203e8b3",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "GoToHTTP malware is delivered as GoToHTTP file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--38716915-5846-4456-bc45-0bfe890b86ea",
+      "relationship_type": "delivers",
+      "source_ref": "malware--850f5ba9-226a-4c06-a298-77e0e160f20b",
+      "target_ref": "file--8a8f30f3-b322-452f-97db-75aa4fe2c15c",
+      "description": "httpcgi.dat malware is delivered as httpcgi.dat file."
+    }
+  ]
+}

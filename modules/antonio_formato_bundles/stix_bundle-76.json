@@ -1,0 +1,54 @@
+{
+  "type": "bundle",
+  "id": "bundle--bdc10fb6-5726-4008-9ca3-b5d3187ef749",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--1471ad8f-4c60-4cc4-b8a7-af148b69af33",
+      "name": "WormBoner",
+      "description": "Malicious file downloaded and executed by Node.js payload, referenced in AI-generated malware.",
+      "hashes": {
+        "MD5": "267b27460704e41e27d6f2591066388f"
+      },
+      "size": 10955043
+    },
+    {
+      "type": "file",
+      "id": "file--b5ce8a2b-aad6-41ca-b55e-c119b0d16544",
+      "name": "httpd",
+      "description": "Malicious file downloaded via shell script, verified by exact file size and MD5 hash.",
+      "hashes": {
+        "MD5": "267b27460704e41e27d6f2591066388f"
+      },
+      "size": 10955043
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c5ad5d8e-88ad-4c02-8afb-5a5ceaf5e95a",
+      "value": "bewildered-cock-lover.online"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fcb955fe-7b20-4113-8969-4d5f2ec97030",
+      "value": "200.4.115.1"
+    },
+    {
+      "type": "url",
+      "id": "url--7f309892-54a8-4818-9dc4-02a6c70d792b",
+      "value": "http://200.4.115.1/promocionao.php"
+    },
+    {
+      "type": "file",
+      "id": "file--2df25dbd-1767-480f-a6a2-5a4f850b4592",
+      "name": "promocionao.php",
+      "description": "Malicious endpoint hosted on Brazil-based IP, used in shell script payload."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2f1cedef-138e-4e2d-aa08-54126e8b9f41",
+      "name": "CVE-2025-55182",
+      "description": "React Server Components Unsafe Deserialization RCE vulnerability targeted by exploitation attempts."
+    }
+  ]
+}

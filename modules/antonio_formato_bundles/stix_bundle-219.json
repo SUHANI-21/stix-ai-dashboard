@@ -1,0 +1,825 @@
+{
+  "type": "bundle",
+  "id": "bundle--521e8cd5-4534-4961-8954-b364745ad9ff",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--a768f017-eeef-43b4-9101-810a5c8553df",
+      "name": "Failover Dependency Zoxsimio.ulb",
+      "hashes": {
+        "SHA-256": "cf44aa11a17b3dad61cae715f4ea27c0cbf80732a1a7a1c530a5c9d3d183482a"
+      },
+      "path": "C:\\Users\\username\\AppData\\Local\\Zoxsimio\\Failover Dependency.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--04c6a4fa-3fd3-450c-94e8-72308d160038",
+      "name": "EMC ControlCenter.js",
+      "hashes": {
+        "SHA-256": "39d980851be1e111c035e4db2589fa3d5f59a5bef7b7b3e36bff5435c78f7049"
+      },
+      "path": "C:\\Users\\username\\AppData\\Roaming\\ISIS Drivers\\EMC ControlCenter.js"
+    },
+    {
+      "type": "file",
+      "id": "file--ba174465-2988-4de4-bfd2-16bd83025c6c",
+      "name": "Mitigation Strategies.js",
+      "hashes": {
+        "SHA-256": "b9a61652dffd2ab3ec3b7e95829759fc43665c27e9642d4b2d4d2f7287254034"
+      },
+      "path": "C:\\Users\\username\\AppData\\Roaming\\Nuance\\Mitigation Strategies.js"
+    },
+    {
+      "type": "file",
+      "id": "file--95b8795e-71e1-464b-a177-c7190fe7128c",
+      "name": "Adaptive Algorithms.js",
+      "hashes": {
+        "SHA-256": "2f056ce0657542da3e7e43fb815a8973c354624043f19ef134dff271db1741b3"
+      },
+      "path": "C:\\Users\\username\\AppData\\Roaming\\PFU\\Adaptive Algorithms.js"
+    },
+    {
+      "type": "file",
+      "id": "file--94dce392-9b64-4a95-b60a-69bfb5acbc37",
+      "name": "Domestic_Partnership_Agreement_Template.js",
+      "hashes": {
+        "SHA-256": "c2326db8acae0cf9c5fc734e01d6f6c1cd78473b27044955c5761ec7fd479964"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--95b7ee20-9ff8-4d9b-b6fc-4d56a1b44b38",
+      "name": "Unmarried_Couples_Rights_Checklist.js",
+      "hashes": {
+        "SHA-256": "ad88076fd75d80e963d07f03d7ae35d4e55bd49634baf92743eece19ec901e94"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fbf47fbb-f2f5-40f6-a790-b26018596e44",
+      "name": "Disconnect Package Oardwior.ijp",
+      "hashes": {
+        "SHA-256": "cf44aa11a17b3dad61cae715f4ea27c0cbf80732a1a7a1c530a5c9d3d183482a"
+      },
+      "path": "C:\\Users\\username\\AppData\\Local\\Oardwior\\Disconnect Package Oardwior.ijp"
+    },
+    {
+      "type": "file",
+      "id": "file--7ffc07a1-6919-45e9-b9b2-9d9aab8f20c6",
+      "name": "Missouri_Utility_Easement_Guide_2023.js",
+      "hashes": {
+        "SHA-256": "c2b9782c55f75bb1797cb4fbae0290b44d0fcad51bf4f2c11c52ebbe3526d2ac"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--156405ca-e0e2-4dd6-b204-091ef10c106f",
+      "name": "Certified Trainer.js",
+      "hashes": {
+        "SHA-256": "7557d5fed880ee1e292aba464ffdc12021f9acbe0ee3a2313519ecd7f94ec5c4"
+      },
+      "path": "C:\\Users\\username\\AppData\\Roaming\\myHUD\\Certified Trainer.js"
+    },
+    {
+      "type": "file",
+      "id": "file--71362e08-bba7-4efc-8a2e-565ca65374dc",
+      "name": "Environmental Economics.js",
+      "hashes": {
+        "SHA-256": "5ec9e926d4fb4237cf297d0d920cf0e9a5409f0226ee555bd8c89b97a659f4b0"
+      },
+      "path": "C:\\Users\\username\\AppData\\Roaming\\Canon U.S.A., Inc\\Environmental Economics.js"
+    },
+    {
+      "type": "file",
+      "id": "file--a66310ce-4f3f-4b5f-bda3-858cb5545a7f",
+      "name": "HOA_Committee_Meeting_Agenda_Template.js",
+      "hashes": {
+        "SHA-256": "87cbe9a5e9da0dba04dbd8046b90dbd8ee531e99fd6b351eae1ae5df5aa67439"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1975f11f-cf62-4709-9021-7b0a6fe2403d",
+      "name": "s01bafg",
+      "path": "%TEMP%\\s01bafg"
+    },
+    {
+      "type": "file",
+      "id": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "name": "orl",
+      "path": "%TEMP%\\orl"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--632a874e-4501-4d1a-b11f-f68bdebcc250",
+      "value": "cortinaspraga.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--37c767d2-0a98-472d-ae98-8f18a8a28a2f",
+      "value": "cookcountyjudges.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--614d535c-d77c-4605-bbea-429dcc4bb351",
+      "value": "x.fybw.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--eae2782f-0507-42a6-a3c1-b47892aa1406",
+      "value": "jungutah.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85c494a0-4c11-4c24-82b6-740bca465e32",
+      "value": "influenceimmo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b21f48bd-b163-429d-a460-21cd43a2e2a3",
+      "value": "tokyocheapo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--aec61313-93d4-4c73-afdb-e32d986956ad",
+      "value": "espressonisten.de"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5e48a669-cf1b-4bdd-84ee-cb4d6f015d85",
+      "value": "tiresdoc.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dea4440a-df75-411e-ac69-554eda21afbb",
+      "value": "hotporntv.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d0297531-4d90-4b1e-bfec-c57bfbb25090",
+      "value": "yourboxspring.nl"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c81713d6-10f0-444a-9c0d-ab527c96665b",
+      "value": "filmcrewnepal.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--525d0527-ccf5-4d7f-92d9-3d259c44866a",
+      "value": "yoga-penzberg.de"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1c5ae283-1e2a-4ef0-a505-a85a2b337e7d",
+      "value": "sugarbeecrafts.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7bb2b374-e8eb-447e-a147-8894d725a22d",
+      "value": "www.worldwealthbuilders.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9de49e93-3a8f-4b11-adcb-0f6c1fbb827f",
+      "value": "lepolice.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f8343106-e57f-4df5-905d-3d383a59c4b3",
+      "value": "www.lovestu.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cc4d4736-5ecb-41fe-8c77-f9b8da92adc9",
+      "value": "bluehamham.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1091c116-5d85-4cc6-91e3-5d5164303dd4",
+      "value": "vps3nter.ir"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ab23732d-80c8-4f43-a03b-c9b5b3ee7fad",
+      "value": "whiskymuseum.at"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--07f5d107-8b2c-4170-8e5d-def943ff2ed3",
+      "value": "latimp.eu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5f93f3e2-d68a-49c3-8475-204dbca8284b",
+      "value": "solidegypt.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5d18da83-bb6b-4ba8-8cd1-e45b58635a5f",
+      "value": "wessper.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--18bb1e90-e086-4eef-8e99-9d4914414699",
+      "value": "www.pathfindertravels.se"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8a75cf34-cf2d-4912-95ed-1f495bfa696e",
+      "value": "www.smithcoinc.biz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--476f9d52-d58c-4704-92e9-6adc8561e4c7",
+      "value": "kollabmi.se"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3f54c64f-d323-4203-bf57-8611bcc0db27",
+      "value": "xxxmorritas.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dbfdb444-be3b-4a2f-8ff4-93863edf927f",
+      "value": "onsk.dk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e08330ac-81fc-4628-80b3-c2b650b8d056",
+      "value": "villasaze.ir"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5acb05aa-ade9-4e1f-ba13-f52fa0d810bd",
+      "value": "blossomthemesdemo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--586f3349-ae98-42d2-afbb-54da460fe4c9",
+      "value": "headedforspace.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6055166c-0d88-4fbe-912f-a5ee6e6eb8e1",
+      "value": "spirits-station.fr"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--eb20e622-bb7f-4e56-9d47-96594f7f71b5",
+      "value": "www.us.registration.fcaministers.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--202e79ce-0a49-464e-bba7-9c8c9746528f",
+      "value": "motoz.com.au"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2b3d4e8-811c-4c35-8730-7bcad682192a",
+      "value": "routinelynomadic.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2c4a6404-d814-4bde-8b27-e9d10656ec85",
+      "value": "www.wagenbaugrabs.ch"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--78f0df5b-e536-42b1-92c2-7080fdbf552f",
+      "value": "studentspoint.org"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--33a27040-3fda-486f-ab66-0ba4e25fa4dd",
+      "value": "dailykhabrain.com.pk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fd6d53ff-e17e-4929-8f78-b455cfb9c9df",
+      "value": "myanimals.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b1702e5f-46e7-4947-8816-ab3d1fbfdb70",
+      "value": "www2.pelisyseries.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--707f6b17-d529-480d-a0f8-a07afe87a685",
+      "value": "www.claritycontentservices.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--78e8f497-9f85-460a-8997-ebb887895b0a",
+      "value": "patriotillumination.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--85f37ff6-4f0e-48d1-bff1-7aa2c345985c",
+      "value": "michaelcheney.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--48b05cf2-8fa0-4a5a-9df3-64a844e1fcf3",
+      "value": "allreleases.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--06db50e8-7a9c-4c4b-9f05-00a0273ba4d0",
+      "value": "cloudy.pk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--89e10875-adcb-4b17-8040-daf0b9cb8ff4",
+      "value": "eliskavaea.cz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9c96055d-116f-4ffa-af55-ada469362ef4",
+      "value": "r34porn.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--75e409df-9349-43e4-99de-e10f9f4ce45c",
+      "value": "leadoo.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4f060230-4a64-4f14-a697-170d6781b8a0",
+      "value": "ostmarketing.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e83bd1a3-a2d3-40fb-95f9-605a72bd9fe2",
+      "value": "egyptelite.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2a3a8c38-da11-4899-bfbd-7a2d6a7b6654",
+      "value": "restaurantchezhenri.ca"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bd5dea51-b00a-4d99-b419-de6b677da66b",
+      "value": "www1.zonewebmaster.eu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ea87f607-6d6d-492d-9c5f-e17c65f41f78",
+      "value": "campfosterymca.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--df08b873-e2d8-47e0-b28b-01b2a359ba84",
+      "value": "idmpakistan.pk"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--943a65f9-8064-4beb-8d18-c1d667e6b817",
+      "value": "themasterscraft.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a6527b60-4bbd-4b9f-9084-73dad59d6787",
+      "value": "unica.md"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b803c65b-683d-4f17-9340-540a856a32be",
+      "value": "cargoboard.de"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--15653fdf-47d6-4e76-8f80-1813850ac4f3",
+      "value": "www.supremesovietoflove.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3c052788-d331-4cd9-abd6-0c1b9b8b7fa5",
+      "value": "buildacampervan.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--af8b7e7b-ca23-43b3-8946-035aad40be8d",
+      "value": "www.minklinkaps.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b71fef0f-8965-4117-9669-0924cdefe83b",
+      "value": "aradax.ir"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ff5b6ba2-8109-43d6-9246-f6aa286901fb",
+      "value": "medicit-y.ch"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--38a59cba-cec7-4887-843c-609efe6613a2",
+      "value": "redronic.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d73c51f3-e1ef-4666-8f31-6a5e4a989091",
+      "value": "www.ferienhausdehaanmieten.de"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2be4d4c3-5246-4062-8c6e-f9b38b551c48",
+      "value": "gravityforms.ir"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f155fd4c-56d9-4a59-802f-f76c3bc56957",
+      "value": "apprater.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--682b3415-899f-440b-84ac-8284892d89e3",
+      "value": "fotbalovavidea.cz"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ccfdd4ed-9aa8-4f6b-885d-c96314a00e8e",
+      "value": "usma.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "value": "thetripschool.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ff6c94a7-822d-4fd3-87f7-710e59616c53",
+      "value": "103.253.42.91"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--37a0b43c-edf4-4adb-9843-b2d78dede8cd",
+      "value": "91.236.230.134"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1a166fa7-6705-44d2-9047-ba06f9575c75",
+      "value": "213.232.236.138"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1e8dbf86-8d0e-49ae-9669-db289e27ed46",
+      "value": "146.19.49.177"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--810d378b-790a-4dba-a629-41c7331060db",
+      "value": "178.32.224.219"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--222c7771-684e-4b40-8a00-651c5ca09064",
+      "value": "37.59.205.2"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "value": "193.104.58.64"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2726ef6-6115-4204-93df-3a9bd3c16a32",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Storm-0494 operates Gootloader and uses it to gain initial access to victim environments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f3cbcd5-8fe5-4c05-a2ea-8d802a168a69",
+      "relationship_type": "delivers",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Gootloader delivers Supper SOCKS5 Backdoor as a secondary payload after initial infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bea62b6-6497-4866-8c82-044d0f215d49",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest uses Supper SOCKS5 Backdoor for remote control and tunneling in post-Gootloader intrusions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cb00186-ae92-4cd5-9b03-32a204c1d311",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest uses OysterLoader (TextShell) as a backdoor in post-Gootloader intrusions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0aaf6f3e-6207-4a7c-82be-b1eb03b0074b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest deploys Rhysida ransomware in victim environments after gaining access from Storm-0494."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0709c58a-0054-4929-9b31-b088c3ec774c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest deploys BlackCat ransomware in victim environments after gaining access from Storm-0494."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c6ce3f0-35b2-4567-a500-4661f6cd12e1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest deploys Zeppelin ransomware in victim environments after gaining access from Storm-0494."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f17a77f5-2d87-46a4-83e0-2f4d024d8186",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Vanilla Tempest deploys Quantum Locker ransomware in victim environments after gaining access from Storm-0494."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c84dc8a0-b72c-4995-973a-e0410912f961",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "description": "Gootloader infections are attributed to Storm-0494."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04b0577a-fe96-49fb-b105-a87eaf16a461",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "description": "Supper SOCKS5 Backdoor is attributed to Vanilla Tempest."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cfa0efb6-bdc2-4466-84d6-b9cccf88b116",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "intrusion-set--8799581c-2769-46dc-a185-6fd942e65f7f",
+      "description": "OysterLoader is attributed to Vanilla Tempest."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edeea352-00e9-4851-aca8-53b2e81cd23e",
+      "relationship_type": "delivers",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "description": "Gootloader delivers ransomware families including Rhysida, BlackCat, Zeppelin, and Quantum Locker after initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--725ae689-117e-42e7-8c11-9feb9b11713e",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops EMC ControlCenter.js as a secondary JavaScript payload in the %AppData%\\ISIS Drivers folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1cc9998d-5002-4ef6-a59f-51ceb328de43",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Mitigation Strategies.js as a secondary JavaScript payload in the %AppData%\\Nuance folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a83d07d0-192b-4bfe-9130-c3ca039f94a3",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Adaptive Algorithms.js as a secondary JavaScript payload in the %AppData%\\PFU folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--68d41250-2e5d-4c97-bba6-a5ab3a7f8aa8",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Certified Trainer.js as a secondary JavaScript payload in the %AppData%\\myHUD folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bbeb5149-8b36-4215-bf1d-9da9686c5fc5",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Environmental Economics.js as a secondary JavaScript payload in the %AppData%\\Canon U.S.A., Inc folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d30e6614-7de3-4046-b95f-f3e1e49b74ab",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Missouri_Utility_Easement_Guide_2023.js as an initial JavaScript payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93c88e07-6f4f-48eb-9b90-3a4ed37a034b",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Domestic_Partnership_Agreement_Template.js as an initial JavaScript payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b7d0b64-869f-4c1d-b854-e0eb4841d808",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Unmarried_Couples_Rights_Checklist.js as an initial JavaScript payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2dbc1ca-5722-486c-b73e-86e9cbe7e671",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops HOA_Committee_Meeting_Agenda_Template.js as an initial JavaScript payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--106aa3c0-7064-42a0-aa47-19db39db4452",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Failover Dependency Zoxsimio.ulb (TextShell containing Supper Backdoor) in %AppData%\\Local\\Zoxsimio."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d0633a43-aefb-4787-8057-c1f8de91f1b5",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Gootloader drops Disconnect Package Oardwior.ijp (TextShell containing Supper Backdoor) in %AppData%\\Local\\Oardwior."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c42da0f-e3f8-4170-83e5-e7eb46469f12",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with cortinaspraga.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bdeddd40-def3-411b-8dff-030fb1bea5a2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with cookcountyjudges.org."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c6e37282-99ff-4800-afc1-f35ac90292aa",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with x.fybw.org."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5957c3b1-8739-4e87-bb42-b43484e9a4a9",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with jungutah.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f310e560-5204-4878-a8bd-4ec5aea2781b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with influenceimmo.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f687bf71-5f27-4634-9849-34cb9f5739dc",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with tokyocheapo.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db11fe2b-9b01-43f8-b9a1-094b175eb1ad",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with espressonisten.de."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--566bb8d8-0937-47c5-84d8-b030390e19ac",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with tiresdoc.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--788bf764-a52c-4d03-8d9c-4e1a1fb44451",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with hotporntv.net."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c78bbfae-c82e-4a46-89cf-3067817da065",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "domain-name--d8d44b65-c481-4426-8413-9621a45f5d2e",
+      "description": "Gootloader secondary JavaScript payload EMC ControlCenter.js communicates with yourboxspring.nl."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b04ad61a-6e14-4500-bb8c-f5e55995158b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 103.253.42.91."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58aa2e35-32c1-4a8e-b0b1-b54b68a5836c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 91.236.230.134."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e388ebc4-01f0-4892-9932-f1096dfbe271",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 213.232.236.138."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4aa43bfb-d48a-46b2-bb95-7289c79c37eb",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 146.19.49.177."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7bcf098f-d384-4a47-9f21-1acf5de22b38",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 178.32.224.219."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22e4bf4a-f0be-44f4-86aa-9e57892caabd",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 37.59.205.2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50515133-cb86-426d-b9a5-32ba851fa11e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "ipv4-addr--e8ffbee2-f69c-4a9c-bd96-6cfbe78e602c",
+      "description": "Supper SOCKS5 Backdoor communicates with C2 IP 193.104.58.64."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b03c4f0-986a-4617-87ba-4bebe109f808",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Supper SOCKS5 Backdoor drops s01bafg in the %TEMP% folder to store encrypted backup C2 IPs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc7608bc-6b20-42ab-adb2-1458ad8c7cc0",
+      "relationship_type": "drops",
+      "source_ref": "malware--a07c114a-fcff-4b33-a6fb-285de75489c5",
+      "target_ref": "file--72c99252-9257-42a5-8c14-d634af551b68",
+      "description": "Supper SOCKS5 Backdoor drops orl in the %TEMP% folder to store encrypted backup C2 IPs."
+    }
+  ]
+}

@@ -1,0 +1,828 @@
+{
+  "type": "bundle",
+  "id": "bundle--634e509e-0cce-4668-acc0-c8053055d408",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "campaign",
+      "id": "campaign--d3326854-4f19-4680-9ccd-c2d484e60333",
+      "name": "Campaign Trio",
+      "description": "Active from February\u2013March 2025, Campaign Trio involved mass impersonation of three software brands (i4tools, Youdao, DeepSeek) using over 2,000 domains to deliver Gh0st RAT to Chinese-speaking users. Attackers used aggressive infrastructure deployment, hosting all domains on three IPs, and delivered trojanized MSI installers.",
+      "aliases": [
+        "Trio"
+      ],
+      "first_seen": "2025-02-01T00:00:00Z",
+      "last_seen": "2025-03-31T23:59:59Z",
+      "objective": "Compromise Chinese-speaking users via brand impersonation and deliver Gh0st RAT.",
+      "external_references": [
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/impersonation-campaigns-deliver-gh0st-rat/"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "name": "Campaign Chorus",
+      "description": "Launched in May 2025, Campaign Chorus expanded impersonation to over 40 applications, using wave-based domain registration and cloud-hosted payloads. It featured advanced multi-stage infection chains and DLL sideloading to evade detection, continuing to target Chinese-speaking users.",
+      "aliases": [
+        "Chorus"
+      ],
+      "first_seen": "2025-05-15T00:00:00Z",
+      "last_seen": "2025-10-01T00:00:00Z",
+      "objective": "Compromise Chinese-speaking users through sophisticated impersonation and multi-stage delivery of Gh0st RAT.",
+      "external_references": [
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/impersonation-campaigns-deliver-gh0st-rat/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c3f85af8-7a4e-43e5-bdfe-5bba0f1414fa",
+      "name": "DLL Side-Loading",
+      "description": "DLL side-loading is an evasion technique where a legitimate, signed executable loads a malicious DLL placed in the same directory. Used in Campaign Chorus to execute Gh0st RAT under the guise of a trusted process.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1574/001/",
+          "external_id": "T1574.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ba17ef67-4f12-42e5-82fc-b5bdcc9069e7",
+      "name": "Phishing via Brand Impersonation",
+      "description": "Attackers create malicious websites impersonating legitimate software brands to lure users into downloading trojanized installers. Used for initial access in both campaigns.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1566/",
+          "external_id": "T1566"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d43211de-a5b5-44b0-9745-8425c88437de",
+      "name": "User Execution: Malicious File",
+      "description": "The infection chain relies on users executing downloaded MSI or EXE files, which initiate the malware installation process.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1204/002/",
+          "external_id": "T1204.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d6b59aec-34ad-4c2c-81b1-944f5b608523",
+      "name": "Command and Scripting Interpreter: PowerShell",
+      "description": "PowerShell is used post-infection to add Windows Defender exclusions for the malware payload, aiding defense evasion.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1059/001/",
+          "external_id": "T1059.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--baf88a72-a1dd-4472-9084-8f0f9e63c894",
+      "name": "Command and Scripting Interpreter: Visual Basic",
+      "description": "VBScript is embedded as a custom action in MSI installers to act as a multi-stage dropper, assembling and decrypting next-stage malware.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1059/005/",
+          "external_id": "T1059.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1d490f06-1ef5-4807-a09d-b3930a99310d",
+      "name": "System Binary Proxy Execution: Msiexec",
+      "description": "Malicious MSI installers are used as the primary delivery vehicle for initial droppers, leveraging legitimate system binaries.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1218/007/",
+          "external_id": "T1218.007"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--eeef75dd-824c-4bc6-8925-3d862861eafa",
+      "name": "Impair Defenses: Disable or Modify Tools",
+      "description": "The malware adds exclusions to Windows Defender to prevent detection of its components.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1562/001/",
+          "external_id": "T1562.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--00e01bda-715f-4b6a-b360-0e2a47bc12e9",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "C2 traffic is observed using standard TCP and HTTP protocols for communication between infected hosts and attacker infrastructure.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1071/001/",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0b82f9cc-c0af-48bf-9494-017850b7aaca",
+      "name": "Encrypted Channel: Symmetric Cryptography",
+      "description": "C2 communication over TCP port 8080 is encrypted to evade network inspection.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1573/001/",
+          "external_id": "T1573.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "name": "Acquire Infrastructure",
+      "description": "The actor acquired over 2,000 domains and multiple IP addresses to host malicious websites and C2 servers.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1583/",
+          "external_id": "T1583"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0f07a657-f7f3-45ff-bc26-1ddd7efcdd77",
+      "value": "156.251.25.112"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6c9d9d22-597d-4ed0-924d-d2b94b3d066d",
+      "value": "156.251.25.43"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ba32293f-048b-4ede-80fa-04d01a5bf8cf",
+      "value": "154.82.84.227"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--541df2f1-0a55-4723-96c1-43ccca4928a2",
+      "value": "103.181.134.138"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--22dff039-9f39-4744-8183-db7e1f921fa1",
+      "value": "95.173.197.195"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ae200e63-10e1-425f-b909-d070e1bab586",
+      "value": "xiazailianjieoss.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d51623e3-749f-46d6-a18f-89d5ceea5e27",
+      "value": "fs-im-kefu.7moor-fs1.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ea954834-bde1-4d63-9810-6b6326dc30ce",
+      "value": "xiaobaituziha.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a2f1b3ca-4a3b-4820-92de-7fe2c8ee8af0",
+      "value": "yqmqhjgn.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a85790b5-99f1-45dc-8762-7be99e53105f",
+      "value": "djbzdhygj.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--19a09e12-39fe-488a-b72e-2cf12c8e215f",
+      "value": "xiaofeige.icu"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7ca3f7fc-beef-42c6-b4aa-3c7313ba9b77",
+      "value": "1235saddfs.icu"
+    },
+    {
+      "type": "file",
+      "id": "file--c826127e-2cf0-4e5f-aec4-c2ad2e80640a",
+      "hashes": {
+        "SHA-256": "c37d0c9c9da830e6173b71a3bcc5203fbb66241ccd7d704b3a1d809cadd551b2"
+      },
+      "name": "deepseek_release_X64.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0ada6d33-1dba-499f-9876-9cdd8ba72bd8",
+      "hashes": {
+        "SHA-256": "495ea08268fd9cf52643a986b7b035415660eb411d8484e2c3b54e2c4e466a58"
+      },
+      "name": "i4Tools8_v8.33_Setup_x64.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--3446fff4-dc83-4ade-af6d-97f8e41f2481",
+      "hashes": {
+        "SHA-256": "7267a303abb5fcae2e6f5c3ecf3b50d204f760dabdfc5600bd248fcfad3fc133"
+      },
+      "name": "YoudaoDictSetup.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--9b20af88-2efb-4111-9aab-07a7ef591c2c",
+      "hashes": {
+        "SHA-256": "299e6791e4eb85617c4fab7f27ac53fb70cd038671f011007831b558c318b369"
+      },
+      "name": "svchos1.exe",
+      "description": "Gh0st RAT"
+    },
+    {
+      "type": "file",
+      "id": "file--901c228a-8539-42d4-8b2b-f0d60c5de6cc",
+      "hashes": {
+        "SHA-256": "1395627eca4ca8229c3e7da0a48a36d130ce6b016bb6da750b3d992888b20ab8"
+      },
+      "name": "svchos1.exe",
+      "description": "Gh0st RAT"
+    },
+    {
+      "type": "file",
+      "id": "file--ecd3f33d-af4e-4c75-ba22-d03a2760710a",
+      "hashes": {
+        "SHA-256": "2232612b09b636698afcdb995b822adf21c34fb8979dd63f8d01f0d038acb454"
+      },
+      "name": "com.qihoo.appstore_300101314.apk"
+    },
+    {
+      "type": "file",
+      "id": "file--1df6265e-6397-4d6d-8902-2f87a69b02da",
+      "hashes": {
+        "SHA-256": "18a21dbc327484b8accbd4a6d7b18608390a69033647099f807fdbfdcfff7e6d"
+      },
+      "name": "aa84e841b4.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--10bbb97d-9818-443a-aba8-c4fe562c8899",
+      "hashes": {
+        "SHA-256": "dbe70991750c6dd665b281c27f7be40afea8b5718b097e43cd041d698706ade4"
+      },
+      "name": "f5c84e20eca5434a8f7661d26565.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--1fd7ee8a-0ca1-47e4-a223-ae6cf4dde0eb",
+      "hashes": {
+        "SHA-256": "e8c058acfa2518ddc7828304cf314b6dd49717e9a291ca32ba185c44937c422b"
+      },
+      "name": "f83acd4249e44e.zip"
+    },
+    {
+      "type": "file",
+      "id": "file--acee711e-27b2-4514-8f12-9e8f322c88fa",
+      "hashes": {
+        "SHA-256": "491872a50b8db56d6a5ef1ccabe8702fb7763da4fd3b474d20ae0c98969acfe5"
+      },
+      "name": "win64wsotusapdeuw.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--0500f384-b625-4ac9-9ccf-25018fe67a13",
+      "hashes": {
+        "SHA-256": "bc6fb2eab9ed8d9eb405f6186d08e85be8b1308d207970cc41cf90477aa79064"
+      },
+      "name": "WindowsX64sipwgwudtrsu.msi"
+    },
+    {
+      "type": "file",
+      "id": "file--2bd85686-6d00-439e-b3e5-3a6def4bf2f6",
+      "hashes": {
+        "SHA-256": "bd4635d582413f84ac83adbb4b449b18bac4fc87ca000d0c7be84ad0f9caf68e"
+      },
+      "name": "wsc_proxy.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--26c83a32-36fc-465b-980d-675bb7cf94e0",
+      "hashes": {
+        "SHA-256": "1c3f2530b2764754045039066d2c277dff4efabd4f15f2944e30b10e82f443c0"
+      },
+      "name": "wsc.dll"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--90475d89-5014-439e-bd74-dc995e86214d",
+      "value": "deep-seek.rest"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--93e5f444-3bf4-434e-bf3b-83aebc773a38",
+      "value": "i4toolsearch.vip"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e0d34483-ea63-47cd-9e0a-3034d6121afb",
+      "value": "youdaohhzi.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dd464836-a353-4fb6-9c43-b2063779beee",
+      "value": "xiazaizhadia9.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5fa4a12a-fb41-4a9e-a597-5744f535f00d",
+      "value": "xiazaizhadia8.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2f301f16-6e5a-468d-b7aa-ac98ab62e2c0",
+      "value": "xiazaizhadia51.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--a04014e5-38dc-4cec-a6d6-199bcaaa8c39",
+      "value": "xiazaizhadia50.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c94f0da4-5963-4ddc-9917-9003efb923eb",
+      "value": "xiazaizhadia46.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--681e3a99-329c-42a4-8bba-5bfb5c27cb20",
+      "value": "xiazaizhadia44.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b9256ad3-6091-4678-a652-2d1bd28548b3",
+      "value": "xiazaizhadia42.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--277cc6cb-3d65-4c60-a967-7f0a5cfe9a4d",
+      "value": "xiazaizhadia41.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--94cb809f-dfe2-4b9a-83db-a3994663d49a",
+      "value": "xiazaizhadia40.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--513b1bf0-275a-49d0-b1da-55a2259a4a56",
+      "value": "xiazaizhadia39.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--99fdcb04-4ce9-4189-ba0f-23b4537c1e9f",
+      "value": "xiazaizhadia37.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--92bf870e-fa34-47e4-855c-dae824cab7ba",
+      "value": "xiazaizhadia36.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--48c7b4e1-b63a-4872-8b26-4aa0af7d9612",
+      "value": "xiazaizhadia35.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--80f72469-3091-4117-a6de-3b573d6a611c",
+      "value": "xiazaizhadia34.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8784f22e-912b-4f7a-92fd-79aa0fbcafcb",
+      "value": "xiazaizhadia33.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8d7c36ac-88dc-4d65-b87c-c3e4111cb0fe",
+      "value": "xiazaizhadia30.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--54405895-eb8f-4a82-92a7-73c74598160c",
+      "value": "xiazaizhadia29.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--46b47c52-6e8d-414e-a558-7e36f9286182",
+      "value": "xiazaizhadia27.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--25b3f49a-0f73-4e0c-a050-d295a1fc8052",
+      "value": "xiazaizhadia24.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--91bdd6a7-a187-4dde-9f9a-dd48753e42d9",
+      "value": "xiazaizhadia22.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5ed36f71-3a90-45f9-b4c4-13ec31e80661",
+      "value": "xiazaizhadia21.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1c59f9be-8be6-4178-80ae-02bc728abb6a",
+      "value": "xiazaizhadia20.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d4770b99-9918-45fa-8ee7-d626f2c633cc",
+      "value": "xiazaizhadia2.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6b8368dc-0c3b-4f0e-8aef-766380838ca5",
+      "value": "xiazaizhadia19.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2bf2fb9d-3df7-49ad-97fe-7a0613db96f0",
+      "value": "xiazaizhadia18.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0dd36e48-751a-4aa4-92b1-8b398613e204",
+      "value": "xiazaizhadia16.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--07af1f28-00bb-4833-ba7e-fa7f20e4b16f",
+      "value": "xiazaizhadia12.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--42943d14-9dc0-4cd0-b470-5b58c0744236",
+      "value": "xiazaizhadia10.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1bf896bc-4319-42c9-a767-fca88a7a14aa",
+      "value": "xiazaizhadia1.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f1e3bb21-cd72-4da9-a58a-735f7729a471",
+      "value": "guwaanzh8.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--abe3903d-c8e5-4eb7-aac9-113eedfc5680",
+      "value": "guwaanzh35.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--25c3c178-fbaa-4492-a922-d4399e31741c",
+      "value": "guwaanzh34.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ecce32d1-1d21-42b5-b1ec-c90c0b3a73bd",
+      "value": "guwaanzh25.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2b6c6d63-92be-4c62-a253-646069dd7da0",
+      "value": "guwaanzh24.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fe6544e9-2de8-4302-bd39-5e798b667326",
+      "value": "guwaanzh21.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--888df98f-ae51-448b-a3bd-f317852615df",
+      "value": "guwaanzh20.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--65d2e188-8a5c-433b-9f0d-e615a253f956",
+      "value": "guwaanzh2.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ec1ddb4f-d533-44a0-9452-294cb7021d7d",
+      "value": "ydbaoo52.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6f608a40-b1db-4b0a-8eca-a24a69c40a19",
+      "value": "i4toolscacvi.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--80180ddd-132a-48ec-a4eb-767444a7538d",
+      "value": "youdaqqaavw.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3d184733-cf00-4e25-9ab2-d4f7f00db109",
+      "value": "i4toolsuuozp.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--90dcad97-8a39-4855-a18c-d7522796dee4",
+      "value": "i4toolsllsk.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4afd5440-124b-495e-838c-bd2008ec91d6",
+      "value": "youdaovavxl.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1ebd8223-316b-43b1-80fc-ffed303bdae4",
+      "value": "youdaxxddxk.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--016b7707-b718-4c92-b0c7-af803bfafd08",
+      "value": "youdaovavxk.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b9d407be-386c-491f-a014-d7e569e36b0f",
+      "value": "ydbao11.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4be3e805-35e7-4594-9800-b0c49213fba9",
+      "value": "youdaooosssj.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--068a1473-0804-4fdd-a129-fb653546fb11",
+      "value": "qishuiyinyque-vip.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8c89aca0-1006-437c-961f-bb76501db6cc",
+      "value": "i4toolsuuoxk.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--66ce5323-8a57-4e12-bf78-7d25688058da",
+      "value": "i4toolscacsm.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c118cf76-0e7b-48ce-b63a-54585aa25861",
+      "value": "youdaxxyzr.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--144a4b24-6b17-4888-b8c1-0033017a9553",
+      "value": "i4toolscaczu.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2fd203a6-2b37-4ed4-b018-e13611a16e67",
+      "value": "youdaxxyzy.top"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e5ae3e42-b6fc-425b-994d-fa8b34e4e9aa",
+      "value": "xiazaizhadia31.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5dbeb5c9-6732-4541-af51-0278c066b275",
+      "value": "guwaanzh1.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--dae3e4d3-324c-40ba-a3ac-7b54824e8eab",
+      "value": "xiazaizhadia11.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9018d4d5-f2f7-41d1-956d-a5ae1f7d82c0",
+      "value": "anydesk-www.cyou"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7e6ea6c0-d620-4438-aaf6-3238cc1a62da",
+      "value": "i4.llllxiazai-web.vip"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f334a613-9b98-4c58-9f69-9daa612a22cd",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "malware--f2f492f7-209f-4b19-a972-9ce68c6a587e",
+      "description": "Campaign Trio delivered Gh0st RAT as the final payload to victims.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e574a9be-cf8c-4127-b73b-9c78463d014e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "malware--f2f492f7-209f-4b19-a972-9ce68c6a587e",
+      "description": "Campaign Chorus delivered Gh0st RAT as the final payload to victims.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0acaa02e-3bc1-40d2-9f1f-eef7323bcc82",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Trio used phishing via brand impersonation for initial access.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed721160-e5e2-4bfd-981c-07c77d531bad",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Trio relied on user execution of malicious MSI or EXE files.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20bcb459-06c5-4f94-be42-cc7ce325635b",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Trio used system binary proxy execution via Msiexec for malware delivery.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a61f0445-9070-4264-bd5e-b6736853a4ad",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used phishing via brand impersonation for initial access.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--22b9b811-adc3-4fa5-acca-c78c17c1e49f",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus relied on user execution of malicious MSI or EXE files.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0994fa3e-6721-4a94-9783-02b42ceb56d8",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used system binary proxy execution via Msiexec for malware delivery.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26ec8219-0063-407e-a776-a4f51bdb6882",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used DLL side-loading for defense evasion and execution of Gh0st RAT.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e3d90cb-1133-4d93-9572-08ce7970b65d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used VBScript as a multi-stage dropper embedded in MSI installers.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--639861f0-614d-4ed8-9cf7-aa6f7cdf27c1",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used PowerShell to add Windows Defender exclusions for malware payload.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b6a4e92-5755-4641-89a5-db788c48d176",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Chorus used impair defenses by modifying Windows Defender exclusions.",
+      "start_time": "2025-05-15T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d239ddc1-a7d0-4496-8761-5277891c1a96",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Trio used PowerShell to add Windows Defender exclusions for malware payload.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c36ca504-ad4d-4665-a655-410f5aaf7e0e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Campaign Trio used impair defenses by modifying Windows Defender exclusions.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-03-31T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccb5451e-a07d-47c0-99ec-434469e07917",
+      "relationship_type": "uses",
+      "source_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Both campaigns acquired infrastructure (domains and IPs) for hosting malicious websites and C2 servers.",
+      "start_time": "2025-02-01T00:00:00Z",
+      "end_time": "2025-10-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16a25477-7efb-4c36-9fb3-e7ff1d62d9c8",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2f492f7-209f-4b19-a972-9ce68c6a587e",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Gh0st RAT uses application layer protocols for C2 traffic.",
+      "start_time": "2025-02-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db08be69-400a-4f06-9698-d1f35bdbb488",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2f492f7-209f-4b19-a972-9ce68c6a587e",
+      "target_ref": "attack-pattern--7afb0192-911b-45ef-a60c-ffca15d782b8",
+      "description": "Gh0st RAT uses encrypted channels (symmetric cryptography) for C2 communication.",
+      "start_time": "2025-02-01T00:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c8ead010-c457-41ca-9cf1-0ee31c30374e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2fc5490c-e81e-4b0a-9159-659f896a2ea1",
+      "target_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "description": "Campaign Trio IoCs indicate activity related to Campaign Trio."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e356f70-8b87-4ca3-a51d-47d2bd26a563",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2fc5490c-e81e-4b0a-9159-659f896a2ea1",
+      "target_ref": "campaign--57437d84-9c93-4083-b219-ee1f95d78b16",
+      "description": "Campaign Chorus IoCs indicate activity related to Campaign Chorus."
+    }
+  ]
+}

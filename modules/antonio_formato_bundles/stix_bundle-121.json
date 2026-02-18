@@ -1,0 +1,406 @@
+{
+  "type": "bundle",
+  "id": "bundle--9cc0efea-fd6b-4c0e-93c3-5b9569fbee6c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "name": "Storm-0249",
+      "aliases": [
+        "Storm-0249"
+      ],
+      "description": "Storm-0249 is a financially motivated initial access broker (IAB) that has evolved from mass phishing to sophisticated post-exploitation tactics. The group specializes in stealth and persistence, enabling ransomware affiliates by selling pre-built access. Storm-0249 abuses legitimate Endpoint Detection and Response (EDR) processes, including SentinelOne's SentinelAgentWorker.exe, through techniques such as DLL sideloading, fileless execution, and domain spoofing.",
+      "goals": [
+        "Enable ransomware affiliates",
+        "Establish persistent access",
+        "Evade detection"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e97cd03f-08c4-48d7-879e-27c9d0336317",
+      "name": "DLL Side-Loading",
+      "description": "Storm-0249 abuses DLL sideloading by placing malicious DLLs alongside legitimate executables (such as SentinelAgentWorker.exe) to evade detection and execute attacker code under the guise of trusted processes.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1574.002",
+          "url": "https://attack.mitre.org/techniques/T1574/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--41f8c75c-6111-4353-94f8-fde8951fbc92",
+      "name": "Fileless PowerShell Execution",
+      "description": "Storm-0249 uses curl.exe to download malicious scripts and pipes them directly into PowerShell for in-memory execution, avoiding disk writes and traditional signature-based detection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1059.001",
+          "url": "https://attack.mitre.org/techniques/T1059/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7889ebca-50a5-46f2-94f7-6f9df865405b",
+      "name": "Domain Spoofing",
+      "description": "Storm-0249 creates fake domains that mimic legitimate Microsoft URLs to trick users and security tools into trusting malicious content.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1566.001",
+          "url": "https://attack.mitre.org/techniques/T1566/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--adfcd50c-65d5-418b-842a-765cfa16e63d",
+      "name": "Abuse of Trusted Security Software",
+      "description": "Storm-0249 abuses digitally signed, trusted security software (SentinelAgentWorker.exe) to execute malicious code and establish C2 channels, blending malicious activity with legitimate operations."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6d3eb044-17b6-4afd-af0c-9585b6eba247",
+      "name": "Reconnaissance via Living off the Land Binaries (LOLBins)",
+      "description": "Storm-0249 uses legitimate Windows utilities such as reg.exe and findstr.exe under trusted processes to extract system information and identifiers like MachineGuid for ransomware preparation.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082",
+          "url": "https://attack.mitre.org/techniques/T1082/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "name": "Command and Control via Trusted Process",
+      "description": "Storm-0249 establishes encrypted command-and-control (C2) channels using compromised SentinelAgentWorker.exe processes, making malicious traffic appear as legitimate EDR telemetry.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001",
+          "url": "https://attack.mitre.org/techniques/T1071/001/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--bf0db913-6d81-44be-97b0-6aba2d85747a",
+      "name": "SentinelAgentCore.dll",
+      "hashes": {
+        "SHA-1": "07c5599b9bb00feb70c2d5e43b4b76f228866930"
+      },
+      "description": "Malicious DLL trojanized to impersonate a legitimate SentinelOne EDR component, used in DLL sideloading."
+    },
+    {
+      "type": "file",
+      "id": "file--40b6feea-85e8-42d5-a976-5a094754c8bc",
+      "name": "Spear.msi",
+      "hashes": {
+        "SHA-1": "423f2fcf7ed347ee57c1a3cffa14099ec16ad09c"
+      },
+      "description": "Malicious MSI installer used to deliver trojanized DLL with SYSTEM privileges."
+    },
+    {
+      "type": "file",
+      "id": "file--76208b7f-03f1-4be8-88a7-c1d1ce95bd96",
+      "name": "curl.exe",
+      "description": "Legitimate Windows utility abused to download malicious scripts and pipe into PowerShell."
+    },
+    {
+      "type": "file",
+      "id": "file--c4b783b9-0da4-4c4b-b09d-b0c08f982640",
+      "name": "powershell.exe",
+      "description": "Legitimate Windows utility used for fileless execution of malicious scripts in memory."
+    },
+    {
+      "type": "file",
+      "id": "file--6e694825-e355-4695-bde9-e2076e82a250",
+      "name": "reg.exe",
+      "description": "Legitimate Windows utility used for reconnaissance (extracting registry values such as MachineGuid)."
+    },
+    {
+      "type": "file",
+      "id": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "name": "findstr.exe",
+      "description": "Legitimate Windows utility used for reconnaissance (searching for system-specific identifiers)."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--42d3333f-4862-42b3-9d40-843f0f79e189",
+      "value": "krivomadogolyhp.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1e72cc0e-3f6b-4da1-a5f6-1c45d4a4a7f9",
+      "value": "hristomasitomasdf.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2411ae1d-6bef-4a70-9344-1be65d475a4b",
+      "value": "hamcore.se2"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3f907c26-564f-4c7d-b725-4d300b2d5566",
+      "value": "sgcipl.com"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--588172a9-2d67-41ab-8a4a-627edeecf171",
+      "value": "178.16.52.145"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e7f3eadd-43c1-4fd8-afdb-5c215c89b5b1",
+      "value": "172.67.206.124"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4de66aab-231e-4db7-9dab-82b6a32851ad",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "description": "Storm-0249 uses SentinelAgentCore.dll as a malicious DLL to impersonate a legitimate SentinelOne EDR component for persistence and stealth."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c12408c-c6f3-4433-998e-04a33e3b76e0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "description": "Storm-0249 uses Spear.msi as a malicious installer to deliver trojanized DLLs and gain SYSTEM privileges."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0918b4e1-3ca0-4f5f-9028-b5b1781069d3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 abuses DLL sideloading to evade detection and execute attacker code under trusted processes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a7d90fc-ad97-45cf-b538-d52dc5357c51",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 uses fileless PowerShell execution to run malicious payloads in memory, avoiding disk writes and detection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--764316f2-a3dc-4169-a229-e0e5aedeae58",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 uses domain spoofing to trick users and security tools into trusting malicious content."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4185ac31-4fe5-42ed-aea0-c3ae07753190",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 abuses trusted security software such as SentinelAgentWorker.exe to execute malicious code and establish C2 channels."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c543abb5-a3d3-4f35-8948-1eea4c8fbd3b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 uses LOLBins such as reg.exe and findstr.exe under trusted processes for reconnaissance and extraction of system identifiers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5080cf7-bff3-4147-b26e-4b6443e9f7f1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "attack-pattern--f93f7677-133c-418e-9a4b-d316cb15e4a7",
+      "description": "Storm-0249 establishes encrypted command-and-control channels using compromised trusted processes."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--280d62ff-89c8-44ef-a519-b53cc1cb8c3f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "tool--714c46b9-ce44-41b5-ab8e-efee36dba83c",
+      "description": "Storm-0249 abuses curl.exe to download malicious scripts for fileless execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b35baa2e-1f1d-40a1-941b-fc83d4216968",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "tool--714c46b9-ce44-41b5-ab8e-efee36dba83c",
+      "description": "Storm-0249 uses PowerShell for fileless execution of malicious payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a8afaec-4923-40ba-9fa8-611c9ee60915",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "tool--714c46b9-ce44-41b5-ab8e-efee36dba83c",
+      "description": "Storm-0249 uses reg.exe for reconnaissance, extracting registry values such as MachineGuid."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e4628fa-96f9-4da6-85ea-df78c5aa55c9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "tool--714c46b9-ce44-41b5-ab8e-efee36dba83c",
+      "description": "Storm-0249 uses findstr.exe for reconnaissance and string searches."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32f2c27e-1742-4aab-904b-1302422df971",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "tool--714c46b9-ce44-41b5-ab8e-efee36dba83c",
+      "description": "Storm-0249 abuses SentinelAgentWorker.exe for DLL sideloading, persistence, and establishing disguised C2 channels."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a425dde7-61b3-469f-98f5-fc0f4d4e7421",
+      "relationship_type": "delivers",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "description": "Spear.msi delivers the malicious SentinelAgentCore.dll DLL payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13a05906-b3f9-42d0-b320-af0e973fa0c1",
+      "relationship_type": "drops",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Spear.msi drops the malicious SentinelAgentCore.dll file."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f3b4c7a-aa3b-4ca0-9815-6e2224c93ae7",
+      "relationship_type": "drops",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Spear.msi drops the SentinelAgentCore.dll file for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0055e286-50ce-495a-9205-e48661026878",
+      "relationship_type": "uses",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "SentinelAgentCore.dll is loaded by SentinelAgentWorker.exe via DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1cfac1c-be53-4395-a907-c81e23ab4b87",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Storm-0249 abuses SentinelAgentWorker.exe for DLL sideloading and C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e397e8e-2cf5-461b-85b4-cd9cbceb5ec2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Storm-0249 uses curl.exe to download malicious scripts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cfa85a9c-1e12-4208-ab22-8fe6ea1f1daf",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Storm-0249 uses powershell.exe for fileless execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--89a839ab-1ade-4f43-bbcf-c6811c985b7e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Storm-0249 uses reg.exe for reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3e1acdff-8f2c-4ccc-8799-2e7cd4a67065",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "file--e8d42dd2-6c75-4706-8f17-9e0669cf8708",
+      "description": "Storm-0249 uses findstr.exe for reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7f3c0275-b886-4624-b6ae-a34c9284928c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "domain-name--3f907c26-564f-4c7d-b725-4d300b2d5566",
+      "description": "SentinelAgentCore.dll establishes command-and-control communication with krivomadogolyhp.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--62a9295c-4308-4746-bdec-09439134f3f1",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "domain-name--3f907c26-564f-4c7d-b725-4d300b2d5566",
+      "description": "SentinelAgentCore.dll establishes command-and-control communication with hristomasitomasdf.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67b804ec-f9f5-4b2c-92c2-fccc6cf6da17",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "domain-name--3f907c26-564f-4c7d-b725-4d300b2d5566",
+      "description": "SentinelAgentCore.dll establishes command-and-control communication with hamcore.se2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccb54d1b-9d59-4b62-8efd-39cb380cd25d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "domain-name--3f907c26-564f-4c7d-b725-4d300b2d5566",
+      "description": "SentinelAgentCore.dll establishes command-and-control communication with sgcipl.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a06e4674-b956-47ca-9e54-e18f530dfca9",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "ipv4-addr--e7f3eadd-43c1-4fd8-afdb-5c215c89b5b1",
+      "description": "SentinelAgentCore.dll communicates with the malicious IP address 178.16.52.145."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32318069-2f03-4c0a-ab3f-f86f9fa210ae",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "ipv4-addr--e7f3eadd-43c1-4fd8-afdb-5c215c89b5b1",
+      "description": "SentinelAgentCore.dll communicates with the malicious IP address 172.67.206.124."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55ec0470-de3b-4491-b871-543af9c6fb15",
+      "relationship_type": "delivers",
+      "source_ref": "intrusion-set--84d8aed8-f173-4490-9945-1436f82c5a90",
+      "target_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "description": "Storm-0249 enables ransomware affiliates by delivering ransomware families such as LockBit and ALPHV."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b04fa9ed-9e78-4774-af73-e789116fc25c",
+      "relationship_type": "uses",
+      "source_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "target_ref": "malware--6bc589a9-15b3-4689-b838-4ef52f889f09",
+      "description": "Ransomware affiliates use reconnaissance data and persistence mechanisms established by Storm-0249."
+    }
+  ]
+}

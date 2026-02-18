@@ -1,0 +1,202 @@
+{
+  "type": "bundle",
+  "id": "bundle--6c2e8675-1b17-4aa1-ba23-56c35808dd17",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--cb685b90-87a7-413d-a53e-6716ccf5d67b",
+      "name": "Gladinet CentreStack and Triofox hardcoded AES keys",
+      "description": "Gladinet CentreStack and Triofox products contain hardcoded cryptographic keys in their AES implementation. Attackers can abuse this to access the web.config file, enabling deserialization and remote code execution. The vulnerability allows attackers to generate tickets that never expire and impersonate users, potentially leading to compromise of sensitive files and credentials.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-14611",
+          "url": "https://www.cve.org/CVERecord?id=CVE-2025-14611"
+        },
+        {
+          "source_name": "Huntress Blog",
+          "url": "https://www.huntress.com/blog/cve-2025-30406-critical-gladinet-centrestack-triofox-vulnerability-exploited-in-the-wild"
+        }
+      ],
+      "object_marking_refs": [],
+      "labels": [
+        "hardcoded-keys",
+        "remote-code-execution",
+        "deserialization",
+        "Gladinet",
+        "CentreStack",
+        "Triofox"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e94d7dfd-9f3b-4c71-8c79-07d0768ab07e",
+      "name": "ViewState Deserialization Attack",
+      "description": "Abuse of machine keys obtained from web.config to perform ASPX ViewState deserialization, allowing remote code execution on the server.",
+      "external_references": [
+        {
+          "source_name": "Huntress Blog",
+          "url": "https://www.huntress.com/blog/cve-2025-30406-critical-gladinet-centrestack-triofox-vulnerability-exploited-in-the-wild"
+        }
+      ],
+      "labels": [
+        "deserialization",
+        "remote-code-execution",
+        "ViewState"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--575d6022-2cbe-49c5-b58f-b1ee786ddb91",
+      "name": "Encrypted GET request for web.config",
+      "description": "Indicator of compromise for Gladinet CentreStack and Triofox vulnerability. Encrypted GET request targeting web.config file.",
+      "pattern": "[network-traffic:extensions.'http-request-ext'.request_uri = '/storage/filesvr.dn' AND network-traffic:extensions.'http-request-ext'.query_string MATCHES 't=vghpI7EToZUDIZDdprSubL3mTZ2']",
+      "valid_from": "2025-11-29T00:00:00Z",
+      "labels": [
+        "Gladinet",
+        "CentreStack",
+        "Triofox",
+        "web.config",
+        "indicator-of-compromise"
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--eed701ac-2367-4450-9acf-d507568d0dde",
+      "name": "Attacker IP Address",
+      "description": "Observed threat actor IP address used in exploitation of Gladinet CentreStack and Triofox vulnerability.",
+      "pattern": "[network-traffic:src_ref.value = '147.124.216.205']",
+      "valid_from": "2025-12-10T00:00:00Z",
+      "labels": [
+        "Gladinet",
+        "CentreStack",
+        "Triofox",
+        "indicator-of-compromise",
+        "ip-address"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--c748dbba-76bb-43a9-acd3-d531606adfc3",
+      "name": "Gladinet CentreStack",
+      "description": "Enterprise file sharing and collaboration platform vulnerable to hardcoded AES keys issue.",
+      "cpe": "cpe:2.3:a:gladinet:centrestack:*:*:*:*:*:*:*:*",
+      "labels": [
+        "file-sharing",
+        "enterprise",
+        "Gladinet"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--f45016c0-c72f-4137-97e8-dad5d7ae1fac",
+      "name": "Gladinet Triofox",
+      "description": "Enterprise file sharing and collaboration platform vulnerable to hardcoded AES keys issue.",
+      "cpe": "cpe:2.3:a:gladinet:triofox:*:*:*:*:*:*:*:*",
+      "labels": [
+        "file-sharing",
+        "enterprise",
+        "Gladinet"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f2ced778-9bb9-491b-9f41-be379b865978",
+      "value": "147.124.216.205"
+    },
+    {
+      "type": "file",
+      "id": "file--a58713bc-288a-4c58-b44a-2833785dd68c",
+      "name": "web.config",
+      "path": "C:\\Program Files (x86)\\Gladinet Cloud Enterprise\\root\\web.config"
+    },
+    {
+      "type": "url",
+      "id": "url--5fe4db4e-be6e-4bf8-aed1-0c7388d14272",
+      "value": "/storage/filesvr.dn?t=vghpI7EToZUDIZDdprSubL3mTZ2:aCLI:8Zra5AOPvX4TEEXlZiueqNysfRx7Dsd3P5l6eiYyDiG8Lvm0o41m:ZDplEYEsO5ksZajiXcsumkDyUgpV5VLxL%7C372varAu"
+    },
+    {
+      "type": "url",
+      "id": "url--cd6a169c-5afc-4973-bd01-8fd87768da26",
+      "value": "/storage/filesvr.dn?t=vghpI7EToZUDIZDdprSubL3mTZ2:aCLI:8Zra5AOPvX4TEEXlZiueqNysfRx7Dsd3P5l6eiYyDiG8Lvm0o41m:ZDplEYEsO5ksZajiXcsukOQzFIwOzIHswJBdS7w0RY"
+    },
+    {
+      "type": "url",
+      "id": "url--c4252c9b-977b-49d4-8246-5c0846fad37c",
+      "value": "/storage/filesvr.dn?t=t=vghpI7EToZUDIZDdprSubL3mTZ2:aCLI:8Zra5AOPvX4TEEXlZiueqNysfRx7Dsd3P5l6eiYyDiG8Lvm0o41m4mxEjYeJuI6Nk:xBHQQ1c6Hzjx3OsG4T044CP5qZ9Qr"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92225a9e-c46c-4c2a-8446-70fe1cc603c3",
+      "relationship_type": "has",
+      "source_ref": "software--f45016c0-c72f-4137-97e8-dad5d7ae1fac",
+      "target_ref": "vulnerability--cb685b90-87a7-413d-a53e-6716ccf5d67b",
+      "description": "Gladinet CentreStack is affected by the hardcoded AES keys vulnerability.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13b9d29d-184a-4f1f-8949-43b15b3971c3",
+      "relationship_type": "has",
+      "source_ref": "software--f45016c0-c72f-4137-97e8-dad5d7ae1fac",
+      "target_ref": "vulnerability--cb685b90-87a7-413d-a53e-6716ccf5d67b",
+      "description": "Gladinet Triofox is affected by the hardcoded AES keys vulnerability.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53b2a85d-9e17-437e-b736-da39e2cfcae6",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--e94d7dfd-9f3b-4c71-8c79-07d0768ab07e",
+      "target_ref": "file--a58713bc-288a-4c58-b44a-2833785dd68c",
+      "description": "ViewState deserialization attack abuses machine keys obtained from web.config.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5f1014c-663a-4d37-9707-c092c66802d4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--eed701ac-2367-4450-9acf-d507568d0dde",
+      "target_ref": "file--a58713bc-288a-4c58-b44a-2833785dd68c",
+      "description": "Encrypted GET request for web.config is an indicator of compromise for access to web.config.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9f7c3ad-275e-4739-a2a0-193659027d28",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--eed701ac-2367-4450-9acf-d507568d0dde",
+      "target_ref": "ipv4-addr--f2ced778-9bb9-491b-9f41-be379b865978",
+      "description": "Observed threat actor IP address used in exploitation of Gladinet CentreStack and Triofox vulnerability.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f01f4e27-2514-4689-94a8-ffed63737c5d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--eed701ac-2367-4450-9acf-d507568d0dde",
+      "target_ref": "url--c4252c9b-977b-49d4-8246-5c0846fad37c",
+      "description": "Indicator of compromise for Gladinet CentreStack and Triofox vulnerability: encrypted GET request targeting web.config file.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8336c0e-aca0-4624-816d-d36a5055d24c",
+      "relationship_type": "related-to",
+      "source_ref": "artifact--2fcafdfc-665f-400a-b076-ca8987a159cc",
+      "target_ref": "file--a58713bc-288a-4c58-b44a-2833785dd68c",
+      "description": "Artifact contains encrypted representation of the web.config file path.",
+      "created": "2025-12-12T16:00:00Z",
+      "modified": "2025-12-12T16:00:00Z"
+    }
+  ]
+}

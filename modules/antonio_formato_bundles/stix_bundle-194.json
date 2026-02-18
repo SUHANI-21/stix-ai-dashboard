@@ -1,0 +1,353 @@
+{
+  "type": "bundle",
+  "id": "bundle--791bafcb-23df-4b74-8f2e-c89a63985dab",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a6ae0eb3-50cb-44e3-a06e-39ce4a6407fb",
+      "name": "Time Based Evasion",
+      "description": "Lokibot begins by checking if it was executed with the -u parameter. If present, it pauses for 10 seconds before running its main code.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497.003",
+          "url": "https://attack.mitre.org/techniques/T1497/003/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e41f9e6c-8e81-4a7b-9ff5-3ba2cce80bbb",
+      "name": "System Information Discovery",
+      "description": "Lokibot collects system information including username, token membership, system details, OS version, and machine GUID (used for mutex generation).",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1082",
+          "url": "https://attack.mitre.org/techniques/T1082/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--910ae8e7-117c-4e5a-8e28-a9c01fca0f6c",
+      "name": "Credentials from Password Stores",
+      "description": "Lokibot collects sensitive information from web browsers, FTP clients, vaults, and password managers. It loads sqlite3.dll, mozsqlite3.dll, and nss3.dll to access and decrypt stored browser data.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1555",
+          "url": "https://attack.mitre.org/techniques/T1555/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--db870e51-cad2-4a0d-9029-473edacaf8bb",
+      "name": "Ingress Tool Transfer",
+      "description": "Lokibot can download additional malware, plugins, or malicious components using the UrlDownloadToFileW Windows API, saving files in the %temp% folder and executing them.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1105",
+          "url": "https://attack.mitre.org/techniques/T1105/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--82d355e5-1343-4692-bf05-72d9f47aedae",
+      "name": "Access Token Manipulation",
+      "description": "Lokibot attempts to enable the SeDebugPrivilege token to gain higher-level permissions and interact with system processes such as lsass.exe.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1134",
+          "url": "https://attack.mitre.org/techniques/T1134/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--27d6aa85-67a5-4da4-8cf3-768408f1f9c4",
+      "name": "Process Injection",
+      "description": "Lokibot injects shellcode into lsass.exe for credential dumping and injects itself into a newly created vbc.exe process for defense evasion.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1055",
+          "url": "https://attack.mitre.org/techniques/T1055/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5f658248-02da-41b0-a4b2-af7fffea1a71",
+      "name": "Credentials in Registry",
+      "description": "Lokibot accesses Outlook profile information stored in the Windows registry to extract email account credentials and configuration data.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1552.002",
+          "url": "https://attack.mitre.org/techniques/T1552/002/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "name": "Scheduled Task/Job",
+      "description": "Lokibot creates a scheduled task pointing to a dropped copy of itself to maintain persistence and privilege escalation.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1053",
+          "url": "https://attack.mitre.org/techniques/T1053/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--669a77d3-875b-4230-923d-479ee7527cd8",
+      "name": "Splunk Threat Research Team",
+      "description": "The Splunk Threat Research Team is an active part of a customer\u2019s overall defense strategy by enhancing Splunk security offerings with verified research and security content such as use cases, detection searches, and playbooks. The team replicates attacks, provides tactical guidance, and shares research via conference talks, open-source projects, and blogs.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology",
+        "security"
+      ],
+      "contact_information": "https://www.splunk.com/en_us/surge/threat-research.html"
+    },
+    {
+      "type": "identity",
+      "id": "identity--571d6376-174f-49ce-9032-b02075faac82",
+      "name": "Teoderick Contreras",
+      "description": "Senior Threat Research Engineer on Splunk's Threat Research Team, specializing in malware reverse engineering/analysis, digital forensics, and detection development.",
+      "identity_class": "individual",
+      "contact_information": "https://twitter.com/tccontre18"
+    },
+    {
+      "type": "file",
+      "id": "file--2c12c2ff-3ee2-46ea-8d1e-31ecf18c5504",
+      "hashes": {
+        "SHA-256": "6b8cd32010895abeebbe3f8acfc9718748dfaa7b6a6a5994178b5b1712121c02"
+      },
+      "name": "Steganography Loader with Lokibot"
+    },
+    {
+      "type": "file",
+      "id": "file--a641e69d-0666-411d-a2c3-3b2750867462",
+      "hashes": {
+        "SHA-256": "dce6b152b3a0a2aef99b6b837813d9bb8335d4de7555af0e175c84a137380dd5"
+      },
+      "name": "Steganography Loader"
+    },
+    {
+      "type": "file",
+      "id": "file--b28957dc-2a63-40bf-9e6f-44a1fe1c36b9",
+      "hashes": {
+        "SHA-256": "afadf2ba580bb4b4ebf838defaa64f03da77b6a0418f9fab29fea55558ebfcf7"
+      },
+      "name": "Steganography Loader"
+    },
+    {
+      "type": "file",
+      "id": "file--c6f5a676-82cf-4c30-a509-4d01b6233ebe",
+      "hashes": {
+        "SHA-256": "d8fcaf8be0aa2646663d12005285f5afc10a2ed324fc963b50adcd79802a716a"
+      },
+      "name": "Steganography Loader"
+    },
+    {
+      "type": "file",
+      "id": "file--7b8af107-14d7-4692-a69b-622adea19cc7",
+      "name": "crc.bmp"
+    },
+    {
+      "type": "file",
+      "id": "file--75d598b4-2892-432f-a446-d88bcbbcf0b6",
+      "name": "IVBD.png"
+    },
+    {
+      "type": "file",
+      "id": "file--49f0b8fb-602f-48bd-a1f8-a93b49097490",
+      "name": "Q.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--1ec5037a-8454-4fb7-b8fb-9183e478fb00",
+      "name": "sqlite3.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--37894a6b-6709-4010-bf84-e61f97f63ad8",
+      "name": "mozsqlite3.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "name": "nss3.dll"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2cabedf1-714c-4f1e-bff0-613518cd4800",
+      "relationship_type": "delivers",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "description": ".NET Steganography Loader delivers Lokibot malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46d07455-795b-48a1-a49c-730a44a60d14",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": ".NET Steganography Loader uses steganography images (crc.bmp and IVBD.png) to conceal next stage malware components."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b66b79b6-1650-4042-a260-eec29bf571b2",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": ".NET Steganography Loader uses Q.dll as a decrypted module container for stager images."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49fcaa75-dc82-415e-96b2-39849970d842",
+      "relationship_type": "uses",
+      "source_ref": "tool--09d35df8-a0a6-423a-8ea7-274dc043e5bd",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": "PixDig tool is used to extract hidden payloads from crc.bmp and IVBD.png images."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5fcf6beb-e45b-47ee-ba11-27610d786cf0",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Time Based Evasion (T1497.003)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7b9a7c3-9861-4889-ae31-f7d20b33b59c",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses System Information Discovery (T1082)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70581d8b-3197-473f-890a-622050e5ed65",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Credentials from Password Stores (T1555)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04f46fd8-ec24-4303-a087-e009a0d920a4",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Ingress Tool Transfer (T1105)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a2dbecb-24d5-41e3-9ff5-3401532d9769",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Access Token Manipulation (T1134)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7ea3f99a-847f-482d-8135-a72515c5e8ba",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Process Injection (T1055)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e7bbfd8-ede0-4150-9385-8d9b84ed34c3",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Credentials in Registry (T1552.002)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a06ad96d-8576-4919-88f3-1264e2ee6064",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "attack-pattern--5b27c1ae-eaef-4af4-aad6-2b856aa1a481",
+      "description": "Lokibot uses Scheduled Task/Job (T1053)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e545d2c6-6aff-4126-bec2-af10a117608d",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": "Lokibot loads sqlite3.dll to access browser data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21547cf2-abd3-491c-8ab5-3739167f6dbf",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": "Lokibot loads mozsqlite3.dll to access browser data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3148076e-312b-409e-bf55-7550285bd984",
+      "relationship_type": "uses",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "file--dd111fbd-91e0-4ebc-a677-c5eb0e27813b",
+      "description": "Lokibot loads nss3.dll to access browser data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5f3ebda-1f8b-4eb0-8db1-72eb49f66168",
+      "relationship_type": "targets",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "process--523b9b4b-5268-4ddf-9afb-780620e29fe9",
+      "description": "Lokibot injects shellcode into lsass.exe for credential dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0ccf2293-5a8b-40f8-a107-6ab6945d4fa9",
+      "relationship_type": "injects-into",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "process--523b9b4b-5268-4ddf-9afb-780620e29fe9",
+      "description": "Lokibot injects itself into vbc.exe process for defense evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46e0555e-9888-4cc8-a4c5-228f779788f7",
+      "relationship_type": "creates",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "process--523b9b4b-5268-4ddf-9afb-780620e29fe9",
+      "description": "Lokibot creates a scheduled task using schtasks.exe for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5892d7ce-0ae5-461a-82c1-a67f3abef47d",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--d28d946e-5da1-47d8-b864-b7e4c9bb433b",
+      "target_ref": "identity--571d6376-174f-49ce-9032-b02075faac82",
+      "description": "Splunk Threat Research Team analyzed and published research on Lokibot and .NET Steganography Loader."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c811fc88-aa63-4a12-958f-5362b62500b5",
+      "relationship_type": "authored-by",
+      "source_ref": "tool--09d35df8-a0a6-423a-8ea7-274dc043e5bd",
+      "target_ref": "identity--571d6376-174f-49ce-9032-b02075faac82",
+      "description": "PixDig tool was developed by Teoderick Contreras."
+    }
+  ]
+}

@@ -1,0 +1,459 @@
+{
+  "type": "bundle",
+  "id": "bundle--4842831a-a5a4-47b2-aff3-39dda0b63f88",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--85906a92-f723-4429-b3ab-5583849f08f9",
+      "name": "Genians Security Center",
+      "identity_class": "organization",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.genians.co.kr/en/",
+      "description": "Security research and incident response organization specializing in threat intelligence and analysis."
+    },
+    {
+      "type": "file",
+      "id": "file--70f3ebc6-fc91-482c-b2d6-d1ba92791bba",
+      "hashes": {
+        "MD5": "5ab26df9c161a6c5f0497fde381d7fca"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9f070723-b32e-4bd3-a824-d054e90984e0",
+      "hashes": {
+        "MD5": "8f82226b2f24d470c02f6664f67f23f7"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--2ea671e9-f968-4871-9a97-fa24578cbd73",
+      "hashes": {
+        "MD5": "09b91626507a62121a4bdb08debb3ed9"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6ca363cb-e877-4f62-acd1-ad650f78945b",
+      "hashes": {
+        "MD5": "25e38d618f38b3218c3252cf0d22c969"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--fda54b33-ce76-4964-9d62-49711934d997",
+      "hashes": {
+        "MD5": "38f8fd9e8d27ae665b3ac0f56492f6c4"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a3174bef-baca-4625-b612-a8c003216a64",
+      "hashes": {
+        "MD5": "048e1698c4b711d1652df4bf4be04f9e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6f3318ec-b810-416f-9535-ed2a0d84ca8e",
+      "hashes": {
+        "MD5": "53aea290d7245ee902a808fd87a6a173"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--731d5651-e289-473e-91fa-6c68a9303a59",
+      "hashes": {
+        "MD5": "56c7b448dbc37aa50eb1c2a6475aca5e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--eec0819c-fda5-4a2b-bc0a-2df0895fb381",
+      "hashes": {
+        "MD5": "99ee7852b8041a540fdb74b3784d0409"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--054b3a32-f16f-4321-aa94-5f13a225e878",
+      "hashes": {
+        "MD5": "8230af6642f5f1927bbbbc7fd6e5427f"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d34e6ff4-0de1-4065-9bf4-8aada8dcb556",
+      "hashes": {
+        "MD5": "b0eba111b570bb1c93ca1f48557d265b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bf1e6268-f630-415d-95f8-72de01b72a7a",
+      "hashes": {
+        "MD5": "ef1a8f66351d03413ed2c7d499ee5164"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1332f22e-512e-49de-888e-698d176233d9",
+      "hashes": {
+        "MD5": "f7363c5cfd6fa24a86e542fcd05283e8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--632b206b-7e1a-4eab-9826-adbacfb03869",
+      "hashes": {
+        "MD5": "f6800836d55d049fe79e3d47d54e1119"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c303d3c6-b052-4912-9a61-818918ed273d",
+      "value": "appoitment.dotoit.media"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e55e2bd5-6e9d-4c03-b141-e365074da920",
+      "value": "genuinashop.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--69a081d9-49ed-401c-9aa0-5a956562d905",
+      "value": "oldfoxcompany.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--930d1c44-80c4-483e-9afc-7d666d48e561",
+      "value": "professionaltutors.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6b03130f-50eb-47fb-804e-44fbde5e7938",
+      "value": "sparkwebsolutions.space"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d10f703c-2f42-4f69-8811-5717749ffcd8",
+      "value": "xcellentrenovations.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "value": "youkhanhdoit.co"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--19f40731-70a6-43a4-8fff-0499a93cdd36",
+      "value": "116.202.99.218"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dc87ea4a-86eb-4264-9e00-3cf09f4cb5e6",
+      "value": "192.109.119.113"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--68cfe149-5876-451e-a917-808a5a713a38",
+      "value": "212.118.52.168"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--39ddec61-184d-43fc-a142-507fb7dad99f",
+      "value": "38.180.148.108"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f2f1ee92-f501-4573-b4fa-66f3f5dbfcf7",
+      "value": "62.113.118.157"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ca575587-21f1-4472-8f2c-cc097a62288f",
+      "value": "77.246.101.72"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d28330a9-22b7-4f63-a4ad-ccdc3cccb031",
+      "value": "77.246.108.96"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f5b21ea8-e1b0-47c8-b1fa-67fd171886b5",
+      "value": "89.110.83.245"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6f3e357e-950e-4e65-be98-253dea4eadf7",
+      "value": "91.107.208.93"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--145a63cf-b6a6-4f49-bb83-196f9d90d60c",
+      "value": "93.183.93.185"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--06fec4b0-7d04-4110-9609-5747e066bc5f",
+      "value": "94.103.87.212"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--937bc43b-7084-41c5-adf3-59603b9d31aa",
+      "value": "109.234.36.135"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--599755f4-2634-49ea-bd2a-f4cdd54983fb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "KONNI used the Stress Clear MSI malware in spear-phishing campaigns targeting South Korean individuals via KakaoTalk messenger."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ba64f13-888c-4229-92ac-04b8d4e45cdc",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "KONNI deployed AutoIt-based RAT (IoKlTr.au3) for persistence, remote access, and command execution on victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f56a3cbb-4ba6-43a2-ad26-c155644090ec",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "KONNI used RemcosRAT for remote control, data exfiltration, and keylogging on compromised devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6ad19749-7b2b-4de6-9023-755121ef6b53",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "KONNI delivered QuasarRAT via AutoIt scripts to maintain persistent C2 connections and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f88ca4f5-31eb-4d0e-beba-ec818fb96448",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "KONNI used RftRAT for persistent remote access and command execution, focusing on Korea-based targets."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b344ace-2bee-41e9-aef8-9b1a7daf80b2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "KONNI conducted spear-phishing via messenger by impersonating trusted individuals and distributing malware through KakaoTalk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1795b74e-3e98-4592-b549-94b6b5c0f7bf",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "KONNI abused Google Find Hub to perform remote data wipe attacks on Android devices by compromising Google accounts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2027bce-9578-44b0-bab1-9249dc7708f7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "KONNI established persistence using scheduled tasks and shortcut files in the Startup directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6075e923-3221-454e-bac5-b0bc5c900b81",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "KONNI evaded defenses through code signing with legitimate certificates and self-deletion of installation artifacts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb1a54a0-0bfd-4d9e-90e4-94b08f319fc3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--5912c619-ef56-4b4f-a562-2b91e59c58d7",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "KONNI stole credentials and compromised Google and Naver accounts to further propagate attacks and compromise devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9efa9dbc-a129-4c41-8ff2-20c21b4919c6",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "Stress Clear MSI installer drops and executes the AutoIt-based RAT (IoKlTr.au3) for persistence and remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d38d12d-c12d-43e9-b52a-6a09b07c33eb",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "AutoIt-based RAT (IoKlTr.au3) downloads and launches RemcosRAT, QuasarRAT, and RftRAT modules for remote control and data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--798469a9-2c46-4a2c-af5f-b58558dae4e3",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "AutoIt-based RAT (IoKlTr.au3) downloads and launches RemcosRAT for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aeb63dc9-c094-41a8-b3df-3913bf89ff4a",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "AutoIt-based RAT (IoKlTr.au3) downloads and launches QuasarRAT for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e34e65a-0b10-4a29-b6e4-e427d3e0774c",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "AutoIt-based RAT (IoKlTr.au3) downloads and launches RftRAT for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52e36f37-554b-4c3b-8510-4bb6670db083",
+      "relationship_type": "delivers",
+      "source_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "Spear-phishing via Messenger delivers Stress Clear MSI malware disguised as a stress-relief program."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0b11b1c-6609-4c2d-90b9-d14530d590ac",
+      "relationship_type": "delivers",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "Stress Clear MSI malware delivers AutoIt-based RAT (IoKlTr.au3) to victim systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7362cc82-cf43-4a3c-a0eb-de43317717fd",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "tool--8a210863-8cf4-46e4-945b-08d7095c0931",
+      "description": "Stress Clear MSI installer was built using EMCO Software's MSI Package Builder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--74c0602d-8686-4e9d-9b35-18792d2bc4e7",
+      "relationship_type": "uses",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "tool--8a210863-8cf4-46e4-945b-08d7095c0931",
+      "description": "AutoIt-based RAT (IoKlTr.au3) is written and executed using the AutoIt scripting language."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26871c6d-e216-4220-ad5d-27aebe93499e",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as appoitment.dotoit.media."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7510cca7-2393-4332-be9a-2424f9d94e82",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as genuinashop.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6851af13-748d-4445-a02b-ddca2bac298a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as oldfoxcompany.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--100a6a71-a161-419e-83e8-9d92d0114c63",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as professionaltutors.net."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47ddb323-8594-4fa1-b05a-60bd2100422d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as sparkwebsolutions.space."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a5e6f74-e785-4817-9cf4-7932b056b52b",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as xcellentrenovations.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8344a2af-abea-44c1-9b99-2b1eb04b80ae",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "domain-name--f079c665-0ab5-49ea-903e-4a7c12d22ea2",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 servers such as youkhanhdoit.co."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e07f07e6-feef-4959-8d92-6ba301244886",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "ipv4-addr--937bc43b-7084-41c5-adf3-59603b9d31aa",
+      "description": "AutoIt-based RAT (IoKlTr.au3) communicates with C2 server at 116.202.99.218."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--68747a07-3fe8-424b-bc4a-32b848a5111a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "ipv4-addr--937bc43b-7084-41c5-adf3-59603b9d31aa",
+      "description": "QuasarRAT communicates with C2 server at 212.118.52.168."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56d837f1-399d-49c4-899c-c61820357004",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "target_ref": "ipv4-addr--937bc43b-7084-41c5-adf3-59603b9d31aa",
+      "description": "RftRAT communicates with C2 server at 38.180.148.108."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34e3b23b-346e-4118-b24a-5e5cd9f7fdf3",
+      "relationship_type": "detects",
+      "source_ref": "tool--8a210863-8cf4-46e4-945b-08d7095c0931",
+      "target_ref": "malware--75f17112-cd93-4d10-be1c-c509e6f41807",
+      "description": "Genian EDR detects and monitors activities of Stress Clear, AutoIt-based RAT, RemcosRAT, QuasarRAT, and RftRAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ad9af9f-eb6a-437f-980c-81fa04b68344",
+      "relationship_type": "detects",
+      "source_ref": "tool--8a210863-8cf4-46e4-945b-08d7095c0931",
+      "target_ref": "attack-pattern--00e77531-05dd-4976-8cd6-5b7dbf24fc53",
+      "description": "Genian EDR detects attack patterns such as spear-phishing, persistence, defense evasion, and credential theft."
+    }
+  ]
+}

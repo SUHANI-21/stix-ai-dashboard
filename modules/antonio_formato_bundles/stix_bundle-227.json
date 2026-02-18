@@ -1,0 +1,24 @@
+{
+  "type": "bundle",
+  "id": "bundle--9da902f6-acfd-4cab-ada3-63f7160d2b3c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "url",
+      "id": "url--cc1329f6-ce05-4632-a0d5-5906d4a5b751",
+      "value": "https://cyble.com/resources/research-reports/cyble-threat-landscape-report-september-2025-insights/"
+    },
+    {
+      "type": "file",
+      "id": "file--12e5e820-7fd8-4b2a-8295-a45a7b5fc2c1",
+      "name": "threat-landscape-report-september.webp"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3cd8500-3ecb-4001-a8e6-b5e749eb6bb1",
+      "relationship_type": "related-to",
+      "source_ref": "file--12e5e820-7fd8-4b2a-8295-a45a7b5fc2c1",
+      "target_ref": "url--cc1329f6-ce05-4632-a0d5-5906d4a5b751"
+    }
+  ]
+}

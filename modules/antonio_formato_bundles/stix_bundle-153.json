@@ -1,0 +1,544 @@
+{
+  "type": "bundle",
+  "id": "bundle--e292f763-c722-4fe2-8adf-c2bf6f4211c5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8dde2f7b-e2d3-4edc-943f-8a514cb25b38",
+      "name": "Malware Loader",
+      "description": "Olymp Loader acts as a loader to execute other malware payloads on victim systems, including credential infostealers and remote-access tools.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--85d9acb1-52b1-4415-9d8c-a87efc1e7cb4",
+      "name": "Crypter for Anti-Analysis and Anti-Detection",
+      "description": "Olymp Loader includes crypter functionality focusing on anti-analysis and anti-detection features to evade security products.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4fdbaee2-927e-4283-ba76-5bd9816907b5",
+      "name": "Browser Credential Stealer",
+      "description": "Olymp Loader includes browser stealer modules written in Python and C++, targeting browser credentials and exfiltrating them via proxy URLs.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a55bb807-7828-4993-b6e7-318638587e2f",
+      "name": "Telegram Data Stealer",
+      "description": "Olymp Loader's Telegram stealer module queries the registry for Telegram folders, kills processes, grabs data, takes screenshots, and exfiltrates the zipped results.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--29a34904-607a-4488-a3f3-ab376afbdb0f",
+      "name": "Cryptowallet Stealer",
+      "description": "Olymp Loader's cryptowallet stealer module targets desktop wallets including Exodus, Electrum, Atomic, Guarda, Wasabi, Monero, BitcoinCore, and ZelCore, and exfiltrates data with screenshots.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--53199f85-8860-4420-828b-1ae2fe02fe29",
+      "name": "Disabling Windows Defender",
+      "description": "Olymp Loader disables Windows Defender's real-time monitoring and other protections, including removing Defender components via PowerShell and registry edits.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--47107654-3e1a-43c3-b0bc-6585e9a07312",
+      "name": "Persistence via Startup Folder",
+      "description": "Olymp Loader establishes persistence by creating shortcuts in the Windows Startup folder using PowerShell scripts.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--37f97983-437e-4a95-885d-c6c80a4320e6",
+      "name": "Social Engineering via Mimicked Software Downloads",
+      "description": "Olymp Loader is distributed using URLs and file names designed to mimic legitimate software such as Node.js, PuTTY, OpenSSL, Zoom, and Classic Offensive to trick users into downloading the malware.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ee354430-3932-433c-a55f-f25530dc90ba",
+      "name": "Data Exfiltration via Embedded Proxy URL",
+      "description": "Olymp Loader stealer modules exfiltrate stolen data using an embedded proxy URL marked by a __PROXY__ marker in the binary.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d",
+      "name": "Malware Distribution via GitHub Releases",
+      "description": "Olymp Loader binaries have been observed distributed via GitHub Releases, using filenames and paths mimicking legitimate developer tools.",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/olymp-loader-emerging-malware-as-a-service-threat-in-2025"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--348af342-90b9-4caa-968f-3ee46e5b5f1d",
+      "name": "NodeJs.exe",
+      "path": "/NodeJs/",
+      "extensions": {
+        "github-release": {
+          "repository": "PurpleOrchid65/Testing"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--09f4e07c-f840-460a-ac5f-0475ed99f84f",
+      "name": "test.exe",
+      "path": "%Desktop%\\test.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--927465b2-220a-4988-ae87-abd09b94e73a",
+      "name": "[0-9]{4}.exe",
+      "path": "%AppData%\\[0-9]{4}.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c8cbb995-2963-4fed-af9f-5d08e985d87c",
+      "name": "[a-z]{4}.lnk",
+      "path": "%AppData%\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\[a-z]{4}.lnk"
+    },
+    {
+      "type": "file",
+      "id": "file--c9216d1b-2075-4e14-a9e3-702b32909f78",
+      "name": "PowerRun.exe",
+      "path": "%Temp%\\_MEI\\*\\data\\PowerRun.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--6fac9816-ccbe-4ad1-81a7-53e4ab36fd29",
+      "name": "Remove_SecurityComp.reg",
+      "path": "%Temp%\\_MEI\\*\\data\\Remove_SecurityComp.reg"
+    },
+    {
+      "type": "file",
+      "id": "file--afe38a85-c72a-49bc-b032-8882a0f92edc",
+      "name": "RemoveSecHealthApp.ps1",
+      "path": "%Temp%\\_MEI\\*\\data\\RemoveSecHealthApp.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--244ee7d9-f635-4e38-9c1d-b9e1a6649e76",
+      "name": "RemoveDefender.reg",
+      "path": "%Temp%\\_MEI\\*\\data\\RemoveDefender.reg"
+    },
+    {
+      "type": "file",
+      "id": "file--8af18b92-032f-4076-8016-bdf81317fa17",
+      "name": "RemoveShellAssociation.reg",
+      "path": "%Temp%\\_MEI\\*\\data\\RemoveShellAssociation.reg"
+    },
+    {
+      "type": "file",
+      "id": "file--2202bfeb-5d1f-4afa-a24e-277bf6d7d276",
+      "name": "SecurityHealthSystray.exe",
+      "path": "C:\\Windows\\System32\\SecurityHealthSystray.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--b26c9628-8e9e-4f40-99ca-846e8b3d8d4b",
+      "name": "brsteal.dll",
+      "path": "%temp%\\onefile\\_"
+    },
+    {
+      "type": "file",
+      "id": "file--3699705b-ff80-4975-9f3a-96dddfad1160",
+      "name": "key_datas"
+    },
+    {
+      "type": "file",
+      "id": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33",
+      "name": "D877F7[^\\\\]*?(\\\\maps)?$"
+    },
+    {
+      "type": "url",
+      "id": "url--f63356ad-ec52-40ce-ae3f-61abece4efd1",
+      "value": "http://144.172.97.30/index.php"
+    },
+    {
+      "type": "process",
+      "id": "process--ce1d90ac-8fe2-4fc5-8c31-dbbfdf38d889",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /C \"timeout /T 30 >nul && copy /Y \"C:\\Users\\<USER>\\Desktop\\test.exe\" \"C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe\" && start \"\" \"C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe\""
+    },
+    {
+      "type": "process",
+      "id": "process--df3f8f1d-2fbc-4622-b34c-0841e28e26d5",
+      "name": "powershell.exe",
+      "command_line": "powershell -ExecutionPolicy Bypass -w hidden -command \"$app[0-9]{5}=[Environment]::GetFolderPath([Environment+SpecialFolder]::ApplicationData);Start-Sleep -Seconds 60;$ws = New-Object -ComObject WScript.Shell;$lnk = $ws.CreateShortcut($app[0-9]{5}+ '\\Microsoft\\Windows\\Start Menu\\Programs\\Startup\\[0-9]{4}.lnk');$lnk.TargetPath = '\"C:\\Users\\<USER>\\AppData\\Roaming\\[0-9]{4}.exe\"';$lnk.Save()\""
+    },
+    {
+      "type": "process",
+      "id": "process--d1d5ccf2-20d6-4ef1-ab57-790121a0f1ca",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe powershell -NoProfile -Command \"Set-MpPreference -DisableScanningNetworkFiles $true\""
+    },
+    {
+      "type": "process",
+      "id": "process--af18742a-24d2-4c9a-ac49-0f7629903594",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe powershell -NoProfile -Command \"Set-MpPreference -DisableRealtimeMonitoring $true\""
+    },
+    {
+      "type": "process",
+      "id": "process--ca585f31-cf1b-4a40-99bf-4cf131642a1c",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe powershell -NoProfile -Command \"Set-MpPreference -DisableIOAVProtection $true\""
+    },
+    {
+      "type": "process",
+      "id": "process--f205d0d6-4f74-4df2-a8b5-f3f64fd33b7b",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe powershell -NoProfile -Command \"Add-MpPreference -ExclusionPath $env:TEMP\""
+    },
+    {
+      "type": "process",
+      "id": "process--aacb5b15-ac55-4e54-af52-209cab75f4f2",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\PowerRun.exe regedit.exe /s C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\Remove_SecurityComp.reg\""
+    },
+    {
+      "type": "process",
+      "id": "process--fb735e3a-8a9f-4a46-a485-807f7dffa69f",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c \"del /f /q C:\\Windows\\WinSxS\\FileMaps\\[wow64|amd64]\\_windows-defender\\*.manifest\""
+    },
+    {
+      "type": "process",
+      "id": "process--4908658d-e8d7-4a9e-b8e5-f2d36bbc10c9",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c \"del /f /q C:\\Windows\\System32\\SecurityHealthSystray.exe\""
+    },
+    {
+      "type": "process",
+      "id": "process--4ba66b7b-7d94-4bf7-beb7-b4bb72d79bc7",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c C:\\Windows\\system32\\cmd.exe /c \"Powershell -noprofile -executionpolicy bypass -file C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\RemoveSecHealthApp.ps1\""
+    },
+    {
+      "type": "process",
+      "id": "process--05a7d24b-9b99-43f2-8926-daac0a28c345",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\PowerRun.exe regedit.exe /s C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\RemoveDefender.reg\""
+    },
+    {
+      "type": "process",
+      "id": "process--0bb73382-18b9-4918-afb1-920a889009d5",
+      "name": "cmd.exe",
+      "command_line": "cmd.exe /c \"C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\PowerRun.exe regedit.exe /s C:\\Users\\<USER>\\AppData\\Local\\Temp\\\\_MEI\\*\\data\\RemoveShellAssociation.reg\""
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70c5a7cd-3f84-4be8-b8f6-ca1bdbe1f8d9",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--0b949c44-b26c-40ee-af12-acd65bf8f2bb",
+      "target_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ed40d37-f38b-43ad-bfae-bc9ee01cc4e4",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b35b2a8e-17e4-439a-8b21-c313e6696a9e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31737df0-61d1-4dec-9d2c-1cff9c6bdd46",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--767eaa0f-e8c8-4efb-a491-1c308ba81ef0",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c20d067-7286-41e5-936c-d5b73f41e112",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e9aec0e-63c6-430d-be5f-0f97e674a595",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9bd972ef-9483-41df-b275-8b765ac42402",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43c6b65b-2fef-40c9-b6c4-67e42faa2c7c",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--733775ec-f126-419a-8796-d3c1a385cb3c",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21752b9e-da3f-45b3-b7af-f87c1acf10f1",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a21e8fb3-251d-4033-a833-3ad2561cc494",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "attack-pattern--2320611a-9a8e-49ab-9021-925cdf6cfd4d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4de059b-6c94-4b57-878c-48cfa4c39f1f",
+      "relationship_type": "delivers",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48effff5-385c-497f-bc1a-237c2d72f417",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2fab706-69ab-4930-a9a7-27a6e67bc540",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09f2491f-cdcb-4106-bf90-29a42524dd6d",
+      "relationship_type": "creates",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7c5d127-e47b-4f7f-9b57-ae6a21fcc973",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34c92f17-e323-4c85-8ae5-17eceebd503d",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4210df10-0b9f-4fd1-8d0a-aaaa17f3c7ab",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9c1aed9-9143-4ffa-b7b1-abb331f377c5",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45308a94-e621-4e1c-8817-785cf3ab8d27",
+      "relationship_type": "drops",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36c0a190-7554-4c85-b7b7-d36a4bea3fdc",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aac929e4-c4b5-4b83-a25d-3bcf5abdedec",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--709ddffc-6205-443b-bc5b-2cde47d54c03",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--007641b4-1668-4e0e-a56c-9b49f1e7f9fc",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "file--bc385d23-50a6-46c5-976a-ca3bccc92d33"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aaebf88b-e05e-4856-bdb6-145534d54ac7",
+      "relationship_type": "uses",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "url--f63356ad-ec52-40ce-ae3f-61abece4efd1"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0717c5e5-b605-46dc-becf-662bbbc9c79f",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01884a64-d1d6-4958-81bb-14700e4d4041",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a00e8597-3567-4ff5-8f0c-614bec0a27a9",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23b8cc00-ba6c-41c6-b798-69cc7239d9e5",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--276ae0de-de2d-4c7a-afb9-079e09a16035",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ee2e07a-02d7-4033-9d01-9f27a5326732",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5356771-1606-4ba3-8dab-5fd8d53dcaf5",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e73f3d40-62b9-490c-bff2-40fddd7abe4a",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9f05a15-484f-42f5-9047-901c4532e3c4",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--78298681-16cb-45c3-a8c8-e2711156b837",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53a01726-32d0-45de-8efa-01923b0d5118",
+      "relationship_type": "spawns",
+      "source_ref": "malware--a12ddbb7-0c1b-4dcb-b2d1-8d5aa2d8a397",
+      "target_ref": "process--0bb73382-18b9-4918-afb1-920a889009d5"
+    }
+  ]
+}

@@ -1,0 +1,185 @@
+{
+  "type": "bundle",
+  "id": "bundle--c7cc2678-f4c9-4c0a-81bf-f7d929b56e7a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d5723cd0-ccdb-42ec-98ad-3a52d963e643",
+      "name": "Cyber-Enabled Kinetic Targeting",
+      "description": "A campaign model where cyber operations are specifically designed to enable and enhance kinetic military operations, such as using compromised digital infrastructure (e.g., CCTV, AIS platforms) to provide intelligence for physical attacks.",
+      "x_mitre_detection": "Monitor for suspicious access to critical infrastructure systems, such as maritime platforms and surveillance cameras. Correlate cyber intrusions with subsequent physical incidents.",
+      "aliases": [
+        "Cyber-Enabled Kinetic Targeting"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--4d9a0b7d-2dfe-4727-8b44-c2bc887708ba",
+      "name": "Anonymizing VPN Networks",
+      "description": "VPN services used by threat actors to route traffic and obscure their true origins, making attribution more difficult.",
+      "infrastructure_types": [
+        "anonymizing network"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--668c9cc8-dd9b-412a-aa44-43ee9f46a547",
+      "name": "Actor-Controlled Servers",
+      "description": "Dedicated servers provisioned by threat actors to provide persistent access and command-and-control capabilities for ongoing operations.",
+      "infrastructure_types": [
+        "command and control"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--2a64b5e8-2043-43c8-9760-0e1f55f0e502",
+      "name": "Compromised Enterprise Systems",
+      "description": "Enterprise servers hosting critical infrastructure such as CCTV systems and maritime platforms, targeted and compromised to provide intelligence for kinetic operations.",
+      "infrastructure_types": [
+        "targeted enterprise systems"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "name": "Real-Time Data Streaming",
+      "description": "Live feeds from compromised cameras and sensors used by threat actors to provide actionable intelligence for adjusting kinetic targeting in near real time.",
+      "infrastructure_types": [
+        "data streaming"
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a299a581-f6ed-47d6-83e1-d0f6037706c0",
+      "value": "18.219.14.54"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ee63a94a-09ef-4be1-8fc4-890513ec0b50",
+      "value": "85.239.63.179"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--762f6327-efd8-4044-8a9e-a4feba9e6081",
+      "value": "37.120.233.84"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--eba9fede-1a50-4442-a39b-562a9cb44052",
+      "value": "95.179.207.105"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34ea89b0-0f60-49ab-9d36-453e687169b8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "attack-pattern--d5723cd0-ccdb-42ec-98ad-3a52d963e643",
+      "description": "Imperial Kitten uses cyber-enabled kinetic targeting as part of its campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41fbeeec-c9f8-4a08-8a74-e146549bf317",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "Imperial Kitten uses anonymizing VPN networks to obscure their true origins."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a1dba03-7e89-4ec0-b09a-ea2e63e5f4f0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "Imperial Kitten uses actor-controlled servers for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e90e49b9-2058-4a73-9782-fac7d37bb64a",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "Imperial Kitten targets compromised enterprise systems to gather intelligence for kinetic operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1f99a01-0700-4cf1-a741-dc3312fd08b0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "Imperial Kitten uses real-time data streaming from compromised cameras and sensors."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--17b14fed-ef2f-4f0e-9c4c-e473545a17b5",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3cf0f056-a629-4f84-8587-5d7f2ade2eda",
+      "target_ref": "ipv4-addr--eba9fede-1a50-4442-a39b-562a9cb44052",
+      "description": "Indicator for MuddyWater Command and Control IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88b4600f-ee51-4f8d-8dc5-badbef2fd798",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3cf0f056-a629-4f84-8587-5d7f2ade2eda",
+      "target_ref": "ipv4-addr--eba9fede-1a50-4442-a39b-562a9cb44052",
+      "description": "Indicator for Imperial Kitten proxy IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--111945a6-5947-4e3a-832f-17262a9f49ec",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3cf0f056-a629-4f84-8587-5d7f2ade2eda",
+      "target_ref": "ipv4-addr--eba9fede-1a50-4442-a39b-562a9cb44052",
+      "description": "Indicator for Imperial Kitten proxy IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4357a3c-c1ac-4d15-b705-2eef3721804f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--3cf0f056-a629-4f84-8587-5d7f2ade2eda",
+      "target_ref": "ipv4-addr--eba9fede-1a50-4442-a39b-562a9cb44052",
+      "description": "Indicator for Imperial Kitten proxy IP address."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--306251b6-418c-41a7-917d-0cd1e63234b2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "attack-pattern--d5723cd0-ccdb-42ec-98ad-3a52d963e643",
+      "description": "MuddyWater uses cyber-enabled kinetic targeting as part of its campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--df1ac75a-dce2-48fb-8633-6c72affe74fa",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "MuddyWater uses anonymizing VPN networks to obscure their true origins."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cf760773-74d6-47b1-8008-d31b1933250f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "MuddyWater uses actor-controlled servers for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--286f1bb3-38bc-4052-a175-bd0854187f8f",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "MuddyWater targets compromised enterprise systems to gather intelligence for kinetic operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7dd1807d-0ed0-4c19-92ae-8ed9ceb45d6e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--871f4ad0-2ed3-4210-80c6-218383a8a377",
+      "target_ref": "infrastructure--7cc74efe-5975-4164-91bb-9ae0cc31d170",
+      "description": "MuddyWater uses real-time data streaming from compromised cameras and sensors."
+    }
+  ]
+}

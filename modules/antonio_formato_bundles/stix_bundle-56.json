@@ -1,0 +1,303 @@
+{
+  "type": "bundle",
+  "id": "bundle--85048ee8-6c9d-4a93-a676-093a56e08ba5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--dd78b93f-c139-458b-a414-f778ff7a390e",
+      "name": "Forcepoint X-Labs",
+      "identity_class": "organization",
+      "description": "Forcepoint X-Labs Research Team specializing in threat intelligence, phishing, malware, and email security."
+    },
+    {
+      "type": "identity",
+      "id": "identity--4482663f-da2a-4d9d-92b6-0e6fcad033b9",
+      "name": "Mayur Sewani",
+      "identity_class": "individual",
+      "description": "Senior Security Researcher at Forcepoint X-Labs Research Team, focusing on APT malwares, information stealers, phishing attacks, and defensive adversary emulation."
+    },
+    {
+      "type": "identity",
+      "id": "identity--930ce1a9-c660-44a6-b0d4-075ac556f84a",
+      "name": "Ben Gibney",
+      "identity_class": "individual",
+      "description": "Security Researcher III at Forcepoint X-Labs, specializing in analytics and research for website and email filtering."
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--c6b03c3c-78db-49e6-9562-c1c47efbf26d",
+      "value": "Marc.Jordon@trust-text[.]com"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--a065da74-b016-4b37-b309-72408cf2bfe4",
+      "value": "cfinancial720@gmail[.]com"
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90",
+      "value": "hcc.loans@financier[.]com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b7b863d9-57aa-4d8c-a785-068dfe0efe38",
+      "value": "jritech.shop"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--59228fbd-076e-48c0-9a8d-40d0f24c0d35",
+      "value": "financier.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--02a1dca5-3cc2-464a-ae01-6b3fc2040766",
+      "value": "trust-text.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7eb3e289-51c9-4200-ac6c-59c9338a25c6",
+      "value": "christmasscheercash.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3de25ee9-2fbd-4bf7-b244-82365b0e4993",
+      "value": "thepersonalfinanceguide.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "value": "fastly.net"
+    },
+    {
+      "type": "url",
+      "id": "url--666fc6a1-3aa4-41fc-a695-aabb5120d5b7",
+      "value": "http://track.trust-text[.]com"
+    },
+    {
+      "type": "url",
+      "id": "url--7bcc4522-485d-4a4e-8846-7db11440bc64",
+      "value": "hxxps://www.christmasscheercash[.]com/?id=5FfbxodhySi_D1TNJ-PpNRzZGFRGN7K_peJxXJjmuIA.&subId=ce474wg53d927"
+    },
+    {
+      "type": "url",
+      "id": "url--9e568b17-bc55-4aff-8de3-7dee8a285bb6",
+      "value": "Hxxps://go.thepersonalfinanceguide[.]com/"
+    },
+    {
+      "type": "url",
+      "id": "url--3f40516b-f46b-402c-9605-502443917786",
+      "value": "hxxps://webr-db.global.ssl.fastly[.]net/qi/exc.html"
+    },
+    {
+      "type": "url",
+      "id": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "value": "hxxp://track.trust-text[.]com/index.php/campaigns/xo229otmwcfc8/track-url/ce474wg53d927/c029686d838a3ad3d65826c7e7bddcf3b6e32062"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f100ba9f-bb56-42c5-a6b2-b2f1c2df505f",
+      "value": "195.54.161.105"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce304e51-20a9-473d-af76-bb1157434e5e",
+      "relationship_type": "uses",
+      "source_ref": "campaign--755d1aba-99d5-4753-a41b-e1cde31181ef",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The 2025 Holiday Scams campaign uses DocuSign-themed phishing attack patterns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a8d18ef2-f2fb-43c6-9e88-3a84863ba902",
+      "relationship_type": "uses",
+      "source_ref": "campaign--755d1aba-99d5-4753-a41b-e1cde31181ef",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The 2025 Holiday Scams campaign uses holiday loan spam and identity theft questionnaire attack patterns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cf26a92-afc2-4fb1-96f2-f06700dc3c6e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--935f312f-4f5a-4dcb-b741-e91f624eb88f",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The indicator object contains URLs and domains that indicate DocuSign-themed phishing activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2820a607-1b65-43f6-a146-ef8fc9b0b9bb",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--935f312f-4f5a-4dcb-b741-e91f624eb88f",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The indicator object contains URLs and domains that indicate holiday loan spam and identity theft questionnaire activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d590dca3-9a50-4b4f-b171-96c7422ff7f1",
+      "relationship_type": "attributed-to",
+      "source_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "target_ref": "identity--930ce1a9-c660-44a6-b0d4-075ac556f84a",
+      "description": "DocuSign-themed phishing attack pattern was described and researched by Forcepoint X-Labs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ef7af7a-a9a3-4756-9010-dfa46a7a7e77",
+      "relationship_type": "attributed-to",
+      "source_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "target_ref": "identity--930ce1a9-c660-44a6-b0d4-075ac556f84a",
+      "description": "Holiday loan spam and identity theft questionnaire attack pattern was described and researched by Forcepoint X-Labs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--061199e8-907b-42cc-959f-487eedb5d3e1",
+      "relationship_type": "authored-by",
+      "source_ref": "campaign--755d1aba-99d5-4753-a41b-e1cde31181ef",
+      "target_ref": "identity--930ce1a9-c660-44a6-b0d4-075ac556f84a",
+      "description": "The campaign report was authored by Mayur Sewani."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d419380-c5b3-4896-9655-c01de1c72e2f",
+      "relationship_type": "authored-by",
+      "source_ref": "campaign--755d1aba-99d5-4753-a41b-e1cde31181ef",
+      "target_ref": "identity--930ce1a9-c660-44a6-b0d4-075ac556f84a",
+      "description": "The campaign report was authored by Ben Gibney."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58e7b61d-4949-465a-aa92-fa013e2cf4cb",
+      "relationship_type": "related-to",
+      "source_ref": "email-message--9af8b908-ede8-4c94-af9c-62aa62ab7d99",
+      "target_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "description": "The spoofed DocuSign notification email was sent from the domain jritech.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5d902e3-9721-4830-bf92-2da7bbcbcc4a",
+      "relationship_type": "related-to",
+      "source_ref": "email-message--9af8b908-ede8-4c94-af9c-62aa62ab7d99",
+      "target_ref": "email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90",
+      "description": "The spoofed DocuSign notification email was sent from the address Marc.Jordon@trust-text[.]com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ae4ab2e-e402-46a3-8c5e-168fb6087205",
+      "relationship_type": "related-to",
+      "source_ref": "email-message--9af8b908-ede8-4c94-af9c-62aa62ab7d99",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The email message is part of the DocuSign-themed phishing attack pattern."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a615df3a-9c49-4467-860d-8275b8fb783e",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain jritech.shop is used in DocuSign-themed phishing attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7d0d6ee-502d-4e86-a7a2-9f01290652d4",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain financier.com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a95557f8-8d16-406d-a167-ba8a1f299a3c",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain trust-text.com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bdc53f85-c99d-4e1b-9523-159a04a8e40a",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain christmasscheercash.com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--83a14200-fd7c-4a2c-88db-85961edfa203",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain thepersonalfinanceguide.com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e762c4d5-570d-4ad1-98df-e61b9caa19d2",
+      "relationship_type": "related-to",
+      "source_ref": "domain-name--0642e8df-bf13-463f-9597-ba8bf54ce373",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The domain fastly.net is used in DocuSign-themed phishing attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6096df2f-93f2-405b-81c8-c2686984c88e",
+      "relationship_type": "related-to",
+      "source_ref": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The URL http://track.trust-text[.]com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4666759e-4e54-41dc-a619-b7980c8d1b28",
+      "relationship_type": "related-to",
+      "source_ref": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The URL hxxps://www.christmasscheercash[.]com/?id=5FfbxodhySi_D1TNJ-PpNRzZGFRGN7K_peJxXJjmuIA.&subId=ce474wg53d927 is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--641808d5-52c8-4839-8386-fd66b9431adc",
+      "relationship_type": "related-to",
+      "source_ref": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The URL Hxxps://go.thepersonalfinanceguide[.]com/ is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08b58857-233b-421c-9a2b-95a08712433e",
+      "relationship_type": "related-to",
+      "source_ref": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The URL hxxps://webr-db.global.ssl.fastly[.]net/qi/exc.html is used in DocuSign-themed phishing attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16b3bc6e-114b-4069-a8dd-cf5813a10f31",
+      "relationship_type": "related-to",
+      "source_ref": "url--80f473b4-2b44-4b6e-ae3b-d43824b787d9",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The URL hxxp://track.trust-text[.]com/index.php/campaigns/xo229otmwcfc8/track-url/ce474wg53d927/c029686d838a3ad3d65826c7e7bddcf3b6e32062 is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ad04f60-3f9e-44fd-b1c2-d2169513f477",
+      "relationship_type": "related-to",
+      "source_ref": "email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The email address cfinancial720@gmail[.]com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--05c7907f-fd7a-44b2-8393-d064f6400412",
+      "relationship_type": "related-to",
+      "source_ref": "email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The email address hcc.loans@financier[.]com is used in holiday loan spam and identity theft questionnaire attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f8a0ca8-ef92-40bb-bbf6-418256f07dbf",
+      "relationship_type": "related-to",
+      "source_ref": "email-addr--0fd2c71f-fcbd-42c4-af86-0820a9bb1a90",
+      "target_ref": "attack-pattern--5ad1ec34-1af7-4b3f-ab03-bf7a4aef155d",
+      "description": "The email address Marc.Jordon@trust-text[.]com is used in DocuSign-themed phishing attacks."
+    }
+  ]
+}

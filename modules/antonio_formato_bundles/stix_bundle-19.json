@@ -1,0 +1,1052 @@
+{
+  "type": "bundle",
+  "id": "bundle--ca58e782-5e97-499c-8c2f-219656dd050d",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "created": "2026-01-16T09:31:18.941038Z",
+      "modified": "2026-01-16T09:31:18.941038Z",
+      "name": "Socket",
+      "description": "Socket is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-16T09:31:18.941038Z",
+      "modified": "2026-01-16T09:31:18.941038Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-16T09:31:18.941038Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "created": "2026-01-16T09:31:51.501152Z",
+      "modified": "2026-01-16T09:31:51.501152Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Malicious Chrome Extension Deployment for Initial Access",
+      "description": "Attackers publish Chrome extensions that masquerade as productivity or security tools for enterprise HR and ERP platforms such as Workday, NetSuite, and SuccessFactors. These extensions are distributed via the Chrome Web Store and marketed to users and administrators as legitimate tools for account management and workflow optimization. The extensions request standard permissions that do not appear suspicious during installation, and their privacy policies falsely claim not to collect user data. This social engineering approach enables attackers to gain initial access to enterprise environments by convincing users to install the extensions, thereby granting the malicious code the necessary permissions to operate within the browser context.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1195/002/",
+          "external_id": "T1195.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--26794465-ddf4-6cd8-ea88-4df73eced529",
+      "created": "2026-01-16T09:31:51.501352Z",
+      "modified": "2026-01-16T09:31:51.501352Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Session Cookie Theft and Exfiltration",
+      "description": "Several extensions, including DataByCloud Access, Data By Cloud 1, and Software Access, implement automated extraction of authentication cookies—specifically targeting cookies named '__session' used for authentication in HR and ERP platforms. The extensions use Chrome's cookie APIs to retrieve all cookies for targeted domains, filter for authentication tokens, and exfiltrate them to attacker-controlled remote servers (e.g., api.databycloud.com or api.software-access.com) every 60 seconds. This persistent monitoring and exfiltration enables attackers to collect valid session tokens for enterprise accounts, facilitating unauthorized access and account takeover.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1539/",
+          "external_id": "T1539"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--129292d4-a5be-d41b-aeb9-c2445842e452",
+      "created": "2026-01-16T09:31:51.501457Z",
+      "modified": "2026-01-16T09:31:51.501457Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "DOM Manipulation to Block Security Administration Pages",
+      "description": "Extensions such as Tool Access 11 and Data By Cloud 2 actively interfere with enterprise platform security by manipulating the Document Object Model (DOM) of targeted web pages. They erase content and redirect users away from up to 56 critical administrative and incident response pages, including those for password changes, account deactivation, 2FA device management, and audit log access. This prevents legitimate users and security teams from accessing security controls, managing authentication, or responding to incidents, effectively crippling the ability to detect and remediate account compromise.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--55f6a4c6-469c-a2e1-db56-6452d72070df",
+      "created": "2026-01-16T09:31:51.501545Z",
+      "modified": "2026-01-16T09:31:51.501545Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Bidirectional Session Cookie Injection for Direct Session Hijacking",
+      "description": "The Software Access extension implements a sophisticated session hijacking technique by not only exfiltrating session cookies to its command and control server but also receiving stolen cookies from the server. Using the chrome.cookies.set() API, the extension injects these cookies into the browser, enabling attackers to assume the session of any targeted account directly within the victim's browser. This bidirectional manipulation allows for seamless account takeover and persistent unauthorized access, bypassing traditional authentication mechanisms.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--8045fc1e-fcc6-9eaa-b70c-6059df476dea",
+      "created": "2026-01-16T09:31:51.501626Z",
+      "modified": "2026-01-16T09:31:51.501626Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Blocking Browser Developer Tools to Prevent Code Inspection",
+      "description": "Data By Cloud 1 incorporates the DisableDevtool library to actively block access to browser developer tools. By preventing users and security analysts from inspecting the extension's code or monitoring its behavior through developer tools, the attackers increase the difficulty of detection and analysis. This technique helps maintain the stealth of malicious activities such as cookie theft and DOM manipulation, prolonging the extension's presence in the victim environment.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ee586b17-fa3e-feb5-b8c1-fefed885cf08",
+      "created": "2026-01-16T09:31:51.501704Z",
+      "modified": "2026-01-16T09:31:51.501704Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Password Field Protection to Prevent Credential Inspection",
+      "description": "The Software Access extension includes mechanisms to protect password input fields from inspection. This prevents users and analysts from viewing or extracting credentials entered into the browser, further complicating incident response and forensic analysis. By obfuscating or blocking access to password fields, the attackers reduce the likelihood of their credential theft activities being discovered or interrupted.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--367a02bd-1374-fd4b-69c6-2da25aae35ee",
+      "created": "2026-01-16T09:31:51.501783Z",
+      "modified": "2026-01-16T09:31:51.501783Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Persistent Monitoring of Authentication State",
+      "description": "Extensions maintain continuous surveillance of the authentication state by periodically extracting session tokens and monitoring user activity on enterprise platforms. This persistent monitoring ensures that attackers receive up-to-date credentials and can maintain access even as authentication tokens change or sessions are refreshed. The extensions' background scripts automate this process, enabling long-term compromise and facilitating ongoing account hijacking.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+      "created": "2026-01-16T09:31:51.501835Z",
+      "modified": "2026-01-16T09:31:51.501835Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Encrypted Command and Control Traffic for Cookie Exfiltration",
+      "description": "The extensions encrypt traffic sent to their command and control servers when exfiltrating session tokens and authentication cookies. This encryption helps evade network-based detection mechanisms and makes it more difficult for defenders to identify or analyze the stolen data in transit. By securing the exfiltration channel, attackers increase the success rate of credential theft and reduce the risk of interception by enterprise security tools.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1041/",
+          "external_id": "T1041"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "created": "2026-01-16T09:31:59.840038Z",
+      "modified": "2026-01-16T09:31:59.840038Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "DataByCloud",
+      "description": "DataByCloud is a family of malicious Chrome extensions masquerading as productivity tools for enterprise HR and ERP systems. They steal authentication cookies, block access to security administration pages, and interfere with incident response, enabling session hijacking and account takeover.",
+      "malware_types": [
+        "trojan",
+        "spyware"
+      ],
+      "is_family": true,
+      "aliases": [
+        "DataByCloud Access",
+        "Data By Cloud 1",
+        "Data By Cloud 2"
+      ],
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "anti-analysis",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "created": "2026-01-16T09:31:59.840125Z",
+      "modified": "2026-01-16T09:31:59.840125Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Tool Access 11",
+      "description": "Tool Access 11 is a Chrome extension that blocks access to administrative and security pages within enterprise platforms, preventing users from managing authentication and incident response settings. It is used to disrupt security controls and facilitate unauthorized access.",
+      "malware_types": [
+        "trojan",
+        "spyware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "anti-analysis",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "created": "2026-01-16T09:31:59.840180Z",
+      "modified": "2026-01-16T09:31:59.840180Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Software Access",
+      "description": "Software Access is a malicious Chrome extension that exfiltrates authentication tokens and injects stolen cookies to enable direct session hijacking. It also implements protections against inspection of credential inputs and shares infrastructure patterns with DataByCloud extensions.",
+      "malware_types": [
+        "trojan",
+        "spyware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "remote-access",
+        "anti-analysis",
+        "persistence"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "created": "2026-01-16T09:32:06.016876Z",
+      "modified": "2026-01-16T09:32:06.016876Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "databycloud1104",
+      "description": "The publisher 'databycloud1104' is responsible for four of the malicious Chrome extensions targeting enterprise HR and ERP platforms. These extensions work together to steal authentication tokens, block incident response capabilities, and enable account takeover through session hijacking.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "aliases": [
+        "DataByCloud",
+        "DataByCloud Access",
+        "Data By Cloud 1",
+        "Data By Cloud 2",
+        "Tool Access 11"
+      ],
+      "goals": [
+        "Steal authentication tokens",
+        "Block incident response and security controls",
+        "Enable complete account takeover via session hijacking"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "created": "2026-01-16T09:32:06.016970Z",
+      "modified": "2026-01-16T09:32:06.016970Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "softwareaccess",
+      "description": "The publisher 'softwareaccess' operates the fifth malicious Chrome extension, sharing identical infrastructure and attack patterns with the databycloud1104 group. This extension exfiltrates authentication tokens and enables direct session hijacking through bidirectional cookie injection.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "aliases": [
+        "Software Access"
+      ],
+      "goals": [
+        "Steal authentication tokens",
+        "Enable direct session hijacking",
+        "Bypass security controls and incident response"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "created": "2026-01-16T09:32:13.521300Z",
+      "modified": "2026-01-16T09:32:13.521300Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Chrome Extension API (chrome.cookies)",
+      "description": "The malicious extensions abuse the legitimate Chrome Extension API, specifically the chrome.cookies module, to programmatically access, extract, and inject authentication cookies for enterprise HR and ERP platforms, enabling session hijacking and credential theft.",
+      "tool_types": [
+        "credential-exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "created": "2026-01-16T09:32:13.521561Z",
+      "modified": "2026-01-16T09:32:13.521561Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Chrome Extension API (chrome.cookies.set)",
+      "description": "The extensions use the chrome.cookies.set() function to inject stolen authentication cookies into the browser, allowing attackers to hijack sessions by impersonating legitimate users on targeted platforms.",
+      "tool_types": [
+        "credential-exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "created": "2026-01-16T09:32:13.524604Z",
+      "modified": "2026-01-16T09:32:13.524604Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Chrome Extension API (chrome.cookies.getAll)",
+      "description": "The extensions leverage chrome.cookies.getAll to enumerate and extract all cookies for specified domains, filtering for authentication tokens to exfiltrate to attacker-controlled infrastructure.",
+      "tool_types": [
+        "credential-exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "created": "2026-01-16T09:32:13.524991Z",
+      "modified": "2026-01-16T09:32:13.524991Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage)",
+      "description": "The extensions request and abuse standard Chrome extension permissions such as scripting, management, declarativeNetRequest, and storage to manipulate web pages, block access to security administration interfaces, and maintain persistence.",
+      "tool_types": [
+        "defense-evasion",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "created": "2026-01-16T09:32:13.525255Z",
+      "modified": "2026-01-16T09:32:13.525255Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "DisableDevtool Library",
+      "description": "The DisableDevtool library is used to prevent users and security analysts from inspecting or debugging the extension code via browser developer tools, hindering incident response and analysis.",
+      "tool_types": [
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2a2a53cb-4d20-df5f-a6f4-5f92e0bdc1d2",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "description": "databycloud1104 uses DataByCloud malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--53e274c0-4f0e-b08e-9cd8-9a7ca5ba6396",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "description": "databycloud1104 uses Tool Access 11 malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7833f9c8-14da-9100-7083-b83b42af627a",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "description": "databycloud1104 uses Software Access malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8bdc7b42-df0f-c37a-3ebd-289e392cd8ac",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "description": "softwareaccess uses DataByCloud malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c46b550-54a8-1f43-61b5-21687f6fd24a",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "description": "softwareaccess uses Tool Access 11 malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78694d46-d2f3-f967-cee5-72f6c439c723",
+      "created": "2026-01-16T09:32:13.526331Z",
+      "modified": "2026-01-16T09:32:13.526331Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "description": "softwareaccess uses Software Access malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4487568a-3f24-ad1a-7ee4-6d57d3a6bf71",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "description": "databycloud1104 employs 'Malicious Chrome Extension Deployment for Initial Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2cb416cf-0dd2-e04e-6962-10bb3f685ef0",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--26794465-ddf4-6cd8-ea88-4df73eced529",
+      "description": "databycloud1104 employs 'Session Cookie Theft and Exfiltration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--07d18f86-5a7d-5263-8539-cab1c849c22c",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--129292d4-a5be-d41b-aeb9-c2445842e452",
+      "description": "databycloud1104 employs 'DOM Manipulation to Block Security Administration Pages' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fac9f82f-a49c-9615-8153-b4a815cb9634",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--55f6a4c6-469c-a2e1-db56-6452d72070df",
+      "description": "databycloud1104 employs 'Bidirectional Session Cookie Injection for Direct Session Hijacking' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--484f36ad-800e-8fe6-e0a4-1ecc41841f48",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--8045fc1e-fcc6-9eaa-b70c-6059df476dea",
+      "description": "databycloud1104 employs 'Blocking Browser Developer Tools to Prevent Code Inspection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3813f8e2-8972-62a1-cb99-fcb353c2be81",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--ee586b17-fa3e-feb5-b8c1-fefed885cf08",
+      "description": "databycloud1104 employs 'Password Field Protection to Prevent Credential Inspection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0deb7e77-7f51-9c7d-9ffa-cccf41ff3ff1",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--367a02bd-1374-fd4b-69c6-2da25aae35ee",
+      "description": "databycloud1104 employs 'Persistent Monitoring of Authentication State' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2985ab5f-ed22-ba9f-eee2-71ffd88933a3",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+      "description": "databycloud1104 employs 'Encrypted Command and Control Traffic for Cookie Exfiltration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3769319d-b724-65e2-2588-30a460469d9e",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "description": "softwareaccess employs 'Malicious Chrome Extension Deployment for Initial Access' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9e3b97f9-1cf8-fb98-a08c-1d7469a0a862",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--26794465-ddf4-6cd8-ea88-4df73eced529",
+      "description": "softwareaccess employs 'Session Cookie Theft and Exfiltration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--11718db5-be81-4d1b-9daf-ac4c56f1fb15",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--129292d4-a5be-d41b-aeb9-c2445842e452",
+      "description": "softwareaccess employs 'DOM Manipulation to Block Security Administration Pages' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--786207a8-8170-1ab4-2e2e-7e46700c5194",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--55f6a4c6-469c-a2e1-db56-6452d72070df",
+      "description": "softwareaccess employs 'Bidirectional Session Cookie Injection for Direct Session Hijacking' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--82068e28-c01f-5cd5-9f5f-fd07eaacffbb",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--8045fc1e-fcc6-9eaa-b70c-6059df476dea",
+      "description": "softwareaccess employs 'Blocking Browser Developer Tools to Prevent Code Inspection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b0e8a57b-2a0b-8506-852f-e2500c041d5b",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--ee586b17-fa3e-feb5-b8c1-fefed885cf08",
+      "description": "softwareaccess employs 'Password Field Protection to Prevent Credential Inspection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--84a26d9d-9039-791d-1a82-9cc711b459de",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--367a02bd-1374-fd4b-69c6-2da25aae35ee",
+      "description": "softwareaccess employs 'Persistent Monitoring of Authentication State' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ef62611a-3d23-8ca2-40cf-769a3475ebac",
+      "created": "2026-01-16T09:32:13.530757Z",
+      "modified": "2026-01-16T09:32:13.530757Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+      "description": "softwareaccess employs 'Encrypted Command and Control Traffic for Cookie Exfiltration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9a3219b6-62ad-e5db-b898-b8cc79e61120",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "description": "databycloud1104 uses Chrome Extension API (chrome.cookies) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3879819f-d2c4-0d7d-648d-55af5d07f0c4",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "description": "databycloud1104 uses Chrome Extension API (chrome.cookies.set) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--08786951-8737-0ec8-df45-ec492732d8dd",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "description": "databycloud1104 uses Chrome Extension API (chrome.cookies.getAll) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d5b08a00-1517-9838-d3ba-21645472f734",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "description": "databycloud1104 uses Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--70d60542-3a78-158b-6ad3-9e21480d56e9",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+      "target_ref": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "description": "databycloud1104 uses DisableDevtool Library tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b3f3bcf1-dc43-2788-11ae-f34c823ca939",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "description": "softwareaccess uses Chrome Extension API (chrome.cookies) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f8959101-5a50-5855-8ede-3725a9be5c9b",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "description": "softwareaccess uses Chrome Extension API (chrome.cookies.set) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--65ffe6ac-cb8e-ab4a-e2a9-cfb0357f4d9b",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "description": "softwareaccess uses Chrome Extension API (chrome.cookies.getAll) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6afb84a9-75c7-87f9-1f8a-e234ef14c227",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "description": "softwareaccess uses Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6872b7ff-73f5-a864-9cbd-1605bcd1ab31",
+      "created": "2026-01-16T09:32:13.535983Z",
+      "modified": "2026-01-16T09:32:13.535983Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+      "target_ref": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "description": "softwareaccess uses DisableDevtool Library tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--10788a5b-f370-e45d-f7e7-9855322f2bbc",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "target_ref": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "description": "DataByCloud uses Chrome Extension API (chrome.cookies) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b6d84113-d485-cec8-9864-3b1cbb9d4613",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "target_ref": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "description": "DataByCloud uses Chrome Extension API (chrome.cookies.set) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--572ad7cd-9033-aabf-dca1-bdd1090e79c6",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "target_ref": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "description": "DataByCloud uses Chrome Extension API (chrome.cookies.getAll) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c48eab6b-c0ea-9992-42ba-d44ca39525f5",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "target_ref": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "description": "DataByCloud uses Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e337e358-ada7-31a7-04cc-0d7043e1b0a0",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+      "target_ref": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "description": "DataByCloud uses DisableDevtool Library for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ceb5f262-31fb-3a58-a413-64cd89ff8399",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "target_ref": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "description": "Tool Access 11 uses Chrome Extension API (chrome.cookies) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ef69351d-75c6-fdce-f7c1-5506e17c4345",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "target_ref": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "description": "Tool Access 11 uses Chrome Extension API (chrome.cookies.set) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1b401f91-bea4-70c1-13ba-98edaeec574a",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "target_ref": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "description": "Tool Access 11 uses Chrome Extension API (chrome.cookies.getAll) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1927a0fb-8531-1a0c-569b-779b9ed0a74f",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "target_ref": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "description": "Tool Access 11 uses Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a4254ace-bfd1-4048-797c-ae6979febbc3",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+      "target_ref": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "description": "Tool Access 11 uses DisableDevtool Library for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--831188d7-68ab-4a23-6b93-69aa78ccdd9f",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "target_ref": "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+      "description": "Software Access uses Chrome Extension API (chrome.cookies) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fd025fe5-9e95-f12d-05c2-ed71101681be",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "target_ref": "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+      "description": "Software Access uses Chrome Extension API (chrome.cookies.set) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--24a84057-7a02-832d-8668-215cb226aeee",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "target_ref": "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+      "description": "Software Access uses Chrome Extension API (chrome.cookies.getAll) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4814e5aa-81d5-0d74-ebe0-a45d3744f7f8",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "target_ref": "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+      "description": "Software Access uses Chrome Extension API (chrome.scripting, chrome.management, chrome.declarativeNetRequest, chrome.storage) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d98a98cb-8133-2db4-605a-04642cabbd28",
+      "created": "2026-01-16T09:32:13.536329Z",
+      "modified": "2026-01-16T09:32:13.536329Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+      "target_ref": "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+      "description": "Software Access uses DisableDevtool Library for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--e376fdde-6512-bc1a-beaa-40222a7a22dc",
+      "created": "2026-01-16T09:32:13.543539Z",
+      "modified": "2026-01-16T09:32:13.543539Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "5 Malicious Chrome Extensions Enable Session Hijacking in En...",
+      "description": "This report contains technical analysis and indicators from: https://socket.dev/blog/5-malicious-chrome-extensions-enable-session-hijacking?utm_medium=feed",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-16T09:32:13.543539Z",
+      "object_refs": [
+        "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+        "attack-pattern--26794465-ddf4-6cd8-ea88-4df73eced529",
+        "attack-pattern--129292d4-a5be-d41b-aeb9-c2445842e452",
+        "attack-pattern--55f6a4c6-469c-a2e1-db56-6452d72070df",
+        "attack-pattern--8045fc1e-fcc6-9eaa-b70c-6059df476dea",
+        "attack-pattern--ee586b17-fa3e-feb5-b8c1-fefed885cf08",
+        "attack-pattern--367a02bd-1374-fd4b-69c6-2da25aae35ee",
+        "attack-pattern--1a318bb6-79b6-0366-00e5-26086e2476c0",
+        "malware--d155005c-19f8-0f62-9c02-92a4f6d5a6ae",
+        "malware--d6221321-4616-d56c-09ff-58caa4752e6d",
+        "malware--569cc7cd-dbdb-9d55-af0e-5ed49262f206",
+        "threat-actor--113be3c2-c7df-98fe-0ffb-f1afeea191e2",
+        "threat-actor--88a3b19d-6549-2c28-a5c6-d0a8df2a47d7",
+        "tool--fcbcabb8-a0bf-b367-b2cb-e40dc2c4355b",
+        "tool--a13e2556-405b-6abb-3f6d-2dd2edf6ed56",
+        "tool--6b9ab10b-a0d6-c163-5e7c-cf86e6265bff",
+        "tool--ec28c7f9-820c-3114-53db-b73751c830b9",
+        "tool--7c621e82-f5ee-60be-6bd1-c6715414cfb0",
+        "relationship--2a2a53cb-4d20-df5f-a6f4-5f92e0bdc1d2",
+        "relationship--53e274c0-4f0e-b08e-9cd8-9a7ca5ba6396",
+        "relationship--7833f9c8-14da-9100-7083-b83b42af627a",
+        "relationship--8bdc7b42-df0f-c37a-3ebd-289e392cd8ac",
+        "relationship--4c46b550-54a8-1f43-61b5-21687f6fd24a",
+        "relationship--78694d46-d2f3-f967-cee5-72f6c439c723",
+        "relationship--4487568a-3f24-ad1a-7ee4-6d57d3a6bf71",
+        "relationship--2cb416cf-0dd2-e04e-6962-10bb3f685ef0",
+        "relationship--07d18f86-5a7d-5263-8539-cab1c849c22c",
+        "relationship--fac9f82f-a49c-9615-8153-b4a815cb9634",
+        "relationship--484f36ad-800e-8fe6-e0a4-1ecc41841f48",
+        "relationship--3813f8e2-8972-62a1-cb99-fcb353c2be81",
+        "relationship--0deb7e77-7f51-9c7d-9ffa-cccf41ff3ff1",
+        "relationship--2985ab5f-ed22-ba9f-eee2-71ffd88933a3",
+        "relationship--3769319d-b724-65e2-2588-30a460469d9e",
+        "relationship--9e3b97f9-1cf8-fb98-a08c-1d7469a0a862",
+        "relationship--11718db5-be81-4d1b-9daf-ac4c56f1fb15",
+        "relationship--786207a8-8170-1ab4-2e2e-7e46700c5194",
+        "relationship--82068e28-c01f-5cd5-9f5f-fd07eaacffbb",
+        "relationship--b0e8a57b-2a0b-8506-852f-e2500c041d5b",
+        "relationship--84a26d9d-9039-791d-1a82-9cc711b459de",
+        "relationship--ef62611a-3d23-8ca2-40cf-769a3475ebac",
+        "relationship--9a3219b6-62ad-e5db-b898-b8cc79e61120",
+        "relationship--3879819f-d2c4-0d7d-648d-55af5d07f0c4",
+        "relationship--08786951-8737-0ec8-df45-ec492732d8dd",
+        "relationship--d5b08a00-1517-9838-d3ba-21645472f734",
+        "relationship--70d60542-3a78-158b-6ad3-9e21480d56e9",
+        "relationship--b3f3bcf1-dc43-2788-11ae-f34c823ca939",
+        "relationship--f8959101-5a50-5855-8ede-3725a9be5c9b",
+        "relationship--65ffe6ac-cb8e-ab4a-e2a9-cfb0357f4d9b",
+        "relationship--6afb84a9-75c7-87f9-1f8a-e234ef14c227",
+        "relationship--6872b7ff-73f5-a864-9cbd-1605bcd1ab31",
+        "relationship--10788a5b-f370-e45d-f7e7-9855322f2bbc",
+        "relationship--b6d84113-d485-cec8-9864-3b1cbb9d4613",
+        "relationship--572ad7cd-9033-aabf-dca1-bdd1090e79c6",
+        "relationship--c48eab6b-c0ea-9992-42ba-d44ca39525f5",
+        "relationship--e337e358-ada7-31a7-04cc-0d7043e1b0a0",
+        "relationship--ceb5f262-31fb-3a58-a413-64cd89ff8399",
+        "relationship--ef69351d-75c6-fdce-f7c1-5506e17c4345",
+        "relationship--1b401f91-bea4-70c1-13ba-98edaeec574a",
+        "relationship--1927a0fb-8531-1a0c-569b-779b9ed0a74f",
+        "relationship--a4254ace-bfd1-4048-797c-ae6979febbc3",
+        "relationship--831188d7-68ab-4a23-6b93-69aa78ccdd9f",
+        "relationship--fd025fe5-9e95-f12d-05c2-ed71101681be",
+        "relationship--24a84057-7a02-832d-8668-215cb226aeee",
+        "relationship--4814e5aa-81d5-0d74-ebe0-a45d3744f7f8",
+        "relationship--d98a98cb-8133-2db4-605a-04642cabbd28"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

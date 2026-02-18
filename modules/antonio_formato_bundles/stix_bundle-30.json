@@ -1,0 +1,610 @@
+{
+  "type": "bundle",
+  "id": "bundle--cd5aef1b-1aec-41c4-a4f1-96df941260b0",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "created": "2026-01-13T14:19:01.104176Z",
+      "modified": "2026-01-13T14:19:01.104176Z",
+      "name": "Socket",
+      "description": "Socket is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-13T14:19:01.104176Z",
+      "modified": "2026-01-13T14:19:01.104176Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-13T14:19:01.104176Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--a9111411-5f7b-49c8-be68-5f6d2ccec094",
+      "created": "2026-01-13T14:19:02.994249Z",
+      "modified": "2026-01-13T14:19:02.994249Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "DOMAIN-NAME: swapsushi.net",
+      "description": "Indicator of Compromise: domain-name - swapsushi.net\nConfidence: high\nNotes: Domain associated with the SwapSushi brand, promoted by the threat actor. Listed on anti-scam blocklists and used for cryptocurrency-related scams. Infrastructure linked to the same actor behind the malicious Chrome extension.",
+      "pattern": "[domain-name:value = 'swapsushi.net']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-13T14:19:02.994249Z",
+      "indicator_types": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "created": "2026-01-13T14:19:32.733878Z",
+      "modified": "2026-01-13T14:19:32.733878Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Supply Chain Compromise via Malicious Chrome Extension",
+      "description": "The threat actor published the 'MEXC API Automator' extension to the official Chrome Web Store, leveraging the trusted software supply chain to reach a wide victim pool. By marketing the extension as a legitimate productivity tool for automating API key creation on the MEXC cryptocurrency exchange, the attacker bypassed traditional security controls and exploited user trust in the Chrome Web Store. This approach enabled initial access to victims' browsers without requiring direct exploitation or phishing, and allowed the extension to be installed by users seeking trading automation, especially those in regions where MEXC is not officially available.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1195/002/",
+          "external_id": "T1195.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--33b2b06a-02e2-77a8-65aa-5d8a68453259",
+      "created": "2026-01-13T14:19:32.733977Z",
+      "modified": "2026-01-13T14:19:32.733977Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Browser Extension Persistence",
+      "description": "Once installed, the malicious Chrome extension maintains persistence within the victim's browser environment. It is configured to automatically activate whenever the user visits the MEXC API management page, ensuring ongoing access to any authenticated sessions. The extension’s manifest and content script allow it to operate silently in the background, automating malicious actions without requiring further user interaction. This persistence mechanism enables the attacker to repeatedly harvest API credentials and manipulate account permissions as long as the extension remains installed.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1176/001/",
+          "external_id": "T1176.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--10c78df1-4101-80fb-67bb-a2b4d25cb429",
+      "created": "2026-01-13T14:19:32.734038Z",
+      "modified": "2026-01-13T14:19:32.734038Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Automated Execution via User Navigation",
+      "description": "The attack is triggered when the user navigates to the MEXC API management page. The extension detects the URL pattern and immediately injects its content script, which initiates the automation process. There is no confirmation prompt or warning; simply accessing the relevant page is sufficient to begin malicious activity. This technique relies on user execution in the form of normal browsing behavior, exploiting the fact that users expect legitimate functionality from installed extensions.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1204/",
+          "external_id": "T1204"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--0e7c9740-7a5c-ff4f-1013-ab203077d725",
+      "created": "2026-01-13T14:19:32.734089Z",
+      "modified": "2026-01-13T14:19:32.734089Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "JavaScript Content Script Injection",
+      "description": "The extension injects a content script ('script.js') into the MEXC API management page, operating within the context of the authenticated user session. This script programmatically locates the API key creation form, selects all available permissions, and submits the form to generate a new API key. The use of JavaScript enables the attacker to automate complex interactions with the web application, manipulate DOM elements, and extract sensitive data directly from rendered modals.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1059/007/",
+          "external_id": "T1059.007"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c7f766e1-e853-044a-e075-9d51f6fbe49c",
+      "created": "2026-01-13T14:19:32.734137Z",
+      "modified": "2026-01-13T14:19:32.734137Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Credential Harvesting from Success Modal",
+      "description": "After the user completes the API key creation process, the extension monitors the page for the appearance of the success modal containing the newly generated 'Access Key' and 'Secret Key'. It extracts these credentials from the modal’s DOM elements and prepares them for exfiltration. This approach targets API keys at the moment of creation, ensuring that the attacker obtains credentials with full permissions before the user can restrict or revoke access.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1552/004/",
+          "external_id": "T1552.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+      "created": "2026-01-13T14:19:32.734184Z",
+      "modified": "2026-01-13T14:19:32.734184Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Exfiltration via Telegram Bot",
+      "description": "Stolen API credentials are exfiltrated using background HTTPS POST requests to a hardcoded Telegram bot and chat controlled by the threat actor. This method leverages Telegram’s messaging infrastructure as a covert and resilient command-and-control channel, allowing the attacker to receive harvested credentials in real time. The use of Telegram also complicates detection and blocking, as traffic to the platform may be considered benign in many environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1071/001/",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6b8152b9-3e02-36e8-fdbb-c060522eba37",
+      "created": "2026-01-13T14:19:32.734234Z",
+      "modified": "2026-01-13T14:19:32.734234Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Financial Theft Using Stolen API Keys",
+      "description": "Once the attacker receives the victim’s API keys and secrets, they use them to access the MEXC account via the official API. The attacker executes trades, initiates withdrawals, and drains wallets and balances associated with the compromised account. This technique results in direct financial loss for victims, as the attacker leverages legitimate API functionality to bypass password and two-factor authentication requirements.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1657/",
+          "external_id": "T1657"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--28bcd3bb-71b9-95c5-9106-5f7d4b120f14",
+      "created": "2026-01-13T14:19:32.734311Z",
+      "modified": "2026-01-13T14:19:32.734311Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "UI Deception: Hiding Withdrawal Permissions",
+      "description": "The extension manipulates the MEXC API management page’s user interface to conceal the fact that withdrawal permissions have been enabled for the newly created API key. It strips the visible checked state from the withdrawal checkbox, injects CSS to hide the tick mark, and monitors the element to reapply this deception if the UI changes. This ensures that the victim believes withdrawal capability is disabled, while it remains active on the server side, increasing the likelihood of undetected financial theft.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ec91d31b-ba28-3ec0-4107-10ce5bb6c339",
+      "created": "2026-01-13T14:19:32.734388Z",
+      "modified": "2026-01-13T14:19:32.734388Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Automated API Key Creation with Full Permissions",
+      "description": "The extension programmatically selects every available permission checkbox in the API key creation form, ensuring that the generated API key has maximum access, including trading and withdrawals. This automation removes the need for user configuration and guarantees that the attacker receives credentials with the highest level of privilege. The process is triggered immediately upon page load, without user confirmation, streamlining the attack and increasing its effectiveness.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "privilege-escalation"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "created": "2026-01-13T14:19:37.001137Z",
+      "modified": "2026-01-13T14:19:37.001137Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "MEXC API Automator",
+      "description": "MEXC API Automator is a malicious Chrome extension disguised as a trading automation tool. It programmatically creates new MEXC API keys with withdrawal permissions, exfiltrates the credentials to a Telegram bot controlled by the attacker, and enables full account takeover and unauthorized withdrawals.",
+      "malware_types": [
+        "trojan",
+        "credential-theft",
+        "spyware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "credential-theft",
+        "data-exfiltration",
+        "remote-access"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "created": "2026-01-13T14:19:43.113685Z",
+      "modified": "2026-01-13T14:19:43.113685Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "jorjortan142",
+      "description": "The threat actor using the alias 'jorjortan142' published the malicious 'MEXC API Automator' Chrome extension to the Chrome Web Store. This actor controls the Telegram bot used to exfiltrate stolen MEXC API keys and is responsible for the account takeover and financial theft described in the article.",
+      "threat_actor_types": [
+        "criminal",
+        "unknown"
+      ],
+      "goals": [
+        "Steal newly created MEXC API keys",
+        "Enable withdrawal permissions for account takeover",
+        "Exfiltrate credentials to a Telegram bot",
+        "Gain full programmatic control over victim MEXC accounts",
+        "Execute trades and drain wallets"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f8c9632-0670-c7fa-ba7e-cdccfb8cf6dd",
+      "created": "2026-01-13T14:19:49.348152Z",
+      "modified": "2026-01-13T14:19:49.348152Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Google Chrome Extension Framework",
+      "description": "The Chrome extension framework is abused to deliver and execute the malicious 'MEXC API Automator' extension, which automates API key creation, manipulates UI elements, and exfiltrates credentials from the user's browser session.",
+      "tool_types": [
+        "exploitation",
+        "credential-exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e8446e78-7061-8b26-6c46-d345b4460b5a",
+      "created": "2026-01-13T14:19:49.348233Z",
+      "modified": "2026-01-13T14:19:49.348233Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Telegram Bot API",
+      "description": "The Telegram Bot API is used as an exfiltration channel, with stolen MEXC API keys and secrets sent via HTTPS requests to a hardcoded Telegram bot and chat controlled by the attacker.",
+      "tool_types": [
+        "exfiltration",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--41329416-9403-6b69-7220-b84792976d9f",
+      "created": "2026-01-13T14:19:49.348286Z",
+      "modified": "2026-01-13T14:19:49.348286Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "MEXC API",
+      "description": "The legitimate MEXC API is abused to create new API keys with full trading and withdrawal permissions, allowing the attacker to programmatically control victim accounts and perform unauthorized trades and withdrawals.",
+      "tool_types": [
+        "credential-exploitation",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a21a1edc-938d-4f33-e6a5-9b2e12f32ba0",
+      "created": "2026-01-13T14:19:49.348470Z",
+      "modified": "2026-01-13T14:19:49.348470Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--a9111411-5f7b-49c8-be68-5f6d2ccec094",
+      "target_ref": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "description": "Indicator 'DOMAIN-NAME: swapsushi.net' indicates presence of MEXC API Automator malware (context-based)"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--33180001-a9e2-20f2-50b7-fd097e3f2f2f",
+      "created": "2026-01-13T14:19:49.348767Z",
+      "modified": "2026-01-13T14:19:49.348767Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "description": "jorjortan142 uses MEXC API Automator malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d4b0881f-13d6-3109-ae2b-4aa35362de8d",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "description": "jorjortan142 employs 'Supply Chain Compromise via Malicious Chrome Extension' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--16f9545d-6d07-6811-2f11-e964f9158279",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--33b2b06a-02e2-77a8-65aa-5d8a68453259",
+      "description": "jorjortan142 employs 'Browser Extension Persistence' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--44041c05-59fa-6f1f-77bd-1e5ba2e8103f",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--10c78df1-4101-80fb-67bb-a2b4d25cb429",
+      "description": "jorjortan142 employs 'Automated Execution via User Navigation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2f2039be-85e9-8bc3-cf49-9ce8590a6ecf",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--0e7c9740-7a5c-ff4f-1013-ab203077d725",
+      "description": "jorjortan142 employs 'JavaScript Content Script Injection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0870c6b9-1e6e-d4f8-6cda-bc2e4ce69dfb",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--c7f766e1-e853-044a-e075-9d51f6fbe49c",
+      "description": "jorjortan142 employs 'Credential Harvesting from Success Modal' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--aab67a07-9fa3-e383-a7ab-647c718db5af",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+      "description": "jorjortan142 employs 'Exfiltration via Telegram Bot' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--649740ef-cfb6-1efa-cbe3-158010019bdb",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--6b8152b9-3e02-36e8-fdbb-c060522eba37",
+      "description": "jorjortan142 employs 'Financial Theft Using Stolen API Keys' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0d60c0dc-504a-0b53-7b88-7b7b91547730",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--28bcd3bb-71b9-95c5-9106-5f7d4b120f14",
+      "description": "jorjortan142 employs 'UI Deception: Hiding Withdrawal Permissions' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8051df51-0e85-19f5-656f-53579de86c91",
+      "created": "2026-01-13T14:19:49.350108Z",
+      "modified": "2026-01-13T14:19:49.350108Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "attack-pattern--ec91d31b-ba28-3ec0-4107-10ce5bb6c339",
+      "description": "jorjortan142 employs 'Automated API Key Creation with Full Permissions' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--114c5e10-bcc1-6fd5-da40-d7eedad701b7",
+      "created": "2026-01-13T14:19:49.350851Z",
+      "modified": "2026-01-13T14:19:49.350851Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "tool--2f8c9632-0670-c7fa-ba7e-cdccfb8cf6dd",
+      "description": "jorjortan142 uses Google Chrome Extension Framework tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0932af8e-eb8d-a932-0f06-986b73979d85",
+      "created": "2026-01-13T14:19:49.350851Z",
+      "modified": "2026-01-13T14:19:49.350851Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "tool--e8446e78-7061-8b26-6c46-d345b4460b5a",
+      "description": "jorjortan142 uses Telegram Bot API tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--202d78bb-e2e1-b17c-c41b-7edb03062b71",
+      "created": "2026-01-13T14:19:49.350851Z",
+      "modified": "2026-01-13T14:19:49.350851Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+      "target_ref": "tool--41329416-9403-6b69-7220-b84792976d9f",
+      "description": "jorjortan142 uses MEXC API tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adb946bd-8541-9ebd-a133-5366821170c0",
+      "created": "2026-01-13T14:19:49.351004Z",
+      "modified": "2026-01-13T14:19:49.351004Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "target_ref": "tool--2f8c9632-0670-c7fa-ba7e-cdccfb8cf6dd",
+      "description": "MEXC API Automator uses Google Chrome Extension Framework for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--23e3919b-b59c-bf8b-2b36-0e7a3c21c915",
+      "created": "2026-01-13T14:19:49.351004Z",
+      "modified": "2026-01-13T14:19:49.351004Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "target_ref": "tool--e8446e78-7061-8b26-6c46-d345b4460b5a",
+      "description": "MEXC API Automator uses Telegram Bot API for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--659dcc96-7b12-1ecd-efb4-61470ca9cc3e",
+      "created": "2026-01-13T14:19:49.351004Z",
+      "modified": "2026-01-13T14:19:49.351004Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+      "target_ref": "tool--41329416-9403-6b69-7220-b84792976d9f",
+      "description": "MEXC API Automator uses MEXC API for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--a32708bb-6e16-3515-79f2-f26404050e50",
+      "created": "2026-01-13T14:19:49.351288Z",
+      "modified": "2026-01-13T14:19:49.351288Z",
+      "created_by_ref": "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+      "name": "Malicious Chrome Extension Steals MEXC API Keys for Account ...",
+      "description": "This report contains technical analysis and indicators from: https://socket.dev/blog/malicious-chrome-extension-steals-mexc-api-keys?utm_medium=feed",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-13T14:19:49.351288Z",
+      "object_refs": [
+        "identity--61f25293-60ae-c54f-5dc9-804b842cf3fa",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "indicator--a9111411-5f7b-49c8-be68-5f6d2ccec094",
+        "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+        "attack-pattern--33b2b06a-02e2-77a8-65aa-5d8a68453259",
+        "attack-pattern--10c78df1-4101-80fb-67bb-a2b4d25cb429",
+        "attack-pattern--0e7c9740-7a5c-ff4f-1013-ab203077d725",
+        "attack-pattern--c7f766e1-e853-044a-e075-9d51f6fbe49c",
+        "attack-pattern--29113d9e-299e-9ce4-57be-6469be16c59b",
+        "attack-pattern--6b8152b9-3e02-36e8-fdbb-c060522eba37",
+        "attack-pattern--28bcd3bb-71b9-95c5-9106-5f7d4b120f14",
+        "attack-pattern--ec91d31b-ba28-3ec0-4107-10ce5bb6c339",
+        "malware--2e51fd24-4b05-dc51-610d-a5a9688c86cd",
+        "threat-actor--7a02f116-08e3-0125-f5b1-5f10a5651428",
+        "tool--2f8c9632-0670-c7fa-ba7e-cdccfb8cf6dd",
+        "tool--e8446e78-7061-8b26-6c46-d345b4460b5a",
+        "tool--41329416-9403-6b69-7220-b84792976d9f",
+        "relationship--a21a1edc-938d-4f33-e6a5-9b2e12f32ba0",
+        "relationship--33180001-a9e2-20f2-50b7-fd097e3f2f2f",
+        "relationship--d4b0881f-13d6-3109-ae2b-4aa35362de8d",
+        "relationship--16f9545d-6d07-6811-2f11-e964f9158279",
+        "relationship--44041c05-59fa-6f1f-77bd-1e5ba2e8103f",
+        "relationship--2f2039be-85e9-8bc3-cf49-9ce8590a6ecf",
+        "relationship--0870c6b9-1e6e-d4f8-6cda-bc2e4ce69dfb",
+        "relationship--aab67a07-9fa3-e383-a7ab-647c718db5af",
+        "relationship--649740ef-cfb6-1efa-cbe3-158010019bdb",
+        "relationship--0d60c0dc-504a-0b53-7b88-7b7b91547730",
+        "relationship--8051df51-0e85-19f5-656f-53579de86c91",
+        "relationship--114c5e10-bcc1-6fd5-da40-d7eedad701b7",
+        "relationship--0932af8e-eb8d-a932-0f06-986b73979d85",
+        "relationship--202d78bb-e2e1-b17c-c41b-7edb03062b71",
+        "relationship--adb946bd-8541-9ebd-a133-5366821170c0",
+        "relationship--23e3919b-b59c-bf8b-2b36-0e7a3c21c915",
+        "relationship--659dcc96-7b12-1ecd-efb4-61470ca9cc3e"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

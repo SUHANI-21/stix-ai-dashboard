@@ -1,0 +1,419 @@
+{
+  "type": "bundle",
+  "id": "bundle--a22e02f9-7eb7-4711-ad2f-62934c0a7c48",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "name": "React2Shell",
+      "description": "Critical-severity unauthenticated remote code execution vulnerability in React Server Components due to insecure deserialization in the React Flight protocol. Exploitable via a single malicious HTTP request, allowing attackers to execute arbitrary code.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-55182",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-55182"
+        },
+        {
+          "source_name": "React Blog",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+        }
+      ]
+    },
+    {
+      "type": "url",
+      "id": "url--5823f79e-778f-472c-a8ad-27a772aa7918",
+      "value": "http://216.158.232.43:12000/sex.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--b09ce98c-e3e1-4f6c-8114-8d56625f2f59",
+      "value": "http://45.32.158.54/5e51aff54626ef7f/x86_64"
+    },
+    {
+      "type": "url",
+      "id": "url--4e06a0e1-f18d-402e-9aa1-c954a4f28965",
+      "value": "http://45.76.155.14/vim"
+    },
+    {
+      "type": "url",
+      "id": "url--58f14e4a-c99f-47fa-92ea-8c2a4d856d57",
+      "value": "http://103.135.101.15/wocaosinm.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--fe7d19f2-f5a8-4ab1-ba8c-f5c7b15b8e35",
+      "value": "http://31.56.27.97/scripts/4thepool_miner.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--ece8ba0d-dbbf-4261-99bd-73aa53133768",
+      "value": "http://39.97.229.220:8006/httd"
+    },
+    {
+      "type": "url",
+      "id": "url--96a238d6-1baa-4a41-95fd-767938b06502",
+      "value": "http://38.165.44.205/1"
+    },
+    {
+      "type": "url",
+      "id": "url--3584ab62-9450-45eb-9504-a8b6d134227a",
+      "value": "http://38.165.44.205/k"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--80c54c3d-ee10-4816-b09e-b658f0bfad7f",
+      "value": "185.247.224.41"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--62b7433e-17a3-4cf9-9b25-bbbc3af86151",
+      "value": "49.51.230.175"
+    },
+    {
+      "type": "url",
+      "id": "url--7b3b7b7a-ffb4-4264-82e1-0f7d6104a0f4",
+      "value": "http://keep.camdvr.org:8000/d5.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--df79626b-dda1-4461-944a-b710ca1f7277",
+      "value": "http://keep.camdvr.org:8000/BREAKABLE_PARABLE5"
+    },
+    {
+      "type": "url",
+      "id": "url--a05b42ac-4e8b-4b43-8de3-6061f14c6641",
+      "value": "http://help.093214.xyz:9731/fn32.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--b746419a-ef12-47b3-ae8c-1fdb12222547",
+      "value": "http://vps-zap812595-1.zap-srv.com:3000/sex.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--c6494b80-d929-4e75-a4b3-d30f650112a1",
+      "value": "http://help.093214.xyz:9731/FF22"
+    },
+    {
+      "type": "url",
+      "id": "url--c642cfa0-ebde-4994-8295-1a36170862ad",
+      "value": "https://api.qtss.cc:443/en/about?source=redhat&id=v1.0"
+    },
+    {
+      "type": "url",
+      "id": "url--fe012a42-7d1e-405e-a4dc-010e1aabf72a",
+      "value": "https://api.qtss.cc:443/en/about?source=redhat&id=v1.1"
+    },
+    {
+      "type": "url",
+      "id": "url--b7d915ba-77f9-484c-9174-befc17fbdf6a",
+      "value": "https://api.qtss.cc:443/en/about?source=redhat&id=v1.2"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--16e42e95-2a00-4835-aeee-d3def6cfc94e",
+      "value": "pool.hashvault.pro"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--17431771-e96c-47ae-81a2-238f6e533b6f",
+      "value": "23.226.71.197"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4d49ccf3-1c72-4fd5-925b-38903de6c40b",
+      "value": "23.226.71.200"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--957f177f-bd0a-4014-b097-fa94d59eff67",
+      "value": "23.226.71.209"
+    },
+    {
+      "type": "directory",
+      "id": "directory--2d31efc4-df1e-4ab3-9b5c-c2ad45aeec60",
+      "path": "/tmp/.system-update/"
+    },
+    {
+      "type": "user-agent",
+      "id": "user-agent--55072300-c5ac-44ee-939e-62021e1f3f4a",
+      "value": "Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.113+Safari/537.36+Assetnote/1.0.0"
+    },
+    {
+      "type": "user-agent",
+      "id": "user-agent--1f9127bb-8277-4130-bbed-d414e63fe353",
+      "value": "Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50"
+    },
+    {
+      "type": "x-unknown",
+      "id": "x-unknown--9ab177fa-cfa2-4523-9f5e-fd421ebf3f52",
+      "name": "LOLlolLOL",
+      "description": "PeerBlight DHT node ID prefix (hex: 4c4f4c6c6f6c4c4f4c)"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--889fc86f-017f-4466-bd38-9d40eba9cc66",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "PeerBlight is deployed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1cd5429-688f-4779-bee9-af623f70775a",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "CowTunnel is deployed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--799d9358-75a1-44e0-95be-eaf411027c09",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "ZinFoq is deployed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8577f01d-6c14-485c-8549-31e73de9c66c",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "Kaiji Botnet Variant is distributed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1af0d3c4-0e1e-45f0-8b67-7b09e3124c7a",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "XMRig Cryptominer is deployed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3a1964c-b520-4826-92cb-d513b722f59b",
+      "relationship_type": "exploits",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "vulnerability--d75cca22-1c6c-47bc-8071-53da9d2a71bc",
+      "description": "Sliver is deployed as a result of exploitation of the React2Shell vulnerability (CVE-2025-55182)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c68be36e-a2dd-4fdd-ba62-a382fdc3eba8",
+      "relationship_type": "drops",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "d5.sh dropper script downloads and installs the Sliver payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--456e94b9-f26f-4ade-ba48-3c09509a42f2",
+      "relationship_type": "drops",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "fn22.sh dropper script is a variant of d5.sh and also installs payloads (including updates to prior infections)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d2ad8d7d-282a-4b88-977f-6df6db4814e7",
+      "relationship_type": "drops",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "sex.sh script downloads and deploys XMRig Cryptominer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a741be6-88bd-4a12-b8be-3cfb17085de3",
+      "relationship_type": "drops",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "Kaiji Botnet Variant is dropped via wocaosinm.sh script."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba91896b-a98b-4d78-9fc6-29805537d386",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "PeerBlight Linux backdoor file is the binary for the PeerBlight malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3bf1f7b9-b985-45d8-ba7c-f14e0dc4298e",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "CowTunnel (NTPClient payload) file is the binary for the CowTunnel malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f68d27af-6407-42e2-8c09-c25cf5aa7b6b",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "ZinFoq post-exploitation implant file is the binary for the ZinFoq malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8564073a-425f-4b5d-b8c8-fc75150f8309",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "d5.sh dropper script file is the script for the d5.sh malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dfb52b13-6d40-4662-a769-8077356caeb5",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "Sliver payload file is the binary for the Sliver malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cba6dae4-178a-45d1-8027-1ec1228fd9e0",
+      "relationship_type": "drops",
+      "source_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "fn22.sh dropper script file is the script for the fn22.sh malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe8ca244-8f49-4bc5-9722-0e82acef7c02",
+      "relationship_type": "drops",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "description": "d5.sh dropper script also installs Sliver payload as .sys-mon in ~/.config/.system-monitor/.sys-mon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c19ae0b-98be-4b1f-9db4-8671d1f6e8e5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "ipv4-addr--957f177f-bd0a-4014-b097-fa94d59eff67",
+      "description": "PeerBlight communicates with primary C2 server at 185.247.224.41."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d05a68f2-3ff9-485a-b34f-3772a22cc8c6",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "ipv4-addr--957f177f-bd0a-4014-b097-fa94d59eff67",
+      "description": "PeerBlight communicates with secondary C2 server at 49.51.230.175 via DHT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f775b028-f50e-467a-9075-0c32bca1c973",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "domain-name--16e42e95-2a00-4835-aeee-d3def6cfc94e",
+      "description": "XMRig Cryptominer connects to HashVault mining pool at pool.hashvault.pro."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77c8bdf5-81fb-4c7a-b062-9f0252e284e7",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "url--b7d915ba-77f9-484c-9174-befc17fbdf6a",
+      "description": "ZinFoq beacons to C2 endpoint https://api.qtss.cc:443/en/about?source=redhat&id=v1.0."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8614d992-8027-4f64-b42d-fc624593fdd4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "url--b7d915ba-77f9-484c-9174-befc17fbdf6a",
+      "description": "ZinFoq sends responses to C2 endpoint https://api.qtss.cc:443/en/about?source=redhat&id=v1.1."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7819bc6a-38bd-47ea-9460-2922095c0740",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "url--b7d915ba-77f9-484c-9174-befc17fbdf6a",
+      "description": "ZinFoq exfiltrates files to C2 endpoint https://api.qtss.cc:443/en/about?source=redhat&id=v1.2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8f8a09c-ba0f-473f-83c5-59c6fd1898f7",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "PeerBlight uses systemd-agent.service file for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c415554-f480-4c30-979f-a6235b6e0e30",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "PeerBlight uses systemd-daemon file for persistence (root install)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--48985aa6-5ebd-4326-a528-b62b6d3d6581",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "PeerBlight uses systemd-agent.conf file for Upstart persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c583930-2145-40e3-a9b1-73c238aa041c",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "Sliver uses sshd-agent file for persistence (root install)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3847a49-4090-4686-b115-a81c70a90c08",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "Sliver uses .sys-mon file for persistence (user install)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8720682b-7884-4f4a-b023-5919018f3112",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "directory--2d31efc4-df1e-4ab3-9b5c-c2ad45aeec60",
+      "description": "Sliver uses /tmp/.system-update/ directory for persistence (service accounts)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--01afc8cc-5da6-43ee-9aa2-337e940ee4f0",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "file--65f541e1-fe1c-4439-8307-49c4671b7077",
+      "description": "CowTunnel uses conf file at /home/<user>/.systemd-utils/conf for configuration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fdb5c55-fbca-48a9-9602-835f871665d0",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "user-agent--1f9127bb-8277-4130-bbed-d414e63fe353",
+      "description": "react2shell-scanner uses Mozilla/5.0+(Windows+NT+10.0;+Win64;+x64)+AppleWebKit/537.36+(KHTML,+like+Gecko)+Chrome/60.0.3112.113+Safari/537.36+Assetnote/1.0.0 as User-Agent."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e84f2290-836e-485d-a80a-ca7ff1703d38",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "user-agent--1f9127bb-8277-4130-bbed-d414e63fe353",
+      "description": "ZinFoq uses Mozilla/5.0 (Macintosh; U; Intel Mac OS X 10_6_8; en-us) AppleWebKit/534.50 (KHTML, like Gecko) Version/5.1 Safari/534.50 as User-Agent."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--966791c7-0fbe-4594-b10e-94e910303dcf",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc189fe0-4884-46b9-9e2f-da74530e3e36",
+      "target_ref": "x-unknown--9ab177fa-cfa2-4523-9f5e-fd421ebf3f52",
+      "description": "PeerBlight uses LOLlolLOL (hex: 4c4f4c6c6f6c4c4f4c) as DHT node ID prefix for botnet identification."
+    }
+  ]
+}

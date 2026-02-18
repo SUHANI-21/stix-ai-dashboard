@@ -1,0 +1,79 @@
+{
+  "type": "bundle",
+  "id": "bundle--a554d41d-d7bf-4f24-bfcd-4ef285a34f9e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--93452672-3a81-471c-b453-c24d7a7bed75",
+      "hashes": {
+        "sha256": "73b6e7cdd10c373a633367fd3bde791278e7900b342a21e2bad2b8e5cfc33746"
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--2310858d-14fd-435e-b819-eda9b323605f",
+      "name": "TangleCrypt",
+      "cpe": null,
+      "swid": null,
+      "languages": [
+        "en"
+      ],
+      "vendor": null,
+      "description": "A custom malware packer for Windows, using multiple layers of base64 encoding, LZ78 compression, and XOR encryption."
+    },
+    {
+      "type": "software",
+      "id": "software--06e9ef7f-ed0d-4ebf-bf3a-13a35eb458fb",
+      "name": "STONESTOP",
+      "cpe": null,
+      "swid": null,
+      "languages": [
+        "en"
+      ],
+      "vendor": null,
+      "description": "Malicious payload embedded in executables, acts as an EDR killer and leverages the ABYSSWORKER driver."
+    },
+    {
+      "type": "software",
+      "id": "software--2974563a-4e73-47d7-bbf1-d0043c397c00",
+      "name": "ABYSSWORKER",
+      "cpe": null,
+      "swid": null,
+      "languages": [
+        "en"
+      ],
+      "vendor": null,
+      "description": "Malicious kernel driver used for process termination and file deletion, also known as POORTRY and BURNTCIGAR."
+    },
+    {
+      "type": "software",
+      "id": "software--f9a34f50-391f-428c-b51f-d6fc36f651ba",
+      "name": "HeartCrypt",
+      "cpe": null,
+      "swid": null,
+      "languages": [
+        "en"
+      ],
+      "vendor": null,
+      "description": "Malware packer documented by Palo Alto, used to pack STONESTOP samples."
+    },
+    {
+      "type": "software",
+      "id": "software--ae582eae-9b7b-435b-87ea-9b7c7d95b90a",
+      "name": "VMProtect",
+      "cpe": null,
+      "swid": null,
+      "languages": [
+        "en"
+      ],
+      "vendor": null,
+      "description": "Commercial packer/protector used on several samples before custom packing."
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--4dede35d-5241-4f72-b837-53c141ef6ee7",
+      "key": "HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\Services\\ABYSSWORKER"
+    }
+  ]
+}

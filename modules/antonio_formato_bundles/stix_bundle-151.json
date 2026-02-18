@@ -1,0 +1,412 @@
+{
+  "type": "bundle",
+  "id": "bundle--b5f13a3c-9bbf-4481-b2ad-8b80226f1e81",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1275534b-99f0-401a-a103-4d3bc14c74a1",
+      "name": "Decentralized Smart Contract Staging",
+      "description": "Malicious JavaScript injected into compromised websites uses the Ethers library to perform JSON-RPC eth_call operations against Binance Smart Chain testnet smart contracts. These contracts store and rotate payloads, enabling attackers to update malware delivery without modifying compromised sites.",
+      "x_mitre_platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "x_mitre_detection": "Monitor for unexpected ethers.js library imports and hex-encoded RPC payload logic in web pages. Look for contract queries and OS-specific redirection in injected scripts."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e218d0df-7bb6-4aad-8e45-35c5dc6b9416",
+      "name": "Fake CAPTCHA Social Engineering",
+      "description": "Attackers use counterfeit CAPTCHA overlays on compromised web pages to lure users into executing attacker-controlled code. The lure instructs victims to copy malicious commands from the browser and execute them locally, bypassing exploit-based detection.",
+      "x_mitre_platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "x_mitre_detection": "Detect unexpected reuse of CAPTCHA assets (e.g., Wikimedia reCAPTCHA logo) and clipboard manipulation in web pages."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a0e59d24-aa00-4ad3-8767-3934e7522f1d",
+      "name": "Click-Fix Execution Path",
+      "description": "Victims are instructed to copy attacker-supplied commands from a fake CAPTCHA page and execute them via Terminal (macOS) or Run dialog (Windows). This user-driven execution bypasses exploit defenses and browser sandboxing.",
+      "x_mitre_platforms": [
+        "Windows",
+        "macOS"
+      ],
+      "x_mitre_detection": "Monitor clipboard activity and for curl-to-bash (macOS) or MSHTA (Windows) invocation following interaction with suspicious web pages."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--efb5578d-bcba-4fea-9d92-5af1d8c394cd",
+      "name": "Dynamic C2 Resolution via Social Channels",
+      "description": "The macOS payload resolves its active C2 domain by scraping Telegram and Steam profiles for domain information and validating them via API calls before committing to a final C2 endpoint.",
+      "x_mitre_platforms": [
+        "macOS"
+      ],
+      "x_mitre_detection": "Monitor for scripts performing curl requests to social media profiles and extracting domain information for follow-on C2 communication."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "name": "Credential Harvesting and Host Profiling",
+      "description": "The macOS component collects the current username, hardware UUID, and prompts the user for their password via fake dialogs. Credentials are validated locally and exfiltrated in Base64 format. System profiling data is also collected and sent to the C2.",
+      "x_mitre_platforms": [
+        "macOS"
+      ],
+      "x_mitre_detection": "Detect abuse of dscl for password validation, system_profiler for host profiling, and suspicious POST requests to attacker-controlled domains."
+    },
+    {
+      "type": "script",
+      "id": "script--4ffd861c-0267-4794-8901-4dad8444fb07",
+      "name": "Injected Base64-encoded JavaScript loader",
+      "description": "Obfuscated JavaScript injected via <script> tag on compromised websites, decodes to a loader that constructs JSON-RPC requests and imports the Ethers library.",
+      "language": "JavaScript"
+    },
+    {
+      "type": "script",
+      "id": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "name": "Obfuscated JavaScript loader",
+      "description": "JavaScript bundle containing helper function load_(), constructs JSON-RPC requests and imports Ethers library to interact with blockchain smart contracts.",
+      "language": "JavaScript"
+    },
+    {
+      "type": "software",
+      "id": "software--b7cf1cdc-62ec-409d-a42b-dc19712eb852",
+      "name": "Ethers library",
+      "description": "A JavaScript library for interacting with Ethereum and compatible blockchains, used to fetch OS-specific stages from on-chain storage.",
+      "cpe": "cpe:2.3:a:ethers:ethers.js:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "blockchain-address",
+      "id": "blockchain-address--003a06c8-8daa-45c6-80e7-fb969e4501db",
+      "blockchain": "binance-smart-chain",
+      "address": "0xA1decFB75C8C0CA28C10517ce56B710baf727d2e",
+      "description": "Smart contract used for initial eth_call to retrieve first-stage payload."
+    },
+    {
+      "type": "blockchain-address",
+      "id": "blockchain-address--dfc4924d-1c30-4832-b045-53cdc7e1625c",
+      "blockchain": "binance-smart-chain",
+      "address": "0x46790e2Ac7F3CA5a7D1bfCe312d11E91d23383Ff",
+      "description": "Smart contract for delivering Windows-specific payloads."
+    },
+    {
+      "type": "blockchain-address",
+      "id": "blockchain-address--bfa2730b-cfe8-4f71-81f9-dd960d5e8bbf",
+      "blockchain": "binance-smart-chain",
+      "address": "0x68DcE15C1002a2689E19D33A3aE509DD1fEb11A5",
+      "description": "Smart contract for delivering macOS-specific payloads."
+    },
+    {
+      "type": "blockchain-address",
+      "id": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "blockchain": "binance-smart-chain",
+      "address": "0xf4a32588b50a59a82fbA148d436081A48d80832A",
+      "description": "Gate contract for victim-ID access control, authorizes progression to next stage."
+    },
+    {
+      "type": "file",
+      "id": "file--077359aa-d12f-47c3-a706-fecbb48fe117",
+      "name": "LaunchAgent plist",
+      "description": "Persistence file created by macOS payload for maintaining access.",
+      "extensions": {
+        "macos": {
+          "category": "persistence"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5b49912c-d613-4fc8-8502-27f70d2085bb",
+      "name": "api.php",
+      "description": "C2 server-side API endpoint used for victim state synchronization and credential exfiltration."
+    },
+    {
+      "type": "file",
+      "id": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "name": "task.php",
+      "description": "C2 server-side API endpoint used for polling commands and tasks for execution on victim host."
+    },
+    {
+      "type": "url",
+      "id": "url--6787f8cf-d71e-41e8-9f60-3dfade8c50ca",
+      "value": "https://t.me/phefuckxiabot",
+      "description": "Telegram page used by macOS payload to resolve dynamic C2 domain."
+    },
+    {
+      "type": "url",
+      "id": "url--822624de-9508-43af-a40f-47732bfc875c",
+      "value": "https://steamcommunity.com/id/phefuckxia",
+      "description": "Steam profile used by macOS payload to resolve fallback C2 domain."
+    },
+    {
+      "type": "url",
+      "id": "url--12563e48-c762-4f59-8b55-1e233ccf2a0f",
+      "value": "http://<domain>/api.php?check=1",
+      "description": "C2 validation endpoint used by macOS payload to confirm active domain."
+    },
+    {
+      "type": "url",
+      "id": "url--2d590b34-775b-479b-bafb-a590234369e0",
+      "value": "http://<domain>/",
+      "description": "Active C2 domain used by macOS payload after validation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86887486-5f89-4865-9901-a3192bc827aa",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "description": "EtherHiding uses Decentralized Smart Contract Staging to deliver payloads via blockchain storage."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71bb2c49-55fb-49fc-a1e0-63fcb76769bf",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "description": "EtherHiding employs Fake CAPTCHA Social Engineering to lure victims into executing attacker-controlled code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07144746-7c5e-4317-a99d-1b1fba954fe1",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "description": "EtherHiding leverages Click-Fix Execution Path, instructing victims to execute malicious commands locally."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0df1736d-4f0c-424e-89c1-4a313b004c07",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "description": "EtherHiding macOS payload uses Dynamic C2 Resolution via Social Channels to determine active C2 domain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0c25cdf-12c8-4c0d-886e-3f21706e27a9",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "description": "EtherHiding macOS payload employs Credential Harvesting and Host Profiling to collect credentials and system data."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a705525d-036a-407b-aca1-37afad1a4aec",
+      "relationship_type": "delivers",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "description": "EtherHiding delivers Amos Stealer as a payload via its attack chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa8e756e-0e4c-475c-8da4-24e7eaf2fadb",
+      "relationship_type": "delivers",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "description": "EtherHiding delivers Vidar as a payload via its attack chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f403c9b-5533-46e0-bbf7-4af43b72c3ef",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "description": "EtherHiding uses Injected Base64-encoded JavaScript loader for initial payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e497b1f4-80ac-4760-82e2-7d2531038587",
+      "relationship_type": "uses",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "description": "EtherHiding uses Obfuscated JavaScript loader to interact with blockchain smart contracts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a55169ef-151d-4f6b-bf40-90b72f0b4a41",
+      "relationship_type": "uses",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "software--b7cf1cdc-62ec-409d-a42b-dc19712eb852",
+      "description": "The injected JavaScript loader imports the Ethers library to perform blockchain interactions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d64572b9-6083-4424-a128-2d061e702994",
+      "relationship_type": "uses",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "software--b7cf1cdc-62ec-409d-a42b-dc19712eb852",
+      "description": "The obfuscated JavaScript loader imports the Ethers library for contract calls."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be0042b4-70b9-49c4-8a18-83086d60439e",
+      "relationship_type": "communicates-with",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Injected JavaScript loader makes eth_call requests to the initial smart contract for first-stage payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a240bb5f-5b14-43c3-81f9-796e2a00bb49",
+      "relationship_type": "communicates-with",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Obfuscated JavaScript loader interacts with the initial smart contract for payload retrieval."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--553add0f-b302-4db2-9af4-9d1e1261ec8e",
+      "relationship_type": "communicates-with",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Obfuscated JavaScript loader communicates with Windows-specific smart contract for OS-aware payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7e86316-4fc4-45aa-a297-b4b64467b4b3",
+      "relationship_type": "communicates-with",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Obfuscated JavaScript loader communicates with macOS-specific smart contract for OS-aware payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--99897ddf-2979-44df-8162-1727d84e4215",
+      "relationship_type": "communicates-with",
+      "source_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Obfuscated JavaScript loader communicates with gate contract for victim-ID access control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc100283-081c-4c7b-bd4b-ca9acdae4bcd",
+      "relationship_type": "creates",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "macOS payload creates LaunchAgent plist for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec84054c-e2e7-4102-b6fb-7fa29039e6f2",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "macOS payload communicates with api.php endpoint for state synchronization and credential exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5da6a6d6-d088-4554-b7cc-a54fd3476a19",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--b29f7d35-0000-47e3-ae5c-9d5966cafdc4",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "macOS payload communicates with task.php endpoint for polling and executing remote commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d347fbd-b2ba-47a3-b82e-12792e20e43b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "software--b7cf1cdc-62ec-409d-a42b-dc19712eb852",
+      "description": "Decentralized Smart Contract Staging uses Ethers library for blockchain contract interactions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--706e7e24-960a-4223-bcd0-a17459f04c65",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "description": "Decentralized Smart Contract Staging uses injected JavaScript loader for contract calls."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1edfdeb2-abf6-484a-9cd5-ce073b46786e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "script--58388687-c05a-47ab-ba16-4d7dd9b45c97",
+      "description": "Decentralized Smart Contract Staging uses obfuscated JavaScript loader for contract calls."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b904613-1b41-4a37-a6a3-5e373fbb92db",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Decentralized Smart Contract Staging uses initial smart contract for payload storage and retrieval."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98a2bc9f-4ab0-4b3f-9815-91a9239b1f85",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Decentralized Smart Contract Staging uses Windows-specific and macOS-specific smart contracts for OS-aware payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--010e16bf-05db-41d4-af1a-dc36b318bd80",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "blockchain-address--299fc630-4849-4dad-b86f-2aa5720e8d73",
+      "description": "Decentralized Smart Contract Staging uses gate contract for victim-ID access control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb46fbd6-d820-4866-b30c-a37599d1139b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "Credential Harvesting and Host Profiling uses api.php for credential exfiltration and state sync."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7eeae20-f929-4727-9f0c-3359a60159f2",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "Credential Harvesting and Host Profiling uses task.php for remote command polling."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0dc53768-828e-4894-a661-78f8372f6d60",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "file--71969822-2cec-495a-a553-24bbcc2d0c2c",
+      "description": "Click-Fix Execution Path creates LaunchAgent plist for persistence on macOS."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b28e8b4-767e-43ef-864d-42255574c98e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "url--2d590b34-775b-479b-bafb-a590234369e0",
+      "description": "Dynamic C2 Resolution via Social Channels uses Telegram page for domain resolution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b9ab010d-db22-4c6c-82c1-5dbe59a3a68b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "url--2d590b34-775b-479b-bafb-a590234369e0",
+      "description": "Dynamic C2 Resolution via Social Channels uses Steam profile for fallback domain resolution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70e5a61e-a672-4377-930f-8ac048162d3c",
+      "relationship_type": "communicates-with",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "url--2d590b34-775b-479b-bafb-a590234369e0",
+      "description": "Dynamic C2 Resolution via Social Channels communicates with C2 validation endpoint."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bffd9058-7e9d-4f2c-9fe2-c98d1fa9c5d9",
+      "relationship_type": "communicates-with",
+      "source_ref": "attack-pattern--8da4281d-51b9-4753-90f1-b143ee1ad38c",
+      "target_ref": "url--2d590b34-775b-479b-bafb-a590234369e0",
+      "description": "Dynamic C2 Resolution via Social Channels communicates with active C2 domain after validation."
+    }
+  ]
+}

@@ -1,0 +1,893 @@
+{
+  "type": "bundle",
+  "id": "bundle--5c5ad724-e8be-4c81-9d05-f72917e36331",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--4a60eff8-25f7-42e5-9663-40c628974a32",
+      "name": "Bisonal",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Bisonal is a malware used by BRONZE BUTLER for cyber espionage operations."
+    },
+    {
+      "type": "malware",
+      "id": "malware--06504aed-99e0-42ec-b968-132b91ac33ba",
+      "name": "8.t Dropper",
+      "labels": [
+        "dropper"
+      ],
+      "description": "8.t Dropper is a dropper malware used by BRONZE BUTLER to deliver payloads."
+    },
+    {
+      "type": "malware",
+      "id": "malware--7abd6d75-cfd5-4c29-8ebd-c5e2e34d1382",
+      "name": "PsExec",
+      "labels": [
+        "tool"
+      ],
+      "description": "PsExec is a legitimate administrative tool abused by BRONZE BUTLER for lateral movement."
+    },
+    {
+      "type": "malware",
+      "id": "malware--f5701f52-a119-4d9a-9e31-677e38836b08",
+      "name": "ShadowPy",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "ShadowPy is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--ea0adcd8-a0fe-4a70-9ce3-408050e613e8",
+      "name": "Windows Credential Editor",
+      "labels": [
+        "credential access"
+      ],
+      "description": "Windows Credential Editor is used by BRONZE BUTLER for credential dumping."
+    },
+    {
+      "type": "malware",
+      "id": "malware--395f3afd-0996-4be3-a366-638d0a17c642",
+      "name": "SymonLoader",
+      "labels": [
+        "loader"
+      ],
+      "description": "SymonLoader is a loader malware used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--bb66e341-7e48-41e9-a2f4-a1a9e0ad34ee",
+      "name": "Netboy",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Netboy is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--ffb9b013-2233-410b-a5ad-106ad16f03b0",
+      "name": "Daserf",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Daserf is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--3176e2ec-4e8b-4b83-9468-2925c3cd341c",
+      "name": "Gofarer",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Gofarer is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--740d4ec4-ab95-49c8-b104-141c73b62f10",
+      "name": "Lilith RAT",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Lilith RAT is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--3c68180b-f596-4e4b-abf8-825957929f1e",
+      "name": "Elirks",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Elirks is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--eb83e78e-aec7-4147-a183-4b9f34dd91c6",
+      "name": "9002 RAT",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "9002 RAT is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--eb3744d2-2598-48ce-a2f1-562779515848",
+      "name": "rarstar",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "rarstar is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--58f66420-1b4d-4871-bf2b-5404aa7b02e6",
+      "name": "gsecdump",
+      "labels": [
+        "credential access"
+      ],
+      "description": "gsecdump is a credential dumping tool used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--4e1a6c3e-0f60-4dad-8166-9af019078ce4",
+      "name": "Ghostdown",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Ghostdown is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--4954f604-73a1-4ae5-95b7-0aae1c3485ce",
+      "name": "ReVBShell",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "ReVBShell is a backdoor used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--2e81dc53-dcf4-4483-a83a-305befd4da5d",
+      "name": "Minzen",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Minzen is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--00bc3a44-5f69-4d3d-b680-0dbd193c649a",
+      "name": "HomamDownloader",
+      "labels": [
+        "downloader"
+      ],
+      "description": "HomamDownloader is a downloader malware used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--051fa3e6-1508-4aac-a82b-551608759b96",
+      "name": "Mimikatz",
+      "labels": [
+        "credential access"
+      ],
+      "description": "Mimikatz is a credential dumping tool used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--f7a3ee69-1bfd-4108-bad8-e18a8e6090f7",
+      "name": "Datper",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Datper is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--c6629a28-1541-4b52-8d59-83d15afe1cc4",
+      "name": "ShadowPad Winnti",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "ShadowPad Winnti is a backdoor used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--8993078b-342c-43e8-bd31-8df447ddae9b",
+      "name": "Gh0st RAT",
+      "labels": [
+        "remote access trojan"
+      ],
+      "description": "Gh0st RAT is a RAT used by BRONZE BUTLER."
+    },
+    {
+      "type": "malware",
+      "id": "malware--304d2d65-88ea-435d-bebd-22a2231f5764",
+      "name": "Gokcpdoor",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "Gokcpdoor is a backdoor used by BRONZE BUTLER, with recent variants adopting multiplexed C2 communications."
+    },
+    {
+      "type": "malware",
+      "id": "malware--e0ea4956-af8e-4e04-8893-474a08e3f87f",
+      "name": "procdump",
+      "labels": [
+        "tool"
+      ],
+      "description": "procdump is a legitimate tool abused by BRONZE BUTLER for credential dumping."
+    },
+    {
+      "type": "malware",
+      "id": "malware--581e94f6-33e3-44dc-b3cc-62aa62cce8f4",
+      "name": "OAED Loader",
+      "labels": [
+        "loader"
+      ],
+      "description": "OAED Loader is a loader used by BRONZE BUTLER for DLL sideloading techniques."
+    },
+    {
+      "type": "malware",
+      "id": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "name": "Havoc",
+      "labels": [
+        "malware"
+      ],
+      "description": "Havoc is a malware detected in recent BRONZE BUTLER campaigns."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a24e2fa1-7ffa-4590-bdb7-100f430c5395",
+      "name": "CVE-2025-61932",
+      "description": "A critical flaw in Motex Lanscope Endpoint Manager allowing unauthenticated remote code execution with SYSTEM privileges. Exploited by BRONZE BUTLER in 2025.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-61932"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7006b2c2-a7a8-45d1-ac89-3e7f4535ae96",
+      "name": "CVE-2021-27065",
+      "description": "A vulnerability in Microsoft Exchange Server exploited by BRONZE BUTLER.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2021-27065"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/161938/Microsoft-Exchange-ProxyLogon-Remote-Code-Execution.html"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/162736/Microsoft-Exchange-ProxyLogon-Collector.html"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--4d570c8d-28aa-4b99-b078-a529d11c1b82",
+      "name": "CVE-2021-26855",
+      "description": "A vulnerability in Microsoft Exchange Server exploited by BRONZE BUTLER.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2021-26855"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/161846/Microsoft-Exchange-2019-SSRF-Arbitrary-File-Write.html"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/161938/Microsoft-Exchange-ProxyLogon-Remote-Code-Execution.html"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/162610/Microsoft-Exchange-2019-Unauthenticated-Email-Download.html"
+        },
+        {
+          "source_name": "packetstormsecurity",
+          "url": "http://packetstormsecurity.com/files/162736/Microsoft-Exchange-ProxyLogon-Collector.html"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2a0687b6-94db-44ce-afc9-69e6f18325bd",
+      "name": "CVE-2021-26858",
+      "description": "A vulnerability in Microsoft Exchange Server exploited by BRONZE BUTLER.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2021-26858"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3ba1d846-ffce-4b38-9c2f-7d71ca5b70cc",
+      "name": "CVE-2021-26857",
+      "description": "A vulnerability in Microsoft Exchange Server exploited by BRONZE BUTLER.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2021-26857"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--68f4a016-cb56-48ed-8c90-c1b21689f697",
+      "name": "CVE-2018-0802",
+      "description": "A vulnerability in Microsoft Office exploited by BRONZE BUTLER.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2018-0802"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--9e5c875b-7de0-4108-87b9-a72ab6cc7196",
+      "name": "CVE-2025-61932"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fe5ccba7-fa11-4723-9849-71ccfbad4ee4",
+      "name": "CVE-2021-27065"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--9d9c3007-4a89-44d3-97cc-24db02090a4a",
+      "name": "CVE-2021-26855"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7c8973c7-44da-4b28-8327-4a3868cce49d",
+      "name": "CVE-2021-26858"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--11e5097c-3a82-4b11-96a7-463c236dc0c6",
+      "name": "CVE-2021-26857"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "name": "CVE-2018-0802"
+    },
+    {
+      "type": "software",
+      "id": "software--1a5d94b3-6701-4d72-bbcb-ae4cf84b5001",
+      "name": "Motex Lanscope Endpoint Manager"
+    },
+    {
+      "type": "software",
+      "id": "software--aed85de6-1bca-4ff9-8d53-bee4c60e8db0",
+      "name": "Microsoft Exchange Server"
+    },
+    {
+      "type": "software",
+      "id": "software--f624fa5c-da57-4ab5-a677-8aa403a45419",
+      "name": "Microsoft Office"
+    },
+    {
+      "type": "software",
+      "id": "software--5078ff98-945a-445a-9179-e1d9a9072e4e",
+      "name": "SymonLoader"
+    },
+    {
+      "type": "software",
+      "id": "software--21c318ad-5e59-4433-ad20-8e1a0690e524",
+      "name": "Gofarer"
+    },
+    {
+      "type": "software",
+      "id": "software--0a8e7681-137b-4117-902c-905a6f495440",
+      "name": "Datper"
+    },
+    {
+      "type": "software",
+      "id": "software--4f827e69-77fc-4d2c-ac79-e3cec09fa990",
+      "name": "HomamDownloader"
+    },
+    {
+      "type": "software",
+      "id": "software--f8ae2fd2-8709-4452-9ccb-3767d1099bff",
+      "name": "Daserf"
+    },
+    {
+      "type": "software",
+      "id": "software--0378dfe9-1b5b-403f-8504-e66a6c296fb6",
+      "name": "PsExec"
+    },
+    {
+      "type": "software",
+      "id": "software--e6b31247-95f3-46c7-9bf1-eef8848d2f50",
+      "name": "WCE"
+    },
+    {
+      "type": "software",
+      "id": "software--4b15da9f-5702-47fb-98ab-8b1baf7ded22",
+      "name": "9002 RAT"
+    },
+    {
+      "type": "software",
+      "id": "software--a33a341b-9bd6-4ba2-b05e-9b355abd6d3d",
+      "name": "cmd"
+    },
+    {
+      "type": "software",
+      "id": "software--733dbc36-f19d-45b3-93a9-ec7f6a847f8d",
+      "name": "Net"
+    },
+    {
+      "type": "software",
+      "id": "software--ef649bb9-0040-48a4-b800-81f2e094835a",
+      "name": "gsecdump"
+    },
+    {
+      "type": "software",
+      "id": "software--da2b01d9-2fe6-40f8-97a0-6ec26b72ebbc",
+      "name": "Blogspot"
+    },
+    {
+      "type": "software",
+      "id": "software--5c27041e-9878-4bc4-900f-4cb101df8893",
+      "name": "Elirks"
+    },
+    {
+      "type": "software",
+      "id": "software--a5434cc1-b2f2-4091-99ca-27598305d6bf",
+      "name": "schtasks"
+    },
+    {
+      "type": "software",
+      "id": "software--4db4c61b-c9d5-43d8-a096-4eff0d9f4a17",
+      "name": "8.t Dropper"
+    },
+    {
+      "type": "software",
+      "id": "software--f4c3d3da-c1a2-43df-bba2-40a6fd729ac9",
+      "name": "Lilith RAT"
+    },
+    {
+      "type": "software",
+      "id": "software--2379ff48-689c-4dd8-9ec1-64ae3ab1f634",
+      "name": "VBS"
+    },
+    {
+      "type": "software",
+      "id": "software--71ad667e-999e-46f8-9bde-25792b66500a",
+      "name": "at"
+    },
+    {
+      "type": "software",
+      "id": "software--90c42292-3d46-450c-a17f-8ad5af6f89a9",
+      "name": "whoami"
+    },
+    {
+      "type": "software",
+      "id": "software--467dcca3-d58f-4d2c-8f50-4dfdcdcb60ba",
+      "name": "Mimikatz"
+    },
+    {
+      "type": "software",
+      "id": "software--64760652-3aba-4be6-b084-e46468e6b25b",
+      "name": "Minzen"
+    },
+    {
+      "type": "software",
+      "id": "software--b9ecfa7a-b3d0-4623-a05d-d108f5819daf",
+      "name": "Gh0st RAT"
+    },
+    {
+      "type": "software",
+      "id": "software--b34d819c-bec0-4d81-b3eb-8a5c3d47db14",
+      "name": "Windows Credential Editor"
+    },
+    {
+      "type": "software",
+      "id": "software--7b623450-173e-4dc3-931f-c278e4ac0e63",
+      "name": "ShadowPad Winnti"
+    },
+    {
+      "type": "software",
+      "id": "software--9dc9c092-47d5-44a6-8d04-5a0f48ed2d4e",
+      "name": "rarstar"
+    },
+    {
+      "type": "software",
+      "id": "software--03445e2a-ccc5-484b-8fa0-cc34fd9ed8d3",
+      "name": "procdump"
+    },
+    {
+      "type": "software",
+      "id": "software--63221a9b-137b-4ce5-87f9-c573ef372976",
+      "name": "Bisonal"
+    },
+    {
+      "type": "software",
+      "id": "software--bf4530d1-8786-4747-b62c-c250b276c1b5",
+      "name": "ShadowPy"
+    },
+    {
+      "type": "software",
+      "id": "software--59b109e3-d206-497f-acdb-05ba5a7a2b11",
+      "name": "Netboy"
+    },
+    {
+      "type": "software",
+      "id": "software--e50b4f23-f010-482e-9a05-e2911eda94e2",
+      "name": "Ghostdown"
+    },
+    {
+      "type": "software",
+      "id": "software--c0667838-6f30-4015-b258-9db04d245282",
+      "name": "ReVBShell"
+    },
+    {
+      "type": "software",
+      "id": "software--35e5a230-27f5-49f8-9af5-4b6137d45316",
+      "name": "Gokcpdoor"
+    },
+    {
+      "type": "software",
+      "id": "software--067a0cf4-c3b5-4304-8eef-75920ad20d3f",
+      "name": "OAED Loader"
+    },
+    {
+      "type": "software",
+      "id": "software--3f7ec973-b5dd-4da3-a52e-3b237dbeac01",
+      "name": "goddi"
+    },
+    {
+      "type": "software",
+      "id": "software--562dccfd-12ec-48e1-a3fd-84ff603a77ce",
+      "name": "Remote Desktop Utilities"
+    },
+    {
+      "type": "software",
+      "id": "software--71efc0dd-ad3e-425b-bd0f-42087892f9aa",
+      "name": "7-Zip"
+    },
+    {
+      "type": "software",
+      "id": "software--af0aa6ba-a200-44bd-990b-9b583c324b2a",
+      "name": "file.io"
+    },
+    {
+      "type": "software",
+      "id": "software--2748a995-5d35-4dc4-83a2-3be6b2104cc6",
+      "name": "LimeWire"
+    },
+    {
+      "type": "software",
+      "id": "software--d8e3658f-19ef-4be0-88f2-c30fdc5e32f7",
+      "name": "Piping Server"
+    },
+    {
+      "type": "url",
+      "id": "url--da3a320f-a1b7-45f0-a10e-43d9c991d867",
+      "value": "http://packetstormsecurity.com/files/161938/Microsoft-Exchange-ProxyLogon-Remote-Code-Execution.html"
+    },
+    {
+      "type": "url",
+      "id": "url--156f8ab1-f151-4c1c-9764-147efc603523",
+      "value": "http://packetstormsecurity.com/files/162736/Microsoft-Exchange-ProxyLogon-Collector.html"
+    },
+    {
+      "type": "url",
+      "id": "url--6cf62e46-119b-4337-b364-7d55673f6e10",
+      "value": "http://packetstormsecurity.com/files/161846/Microsoft-Exchange-2019-SSRF-Arbitrary-File-Write.html"
+    },
+    {
+      "type": "url",
+      "id": "url--70255a6d-1aab-4484-bae9-efbf2ba99f9f",
+      "value": "http://packetstormsecurity.com/files/162610/Microsoft-Exchange-2019-Unauthenticated-Email-Download.html"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55bf5310-f701-456b-8c0c-ee02ec410a14",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Bisonal malware for cyber espionage operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fee88a8-31d1-4073-9f30-5174dbf0403f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses 8.t Dropper malware to deliver payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--656428a0-8501-4893-91f3-a317bfdb2d4d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER abuses PsExec for lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--062f3fc9-1c5e-41f8-a9da-6cabd357ee57",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses ShadowPy RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--054a7ecc-17ae-43d1-9c29-e1224c89a42b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Windows Credential Editor for credential dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--179d9539-9367-4683-9d6b-bc6a73d01bb1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses SymonLoader loader malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d57de747-6a5f-44e2-b9b9-4d4593acf5aa",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Netboy RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ebb6d5c-d462-4b00-8d2e-32390ff2e0e9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Daserf RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d2f6fec-74c8-4d1f-92ca-d91ed2a402f0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Gofarer RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--46e0e8ca-b104-483b-b02a-85326bb7d90f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Lilith RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5c163d7-f261-4d1c-abf7-5401d9c81c5b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Elirks RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a5e06fcb-76dd-4cc7-b57f-7ee69d24e0db",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses 9002 RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fca5d57-4903-427c-8627-1a098015dc35",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses rarstar RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e6e4a476-6110-4103-b885-17280b4d6e18",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses gsecdump for credential dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8931735-afa0-4604-9fbb-eef59bf2b0f6",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Ghostdown RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d617cc7-7ad5-4b0b-ab24-4c698d6ff6d2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses ReVBShell backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c667e72b-7cc8-4f71-8568-c8c027239c2e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Minzen RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--462b9184-963b-43d4-a355-60f559d07f8e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses HomamDownloader malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8a7cbdb-9fca-4f46-bd0b-4a9330b757bc",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Mimikatz for credential dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da7033a7-b7cf-4186-abdc-d8d524534eef",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Datper RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c85e70f2-8208-477a-99c1-b984555f18a3",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses ShadowPad Winnti backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80bc3e75-4452-4787-be74-269da486d0f1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Gh0st RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a07c17b8-a53a-4027-be83-2412016c0978",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Gokcpdoor backdoor with multiplexed C2 communications."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4f2fae5-0941-48f5-80f6-63c1e5d80109",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER abuses procdump for credential dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--35c7e690-d760-4239-ac85-22edb0bc29d4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses OAED Loader for DLL sideloading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edef18d1-b2dc-43e7-b609-9e79548c6ca5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "malware--56ee415d-a0cd-402f-932d-da2848ae4b05",
+      "description": "BRONZE BUTLER uses Havoc malware in recent campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9ff48cc-88cb-42dd-a99b-26b8db640338",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "tool--9440063c-0a1b-4d5d-be98-db9bfd9a1462",
+      "description": "BRONZE BUTLER abuses goddi for Active Directory dumping."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad6a403f-3c9b-4477-a0ea-7ae706c5e2c7",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "tool--9440063c-0a1b-4d5d-be98-db9bfd9a1462",
+      "description": "BRONZE BUTLER abuses 7-Zip for compressed data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9d647f26-a6ab-4235-b257-8a9e0dba44b2",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "software--d8e3658f-19ef-4be0-88f2-c30fdc5e32f7",
+      "description": "BRONZE BUTLER targets Motex Lanscope Endpoint Manager."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d31b210-7167-43b0-a1d1-deb236875888",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "software--d8e3658f-19ef-4be0-88f2-c30fdc5e32f7",
+      "description": "BRONZE BUTLER targets Microsoft Exchange Server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a943ea4-de7d-4735-914a-c6fca3fc7854",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "software--d8e3658f-19ef-4be0-88f2-c30fdc5e32f7",
+      "description": "BRONZE BUTLER targets Microsoft Office."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8f5ccf9-bd0a-49f2-b01c-036a0dac4a5a",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2025-61932 in Motex Lanscope Endpoint Manager."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d9716b3-df56-43a8-8b22-7808e547cacb",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2021-27065 in Microsoft Exchange Server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7517921d-6d99-4fbb-b655-9ce6441c219c",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2021-26855 in Microsoft Exchange Server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f51917c0-8b05-4450-9bda-fdddb81a50cf",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2021-26858 in Microsoft Exchange Server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b35b800-68e3-4131-b642-c4b8ec68b23a",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2021-26857 in Microsoft Exchange Server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--37e0586a-29c5-45e9-890a-31add720a829",
+      "relationship_type": "exploits",
+      "source_ref": "intrusion-set--8651aecb-c4ba-4896-9ef7-9255d1974117",
+      "target_ref": "vulnerability--2b1590a4-ecf0-4fda-9be0-4fe6852dddef",
+      "description": "BRONZE BUTLER exploited CVE-2018-0802 in Microsoft Office."
+    }
+  ]
+}

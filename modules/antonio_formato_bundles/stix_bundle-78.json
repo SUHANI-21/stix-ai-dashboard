@@ -1,0 +1,345 @@
+{
+  "type": "bundle",
+  "id": "bundle--bf93c9ac-2fce-402e-8aca-f284da881083",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ddb00e81-0344-468d-8242-1ed17149f7a6",
+      "name": "FortiCloud SSO Login Bypass in multiple Fortinet products",
+      "description": "Critical vulnerabilities in the FortiCloud SSO login mechanism of several Fortinet products allow unauthenticated attackers to bypass authentication via manipulated SAML messages and gain administrative access. The vulnerabilities are actively exploited. Attackers can export device configurations, which may contain hashed credentials that could be cracked offline.",
+      "created": "2025-12-19T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59718"
+        },
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-59719"
+        },
+        {
+          "source_name": "Fortinet PSIRT Advisory FG-IR-25-647",
+          "url": "https://www.fortiguard.com/psirt/FG-IR-25-647"
+        },
+        {
+          "source_name": "Arctic Wolf Security Bulletin",
+          "url": "https://arcticwolf.com/resources/blog/arctic-wolf-observes-malicious-sso-logins-%20following-disclosure-cve-2025-59718-cve-2025-59719/"
+        },
+        {
+          "source_name": "VulnCheck Blog",
+          "url": "https://www.vulncheck.com/blog/forticloud-sso-login-bypass"
+        }
+      ],
+      "object_marking_refs": [],
+      "labels": [
+        "authentication bypass",
+        "active exploitation",
+        "Fortinet",
+        "SAML"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8a8e5a19-efd4-4c42-bce9-fe2a18a731e9",
+      "name": "Bypass Authentication via Manipulated SAML Messages",
+      "description": "Attackers exploit FortiCloud SSO vulnerabilities by sending manipulated SAML messages to bypass authentication and gain administrative access to affected Fortinet devices.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "Fortinet PSIRT Advisory FG-IR-25-647",
+          "url": "https://www.fortiguard.com/psirt/FG-IR-25-647"
+        }
+      ],
+      "object_marking_refs": [],
+      "labels": [
+        "authentication bypass",
+        "SAML",
+        "Fortinet"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--dfb7f65e-c06a-4ae5-88e0-1c88e9fc5a00",
+      "name": "FortiCloud SSO Exploit Tool",
+      "description": "A tool or script used to craft and send manipulated SAML messages to exploit the FortiCloud SSO vulnerabilities in Fortinet products, bypassing authentication.",
+      "labels": [
+        "exploit",
+        "SAML",
+        "authentication bypass",
+        "Fortinet"
+      ],
+      "external_references": [
+        {
+          "source_name": "Arctic Wolf Security Bulletin",
+          "url": "https://arcticwolf.com/resources/blog/arctic-wolf-observes-malicious-sso-logins-%20following-disclosure-cve-2025-59718-cve-2025-59719/"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--390e45a6-dab7-42f2-b43f-d5bff940c989",
+      "name": "Offline Credential Cracker",
+      "description": "Malware or tool used to crack hashed credentials exported from compromised Fortinet device configurations.",
+      "labels": [
+        "credential access",
+        "offline cracking",
+        "Fortinet"
+      ],
+      "external_references": [
+        {
+          "source_name": "VulnCheck Blog",
+          "url": "https://www.vulncheck.com/blog/forticloud-sso-login-bypass"
+        }
+      ]
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--c9bc649c-2c5e-43d8-85b9-92f0c872141a",
+      "name": "Export of Device Configuration Files",
+      "description": "Observation of device configuration exports following exploitation of FortiCloud SSO vulnerabilities. Exported configurations may contain hashed credentials.",
+      "pattern": "[file:name = 'config*' AND file:contains_hashes = true]",
+      "valid_from": "2025-12-19T00:00:00Z",
+      "labels": [
+        "configuration export",
+        "Fortinet",
+        "credential theft"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "name": "FortiCloud SSO Exploitation Actors",
+      "description": "Unattributed threat actors actively exploiting FortiCloud SSO authentication bypass vulnerabilities (CVE-2025-59718, CVE-2025-59719) in Fortinet products to gain administrative access and export device configurations.",
+      "aliases": [
+        "FortiCloud SSO Exploiters"
+      ],
+      "external_references": [
+        {
+          "source_name": "Arctic Wolf Security Bulletin",
+          "url": "https://arcticwolf.com/resources/blog/arctic-wolf-observes-malicious-sso-logins-%20following-disclosure-cve-2025-59718-cve-2025-59719/"
+        }
+      ],
+      "labels": [
+        "active exploitation",
+        "Fortinet"
+      ]
+    },
+    {
+      "type": "course-of-action",
+      "id": "course-of-action--b43be8d7-304d-43b0-81e6-b709f4e92481",
+      "name": "Disable FortiCloud SSO Login",
+      "description": "As a workaround, disable the FortiCloud SSO login feature via GUI (System -> Settings -> 'Allow administrative login using FortiCloud SSO' set to 'Off') or CLI (config system global; set admin-forticloud-sso-login disable; end). Reset all firewall credentials if compromise is suspected.",
+      "external_references": [
+        {
+          "source_name": "Fortinet PSIRT Advisory FG-IR-25-647",
+          "url": "https://www.fortiguard.com/psirt/FG-IR-25-647"
+        }
+      ],
+      "labels": [
+        "mitigation",
+        "Fortinet",
+        "authentication bypass"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--82880e60-1fa3-46ac-ac7b-81e476abe11b",
+      "name": "FortiOS",
+      "description": "Fortinet's operating system for security appliances. Affected versions: 7.6.0 to 7.6.3, 7.4.0 to 7.4.8, 7.2.0 to 7.2.11, 7.0.0 to 7.0.17.",
+      "labels": [
+        "Fortinet",
+        "affected"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--66b75df1-ac77-4bdf-9254-0e1c318670fe",
+      "name": "FortiProxy",
+      "description": "Fortinet's proxy solution. Affected versions: 7.6.0 to 7.6.3, 7.4.0 to 7.4.10, 7.2.0 to 7.2.14, 7.0.0 to 7.0.21.",
+      "labels": [
+        "Fortinet",
+        "affected"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--3120e5bf-dbc0-484c-a555-5262e9de1f29",
+      "name": "FortiSwitchManager",
+      "description": "Fortinet's switch management solution. Affected versions: 7.2.0 to 7.2.6, 7.0.0 to 7.0.5.",
+      "labels": [
+        "Fortinet",
+        "affected"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--21e84d34-7d64-4845-ba13-818d51ca9174",
+      "name": "FortiWeb",
+      "description": "Fortinet's web application firewall. Affected versions: 8.0.0, 7.6.0 to 7.6.4, 7.4.0 to 7.4.9. Not affected: 7.0, 7.2.",
+      "labels": [
+        "Fortinet",
+        "affected"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--17c22286-0e46-4c9b-9a98-3d8668e1e443",
+      "name": "FortiOS",
+      "cpe": "cpe:2.3:o:fortinet:fortios:*:*:*:*:*:*:*:*",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--71fc2772-c4de-40c8-af17-3c8f614af700",
+      "name": "FortiProxy",
+      "cpe": "cpe:2.3:a:fortinet:fortiproxy:*:*:*:*:*:*:*:*",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--8d01abe7-a810-4c39-91b4-c431966f685b",
+      "name": "FortiSwitchManager",
+      "cpe": "cpe:2.3:a:fortinet:fortiswitchmanager:*:*:*:*:*:*:*:*",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "software",
+      "id": "software--fbe612bf-9b2e-4b79-8cee-cf7887843138",
+      "name": "FortiWeb",
+      "cpe": "cpe:2.3:a:fortinet:fortiweb:*:*:*:*:*:*:*:*",
+      "vendor": "Fortinet"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2c2d1876-f836-4565-afc3-6431537a046c",
+      "name": "CVE-2025-59718",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-59718"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848",
+      "name": "CVE-2025-59719",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-59719"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--ea1cea1e-09dd-42db-89ab-f2c3f004e951",
+      "name": "Ger\u00e4tekonfiguration",
+      "description": "Exportierte Konfigurationsdatei von kompromittierten Fortinet-Ger\u00e4ten, enth\u00e4lt gehashte Anmeldedaten."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c74d116-5d6c-4dba-b73a-ccd8e04fcee8",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--8a8e5a19-efd4-4c42-bce9-fe2a18a731e9",
+      "target_ref": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f27a312e-1229-42b5-b8f8-558925e28d5c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "attack-pattern--8a8e5a19-efd4-4c42-bce9-fe2a18a731e9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6634aba3-45f5-4195-a987-4a2244f6fa84",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "tool--dfb7f65e-c06a-4ae5-88e0-1c88e9fc5a00"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3da06698-593f-47c0-98d1-c5197d3ff77f",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "software--fbe612bf-9b2e-4b79-8cee-cf7887843138"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--92483e0e-f9c0-407d-8e82-22216b94f349",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "software--fbe612bf-9b2e-4b79-8cee-cf7887843138"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b024c5c7-526b-40db-8a94-ed3d4cbc4336",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "software--fbe612bf-9b2e-4b79-8cee-cf7887843138"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--21adc542-aaf6-43b4-86fb-89a5c66e5dc5",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "software--fbe612bf-9b2e-4b79-8cee-cf7887843138"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--38101512-d9e2-45cc-8dd0-f203f2d977ed",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c9bc649c-2c5e-43d8-85b9-92f0c872141a",
+      "target_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--937408ed-0a9b-4f6f-b93d-91c2cd5907f2",
+      "relationship_type": "related-to",
+      "source_ref": "indicator--c9bc649c-2c5e-43d8-85b9-92f0c872141a",
+      "target_ref": "file--ea1cea1e-09dd-42db-89ab-f2c3f004e951"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--50ceba75-cc7a-4c07-9de2-e4c88723a851",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--46c3c975-d2df-48c0-b5f0-4307525e082f",
+      "target_ref": "malware--390e45a6-dab7-42f2-b43f-d5bff940c989"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6880e50-0833-4185-a99a-ade5347fb3ef",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--b43be8d7-304d-43b0-81e6-b709f4e92481",
+      "target_ref": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c5651d4-cd25-4548-8f9e-393f4feb5a0a",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--b43be8d7-304d-43b0-81e6-b709f4e92481",
+      "target_ref": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d2d2962-cc78-4a52-bc18-d20e59688435",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--b43be8d7-304d-43b0-81e6-b709f4e92481",
+      "target_ref": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b9bf8b47-d3a9-47c2-a726-a6784f3c972e",
+      "relationship_type": "mitigates",
+      "source_ref": "course-of-action--b43be8d7-304d-43b0-81e6-b709f4e92481",
+      "target_ref": "vulnerability--fff7fdfe-9000-468a-87cb-b4ee0eee8848"
+    }
+  ]
+}

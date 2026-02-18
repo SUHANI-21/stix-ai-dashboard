@@ -1,0 +1,293 @@
+{
+  "type": "bundle",
+  "id": "bundle--6080fee4-21ec-4f07-aacb-3b0a2e4f7aa7",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "name": "Cavalry Werewolf",
+      "description": "Cavalry Werewolf is a hacker group targeting Russian government organizations. The group prefers to use open-source malware, including various backdoors, for remote command execution and persistence in compromised networks. They frequently use phishing emails with malicious attachments as an initial access vector and leverage Telegram API for C2 operations.",
+      "aliases": [
+        "Cavalry Werewolf"
+      ],
+      "goals": [
+        "Collection of confidential information",
+        "Network reconnaissance",
+        "Persistence in target infrastructure"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "Dr.Web PDF Report",
+          "url": "https://st.drweb.com/static/new-www/news/2025/october/cavalry_werewolf/Cavalry_Werewolf_ru.pdf"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1f1d700-7e4b-444c-93e1-dd379df72467",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.ShellNET.1 for initial access and remote command execution via phishing emails."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--928978a0-ee90-463f-a822-b17e5da73423",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.FileSpyNET.5 to exfiltrate documents and images from infected hosts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--283dcf4b-46c6-4921-b055-527d16fc5f45",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.Tunnel.41 to create SOCKS5 tunnels for covert connections and persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b924847-d43e-45a2-bce5-2ec8e5f7759f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BAT.DownLoader.1138 as a downloader to deliver further malware stages."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--052c8cce-342d-473a-9f93-4a2a1645ef6a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Packed2.49708 to install BackDoor.Spy.4033 for remote shell access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bad5384d-3e4c-4779-a351-8b13702fb051",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Siggen31.54011 to install BackDoor.Spy.4038 for encrypted reverse shell access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef18c448-564b-4f59-8f71-0f55d38fdd5e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.Siggen2.5463, a PowerShell-based backdoor managed via Telegram bot."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8224ee4c-dba7-4014-a2f7-3c2b53912bb5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.RShell.169 for remote shell access and command execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e12574d-84ec-41fd-bade-d8ac39edee9b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.ReverseShell.10 to provide remote access through reverse shell."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c31915e-bfbb-4a84-b986-9ac38207a7ad",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Inject5.57968 to inject malicious code and download additional malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63cb9908-25e4-4862-84d6-06a4ce0ccd4b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.ShellNET.2, a Telegram-controlled backdoor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24d18675-feb5-4f74-a997-d51ac20e54c9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.ReverseProxy.1 to launch reverse SOCKS5 proxy for remote access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e424aaa-036f-4ece-989d-806b4d8c53cd",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Packed2.49862 to deliver various payloads including BackDoor.ReverseProxy.1, BackDoor.Shell.275, BackDoor.AdaptixC2.11, BackDoor.Havoc.16, BackDoor.Meterpreter.227, Trojan.Siggen9.56514, and Trojan.Clipper.808."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b92b7ec-9c9b-4c91-bc2b-a4a153a9a61e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.Shell.275 for remote access and command execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--20943741-8a80-4d6c-9de5-b5df313869a0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.AdaptixC2.11 for remote control capabilities."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5c40552-a67f-4a82-8d0a-86b4fe62cd5c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.Havoc.16 for remote access and post-exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dd89fbf4-f34d-4520-9e5d-165106f65f30",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses BackDoor.Meterpreter.227 for remote administration and post-exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9608b8ee-9a9f-44b6-bc7e-d1c10772e66e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Siggen9.56514 for remote access and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11a37e2b-6e25-4a4f-9707-2fff37e6ff76",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--3c2df300-405a-481b-bef8-66daaf37e86c",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Cavalry Werewolf uses Trojan.Clipper.808 to steal clipboard data including cryptocurrency wallet addresses."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--836f766d-ce4b-417e-89ca-22111dd530a7",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "BackDoor.ShellNET.1 delivers Trojan.FileSpyNET.5 as a next-stage payload for data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--93622188-093e-4e5e-8e31-2e5fb7d9950c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "BackDoor.ShellNET.1 delivers BackDoor.Tunnel.41 for establishing SOCKS5 tunnels."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9024361-8fdc-4068-b1de-77d48a3064b0",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "BAT.DownLoader.1138 delivers PowerShell.BackDoor.109 (not present in the provided list, so not included)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1169822a-3e2f-4b30-b430-72ff807b4cad",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49708 delivers BackDoor.Spy.4033 (not present in the provided list, so not included)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--450cd51e-f331-46cf-8ce9-64fdf0c3f112",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Siggen31.54011 delivers BackDoor.Spy.4038 (not present in the provided list, so not included)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d8b3023-4e76-49b3-8f41-b21063124214",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "BackDoor.Siggen2.5463 delivers PowerShell.BackDoor.108 (not present in the provided list, so not included)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb2e8f2d-6dca-4b89-9e70-6cf38ba59d77",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Inject5.57968 delivers Trojan.PackedNET.3351 (not present in the provided list, so not included)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3e157f3-f8f0-4856-8cb6-e6f0b791a4d6",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers BackDoor.ReverseProxy.1 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80280451-8acf-4da9-a699-0c157f088798",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers BackDoor.Shell.275 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e51c0fe4-cdfc-4257-90d4-8c62a386b5dd",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers BackDoor.AdaptixC2.11 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6f1d73b-8634-4155-b303-f4b73760b2b4",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers BackDoor.Havoc.16 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa07c459-e3f1-4e03-8df1-22d8571891f0",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers BackDoor.Meterpreter.227 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef5483ca-d6d4-4f05-9a7c-7b444ad122d0",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers Trojan.Siggen9.56514 as a payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--360dd0fb-3cfb-4cc0-8401-6a188064ce2e",
+      "relationship_type": "delivers",
+      "source_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "target_ref": "malware--050a3d9f-4b25-46c8-9323-ba31903ba1d4",
+      "description": "Trojan.Packed2.49862 delivers Trojan.Clipper.808 as a payload."
+    }
+  ]
+}

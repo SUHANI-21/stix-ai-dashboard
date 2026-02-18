@@ -1,0 +1,413 @@
+{
+  "type": "bundle",
+  "id": "bundle--5875745d-1f49-4d3b-b365-e1da330d1edf",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--3f21323c-972f-447d-8dc8-5536680fdb39",
+      "name": "ENKI Whitehat",
+      "description": "Offensive security experts delivering deeper security through an attacker's perspective. ENKI Whitehat conducted the analysis and reporting of the 2025 Lazarus Group Comebacker campaign.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology",
+        "cybersecurity"
+      ],
+      "labels": [
+        "research",
+        "security"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--70cdc851-bf8f-45f0-acc4-7c0655626737",
+      "hashes": {
+        "SHA-256": "b7d625679fbcc86510119920ffdd6d21005427bf49c015697c69ae1ee27e6bab"
+      },
+      "name": "docx file"
+    },
+    {
+      "type": "file",
+      "id": "file--63b65ec9-9b71-4172-9b13-ac179ffbb198",
+      "hashes": {
+        "SHA-256": "046caa2db6cd14509741890e971ddc8c64ef4cc0e369bd5ba039c40c907d1a1f"
+      },
+      "name": "docx file"
+    },
+    {
+      "type": "file",
+      "id": "file--894eef5a-e3e3-40fb-aa96-04a325ff02ee",
+      "hashes": {
+        "SHA-256": "14213c013d79ea4bc8309f730e26d52ff23c10654197b8d2d10c82bbbcd88382"
+      },
+      "name": "docx file"
+    },
+    {
+      "type": "file",
+      "id": "file--7797f016-ac00-459b-b53b-add4eccd5e1a",
+      "hashes": {
+        "SHA-256": "b357b3882cf8107b1cb59015c4be3e0b8b4de80fd7b80ce3cd05081cd3f6a8ff"
+      },
+      "name": "docx file"
+    },
+    {
+      "type": "file",
+      "id": "file--f9a655b6-b1ca-401a-b963-32bdc6a51cb1",
+      "hashes": {
+        "SHA-256": "7e61c884ce5207839e0df7a22f08f0ab7d483bfa1828090aa260a2f14a0c942c"
+      },
+      "name": "wpsoffice_aam.cox"
+    },
+    {
+      "type": "file",
+      "id": "file--0b07e47c-d102-4e92-96e9-55bd61e1c810",
+      "hashes": {
+        "SHA-256": "c4a5179a42d9ff2774f7f1f937086c88c4bc7c098963b82cc28a2d41c4449f9e"
+      },
+      "name": "USOPrivate.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--07cb1271-96bc-41e6-9994-f9c3e92d46aa",
+      "hashes": {
+        "SHA-256": "f2b3867aa06fb38d1505b3c2b9e523d83f906995dcdd1bb384a1087b385bfc50"
+      },
+      "name": "Comebacker Loader"
+    },
+    {
+      "type": "file",
+      "id": "file--fe46063e-74a2-4ee6-9544-6b978318fac6",
+      "hashes": {
+        "SHA-256": "96b973e577458e5b912715171070c0a0171a3e02154eff487a2dcea4da9fb149"
+      },
+      "name": "USOInfo.dat"
+    },
+    {
+      "type": "url",
+      "id": "url--a728bff7-3168-4646-b85e-b31fd73ba89e",
+      "value": "https://birancearea.com/adminv2"
+    },
+    {
+      "type": "url",
+      "id": "url--a11acb6d-5cce-41b0-907d-e232dfea1ef5",
+      "value": "https://hiremployee.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6454bf92-bcd8-4048-b312-7ab67f179c76",
+      "value": "office-theme.com"
+    },
+    {
+      "type": "file",
+      "id": "file--f7b73ff4-1f91-4ca4-b623-7c9a1c4173ae",
+      "name": "C:\\ProgramData\\WPSOffice\\wpsoffice\\_aam.ocx"
+    },
+    {
+      "type": "file",
+      "id": "file--5234b084-b103-4874-8231-ed7c98d4c4a3",
+      "name": "C:\\ProgramData\\Document\\EDGE\\_Group\\_Interview\\_NDA.docx"
+    },
+    {
+      "type": "file",
+      "id": "file--b1207797-5a2f-4150-b3ec-80fb0b0bfb40",
+      "name": "C:\\ProgramData\\USOShared\\USOPrivate.dll"
+    },
+    {
+      "type": "file",
+      "id": "file--8ea36e90-01bb-4c65-99e1-1695386a98cc",
+      "name": "C:\\ProgramData\\USOShared\\Micro.lnk"
+    },
+    {
+      "type": "file",
+      "id": "file--772022fc-21bf-4993-a333-90ed91e19863",
+      "name": "C:\\ProgramData\\USOShared\\USOInfo.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--a91697d8-4c46-4894-86bf-87b7848c45c2",
+      "name": "C:\\ProgramData\\Document\\EDGE\\_Group\\_Interview\\_NDA.docx"
+    },
+    {
+      "type": "file",
+      "id": "file--9f6db194-5a4e-4853-87aa-f826127cfcad",
+      "name": "Guest_Lecture_Invitation_Format_IITK.docx"
+    },
+    {
+      "type": "file",
+      "id": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "name": "Airbus_C295_Integration_Document_for_TASL.docx"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b5394b5-25c4-4b65-8477-20c1da5a725d",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Lazarus Group uses Comebacker malware in targeted campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4010f03b-69fe-401b-ac9f-1b52aa96e643",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Lazarus Group uses Comebacker Loader in multi-stage infection chains."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d11b3c3-ab53-48d2-9893-0da7fe37709f",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Lazarus Group uses USOPrivate.dll as a loader in the Comebacker infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aae2b27c-0607-4022-b083-76c4b8a90e4b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Lazarus Group uses USOInfo.dat as an alternate loader in the Comebacker infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb22f614-7902-4c6f-b066-05d2150040a0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group gains initial access via spear phishing attachments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc7b98c5-3e65-4044-a8cd-e307256d61ea",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses user execution of malicious files to initiate infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d7877389-8eda-4a64-a889-6d5b4bb8951b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group achieves persistence via shortcut modification."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--588fba42-04aa-45ea-872c-55e4f43bb319",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group achieves persistence via registry run keys and Startup folder."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ec83550-1c10-4956-8855-7b0778de2466",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses rundll32.exe for system binary proxy execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9dbc777a-7479-49bb-9044-8c4fa776fc8e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group encrypts C2 communications using symmetric cryptography."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc4c09d7-1bd8-438a-a2e3-a65b779db488",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group obfuscates files and information using encryption and encoding."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ac76c66-0a44-4b8f-89e1-a31d42a14574",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group compresses payloads for defense evasion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a42e905-abaf-494c-a6b9-b7b35d0d72ab",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses custom deobfuscation and decoding routines."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f35afcea-359a-4766-b268-43f3fb3ba203",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses reflective code loading to execute DLLs in memory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f345e88f-7850-42df-a31a-dcb8bca2c59c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group acquires infrastructure via domain registration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7ac55e5-490a-4531-8329-2ef0f2d03721",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group encodes data using standard encoding (Base64) for C2 traffic."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b97356c-9b40-44e0-8ed6-7cb357c4f0d5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses HTTPS as the application layer protocol for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b5c6167-462d-47e5-aae4-6095a6bfee44",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--a0d0517d-6761-4332-aeea-cb9f0f110aed",
+      "target_ref": "attack-pattern--1734b181-9824-4e5d-8d7b-40c1ec765b22",
+      "description": "Lazarus Group uses web services for command and control."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--993c0166-58e4-4bd0-bba8-09bf9cf73221",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cbb6a858-6f8a-4f8b-b8d8-e43ccf7c0494",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "File hashes indicate the presence of Comebacker malware and related loaders."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d51e348f-6f3a-4ab4-ad65-2672a89dfe9d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--cbb6a858-6f8a-4f8b-b8d8-e43ccf7c0494",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "C2 domains indicate Comebacker malware activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24a704f2-fb92-4d80-8d93-05f0215b4b30",
+      "relationship_type": "authored-by",
+      "source_ref": "indicator--cbb6a858-6f8a-4f8b-b8d8-e43ccf7c0494",
+      "target_ref": "identity--3f21323c-972f-447d-8dc8-5536680fdb39",
+      "description": "Indicators were authored by ENKI Whitehat."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d5a00f5-4090-4660-a151-11fccbbd418f",
+      "relationship_type": "authored-by",
+      "source_ref": "indicator--cbb6a858-6f8a-4f8b-b8d8-e43ccf7c0494",
+      "target_ref": "identity--3f21323c-972f-447d-8dc8-5536680fdb39",
+      "description": "Indicators were authored by ENKI Whitehat."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--86d3e8de-bb51-42b9-b584-4ba7030e954e",
+      "relationship_type": "delivers",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Comebacker Loader delivers USOPrivate.dll as part of the infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97fd9662-3fef-4acc-bc5f-19d548818da4",
+      "relationship_type": "delivers",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "description": "Comebacker Loader delivers USOInfo.dat as part of the alternate infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9a32d54-da15-4978-8219-3a537edb584a",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops C:\\ProgramData\\WPSOffice\\wpsoffice\\_aam.ocx."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ec87b8c-9bfa-41e4-ac0f-b88aaa852b54",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops C:\\ProgramData\\Document\\EDGE\\_Group\\_Interview\\_NDA.docx."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d3dda721-434c-49f6-9299-456ce07f9374",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops C:\\ProgramData\\USOShared\\USOPrivate.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c35864e-1387-446c-8df5-6d214229a2a1",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops C:\\ProgramData\\USOShared\\Micro.lnk for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f39b1b5a-a830-4147-9657-736190b45e37",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops C:\\ProgramData\\USOShared\\USOInfo.dat in the alternate chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8bfe542e-d32f-4008-ba9a-e81982b92003",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops Guest_Lecture_Invitation_Format_IITK.docx as a decoy."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2ef5bdb-9a95-4987-87aa-5345511487c7",
+      "relationship_type": "drops",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "file--540e8548-33c9-4737-a7a8-bfb3f446dbcc",
+      "description": "Comebacker Loader drops Airbus_C295_Integration_Document_for_TASL.docx as a decoy."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--043bec86-b3db-42b7-9f58-91e92afe77d3",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "url--a11acb6d-5cce-41b0-907d-e232dfea1ef5",
+      "description": "Comebacker malware communicates with https://hiremployee.com for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c2bacea-b994-4671-b93c-44c3c5c81c1c",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "url--a11acb6d-5cce-41b0-907d-e232dfea1ef5",
+      "description": "Comebacker malware communicates with https://birancearea.com/adminv2 for C2."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7c629f3c-6d96-4ace-bce8-d03c74578bbb",
+      "relationship_type": "uses",
+      "source_ref": "malware--409dc5bc-ab27-4ac6-86f8-9ae2af67690b",
+      "target_ref": "domain-name--6454bf92-bcd8-4048-b312-7ab67f179c76",
+      "description": "Comebacker Loader and campaign use office-theme.com for staging and delivery."
+    }
+  ]
+}

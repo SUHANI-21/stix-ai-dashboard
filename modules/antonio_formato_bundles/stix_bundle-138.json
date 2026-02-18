@@ -1,0 +1,67 @@
+{
+  "type": "bundle",
+  "id": "bundle--69c36fa6-be83-48c8-b527-fe02814affb2",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--70971798-8e8d-44e1-ba83-c44206dfa086",
+      "name": "CVE-2021-21166",
+      "description": "Google Chrome renderer remote code execution zero-day vulnerability exploited by Candiru."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--717f009d-36ba-46b9-95e0-10cbc23a8b8a",
+      "name": "CVE-2021-30551",
+      "description": "Google Chrome renderer remote code execution zero-day vulnerability exploited by Candiru."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--99d43ff3-1d44-4b94-8dfb-c5e1240637bb",
+      "name": "CVE-2021-1844",
+      "description": "WebKit vulnerability related to CVE-2021-21166, patched by Apple."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3922e24b-8c34-4981-8fc0-6101d9dbd1e0",
+      "name": "CVE-2021-33742",
+      "description": "Internet Explorer zero-day exploit used by Candiru for remote code execution."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--b6d37935-8aff-4fb5-9a08-b0499127a7f4",
+      "name": "CVE-2022-2294",
+      "description": "High-severity heap buffer overflow in WebRTC within Google Chrome, exploited by Candiru."
+    },
+    {
+      "type": "file",
+      "id": "file--dcb3ccbd-7227-403a-9a1a-fef7e28ee910",
+      "name": "physmem.sys",
+      "description": "Signed third-party driver used by DevilsTongue for kernel-level memory access and API call proxying."
+    },
+    {
+      "type": "file",
+      "id": "file--e84a3301-3d47-42cd-bad8-aa5c49fbc5ea",
+      "name": "COM hijacked DLL",
+      "description": "First-stage DLL dropped by DevilsTongue in C:\\Windows\\system32\\IME\\ to hijack a legitimate COM class registry key for persistence."
+    },
+    {
+      "type": "file",
+      "id": "file--4366b75c-948a-4866-910c-224a8081f01a",
+      "name": "Encrypted second-stage payloads",
+      "description": "DevilsTongue stores encrypted second-stage payloads in the configuration directory."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1d3a5e10-1cce-43bd-abd6-eb25dffab60a",
+      "value": "integrity-labs.ltd",
+      "description": "Domain registered on March 31, 2025, associated with Nerfwall, an alias linked to Candiru."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0f036d84-82c0-4c81-a35b-bb3f759856e9",
+      "value": "itt.uz",
+      "description": "Official Uzbekistan government domain used for Candiru spyware C2 communications."
+    }
+  ]
+}

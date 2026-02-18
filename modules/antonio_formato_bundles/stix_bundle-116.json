@@ -1,0 +1,270 @@
+{
+  "type": "bundle",
+  "id": "bundle--af6542b3-50ec-484d-9cd5-fd33247af697",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--40e2c9d2-5161-4cc2-aca2-9584ec0220b3",
+      "name": "Chinese-speaking React2Shell Operators",
+      "description": "Threat actor cluster leveraging React2Shell PoC and mass exploitation of CVE-2025-55182 for cryptojacking and persistence. Uses simplified Chinese in scripts, Alibaba-hosted staging servers, and AI-assisted tooling.",
+      "aliases": [
+        "React2Shell Operators"
+      ],
+      "goals": [
+        "Cryptojacking",
+        "Persistence",
+        "Remote access"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial-gain",
+      "secondary_motivations": [
+        "persistence"
+      ],
+      "external_references": [
+        {
+          "source_name": "AWS Blog",
+          "url": "https://aws.amazon.com/blogs/security/china-nexus-cyber-threat-groups-rapidly-exploit-react2shell-vulnerability-cve-2025-55182/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--097a64e4-2ab6-4e12-a45f-64b021142741",
+      "name": "DiceyF / EarthBerberoka / Jackpot Panda",
+      "description": "China-nexus APT groups reportedly exploiting React2Shell (CVE-2025-55182) for targeted attacks, including cryptojacking and persistence.",
+      "aliases": [
+        "DiceyF",
+        "EarthBerberoka",
+        "Jackpot Panda"
+      ],
+      "goals": [
+        "Targeted exploitation",
+        "Persistence",
+        "Cryptojacking"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "financial-gain",
+      "external_references": [
+        {
+          "source_name": "Securelist DiceyF",
+          "url": "https://securelist.com/diceyf-deploys-gameplayerframework-in-online-casino-development-studio/107723/"
+        },
+        {
+          "source_name": "TrendMicro EarthBerberoka",
+          "url": "https://www.trendmicro.com/it_it/research/22/d/new-apt-group-earth-berberoka-targets-gambling-websites-with-old.html"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--44e5d8f5-6837-4a33-b1fc-a6996d8f72c5",
+      "name": "CVE-2025-55182",
+      "description": "Unauthenticated remote code execution vulnerability in React Server Components due to improper payload decoding in react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://react.dev/blog/2025/12/03/critical-security-vulnerability-in-react-server-components"
+        },
+        {
+          "source_name": "GitHub Advisory",
+          "url": "https://github.com/facebook/react/security/advisories/GHSA-fv66-9v8q-g76r"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--6da659ee-fb0a-46f6-9a17-bc2d4e15cccc",
+      "name": "CVE-2025-66478",
+      "description": "Critical RCE vulnerability in Next.JS due to usage of vulnerable React packages. Rated CVSS 10.0.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://nextjs.org/blog/CVE-2025-66478"
+        },
+        {
+          "source_name": "GitHub Advisory",
+          "url": "https://github.com/vercel/next.js/security/advisories/GHSA-9qr9-h5gf-34mp"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--1b29ba8f-71a0-4461-8657-d647c0731689",
+      "hashes": {
+        "SHA-256": "5bae25736a09de5f4a0f9761d2b7bfa81ca8dba39de2a724473c9d021a65daa9"
+      },
+      "name": "sex.sh",
+      "size": 1621
+    },
+    {
+      "type": "file",
+      "id": "file--4adad08c-c760-42e8-a51d-9bcc878caac5",
+      "hashes": {
+        "SHA-256": "ba43e447e63611d365300bf2e8e43ccb02ea112778d0d555ef9a9ccf6169808b"
+      },
+      "name": "sex.sh",
+      "size": 5014
+    },
+    {
+      "type": "file",
+      "id": "file--2bbc56c0-eb94-43d6-b1c4-f03bda8404de",
+      "hashes": {
+        "SHA-256": "69f2789a539fc2867570f3bbb71102373a94c7153239599478af84b9c81f2a03"
+      },
+      "name": "nginx3",
+      "size": 10466776
+    },
+    {
+      "type": "file",
+      "id": "file--1816142f-0399-49f5-aff6-be7c7014701e",
+      "hashes": {
+        "SHA-256": "9959ee0d49894fe9e3d753bf8847f522bafec4f7c644ead5648d18e9d32de252"
+      },
+      "name": "httd",
+      "size": 1304648
+    },
+    {
+      "type": "file",
+      "id": "file--cff848db-7e76-479c-8452-878f7442f4a0",
+      "hashes": {
+        "SHA-256": "e76f54b7b98ba3a08f39392e6886a9cb3e97d57b8a076e6b948968d0be392ed8"
+      },
+      "name": "tmp",
+      "size": 5242880
+    },
+    {
+      "type": "file",
+      "id": "file--b0d17080-7bed-4577-aa4c-4a6dcde4f480",
+      "hashes": {
+        "SHA-256": "67aea5b0ffceacaa932c47b3cddd527d393856fa900a19a225afe9203ce005e0"
+      },
+      "name": "solrc",
+      "size": 2314496
+    },
+    {
+      "type": "file",
+      "id": "file--901cd5b1-4ecd-48b5-b4d0-935edc1180c2",
+      "hashes": {
+        "SHA-256": "466a46ed4f80ef12d2e2ba1c8014315a4aa33483135386af57bec5d6a57a8359"
+      },
+      "name": "solrz",
+      "size": 2314496
+    },
+    {
+      "type": "file",
+      "id": "file--801e3c16-42af-46f4-8672-3203ce19eba1",
+      "hashes": {
+        "SHA-256": "0c748b9e8bc6b5b4fe989df67655f3301d28ef81617b9cbe8e0f6a19d4f9b657"
+      },
+      "name": "fghgf",
+      "size": 8334000,
+      "path": "/tmp/fghgf"
+    },
+    {
+      "type": "file",
+      "id": "file--a0abeda2-2453-4bbe-a797-65f3320f0d97",
+      "hashes": {
+        "SHA-256": "609e5af9394e68d96a8a906a893d0544e39f4b88e15f3b4131494c1f1b278b6f"
+      },
+      "name": ".system",
+      "size": 5790000,
+      "path": "/tmp/.system"
+    },
+    {
+      "type": "file",
+      "id": "file--ecb563b0-c63b-463a-9400-d62ddaceaf5d",
+      "hashes": {
+        "SHA-256": "dd630c880e628fde6018d2d6a276007d01de7e6c7d46e10000231f4a35cf0f9e"
+      },
+      "name": ".fvq2lzl64e.js"
+    },
+    {
+      "type": "file",
+      "id": "file--fc7359e3-c166-482b-92fa-4b71f3028ddf",
+      "hashes": {
+        "SHA-256": "9674bf61fc78daf4eec4e378df3f746ddccf532de5609e278ddcd02b98c24de1"
+      },
+      "name": ".lauphhtqrg.js"
+    },
+    {
+      "type": "file",
+      "id": "file--fc86c414-75eb-4d5a-a9c8-254f8899a0d2",
+      "hashes": {
+        "SHA-256": "865d0bbf8b953ff317dd3aafde10d9fe0f95c2befd83b570c02ab802b177cda0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--9989a20c-0a3b-4feb-ba8e-336c1b3be202",
+      "hashes": {
+        "SHA-256": "129cfbfbe4c37a970abab20202639c1481ed0674ff9420d507f6ca4f2ed7796a"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--24228b37-a0d3-4459-9299-0dc619df0b6c",
+      "value": "39.97.229.220"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--688e216d-82ab-4eb1-bd9c-d1b870c887ae",
+      "value": "43.247.134.215"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ff778d13-092e-4070-85ca-792ca02fb2cc",
+      "value": "45.76.155.14"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3974c489-2825-4774-a3db-5518e3b70870",
+      "value": "45.157.233.80"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ef532401-eea0-4ea8-b55d-f1e4fdc47b5f",
+      "value": "46.36.37.85"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d3e68004-82ed-4dbd-a3f1-c136c298dc40",
+      "value": "47.84.113.198"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3e9fcea5-a354-413f-b617-35880600ba8b",
+      "value": "192.9.245.121"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--edf008ae-1cc8-4128-9ce8-ac380d9467a8",
+      "value": "193.34.213.150"
+    },
+    {
+      "type": "url",
+      "id": "url--7290aea2-853e-4394-b055-808cd04bf5fa",
+      "value": "http://46.36.37.85:12000/sex.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--b9f968fa-36f0-4988-afea-412600b5bb7c",
+      "value": "http://43.247.134.215:8998/nginx3"
+    },
+    {
+      "type": "url",
+      "id": "url--100568c7-20eb-4607-b8bd-a526cb783a18",
+      "value": "http://39.97.229.220:8006/httd"
+    },
+    {
+      "type": "url",
+      "id": "url--a35ad586-8062-4ab9-a26f-20e5c4a8af3f",
+      "value": "http://47.84.113.198:8000/tmp"
+    },
+    {
+      "type": "url",
+      "id": "url--1316f967-abfa-4c28-bc4b-5c5d85d2e70f",
+      "value": "http://xpertclient.net:3000/sex.sh"
+    }
+  ]
+}

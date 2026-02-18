@@ -1,0 +1,335 @@
+{
+  "type": "bundle",
+  "id": "bundle--b879ab6f-6d96-4167-a05d-1ff41631e639",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--807d35c3-936c-4015-8487-5cafa71b4478",
+      "name": "Mario Upgraded Version Sample",
+      "hashes": {
+        "SHA256": "0fe7fcc66726f8f2daed29b807d1da3c531ec004925625855f8889950d0d24d8"
+      },
+      "description": "Sample of the upgraded version of Mario encryptor used by RansomHouse.",
+      "labels": [
+        "ransomware",
+        "encryptor",
+        "Mario",
+        "RansomHouse"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4b5139c7-694a-4b39-b626-bada756711bc",
+      "name": "Mario Original Version Sample",
+      "hashes": {
+        "SHA256": "d36afcfe1ae2c3e6669878e6f9310a04fb6c8af525d17c4ffa8b510459d7dd4d"
+      },
+      "description": "Sample of the original version of Mario encryptor used by RansomHouse.",
+      "labels": [
+        "ransomware",
+        "encryptor",
+        "Mario",
+        "RansomHouse"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--6fa614d8-0e13-4eea-9dc1-fae24cf9ccc6",
+      "name": "MrAgent Sample 1",
+      "hashes": {
+        "SHA256": "26b3c1269064ba1bf2bfdcf2d3d069e939f0e54fc4189e5a5263a49e17872f2a"
+      },
+      "description": "Sample of MrAgent management tool used in RansomHouse operations.",
+      "labels": [
+        "ransomware",
+        "deployment tool",
+        "MrAgent",
+        "RansomHouse"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--e28847f5-d98b-4767-aaa6-34880dfa7b29",
+      "name": "MrAgent Sample 2",
+      "hashes": {
+        "SHA256": "8189c708706eb7302d7598aeee8cd6bdb048bf1a6dbe29c59e50f0a39fd53973"
+      },
+      "description": "Sample of MrAgent management tool used in RansomHouse operations.",
+      "labels": [
+        "ransomware",
+        "deployment tool",
+        "MrAgent",
+        "RansomHouse"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--feb7a72e-2f71-4004-9ffc-110b10890511",
+      "hashes": {
+        "SHA-256": "0fe7fcc66726f8f2daed29b807d1da3c531ec004925625855f8889950d0d24d8"
+      },
+      "name": "Mario ransomware sample (upgraded version)",
+      "description": "Sample of the upgraded version of Mario encryptor used by RansomHouse"
+    },
+    {
+      "type": "file",
+      "id": "file--f6dfd139-d130-49d3-8496-284ebab59c93",
+      "hashes": {
+        "SHA-256": "d36afcfe1ae2c3e6669878e6f9310a04fb6c8af525d17c4ffa8b510459d7dd4d"
+      },
+      "name": "Mario ransomware sample (original version)",
+      "description": "Sample of the original version of Mario encryptor used by RansomHouse"
+    },
+    {
+      "type": "file",
+      "id": "file--9c79f4bb-7665-498a-ab02-7458744183d1",
+      "hashes": {
+        "SHA-256": "26b3c1269064ba1bf2bfdcf2d3d069e939f0e54fc4189e5a5263a49e17872f2a"
+      },
+      "name": "MrAgent ransomware deployment tool sample",
+      "description": "Sample of MrAgent deployment tool used by RansomHouse"
+    },
+    {
+      "type": "file",
+      "id": "file--6bcd860e-f015-4ed8-8463-e1c1dfe09020",
+      "hashes": {
+        "SHA-256": "8189c708706eb7302d7598aeee8cd6bdb048bf1a6dbe29c59e50f0a39fd53973"
+      },
+      "name": "MrAgent ransomware deployment tool sample",
+      "description": "Sample of MrAgent deployment tool used by RansomHouse"
+    },
+    {
+      "type": "file",
+      "id": "file--726cc7ca-7fde-4972-a927-403718a5cbb9",
+      "name": "How To Restore Your Files.txt",
+      "description": "Ransom note dropped by Mario encryptor, provides instructions for victims to recover files"
+    },
+    {
+      "type": "file",
+      "id": "file--61e216f9-9218-4979-bf57-e7a3a25d3725",
+      "name": "*.emario",
+      "description": "Encrypted files produced by Mario ransomware, original filename appended with .emario extension"
+    },
+    {
+      "type": "file",
+      "id": "file--92e3a13d-f71a-4005-ba04-ceaf03699f15",
+      "name": "*.ova",
+      "description": "Open Virtual Appliance (OVA) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--489e463f-cd36-4621-ac5a-4e41d4800d7e",
+      "name": "*.ovf",
+      "description": "Open Virtualization Format (OVF) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--2d47ae7b-e085-48d8-8dc6-aa913f0e00a0",
+      "name": "*.vbk",
+      "description": "Veeam Backup (VBK) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--7d5a6d3a-cec2-40b3-8ade-b2173cec49dd",
+      "name": "*.vbm",
+      "description": "Veeam Backup Metadata (VBM) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--88448815-e654-4f5d-a86f-e0201dbaa1b2",
+      "name": "*.vib",
+      "description": "VMware Installation Bundle (VIB) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--6ed2e2c8-c776-4754-87ae-a3811a268047",
+      "name": "*.vmdk",
+      "description": "Virtual Machine Disk (VMDK) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--3ba9f3cf-cc44-437f-bdf6-ffedb446c8fb",
+      "name": "*.vmem",
+      "description": "VMware Memory (VMEM) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--4abd78ba-81fa-495f-8840-b666e466d5b3",
+      "name": "*.vmsd",
+      "description": "VMware Snapshot Metadata (VMSD) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--fb6a87e8-62f4-4f00-86bc-8375319a2191",
+      "name": "*.vmsn",
+      "description": "VMware Snapshot State (VMSN) file targeted by Mario ransomware"
+    },
+    {
+      "type": "file",
+      "id": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "name": "*.vswp",
+      "description": "VMware Swap (VSWP) file targeted by Mario ransomware"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27d9b832-191d-476d-957b-e7b20ddd1b6c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--e05a86b9-cff8-4cd8-8b89-2c19e5e192da",
+      "target_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "description": "Jolly Scorpius operates the RansomHouse ransomware-as-a-service (RaaS)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd0a07be-7a6d-4245-8b0d-906046a3eadd",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "description": "RansomHouse operations use MrAgent as a deployment tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f438a2d-e9ff-4d79-aaef-510097172b39",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "description": "RansomHouse operations use Mario as the encryptor component."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b3f679d-9e97-47a6-9490-2e8a4ce35530",
+      "relationship_type": "drops",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor creates ransom notes named 'How To Restore Your Files.txt'."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--54318cb1-d80c-4088-bb07-53d25ee3ee12",
+      "relationship_type": "drops",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor produces encrypted files with the .emario extension."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b1c3326-02cf-4919-b2b3-e3b8581079e4",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "description": "MrAgent is used to deploy the Mario encryptor."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b08852af-1515-45ee-a0d2-8dd388f1b516",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario upgraded version is represented by the sample with SHA256 hash 0fe7fcc66726f8f2daed29b807d1da3c531ec004925625855f8889950d0d24d8."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e6db638f-be5c-41e1-9a56-74d90b0cae2c",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario original version is represented by the sample with SHA256 hash d36afcfe1ae2c3e6669878e6f9310a04fb6c8af525d17c4ffa8b510459d7dd4d."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8c72ec4f-ab6a-488a-aa84-d5c486eb15bf",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "MrAgent is represented by the sample with SHA256 hash 26b3c1269064ba1bf2bfdcf2d3d069e939f0e54fc4189e5a5263a49e17872f2a."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36052c6a-50c3-4312-be44-c1b5c3d22bcc",
+      "relationship_type": "uses",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "MrAgent is represented by the sample with SHA256 hash 8189c708706eb7302d7598aeee8cd6bdb048bf1a6dbe29c59e50f0a39fd53973."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--081d28ca-f987-4c1d-b7c3-7402730009bb",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets Open Virtual Appliance (OVA) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--971c616b-a0c0-4c0a-a161-529d4957154c",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets Open Virtualization Format (OVF) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ab091b3-d8cf-4428-9f83-d227b9df41cf",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets Veeam Backup (VBK) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8eb50a92-0523-4f9d-a13a-40c69ce4853f",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets Veeam Backup Metadata (VBM) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b982a56f-3ab9-4de8-815d-5a7d8e30bcdc",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets VMware Installation Bundle (VIB) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f065c81f-5a53-48ba-a993-74fcc6f3f921",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets Virtual Machine Disk (VMDK) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--110c7115-654b-4d4c-bfda-a019236d8d8e",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets VMware Memory (VMEM) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2ba7e73-e398-4699-8acd-50e2fd27b23c",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets VMware Snapshot Metadata (VMSD) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b47b3e7-bc5c-4c6b-a709-0cfa9c57c16b",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets VMware Snapshot State (VMSN) files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bee83fbc-b1bd-4ff4-949b-f139bcdbc93e",
+      "relationship_type": "targets",
+      "source_ref": "malware--de2a90b8-3c7e-4d09-af06-480828f53bda",
+      "target_ref": "file--bd9b9cba-fefc-4b29-83fd-8a7a30272051",
+      "description": "Mario encryptor targets VMware Swap (VSWP) files."
+    }
+  ]
+}

@@ -1,0 +1,504 @@
+{
+  "type": "bundle",
+  "id": "bundle--4319bf15-9092-4993-8208-a28ec58884b7",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--76df21b0-3edd-40f1-8ee6-52b8a3ada27e",
+      "name": "Browser Extensions",
+      "description": "Malicious browser extension used to gain initial access, intercept traffic, and steal credentials.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1176"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a6d1fdd1-a9e4-43d4-9006-ce79a4ef8a00",
+      "name": "Adversary-in-the-Middle",
+      "description": "Intercepts communications between user and target domains to steal credentials and manipulate data.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1557"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1349c6a7-6d48-4f52-9471-645fea4667be",
+      "name": "Proxy: External Proxy",
+      "description": "Uses external proxy infrastructure to route and intercept victim traffic.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1090.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6725160b-3f1b-48bd-ae9d-c0b158526bbd",
+      "name": "Steal Web Session Cookie",
+      "description": "Captures session cookies from HTTP headers routed through attacker-controlled proxies.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1539"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ad5c5769-9c38-462e-9f55-2abd54988827",
+      "name": "Input Capture: Web Portal Capture",
+      "description": "Captures credentials, payment information, and other sensitive data from web forms.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1056.003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--72208cc8-889d-4072-ac00-f3661c20d06a",
+      "name": "Obfuscated Files or Information",
+      "description": "Uses custom character-index encoding to obfuscate hardcoded credentials and malicious code.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cbfe2dc8-2c7d-4d93-8b28-f0ee58200ca5",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Uses web protocols (HTTP/HTTPS) for command and control and data exfiltration.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "name": "Encrypted Channel",
+      "description": "Uses HTTPS and SSL certificates for secure communication with C2 infrastructure.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--fdbf3a6a-0ede-4d11-bd4e-9eac3a534ec8",
+      "name": "Destructive Open Source Malware",
+      "description": "Destructive malware rising across open source registries, using delays and kill switches to wipe code, break builds, and disrupt CI/CD.",
+      "malware_types": [
+        "wiper",
+        "build disruptor"
+      ],
+      "is_family": false,
+      "first_seen": "2025-01-01",
+      "implementation_languages": [],
+      "labels": [
+        "open-source",
+        "ci/cd",
+        "wiper",
+        "build-breaker"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--17aa7a26-3756-4f73-8a2a-1e97b981fd93",
+      "name": "Malicious NuGet Package Tracer.Fody.NLog",
+      "description": "Impostor NuGet package Tracer.Fody.NLog typosquats Tracer.Fody and its author, using homoglyph tricks, and exfiltrates Stratis wallet JSON/passwords to a Russian IP address.",
+      "malware_types": [
+        "credential stealer",
+        "typosquat"
+      ],
+      "is_family": false,
+      "first_seen": "2025-12-15",
+      "implementation_languages": [],
+      "labels": [
+        "nuget",
+        "typosquat",
+        "wallet-theft",
+        "homoglyph"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "name": "Spearphishing npm Packages",
+      "description": "A five-month operation turned 27 npm packages into durable hosting for browser-run lures that mimic document-sharing portals and Microsoft sign-in, targeting 25 organizations across manufacturing, industrial automation, plastics, and healthcare for credential theft.",
+      "malware_types": [
+        "spearphishing",
+        "credential stealer",
+        "npm-package"
+      ],
+      "is_family": false,
+      "first_seen": "2025-07-01",
+      "last_seen": "2025-12-23",
+      "labels": [
+        "npm",
+        "spearphishing",
+        "credential-theft",
+        "manufacturing",
+        "healthcare"
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "name": "Phantom Shuttle",
+      "cpe": "",
+      "languages": [
+        "zh",
+        "en"
+      ],
+      "description": "Malicious Chrome extension masquerading as a VPN, intercepts traffic and exfiltrates credentials. Distributed since at least 2017. Extension IDs: fbfldogmkadejddihifklefknmikncaj, ocpcmfmiidofonkbodpdhgddhlcmcofd. Version: 3.1.9."
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--342c5be7-e959-4a8b-85ab-132c96bcebeb",
+      "value": "theknewone.com@gmail.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--022f5e56-20d6-40dd-b304-1ed209c1fd11",
+      "value": "phantomshuttle.space"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--01251e60-cc5f-4d02-9e99-74a76a197495",
+      "value": "47.244.125.55"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--dd757a97-5ec3-4eb5-9059-ba3cac2665ca",
+      "account_type": "proxy",
+      "user_id": "topfany"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "account_type": "proxy",
+      "user_id": "963852wei"
+    },
+    {
+      "type": "file",
+      "id": "file--3b922883-31ef-427d-aaaa-c62b1757cdc8",
+      "name": "jquery-1.12.2.min.js"
+    },
+    {
+      "type": "file",
+      "id": "file--07d74953-1e90-40e4-927e-e3d8a45d4c8d",
+      "name": "scripts.js"
+    },
+    {
+      "type": "file",
+      "id": "file--3fcb2335-8ea3-401b-9d5b-e8df97d509e2",
+      "name": "background.js"
+    },
+    {
+      "type": "file",
+      "id": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "name": "777.js"
+    },
+    {
+      "type": "url",
+      "id": "url--dd636b7c-3577-47ab-9644-96ef8bfeba9d",
+      "value": "https://phantomshuttle.space/index.php?g=user&m=register&a=do_query_server"
+    },
+    {
+      "type": "url",
+      "id": "url--0d7c95d1-3c84-40be-847a-4388e31dc1d0",
+      "value": "https://phantomshuttle.space/price.php"
+    },
+    {
+      "type": "url",
+      "id": "url--9cd535b3-ffdf-44c0-b8a4-b7cdd9965a37",
+      "value": "https://phantomshuttle.space/index.php?g=Pay&m=Index&a=payaction"
+    },
+    {
+      "type": "url",
+      "id": "url--c525f0db-6540-4f75-a898-5c267ccb99f5",
+      "value": "https://phantomshuttle.space/index.php?g=wxpay&m=wxpay&a=wxpay_api"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d63c7b72-7463-4c48-83a5-5c3cd9124361",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle is delivered as a malicious browser extension to gain initial access and intercept traffic."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a17c4ec-d8fa-4cc5-86d8-e9988e174dcd",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle performs adversary-in-the-middle attacks by intercepting communications between users and target domains."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec17a21c-fe24-4085-99e3-a82f4b956d2d",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle routes victim traffic through attacker-controlled external proxies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a343009-0fe9-4aac-b581-1749cd8cc966",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle steals web session cookies from HTTP headers routed through its proxies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ad71d75-4d97-4240-8491-abd3eb0baa83",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle captures credentials and payment information from web portals and forms."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9fd376c5-7540-4e63-bc61-de933d6912f6",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle uses custom character-index encoding to obfuscate hardcoded credentials and malicious code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe903f0a-7acf-4774-81a4-14079efe462f",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle uses web protocols (HTTP/HTTPS) for command and control and data exfiltration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f40cce78-6cbc-4e59-a22f-ad2f52f9920a",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "attack-pattern--93f8e80d-eefb-43cf-b1c7-de6e96ce56c8",
+      "description": "Phantom Shuttle uses HTTPS and SSL certificates for secure communication with its C2 infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1d00610f-f124-452b-912d-3694aa946370",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d2db6f5a-0d77-4e98-aeb1-210fa6eca42a",
+      "target_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "description": "Chrome extension IDs fbfldogmkadejddihifklefknmikncaj and ocpcmfmiidofonkbodpdhgddhlcmcofd indicate Phantom Shuttle malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5019eac0-b222-43b2-bfaa-2189c9994749",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d2db6f5a-0d77-4e98-aeb1-210fa6eca42a",
+      "target_ref": "domain-name--022f5e56-20d6-40dd-b304-1ed209c1fd11",
+      "description": "Domain phantomshuttle.space is a C2 indicator for Phantom Shuttle."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2d1374f-099f-44ec-a2cc-340eb9501bde",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d2db6f5a-0d77-4e98-aeb1-210fa6eca42a",
+      "target_ref": "ipv4-addr--01251e60-cc5f-4d02-9e99-74a76a197495",
+      "description": "IP address 47.244.125.55 hosts Phantom Shuttle C2 server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52d0b67b-466c-45a1-9dee-0130633f619b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d2db6f5a-0d77-4e98-aeb1-210fa6eca42a",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Proxy credential 'topfany' is used by Phantom Shuttle for proxy authentication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70c44430-4bc0-46f2-ab94-c9b930cf9139",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--d2db6f5a-0d77-4e98-aeb1-210fa6eca42a",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Proxy credential '963852wei' is used by Phantom Shuttle for proxy authentication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70ca7f5a-651a-4883-9280-d07341804635",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "domain-name--022f5e56-20d6-40dd-b304-1ed209c1fd11",
+      "description": "Phantom Shuttle communicates with its C2 server at phantomshuttle.space."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--376c0822-92ee-4118-85a1-876d63f65356",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "ipv4-addr--01251e60-cc5f-4d02-9e99-74a76a197495",
+      "description": "Phantom Shuttle communicates with C2 infrastructure hosted at 47.244.125.55."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d59b9fd-04bd-4c9f-a5e7-6c6b0869cd5b",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Phantom Shuttle uses hardcoded proxy credential 'topfany' for authentication to attacker-controlled proxies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--051aaf28-74e6-495c-9e15-9a1d43128948",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Phantom Shuttle uses hardcoded proxy credential '963852wei' for authentication to attacker-controlled proxies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d5308671-66ec-4c3d-95c9-9d3ab603c470",
+      "relationship_type": "drops",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle bundles and modifies jquery-1.12.2.min.js with malicious credential injection code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a3c2028-c10a-475b-9656-3c4103cc8bd0",
+      "relationship_type": "drops",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle bundles and modifies scripts.js with malicious credential injection code."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79130976-dae4-4d67-9afe-30868a1021ac",
+      "relationship_type": "drops",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle uses background.js for heartbeat and C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7a62c9d3-6e9a-4baf-bc21-124865c09d17",
+      "relationship_type": "drops",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle uses 777.js for PAC script and proxy configuration logic."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04470583-7cab-4d66-9bbe-655ed1edd3f8",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "url--c525f0db-6540-4f75-a898-5c267ccb99f5",
+      "description": "Phantom Shuttle fetches configuration from https://phantomshuttle.space/index.php?g=user&m=register&a=do_query_server."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1cb5476f-b5d8-45a0-b09b-f3217945cdd4",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "url--c525f0db-6540-4f75-a898-5c267ccb99f5",
+      "description": "Phantom Shuttle uses https://phantomshuttle.space/price.php for payment and subscription management."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4e96a588-a43d-41f8-94f0-c7c70eadd7a7",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "url--c525f0db-6540-4f75-a898-5c267ccb99f5",
+      "description": "Phantom Shuttle uses https://phantomshuttle.space/index.php?g=Pay&m=Index&a=payaction for payment actions."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a4f588d-76ec-49b6-bf5d-aa890878133e",
+      "relationship_type": "uses",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "url--c525f0db-6540-4f75-a898-5c267ccb99f5",
+      "description": "Phantom Shuttle uses https://phantomshuttle.space/index.php?g=wxpay&m=wxpay&a=wxpay_api for WeChat Pay integration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4807f18a-94b8-4f36-bdd8-1d735e6f46ab",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--ffa52fc2-dd1c-48cc-8235-2ddbdbba9c79",
+      "target_ref": "email-addr--342c5be7-e959-4a8b-85ab-132c96bcebeb",
+      "description": "Phantom Shuttle Chrome extensions were published by the threat actor using the email theknewone.com@gmail.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb823924-be40-49be-8e3d-a69b0b4406a7",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle Chrome extension includes and modifies jquery-1.12.2.min.js."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00857144-3bdc-4d60-81b4-533a0b99474d",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle Chrome extension includes and modifies scripts.js."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c22b4818-149c-4c89-b0bd-02bf004e6a89",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle Chrome extension uses background.js for heartbeat and C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9f52f541-2b8b-4e4b-beea-005d7fba6da2",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "file--daf5c247-80fe-457c-8dd5-1311e951f3fa",
+      "description": "Phantom Shuttle Chrome extension uses 777.js for PAC script and proxy configuration."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0313dc1-e06e-4060-8f1a-19e208ae635a",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Phantom Shuttle extension injects hardcoded proxy credential 'topfany' for authentication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e94f88a0-0f9f-4e99-a6fd-82bc9f387062",
+      "relationship_type": "uses",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "user-account--fdb72720-e6f3-487f-9528-c39b280c871f",
+      "description": "Phantom Shuttle extension injects hardcoded proxy credential '963852wei' for authentication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7f94300-e30c-43f0-9349-2e6231e62264",
+      "relationship_type": "authored-by",
+      "source_ref": "software--544a8562-17e9-4837-920f-fb077c271c69",
+      "target_ref": "email-addr--342c5be7-e959-4a8b-85ab-132c96bcebeb",
+      "description": "Phantom Shuttle Chrome extension was published by the threat actor using the email theknewone.com@gmail.com."
+    }
+  ]
+}

@@ -1,0 +1,641 @@
+{
+  "type": "bundle",
+  "id": "bundle--12b5523f-4baa-4d67-925d-4aad4650c2ed",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "created": "2026-01-17T16:22:53.202304Z",
+      "modified": "2026-01-17T16:22:53.202304Z",
+      "name": "Aikido",
+      "description": "Aikido is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--dceffc23-07a6-4c37-6dcc-20054e7303df",
+      "created": "2026-01-17T16:22:53.202304Z",
+      "modified": "2026-01-17T16:22:53.202304Z",
+      "name": "Charlie Eriksen",
+      "description": "Charlie Eriksen is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T16:22:53.202304Z",
+      "modified": "2026-01-17T16:22:53.202304Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T16:22:53.202304Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "created": "2026-01-17T16:23:15.290595Z",
+      "modified": "2026-01-17T16:23:15.290595Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Typosquatting Malicious npm Packages",
+      "description": "NeoShadow attackers published malicious npm packages with names closely resembling popular legitimate libraries (e.g., 'viem-js', 'cyrpto', 'tailwin', 'supabase-js'). This technique exploits developer mistakes or autocomplete to trick users into installing the malicious package. The initial JavaScript payload is embedded in these packages, triggering the infection chain upon installation or use. The packages are distributed via the official npm registry, leveraging trust in open-source ecosystems to achieve initial access.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1195/002/",
+          "external_id": "T1195.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--76a1ccfa-0ced-79ea-a2fb-719aa5191bcb",
+      "created": "2026-01-17T16:23:15.290716Z",
+      "modified": "2026-01-17T16:23:15.290716Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Platform and Anti-Analysis Validation",
+      "description": "Before proceeding, the malware checks if it is executing on a Windows platform. It then performs an anti-analysis heuristic by counting Windows System Event Log entries using PowerShell. If the event count is unusually low (indicative of a sandbox or analysis environment), the malware exits early. This ensures that the payload only runs in real user environments and evades automated analysis or sandboxes commonly used by security researchers.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1497/001/",
+          "external_id": "T1497.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--d21bf28f-0084-d54e-ce4b-5ae73288037e",
+      "created": "2026-01-17T16:23:15.290807Z",
+      "modified": "2026-01-17T16:23:15.290807Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Dynamic C2 Configuration via Blockchain Smart Contract",
+      "description": "Instead of hardcoding command-and-control (C2) infrastructure, the malware queries an Ethereum smart contract using Etherscan’s eth_call API. The smart contract stores a dynamically changeable string, which the malware decodes and treats as the C2 base URL. If the blockchain lookup fails, it falls back to a hardcoded domain. This technique allows the attacker to update C2 endpoints on the fly without modifying the malware, and leverages the resilience and anonymity of public blockchains.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "created": "2026-01-17T16:23:15.290859Z",
+      "modified": "2026-01-17T16:23:15.290859Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Covert Payload Delivery via JavaScript Block Comment",
+      "description": "The malware retrieves a remote JavaScript file that masquerades as an analytics script. Instead of executing code, the file contains a Base64-encoded payload hidden inside a block comment. The loader extracts and decodes this blob, which serves as the actual malicious payload. This method avoids detection by static code scanners and signature-based defenses, as the payload is not present in executable code but concealed within a comment.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1027/",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ff48d5ec-6eb8-5bf6-41ad-e58996517321",
+      "created": "2026-01-17T16:23:15.290916Z",
+      "modified": "2026-01-17T16:23:15.290916Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Living-off-the-Land Execution via MSBuild Inline C#",
+      "description": "To execute the next-stage payload, the malware writes a temporary MSBuild project file (.proj) containing inline C# code via CodeTaskFactory. It then launches MSBuild.exe, a trusted Windows binary, to execute the embedded code. This approach avoids dropping or compiling a standalone executable, leveraging legitimate system tools to run malicious code and evade application whitelisting and some endpoint protections.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1127/001/",
+          "external_id": "T1127.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "created": "2026-01-17T16:23:15.290966Z",
+      "modified": "2026-01-17T16:23:15.290966Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Payload Decryption Using RC4 with XOR-masked Key",
+      "description": "After extracting the Base64-encoded payload, the malware derives an RC4 decryption key by XOR-masking the first 16 bytes of the blob. The remainder of the payload is decrypted in memory, ensuring that the actual shellcode or executable is never written to disk in plaintext. This technique complicates detection and analysis, as the payload is both encoded and encrypted, and the key is dynamically derived.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1027/",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--10d5b7dc-52e7-628a-e7d3-459a81cf3691",
+      "created": "2026-01-17T16:23:15.291013Z",
+      "modified": "2026-01-17T16:23:15.291013Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Process Injection via APC (Asynchronous Procedure Call)",
+      "description": "The decrypted shellcode is injected into a newly spawned instance of RuntimeBroker.exe, which is created in a suspended state. The malware allocates memory in the remote process, writes the shellcode, and then uses the QueueUserAPC technique to schedule execution of the shellcode when the thread resumes. This method allows code execution in the context of a legitimate Windows process, helping evade behavioral detection and increasing stealth.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1055/014/",
+          "external_id": "T1055.014"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+      "created": "2026-01-17T16:23:15.291060Z",
+      "modified": "2026-01-17T16:23:15.291060Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Persistence via Dropped Configuration File",
+      "description": "After successful execution, the malware optionally downloads a secondary configuration file and persists it under the path %APPDATA%\\Microsoft\\CLR\\config.proj. This artifact may be used for future configuration changes, updates, or additional payload delivery, enabling the attacker to maintain control and adapt the malware’s behavior over time.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1053/005/",
+          "external_id": "T1053.005"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "created": "2026-01-17T16:23:19.014028Z",
+      "modified": "2026-01-17T16:23:19.014028Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "NeoShadow",
+      "description": "NeoShadow is the primary malware family deployed via typo-squatting npm packages in this supply-chain attack. It acts as a multi-stage Windows-only loader, leveraging JavaScript, blockchain-based dynamic configuration, and MSBuild for covert payload delivery and execution. The malware performs anti-analysis checks, downloads and decrypts payloads, injects shellcode into system processes, and establishes persistence.",
+      "malware_types": [
+        "trojan",
+        "downloader",
+        "dropper",
+        "backdoor"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "anti-analysis",
+        "command-and-control",
+        "remote-access",
+        "persistence"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "created": "2026-01-17T16:23:27.657648Z",
+      "modified": "2026-01-17T16:23:27.657648Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "NeoShadow",
+      "description": "NeoShadow is the threat actor attributed to the npm supply-chain attack described in this article. The group released multiple malicious npm packages and used novel techniques such as blockchain-based dynamic configuration and MSBuild-based process injection. Their role was to orchestrate a multi-stage Windows malware delivery campaign via typo-squatting npm packages.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Compromise Windows systems via malicious npm packages",
+        "Evade detection and analysis using anti-analysis heuristics",
+        "Establish covert command-and-control channels using blockchain",
+        "Deploy multi-stage payloads and achieve process injection"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "unknown"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--e8160cd1-9aa9-b178-7959-9ac86d5930b3",
+      "created": "2026-01-17T16:23:34.218170Z",
+      "modified": "2026-01-17T16:23:34.218170Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "MSBuild.exe",
+      "description": "MSBuild.exe is abused to execute inline C# code via a temporary project file, enabling the attacker to run malicious payloads without dropping or compiling a standalone executable, thereby evading detection.",
+      "tool_types": [
+        "execution",
+        "defense-evasion",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "created": "2026-01-17T16:23:34.218346Z",
+      "modified": "2026-01-17T16:23:34.218346Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "PowerShell",
+      "description": "PowerShell is used to query Windows System Event Logs as an anti-analysis heuristic, helping the malware determine if it is running in a sandbox or low-activity environment before proceeding.",
+      "tool_types": [
+        "information-gathering",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--648f87b2-dcb9-e541-a06b-88a14166b85e",
+      "created": "2026-01-17T16:23:34.218489Z",
+      "modified": "2026-01-17T16:23:34.218489Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "Etherscan API",
+      "description": "The Etherscan API is leveraged to query an Ethereum smart contract and extract a dynamically stored string, which is used as the command-and-control (C2) base URL for further malicious activity.",
+      "tool_types": [
+        "command-and-control",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--65ae7877-437f-fc70-e5fb-a5f13639d33c",
+      "created": "2026-01-17T16:23:34.218666Z",
+      "modified": "2026-01-17T16:23:34.218666Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "RuntimeBroker.exe",
+      "description": "RuntimeBroker.exe, a legitimate Windows process, is spawned in a suspended state and used as a target for process injection, allowing the attacker to execute decrypted shellcode covertly.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9c108e22-336b-7247-29e1-9f83c9fbce1d",
+      "created": "2026-01-17T16:23:34.218823Z",
+      "modified": "2026-01-17T16:23:34.218823Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "https (Node.js https module)",
+      "description": "The Node.js 'https' module is used to make outbound requests to retrieve remote JavaScript payloads and interact with the Etherscan API, facilitating covert data acquisition and C2 communication.",
+      "tool_types": [
+        "command-and-control",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--30b81b03-0e12-93a1-f613-8b66ce3235bd",
+      "created": "2026-01-17T16:23:34.219491Z",
+      "modified": "2026-01-17T16:23:34.219491Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "description": "NeoShadow uses NeoShadow malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ab1290ec-8630-9e7d-0ccd-e34c4dba8498",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+      "description": "NeoShadow employs 'Typosquatting Malicious npm Packages' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cd0770e7-0363-7569-db5e-47b0051aad43",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--76a1ccfa-0ced-79ea-a2fb-719aa5191bcb",
+      "description": "NeoShadow employs 'Platform and Anti-Analysis Validation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--557aa91d-023d-3271-40da-f9e7e48e6586",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--d21bf28f-0084-d54e-ce4b-5ae73288037e",
+      "description": "NeoShadow employs 'Dynamic C2 Configuration via Blockchain Smart Contract' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--27edfc9b-cdab-8780-d9b1-27090201a627",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "description": "NeoShadow employs 'Covert Payload Delivery via JavaScript Block Comment' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--22de4acf-dc5a-f355-7722-ba4dedc9d99c",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--ff48d5ec-6eb8-5bf6-41ad-e58996517321",
+      "description": "NeoShadow employs 'Living-off-the-Land Execution via MSBuild Inline C#' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0cceff99-a586-1b62-2d8e-e44d1ee466ee",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--10d5b7dc-52e7-628a-e7d3-459a81cf3691",
+      "description": "NeoShadow employs 'Process Injection via APC (Asynchronous Procedure Call)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d7ef149-7cb2-515b-c30c-089e706333e4",
+      "created": "2026-01-17T16:23:34.219678Z",
+      "modified": "2026-01-17T16:23:34.219678Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+      "description": "NeoShadow employs 'Persistence via Dropped Configuration File' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--350d0b32-a528-5bba-5fa3-273495975506",
+      "created": "2026-01-17T16:23:34.220369Z",
+      "modified": "2026-01-17T16:23:34.220369Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--e8160cd1-9aa9-b178-7959-9ac86d5930b3",
+      "description": "NeoShadow uses MSBuild.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f2c3b90d-e3bf-6260-f2b3-94546d9213d4",
+      "created": "2026-01-17T16:23:34.220369Z",
+      "modified": "2026-01-17T16:23:34.220369Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "NeoShadow uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--be9211c3-3f8f-d7d0-dfb7-c711591fa705",
+      "created": "2026-01-17T16:23:34.220369Z",
+      "modified": "2026-01-17T16:23:34.220369Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--648f87b2-dcb9-e541-a06b-88a14166b85e",
+      "description": "NeoShadow uses Etherscan API tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ce61154-c2f7-e6aa-755a-3a53a89c2fc3",
+      "created": "2026-01-17T16:23:34.220369Z",
+      "modified": "2026-01-17T16:23:34.220369Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--65ae7877-437f-fc70-e5fb-a5f13639d33c",
+      "description": "NeoShadow uses RuntimeBroker.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a4ef172e-a745-413d-45ed-dc01217c73b7",
+      "created": "2026-01-17T16:23:34.220369Z",
+      "modified": "2026-01-17T16:23:34.220369Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--9c108e22-336b-7247-29e1-9f83c9fbce1d",
+      "description": "NeoShadow uses https (Node.js https module) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0487ef64-a203-67b0-b938-58d287a110bc",
+      "created": "2026-01-17T16:23:34.220529Z",
+      "modified": "2026-01-17T16:23:34.220529Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--e8160cd1-9aa9-b178-7959-9ac86d5930b3",
+      "description": "NeoShadow uses MSBuild.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4483673c-463b-476f-e9b5-19763eac3c99",
+      "created": "2026-01-17T16:23:34.220529Z",
+      "modified": "2026-01-17T16:23:34.220529Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "NeoShadow uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a852b18c-03fa-defe-843d-aa1882642da2",
+      "created": "2026-01-17T16:23:34.220529Z",
+      "modified": "2026-01-17T16:23:34.220529Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--648f87b2-dcb9-e541-a06b-88a14166b85e",
+      "description": "NeoShadow uses Etherscan API for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f98a4aea-8043-881d-b37b-8b4e81ddee3c",
+      "created": "2026-01-17T16:23:34.220529Z",
+      "modified": "2026-01-17T16:23:34.220529Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--65ae7877-437f-fc70-e5fb-a5f13639d33c",
+      "description": "NeoShadow uses RuntimeBroker.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--df4d707e-3a87-d8b8-cf21-f5a4a3187194",
+      "created": "2026-01-17T16:23:34.220529Z",
+      "modified": "2026-01-17T16:23:34.220529Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "relationship_type": "uses",
+      "source_ref": "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+      "target_ref": "tool--9c108e22-336b-7247-29e1-9f83c9fbce1d",
+      "description": "NeoShadow uses https (Node.js https module) for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--b50f27d3-f8fc-0c8a-a091-54dae6ffa3b2",
+      "created": "2026-01-17T16:23:34.220883Z",
+      "modified": "2026-01-17T16:23:34.220883Z",
+      "created_by_ref": "identity--03f067d6-efe5-77be-641e-966194463145",
+      "name": "NeoShadow npm Supply-Chain Attack: JavaScript, MSBuild & Blockchain",
+      "description": "This report contains technical analysis and indicators from: https://www.aikido.dev/blog/neoshadow-npm-supply-chain-attack-javascript-msbuild-blockchain",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T16:23:34.220883Z",
+      "object_refs": [
+        "identity--03f067d6-efe5-77be-641e-966194463145",
+        "identity--dceffc23-07a6-4c37-6dcc-20054e7303df",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--72e780e3-d65e-dec7-488f-fbeab940e5d0",
+        "attack-pattern--76a1ccfa-0ced-79ea-a2fb-719aa5191bcb",
+        "attack-pattern--d21bf28f-0084-d54e-ce4b-5ae73288037e",
+        "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+        "attack-pattern--ff48d5ec-6eb8-5bf6-41ad-e58996517321",
+        "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+        "attack-pattern--10d5b7dc-52e7-628a-e7d3-459a81cf3691",
+        "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+        "malware--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+        "threat-actor--21896c67-0c44-515c-3fcb-60c49e8ffdc8",
+        "tool--e8160cd1-9aa9-b178-7959-9ac86d5930b3",
+        "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+        "tool--648f87b2-dcb9-e541-a06b-88a14166b85e",
+        "tool--65ae7877-437f-fc70-e5fb-a5f13639d33c",
+        "tool--9c108e22-336b-7247-29e1-9f83c9fbce1d",
+        "relationship--30b81b03-0e12-93a1-f613-8b66ce3235bd",
+        "relationship--ab1290ec-8630-9e7d-0ccd-e34c4dba8498",
+        "relationship--cd0770e7-0363-7569-db5e-47b0051aad43",
+        "relationship--557aa91d-023d-3271-40da-f9e7e48e6586",
+        "relationship--27edfc9b-cdab-8780-d9b1-27090201a627",
+        "relationship--22de4acf-dc5a-f355-7722-ba4dedc9d99c",
+        "relationship--0cceff99-a586-1b62-2d8e-e44d1ee466ee",
+        "relationship--3d7ef149-7cb2-515b-c30c-089e706333e4",
+        "relationship--350d0b32-a528-5bba-5fa3-273495975506",
+        "relationship--f2c3b90d-e3bf-6260-f2b3-94546d9213d4",
+        "relationship--be9211c3-3f8f-d7d0-dfb7-c711591fa705",
+        "relationship--3ce61154-c2f7-e6aa-755a-3a53a89c2fc3",
+        "relationship--a4ef172e-a745-413d-45ed-dc01217c73b7",
+        "relationship--0487ef64-a203-67b0-b938-58d287a110bc",
+        "relationship--4483673c-463b-476f-e9b5-19763eac3c99",
+        "relationship--a852b18c-03fa-defe-843d-aa1882642da2",
+        "relationship--f98a4aea-8043-881d-b37b-8b4e81ddee3c",
+        "relationship--df4d707e-3a87-d8b8-cf21-f5a4a3187194"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

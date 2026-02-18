@@ -1,0 +1,440 @@
+{
+  "type": "bundle",
+  "id": "bundle--899bd782-c6bc-436b-bb11-abc7fb9709fa",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--30a6c736-9d22-4cca-89d3-d237a896c73a",
+      "name": "NPM Preinstall Supply Chain Attack",
+      "description": "Compromised NPM packages execute malicious code during the preinstall phase, enabling credential harvesting and persistence.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "SentinelOne",
+          "url": "https://www.sentinelone.com/wp-content/uploads/2025/11/sha1-hulud2_0-1-scaled.jpg"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d68846b4-daeb-41bb-9c7a-a1c04fc67141",
+      "name": "Credential Harvesting from Cloud Providers",
+      "description": "Harvests AWS, Azure, and GCP secrets from compromised development environments for lateral movement and further compromise.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--de217be7-d5fe-4416-a371-4ea4b1b9d77e",
+      "name": "Persistence via Malicious GitHub Actions Workflow",
+      "description": "Establishes persistence by creating a malicious workflow file (discussion.yaml) in .github/workflows, allowing remote code execution triggered by crafted GitHub discussions.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--87f1e689-458c-4d15-86c7-790b27ff6fcc",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "3d7570d14d34b0ba137d502f042b27b0f37a59fa"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e2585cd5-5dd1-42aa-ad0a-fa9d1213e65a",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "d60ec97eea19fffb4809bc35b91033b52490ca11"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--47a3fe75-096d-4ef0-89b0-e0f7a010fda0",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "8de87cf4fbdd1b490991a1ceb9c1198013d268c2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c61d8bca-ef49-4d44-9cac-28941e38c963",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "f37c6179739cf47e60280dd78cb1a86fd86a2dcf"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--1d95c482-1beb-4e6f-9497-c79823b9b636",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "91429fbfef99fa52b6386d666e859707a07844b2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5153c673-75bc-4c07-b5bb-5c3f6fe9ec8e",
+      "name": "bun_environment.js",
+      "hashes": {
+        "SHA-1": "ba08d2fcc6cd1c16e4022c5b7af092a4034ceedc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--5968a04b-c9d9-4611-93ee-7a6f203efa3b",
+      "name": "cloud.json"
+    },
+    {
+      "type": "file",
+      "id": "file--f1f9b15c-b256-4482-988a-0621d6780b1b",
+      "name": "contents.json"
+    },
+    {
+      "type": "file",
+      "id": "file--f6df5108-c912-4291-8519-45230780f01a",
+      "name": "environment.json"
+    },
+    {
+      "type": "file",
+      "id": "file--b5aeb520-c65d-4036-b661-a3115be74828",
+      "name": "truffleSecrets.json"
+    },
+    {
+      "type": "file",
+      "id": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5",
+      "name": "discussion.yaml"
+    },
+    {
+      "type": "software",
+      "id": "software--bd2878e8-dff1-47cd-b6d7-0bdbf7e3ac01",
+      "name": "bun",
+      "cpe": "cpe:2.3:a:bun:bun:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--7e799da4-80eb-4a07-92b6-e3df1a0dab74",
+      "name": "Trufflehog"
+    },
+    {
+      "type": "software",
+      "id": "software--005b5964-c255-4c9a-aa42-e0a80c5310b0",
+      "name": "Postman"
+    },
+    {
+      "type": "software",
+      "id": "software--224f21e4-b2f5-4166-8e84-4e55ab9f80a1",
+      "name": "Zapier"
+    },
+    {
+      "type": "software",
+      "id": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0",
+      "name": "AsyncAPI"
+    },
+    {
+      "type": "directory",
+      "id": "directory--8e692807-6368-4c6f-b080-04794a4f4350",
+      "path": ".github/workflows/"
+    },
+    {
+      "type": "directory",
+      "id": "directory--062f4b98-6223-44a4-94ca-690d06479fea",
+      "path": ".dev-env/"
+    },
+    {
+      "type": "process",
+      "id": "process--e4f437c2-eb59-469d-b89f-d15726af142e",
+      "command_line": "node setup_bun.js"
+    },
+    {
+      "type": "process",
+      "id": "process--f9bbdb8d-b6a5-4e81-a776-5021222f7eea",
+      "command_line": "curl -fsSL https://bun.sh/install | bash"
+    },
+    {
+      "type": "process",
+      "id": "process--669b2796-592a-43c9-97e5-a7aa027f5b13",
+      "command_line": "powershell -c \"irm bun.sh/install.ps1|iex\""
+    },
+    {
+      "type": "process",
+      "id": "process--d8d37519-9107-483f-8e87-b31c142375cc",
+      "command_line": "curl -o actions-runner-linux-x64-2.330.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-linux-x64-2.330.0.tar.gz"
+    },
+    {
+      "type": "process",
+      "id": "process--ae349b5f-3741-4e6d-bd80-a4f47ac5af1a",
+      "command_line": "tar xzf ./actions-runner-linux-x64-2.330.0.tar.gz"
+    },
+    {
+      "type": "process",
+      "id": "process--edb24604-8e6a-4d52-a87b-1a5743c43755",
+      "command_line": "RUNNER_ALLOW_RUNASROOT=1 ./config.sh --url https://github.com/${owner}/${repo} --unattended --token ${token} --name \"SHA1HULUD\""
+    },
+    {
+      "type": "process",
+      "id": "process--c1cb5b49-286d-472e-bea2-02b58fc7468e",
+      "command_line": "powershell -ExecutionPolicy Bypass -Command \"Invoke-WebRequest -Uri https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-win-x64-2.330.0.zip -OutFile actions-runner-win-x64-2.330.0.zip\""
+    },
+    {
+      "type": "process",
+      "id": "process--a3ef06d8-257b-4fe4-bfec-ffd41d9068bf",
+      "command_line": "powershell -ExecutionPolicy Bypass -Command \"Add-Type -AssemblyName System.IO.Compression.FileSystem; [System.IO.Compression.ZipFile]::ExtractToDirectory(\\\"actions-runner-win-x64-2.330.0.zip\\\", \\\".\\\")\""
+    },
+    {
+      "type": "process",
+      "id": "process--4308dfd0-4f3f-4f40-8253-a38537d2704d",
+      "command_line": "./config.cmd --url https://github.com/${owner}/${repo} --unattended --token ${token} --name \"SHA1HULUD\""
+    },
+    {
+      "type": "process",
+      "id": "process--f7c8d8a7-bd64-4adb-aebb-92a06e9efd45",
+      "command_line": "curl -o actions-runner-osx-arm64-2.330.0.tar.gz -L https://github.com/actions/runner/releases/download/v2.330.0/actions-runner-osx-arm64-2.330.0.tar.gz"
+    },
+    {
+      "type": "process",
+      "id": "process--da42028d-631a-43a8-b955-d2535be9fbb1",
+      "command_line": "tar xzf ./actions-runner-osx-arm64-2.330.0.tar.gz"
+    },
+    {
+      "type": "process",
+      "id": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f",
+      "command_line": "./config.sh --url https://github.com/${owner}/${repo} --unattended --token ${token} --name \"SHA1HULUD\""
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3300205-c5ab-4142-ae06-ecaa0b435637",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "attack-pattern--de217be7-d5fe-4416-a371-4ea4b1b9d77e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00f80307-0756-4c69-8a4f-c89a2b0fbeab",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "attack-pattern--de217be7-d5fe-4416-a371-4ea4b1b9d77e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--00b222a7-90af-4f9a-a496-a1ff705735f4",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "attack-pattern--de217be7-d5fe-4416-a371-4ea4b1b9d77e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be801ce6-2672-41ba-9859-cc4af8cd6a71",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94b4a2d4-b463-45aa-94d9-10a0a6c72595",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf835374-1031-49de-a5c6-fe9e1ce78f65",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "tool--27c69ced-604c-420a-956e-de5029628223"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57b32312-2ead-48ad-ac5c-de87d2dc43d2",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c3ee0f5-e4b7-478c-8264-6b2b77585940",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e80cb224-160a-40b0-86fd-e6643a4bd145",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--262c61fd-de4a-439a-bd35-72baa8a8b3cd",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--815b1e88-fa1f-4a73-b339-f4a20076bb6d",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--288f8f09-e280-4b94-9ced-40c2c9f9698f",
+      "relationship_type": "drops",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "file--e14918ee-7058-4f5a-8af7-96d7cb1cd9e5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24f7e555-33aa-4820-a19c-b41b479da49c",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76de0273-9575-45e0-896f-851b19511096",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3cf5adc-4022-423b-83f2-1ae5ab83ceca",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8b53186-b9c8-4530-ac5b-889b46ed64c3",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56fa708a-73d6-43ac-a1fa-a3fec4db8470",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "software--87f1aec9-a8b6-493f-8ccc-1bebe2bc03f0"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b29d8678-68c8-4f90-942b-4c88d6f95ab8",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "directory--062f4b98-6223-44a4-94ca-690d06479fea"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8003106f-44a3-49ea-94e9-a9c684da4ea5",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "directory--062f4b98-6223-44a4-94ca-690d06479fea"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d500aa40-006d-4e20-bc68-b2979a90854e",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--caeb1ea8-795b-4f71-bd79-a7d97efdb797",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e3831b4-1851-41c7-b5fe-a12dbbefc295",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6d0a846e-5b46-428a-83a7-a5bcca82420f",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e308a60b-a68a-4389-a4bc-452dd31306a6",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55ebf451-943a-48f9-802b-8121b6e0eecb",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba643507-d462-4096-88ff-89601d80b005",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d491174f-ed2e-4eb8-9bc2-bcaf460e558c",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--292c0d26-1681-4fb5-92fe-1fd4144fbd1e",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a705d6e8-5a24-4704-90d8-8510c438a421",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09c6ee8e-d877-41fc-8cae-9ee7e97d798a",
+      "relationship_type": "uses",
+      "source_ref": "malware--6065241b-8697-4ffa-910e-aa6b573a44ac",
+      "target_ref": "process--0a5b3a49-5b81-42e9-9a79-e5cf3e00194f"
+    }
+  ]
+}

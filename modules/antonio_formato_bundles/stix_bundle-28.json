@@ -1,0 +1,2170 @@
+{
+  "type": "bundle",
+  "id": "bundle--da4accdf-14eb-4c32-977e-06731986c842",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "created": "2026-01-13T14:09:15.382619Z",
+      "modified": "2026-01-13T14:09:15.382619Z",
+      "name": "Morphisec",
+      "description": "Morphisec is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-13T14:09:15.382619Z",
+      "modified": "2026-01-13T14:09:15.382619Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-13T14:09:15.382619Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+      "created": "2026-01-13T14:09:41.259143Z",
+      "modified": "2026-01-13T14:09:41.259143Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Weaponized GitHub Repositories Masquerading as Development Utilities",
+      "description": "Attackers create and maintain GitHub repositories that appear to be legitimate development utilities or OSINT tools. These repositories are carefully crafted to blend into the open-source ecosystem, using AI-generated content and artificial star/fork inflation to build trust among developers. The malicious code is embedded within these projects, and developers are lured into cloning or downloading the repositories as part of their normal workflow. This technique leverages the implicit trust developers place in open-source platforms and bypasses traditional email-based phishing defenses, targeting the supply chain and developer environments directly.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+      "created": "2026-01-13T14:09:41.259256Z",
+      "modified": "2026-01-13T14:09:41.259256Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Lightweight Python/JavaScript Loader Stubs",
+      "description": "Within the weaponized repositories, attackers include lightweight Python or JavaScript loader stubs that appear harmless and legitimate. These stubs are designed to evade initial scrutiny by developers and security tools. Once executed, they act as the first stage of the infection chain, downloading or assembling the next-stage payloads in memory. The modular nature of these stubs allows attackers to update and rotate their delivery mechanisms over time, increasing stealth and persistence within developer environments.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+      "created": "2026-01-13T14:09:41.259309Z",
+      "modified": "2026-01-13T14:09:41.259309Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Fileless HTA Execution via mshta.exe",
+      "description": "The campaign employs fileless execution techniques by leveraging mshta.exe to run malicious HTML Application (HTA) files directly from memory. This approach allows the malware to avoid writing files to disk, thereby evading detection by traditional antivirus and endpoint protection solutions. The use of mshta.exe is particularly effective in Windows environments where it is a legitimate system utility, making malicious activity harder to distinguish from normal operations.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1218/005/",
+          "external_id": "T1218.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+      "created": "2026-01-13T14:09:41.259390Z",
+      "modified": "2026-01-13T14:09:41.259390Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Modular JavaScript-Based Remote Access Trojan (RAT)",
+      "description": "PyStoreRAT is a modular RAT written in JavaScript, capable of executing a wide range of payloads including EXE, DLL, MSI, Python, and PowerShell scripts. This flexibility enables attackers to deploy additional malware, perform lateral movement, and maintain persistence within compromised environments. The RAT operates stealthily, blending into developer workflows and leveraging script-based, fileless techniques to avoid detection. Its modular architecture allows attackers to adapt and expand its capabilities as needed.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "created": "2026-01-13T14:09:41.259437Z",
+      "modified": "2026-01-13T14:09:41.259437Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Built-in Evasion Targeting CrowdStrike Falcon and Modern EDR Controls",
+      "description": "PyStoreRAT incorporates advanced evasion techniques specifically designed to bypass modern endpoint detection and response (EDR) solutions such as CrowdStrike Falcon. These evasion methods include obfuscated JavaScript code, in-memory execution, and behaviors that avoid triggering signature or behavior-based detection. By targeting the weaknesses of contemporary security controls, the malware is able to operate undetected within environments that rely on these tools for protection.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1027/",
+          "external_id": "T1027"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+      "created": "2026-01-13T14:09:41.259511Z",
+      "modified": "2026-01-13T14:09:41.259511Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Artificial Star/Fork Inflation and Social Promotion",
+      "description": "To increase the perceived legitimacy of malicious repositories, attackers artificially inflate star and fork counts on GitHub and promote the projects across social media platforms such as YouTube and global forums. This social engineering tactic exploits the trust developers place in popular and well-reviewed projects, making it more likely that the repositories will be cloned and used in production environments. The combination of AI-generated content and aggressive promotion amplifies the reach and effectiveness of the campaign.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "created": "2026-01-13T14:09:41.259560Z",
+      "modified": "2026-01-13T14:09:41.259560Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Rotating Multi-Domain Command and Control Infrastructure",
+      "description": "The campaign utilizes a rotating set of domains for command and control (C2), making it difficult for defenders to block or blacklist malicious communications. This infrastructure enables the attackers to maintain persistent access and control over compromised systems, even if some domains are detected and taken down. The use of multiple domains also complicates incident response and attribution efforts.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1071/004/",
+          "external_id": "T1071.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "created": "2026-01-13T14:09:41.259613Z",
+      "modified": "2026-01-13T14:09:41.259613Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Deployment of Rhadamanthys Information Stealer as Follow-On Payload",
+      "description": "After initial compromise via PyStoreRAT, attackers deploy Rhadamanthys, a powerful information stealer, as a secondary payload. This malware is designed to harvest credentials and sensitive data from infected systems, often as a precursor to ransomware or further exploitation. The deployment of Rhadamanthys demonstrates the multi-stage nature of the campaign, where credential theft and data exfiltration are key objectives.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1003/",
+          "external_id": "T1003"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "created": "2026-01-13T14:09:41.259661Z",
+      "modified": "2026-01-13T14:09:41.259661Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Script-Based, Fileless Malware Delivery",
+      "description": "Throughout the campaign, attackers rely on script-based, fileless malware delivery methods to bypass signature and behavior-based defenses. By executing malicious code directly in memory and avoiding the creation of persistent files, the malware is able to evade detection by most traditional security solutions. This technique is particularly effective in environments where developer workflows involve frequent execution of scripts and automation tools.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1059/",
+          "external_id": "T1059"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+      "created": "2026-01-13T14:09:41.259737Z",
+      "modified": "2026-01-13T14:09:41.259737Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Compromise of Developer Workflows and CI/CD Pipelines",
+      "description": "The attackers specifically target developer workflows, including GitHub cloning and CI/CD pipeline operations. By embedding malicious code into repositories used in automated build and deployment processes, they can compromise software supply chains and propagate malware into production environments. This technique exploits the trust and automation inherent in modern development practices, posing a significant risk to software integrity and business continuity.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "created": "2026-01-13T14:09:49.722726Z",
+      "modified": "2026-01-13T14:09:49.722726Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "PyStoreRAT",
+      "description": "PyStoreRAT is a stealthy, modular Remote Access Trojan delivered via weaponized GitHub repositories disguised as development utilities and OSINT tools. It uses lightweight Python/JavaScript loader stubs, fileless HTA execution, and a modular JS-based RAT to evade detection and target developer environments.",
+      "malware_types": [
+        "remote-access-trojan",
+        "trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "anti-analysis",
+        "data-exfiltration",
+        "credential-theft",
+        "persistence"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "created": "2026-01-13T14:09:49.722849Z",
+      "modified": "2026-01-13T14:09:49.722849Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Rhadamanthys",
+      "description": "Rhadamanthys is a powerful information stealer deployed as a follow-on payload in the PyStoreRAT campaign. It is used to exfiltrate sensitive data and credentials from compromised systems.",
+      "malware_types": [
+        "trojan",
+        "spyware",
+        "information-stealer"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "command-and-control",
+        "anti-analysis"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "created": "2026-01-13T14:09:49.722911Z",
+      "modified": "2026-01-13T14:09:49.722911Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "StealC",
+      "description": "StealC V2 is referenced in the context of a Russian-linked campaign using trusted creative platforms to evade detection. It is an information stealer targeting user credentials and sensitive data.",
+      "malware_types": [
+        "trojan",
+        "spyware",
+        "information-stealer"
+      ],
+      "is_family": true,
+      "aliases": [
+        "StealC V2"
+      ],
+      "x_capabilities": [
+        "data-exfiltration",
+        "credential-theft",
+        "anti-analysis"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "created": "2026-01-13T14:09:49.722963Z",
+      "modified": "2026-01-13T14:09:49.722963Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Tuoni",
+      "description": "Tuoni C2 is mentioned as a command-and-control framework used in attacks that hide malware in plain sight. It enables remote access and control over compromised systems.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Tuoni C2"
+      ],
+      "x_capabilities": [
+        "command-and-control",
+        "remote-access",
+        "anti-analysis",
+        "persistence"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "created": "2026-01-13T14:09:59.176682Z",
+      "modified": "2026-01-13T14:09:59.176682Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "PyStoreRAT Operators",
+      "description": "Operators behind the PyStoreRAT campaign, responsible for deploying a stealthy, modular RAT via weaponized GitHub repositories disguised as development utilities and OSINT tools. They use advanced evasion techniques and target developer environments for credential theft and supply chain compromise.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Compromise developer environments",
+        "Credential theft",
+        "Supply chain compromise",
+        "Deploy modular RAT",
+        "Evade detection by EDR/AV"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "created": "2026-01-13T14:09:59.176770Z",
+      "modified": "2026-01-13T14:09:59.176770Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Rhadamanthys Operators",
+      "description": "Threat actors deploying the Rhadamanthys information stealer as a follow-on payload in the PyStoreRAT campaign, aiming to exfiltrate sensitive information from compromised systems.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Information theft",
+        "Credential exfiltration"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "created": "2026-01-13T14:09:59.176863Z",
+      "modified": "2026-01-13T14:09:59.176863Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "StealC V2 Operators",
+      "description": "Actors linked to the Russian StealC V2 campaign, mentioned in a referenced blog, who use trusted creative platforms to evade detection and steal information.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Information theft",
+        "Evade detection"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "created": "2026-01-13T14:09:59.176919Z",
+      "modified": "2026-01-13T14:09:59.176919Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Tuoni C2 Operators",
+      "description": "Threat actors operating the Tuoni C2 framework, referenced in a blog, who attempt to hide malware in plain sight and evade security controls.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Malware deployment",
+        "Evade detection"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "created": "2026-01-13T14:10:10.175996Z",
+      "modified": "2026-01-13T14:10:10.175996Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "mshta.exe",
+      "description": "Used for fileless HTA execution, mshta.exe is abused to run malicious HTML Application code in memory, enabling stealthy delivery and execution of the RAT payload without dropping files to disk.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "created": "2026-01-13T14:10:10.176394Z",
+      "modified": "2026-01-13T14:10:10.176394Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "PowerShell",
+      "description": "The modular RAT is capable of executing PowerShell scripts, allowing attackers to run arbitrary code, automate tasks, and evade detection within developer environments.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "created": "2026-01-13T14:10:10.176579Z",
+      "modified": "2026-01-13T14:10:10.176579Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "GitHub",
+      "description": "GitHub repositories are abused as delivery platforms, with attackers disguising malicious code as legitimate open-source projects to trick developers into downloading and executing the payload.",
+      "tool_types": [
+        "resource-development",
+        "initial-access",
+        "command-and-control"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "resource-development"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "created": "2026-01-13T14:10:10.176735Z",
+      "modified": "2026-01-13T14:10:10.176735Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "Python",
+      "description": "The RAT can execute Python scripts, leveraging the interpreter to run malicious code and loader stubs under the guise of legitimate developer utilities.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "created": "2026-01-13T14:10:10.177740Z",
+      "modified": "2026-01-13T14:10:10.177740Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "JavaScript",
+      "description": "Lightweight JavaScript loader stubs are used to initiate the RAT, blending into developer workflows and evading detection by appearing as harmless scripts.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "created": "2026-01-13T14:10:10.178018Z",
+      "modified": "2026-01-13T14:10:10.178018Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "EXE (Windows Executable)",
+      "description": "The modular RAT can execute legitimate EXE files, which may be abused to run malicious payloads or further loader components within the victim environment.",
+      "tool_types": [
+        "execution"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "created": "2026-01-13T14:10:10.178171Z",
+      "modified": "2026-01-13T14:10:10.178171Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "DLL (Dynamic Link Library)",
+      "description": "The RAT is capable of running DLL files, allowing attackers to inject or load malicious code through legitimate Windows library mechanisms.",
+      "tool_types": [
+        "execution"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "created": "2026-01-13T14:10:10.178321Z",
+      "modified": "2026-01-13T14:10:10.178321Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "MSI (Microsoft Installer)",
+      "description": "MSI files are executed by the RAT, enabling attackers to install or deploy additional payloads under the guise of legitimate software installation routines.",
+      "tool_types": [
+        "execution"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c724991c-329f-b82f-ae32-5458e133e0c4",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "description": "PyStoreRAT Operators uses PyStoreRAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--290747d9-223f-384d-b6b9-9e00dfab76e3",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "description": "PyStoreRAT Operators uses Rhadamanthys malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3e654a48-84b8-6bae-863c-04cc4642b7bb",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "description": "PyStoreRAT Operators uses StealC malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--026ae123-acb6-1765-e59d-18c2888265f6",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "description": "PyStoreRAT Operators uses Tuoni malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--46735c68-6b3f-9263-85e0-53fbfc039808",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "description": "Rhadamanthys Operators uses PyStoreRAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1a557881-bfec-6640-3960-6afdfb79897c",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "description": "Rhadamanthys Operators uses Rhadamanthys malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--264aad08-105d-51eb-9be2-4f37881f21be",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "description": "Rhadamanthys Operators uses StealC malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--76eba048-a8f8-5cbb-9657-16d7eb0df0df",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "description": "Rhadamanthys Operators uses Tuoni malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--83096240-da4e-b92e-2f9e-3b995af8c840",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "description": "StealC V2 Operators uses PyStoreRAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2a92a047-e0ee-408d-f715-509d796b6acd",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "description": "StealC V2 Operators uses Rhadamanthys malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--259c83b4-19b8-dd17-01e8-8a40f268ae23",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "description": "StealC V2 Operators uses StealC malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c8d3bdc5-a7ae-93b1-cf86-c36b1dea28ab",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "description": "StealC V2 Operators uses Tuoni malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--46a886a3-a5b0-5890-903a-625ced70344c",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "description": "Tuoni C2 Operators uses PyStoreRAT malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3646ee19-9005-6089-876b-8b029f194cdb",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "description": "Tuoni C2 Operators uses Rhadamanthys malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a118b58b-ef5c-b405-65c8-a8e95d8703ad",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "description": "Tuoni C2 Operators uses StealC malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--08cc6f91-c8b8-b054-d9d7-cfb907e6744f",
+      "created": "2026-01-13T14:10:10.201251Z",
+      "modified": "2026-01-13T14:10:10.201251Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "description": "Tuoni C2 Operators uses Tuoni malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7ec59fed-8092-84ef-d992-3cc4df9f6247",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+      "description": "PyStoreRAT Operators employs 'Weaponized GitHub Repositories Masquerading as Development Utilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--80dc3417-9747-3f89-3a15-bfee2006de82",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+      "description": "PyStoreRAT Operators employs 'Lightweight Python/JavaScript Loader Stubs' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c9ce3e92-b205-6b13-9591-265b363247b2",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+      "description": "PyStoreRAT Operators employs 'Fileless HTA Execution via mshta.exe' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5810ada8-980b-0971-cffa-1a2d0c0dac1f",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+      "description": "PyStoreRAT Operators employs 'Modular JavaScript-Based Remote Access Trojan (RAT)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c57afc6d-f950-e0d4-2734-66b7fa3ee7a8",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "description": "PyStoreRAT Operators employs 'Built-in Evasion Targeting CrowdStrike Falcon and Modern EDR Controls' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b25ff8d6-5c74-cfd2-c469-0f8b09783089",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+      "description": "PyStoreRAT Operators employs 'Artificial Star/Fork Inflation and Social Promotion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fb61dcdb-b924-14f3-58be-e310440594fd",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "PyStoreRAT Operators employs 'Rotating Multi-Domain Command and Control Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e8c7ee13-65eb-ff35-ceef-a914af8dfd37",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "description": "PyStoreRAT Operators employs 'Deployment of Rhadamanthys Information Stealer as Follow-On Payload' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--89c23806-3988-ed61-94b4-92ea462c7b73",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "description": "PyStoreRAT Operators employs 'Script-Based, Fileless Malware Delivery' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--95188034-a454-74e8-b6b6-169f7d3d7f5d",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+      "description": "PyStoreRAT Operators employs 'Compromise of Developer Workflows and CI/CD Pipelines' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--61e48e85-d061-39d4-566d-7b66fbd526f6",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+      "description": "Rhadamanthys Operators employs 'Weaponized GitHub Repositories Masquerading as Development Utilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--20672dd8-9ea0-3c87-08d7-e7280e87a2ee",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+      "description": "Rhadamanthys Operators employs 'Lightweight Python/JavaScript Loader Stubs' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--8340cef3-6801-fe32-8679-6816ac1eea81",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+      "description": "Rhadamanthys Operators employs 'Fileless HTA Execution via mshta.exe' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adada50a-5824-24c5-a944-76263d3ed662",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+      "description": "Rhadamanthys Operators employs 'Modular JavaScript-Based Remote Access Trojan (RAT)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4335cd12-037c-3c79-8613-a00e4fe3a2d8",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "description": "Rhadamanthys Operators employs 'Built-in Evasion Targeting CrowdStrike Falcon and Modern EDR Controls' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fe276384-0b35-4bbe-9919-000194947ce9",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+      "description": "Rhadamanthys Operators employs 'Artificial Star/Fork Inflation and Social Promotion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ae2f3f2a-4635-b8ef-e981-baa96b80f13c",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "Rhadamanthys Operators employs 'Rotating Multi-Domain Command and Control Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1d90c6d6-2465-93fa-e116-16f1cc342a06",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "description": "Rhadamanthys Operators employs 'Deployment of Rhadamanthys Information Stealer as Follow-On Payload' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1dcd3459-806f-4e7a-2696-a1c910cd2f5b",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "description": "Rhadamanthys Operators employs 'Script-Based, Fileless Malware Delivery' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6a09fef3-672e-abad-f856-bd0de17ee23c",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+      "description": "Rhadamanthys Operators employs 'Compromise of Developer Workflows and CI/CD Pipelines' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6c0ab4c6-964c-9ae9-86b8-47ec9596d812",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+      "description": "StealC V2 Operators employs 'Weaponized GitHub Repositories Masquerading as Development Utilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--59d9b73b-3eae-0e52-fea8-3bb21a796abe",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+      "description": "StealC V2 Operators employs 'Lightweight Python/JavaScript Loader Stubs' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c864ca14-369d-e8df-1753-db2610922f8b",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+      "description": "StealC V2 Operators employs 'Fileless HTA Execution via mshta.exe' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ceec1681-4cdd-f45f-1da2-ea91bcd92b90",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+      "description": "StealC V2 Operators employs 'Modular JavaScript-Based Remote Access Trojan (RAT)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--720c5f8f-cfcb-e8c4-3457-af3c96807153",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "description": "StealC V2 Operators employs 'Built-in Evasion Targeting CrowdStrike Falcon and Modern EDR Controls' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--61b28bf2-1747-1964-d56d-a193409ad8ce",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+      "description": "StealC V2 Operators employs 'Artificial Star/Fork Inflation and Social Promotion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b950aefc-b5e8-729d-099f-1c7e83becc0c",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "StealC V2 Operators employs 'Rotating Multi-Domain Command and Control Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c04def66-5984-98f6-93c0-77af8981de43",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "description": "StealC V2 Operators employs 'Deployment of Rhadamanthys Information Stealer as Follow-On Payload' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6785662f-de6f-b0ec-8318-5f95f0aa4b78",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "description": "StealC V2 Operators employs 'Script-Based, Fileless Malware Delivery' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--62957349-987e-aa6f-692a-70d079518eef",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+      "description": "StealC V2 Operators employs 'Compromise of Developer Workflows and CI/CD Pipelines' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5193d783-ae0e-5872-ebfe-b07e0b2ed8a8",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+      "description": "Tuoni C2 Operators employs 'Weaponized GitHub Repositories Masquerading as Development Utilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e969431d-19e7-26b5-ad1d-57b5af242945",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+      "description": "Tuoni C2 Operators employs 'Lightweight Python/JavaScript Loader Stubs' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--26c6094b-94c8-f130-2975-856739eb54ee",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+      "description": "Tuoni C2 Operators employs 'Fileless HTA Execution via mshta.exe' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--99115009-e170-bef7-04ab-60bbf70fbeb2",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+      "description": "Tuoni C2 Operators employs 'Modular JavaScript-Based Remote Access Trojan (RAT)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--754ad4c7-5cd5-3abe-622b-883581f0aedd",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+      "description": "Tuoni C2 Operators employs 'Built-in Evasion Targeting CrowdStrike Falcon and Modern EDR Controls' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c0dbac7c-bc6c-413b-8f32-4626806b724d",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+      "description": "Tuoni C2 Operators employs 'Artificial Star/Fork Inflation and Social Promotion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--52965f01-f8d7-91c2-2b34-4abc3def6bdb",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+      "description": "Tuoni C2 Operators employs 'Rotating Multi-Domain Command and Control Infrastructure' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--16fede16-0c4f-72fe-a220-2c72099b28a3",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+      "description": "Tuoni C2 Operators employs 'Deployment of Rhadamanthys Information Stealer as Follow-On Payload' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--547ba732-e780-1e6b-320b-82ef81855dea",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "description": "Tuoni C2 Operators employs 'Script-Based, Fileless Malware Delivery' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f382d36d-f645-d19b-fab3-cc5803e15bd6",
+      "created": "2026-01-13T14:10:10.204598Z",
+      "modified": "2026-01-13T14:10:10.204598Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+      "description": "Tuoni C2 Operators employs 'Compromise of Developer Workflows and CI/CD Pipelines' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0ce1f9b7-c514-2918-c0e2-de1e70867512",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "PyStoreRAT Operators uses mshta.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2d4295d1-221d-f3f6-12b6-e739ed0b3b84",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "PyStoreRAT Operators uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c20d9422-51f0-cd4f-a41b-679e3b6ae3c8",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "PyStoreRAT Operators uses GitHub tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--dd6ef543-c4a3-ce53-40bd-291842e1281b",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "PyStoreRAT Operators uses Python tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a246b275-7860-2ae3-5df8-4a39c83464bb",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "PyStoreRAT Operators uses JavaScript tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1411b177-7ada-e95f-6fca-d9c7b6b238d3",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "PyStoreRAT Operators uses EXE (Windows Executable) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--91619551-2a17-1649-4476-8ff70e86d887",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "PyStoreRAT Operators uses DLL (Dynamic Link Library) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5ff6b0f5-0848-c0c5-ac3e-f7f5bc6ec098",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "PyStoreRAT Operators uses MSI (Microsoft Installer) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0f39543c-3ee2-bf25-95c1-9f24dc3299b5",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "Rhadamanthys Operators uses mshta.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--002ebc4e-ce82-2645-dcb0-600394655e62",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Rhadamanthys Operators uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3eb78b3f-bf3b-aaef-7cfe-857b00a2c9e5",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "Rhadamanthys Operators uses GitHub tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5e5c86aa-d350-b502-e5c4-fe6300583353",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "Rhadamanthys Operators uses Python tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d0ce9e9f-4401-1182-a9db-1639d510e66d",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "Rhadamanthys Operators uses JavaScript tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f93ac158-274b-9567-ba06-1bc119a2603c",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "Rhadamanthys Operators uses EXE (Windows Executable) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--347d7733-3062-a4ff-a0b1-9b26791e1101",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "Rhadamanthys Operators uses DLL (Dynamic Link Library) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e9310c86-effa-216d-30e6-572978d58cf6",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "Rhadamanthys Operators uses MSI (Microsoft Installer) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b6bad869-5217-44c4-e447-900233d6b73b",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "StealC V2 Operators uses mshta.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--43ce1deb-010b-75e8-5a6f-652a0140e31e",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "StealC V2 Operators uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2e56b36a-7282-4885-647b-b6dfce3edc73",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "StealC V2 Operators uses GitHub tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--121a2346-f54e-64b2-91d7-769cd9193942",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "StealC V2 Operators uses Python tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--02103907-089e-5b93-7264-a758c04a2bdd",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "StealC V2 Operators uses JavaScript tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a7e939df-c60f-289e-fd46-dd66d50eb6d2",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "StealC V2 Operators uses EXE (Windows Executable) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a879de7b-43ab-099e-bca2-47130123c28b",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "StealC V2 Operators uses DLL (Dynamic Link Library) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0d4fb996-53e5-57db-96bc-01c7e2ea4280",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "StealC V2 Operators uses MSI (Microsoft Installer) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5a2eca15-e1c1-b9ca-35d7-a57c7ce77898",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "Tuoni C2 Operators uses mshta.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--73809f6b-9333-962c-d8d4-802a8fdfa5c7",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Tuoni C2 Operators uses PowerShell tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e8ff6913-0092-8956-7b6c-92e42da62a3f",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "Tuoni C2 Operators uses GitHub tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b670e65d-26cc-d935-da69-ada86b33e97c",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "Tuoni C2 Operators uses Python tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec821c15-b831-7e1f-6fc5-ec817713ad11",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "Tuoni C2 Operators uses JavaScript tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--11e784a1-bb43-1ff5-8f4b-0a595e42ed79",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "Tuoni C2 Operators uses EXE (Windows Executable) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f064e3e0-a496-e67e-8946-00567f8f4cce",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "Tuoni C2 Operators uses DLL (Dynamic Link Library) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3cf3e09-9207-5859-1fc3-32528c46f89e",
+      "created": "2026-01-13T14:10:10.205694Z",
+      "modified": "2026-01-13T14:10:10.205694Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "Tuoni C2 Operators uses MSI (Microsoft Installer) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--481f33d7-fbc7-cd4d-cb38-ad24d9b41d0f",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "PyStoreRAT uses mshta.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--33cd3b86-bc19-3ea5-fb0a-376ef2692f73",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "PyStoreRAT uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cbab62f7-87a5-e813-566e-208f5f70c6e6",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "PyStoreRAT uses GitHub for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a770121e-2d04-345f-7d11-899bc9400af1",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "PyStoreRAT uses Python for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f9381b99-fd3a-67b4-5f9c-d04a69bf9f48",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "PyStoreRAT uses JavaScript for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--df5ff61c-17e3-9fb1-607e-bb02806be0c4",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "PyStoreRAT uses EXE (Windows Executable) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--324146fb-0e5a-fee4-8733-ea419fd51c52",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "PyStoreRAT uses DLL (Dynamic Link Library) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--79eba526-1c7a-5c9c-9e50-4c7e68078d75",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "PyStoreRAT uses MSI (Microsoft Installer) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--479aaa0e-8abd-93ba-5c3e-a373eb8fdca2",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "Rhadamanthys uses mshta.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d96e2150-e07c-6850-a56e-04215ec18e4c",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Rhadamanthys uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--baf143d2-c049-2e2c-68d1-51bbf1ef6099",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "Rhadamanthys uses GitHub for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00a998c0-b29a-a073-45fb-0ac4c9ce33ae",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "Rhadamanthys uses Python for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d3e7a6bd-2bfe-088d-298b-75e6f4f88c6b",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "Rhadamanthys uses JavaScript for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--715cecda-ac00-1422-c422-fbbc5438e9c5",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "Rhadamanthys uses EXE (Windows Executable) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--77b887ea-d7f2-dd41-9ef0-3389ed74907c",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "Rhadamanthys uses DLL (Dynamic Link Library) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--372a5cf8-3780-c7d7-eb74-3ed30c961cb9",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "Rhadamanthys uses MSI (Microsoft Installer) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78f38eab-125d-c2bb-bcbb-8f661cc2cfcd",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "StealC uses mshta.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cc93a4f9-550e-dc2f-c238-1fde3b437b0d",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "StealC uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9dcac820-cd18-f4e6-245e-413f5a07d08b",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "StealC uses GitHub for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9264c5c4-e4a6-75a3-f0ac-02d9ccceec0f",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "StealC uses Python for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4620ecaf-85e8-b0ae-3eff-626444b2cfaf",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "StealC uses JavaScript for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--385d7f72-6632-17cb-df50-cd0c5794b97c",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "StealC uses EXE (Windows Executable) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cd492741-1cd3-7667-c322-f8ab2879fca2",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "StealC uses DLL (Dynamic Link Library) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--07ef7bd9-f974-5a42-fa6a-b952eb4073c2",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "StealC uses MSI (Microsoft Installer) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--421eeb79-589f-93de-4a1b-1241c2393244",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+      "description": "Tuoni uses mshta.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--801c9c56-15b4-5a01-c0d8-bbfc9bfc38e1",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+      "description": "Tuoni uses PowerShell for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fd40ea32-d7f8-5092-281c-96de24ad2c44",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+      "description": "Tuoni uses GitHub for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a2a331d5-40cf-9571-da35-97897b23efb3",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+      "description": "Tuoni uses Python for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0d80ad90-0d03-c639-ab6d-11064170247f",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+      "description": "Tuoni uses JavaScript for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b339efcd-e5bd-f68f-867d-bc85b9cf58fc",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+      "description": "Tuoni uses EXE (Windows Executable) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0acfe188-e0ac-df05-8066-38cc19413fdc",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+      "description": "Tuoni uses DLL (Dynamic Link Library) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--feef844c-f82e-b58f-8167-cbf0621da13f",
+      "created": "2026-01-13T14:10:10.206880Z",
+      "modified": "2026-01-13T14:10:10.206880Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "relationship_type": "uses",
+      "source_ref": "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+      "target_ref": "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+      "description": "Tuoni uses MSI (Microsoft Installer) for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--b8ff6b9c-56af-514d-6b19-1f5daa71dc9a",
+      "created": "2026-01-13T14:10:10.214888Z",
+      "modified": "2026-01-13T14:10:10.214888Z",
+      "created_by_ref": "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+      "name": "A New Supply Chain Threat Targeting Developers: What You Need to Know About PyStoreRAT  | Morphisec Blog",
+      "description": "This report contains technical analysis and indicators from: https://www.morphisec.com/blog/a-new-supply-chain-threat-targeting-developers-what-you-need-to-know-about-pystorerat/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-13T14:10:10.214888Z",
+      "object_refs": [
+        "identity--e252f5a8-e4f8-4d1f-127d-fc319194e55e",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--11d05290-e231-7453-79e0-c39739393a50",
+        "attack-pattern--f46fca40-66d1-6665-c9e8-dcb0d75c2720",
+        "attack-pattern--6718a4d7-c79c-936b-480f-f34d7d501646",
+        "attack-pattern--b28c7a09-0dc1-5bf4-1bf3-0fb8c47ecc1d",
+        "attack-pattern--29fd0255-a3bd-96ba-5d8d-6e485f1232e2",
+        "attack-pattern--ce7b8263-3c4f-bc7d-aa4e-11d62ae78036",
+        "attack-pattern--c7223b73-cb72-cc44-cfc6-c6d7e9175b0f",
+        "attack-pattern--a4d8ab64-586d-28f5-ce94-3a20016ef9ea",
+        "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+        "attack-pattern--6f5628ae-403d-951b-0da6-50e44ef9e2c2",
+        "malware--7bdf4229-2342-ed23-64e2-0ca7cba75063",
+        "malware--a01240d3-f513-e8cb-0886-730d604b6f3a",
+        "malware--e25888ad-212d-b898-19f8-f26cfd1a1ff8",
+        "malware--832f8f6d-35f7-37c2-5e59-33f75a5a5237",
+        "threat-actor--a52bc764-6b19-2e41-67ea-0e7ca70c36b8",
+        "threat-actor--df6ca137-396d-523a-a3b7-ca6f7da7a82f",
+        "threat-actor--53243913-5a9d-5a5b-8060-0c2ba66142ba",
+        "threat-actor--57348193-f372-2d1c-c55d-fe2d53031d37",
+        "tool--5f49b464-48d8-0275-93aa-b461e6b87dcf",
+        "tool--2f2d399f-0ea8-8448-59fe-5514b304733b",
+        "tool--bf215181-b514-0522-137b-3d4f6b73544a",
+        "tool--23eeeb43-47bd-d26b-fc6b-7ee9a3b755dd",
+        "tool--de9b9ed7-8d7e-2e1d-ceef-fee780e2f919",
+        "tool--53b65b2b-1ef0-4eb5-f6ce-1a346727b020",
+        "tool--ba02a8fa-f004-fe52-48b9-14db81261d9c",
+        "tool--a656dfc1-eea2-563b-c12c-26a95415f5be",
+        "relationship--c724991c-329f-b82f-ae32-5458e133e0c4",
+        "relationship--290747d9-223f-384d-b6b9-9e00dfab76e3",
+        "relationship--3e654a48-84b8-6bae-863c-04cc4642b7bb",
+        "relationship--026ae123-acb6-1765-e59d-18c2888265f6",
+        "relationship--46735c68-6b3f-9263-85e0-53fbfc039808",
+        "relationship--1a557881-bfec-6640-3960-6afdfb79897c",
+        "relationship--264aad08-105d-51eb-9be2-4f37881f21be",
+        "relationship--76eba048-a8f8-5cbb-9657-16d7eb0df0df",
+        "relationship--83096240-da4e-b92e-2f9e-3b995af8c840",
+        "relationship--2a92a047-e0ee-408d-f715-509d796b6acd",
+        "relationship--259c83b4-19b8-dd17-01e8-8a40f268ae23",
+        "relationship--c8d3bdc5-a7ae-93b1-cf86-c36b1dea28ab",
+        "relationship--46a886a3-a5b0-5890-903a-625ced70344c",
+        "relationship--3646ee19-9005-6089-876b-8b029f194cdb",
+        "relationship--a118b58b-ef5c-b405-65c8-a8e95d8703ad",
+        "relationship--08cc6f91-c8b8-b054-d9d7-cfb907e6744f",
+        "relationship--7ec59fed-8092-84ef-d992-3cc4df9f6247",
+        "relationship--80dc3417-9747-3f89-3a15-bfee2006de82",
+        "relationship--c9ce3e92-b205-6b13-9591-265b363247b2",
+        "relationship--5810ada8-980b-0971-cffa-1a2d0c0dac1f",
+        "relationship--c57afc6d-f950-e0d4-2734-66b7fa3ee7a8",
+        "relationship--b25ff8d6-5c74-cfd2-c469-0f8b09783089",
+        "relationship--fb61dcdb-b924-14f3-58be-e310440594fd",
+        "relationship--e8c7ee13-65eb-ff35-ceef-a914af8dfd37",
+        "relationship--89c23806-3988-ed61-94b4-92ea462c7b73",
+        "relationship--95188034-a454-74e8-b6b6-169f7d3d7f5d",
+        "relationship--61e48e85-d061-39d4-566d-7b66fbd526f6",
+        "relationship--20672dd8-9ea0-3c87-08d7-e7280e87a2ee",
+        "relationship--8340cef3-6801-fe32-8679-6816ac1eea81",
+        "relationship--adada50a-5824-24c5-a944-76263d3ed662",
+        "relationship--4335cd12-037c-3c79-8613-a00e4fe3a2d8",
+        "relationship--fe276384-0b35-4bbe-9919-000194947ce9",
+        "relationship--ae2f3f2a-4635-b8ef-e981-baa96b80f13c",
+        "relationship--1d90c6d6-2465-93fa-e116-16f1cc342a06",
+        "relationship--1dcd3459-806f-4e7a-2696-a1c910cd2f5b",
+        "relationship--6a09fef3-672e-abad-f856-bd0de17ee23c",
+        "relationship--6c0ab4c6-964c-9ae9-86b8-47ec9596d812",
+        "relationship--59d9b73b-3eae-0e52-fea8-3bb21a796abe",
+        "relationship--c864ca14-369d-e8df-1753-db2610922f8b",
+        "relationship--ceec1681-4cdd-f45f-1da2-ea91bcd92b90",
+        "relationship--720c5f8f-cfcb-e8c4-3457-af3c96807153",
+        "relationship--61b28bf2-1747-1964-d56d-a193409ad8ce",
+        "relationship--b950aefc-b5e8-729d-099f-1c7e83becc0c",
+        "relationship--c04def66-5984-98f6-93c0-77af8981de43",
+        "relationship--6785662f-de6f-b0ec-8318-5f95f0aa4b78",
+        "relationship--62957349-987e-aa6f-692a-70d079518eef",
+        "relationship--5193d783-ae0e-5872-ebfe-b07e0b2ed8a8",
+        "relationship--e969431d-19e7-26b5-ad1d-57b5af242945",
+        "relationship--26c6094b-94c8-f130-2975-856739eb54ee",
+        "relationship--99115009-e170-bef7-04ab-60bbf70fbeb2",
+        "relationship--754ad4c7-5cd5-3abe-622b-883581f0aedd",
+        "relationship--c0dbac7c-bc6c-413b-8f32-4626806b724d",
+        "relationship--52965f01-f8d7-91c2-2b34-4abc3def6bdb",
+        "relationship--16fede16-0c4f-72fe-a220-2c72099b28a3",
+        "relationship--547ba732-e780-1e6b-320b-82ef81855dea",
+        "relationship--f382d36d-f645-d19b-fab3-cc5803e15bd6",
+        "relationship--0ce1f9b7-c514-2918-c0e2-de1e70867512",
+        "relationship--2d4295d1-221d-f3f6-12b6-e739ed0b3b84",
+        "relationship--c20d9422-51f0-cd4f-a41b-679e3b6ae3c8",
+        "relationship--dd6ef543-c4a3-ce53-40bd-291842e1281b",
+        "relationship--a246b275-7860-2ae3-5df8-4a39c83464bb",
+        "relationship--1411b177-7ada-e95f-6fca-d9c7b6b238d3",
+        "relationship--91619551-2a17-1649-4476-8ff70e86d887",
+        "relationship--5ff6b0f5-0848-c0c5-ac3e-f7f5bc6ec098",
+        "relationship--0f39543c-3ee2-bf25-95c1-9f24dc3299b5",
+        "relationship--002ebc4e-ce82-2645-dcb0-600394655e62",
+        "relationship--3eb78b3f-bf3b-aaef-7cfe-857b00a2c9e5",
+        "relationship--5e5c86aa-d350-b502-e5c4-fe6300583353",
+        "relationship--d0ce9e9f-4401-1182-a9db-1639d510e66d",
+        "relationship--f93ac158-274b-9567-ba06-1bc119a2603c",
+        "relationship--347d7733-3062-a4ff-a0b1-9b26791e1101",
+        "relationship--e9310c86-effa-216d-30e6-572978d58cf6",
+        "relationship--b6bad869-5217-44c4-e447-900233d6b73b",
+        "relationship--43ce1deb-010b-75e8-5a6f-652a0140e31e",
+        "relationship--2e56b36a-7282-4885-647b-b6dfce3edc73",
+        "relationship--121a2346-f54e-64b2-91d7-769cd9193942",
+        "relationship--02103907-089e-5b93-7264-a758c04a2bdd",
+        "relationship--a7e939df-c60f-289e-fd46-dd66d50eb6d2",
+        "relationship--a879de7b-43ab-099e-bca2-47130123c28b",
+        "relationship--0d4fb996-53e5-57db-96bc-01c7e2ea4280",
+        "relationship--5a2eca15-e1c1-b9ca-35d7-a57c7ce77898",
+        "relationship--73809f6b-9333-962c-d8d4-802a8fdfa5c7",
+        "relationship--e8ff6913-0092-8956-7b6c-92e42da62a3f",
+        "relationship--b670e65d-26cc-d935-da69-ada86b33e97c",
+        "relationship--ec821c15-b831-7e1f-6fc5-ec817713ad11",
+        "relationship--11e784a1-bb43-1ff5-8f4b-0a595e42ed79",
+        "relationship--f064e3e0-a496-e67e-8946-00567f8f4cce",
+        "relationship--d3cf3e09-9207-5859-1fc3-32528c46f89e",
+        "relationship--481f33d7-fbc7-cd4d-cb38-ad24d9b41d0f",
+        "relationship--33cd3b86-bc19-3ea5-fb0a-376ef2692f73",
+        "relationship--cbab62f7-87a5-e813-566e-208f5f70c6e6",
+        "relationship--a770121e-2d04-345f-7d11-899bc9400af1",
+        "relationship--f9381b99-fd3a-67b4-5f9c-d04a69bf9f48",
+        "relationship--df5ff61c-17e3-9fb1-607e-bb02806be0c4",
+        "relationship--324146fb-0e5a-fee4-8733-ea419fd51c52",
+        "relationship--79eba526-1c7a-5c9c-9e50-4c7e68078d75",
+        "relationship--479aaa0e-8abd-93ba-5c3e-a373eb8fdca2",
+        "relationship--d96e2150-e07c-6850-a56e-04215ec18e4c",
+        "relationship--baf143d2-c049-2e2c-68d1-51bbf1ef6099",
+        "relationship--00a998c0-b29a-a073-45fb-0ac4c9ce33ae",
+        "relationship--d3e7a6bd-2bfe-088d-298b-75e6f4f88c6b",
+        "relationship--715cecda-ac00-1422-c422-fbbc5438e9c5",
+        "relationship--77b887ea-d7f2-dd41-9ef0-3389ed74907c",
+        "relationship--372a5cf8-3780-c7d7-eb74-3ed30c961cb9",
+        "relationship--78f38eab-125d-c2bb-bcbb-8f661cc2cfcd",
+        "relationship--cc93a4f9-550e-dc2f-c238-1fde3b437b0d",
+        "relationship--9dcac820-cd18-f4e6-245e-413f5a07d08b",
+        "relationship--9264c5c4-e4a6-75a3-f0ac-02d9ccceec0f",
+        "relationship--4620ecaf-85e8-b0ae-3eff-626444b2cfaf",
+        "relationship--385d7f72-6632-17cb-df50-cd0c5794b97c",
+        "relationship--cd492741-1cd3-7667-c322-f8ab2879fca2",
+        "relationship--07ef7bd9-f974-5a42-fa6a-b952eb4073c2",
+        "relationship--421eeb79-589f-93de-4a1b-1241c2393244",
+        "relationship--801c9c56-15b4-5a01-c0d8-bbfc9bfc38e1",
+        "relationship--fd40ea32-d7f8-5092-281c-96de24ad2c44",
+        "relationship--a2a331d5-40cf-9571-da35-97897b23efb3",
+        "relationship--0d80ad90-0d03-c639-ab6d-11064170247f",
+        "relationship--b339efcd-e5bd-f68f-867d-bc85b9cf58fc",
+        "relationship--0acfe188-e0ac-df05-8066-38cc19413fdc",
+        "relationship--feef844c-f82e-b58f-8167-cbf0621da13f"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

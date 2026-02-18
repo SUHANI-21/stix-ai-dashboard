@@ -1,0 +1,579 @@
+{
+  "type": "bundle",
+  "id": "bundle--09831a42-b348-4c87-a8af-dd6426fcabc4",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "created": "2026-01-17T16:20:18.129233Z",
+      "modified": "2026-01-17T16:20:18.129233Z",
+      "name": "Amazon Web Services (AWS)",
+      "description": "Amazon Web Services (AWS) is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T16:20:18.129233Z",
+      "modified": "2026-01-17T16:20:18.129233Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T16:20:18.129233Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--77c48f40-b775-0ebb-ea8c-b4906a70448d",
+      "created": "2026-01-17T16:20:41.880783Z",
+      "modified": "2026-01-17T16:20:41.880783Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "OAST Callback Endpoint Provisioning",
+      "description": "Threat actors set up out-of-band application security testing (OAST) callback endpoints as part of their operational infrastructure. These endpoints are used to verify successful exploitation of vulnerabilities on target systems via separate communication channels, effectively bypassing traditional detection mechanisms. The OAST callback domains are embedded in exploit payloads and are triggered when a vulnerable target interacts with the malicious input, confirming the presence of a vulnerability. This infrastructure is detected by MadPot honeypots when attackers use it against decoy systems, allowing AWS active threat defense to rapidly identify and block these endpoints.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384",
+      "created": "2026-01-17T16:20:41.880996Z",
+      "modified": "2026-01-17T16:20:41.880996Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Automated Internet-wide Reconnaissance Scanning",
+      "description": "Threat actors conduct large-scale, automated scans of the internet to identify potential targets. These scans look for exposed services, vulnerable software, and common misconfigurations in cloud workloads. MadPot honeypots are designed to mimic such vulnerable systems, attracting reconnaissance activity and capturing patterns of scanning behavior. This reconnaissance phase is critical for threat actors to compile lists of viable targets for subsequent exploitation. The active threat defense system leverages the visibility from MadPot to disrupt later stages of the attack lifecycle.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1595/",
+          "external_id": "T1595"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f13c2230-67f0-459d-d38e-2bb0fcec9a66",
+      "created": "2026-01-17T16:20:41.881083Z",
+      "modified": "2026-01-17T16:20:41.881083Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Malware Distribution Server Provisioning",
+      "description": "Prior to launching attacks, threat actors establish dedicated servers to host malware payloads intended for delivery to victim systems. These servers are provisioned as part of the attackers' operational infrastructure and are used to distribute malicious files during exploitation attempts. MadPot honeypots detect interactions with these servers, enabling AWS active threat defense to extract indicators such as malicious domains and IP addresses, which are then used to create firewall rules to block future malware downloads.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1583/006/",
+          "external_id": "T1583.006"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e40242aa-8d8d-a78d-8778-976a668a162a",
+      "created": "2026-01-17T16:20:41.881145Z",
+      "modified": "2026-01-17T16:20:41.881145Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Command-and-Control Server Rotation",
+      "description": "Threat actors frequently rotate their command-and-control (C2) infrastructure, changing IP addresses, domains, and URLs to evade detection and maintain persistent access to compromised systems. MadPot monitors these changes in real-time, and active threat defense automatically updates protection rules to block new C2 endpoints as they are identified. This dynamic adaptation ensures that even as attackers shift their infrastructure, network communications between compromised systems and operators are disrupted.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1583/001/",
+          "external_id": "T1583.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--2363e2a2-bf7b-1c66-e5c6-ae7008a7b7eb",
+      "created": "2026-01-17T16:20:41.881229Z",
+      "modified": "2026-01-17T16:20:41.881229Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Embedding OAST Callback URLs in Exploit Payloads",
+      "description": "During the vulnerability confirmation phase, threat actors embed OAST callback URLs into exploit payloads. These URLs are injected into web forms, HTTP headers, API parameters, or other input fields on target systems. When the exploit is successful, the target system makes a request to the OAST callback endpoint, confirming the vulnerability to the attacker. MadPot honeypots capture these interactions, allowing AWS active threat defense to identify and block malicious domains and URLs associated with OAST callbacks.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--f4ece66d-d622-b820-f424-daa4a876ddb5",
+      "created": "2026-01-17T16:20:41.881319Z",
+      "modified": "2026-01-17T16:20:41.881319Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Multi-layered Network Blocking (Swiss Cheese Model)",
+      "description": "Active threat defense employs a multi-layered approach to blocking malicious network activity, inspired by the Swiss cheese model. When a malicious domain or IP is identified, the system creates rules to block DNS queries, HTTP host headers, TLS connections using SNI, and direct IP connections. This ensures that even if an attacker bypasses one layer (e.g., DNS filtering by using direct IP connections), other layers can still detect and block the threat. The implementation is dynamic, with rules automatically updated as threat actor infrastructure evolves.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "created": "2026-01-17T16:20:41.881391Z",
+      "modified": "2026-01-17T16:20:41.881391Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Malware Behavioral Analysis for Indicator Extraction",
+      "description": "When malware payloads are delivered to MadPot honeypots, AWS executes the malicious code in isolated environments to observe its behavior. This analysis extracts indicators of compromise such as contacted domains, dropped files, and abused protocols. These indicators are rapidly validated and converted into firewall rules, which are then deployed globally to block further malicious activity. This real-time behavioral analysis enables the defense system to keep pace with evolving malware variants and attack techniques.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1059/",
+          "external_id": "T1059"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--9cf78de1-140d-309d-7fb4-ef865026e87c",
+      "created": "2026-01-17T16:20:41.881480Z",
+      "modified": "2026-01-17T16:20:41.881480Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Automated Threat Intelligence to Firewall Rule Conversion",
+      "description": "Active threat defense automatically translates threat intelligence gathered from MadPot honeypots into actionable firewall rules within 30 minutes. This process includes validation of indicators, performance testing, and global deployment to AWS Network Firewall. The automation ensures that newly identified threats are quickly blocked across all protected workloads, minimizing the window of opportunity for attackers to exploit vulnerabilities.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384",
+      "created": "2026-01-17T16:20:41.881533Z",
+      "modified": "2026-01-17T16:20:41.881533Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Blocking Reconnaissance Scans",
+      "description": "Active threat defense disrupts attacks at the reconnaissance stage by blocking network scans detected by MadPot honeypots. When scanning activity is observed, indicators such as source IP addresses and scanning patterns are used to create firewall rules that prevent further reconnaissance attempts. This early disruption reduces the likelihood of attackers identifying vulnerable targets within the protected environment.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1595/",
+          "external_id": "T1595"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--98249440-484b-45fd-82e6-f72b34d2067e",
+      "created": "2026-01-17T16:20:41.882407Z",
+      "modified": "2026-01-17T16:20:41.882407Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Automatic Infrastructure Fingerprinting and Similarity Detection",
+      "description": "Based on observations in MadPot, AWS identifies threat actor infrastructure with similar fingerprints through wider internet scans. This technique involves mapping attacker infrastructure and detecting related domains, IP addresses, and other indicators that share behavioral or configuration similarities. The system then proactively blocks these related entities, extending protection beyond the initially observed attack vectors.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+      "created": "2026-01-17T16:20:44.844501Z",
+      "modified": "2026-01-17T16:20:44.844501Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "OAST Callback Malware",
+      "description": "Malware leveraging out-of-band application security testing (OAST) callback endpoints to verify successful exploitation and establish communication channels with threat actors. Used for reconnaissance and to confirm vulnerabilities in targeted workloads.",
+      "malware_types": [
+        "trojan",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "command-and-control",
+        "remote-access"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "created": "2026-01-17T16:20:49.116883Z",
+      "modified": "2026-01-17T16:20:49.116883Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Generic Threat Actors",
+      "description": "The article refers to 'threat actors' as entities rapidly evolving attack methodologies, exploiting vulnerabilities, rotating infrastructure, and launching attacks against cloud workloads. These actors are responsible for reconnaissance, malware delivery, and command-and-control operations as detected by AWS MadPot honeypots.",
+      "threat_actor_types": [
+        "unknown"
+      ],
+      "goals": [
+        "Compromise cloud workloads",
+        "Exploit vulnerabilities",
+        "Establish persistent control via malware and C2 infrastructure",
+        "Evade detection through infrastructure rotation"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "unknown"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--48c89ec9-4003-cac0-0daa-bd3b5f5aa99c",
+      "created": "2026-01-17T16:20:56.496836Z",
+      "modified": "2026-01-17T16:20:56.496836Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "AWS Network Firewall",
+      "description": "Threat actors attempt to bypass or evade AWS Network Firewall controls by rotating domains, shifting IP addresses, and modifying tactics to avoid detection and blocking of malicious communications.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--a588fbbe-d69a-2a1e-1b02-e7dd4caa0c2d",
+      "created": "2026-01-17T16:20:56.496923Z",
+      "modified": "2026-01-17T16:20:56.496923Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Amazon GuardDuty",
+      "description": "Threat actors' activities are detected by Amazon GuardDuty, which is a legitimate threat detection service; attackers may attempt to evade its monitoring or exploit its detection gaps during their operations.",
+      "tool_types": [
+        "information-gathering",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9a71caa1-bc58-368f-483c-fdd15e5b131c",
+      "created": "2026-01-17T16:20:56.496979Z",
+      "modified": "2026-01-17T16:20:56.496979Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "OAST (Out-of-Band Application Security Testing) endpoints",
+      "description": "Threat actors set up OAST callback endpoints, which are typically used by legitimate security scanners, to verify successful exploitation via separate communication channels, abusing this dual-use infrastructure for malicious reconnaissance and exploitation.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation",
+        "vulnerability-scanning"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "reconnaissance"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bfc77459-d714-5e2e-cec2-5b5d19ffc073",
+      "created": "2026-01-17T16:20:56.497260Z",
+      "modified": "2026-01-17T16:20:56.497260Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+      "description": "Generic Threat Actors uses OAST Callback Malware malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--820623da-f563-8f7a-1045-2562585f1121",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--77c48f40-b775-0ebb-ea8c-b4906a70448d",
+      "description": "Generic Threat Actors employs 'OAST Callback Endpoint Provisioning' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e17a1a70-c4b4-8f3c-6c90-8bb44b660164",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384",
+      "description": "Generic Threat Actors employs 'Automated Internet-wide Reconnaissance Scanning' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ea4dbb3c-9961-30ad-651e-fd07a25298af",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--f13c2230-67f0-459d-d38e-2bb0fcec9a66",
+      "description": "Generic Threat Actors employs 'Malware Distribution Server Provisioning' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--91f4ed68-9852-5bca-c374-6bf0fc62c386",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--e40242aa-8d8d-a78d-8778-976a668a162a",
+      "description": "Generic Threat Actors employs 'Command-and-Control Server Rotation' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--adc0c00c-4c34-cdb7-3200-c52f4217f7aa",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--2363e2a2-bf7b-1c66-e5c6-ae7008a7b7eb",
+      "description": "Generic Threat Actors employs 'Embedding OAST Callback URLs in Exploit Payloads' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7c8c2671-29e6-7fe3-b3f4-b6bcc8822fd1",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--f4ece66d-d622-b820-f424-daa4a876ddb5",
+      "description": "Generic Threat Actors employs 'Multi-layered Network Blocking (Swiss Cheese Model)' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4a715e9f-c4d8-0cc4-3899-fca4a853eb3c",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+      "description": "Generic Threat Actors employs 'Malware Behavioral Analysis for Indicator Extraction' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--beedf396-6b0d-d575-f7d0-c939d854c16c",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--9cf78de1-140d-309d-7fb4-ef865026e87c",
+      "description": "Generic Threat Actors employs 'Automated Threat Intelligence to Firewall Rule Conversion' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--90ccac58-168c-1586-c1f1-a067c031a46d",
+      "created": "2026-01-17T16:20:56.497322Z",
+      "modified": "2026-01-17T16:20:56.497322Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "attack-pattern--98249440-484b-45fd-82e6-f72b34d2067e",
+      "description": "Generic Threat Actors employs 'Automatic Infrastructure Fingerprinting and Similarity Detection' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--66fe6d88-b8e8-278c-eff1-954ae2fc9ee4",
+      "created": "2026-01-17T16:20:56.497673Z",
+      "modified": "2026-01-17T16:20:56.497673Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "tool--48c89ec9-4003-cac0-0daa-bd3b5f5aa99c",
+      "description": "Generic Threat Actors uses AWS Network Firewall tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--73837ded-1158-fa32-cdf7-c73df39b24f3",
+      "created": "2026-01-17T16:20:56.497673Z",
+      "modified": "2026-01-17T16:20:56.497673Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "tool--a588fbbe-d69a-2a1e-1b02-e7dd4caa0c2d",
+      "description": "Generic Threat Actors uses Amazon GuardDuty tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78bd641b-1bbd-5522-e699-dc22818ea45b",
+      "created": "2026-01-17T16:20:56.497673Z",
+      "modified": "2026-01-17T16:20:56.497673Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+      "target_ref": "tool--9a71caa1-bc58-368f-483c-fdd15e5b131c",
+      "description": "Generic Threat Actors uses OAST (Out-of-Band Application Security Testing) endpoints tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--85c62cbc-904a-bf09-cebc-035c828f30ef",
+      "created": "2026-01-17T16:20:56.497742Z",
+      "modified": "2026-01-17T16:20:56.497742Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+      "target_ref": "tool--48c89ec9-4003-cac0-0daa-bd3b5f5aa99c",
+      "description": "OAST Callback Malware uses AWS Network Firewall for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4837c655-87a1-b9ec-43b7-54538af5b35f",
+      "created": "2026-01-17T16:20:56.497742Z",
+      "modified": "2026-01-17T16:20:56.497742Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+      "target_ref": "tool--a588fbbe-d69a-2a1e-1b02-e7dd4caa0c2d",
+      "description": "OAST Callback Malware uses Amazon GuardDuty for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e7216772-7c26-1e56-73a5-3fbc4fa56604",
+      "created": "2026-01-17T16:20:56.497742Z",
+      "modified": "2026-01-17T16:20:56.497742Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "relationship_type": "uses",
+      "source_ref": "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+      "target_ref": "tool--9a71caa1-bc58-368f-483c-fdd15e5b131c",
+      "description": "OAST Callback Malware uses OAST (Out-of-Band Application Security Testing) endpoints for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--eb06d783-7f0e-a3b8-f70f-c377cf8fb856",
+      "created": "2026-01-17T16:20:56.497882Z",
+      "modified": "2026-01-17T16:20:56.497882Z",
+      "created_by_ref": "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+      "name": "Real-time malware defense: Leveraging AWS Network Firewall active threat defense | AWS Security Blog",
+      "description": "This report contains technical analysis and indicators from: https://aws.amazon.com/blogs/security/real-time-malware-defense-leveraging-aws-network-firewall-active-threat-defense/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T16:20:56.497882Z",
+      "object_refs": [
+        "identity--4de913b3-0851-4c36-8b48-c92ac094087d",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--77c48f40-b775-0ebb-ea8c-b4906a70448d",
+        "attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384",
+        "attack-pattern--f13c2230-67f0-459d-d38e-2bb0fcec9a66",
+        "attack-pattern--e40242aa-8d8d-a78d-8778-976a668a162a",
+        "attack-pattern--2363e2a2-bf7b-1c66-e5c6-ae7008a7b7eb",
+        "attack-pattern--f4ece66d-d622-b820-f424-daa4a876ddb5",
+        "attack-pattern--db30751c-a277-d520-b73f-502732bb8de9",
+        "attack-pattern--9cf78de1-140d-309d-7fb4-ef865026e87c",
+        "attack-pattern--dd8734f2-d7be-2c7b-a5ec-9b6cf4b3d384",
+        "attack-pattern--98249440-484b-45fd-82e6-f72b34d2067e",
+        "malware--a3392e58-da1b-1b2b-4213-5b76194e6f32",
+        "threat-actor--98923c25-05d1-f074-ec9b-8c5c42171cb5",
+        "tool--48c89ec9-4003-cac0-0daa-bd3b5f5aa99c",
+        "tool--a588fbbe-d69a-2a1e-1b02-e7dd4caa0c2d",
+        "tool--9a71caa1-bc58-368f-483c-fdd15e5b131c",
+        "relationship--bfc77459-d714-5e2e-cec2-5b5d19ffc073",
+        "relationship--820623da-f563-8f7a-1045-2562585f1121",
+        "relationship--e17a1a70-c4b4-8f3c-6c90-8bb44b660164",
+        "relationship--ea4dbb3c-9961-30ad-651e-fd07a25298af",
+        "relationship--91f4ed68-9852-5bca-c374-6bf0fc62c386",
+        "relationship--adc0c00c-4c34-cdb7-3200-c52f4217f7aa",
+        "relationship--7c8c2671-29e6-7fe3-b3f4-b6bcc8822fd1",
+        "relationship--4a715e9f-c4d8-0cc4-3899-fca4a853eb3c",
+        "relationship--beedf396-6b0d-d575-f7d0-c939d854c16c",
+        "relationship--90ccac58-168c-1586-c1f1-a067c031a46d",
+        "relationship--66fe6d88-b8e8-278c-eff1-954ae2fc9ee4",
+        "relationship--73837ded-1158-fa32-cdf7-c73df39b24f3",
+        "relationship--78bd641b-1bbd-5522-e699-dc22818ea45b",
+        "relationship--85c62cbc-904a-bf09-cebc-035c828f30ef",
+        "relationship--4837c655-87a1-b9ec-43b7-54538af5b35f",
+        "relationship--e7216772-7c26-1e56-73a5-3fbc4fa56604"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "type": "bundle",
+  "id": "bundle--687b3b05-e7a0-4cf5-b4e5-55b17ab30991",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--648db820-e73d-4ac6-af18-5189fb3551ba",
+      "name": "Abuse of Solana Blockchain for C2",
+      "description": "Malware fetches command and control instructions from a Solana blockchain wallet address, using the blockchain as a covert C2 channel.",
+      "external_references": [
+        {
+          "source_name": "Nextron Blog",
+          "url": "https://www.nextron-systems.com/2025/11/29/analysis-of-the-rust-implants-found-in-the-malicious-vs-code-extension/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6d6c9f92-058d-455d-8cda-211c42d24aca",
+      "name": "Payload Delivery via Google Calendar Events",
+      "description": "Malware fetches next-stage payloads from Google Calendar events, hiding C2 addresses in event titles using invisible Unicode characters.",
+      "external_references": [
+        {
+          "source_name": "Nextron Blog",
+          "url": "https://www.nextron-systems.com/2025/11/29/analysis-of-the-rust-implants-found-in-the-malicious-vs-code-extension/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817",
+      "name": "AES-256-CBC Encrypted JavaScript Payload",
+      "description": "The C2 server responds with a large base64 blob containing an AES-256-CBC encrypted JavaScript file, which is then decrypted and executed by the implant.",
+      "external_references": [
+        {
+          "source_name": "Nextron Blog",
+          "url": "https://www.nextron-systems.com/2025/11/29/analysis-of-the-rust-implants-found-in-the-malicious-vs-code-extension/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4f41bff5-e766-4704-8db5-d160f6352afe",
+      "name": "os.node",
+      "hashes": {
+        "SHA-256": "6ebeb188f3cc3b647c4460c0b8e41b75d057747c662f4cd7912d77deaccfd2f2"
+      },
+      "description": "Windows DLL implant used by the malicious VS Code extension."
+    },
+    {
+      "type": "file",
+      "id": "file--c153492b-1863-4e3b-aa9f-480869184310",
+      "name": "darwin.node",
+      "hashes": {
+        "SHA-256": "fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda"
+      },
+      "description": "macOS dynamic library implant used by the malicious VS Code extension."
+    },
+    {
+      "type": "file",
+      "id": "file--f561e661-4c4e-47ae-9a93-e03a8ac1b056",
+      "name": "extension.js",
+      "hashes": {
+        "SHA-256": "9212a99a7730b9ee306e804af358955c3104e5afce23f7d5a207374482ab2f8f"
+      },
+      "description": "JavaScript loader for the Rust implants, located in dist/extension/desktop/."
+    },
+    {
+      "type": "file",
+      "id": "file--39790154-b1be-4ec4-bf4d-3d244f7c9953",
+      "name": "Decrypted JavaScript Payload",
+      "hashes": {
+        "SHA-256": "c32379e4567a926aa0d35d8123718e2ebeb15544a83a5b1da0269db5829d5ece"
+      },
+      "description": "AES-256-CBC encrypted JavaScript file delivered as a next-stage payload from C2."
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--2f3c565e-6449-466c-b0e3-81f54b5013f4",
+      "name": "Solana Blockchain Wallet C2",
+      "description": "Solana blockchain wallet address used as a command and control channel for the Rust implants.",
+      "aliases": [
+        "BjVeAjPrSKFiingBn4vZvghsGj9KCE8AJVtbc9S8o8SC"
+      ],
+      "infrastructure_types": [
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--0d71e4b9-72c7-42b0-a6a8-34e73d9b4a48",
+      "name": "C2 Server",
+      "description": "Command and control server used to deliver next-stage payloads and encrypted JavaScript blobs.",
+      "aliases": [
+        "217.69.11.60"
+      ],
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "external_references": [
+        {
+          "source_name": "C2 URL",
+          "url": "http://217.69.11.60/uVK7ZJefmiIoJkIP6lxWXw=="
+        },
+        {
+          "source_name": "C2 URL",
+          "url": "http://217.69.11.60/get_arhive_npm/karMkkT87qcssRoaHL1zYQ=="
+        },
+        {
+          "source_name": "C2 URL",
+          "url": "http://217.69.11.60/get_zombi_payload/uVK7ZJefmiIoJkIP6lxWXw%3D%3D"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368",
+      "name": "Google Calendar Event",
+      "description": "Google Calendar event used as a fallback C2 channel, with invisible Unicode characters in the event title to hide the C2 address.",
+      "aliases": [
+        "https://calendar.google.com/calendar/share?slt=1AXs0gW2ChIx550BJk0lEThoZf3_QvWIH_3UnB8o6GmkFhmRz2tKPa6Vqjn9sGOVi4_9apgcG27TRSQ"
+      ],
+      "infrastructure_types": [
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--4adc1c97-3e24-45b6-818f-29ed9ce4e5af",
+      "name": "darwin.node",
+      "hashes": {
+        "SHA-256": "fb07743d139f72fca4616b01308f1f705f02fda72988027bc68e9316655eadda"
+      },
+      "extensions": {
+        "macos-mach-o-ext": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dade3d19-df2e-4937-be1d-80bc83c74725",
+      "name": "extension.js",
+      "hashes": {
+        "SHA-256": "9212a99a7730b9ee306e804af358955c3104e5afce23f7d5a207374482ab2f8f"
+      }
+    },
+    {
+      "type": "blockchain-address",
+      "id": "blockchain-address--c94156e3-fb99-4dc2-a16e-a3cf10d7d766",
+      "blockchain": "solana",
+      "address": "BjVeAjPrSKFiingBn4vZvghsGj9KCE8AJVtbc9S8o8SC"
+    },
+    {
+      "type": "url",
+      "id": "url--71a72f9b-f836-40fd-90b2-3c4044cb4315",
+      "value": "hxxp://217[.]69.11.60/uVK7ZJefmiIoJkIP6lxWXw=="
+    },
+    {
+      "type": "file",
+      "id": "file--1a094864-5522-441d-ae10-67a51c599341",
+      "name": "decrypted JavaScript file from C2",
+      "hashes": {
+        "SHA-256": "c32379e4567a926aa0d35d8123718e2ebeb15544a83a5b1da0269db5829d5ece"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--6dee557f-d5d7-41fb-970d-8cee8befe2cc",
+      "value": "hxxp://217[.]69.11.60/get_arhive_npm/karMkkT87qcssRoaHL1zYQ=="
+    },
+    {
+      "type": "url",
+      "id": "url--2f1b152d-8d34-4e9b-847a-8eb6b3e7599b",
+      "value": "https://calendar.google.com/calendar/share?slt=1AXs0gW2ChIx550BJk0lEThoZf3_QvWIH_3UnB8o6GmkFhmRz2tKPa6Vqjn9sGOVi4_9apgcG27TRSQ"
+    },
+    {
+      "type": "url",
+      "id": "url--2d8a50e5-42a0-4790-b07a-8042a4608686",
+      "value": "hxxp://217[.]69.11.60/get_zombi_payload/uVK7ZJefmiIoJkIP6lxWXw%3D%3D"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--06e8ad3a-7a29-4bbc-8b31-22fc6540481d",
+      "relationship_type": "delivers",
+      "source_ref": "tool--fdcc78e1-ebbe-4f67-9067-3628d2558dfc",
+      "target_ref": "file--4f41bff5-e766-4704-8db5-d160f6352afe"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--55dc3d9f-7b14-491e-b64d-69360d880b56",
+      "relationship_type": "delivers",
+      "source_ref": "tool--fdcc78e1-ebbe-4f67-9067-3628d2558dfc",
+      "target_ref": "file--c153492b-1863-4e3b-aa9f-480869184310"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57ce1af1-c011-442f-b362-8f6e7d974b94",
+      "relationship_type": "delivers",
+      "source_ref": "tool--fdcc78e1-ebbe-4f67-9067-3628d2558dfc",
+      "target_ref": "file--f561e661-4c4e-47ae-9a93-e03a8ac1b056"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b2506cd-c136-4bea-88d9-504bba27f892",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6be0fa55-5d78-4c44-8eb4-eeab9da796db",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--be4949c7-9db5-4869-843a-3e9ad4bb50c2",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6902c2d4-b112-47e3-998e-2bd22b955c4b",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--330dc3f0-5afc-4c2f-82c5-cbdc9e2cef04",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--785002e4-e089-4887-a69a-6093f21b2b05",
+      "relationship_type": "uses",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--94078077-38b1-4d31-b603-0860dcb09b70",
+      "relationship_type": "drops",
+      "source_ref": "malware--6c3401fe-873e-4b32-a13a-a2ab7d1b212f",
+      "target_ref": "file--39790154-b1be-4ec4-bf4d-3d244f7c9953"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16c24ea3-6fc7-4f8b-9b82-807f71fdb56d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--baddf378-a452-4b84-b984-ff4727543d7d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cccb6762-e0c5-4a69-b86e-a5280c09db5c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817",
+      "target_ref": "infrastructure--c7cb0299-9780-4110-906c-038e55d79368"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc142876-6fa8-4aa5-b3d7-620ab13f2dfb",
+      "relationship_type": "drops",
+      "source_ref": "attack-pattern--d633ef4e-55af-4098-8703-9f9792bb3817",
+      "target_ref": "file--39790154-b1be-4ec4-bf4d-3d244f7c9953"
+    }
+  ]
+}

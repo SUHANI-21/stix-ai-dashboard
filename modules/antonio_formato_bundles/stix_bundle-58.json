@@ -1,0 +1,220 @@
+{
+  "type": "bundle",
+  "id": "bundle--81c29467-0251-4ac6-bcae-ca2906bba439",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--e268f476-3912-4352-97e8-66f8ffb3b04d",
+      "name": "Charlie Eriksen",
+      "description": "Malware Researcher at Aikido Security, author of the Shai Hulud analysis.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://www.aikido.dev/team-members/charlie-eriksen",
+      "labels": [
+        "security researcher",
+        "malware analysis"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--3045ce92-0b8a-4fe3-a6d0-fc3bf35c4b70",
+      "name": "bun_installer.js"
+    },
+    {
+      "type": "file",
+      "id": "file--8e327a9c-045e-4ea7-904d-0cf8b94a0b1e",
+      "name": "environment_source.js"
+    },
+    {
+      "type": "file",
+      "id": "file--c32a54cb-f03f-4802-804c-87526524627b",
+      "name": "3nvir0nm3nt.json"
+    },
+    {
+      "type": "file",
+      "id": "file--f1c2fae4-5051-4a9d-ac1d-e32e1303f810",
+      "name": "cl0vd.json"
+    },
+    {
+      "type": "file",
+      "id": "file--94da39e9-d02e-4a49-8a06-724bd201c680",
+      "name": "c9nt3nts.json"
+    },
+    {
+      "type": "file",
+      "id": "file--715ce84f-6fd6-464d-9bf2-cd4e04a3e6e8",
+      "name": "pigS3cr3ts.json"
+    },
+    {
+      "type": "file",
+      "id": "file--6ce44150-d90a-41e6-bf17-7cb55a1dd4b6",
+      "name": "actionsSecrets.json"
+    },
+    {
+      "type": "file",
+      "id": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000",
+      "name": "c0nt3nts.json"
+    },
+    {
+      "type": "software",
+      "id": "software--846406d4-9884-4ee8-92eb-64952d010627",
+      "name": "Shai Hulud",
+      "description": "Malware strain observed in npm package @vietmoney/react-big-calendar."
+    },
+    {
+      "type": "software",
+      "id": "software--b411a323-3d80-4847-8480-dd5bf6bc4216",
+      "name": "TruffleHog",
+      "description": "Tool referenced for secret scanning and error handling in the malware."
+    },
+    {
+      "type": "software",
+      "id": "software--5d40b066-b9d5-4cf8-b8b3-0cb3b58fe2f1",
+      "name": "bun",
+      "description": "Software referenced for package publishing by the malware."
+    },
+    {
+      "type": "software",
+      "id": "software--11bce0c5-48fe-40b0-a342-86a340eabaa4",
+      "name": "@vietmoney/react-big-calendar",
+      "description": "npm package infected with Shai Hulud malware."
+    },
+    {
+      "type": "url",
+      "id": "url--9fa5f47a-5b00-49ab-99b3-f206ff8a6eda",
+      "value": "https://www.npmjs.com/package/@vietmoney/react-big-calendar"
+    },
+    {
+      "type": "url",
+      "id": "url--93550059-3751-4e82-9bb9-e9ef0474723e",
+      "value": "https://raw.githubusercontent.com/"
+    },
+    {
+      "type": "url",
+      "id": "url--c69feaee-ed44-4a7b-85b9-e7fe353c2985",
+      "value": "https://www.aikido.dev/blog/shai-hulud-strikes-again---the-golden-path"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b5a4c35a-8fd3-4c12-92be-81b92a489ba2",
+      "relationship_type": "uses",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "attack-pattern--1ad2a4ed-fec2-4058-8234-e9d036b246a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--17a4d1a2-8661-48a8-bcbb-fbb0e12acb62",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--c8478539-6502-4bb2-9a9f-0fa5b47fd4a7",
+      "target_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b70efa6d-b735-47ae-9e93-50042b192842",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "identity--e268f476-3912-4352-97e8-66f8ffb3b04d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--753813cc-dccb-47bf-82c1-7cdd93992119",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1b54f95-f6cc-42a8-bfec-0b3ec47b7d2f",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8ffcca7e-e3f6-4557-a1ea-68b8acf70478",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e639e27-fecd-4f25-a0c2-f64be4255237",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32eb8913-c989-455c-8d16-378168cde765",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8bc53ad-9b7c-43f1-aec5-5a730f97cdbc",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b1fe628-bd2f-441b-938e-2ccdaa981d4d",
+      "relationship_type": "drops",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "file--278f4bfc-2f64-4a15-ba04-5162c13f4000"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--134e924b-16c4-4bf5-9185-d901ec9ba73f",
+      "relationship_type": "uses",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "software--11bce0c5-48fe-40b0-a342-86a340eabaa4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70653dc1-aafe-4b05-ac14-1aaf566b346c",
+      "relationship_type": "uses",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "software--11bce0c5-48fe-40b0-a342-86a340eabaa4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7fd74f53-0b40-496f-853a-da81a90c62ec",
+      "relationship_type": "uses",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "software--11bce0c5-48fe-40b0-a342-86a340eabaa4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--14f1014e-6bf4-4ead-984d-893c08e631f9",
+      "relationship_type": "uses",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "software--11bce0c5-48fe-40b0-a342-86a340eabaa4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--217870ee-c902-4f14-8c30-409ca675860f",
+      "relationship_type": "related-to",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "url--c69feaee-ed44-4a7b-85b9-e7fe353c2985"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7dd40e2f-e65e-4f8f-886a-a61dbed57f1f",
+      "relationship_type": "related-to",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "url--c69feaee-ed44-4a7b-85b9-e7fe353c2985"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f8921e0-e0f7-4e1d-b096-50f3c959a456",
+      "relationship_type": "related-to",
+      "source_ref": "malware--00bd1e15-05f6-42c6-8710-87697506c633",
+      "target_ref": "url--c69feaee-ed44-4a7b-85b9-e7fe353c2985"
+    }
+  ]
+}

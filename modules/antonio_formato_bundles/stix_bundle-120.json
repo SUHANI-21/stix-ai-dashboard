@@ -1,0 +1,130 @@
+{
+  "type": "bundle",
+  "id": "bundle--9dfc91ba-9821-45ed-baf3-5dc1e7dc5565",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--efe3e681-dd9c-47bc-b67a-7fb88fc951d8",
+      "name": "CVE-2024-51324",
+      "description": "A vulnerability in the Baidu Antivirus driver exploited by threat actors using the BYOVD technique to terminate endpoint detection and response (EDR) processes.",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-51324",
+          "external_id": "CVE-2024-51324"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a0ec53bb-fb02-4c48-b0be-c2100bd9ff1d",
+      "name": "Apache Tika XXE Injection",
+      "description": "A critical-severity vulnerability in the Apache Tika open source analysis toolkit that could allow attackers to perform XML External Entity (XXE) injection attacks.",
+      "external_references": [
+        {
+          "source_name": "Security Week",
+          "url": "https://www.securityweek.com/critical-apache-tika-vulnerability-leads-to-xxe-injection/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--16230615-231b-47ce-b440-17c184c47c36",
+      "hashes": {
+        "SHA-256": "d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a",
+        "MD5": "1f7e01a3355b52cbc92c908a61abf643"
+      },
+      "name": "cleanup.bat"
+    },
+    {
+      "type": "file",
+      "id": "file--9c09355b-9352-41a9-8660-87d684db3860",
+      "hashes": {
+        "SHA-256": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+        "MD5": "2915b3f8b703eb744fc54c81f4a9c67f"
+      },
+      "name": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--842c1a84-a895-4b20-9752-2cbe258c09ec",
+      "hashes": {
+        "SHA-256": "1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218",
+        "MD5": "a1f4931992bf05e9bff4b173c15cab15"
+      },
+      "name": "a1f4931992bf05e9bff4b173c15cab15.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5385860f-1712-4d44-9a80-8e983094a80a",
+      "hashes": {
+        "SHA-256": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+        "MD5": "aac3165ece2959f39ff98334618d10d9"
+      },
+      "name": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "hashes": {
+        "SHA-256": "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+        "MD5": "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+      },
+      "name": "ck8yh2og.dll"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ebf33548-2aae-4101-9bff-243a3d64118f",
+      "name": "CVE-2024-51324"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96ee5ea9-7a4b-4e47-8e0a-6c4966ee4e30",
+      "relationship_type": "exploits",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "vulnerability--ebf33548-2aae-4101-9bff-243a3d64118f",
+      "description": "DeadLock ransomware campaign exploits the Baidu Antivirus driver vulnerability (CVE-2024-51324) using the BYOVD technique."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bc14eecb-87ea-45a6-9e83-b1dc9b172f8f",
+      "relationship_type": "related-to",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "description": "W32.D933EC4AAF-90.SBX.TG malware is associated with the file cleanup.bat (SHA256: d933ec4aaf7cfe2f459d64ea4af346e69177e150df1cd23aad1904f5fd41f44a)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ce65d6ca-30e4-4c08-b518-161fb94de487",
+      "relationship_type": "related-to",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "description": "Win.Worm.Coinminer::1201 malware is associated with the file 9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507.exe (SHA256: 9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5d230ef6-6e4d-4244-965e-89a9903a73a0",
+      "relationship_type": "related-to",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "description": "Auto.1EC343.272247.in02 malware is associated with the file a1f4931992bf05e9bff4b173c15cab15.exe (SHA256: 1ec34305e593c27bb95d538d45b6a17433e71fa1c1877ce78bf2dbda6839f218)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1aee7dc-7c32-4c05-86e8-8e6452d263c5",
+      "relationship_type": "related-to",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "description": "W32.Injector:Gen.21ie.1201 malware is associated with the file 96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974.exe (SHA256: 96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3bb0805-8056-46e9-ac66-762bb114efee",
+      "relationship_type": "related-to",
+      "source_ref": "malware--a49fe352-09a9-4709-b7c3-c8bb8058f789",
+      "target_ref": "file--19c89ce6-704c-4911-a324-46233e274293",
+      "description": "Auto.90B145.282358.in02 malware is associated with the file ck8yh2og.dll (SHA256: 90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59)."
+    }
+  ]
+}

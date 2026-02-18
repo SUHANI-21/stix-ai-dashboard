@@ -1,0 +1,305 @@
+{
+  "type": "bundle",
+  "id": "bundle--c4714a1f-fdac-4355-a110-e3b5669d7f62",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "created": "2026-01-13T14:17:07.427400Z",
+      "modified": "2026-01-13T14:17:07.427400Z",
+      "name": "Mandiant",
+      "description": "Mandiant is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--3a11da88-6f2f-540d-e596-c4eeed324cc5",
+      "created": "2026-01-13T14:17:07.427400Z",
+      "modified": "2026-01-13T14:17:07.427400Z",
+      "name": "Amine Ismail, Anirudha Kanodia",
+      "description": "Amine Ismail, Anirudha Kanodia is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-13T14:17:07.427400Z",
+      "modified": "2026-01-13T14:17:07.427400Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-13T14:17:07.427400Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "indicator",
+      "spec_version": "2.1",
+      "id": "indicator--344164e6-8af1-43f4-b390-34b6db5f2d18",
+      "created": "2026-01-13T14:17:09.001778Z",
+      "modified": "2026-01-13T14:17:09.001778Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "URL: https://my.salesforce.com/services/data/v64.0/graphql",
+      "description": "Indicator of Compromise: url - https://my.salesforce.com/services/data/v64.0/graphql\nConfidence: medium\nNotes: Used in attack scenarios to retrieve large volumes of records from Salesforce objects, bypassing standard UI record limits if permissions are misconfigured.",
+      "pattern": "[url:value = 'https://my.salesforce.com/services/data/v64.0/graphql']",
+      "pattern_type": "stix",
+      "pattern_version": "2.1",
+      "valid_from": "2026-01-13T14:17:09.001778Z",
+      "indicator_types": [
+        "malicious-activity"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "created": "2026-01-13T14:17:34.418477Z",
+      "modified": "2026-01-13T14:17:34.418477Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Exploit Public-Facing Aura Endpoint Misconfiguration",
+      "description": "Attackers target misconfigured access controls on Salesforce Aura endpoints, allowing guest (unauthenticated) users to access sensitive object records, such as Account data. By identifying applications where sharing rules or permissions are improperly set, adversaries can retrieve large volumes of confidential information without needing to authenticate. This technique leverages the inherent trust and functionality of the Aura framework, exploiting the fact that certain endpoints and aura-enabled methods are exposed to the public due to misconfiguration. The impact is significant, as attackers can access credit card numbers, identity documents, and health information directly from the backend database.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1190/",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bd02238d-4bb5-c587-432f-46ba6d9c1862",
+      "created": "2026-01-13T14:17:34.418587Z",
+      "modified": "2026-01-13T14:17:34.418587Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Automated Detection and Collection via AuraInspector",
+      "description": "AuraInspector, an open-source tool, automates the identification and collection of exposed records by systematically auditing Salesforce Aura endpoints for misconfigurations. The tool simulates attacker behavior by sending crafted requests to Aura endpoints, invoking methods such as getConfigData and getItems, and analyzing responses for unauthorized data access. This automation enables rapid discovery and extraction of sensitive records, providing actionable insights for defenders but also demonstrating how attackers could efficiently enumerate and collect exposed data at scale.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1119/",
+          "external_id": "T1119"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--a624bb00-8867-d519-effb-2175547a22df",
+      "created": "2026-01-13T14:17:34.418772Z",
+      "modified": "2026-01-13T14:17:34.418772Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Data Retrieval Using Aura getItems Method",
+      "description": "Attackers leverage the legitimate getItems Aura method to retrieve object records from the Salesforce backend. By crafting requests with specific parameters, adversaries can access records for objects they have permissions to view. When access controls are misconfigured, this method can be abused to enumerate and extract large datasets, including sensitive information. The technique is particularly effective because it uses standard application functionality, making detection challenging unless access controls are properly enforced.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1213/",
+          "external_id": "T1213"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--5a1e67c3-9916-210c-d4bc-027d380acfdf",
+      "created": "2026-01-13T14:17:34.418905Z",
+      "modified": "2026-01-13T14:17:34.418905Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Bypass Record Retrieval Limits via sortBy Parameter Manipulation",
+      "description": "Salesforce imposes a limit of 2,000 records per retrieval using standard methods. Attackers discovered that manipulating the sortBy parameter in the getItems Aura method allows them to change the sort order and access additional records beyond the default limit. By iteratively sorting on different fields (including ascending and descending orders), adversaries can paginate through the entire dataset, effectively bypassing built-in restrictions and maximizing data extraction. This technique demonstrates a nuanced understanding of the Aura framework and its parameters.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--65ef7510-a4ce-ea86-64dc-1ae0d029ea46",
+      "created": "2026-01-13T14:17:34.418958Z",
+      "modified": "2026-01-13T14:17:34.418958Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Action Bulking (Boxcar'ing) for Efficient Data Collection",
+      "description": "The Aura framework supports 'boxcar'ing', a mechanism where multiple client-side actions are queued and bundled into a single POST request to the server. Attackers exploit this feature to optimize data collection, reducing the number of network requests needed to retrieve large volumes of records. By batching up to 250 actions in one request, adversaries can efficiently extract data from multiple objects or perform bulk operations, minimizing detection and maximizing throughput.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1074/",
+          "external_id": "T1074"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--fdecbd15-13e2-4d46-6ee0-0196c8b7be3d",
+      "created": "2026-01-13T14:17:34.419010Z",
+      "modified": "2026-01-13T14:17:34.419010Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Data Filtering on Multiple Fields for Enhanced Record Retrieval",
+      "description": "Attackers use filtering capabilities on various fields (such as CreatedBy, LastModifiedBy, and custom fields) to refine their data retrieval queries. By applying filters, they can target specific subsets of records, bypassing limitations and accessing a broader range of sensitive information. This technique is particularly effective for built-in and custom Salesforce objects, allowing adversaries to demonstrate the full impact of misconfigurations and extract valuable data efficiently.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1025/",
+          "external_id": "T1025"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--eeabf10a-ead2-1cae-96af-017b3c77c535",
+      "created": "2026-01-13T14:17:34.419087Z",
+      "modified": "2026-01-13T14:17:34.419087Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "GraphQL Endpoint Abuse for Standardized Data Retrieval",
+      "description": "Attackers leverage the GraphQL controller within Salesforce to perform consistent and standardized retrieval of object records. By using GraphQL queries, adversaries can enumerate field names, exploit built-in introspection, and retrieve the maximum number of records possible. This technique allows for flexible and powerful data extraction, bypassing traditional limitations and providing attackers with detailed information about the database schema and contents.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "discovery"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--03d57d96-b604-2eee-2570-4cd6d1046773",
+      "created": "2026-01-13T14:17:49.169579Z",
+      "modified": "2026-01-13T14:17:49.169579Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Salesforce Aura framework",
+      "description": "The Salesforce Aura framework is abused by attackers to retrieve unauthorized records from backend databases by exploiting misconfigured access controls and manipulating parameters such as 'getConfigData', 'getItems', and 'sortBy'.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--6d2c21f3-a329-3b31-e9fe-840ca2862418",
+      "created": "2026-01-13T14:17:49.169669Z",
+      "modified": "2026-01-13T14:17:49.169669Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "Salesforce Experience Cloud",
+      "description": "Salesforce Experience Cloud is leveraged by attackers to access sensitive data due to misconfigured object sharing rules, allowing unauthorized data retrieval through legitimate application endpoints.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--5d7cf33d-ff18-4b86-9bed-f15a10dd5bcd",
+      "created": "2026-01-13T14:17:49.169727Z",
+      "modified": "2026-01-13T14:17:49.169727Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "GraphQL API (Salesforce)",
+      "description": "Attackers use the legitimate Salesforce GraphQL API to bypass standard record retrieval limits and extract larger volumes of sensitive data from misconfigured environments.",
+      "tool_types": [
+        "information-gathering",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--33988755-ae2d-7c98-cf17-675dda6d736b",
+      "created": "2026-01-13T14:17:49.170052Z",
+      "modified": "2026-01-13T14:17:49.170052Z",
+      "created_by_ref": "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+      "name": "AuraInspector: Auditing Salesforce Aura for Data Exposure | Google Cloud Blog",
+      "description": "This report contains technical analysis and indicators from: https://cloud.google.com/blog/topics/threat-intelligence/auditing-salesforce-aura-data-exposure/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-13T14:17:49.170052Z",
+      "object_refs": [
+        "identity--3abdfe00-0062-2e3f-9459-6b2f24935d67",
+        "identity--3a11da88-6f2f-540d-e596-c4eeed324cc5",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "indicator--344164e6-8af1-43f4-b390-34b6db5f2d18",
+        "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+        "attack-pattern--bd02238d-4bb5-c587-432f-46ba6d9c1862",
+        "attack-pattern--a624bb00-8867-d519-effb-2175547a22df",
+        "attack-pattern--5a1e67c3-9916-210c-d4bc-027d380acfdf",
+        "attack-pattern--65ef7510-a4ce-ea86-64dc-1ae0d029ea46",
+        "attack-pattern--fdecbd15-13e2-4d46-6ee0-0196c8b7be3d",
+        "attack-pattern--eeabf10a-ead2-1cae-96af-017b3c77c535",
+        "tool--03d57d96-b604-2eee-2570-4cd6d1046773",
+        "tool--6d2c21f3-a329-3b31-e9fe-840ca2862418",
+        "tool--5d7cf33d-ff18-4b86-9bed-f15a10dd5bcd"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

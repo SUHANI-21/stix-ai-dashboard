@@ -1,0 +1,777 @@
+{
+  "type": "bundle",
+  "id": "bundle--86c2e2c1-bfff-4a33-ac56-1a94fb508304",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ca6259eb-a4b3-4e0d-8ed7-1eafaa26445a",
+      "name": "MongoBleed: MongoDB Zlib Vulnerability",
+      "description": "MongoBleed (CVE-2025-14847) is a critical vulnerability in MongoDB's network transport layer, specifically in the zlib decompression logic. It allows unauthenticated, network-level attackers to extract fragments of uninitialized server memory by sending specially crafted compressed payloads. The issue occurs before authentication, enabling remote exploitation. Even partial memory disclosure can reveal sensitive application data and internal server state.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-27T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "NVD",
+          "external_id": "CVE-2025-14847"
+        },
+        {
+          "source_name": "MongoDB Advisory",
+          "url": "https://jira.mongodb.org/browse/SERVER-115508"
+        },
+        {
+          "source_name": "Aikido Intel",
+          "url": "https://intel.aikido.dev/cve/AIKIDO-2025-10972"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d2a58321-a223-4d03-ae50-442619c188ae",
+      "name": "Memory Disclosure via Malformed Compressed Payloads",
+      "description": "Attackers send specially crafted compressed network messages to MongoDB instances with zlib compression enabled. The malformed payloads cause MongoDB to miscalculate decompressed data length, resulting in the server returning uninitialized heap memory to the client. This attack does not require authentication and can be performed remotely if the MongoDB service is network-exposed.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "MongoBleed Blog",
+          "url": "https://www.aikido.dev/blog/mongobleed-mongodb-zlib-vulnerability-cve-2025-14847"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--79ba7c85-c154-4426-92a4-62d6c8167723",
+      "name": "MongoDB",
+      "description": "MongoDB is an open-source, document-oriented database program. Multiple versions are affected by the MongoBleed vulnerability (CVE-2025-14847) in the zlib compression logic of its network transport layer.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z",
+      "versions": [
+        "8.2.0-8.2.2",
+        "8.0.0-8.0.16",
+        "7.0.0-7.0.27",
+        "6.0.0-6.0.26",
+        "5.0.0-5.0.31",
+        "4.4.0-4.4.29",
+        "4.2.x (all)",
+        "4.0.x (all)",
+        "3.6.x (all)"
+      ],
+      "external_references": [
+        {
+          "source_name": "MongoDB",
+          "url": "https://www.mongodb.com/"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--855fae59-b542-4fb3-8bf0-008d8777059f",
+      "name": "MongoDB",
+      "cpe": "cpe:2.3:a:mongodb:mongodb:*",
+      "versions": [
+        {
+          "version": "8.2.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.2.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.2.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.2.3",
+          "status": "fixed"
+        },
+        {
+          "version": "8.0.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.3",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.4",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.5",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.6",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.7",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.8",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.9",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.10",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.11",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.12",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.13",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.14",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.15",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.16",
+          "status": "vulnerable"
+        },
+        {
+          "version": "8.0.17",
+          "status": "fixed"
+        },
+        {
+          "version": "7.0.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.3",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.4",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.5",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.6",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.7",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.8",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.9",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.10",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.11",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.12",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.13",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.14",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.15",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.16",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.17",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.18",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.19",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.20",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.21",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.22",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.23",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.24",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.25",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.26",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.27",
+          "status": "vulnerable"
+        },
+        {
+          "version": "7.0.28",
+          "status": "fixed"
+        },
+        {
+          "version": "6.0.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.3",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.4",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.5",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.6",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.7",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.8",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.9",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.10",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.11",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.12",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.13",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.14",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.15",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.16",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.17",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.18",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.19",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.20",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.21",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.22",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.23",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.24",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.25",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.26",
+          "status": "vulnerable"
+        },
+        {
+          "version": "6.0.27",
+          "status": "fixed"
+        },
+        {
+          "version": "5.0.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.3",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.4",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.5",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.6",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.7",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.8",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.9",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.10",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.11",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.12",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.13",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.14",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.15",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.16",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.17",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.18",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.19",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.20",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.21",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.22",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.23",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.24",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.25",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.26",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.27",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.28",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.29",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.30",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.31",
+          "status": "vulnerable"
+        },
+        {
+          "version": "5.0.32",
+          "status": "fixed"
+        },
+        {
+          "version": "4.4.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.1",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.3",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.4",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.5",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.6",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.7",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.8",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.9",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.10",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.11",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.12",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.13",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.14",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.15",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.16",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.17",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.18",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.19",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.20",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.21",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.22",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.23",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.24",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.25",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.26",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.27",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.28",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.29",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.4.30",
+          "status": "fixed"
+        },
+        {
+          "version": "4.2",
+          "status": "vulnerable"
+        },
+        {
+          "version": "4.0",
+          "status": "vulnerable"
+        },
+        {
+          "version": "3.6",
+          "status": "vulnerable"
+        }
+      ],
+      "vendor": "MongoDB Inc."
+    },
+    {
+      "type": "software",
+      "id": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "name": "zlib",
+      "cpe": "cpe:2.3:a:zlib:zlib:*"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--463dd0af-2952-4554-93ac-0d39afdfe122",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoDB uses zlib for network message compression, which is relevant to the vulnerability.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b4e4026a-4596-430a-b89c-1d5ee7a8c076",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "network-traffic--60edf104-630c-4edf-8b91-63c82b916c98",
+      "description": "MongoDB network traffic uses zlib compression over TCP port 27017.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--58846da2-1149-4237-89c8-994058b99a48",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "network-traffic--60edf104-630c-4edf-8b91-63c82b916c98",
+      "description": "MongoDB network traffic uses zlib compression over TCP port 27017.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2e26308f-f925-4f01-9a61-60f633e1a901",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--d2a58321-a223-4d03-ae50-442619c188ae",
+      "target_ref": "network-traffic--60edf104-630c-4edf-8b91-63c82b916c98",
+      "description": "Attackers send specially crafted compressed network messages (zlib over TCP/27017) to exploit the vulnerability.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4c15346a-355a-43aa-88d8-0e2da6d35d90",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--d2a58321-a223-4d03-ae50-442619c188ae",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "The attack pattern targets MongoDB by exploiting its zlib compression logic.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2e2fc7c-d2d9-4c7e-9dc1-0a94c87a31a4",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--d2a58321-a223-4d03-ae50-442619c188ae",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "The attack pattern targets MongoDB by exploiting its zlib compression logic.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--abf9b44e-6bbb-4bd4-9a58-8308eb509fff",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoDB uses zlib for network message compression, which is relevant to the vulnerability.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71671962-b5a1-4f89-ae5e-bcd203093810",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--ca6259eb-a4b3-4e0d-8ed7-1eafaa26445a",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoBleed (CVE-2025-14847) affects MongoDB software.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c4f6da39-180a-4cbb-9cf3-83dea271091c",
+      "relationship_type": "affects",
+      "source_ref": "vulnerability--ca6259eb-a4b3-4e0d-8ed7-1eafaa26445a",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoBleed (CVE-2025-14847) affects MongoDB software.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--13a271d6-e9c9-4114-bd9a-0eee9f5987d3",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoDB uses zlib for network message compression, which is relevant to the vulnerability.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c82b3568-9ab8-422d-9a53-ac755a5bfb15",
+      "relationship_type": "has",
+      "source_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "target_ref": "software--aac95ab2-19ce-44e0-9b29-9e2cf0645ab9",
+      "description": "MongoDB uses zlib for network message compression, which is relevant to the vulnerability.",
+      "created": "2025-12-26T00:00:00.000Z",
+      "modified": "2025-12-26T00:00:00.000Z"
+    }
+  ]
+}

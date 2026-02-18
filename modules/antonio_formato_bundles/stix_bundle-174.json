@@ -1,0 +1,493 @@
+{
+  "type": "bundle",
+  "id": "bundle--4dfa16fe-9957-473c-9336-b25db751eb1f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1a7114ef-f105-4174-97a1-b1d7f5b8abe7",
+      "name": "ShadowMQ",
+      "description": "ShadowMQ is a communication-layer flaw propagated through code reuse in AI inference servers, caused by unsafe use of ZeroMQ (ZMQ) and Python's pickle deserialization. Vulnerable code patterns were copied between projects, leading to critical Remote Code Execution (RCE) vulnerabilities in frameworks from Meta, NVIDIA, Microsoft, vLLM, SGLang, and Modular. Exploitation can lead to arbitrary code execution, privilege escalation, data exfiltration, and cryptomining.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--c8038111-fa0b-41e6-bc02-603422ce27a3",
+      "name": "CVE-2024-50050",
+      "description": "Critical RCE vulnerability in Meta Llama Stack due to unsafe usage of ZMQ's recv_pyobj() and Python's pickle deserialization. Patched in October 2024 by switching to JSON-based serialization.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2024-50050",
+          "url": "https://security.snyk.io/vuln/SNYK-PYTHON-LLAMASTACK-8302915"
+        },
+        {
+          "source_name": "Meta Llama Stack Patch",
+          "url": "https://www.oligo.security/blog/cve-2024-50050-critical-vulnerability-in-meta-llama-llama-stack"
+        }
+      ],
+      "created": "2024-10-01T00:00:00.000Z",
+      "modified": "2024-10-01T00:00:00.000Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f0c69a7e-cc46-4d1e-8169-7008486e939b",
+      "name": "CVE-2025-30165",
+      "description": "Critical RCE vulnerability in vLLM due to unsafe pickle deserialization over unauthenticated ZMQ TCP sockets. Fixed in May 2025 by replacing the vulnerable V0 engine with a safe V1 default.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-30165",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-30165"
+        },
+        {
+          "source_name": "vLLM Advisory",
+          "url": "https://github.com/vllm-project/vllm/security/advisories/GHSA-9pcc-gvx5-r5wm"
+        }
+      ],
+      "created": "2025-05-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--262ea770-9c48-4ae2-a7d2-e41a56456189",
+      "name": "CVE-2025-23254",
+      "description": "Critical RCE vulnerability in NVIDIA TensorRT-LLM due to unsafe pickle deserialization over unauthenticated ZMQ TCP sockets. Patched in May 2025 by implementing HMAC validation. Rated Critical (9.3) by NVD.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-23254",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2025-23254"
+        },
+        {
+          "source_name": "NVIDIA Security Bulletin",
+          "url": "https://nvidia.custhelp.com/app/answers/detail/a_id/5648/~/security-bulletin%3A-nvidia-tensorrt-llm---april-2025"
+        }
+      ],
+      "created": "2025-05-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "name": "CVE-2025-60455",
+      "description": "Critical RCE vulnerability in Modular Max Server due to unsafe pickle deserialization over unauthenticated ZMQ TCP sockets. Patched in June 2025 by switching to msgpack.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-60455",
+          "url": "http://cve-2025-60455"
+        },
+        {
+          "source_name": "Modular Patch",
+          "url": "https://github.com/modular/modular/commit/10620059fb5c47fb0c30e5d21a8ff3b8d622fba4#diff-0a431c9c2c12d683e9d99376724b7f0325cdfdadc181649f7a9c620e54d54d91R23-R223"
+        }
+      ],
+      "created": "2025-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "software",
+      "id": "software--a5415fa5-49da-47a6-a07f-d4368b9463e1",
+      "name": "Meta Llama Stack",
+      "description": "Meta's Llama Stack is an AI inference server affected by the ShadowMQ vulnerability (CVE-2024-50050).",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2024-06-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/llamastack/llama-stack"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--99962ad8-6b0d-4347-91f0-b70d76702bc6",
+      "name": "NVIDIA TensorRT-LLM",
+      "description": "NVIDIA TensorRT-LLM is an AI inference server affected by the ShadowMQ vulnerability (CVE-2025-23254).",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2024-06-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "url": "https://nvidia.github.io/TensorRT-LLM/index.html"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--f15eba38-6535-41ad-8fef-b3b684670084",
+      "name": "vLLM",
+      "description": "vLLM is a PyTorch-based AI inference server affected by the ShadowMQ vulnerability (CVE-2025-30165).",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2024-06-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/vllm-project/vllm"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--7a98b639-a1fa-4d11-8abf-8edeee6fef28",
+      "name": "SGLang",
+      "description": "SGLang is a PyTorch-based AI inference server affected by the ShadowMQ vulnerability. Fixes are incomplete as of June 2025.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/sgl-project/sglang"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--b4ba4dce-e29a-4e5e-8e31-fe36baaa76e8",
+      "name": "Modular Max Server",
+      "description": "Modular Max Server is an AI inference server affected by the ShadowMQ vulnerability (CVE-2025-60455).",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z",
+      "external_references": [
+        {
+          "source_name": "Documentation",
+          "url": "https://docs.modular.com/max/serve/"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--2b29016a-211d-4354-8abc-786e37b59bb1",
+      "name": "Microsoft Sarathi-Serve",
+      "description": "Microsoft Sarathi-Serve is a research AI inference framework affected by the ShadowMQ vulnerability and remains unpatched as of June 2025.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "file",
+      "id": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "name": "recv_pyobj.py",
+      "extensions": {
+        "python": {
+          "functions": [
+            {
+              "name": "recv_pyobj",
+              "parameters": [
+                {
+                  "name": "self"
+                },
+                {
+                  "name": "flags",
+                  "type": "int",
+                  "default": 0
+                }
+              ],
+              "return_type": "Any",
+              "body": [
+                "msg = self.recv(flags)",
+                "return self._deserialize(msg, pickle.loads)"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--171bf950-c8b2-4139-9f02-2a6c61a75152",
+      "name": "Meta Llama Stack",
+      "cpe": "cpe:2.3:a:meta:llama_stack:*",
+      "version": "v0.0.41",
+      "vendor": "Meta"
+    },
+    {
+      "type": "software",
+      "id": "software--e5e7eac8-e45a-414f-bee3-cfc5795f2e3b",
+      "name": "NVIDIA TensorRT-LLM",
+      "cpe": "cpe:2.3:a:nvidia:tensorrt-llm:*",
+      "version": "v0.18.2",
+      "vendor": "NVIDIA"
+    },
+    {
+      "type": "software",
+      "id": "software--4711f9b5-6db8-4c3a-862e-8fc767e59976",
+      "name": "vLLM",
+      "cpe": "cpe:2.3:a:vllm:vllm:*",
+      "version": "v0.8.0",
+      "vendor": "vLLM Project"
+    },
+    {
+      "type": "software",
+      "id": "software--9b7e0bb2-5bf6-459c-aea9-b395bbc9a47a",
+      "name": "Modular Max Server",
+      "cpe": "cpe:2.3:a:modular:max_server:*",
+      "version": "v25.6",
+      "vendor": "Modular"
+    },
+    {
+      "type": "software",
+      "id": "software--14a1584f-04a1-403c-b897-3aac3b3f4681",
+      "name": "SGLang",
+      "cpe": "cpe:2.3:a:sgl-project:sglang:*",
+      "vendor": "SGLang Project"
+    },
+    {
+      "type": "software",
+      "id": "software--546f8ae7-8c9a-4b9a-babc-eb0f999b2082",
+      "name": "Microsoft Sarathi-Serve",
+      "cpe": "cpe:2.3:a:microsoft:sarathi-serve:*",
+      "vendor": "Microsoft"
+    },
+    {
+      "type": "software",
+      "id": "software--68c9a76e-b426-45b1-91bc-d3137f1c632c",
+      "name": "pyzmq",
+      "cpe": "cpe:2.3:a:zeromq:pyzmq:*",
+      "vendor": "ZeroMQ"
+    },
+    {
+      "type": "software",
+      "id": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "name": "pickle",
+      "cpe": "cpe:2.3:a:python:pickle:*",
+      "vendor": "Python"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ea967dd2-ecdf-4a4e-bb3d-8057e639313d",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "ShadowMQ is the root cause of CVE-2024-50050.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2024-10-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee60089b-fa95-4d83-a5a1-ffb82296a33a",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "ShadowMQ is the root cause of CVE-2025-30165.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cdb29521-bca1-4a1e-a43d-9c69e5f70f48",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "ShadowMQ is the root cause of CVE-2025-23254.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--06485da2-4eea-47d9-acb1-c72b1c20fdbe",
+      "relationship_type": "has",
+      "source_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "ShadowMQ is the root cause of CVE-2025-60455.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f45ed334-50b7-4ef3-9cea-789b5d4661c9",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "Meta Llama Stack is affected by CVE-2024-50050.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2024-10-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dee075c4-b944-4e31-9ba6-c2edda57c00f",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "NVIDIA TensorRT-LLM is affected by CVE-2025-23254.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb57c17c-78a2-4e9a-91fd-556166b85afa",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "vLLM is affected by CVE-2025-30165.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-05-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba01a39b-d3ff-4e93-aa2a-c14490a120a3",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "SGLang is affected by ShadowMQ.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aa555a27-7c83-4b17-ac8d-5f8bebefc491",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "Modular Max Server is affected by CVE-2025-60455.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e4beb7c-cf80-4083-9938-3fdb6f4eb9fb",
+      "relationship_type": "has",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "Microsoft Sarathi-Serve is affected by ShadowMQ.",
+      "created": "2024-06-01T00:00:00.000Z",
+      "modified": "2025-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c851fa6e-d6b8-4ac5-b6ce-5ed47cc89748",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "Meta Llama Stack used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2529643c-1920-4347-a9f6-d7c89907c670",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "NVIDIA TensorRT-LLM used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c1440be9-624f-4514-bbcd-33599568ecc6",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "vLLM used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f12d15d-5799-409a-b990-916c3544869b",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "SGLang used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cb0f1f7-6165-4eae-b1f1-a61fdc35e1bc",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "Modular Max Server used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--72ea577b-3843-434c-a16d-e789b78338b7",
+      "relationship_type": "uses",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "description": "Microsoft Sarathi-Serve used the vulnerable recv_pyobj.py file.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--709fddb6-dadf-4eb3-8c4e-cc5e351e9efc",
+      "relationship_type": "uses",
+      "source_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "target_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "description": "recv_pyobj.py uses pyzmq.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59567c72-aa9f-46c6-8fae-7c2ba941b3cb",
+      "relationship_type": "uses",
+      "source_ref": "file--1cfc5f5f-3dc2-4f29-bcc7-15a31e1a5278",
+      "target_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "description": "recv_pyobj.py uses pickle.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--825fe57b-0493-41e8-9c5b-af19117577d3",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "Meta Llama Stack communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ac75cfb4-9419-42e6-b0d0-5b4b4710ab3b",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "NVIDIA TensorRT-LLM communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--84ccbc7d-d9a7-4411-9f0a-e4ed07e83e03",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "vLLM communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b151b66-55e7-4bb5-8489-67c260da5416",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "SGLang communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--85643ee3-f512-4cc4-a241-b4966f2c04d1",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "Modular Max Server communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96e4da4b-caac-41b5-a029-633d4baf70a4",
+      "relationship_type": "communicates-with",
+      "source_ref": "software--803647bb-87c6-4f6e-998b-30aa1dcca9bd",
+      "target_ref": "network-traffic--580d222d-6fb8-4402-aa77-70108e88e105",
+      "description": "Microsoft Sarathi-Serve communicates over ZMQ TCP sockets.",
+      "created": "2024-06-01T00:00:00.000Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5a0457e-47a9-44d5-b3dc-1a1386950ac1",
+      "relationship_type": "exploits",
+      "source_ref": "malware--564f347b-61fa-4f1b-9d9f-d93863381076",
+      "target_ref": "vulnerability--852e3433-db1b-4750-a04f-7799cfce3cf2",
+      "description": "ShadowRay cryptominer exploits ShadowMQ vulnerabilities.",
+      "created": "2024-06-01T00:00:00.000Z"
+    }
+  ]
+}

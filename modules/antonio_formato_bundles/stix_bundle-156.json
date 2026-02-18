@@ -1,0 +1,257 @@
+{
+  "type": "bundle",
+  "id": "bundle--05188d33-1447-4256-baba-68b5a476ea1b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2",
+      "name": "Oligo Security",
+      "description": "Oligo Security is a security research team that discovered and disclosed multiple critical vulnerabilities in Fluent Bit.",
+      "identity_class": "organization",
+      "contact_information": "info@oligosecurity.io",
+      "external_references": [
+        {
+          "source_name": "website",
+          "url": "https://oligosecurity.io/"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "name": "Fluent Bit",
+      "cpe": "cpe:2.3:a:fluent:fluent-bit:*",
+      "description": "Fluent Bit is an open-source log processor and forwarder, widely deployed in cloud, container, and Kubernetes environments."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--11463ce3-4f8d-485f-9c79-e07b20434477",
+      "name": "CVE-2025-12972",
+      "description": "Unsanitized tag values are used to generate output filenames, allowing attackers to inject path-traversal sequences like '../' to write or overwrite arbitrary files on disk, enabling log tampering and, in many configurations, full remote code execution.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12972"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--4d697e9c-63d4-48a9-abe1-93895cbbb17f",
+      "name": "CVE-2025-12970",
+      "description": "A stack buffer overflow in the Docker input enables attackers to trigger crashes or execute code by creating containers with excessively long names, giving them control over the Fluent Bit agent on the host.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12970"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a690939e-2a58-41cd-ac71-6cce67061df6",
+      "name": "CVE-2025-12978",
+      "description": "A flaw in Fluent Bit\u2019s tag-matching logic lets attackers spoof trusted tags by guessing only the first character of a Tag_Key, enabling them to reroute logs, bypass filters, and inject malicious or misleading records.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12978"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--186804f9-f3fe-4097-9723-8e730d3993a3",
+      "name": "CVE-2025-12977",
+      "description": "Tags derived from user-controlled fields bypass sanitization, allowing attackers to inject newlines, traversal sequences, and control characters that corrupt downstream logs or enable broader output-based attacks.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12977"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "name": "CVE-2025-12969",
+      "description": "Fluent Bit forwarders configured with Security.Users silently disable authentication, allowing remote attackers to send logs, inject false telemetry, or flood detection systems despite appearing secured.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-12969"
+        }
+      ]
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--61b42256-4d9b-4739-a3f4-f226c78a0cf2",
+      "value": "info@oligosecurity.io"
+    },
+    {
+      "type": "url",
+      "id": "url--ef9b808d-cbf7-43bf-9a7d-108a71bad75b",
+      "value": "https://github.com/fluent/fluent-bit/"
+    },
+    {
+      "type": "url",
+      "id": "url--26e1593e-bbb6-4104-97f2-52e97fc89742",
+      "value": "https://github.com/fluent/fluent-bit/releases/tag/v4.1.1"
+    },
+    {
+      "type": "url",
+      "id": "url--637fe407-440e-4818-93a5-b7903aedd752",
+      "value": "https://github.com/aws/aws-for-fluent-bit"
+    },
+    {
+      "type": "url",
+      "id": "url--72d9b1b1-3cc9-4159-9ceb-e879ed7f3074",
+      "value": "https://gallery.ecr.aws/aws-observability/aws-for-fluent-bit"
+    },
+    {
+      "type": "url",
+      "id": "url--41aa2f12-c08d-4849-96de-79af7eabd5fb",
+      "value": "https://aws.amazon.com/inspector/"
+    },
+    {
+      "type": "url",
+      "id": "url--3e8364c5-ee7d-4ee0-ad9e-7cbd63d0e9c6",
+      "value": "https://aws.amazon.com/security-hub/"
+    },
+    {
+      "type": "url",
+      "id": "url--087a16b2-9bd3-49f4-922b-1912205e5aae",
+      "value": "https://docs.aws.amazon.com/systems-manager/latest/userguide/patch-manager.html"
+    },
+    {
+      "type": "url",
+      "id": "url--39f4ab80-ab0f-4d79-ba1c-d4dafc8565a1",
+      "value": "https://docs.fluentbit.io/manual/data-pipeline/outputs/file#configuration-file"
+    },
+    {
+      "type": "url",
+      "id": "url--abd14369-de2c-4e98-a231-003f72722ca1",
+      "value": "https://docs.fluentbit.io/manual/data-pipeline/inputs/forward#fluent-bit-and-secure-forward-setup"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9742872f-0eba-4d4b-adcc-4bf94bdd52e5",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7832062-9e6a-4aca-a02f-5edf23fac138",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4104de0a-8609-4763-89e3-6294e7b9c475",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--911a22b4-0a2d-4adf-94cb-2f445d7fcd64",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dd96733d-76eb-48b6-b97c-1f3f8326bd90",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a30584dc-0723-455e-a04e-f7ce41384fa2",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f93961f0-062b-49b8-ba46-2c4f58e6b025",
+      "relationship_type": "has",
+      "source_ref": "malware--af85f149-de88-433f-ab4c-9fa5958299fc",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebe1066a-b546-4173-87a8-d7e9e7aeed9a",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--28aaa5f2-63be-45f1-ae4d-0cbcad6e8ed0",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edaf12c5-2a10-43f3-9164-f06531df88f9",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b509fa92-5e4b-4c3d-9780-da9eef5b1fa5",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--04f26c08-5797-4653-846f-d144e99981ec",
+      "relationship_type": "has",
+      "source_ref": "software--784c403d-cc7a-49db-b3de-d431e95ef39a",
+      "target_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de769f64-dc60-478e-9526-2a93941e3a25",
+      "relationship_type": "discovered-by",
+      "source_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "target_ref": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a66053c5-37d1-49f5-affb-ffbecf8aa6bd",
+      "relationship_type": "discovered-by",
+      "source_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "target_ref": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4424d70-27a0-4f2a-b7a2-398e596cda86",
+      "relationship_type": "discovered-by",
+      "source_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "target_ref": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10adb87d-4634-4391-9802-73e5c1ee95dc",
+      "relationship_type": "discovered-by",
+      "source_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "target_ref": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97f8f87a-91d9-4ea3-8c8d-0b24344777b2",
+      "relationship_type": "discovered-by",
+      "source_ref": "vulnerability--8ee4fa36-4285-4e87-992f-acb2195caec9",
+      "target_ref": "identity--43935be3-1870-4e9f-aadf-789a6dc3e3e2"
+    }
+  ]
+}

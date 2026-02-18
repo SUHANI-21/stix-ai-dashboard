@@ -1,0 +1,17 @@
+{
+  "type": "bundle",
+  "id": "bundle--bc948f99-d063-4e3e-8839-5441e32f3458",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "url",
+      "id": "url--ec862797-34c3-4e51-973d-7ff1b476aed1",
+      "value": "https://cyble.com/wp-content/uploads/2025/12/Brand-Impersonation.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--2c6dade8-b1fd-4701-911b-61694a1a1088",
+      "value": "https://cyble.com/knowledge-hub/brand-impersonation-2025-threats-2026/"
+    }
+  ]
+}

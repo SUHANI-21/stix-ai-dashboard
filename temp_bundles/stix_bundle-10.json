@@ -1,0 +1,574 @@
+{
+  "type": "bundle",
+  "id": "bundle--6eef0f3a-4a2b-48cf-b5d1-a7126811a161",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "created": "2026-01-18T20:27:32.586507Z",
+      "modified": "2026-01-18T20:27:32.586507Z",
+      "name": "360高级威胁研究院",
+      "description": "360高级威胁研究院 is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-18T20:27:32.586507Z",
+      "modified": "2026-01-18T20:27:32.586507Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-18T20:27:32.586507Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+      "created": "2026-01-18T20:27:50.711356Z",
+      "modified": "2026-01-18T20:27:50.711356Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Malicious Software Delivered via Popular File Sharing and Messaging Platforms",
+      "description": "APT-C-06 (DarkHotel) initiates its attack by distributing trojanized installers, such as 'hana9.30_x64_9.exe' and 'winrar-x64-540.exe', through widely used platforms including Baidu Netdisk, WeChat, and physical USB drives. These installers masquerade as legitimate applications (e.g., North Korean input method or WinRAR) to entice users into execution. The use of trusted channels and familiar software increases the likelihood of successful initial compromise, as targets may not suspect malicious intent. This technique leverages social engineering and the ubiquity of these platforms to bypass traditional security controls and reach a broad victim base.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1566/001/",
+          "external_id": "T1566.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+      "created": "2026-01-18T20:27:50.711454Z",
+      "modified": "2026-01-18T20:27:50.711454Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Copying Legitimate Program and Creating Scheduled Task for Persistence",
+      "description": "After the malicious installer is executed, it extracts and copies a legitimate 'white' program to the system, then creates a scheduled task to ensure this program is launched automatically. This approach leverages the trust associated with known benign executables to evade detection, while the scheduled task mechanism guarantees persistence across reboots and user sessions. The attacker disguises the persistence mechanism by using a legitimate program as the launcher, making it harder for defenders to identify abnormal activity. This method is a hallmark of APT-C-06’s efforts to maintain long-term access to compromised machines.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1053/005/",
+          "external_id": "T1053.005"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--47a545d2-179d-528d-c094-b4e1b888cf6f",
+      "created": "2026-01-18T20:27:50.711512Z",
+      "modified": "2026-01-18T20:27:50.711512Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Process Injection via Remote Thread into dllhost.exe",
+      "description": "The malware creates a new dllhost.exe process and injects shellcode into it using remote thread techniques. This injected shellcode is responsible for replacing the previously dropped legitimate program with the malicious installer, effectively hijacking the process for malicious purposes. By targeting dllhost.exe, a trusted Windows process, the attacker increases stealth and reduces the likelihood of detection by endpoint security solutions. This technique allows the threat actor to execute arbitrary code in the context of a legitimate process, facilitating further payload delivery and execution.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1055/001/",
+          "external_id": "T1055.001"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--7fb1596b-5cc3-1c99-ea3d-94473a2b8935",
+      "created": "2026-01-18T20:27:50.711690Z",
+      "modified": "2026-01-18T20:27:50.711690Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "DLL Hijacking for Decrypting and Loading Additional Payloads",
+      "description": "DarkSeal, the second-stage payload, is launched via a scheduled task that starts a legitimate program. It then leverages DLL hijacking to decrypt and load further malicious components. The decryption process uses a hardcoded XOR key to unlock encrypted payloads embedded within the malware. The decrypted data contains shellcode that is reflectively loaded into memory, followed by a PE file that implements the actual malicious functionality. This multi-stage loading process enables the attacker to modularize their malware, evade detection, and dynamically deploy new capabilities as needed.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1574/002/",
+          "external_id": "T1574.002"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--700bad8c-576e-a79b-8f0a-fa76711aced8",
+      "created": "2026-01-18T20:27:50.711797Z",
+      "modified": "2026-01-18T20:27:50.711797Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Reflective Loading of Shellcode and PE Payloads",
+      "description": "Within the DarkSeal component, the attacker uses shellcode to perform reflective loading of PE files directly into memory. The shellcode, decrypted from an internal resource, first loads itself and then injects the actual functional payload (such as Meterpreter or Thinmon) without writing the executable to disk. This technique allows the threat actor to execute code stealthily, bypassing file-based detection mechanisms and leaving minimal forensic evidence. Reflective loading is a sophisticated method that enables flexible deployment of various capabilities while maintaining operational security.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--bd6e0da0-86b0-10d6-d037-0b8dcc94667c",
+      "created": "2026-01-18T20:27:50.712493Z",
+      "modified": "2026-01-18T20:27:50.712493Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Hardcoded XOR Key for Payload Encryption and Decryption",
+      "description": "APT-C-06 employs a custom encryption scheme using a hardcoded XOR key to protect embedded payloads within their malware. All encrypted files are decrypted in-memory using this key before execution. This approach obfuscates the malicious components from static analysis and signature-based detection, complicating reverse engineering efforts. The use of a consistent, hardcoded key across campaigns suggests a standardized toolkit and operational discipline, allowing rapid deployment and update of payloads while maintaining secrecy.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "created": "2026-01-18T20:27:50.712658Z",
+      "modified": "2026-01-18T20:27:50.712658Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Final Payload Delivery of Meterpreter or Thinmon Components",
+      "description": "The ultimate stage of the attack involves the delivery and execution of advanced payloads such as Meterpreter or Thinmon. These components are loaded via the previously described reflective loading mechanism and provide the attacker with robust remote access, control, and post-exploitation capabilities. Meterpreter, for example, enables command execution, file transfer, and system manipulation, while Thinmon may offer specialized monitoring or data exfiltration features. The modularity of this approach allows APT-C-06 to tailor their operations to specific objectives and maintain flexibility in their attack chain.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1105/",
+          "external_id": "T1105"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--6863bf5d-cdf0-b874-32aa-49da67551917",
+      "created": "2026-01-18T20:27:55.619477Z",
+      "modified": "2026-01-18T20:27:55.619477Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "DarkSeal",
+      "description": "DarkSeal is a second-stage payload used by APT-C-06 (DarkHotel) for persistent access and remote control. It is loaded via DLL hijacking and executes further payloads, typically providing remote access and command execution capabilities.",
+      "malware_types": [
+        "backdoor",
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "persistence",
+        "remote-access",
+        "command-and-control",
+        "anti-analysis"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "created": "2026-01-18T20:27:55.619567Z",
+      "modified": "2026-01-18T20:27:55.619567Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Meterpreter",
+      "description": "Meterpreter is a well-known remote-access trojan module commonly used in penetration testing frameworks but deployed here as a final payload by APT-C-06 for interactive remote control and post-exploitation.",
+      "malware_types": [
+        "remote-access-trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "remote-access",
+        "command-and-control",
+        "data-exfiltration"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--634089fe-7b60-4efe-d74f-5a7241c72954",
+      "created": "2026-01-18T20:27:55.619623Z",
+      "modified": "2026-01-18T20:27:55.619623Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Thinmon",
+      "description": "Thinmon is mentioned as an alternative final payload used by APT-C-06, functioning as a backdoor to maintain persistent access and control over compromised systems.",
+      "malware_types": [
+        "backdoor"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "persistence",
+        "remote-access",
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "created": "2026-01-18T20:27:59.458984Z",
+      "modified": "2026-01-18T20:27:59.458984Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "APT-C-06",
+      "description": "APT-C-06, also known as DarkHotel, is attributed in this article as the operator behind recent attacks using malicious software disguised as Korean input method installers and WinRAR executables. The group leverages multi-stage payloads, including DarkSeal, to compromise targets and maintain persistence.",
+      "threat_actor_types": [
+        "nation-state"
+      ],
+      "aliases": [
+        "DarkHotel"
+      ],
+      "goals": [
+        "Initial compromise of user machines via malicious installers",
+        "Persistence through scheduled tasks and DLL injection",
+        "Deployment of DarkSeal for further exploitation"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "espionage"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+      "created": "2026-01-18T20:28:03.179721Z",
+      "modified": "2026-01-18T20:28:03.179721Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "dllhost.exe",
+      "description": "The attackers create a dllhost.exe process and inject malicious shellcode via remote thread, abusing this legitimate Windows system process to execute and mask the malicious payload.",
+      "tool_types": [
+        "execution",
+        "defense-evasion"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+      "created": "2026-01-18T20:28:03.179814Z",
+      "modified": "2026-01-18T20:28:03.179814Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Windows Scheduled Tasks",
+      "description": "Scheduled tasks are created to achieve persistence by regularly launching a copied legitimate program that acts as a loader for malicious payloads.",
+      "tool_types": [
+        "persistence"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f8f159d0-7b56-a226-3a7e-6ecc631a9384",
+      "created": "2026-01-18T20:28:03.180112Z",
+      "modified": "2026-01-18T20:28:03.180112Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "malware--6863bf5d-cdf0-b874-32aa-49da67551917",
+      "description": "APT-C-06 uses DarkSeal malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--16ff8b6a-9ed6-03eb-63d2-f22700df839c",
+      "created": "2026-01-18T20:28:03.180112Z",
+      "modified": "2026-01-18T20:28:03.180112Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "description": "APT-C-06 uses Meterpreter malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--197375cd-c364-4ca0-b9af-a463b9a9c24c",
+      "created": "2026-01-18T20:28:03.180112Z",
+      "modified": "2026-01-18T20:28:03.180112Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "malware--634089fe-7b60-4efe-d74f-5a7241c72954",
+      "description": "APT-C-06 uses Thinmon malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--216f816b-5cc0-a9a8-97cb-9e9ac7b1a6ec",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+      "description": "APT-C-06 employs 'Malicious Software Delivered via Popular File Sharing and Messaging Platforms' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--86c1021e-c93d-152f-dab0-26a73137064d",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+      "description": "APT-C-06 employs 'Copying Legitimate Program and Creating Scheduled Task for Persistence' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--21b6c256-479c-ae74-8f20-d63b87f25476",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--47a545d2-179d-528d-c094-b4e1b888cf6f",
+      "description": "APT-C-06 employs 'Process Injection via Remote Thread into dllhost.exe' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--56d6653c-11f1-e829-d2dd-3a04e0330e8e",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--7fb1596b-5cc3-1c99-ea3d-94473a2b8935",
+      "description": "APT-C-06 employs 'DLL Hijacking for Decrypting and Loading Additional Payloads' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f1d1de0e-e789-23d5-857d-b23060d7cb9a",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--700bad8c-576e-a79b-8f0a-fa76711aced8",
+      "description": "APT-C-06 employs 'Reflective Loading of Shellcode and PE Payloads' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7c82aa10-8193-19e3-022b-f97713e91ac9",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--bd6e0da0-86b0-10d6-d037-0b8dcc94667c",
+      "description": "APT-C-06 employs 'Hardcoded XOR Key for Payload Encryption and Decryption' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c3287899-8278-f583-fcc8-3e80f55e77d6",
+      "created": "2026-01-18T20:28:03.180194Z",
+      "modified": "2026-01-18T20:28:03.180194Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+      "description": "APT-C-06 employs 'Final Payload Delivery of Meterpreter or Thinmon Components' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--31bbfa64-4405-a36f-d5e1-04d7f89a4f5c",
+      "created": "2026-01-18T20:28:03.180472Z",
+      "modified": "2026-01-18T20:28:03.180472Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+      "description": "APT-C-06 uses dllhost.exe tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9df9497e-ccb3-ba5d-ba14-7110aae3294e",
+      "created": "2026-01-18T20:28:03.180472Z",
+      "modified": "2026-01-18T20:28:03.180472Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+      "target_ref": "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+      "description": "APT-C-06 uses Windows Scheduled Tasks tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4b650784-9881-d204-9ac3-35f7769febae",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--6863bf5d-cdf0-b874-32aa-49da67551917",
+      "target_ref": "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+      "description": "DarkSeal uses dllhost.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e62e5f84-325b-418f-159d-8110bdc777dd",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--6863bf5d-cdf0-b874-32aa-49da67551917",
+      "target_ref": "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+      "description": "DarkSeal uses Windows Scheduled Tasks for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cc49a460-2fac-8afb-8132-da15182244fb",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+      "description": "Meterpreter uses dllhost.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--911f6963-b8b7-0dc6-cbec-a57f44c39ddc",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+      "target_ref": "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+      "description": "Meterpreter uses Windows Scheduled Tasks for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--442a0b67-a110-2c53-5e91-1331cef41ae3",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--634089fe-7b60-4efe-d74f-5a7241c72954",
+      "target_ref": "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+      "description": "Thinmon uses dllhost.exe for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3881e863-40e2-fb68-5ea4-2dbefdca96f1",
+      "created": "2026-01-18T20:28:03.180529Z",
+      "modified": "2026-01-18T20:28:03.180529Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "relationship_type": "uses",
+      "source_ref": "malware--634089fe-7b60-4efe-d74f-5a7241c72954",
+      "target_ref": "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+      "description": "Thinmon uses Windows Scheduled Tasks for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--573b5a0b-ba4f-8f23-1214-a4870bbbfe41",
+      "created": "2026-01-18T20:28:03.180682Z",
+      "modified": "2026-01-18T20:28:03.180682Z",
+      "created_by_ref": "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+      "name": "Untitled Report",
+      "description": "This report contains technical analysis and indicators from: https://mp.weixin.qq.com/s/Cx-v95Ua8U7I77-yQFckpA",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-18T20:28:03.180682Z",
+      "object_refs": [
+        "identity--69c79c44-a2ba-5aea-bdd6-e99a028ecd41",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--50969ca5-1ce0-f880-e51e-b05982ca72e6",
+        "attack-pattern--88dcfda0-30cb-6f83-a147-d80650806f81",
+        "attack-pattern--47a545d2-179d-528d-c094-b4e1b888cf6f",
+        "attack-pattern--7fb1596b-5cc3-1c99-ea3d-94473a2b8935",
+        "attack-pattern--700bad8c-576e-a79b-8f0a-fa76711aced8",
+        "attack-pattern--bd6e0da0-86b0-10d6-d037-0b8dcc94667c",
+        "attack-pattern--182cb842-ff8b-a8d7-aa43-448981d9c4f7",
+        "malware--6863bf5d-cdf0-b874-32aa-49da67551917",
+        "malware--2b0ea882-cf9c-918a-9610-d71354fe5166",
+        "malware--634089fe-7b60-4efe-d74f-5a7241c72954",
+        "threat-actor--d0eab36d-ab13-81e2-06ef-ce5cd54dd862",
+        "tool--7c34a78b-4422-b616-08ab-858fb3833bc4",
+        "tool--2ebc7651-1b8c-69a8-0e4f-568f636f5fd6",
+        "relationship--f8f159d0-7b56-a226-3a7e-6ecc631a9384",
+        "relationship--16ff8b6a-9ed6-03eb-63d2-f22700df839c",
+        "relationship--197375cd-c364-4ca0-b9af-a463b9a9c24c",
+        "relationship--216f816b-5cc0-a9a8-97cb-9e9ac7b1a6ec",
+        "relationship--86c1021e-c93d-152f-dab0-26a73137064d",
+        "relationship--21b6c256-479c-ae74-8f20-d63b87f25476",
+        "relationship--56d6653c-11f1-e829-d2dd-3a04e0330e8e",
+        "relationship--f1d1de0e-e789-23d5-857d-b23060d7cb9a",
+        "relationship--7c82aa10-8193-19e3-022b-f97713e91ac9",
+        "relationship--c3287899-8278-f583-fcc8-3e80f55e77d6",
+        "relationship--31bbfa64-4405-a36f-d5e1-04d7f89a4f5c",
+        "relationship--9df9497e-ccb3-ba5d-ba14-7110aae3294e",
+        "relationship--4b650784-9881-d204-9ac3-35f7769febae",
+        "relationship--e62e5f84-325b-418f-159d-8110bdc777dd",
+        "relationship--cc49a460-2fac-8afb-8132-da15182244fb",
+        "relationship--911f6963-b8b7-0dc6-cbec-a57f44c39ddc",
+        "relationship--442a0b67-a110-2c53-5e91-1331cef41ae3",
+        "relationship--3881e863-40e2-fb68-5ea4-2dbefdca96f1"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

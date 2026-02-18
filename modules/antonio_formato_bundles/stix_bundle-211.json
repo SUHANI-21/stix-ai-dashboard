@@ -1,0 +1,182 @@
+{
+  "type": "bundle",
+  "id": "bundle--091efd66-b6bd-440a-9bfd-bbf8de356541",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--8640839e-16f8-4105-9382-5308c3998516",
+      "name": "CERT Polska",
+      "description": "Computer Emergency Response Team for Poland. Published analysis of NGate malware campaign.",
+      "identity_class": "organization",
+      "sectors": [
+        "financial-services"
+      ],
+      "contact_information": "https://cert.pl/"
+    },
+    {
+      "type": "software",
+      "id": "software--b168bfd0-a028-461f-a6df-54fd040cfe13",
+      "name": "NGate Android App",
+      "description": "Malicious Android application distributed via phishing, registers as a Host Card Emulation (HCE) payment service and captures card and PIN data for exfiltration.",
+      "cpe": "cpe:2.3:a:rha.dev.p031me:ngate:*:*:*:*:*:android:*:*",
+      "created_by_ref": "identity--",
+      "external_references": [
+        {
+          "source_name": "CERT Polska",
+          "url": "https://cert.pl/en/posts/2025/11/analiza-ngate/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--5dd481bb-b147-4a49-b297-df21aba566bc",
+      "hashes": {
+        "MD5": "2cee3f603679ed7e5f881588b2e78ddc"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3c5103eb-ed21-4095-b4bf-b88d562ac215",
+      "hashes": {
+        "MD5": "701e6905e1adf78e6c59ceedd93077f3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--eff150ea-9114-405f-9ef0-3e961ed5fc47",
+      "hashes": {
+        "MD5": "2cb20971a972055187a5d4ddb4668cc2"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--73fd8714-f760-413b-a760-fd11dac84ca4",
+      "hashes": {
+        "MD5": "b0a5051df9db33b8a1ffa71742d4cb09"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686",
+      "hashes": {
+        "MD5": "bcafd5c19ffa0e963143d068c8efda92"
+      }
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--d7f6fbd6-9de3-430f-a857-dd921230b62e",
+      "value": "91.84.97.13"
+    },
+    {
+      "type": "url",
+      "id": "url--bc079f02-65a7-41c9-acba-1dcdebbe673a",
+      "value": "http://files.fm/u/yfwsanu886"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56d5f95d-83f1-42eb-a2a5-12f2297fecfd",
+      "relationship_type": "uses",
+      "source_ref": "campaign--f66dd2ff-3bac-4b61-8682-b5b8ab86129a",
+      "target_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--714df68e-8b2e-4a1c-853e-4395fe291f2c",
+      "relationship_type": "uses",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "software--b168bfd0-a028-461f-a6df-54fd040cfe13"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--269305d6-8f04-4e3c-a8fe-6f62977ea5bb",
+      "relationship_type": "uses",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "attack-pattern--f4e46ae9-5431-4031-8e64-26e832264b78"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd779247-fcd8-43a9-a3bc-bc699a9c07f8",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--53c64a92-590e-4490-b882-2adc3f3ba62a",
+      "target_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc302957-fe7b-426f-b552-7c448fe55cf1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--53c64a92-590e-4490-b882-2adc3f3ba62a",
+      "target_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80096935-3e89-4c96-98b2-a77ac940c734",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--53c64a92-590e-4490-b882-2adc3f3ba62a",
+      "target_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87c06d90-fa7e-4128-8f4a-2ec3c5847199",
+      "relationship_type": "delivers",
+      "source_ref": "indicator--53c64a92-590e-4490-b882-2adc3f3ba62a",
+      "target_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34c6461c-e96b-4d91-8f4c-997050312ad2",
+      "relationship_type": "downloads",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1153ae56-80ef-4784-9099-bdc27beb1bbb",
+      "relationship_type": "downloads",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd17efa7-0b36-4513-818f-1f21e674ef74",
+      "relationship_type": "downloads",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1cdaeb6-2321-4f8c-8ac2-cbcf2327c3be",
+      "relationship_type": "downloads",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d7c2c614-ee4d-4f88-a7b8-c9a1674ae12a",
+      "relationship_type": "downloads",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "file--4d9c90d6-77eb-4ddf-8792-6a2c8056c686"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fcfe3420-8e7e-4ba5-9110-dbd9f4475ace",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "ipv4-addr--d7f6fbd6-9de3-430f-a857-dd921230b62e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8cd22282-455e-4dfc-9048-e1a9481efb6a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "network-traffic--7daec452-c9ea-423b-847d-05d70c6a136e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71b0e3b8-6faf-41cb-9ee2-67280c9f340e",
+      "relationship_type": "uses",
+      "source_ref": "malware--e6b92342-4a60-44d3-a6fe-8fb9f463b47c",
+      "target_ref": "url--bc079f02-65a7-41c9-acba-1dcdebbe673a"
+    }
+  ]
+}

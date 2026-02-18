@@ -1,0 +1,29 @@
+{
+  "type": "bundle",
+  "id": "bundle--8ce242cc-ceb6-477c-882f-1e5b21cedb23",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--25ba5219-bb83-4ff3-9ddf-f218acebd0b6",
+      "name": "Top-ICS-and-IT-vulnerabilities.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--0e3c47fd-2be3-4e1a-9158-f367e80c77b8",
+      "value": "https://cyble.com/wp-content/uploads/2025/12/Top-ICS-and-IT-vulnerabilities.jpg"
+    },
+    {
+      "type": "url",
+      "id": "url--2fcb92c9-9b45-4a24-ba39-06baafe21d9b",
+      "value": "https://cyble.com/blog/critical-ics-and-it-vulnerabilities-tracked/"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9b76acf4-e4c0-428c-b476-4a1e48327689",
+      "relationship_type": "related-to",
+      "source_ref": "file--25ba5219-bb83-4ff3-9ddf-f218acebd0b6",
+      "target_ref": "url--2fcb92c9-9b45-4a24-ba39-06baafe21d9b"
+    }
+  ]
+}

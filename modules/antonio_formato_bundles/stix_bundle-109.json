@@ -1,0 +1,906 @@
+{
+  "type": "bundle",
+  "id": "bundle--a997a77f-d578-4984-bff4-0b873f1ab917",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "malware",
+      "id": "malware--0c8775f7-fe15-47ab-a026-c1e684845d94",
+      "name": "Tsunami-Framework",
+      "description": "A modular malware framework in active development, linked to North Korean threat actors and the 'Contagious Interview' campaign. It relies on the TOR network and Pastebin for command and control, incorporates multiple stealers, backdoors, botnet functionality, keylogger, and deploys two cryptominers (Monero and Ethereum). Persistence is achieved via scheduled tasks and Windows Defender/Firewall exclusions.",
+      "malware_types": [
+        "remote-access-trojan",
+        "stealer",
+        "crypto-miner",
+        "backdoor",
+        "botnet"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Tsunami"
+      ],
+      "implementation_languages": [
+        "Python",
+        ".NET"
+      ],
+      "external_references": [
+        {
+          "source_name": "HiSolutions Research Blog",
+          "url": "https://research.hisolutions.com/2025/04/2025-04_HiSolutions-Research-Blog_Lazarus-Tsunami/"
+        },
+        {
+          "source_name": "Malpedia",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/py.invisibleferret",
+          "description": "InvisibleFerret malware deployed by Tsunami-Framework"
+        },
+        {
+          "source_name": "Malpedia",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/js.beavertail",
+          "description": "BeaverTail loader used in infection chain"
+        },
+        {
+          "source_name": "Luca Di Domenico",
+          "url": "https://lucadidomenico.notion.site/Someone-tried-to-rug-me-on-Linkedin-13d8b714b46c80968c32c77737287e54"
+        },
+        {
+          "source_name": "Alessio Di Santo",
+          "url": "https://www.linkedin.com/posts/alessio-di-santo-712348197_iocs-ttps-lazarusgroup-activity-7263976334807220224-N6Ue/"
+        }
+      ],
+      "labels": [
+        "modular",
+        "cryptocurrency-theft",
+        "APT",
+        "North Korea",
+        "TOR",
+        "Pastebin",
+        "active-development"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "defense-evasion"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "credential-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--0ebe7215-4b34-4fb0-86a5-fea2959cca42",
+      "name": "InvisibleFerret",
+      "description": "Malware deployed as part of the Tsunami-Framework infection chain, known for credential theft and initial access facilitation.",
+      "malware_types": [
+        "stealer"
+      ],
+      "is_family": true,
+      "external_references": [
+        {
+          "source_name": "Malpedia",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/py.invisibleferret"
+        }
+      ],
+      "labels": [
+        "credential-theft",
+        "initial-access"
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "name": "BeaverTail",
+      "description": "Malicious loader used in the Tsunami-Framework infection chain, chainloads InvisibleFerret and other payloads.",
+      "malware_types": [
+        "loader"
+      ],
+      "is_family": true,
+      "external_references": [
+        {
+          "source_name": "Malpedia",
+          "url": "https://malpedia.caad.fkie.fraunhofer.de/details/js.beavertail"
+        }
+      ],
+      "labels": [
+        "loader",
+        "initial-access"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--9e87d3ca-6eb2-4f61-ac73-79d5fd92cb13",
+      "name": "Lazarus Group",
+      "aliases": [
+        "APT38",
+        "Hidden Cobra",
+        "Labyrinth Chollima"
+      ],
+      "description": "North Korean threat actor linked to the 'Contagious Interview' campaign and development of the Tsunami-Framework for cryptocurrency theft.",
+      "external_references": [
+        {
+          "source_name": "HiSolutions Research Blog",
+          "url": "https://research.hisolutions.com/2025/04/2025-04_HiSolutions-Research-Blog_Lazarus-Tsunami/"
+        }
+      ],
+      "labels": [
+        "APT",
+        "North Korea",
+        "cryptocurrency-theft"
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--7a1b55d1-2e2a-465f-8b1f-dc18b17d312b",
+      "name": "Contagious Interview",
+      "description": "Ongoing campaign linked to North Korea targeting software developers for cryptocurrency theft, leveraging LinkedIn phishing and deployment of Tsunami-Framework.",
+      "aliases": [
+        "Contagious Interview"
+      ],
+      "first_seen": "2024-09-01T00:00:00Z",
+      "labels": [
+        "phishing",
+        "cryptocurrency-theft",
+        "North Korea",
+        "LinkedIn"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ead9e6d3-5cdb-4efa-aeb6-c695d27e57b3",
+      "name": "Phishing via LinkedIn",
+      "description": "Threat actor approaches victims via LinkedIn, posing as a potential business partner to deliver malicious payloads.",
+      "external_references": [
+        {
+          "source_name": "HiSolutions Research Blog",
+          "url": "https://research.hisolutions.com/2025/04/2025-04_HiSolutions-Research-Blog_Lazarus-Tsunami/"
+        }
+      ],
+      "x_mitre_id": "T1566",
+      "labels": [
+        "phishing",
+        "social-engineering",
+        "LinkedIn"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--19d69bda-042e-41be-a77d-ddf318e72383",
+      "name": "System Information Discovery",
+      "description": "Malware sends hardware and OS information to the C2 during initialization.",
+      "x_mitre_id": "T1082",
+      "labels": [
+        "discovery"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--55add3be-26d5-4603-8d56-ee0c8a9bedab",
+      "name": "Credential Access from Browsers",
+      "description": "Multiple modules collect credentials from browsers and other applications.",
+      "x_mitre_id": "T1589.001",
+      "labels": [
+        "credential-access",
+        "browser-stealer"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3691e46d-fd9c-4981-b379-363c920bcec0",
+      "name": "Develop Capabilities: Malware",
+      "description": "Threat actor actively develops new tooling and malware.",
+      "x_mitre_id": "T1587.001",
+      "labels": [
+        "malware-development"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6ec693b0-e03e-480a-bd8b-59e4147d2ae5",
+      "name": "Compromise Infrastructure: Botnet",
+      "description": "Malware includes botnet functionality.",
+      "x_mitre_id": "T1584.005",
+      "labels": [
+        "botnet"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--807958d2-789c-4d35-9e29-b208a5dfa996",
+      "name": "Stage Capabilities",
+      "description": "Infection chain relies on multiple stages hosted on different systems and services.",
+      "x_mitre_id": "T1608",
+      "labels": [
+        "staging"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--13b19876-7262-4fb5-b098-3d40513e52b5",
+      "name": "Command and Scripting Interpreter",
+      "description": "Multiple stages rely on scripting interpreters like JavaScript, PowerShell, and Python.",
+      "x_mitre_id": "T1059",
+      "labels": [
+        "scripting",
+        "execution"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b47959f2-49d6-42a8-afc0-10bc8e406d8c",
+      "name": "Scheduled Task/Job",
+      "description": "Malware loader relies on a scheduled task for persistence.",
+      "x_mitre_id": "T1053.005",
+      "labels": [
+        "persistence",
+        "scheduled-task"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b507ff6e-49f6-4b14-bbf9-4d0be20d740c",
+      "name": "User Execution",
+      "description": "Initial access relies on the user executing a backdoored GitHub repository.",
+      "x_mitre_id": "T1204",
+      "labels": [
+        "user-execution",
+        "initial-access"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6fec7706-8acf-447c-80b4-6cb1c41c48e6",
+      "name": "Boot or Logon Autostart Execution",
+      "description": "Tsunami payload creates a startup task for persistence.",
+      "x_mitre_id": "T1547",
+      "labels": [
+        "persistence",
+        "autostart"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9b8584cd-407d-42d7-be60-443c918a0b37",
+      "name": "Impair Defenses: Disable or Modify System Firewall",
+      "description": "Windows Firewall is being disabled.",
+      "x_mitre_id": "T1562.004",
+      "labels": [
+        "defense-evasion",
+        "firewall"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c3b8f9ba-c8ab-425a-9a7b-448f980e0b56",
+      "name": "Impair Defenses: Disable or Modify Tools",
+      "description": "Windows Defender is being disabled.",
+      "x_mitre_id": "T1562.001",
+      "labels": [
+        "defense-evasion",
+        "antivirus"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5ba49834-883e-4212-aeb2-4a736eef5371",
+      "name": "Obfuscated Files or Information",
+      "description": "The initial stages are heavily obfuscated and later stages are slightly obfuscated.",
+      "x_mitre_id": "T1027",
+      "labels": [
+        "obfuscation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--87dabb9a-2d03-4008-b420-827d2121288d",
+      "name": "Input Capture",
+      "description": "Malware has keylogging capabilities.",
+      "x_mitre_id": "T1056",
+      "labels": [
+        "keylogger",
+        "input-capture"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c93d8f12-8957-4f73-94dc-3f891fcf80ed",
+      "name": "Steal Web Session Cookie",
+      "description": "Malware exfiltrates browser session cookies.",
+      "x_mitre_id": "T1539",
+      "labels": [
+        "session-cookie",
+        "exfiltration"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--5f3e6a2b-7027-4f85-8b94-94cf834f0cdf",
+      "name": "Credentials from Password Stores",
+      "description": "Multiple applications and browsers are accessed for credential access.",
+      "x_mitre_id": "T1555",
+      "labels": [
+        "credential-access"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--89a58968-ab01-4ae7-987b-81a5f341463b",
+      "name": "File and Directory Discovery",
+      "description": "Specific files are sought out and uploaded to the C2 server.",
+      "x_mitre_id": "T1083",
+      "labels": [
+        "discovery",
+        "file-upload"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ffe94873-1cea-4a3c-981e-d63c55f88956",
+      "name": "Automated Exfiltration",
+      "description": "Malware automatically and periodically uploads gathered information.",
+      "x_mitre_id": "T1020",
+      "labels": [
+        "exfiltration",
+        "automation"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030",
+      "name": "Resource Hijacking: Compute Hijacking",
+      "description": "Multiple cryptominers are deployed by the malware.",
+      "x_mitre_id": "T1496.001",
+      "labels": [
+        "crypto-miner",
+        "resource-hijacking"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--3b81be64-20d0-46b6-b609-c4c57f8c71c1",
+      "name": "Tor.exe",
+      "hashes": {
+        "SHA-256": "3f424b477ac16463e871726cbb106d41574d2d0e910dee035fbd23241515e770"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--aef2c591-2d85-4b12-9f20-000ea27ab36c",
+      "name": "AMD_Compute_Mode_Enabler.reg",
+      "hashes": {
+        "SHA-256": "b25e1a54e9c53bf6367c449be46f32241d1fd9bf76be9934d42c121105fb497d"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bc245b29-7742-4d49-8ebf-997a0b30c695",
+      "name": "ETHW_Miner.exe",
+      "hashes": {
+        "SHA-256": "bb3af0c03e6b0833fa268d98e5a8b19e78fb108a830b58b2ade50c57e9fc9bed"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--72cf3a00-0b1a-42d1-93cd-08e5e80531be",
+      "name": "ldbdump.exe",
+      "hashes": {
+        "SHA-256": "f96744a85419907e7c442b13beeefb6f985f3905a992dfefee03820ec6570fea"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dbe893f0-3cc7-4cf2-9f53-eb56eaa355cc",
+      "name": "XMRig.exe",
+      "hashes": {
+        "SHA-256": "2883b1ae430003f3eff809f0461e18694ee1e2bc38c98f9eff22a50b5043a770"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--cecab399-d8c4-494f-885d-c575537f1f57",
+      "name": "xmrig_config.json",
+      "hashes": {
+        "SHA-256": "94186315edde9ab18d6772449bb0b33a37490c336fccbc81bc7a6b6b728232b1"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--0149966b-8db8-4e96-9371-861a33a4d1e3",
+      "name": "XMRig_Driver.sys",
+      "hashes": {
+        "SHA-256": "11bd2c9f9e2397c9a16e0990e4ed2cf0679498fe0fd418a3dfdac60b5c160ee5"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b362cd73-73c0-4748-9b96-7fb7e12b676c",
+      "name": "Packed Sample from Onion",
+      "hashes": {
+        "SHA-256": "3769508daa5ee5955c7d0a5493b0a159e874745e575ac6ea1a5b544358132086"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b7bb5a44-4732-4627-a47e-ce28a3a3c5ce",
+      "name": "Unpacked Sample from Onion",
+      "hashes": {
+        "SHA-256": "28660b81fd4898da3b9a861af716dc2ed60dd6a6eb582782e9d8451b1f257630"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--3f14abd0-4a1c-46e0-9af7-dc94a2f06f91",
+      "hashes": {
+        "SHA-256": "a2ae1da09f7508ff34bd9acc672b3cf456e053bb46d4aa3cd283a7f263e37acb"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f3b1a4c6-a7d4-4168-8e40-73c6d07b1b7e",
+      "hashes": {
+        "SHA-256": "e9571e21150d7333bfada0ef836adad555547411a2b56990da632f64d0262ef8"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--268b578d-bc79-4344-a015-bb56bbf3de89",
+      "name": "cat-video",
+      "hashes": {
+        "SHA-256": "a2ae1da09f7508ff34bd9acc672b3cf456e053bb46d4aa3cd283a7f263e37acb"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c996d204-1dd7-4eeb-899c-8a8f51f884ea",
+      "name": "Runtime Broker.pdb",
+      "path": "C:\\Tsunami\\Tsunami Stable\\Tsunami Client\\obj\\Release\\net6.0\\win-x64\\Runtime Broker.pdb"
+    },
+    {
+      "type": "file",
+      "id": "file--ff3e1c65-0f0f-443e-a886-2858b2218d77",
+      "name": "Tsunami Payload.pdb",
+      "path": "E:\\Tsunami\\Tsunami Stable\\Tsunami Payload\\obj\\Release\\net6.0\\win-x64\\Tsunami Payload.pdb"
+    },
+    {
+      "type": "file",
+      "id": "file--e952c8db-d785-4756-8812-e80166e54c05",
+      "name": "Runtime Broker.pdb",
+      "path": "C:\\Tsunami\\Tsunami Stable\\Tsunami Client\\obj\\Release\\net6.0\\win-x64\\Runtime Broker.pdb"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--73507c49-792a-4587-80b3-652ab5018a62",
+      "value": "23.254.229.101"
+    },
+    {
+      "type": "url",
+      "id": "url--8d577a1e-635f-4c5f-90fe-93a0248a4804",
+      "value": "http://23.254.229.101/cat-video"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d19127f2-f13a-4e24-a9dd-8757e54d03a3",
+      "value": "n34kr3z26f3jzp4ckmwuv5ipqyatumdxhgjgsmucc65jac56khdy5zqd.onion"
+    },
+    {
+      "type": "file",
+      "id": "file--9a0450bf-5c2b-43ce-a237-6ce935b051a8",
+      "name": "Windows Update Script.pyw",
+      "path": "%APPDATA%/Microsoft/Windows/Start Menu/Programs/Startup/Windows Update Script.pyw"
+    },
+    {
+      "type": "file",
+      "id": "file--cb6bd979-443d-4457-b1b9-6fb65155a259",
+      "name": "Runtime Broker.exe",
+      "path": "%APPDATA%/Microsoft/Windows/Applications/Runtime Broker.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9b41a10c-1c38-418a-b80c-4d13f2a643c4",
+      "name": "TsuAmFlag.txt",
+      "path": "%TEMP%/TsuAmFlag.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--ba38d267-7f7f-4815-b326-533bfcafb59a",
+      "name": "System Runtime Monitor.exe",
+      "path": "%APPDATA%/Microsoft/Windows/Start Menu/Programs/Startup/System Runtime Monitor.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--1837b6b9-6ab2-4be5-9a57-5458a067e27c",
+      "name": "System Runtime Monitor.exe",
+      "path": "%APPDATA%/Microsoft/Windows/Dependencies/System Runtime Monitor.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7e169c63-65f5-4a4e-a935-86da25c43d10",
+      "name": "Runtime Broker.exe",
+      "path": "%LOCALAPPDATA%/Microsoft/Windows/Applications/Runtime Broker.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--23deb43d-260e-48d2-83a3-1269fe555cd6",
+      "name": "msedge.exe",
+      "path": "%LOCALAPPDATA%/Microsoft/WindowsApps/msedge.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e9d0109b-a35a-4b98-9a0e-0a52cf57eab3",
+      "name": "Runtime Broker.exe",
+      "path": "%TEMP%/Runtime Broker.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9ef68572-62c8-4f0d-8393-c26057c1b4c1",
+      "name": "Tor.exe",
+      "path": "Tor.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2ea6c5d9-41a5-4c8a-81b7-e0ed936b63a4",
+      "name": "Xmrig_config.json",
+      "path": "Xmrig_config.json"
+    },
+    {
+      "type": "file",
+      "id": "file--fde649a9-760f-4927-a0d6-724fba8301e4",
+      "name": "XMRig_Driver.sys",
+      "path": "XMRig_Driver.sys"
+    },
+    {
+      "type": "file",
+      "id": "file--d89d7420-eb5a-49cf-b2d5-c3934ca9de78",
+      "name": "ETHW_Miner.exe",
+      "path": "ETHW_Miner.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4e3350c4-dc04-47c7-a02e-58fd458c36e0",
+      "name": "AMD_Compute_Mode_Enabler.reg",
+      "path": "AMD_Compute_Mode_Enabler.reg"
+    },
+    {
+      "type": "file",
+      "id": "file--e8fc0479-25c0-407d-9868-01a263e35d6a",
+      "name": "ldbdump.exe",
+      "path": "ldbdump.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--dcb96b6b-a6fa-40f1-b317-8e723e3908fc",
+      "value": "https://www.python.org/ftp/python/3.11.0/python-3.11.0-amd64.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--be968bd0-f7ca-4468-810f-106487614454",
+      "value": "http://n34kr3z26f3jzp4ckmwuv5ipqyatumdxhgjgsmucc65jac56khdy5zqd.onion"
+    },
+    {
+      "type": "url",
+      "id": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4",
+      "value": "xmrpool.eu:5555"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6884be6a-822f-490f-855b-ec5730bd185a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9e87d3ca-6eb2-4f61-ac73-79d5fd92cb13",
+      "target_ref": "campaign--7a1b55d1-2e2a-465f-8b1f-dc18b17d312b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--866c7f88-2a8e-4fcf-8bee-a17c0112f6c9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9e87d3ca-6eb2-4f61-ac73-79d5fd92cb13",
+      "target_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--62ea4083-8ec2-4729-bfd3-7ee3ab8c2e6f",
+      "relationship_type": "uses",
+      "source_ref": "campaign--7a1b55d1-2e2a-465f-8b1f-dc18b17d312b",
+      "target_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e8e549cc-3943-446d-b53c-12d741c69b09",
+      "relationship_type": "uses",
+      "source_ref": "campaign--7a1b55d1-2e2a-465f-8b1f-dc18b17d312b",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--355fbc08-bbfc-4033-9444-3bd5b00f1e81",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f6895a5-b0a2-48ba-99fb-41eee034dae7",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f9017f51-6eda-4ffa-a8c5-8b9dd8cfedf4",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--71f8b5f4-881d-4bfc-9bdc-55bce95c718e",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f41ab23b-999b-4d87-94ab-b1ab17b60840",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--662bfdd0-2f46-4832-8c46-70aba9699b6d",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91947c00-8697-4cb2-b9d2-9461a6457feb",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--16cffd51-4a37-4694-a790-f1d53405638e",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--102f6a28-c686-4b10-9399-d5921add6d1a",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f07e11c1-4014-447b-b8cb-b722fa9ba766",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26109fbd-7ded-4adc-9b4c-c3048145c0c8",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fbc357cf-f769-4f7b-90a9-ea8b5e74fd1f",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d8c2cd80-dc65-4553-9329-a753e8fde26d",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ac5de3ce-ed61-4826-9258-5e8330bfb731",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--24e5c930-b5c0-45a8-8952-324385113c71",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--35711863-9787-4ea3-ae05-640df01201b9",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--950e95ab-20ac-4f97-bf83-d0354015cf38",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2debc852-2c65-444f-a799-e3a82912445b",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c20f7f7f-a095-4b2d-a570-834186a70de4",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bae63797-f35a-45eb-9038-d26b8b61c78c",
+      "relationship_type": "uses",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "attack-pattern--554c662e-a33c-4b29-9cb2-3f16ee504030"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cbb177ae-cfbe-4a04-a1aa-907b46849968",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ffc822e-fdf5-4b72-b13e-7be4cf56e03a",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d8638b65-971d-4b97-91a2-b0732281306a",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7f21455-2b63-4ee3-b527-0287a97d0c45",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3f8d755-8837-41d5-9a15-01afca5d5a02",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d825ea66-e362-46a9-bcbe-c6f19f556662",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ecb24686-fe32-4707-bed5-e8d1e86d99d2",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--beb42e30-0cf2-42cd-b7b7-60e3ea4b9fff",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3942d73e-de56-4857-9cb1-8f211482d40d",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e573422-8def-496c-9c74-941e4d950605",
+      "relationship_type": "drops",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "file--e8fc0479-25c0-407d-9868-01a263e35d6a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ac4af98-49fc-40d2-93ea-5935f619d0d5",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "domain-name--d19127f2-f13a-4e24-a9dd-8757e54d03a3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de1a776f-5e8d-4571-a5f8-4bcf23194532",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d84ee7a7-2e8b-4903-b5d3-0fd326e17c44",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a94cb924-4b00-4222-bef9-f1b4572c3151",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fcfd0b23-ff5a-4ca6-829a-f0ee737eb197",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--33c8d0d4-fb91-4a5f-bed0-6676e5b98173",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f2583296-6945-422b-9464-e6400df5940b",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5e073e17-5bd5-4604-9d75-620ba7d53891",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--098f7234-1e4c-4655-b8b8-283b8809f240",
+      "relationship_type": "downloads",
+      "source_ref": "malware--fa9e5da8-d580-498f-a724-0e6622882f30",
+      "target_ref": "url--aed611f2-b715-4cc0-80f4-2ae8503592c4"
+    }
+  ]
+}

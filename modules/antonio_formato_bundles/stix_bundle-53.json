@@ -1,0 +1,32 @@
+{
+  "type": "bundle",
+  "id": "bundle--194790be-d935-4526-a1a2-4b241e9a6ff3",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--48fc6da7-c74f-4438-a6bd-7ce707724979",
+      "hashes": {
+        "SHA-256": "6de9f436ba393744a3966b35ea2254dde2f84f5b796c6f7bee4b67ccf96ccf0a"
+      }
+    },
+    {
+      "type": "software",
+      "id": "software--269c3226-6c0e-4f24-b10a-370b5465235f",
+      "name": "GamaWiper",
+      "description": "A destructive sandbox/VM killer script deployed by Gamaredon to wipe analysis environments and prevent malware analysis."
+    },
+    {
+      "type": "software",
+      "id": "software--88882901-c7a3-44af-adfc-3d3c3c3c1ee8",
+      "name": "GamaLoad",
+      "description": "Initial loader for Gamaredon campaigns, implements multi-stage payload fetch mechanism with dynamic URLs and headers."
+    },
+    {
+      "type": "software",
+      "id": "software--f146d22e-4ed2-40d8-a357-238a37d40d57",
+      "name": "Pterodo",
+      "description": "Malware payload delivered by Gamaredon, with hardened delivery and geolocation-based deployment."
+    }
+  ]
+}

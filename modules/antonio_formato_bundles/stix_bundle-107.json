@@ -1,0 +1,405 @@
+{
+  "type": "bundle",
+  "id": "bundle--c5028fea-5308-4843-b950-3e3e1d3478e9",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--82f4c8e8-1333-4667-ac36-a29bc724420e",
+      "name": "CVE-2025-12480",
+      "description": "Improper Access Control vulnerability in Gladinet Triofox. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAWo-07/overview",
+          "external_id": "CVE-2025-12480"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fb69e3f3-5317-429c-9dca-677d5941ee39",
+      "name": "CVE-2025-62215",
+      "description": "Race Condition and Double Free vulnerabilities in Microsoft Windows 10, 11, Server 2019, 2022, and 2025. Enables local privilege escalation to SYSTEM. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAY-aVO/overview",
+          "external_id": "CVE-2025-62215"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=%22CVE-2025-62215%22&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0cc34746-f889-446f-a702-c720cf8da91d",
+      "name": "CVE-2025-64446",
+      "description": "Relative Path Traversal and authentication bypass in Fortinet FortiWeb. Allows unauthenticated attackers to create administrative accounts. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAgNrn4/overview",
+          "external_id": "CVE-2025-64446"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-64446&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1b13b3d8-6170-48ed-93b9-e09a279ba578",
+      "name": "CVE-2025-13223",
+      "description": "Type Confusion vulnerability in Google Chrome. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAnoPpx/overview",
+          "external_id": "CVE-2025-13223"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--43f85f2e-21af-44be-9789-30649262f262",
+      "name": "CVE-2025-58034",
+      "description": "OS Command Injection vulnerability in Fortinet FortiWeb. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BApQp8P/overview",
+          "external_id": "CVE-2025-58034"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-58034&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--776d8091-f404-4311-9874-226ce878da9b",
+      "name": "CVE-2025-61757",
+      "description": "Missing Authentication for Critical Function vulnerability in Oracle Identity Manager. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/_ob8BJ/overview",
+          "external_id": "CVE-2025-61757"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-61757&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7bcd2821-efcc-4012-a1fa-35233d256351",
+      "name": "CVE-2025-9242",
+      "description": "Out-of-bounds Write vulnerability in WatchGuard Fireware OS. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/-R66PT/overview",
+          "external_id": "CVE-2025-9242"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-9242&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d4ce9656-47b3-4a8f-8677-301aaee204b7",
+      "name": "CVE-2025-21042",
+      "description": "Out-of-bounds Write vulnerability in Samsung Mobile Devices exploited for zero-click Android attacks in the LANDFALL spyware campaign. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/-HNHUv/overview",
+          "external_id": "CVE-2025-21042"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/B1ack4sh/Blackash-CVE-2025-21042"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1d2d0188-24a5-4711-aa05-c899588e8e18",
+      "name": "CVE-2025-48703",
+      "description": "OS Command Injection vulnerability in CentOS Web Panel. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/6VoCY0/overview",
+          "external_id": "CVE-2025-48703"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-48703&type=repositories"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a388d8a0-76bd-4a87-a61a-c7d51f4262de",
+      "name": "CVE-2021-26829",
+      "description": "Improper Neutralization of Input During Web Page Generation (Cross-site Scripting) vulnerability in OpenPLC ScadaBR. Risk Score: 99. Actively exploited in November 2025.",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/iwWgRF/overview",
+          "external_id": "CVE-2021-26829"
+        }
+      ],
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--cc41efdd-eb5f-4229-a3cb-8bff791a250d",
+      "name": "CVE-2025-12480",
+      "description": "Improper Access Control in Gladinet Triofox (CWE-284)",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAWo-07/overview"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--604cb565-068a-4420-a133-77f9248a8fda",
+      "name": "CVE-2025-62215",
+      "description": "Race Condition (CWE-362) and Double Free (CWE-415) in Microsoft Windows 10 and 11, Windows Server 2019, 2022, 2025",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAY-aVO/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=%22CVE-2025-62215%22&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8155fba0-ec4a-4662-8af5-62bb94fc81b8",
+      "name": "CVE-2025-64446",
+      "description": "Relative Path Traversal (CWE-23) in Fortinet FortiWeb",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAgNrn4/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-64446&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3452ed25-444d-4502-b046-29eef5f09dd3",
+      "name": "CVE-2025-13223",
+      "description": "Type Confusion (CWE-843) in Google Chrome",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BAnoPpx/overview"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--5ff5918c-1965-4ff6-bfbc-3056677814fe",
+      "name": "CVE-2025-58034",
+      "description": "OS Command Injection (CWE-78) in Fortinet FortiWeb",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/BApQp8P/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-58034&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--72450299-97a3-46f4-86de-39056cde8154",
+      "name": "CVE-2025-61757",
+      "description": "Missing Authentication for Critical Function (CWE-306) in Oracle Identity Manager",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/_ob8BJ/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-61757&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--503a74ab-1dc8-4b7d-a762-dfb6d7ebb046",
+      "name": "CVE-2025-9242",
+      "description": "Out-of-bounds Write (CWE-787) in WatchGuard Fireware OS",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/-R66PT/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-9242&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--69917edd-2bab-4aaa-9bf7-a3b067549433",
+      "name": "CVE-2025-21042",
+      "description": "Out-of-bounds Write (CWE-787) in Samsung Mobile Devices (Android 13, 14, 15); exploited via weaponized DNG image files in LANDFALL spyware campaign",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/-HNHUv/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/B1ack4sh/Blackash-CVE-2025-21042"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--39d929bd-5f4d-4fe1-b493-8bf8d81f9d01",
+      "name": "CVE-2025-48703",
+      "description": "OS Command Injection (CWE-78) in CentOS Web Panel",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/6VoCY0/overview"
+        },
+        {
+          "source_name": "GitHub",
+          "url": "https://github.com/search?q=CVE-2025-48703&type=repositories"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ba8059ab-776b-43cc-be8e-406f76e06c71",
+      "name": "CVE-2021-26829",
+      "description": "Improper Neutralization of Input During Web Page Generation (Cross-site Scripting, CWE-79) in OpenPLC ScadaBR",
+      "external_references": [
+        {
+          "source_name": "Recorded Future",
+          "url": "https://app.recordedfuture.com/portal/intelligence-card/iwWgRF/overview"
+        }
+      ]
+    },
+    {
+      "type": "directory",
+      "id": "directory--2a1abd02-664b-4881-ab1d-5fad423cd68c",
+      "path": "/data/data/com.samsung.ipservice/files/",
+      "description": "Directory on Samsung Android devices where unexpected processes related to LANDFALL spyware may appear."
+    },
+    {
+      "type": "directory",
+      "id": "directory--8a637c86-9fad-4fd9-a31a-4429b919ddd7",
+      "path": "/api/v2.0/cmd/system/admin%3F/../../../cgi-bin/fwbcgi",
+      "description": "FortiWeb API endpoint targeted for path traversal and authentication bypass in CVE-2025-64446 exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ec7c10d4-7acb-4fe8-9016-93c26fa56c31",
+      "relationship_type": "exploits",
+      "source_ref": "malware--92ab6140-67a5-46f8-99ca-84c5eda36d92",
+      "target_ref": "vulnerability--ba8059ab-776b-43cc-be8e-406f76e06c71",
+      "description": "The LANDFALL spyware campaign exploits CVE-2025-21042 for zero-click remote code execution on Samsung devices.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2442e5a6-52c9-4f26-840a-0ab662468bbf",
+      "relationship_type": "uses",
+      "source_ref": "malware--92ab6140-67a5-46f8-99ca-84c5eda36d92",
+      "target_ref": "file--6a075f89-a280-4940-87a4-e93bddd46ee7",
+      "description": "LANDFALL campaign uses weaponized DNG image files to deliver payloads exploiting CVE-2025-21042.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87cb32c6-9f5b-4e8b-8742-9c22e34a99a4",
+      "relationship_type": "drops",
+      "source_ref": "malware--92ab6140-67a5-46f8-99ca-84c5eda36d92",
+      "target_ref": "file--6a075f89-a280-4940-87a4-e93bddd46ee7",
+      "description": "LANDFALL campaign drops b.so ELF binary loader/backdoor on Samsung Android devices.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--198ff0d8-4b38-466c-86a5-0b35076e7515",
+      "relationship_type": "drops",
+      "source_ref": "malware--92ab6140-67a5-46f8-99ca-84c5eda36d92",
+      "target_ref": "file--6a075f89-a280-4940-87a4-e93bddd46ee7",
+      "description": "LANDFALL campaign drops l.so ELF binary for privilege escalation on Samsung Android devices.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb1e1524-3814-4f67-9c4e-0d81da38a1e3",
+      "relationship_type": "stores",
+      "source_ref": "malware--92ab6140-67a5-46f8-99ca-84c5eda36d92",
+      "target_ref": "directory--8a637c86-9fad-4fd9-a31a-4429b919ddd7",
+      "description": "LANDFALL spyware stores unexpected processes in /data/data/com.samsung.ipservice/files/ on Samsung Android devices.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c2925fe9-3c2e-4508-b22a-d8560574bf93",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--ba8059ab-776b-43cc-be8e-406f76e06c71",
+      "target_ref": "directory--8a637c86-9fad-4fd9-a31a-4429b919ddd7",
+      "description": "CVE-2025-64446 exploitation targets FortiWeb API endpoint /api/v2.0/cmd/system/admin%3F/../../../cgi-bin/fwbcgi for path traversal and authentication bypass.",
+      "created": "2025-11-01T00:00:00Z",
+      "modified": "2025-11-30T23:59:59Z"
+    }
+  ]
+}

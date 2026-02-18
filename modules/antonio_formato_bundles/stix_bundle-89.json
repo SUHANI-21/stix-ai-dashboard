@@ -1,0 +1,612 @@
+{
+  "type": "bundle",
+  "id": "bundle--9f4a95a6-6716-4820-acc4-7183b55560d5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--789e3eda-410d-4ff9-87c3-a85c3a950dfd",
+      "name": "Abuse of Remote Monitoring and Management (RMM) Tools",
+      "description": "Threat actors compromise legacy RMM tools or install their own instances post-access to maintain persistence, deploy additional malware, and evade detection. Multiple RMM tools may be used in a single attack chain.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Monitor for unusual RMM installations, execution from suspicious directories, and connections to attacker-controlled domains."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--19e71b9d-de42-4f5b-856d-ea485ccd8c88",
+      "name": "Phishing with Malicious RMM Installers",
+      "description": "Threat actors use phishing emails and social engineering lures (e.g., fake contracts, invitations, holiday themes) to trick victims into downloading and executing rogue RMM installers.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Monitor for suspicious downloads and execution of RMM installers from non-standard sources."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c2c666f9-a4e9-4566-8953-c8b56898ed20",
+      "name": "Chained RMM Deployment for Persistence",
+      "description": "Attackers deploy multiple RMM tools in sequence (e.g., GoTo Resolve to ScreenConnect to SimpleHelp) to ensure long-term access and persistence, even if one tool is detected or blocked.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Look for installation and execution of multiple RMM tools on the same host, especially from suspicious directories."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8422492c-7a34-4bd7-920b-0725a2d0ca61",
+      "name": "Living-off-the-land (LotL) Techniques with RMMs",
+      "description": "Threat actors use legitimate RMM installers and system utilities (e.g., msiexec) to execute and deploy rogue RMM instances, blending malicious activity with normal administrative behavior.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Audit execution of RMM installers using system utilities and monitor for connections to suspicious domains."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--870be6bf-3203-498a-aca8-c11184e4af8f",
+      "name": "Persistence via Scheduled Tasks for RMMs",
+      "description": "Threat actors create scheduled tasks to maintain persistence of rogue RMM services (e.g., GoTo Resolve) on compromised endpoints.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Monitor for creation of scheduled tasks that launch RMM services, especially those not authorized by IT."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1a1fec05-d578-40d9-a57e-a676b891ad0a",
+      "name": "Malicious Use of Signed RMM Binaries",
+      "description": "Attackers use signed RMM binaries (e.g., GoTo Technologies USA, SimpleHelp Ltd.) to evade detection and increase trust in rogue installers.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Identify execution of signed RMM binaries from suspicious sources or directories."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "name": "Execution of Rogue RMM Installers via Social Engineering Lures",
+      "description": "Threat actors use themed lures (e.g., holiday, bid transcript, evite) to convince users to download and execute rogue RMM installers.",
+      "x_mitre_platforms": [
+        "Windows"
+      ],
+      "x_mitre_permissions_required": [
+        "User"
+      ],
+      "x_mitre_detection": "Monitor for execution of installer files with names matching known lure themes."
+    },
+    {
+      "type": "file",
+      "id": "file--9a262070-a0e7-4a3c-876d-d7c38dc4b1f8",
+      "name": "Open Revised Contract (2).exe",
+      "path": "C:\\WINDOWS\\system32\\sc.exe start GoToResolve_2362921307173827601",
+      "signed": true,
+      "signer": "GoTo Technologies USA, LLC"
+    },
+    {
+      "type": "file",
+      "id": "file--c3e488f7-6838-405e-b2bb-1b27071c1349",
+      "name": "screenconnect.clientservice.exe",
+      "path": "c:\\program files (x86)\\screenconnect client (fdeeb5df8057eef0)\\screenconnect.clientservice.exe",
+      "hashes": {
+        "SHA-256": "f1b5c000794f046259121c63ed37f9eff0cfe1258588eca6fd85e16d3922767e"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4c78bd79-99ff-4091-9e28-a1e816e9659f",
+      "name": "276Special%10Invitation9756.msi",
+      "path": "C:\\Users\\REDACTED\\Downloads\\276Special%10Invitation9756.msi"
+    },
+    {
+      "type": "url",
+      "id": "url--086629d3-f896-44b4-a84a-384ada95429f",
+      "value": "hxxp://elegantparty.de"
+    },
+    {
+      "type": "file",
+      "id": "file--128c4238-a331-4a88-a4c0-a10607d92127",
+      "name": "NewAMG2908.exe",
+      "signed": true,
+      "signer": "SimpleHelp Ltd."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ae15e1cc-a052-48b4-9cb0-5138985ddaef",
+      "value": "stsmithchurchitems.shop"
+    },
+    {
+      "type": "file",
+      "id": "file--ec24807b-9f4b-41a0-87a6-d4f24fce3ce8",
+      "name": "SimpleService.exe",
+      "path": "C:\\ProgramData\\JWrapper-Remote Access\\JWAppsSharedConfig\\restricted\\SimpleService.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c10ea008-2783-44d6-b6e2-48d6cf595053",
+      "name": "serviceconfig.xml",
+      "path": "C:\\ProgramData\\JWrapper-Remote Access\\JWAppsSharedConfig\\serviceconfig.xml"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fd1993e7-a653-4a94-bc91-c2d9814f9e8b",
+      "value": "xtroloozyanimailfeeddeals.shop"
+    },
+    {
+      "type": "file",
+      "id": "file--5a83a9ff-34e7-4959-bc77-4b22a9432e91",
+      "name": "em_GIRMOlf8_installer_Win7-Win11_x86_x64.msi"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0b3c4a58-fd06-431a-98e1-263e1beecb99",
+      "value": "ssaaccount-helper.icu"
+    },
+    {
+      "type": "file",
+      "id": "file--16effa40-9084-48db-a4db-3373cdb8dcf5",
+      "name": "7ZSfx000.cmd",
+      "path": "C:\\Users\\REDACTED\\AppData\\Local\\Temp\\7ZSfx000.cmd"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e240fb97-ee97-47ed-b92a-10b4f3fccbcb",
+      "value": "deuwre.com"
+    },
+    {
+      "type": "file",
+      "id": "file--b45492e2-29bd-493b-b6da-2f5ab4720cc8",
+      "name": "OPENINVITATION.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0172d484-be35-45c0-a49f-0973251fe4ff",
+      "value": "abre.ai"
+    },
+    {
+      "type": "file",
+      "id": "file--a0bd13f5-26eb-446f-8b2a-caa91d3d786b",
+      "name": "SimpleService.exe",
+      "path": "C:\\ProgramData\\JWrapper-Remote Access\\JWAppsSharedConfig\\restricted\\SimpleService.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5a0a3eda-eeb5-471f-9dd3-3dab1211fd92",
+      "value": "xtroloozyanimailfeeddeals.shop"
+    },
+    {
+      "type": "file",
+      "id": "file--d75a80ed-c296-4077-bc57-ce24452ad568",
+      "name": "screenconnect.clientservice.exe",
+      "path": "C:\\Program Files (x86)\\ScreenConnect Client (2f193a6e5e15c3cc)\\screenconnect.clientservice.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f4be8413-3006-4edb-af7d-6298354d46f2",
+      "value": "support.innerschapel.com"
+    },
+    {
+      "type": "file",
+      "id": "file--1db459c3-422a-4c0c-9df9-77cb45ba35e2",
+      "name": "Thanksgiving-iv.exe",
+      "path": "C:\\Users\\REDACTED\\Downloads\\Thanksgiving-iv.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--4cd62591-9cca-4ffd-ab49-b2760d34269c",
+      "value": "https://pub-0e9274b4f4a74997bcafd5c5c778bf91.r2.dev/Thanksgiving-iv.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--8f50b34d-3da4-45e0-8ad5-c03ed1fd6465",
+      "name": "screenconnect.clientservice.exe",
+      "path": "C:\\Program Files (x86)\\ScreenConnect Client (3bf4055180e70e5b)\\screenconnect.clientservice.exe"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "value": "wilkensealsivc.shop"
+    },
+    {
+      "type": "file",
+      "id": "file--3d6df4a7-654f-47d1-a5a9-6dab78efd4d9",
+      "name": "Contract Revised.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--d1f0dc28-56b5-453d-9405-ef1324593bef",
+      "value": "https://auctechnologies.com/revv/index%20(1).html"
+    },
+    {
+      "type": "file",
+      "id": "file--97592b9d-1653-4719-8c97-c2f9a3aade4e",
+      "name": "HideUL.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--e8b17c48-7401-473b-8677-f69a2aeabca9",
+      "name": "PIN.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "name": "EVITEINVITERSOLVELIST.exe"
+    },
+    {
+      "type": "url",
+      "id": "url--7d3f748b-435c-4afb-ba51-dc3fc685a8e0",
+      "value": "https://con.wepivifllc.de/Bin/ReadAdobe_MICR0S0FTxxPDF.ClientSetup.msi"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03bb590e-b189-4372-ba1d-046b396c0fc1",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "ScreenConnect is abused by threat actors as described in the attack pattern 'Abuse of Remote Monitoring and Management (RMM) Tools)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67f96404-564a-4961-bbfe-1cf68edc6597",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "GoTo Resolve is repurposed in phishing campaigns as described in 'Phishing with Malicious RMM Installers'."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5df8f2a3-b60a-4522-b284-f1242baaf3b9",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "SimpleHelp is used as a secondary stage in chained RMM deployments for persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c2f996b-b4ac-445c-b93b-827273888bb8",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "PDQ is abused to deploy additional malicious RMM software as described in chained RMM deployment attack pattern."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97cbb802-932f-43df-bb64-8c2d0959ba18",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "ITarian is misused to install secondary RMM tools as described in chained RMM deployment attack pattern."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c311814-555c-4e5c-ab71-ec1aa9b84270",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "Chrome Remote Desktop is observed in malicious deployments as part of multi-RMM attack chains."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f0e8859-38f0-48d0-bf6b-1bdb744a361c",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "Atera is involved in incidents of rogue RMM deployments."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ca81cd8d-b2a0-4b1b-a5e0-1ebe42399d99",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "NinjaRMM is observed in incidents involving malicious deployments for unauthorized access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b8354dd4-dce0-465c-b0cd-5f3f0d4ed20f",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "TeamViewer is abused by threat actors for persistence and access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70f5915c-c4da-4bbb-904f-d699c78e6b51",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "ITarian (rogue installer) is distributed via phishing and attacker-controlled domains, used to deploy secondary RMM tools."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2ee6bae3-0491-4b6a-8185-f86cc67b2644",
+      "relationship_type": "delivers",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "GoTo Resolve is used by threat actors to deploy secondary RMM tools such as ScreenConnect."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1db04dc-5f0d-49c6-b419-eba537d1141c",
+      "relationship_type": "delivers",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "PDQ is used to install malicious SimpleHelp instances."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8f2ef8e7-6369-4114-aae7-5a27bbdbfa41",
+      "relationship_type": "delivers",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "ITarian is used to install rogue ScreenConnect instances."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--825ab025-02f8-447a-a683-6bb6998fb854",
+      "relationship_type": "delivers",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "GoTo Resolve is used to install SimpleHelp, which is then used to install ScreenConnect in chained attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--44b6f973-3ae0-4e5c-8651-416aa8df9eee",
+      "relationship_type": "delivers",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "SimpleHelp is used to install malicious ScreenConnect instances."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ea46429c-735f-4dea-bf48-b09a23071145",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "ScreenConnect is installed via living-off-the-land techniques such as msiexec."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--03cb5da7-31ae-4844-a5cf-3a8f0b04e25b",
+      "relationship_type": "uses",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "attack-pattern--f85e797f-8bac-434c-9ce1-42fb2a9aff1e",
+      "description": "GoTo Resolve persistence is maintained via scheduled tasks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--56721c0a-8645-47e2-8543-4dbd989124e1",
+      "relationship_type": "uses",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "Open Revised Contract (2).exe is a renamed GoTo Resolve instance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95059e5b-03e9-4197-aff2-7ca9ef6e8715",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "screenconnect.clientservice.exe is the binary for ScreenConnect."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d7ba984-9ae9-4080-bc9f-925a2d79449b",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "276Special%10Invitation9756.msi is used to install PDQ."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49605c95-ef0f-437a-8f2d-44a2a13eee46",
+      "relationship_type": "uses",
+      "source_ref": "url--7d3f748b-435c-4afb-ba51-dc3fc685a8e0",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "hxxp://elegantparty.de is the download source for 276Special%10Invitation9756.msi."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f86ad73-e167-4ffd-b9ee-be763828620f",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "NewAMG2908.exe is a malicious SimpleHelp installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc1a2f35-a587-439a-8792-03a6e92ef2b4",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "SimpleHelp instance configured to connect to stsmithchurchitems.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4548b50-0b7d-4c9f-ba2a-d91d06a027c8",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "SimpleService.exe is a SimpleHelp binary."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49d2b3b6-364c-4891-b4fb-55635ca46d83",
+      "relationship_type": "uses",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "serviceconfig.xml contains configuration for SimpleHelp including domains and IP addresses."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--156996d4-9399-4f72-8c0b-4b95ced577de",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "SimpleHelp instance configured to connect to xtroloozyanimailfeeddeals.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65e31b6c-1e9d-447a-87cb-60cd21267518",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "em_GIRMOlf8_installer_Win7-Win11_x86_x64.msi is a rogue ITarian installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b3e7d6a-481f-45b7-ae3b-1304dfb50319",
+      "relationship_type": "uses",
+      "source_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "ssaaccount-helper.icu is the download source for em_GIRMOlf8_installer_Win7-Win11_x86_x64.msi."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bce3688-6336-41e5-9cb3-30fbf0a6b76c",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "7ZSfx000.cmd installs a rogue ScreenConnect instance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af0ce5b6-46fe-488e-a5f0-2d5e6bd08f57",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "ScreenConnect instance configured to communicate with deuwre.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2abe803a-bfa3-44c7-a2ea-556ee0ca7c1b",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "OPENINVITATION.exe is a rogue GoTo Resolve installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--488d5841-0932-45ea-8117-c351e85dd0a3",
+      "relationship_type": "uses",
+      "source_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "abre.ai is the download source for OPENINVITATION.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c1342415-ffcc-4ecf-8dc1-e0d808377b6d",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "SimpleService.exe is a SimpleHelp binary."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1587ac72-62bb-4007-a47e-0688b8963bdd",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "SimpleHelp instance configured to communicate with xtroloozyanimailfeeddeals.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--aca26d07-7694-452b-86b4-b0d79fcf966f",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "screenconnect.clientservice.exe is the binary for ScreenConnect."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f00e65a5-3170-4702-a5b9-fe25107bcf65",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "ScreenConnect instance configured to communicate with support.innerschapel.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--424fb52c-600d-4b29-b2b6-d66f02f84c9d",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "Thanksgiving-iv.exe is a rogue GoTo Resolve installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9925f1e-7bba-4657-9639-2e444535c676",
+      "relationship_type": "uses",
+      "source_ref": "url--7d3f748b-435c-4afb-ba51-dc3fc685a8e0",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "https://pub-0e9274b4f4a74997bcafd5c5c778bf91.r2.dev/Thanksgiving-iv.exe is the download source for Thanksgiving-iv.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a0bee118-ca46-412d-bab0-867378e8eecf",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "screenconnect.clientservice.exe is the binary for ScreenConnect."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--290292c6-c89b-46bb-9d5e-acee6c17a34f",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "target_ref": "domain-name--3e769fb4-9bf0-4992-bb0d-ce837e84831a",
+      "description": "ScreenConnect instance configured to communicate with wilkensealsivc.shop."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--32d6d2fc-3d8d-4c43-9c54-38e45b428ec4",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "Contract Revised.exe is a rogue GoTo Resolve installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4651c21-682b-4a9d-b19c-a92679c0361c",
+      "relationship_type": "uses",
+      "source_ref": "url--7d3f748b-435c-4afb-ba51-dc3fc685a8e0",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "https://auctechnologies.com/revv/index%20(1).html is the download source for Contract Revised.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a24eb899-83ac-4716-afc9-62a2abf0300d",
+      "relationship_type": "drops",
+      "source_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "target_ref": "malware--12eaa84a-2c5d-4e2b-b229-5656be511483",
+      "description": "EVITEINVITERSOLVELIST.exe is a rogue GoTo Resolve installer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6b65c965-65ff-4c03-b934-4aa4d9d5a19c",
+      "relationship_type": "uses",
+      "source_ref": "url--7d3f748b-435c-4afb-ba51-dc3fc685a8e0",
+      "target_ref": "file--75c6088a-34f6-474c-96cd-b8252c4ea297",
+      "description": "https://con.wepivifllc.de/Bin/ReadAdobe_MICR0S0FTxxPDF.ClientSetup.msi is the download source for a rogue ScreenConnect installer."
+    }
+  ]
+}

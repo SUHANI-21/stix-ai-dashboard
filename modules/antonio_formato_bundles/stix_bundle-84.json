@@ -1,0 +1,255 @@
+{
+  "type": "bundle",
+  "id": "bundle--dac6f6a0-2eda-4f76-bd24-409b3560c397",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--aba09aa8-f254-4518-8496-9da5b880e28a",
+      "name": "Omnissa Workspace One UEM Path Traversal Vulnerability",
+      "description": "A critical vulnerability (CVE-2025-25231) in Omnissa Workspace One UEM (formerly VMware Workspace One UEM) allows unauthenticated attackers to perform path traversal attacks within a secondary context, leading to information disclosure and potential Remote Code Execution (RCE). The flaw resides in the SystemAppMetadataV1Controller, specifically in the handling of the packageId parameter during request routing.",
+      "created": "2025-12-19T00:00:00Z",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-25231"
+        },
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/omnissa-workspace-one-cve-2025-25231-path-traversal-exploit"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9d804505-54b0-4a6a-9af1-46c7587a9830",
+      "name": "Path Traversal via packageId Parameter Manipulation",
+      "description": "Attackers exploit the SystemAppMetadataV1Controller by manipulating the packageId parameter in the DevicesGateway application. By overriding the path parameter via the URL query string and injecting traversal characters, attackers trick the system into routing requests to unintended internal endpoints with elevated privileges, bypassing authentication.",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/omnissa-workspace-one-cve-2025-25231-path-traversal-exploit"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1299dad8-9a1c-40fe-826c-a36f582a16fd",
+      "name": "Password Spraying for Global Administrator Access",
+      "description": "After retrieving a list of admin users via the path traversal exploit, attackers perform password spraying attacks against the /AirWatch/Login/Login/Login-User endpoint to gain Global Administrator access.",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/omnissa-workspace-one-cve-2025-25231-path-traversal-exploit"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "name": "Remote Code Execution via Malicious File Upload",
+      "description": "With Global Administrator access, attackers modify the Blob Cache Store Path to a web-accessible directory and upload a malicious file (e.g., webshell). File upload restrictions are bypassed by generating valid encrypted strings for executable file extensions using a hardcoded master key found in the code.",
+      "x_mitre_platforms": [
+        "Windows",
+        "Linux"
+      ],
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/omnissa-workspace-one-cve-2025-25231-path-traversal-exploit"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--5e5ad2d6-aa98-4eb9-985e-f9f444f0c08c",
+      "name": "Omnissa Workspace One UEM",
+      "description": "Enterprise mobility management platform formerly known as VMware Workspace One UEM. Vulnerable to CVE-2025-25231 in versions prior to 24.10.0.11, 24.6.0.35, 24.2.0.30, and 23.10.0.50.",
+      "cpe": "cpe:2.3:a:omnissa:workspace_one_uem:*:*:*:*:*:*:*:*",
+      "external_references": [
+        {
+          "source_name": "Picus Security",
+          "url": "https://www.picussecurity.com/resource/blog/omnissa-workspace-one-cve-2025-25231-path-traversal-exploit"
+        }
+      ]
+    },
+    {
+      "type": "software",
+      "id": "software--d3185cee-ffb8-4317-b7e2-62da67a2a543",
+      "name": "Omnissa Workspace One UEM",
+      "cpe": "cpe:2.3:a:omnissa:workspace_one_uem:*",
+      "version": "unknown"
+    },
+    {
+      "type": "software",
+      "id": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71",
+      "name": "VMware Workspace One UEM",
+      "cpe": "cpe:2.3:a:vmware:workspace_one_uem:*",
+      "version": "unknown"
+    },
+    {
+      "type": "file",
+      "id": "file--8783e9fe-9f00-4e16-ad43-df09583885a9",
+      "name": "devicesGatewayConfiguration.json",
+      "extension": "json"
+    },
+    {
+      "type": "file",
+      "id": "file--b20c54ae-b2d5-408e-9aec-ffe26ab67846",
+      "name": "webshell.aspx",
+      "extension": "aspx"
+    },
+    {
+      "type": "file",
+      "id": "file--e2ad8e2b-4cb7-4ad3-acd2-c0409d9a67aa",
+      "name": "Blob Cache Store Path",
+      "extension": ""
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--79f1a2f8-5b26-4abc-8528-8f0094003c21",
+      "account_type": "admin",
+      "user_id": "unknown"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--f455ba61-8b48-4dba-8345-35a2fab61097",
+      "account_type": "global administrator",
+      "user_id": "unknown"
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--a696ed31-0638-46e7-9304-e0f31e99b52a",
+      "key_type": "master key",
+      "value": "5c5e2c554f4f644b54383127495b356d7b36714e4b214a6967492657290123a0",
+      "salt": "s@1tValue"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7cb129cf-9cfe-44ec-be06-344b396223a5",
+      "relationship_type": "has",
+      "source_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71",
+      "target_ref": "vulnerability--aba09aa8-f254-4518-8496-9da5b880e28a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e2703ee9-c657-46cc-8db0-335d8986f44f",
+      "relationship_type": "has",
+      "source_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71",
+      "target_ref": "vulnerability--aba09aa8-f254-4518-8496-9da5b880e28a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--918ac6b4-5d82-402c-88dc-faee1a9be6a7",
+      "relationship_type": "has",
+      "source_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71",
+      "target_ref": "vulnerability--aba09aa8-f254-4518-8496-9da5b880e28a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57f1d66a-5b5c-4f60-8f2c-cfe86858c2c1",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cfe495e3-5ff9-4bfb-abe9-0f63d2478d6d",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--08d71f1c-f2d2-4393-b689-dc12e4003ca1",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "software--f1dd5271-17f9-4c64-a2ea-a79d0ea76f71"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1456dd3a-7723-452d-9368-bc830ec1db08",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "vulnerability--aba09aa8-f254-4518-8496-9da5b880e28a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7fe2adf5-0207-4b32-a6cc-fd6ab89b0872",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "network-traffic--bc51623e-a46a-47b0-88ee-6a83c08f9e1e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--896b2236-8eda-4d2f-8eee-be6a6a02485c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "file--e2ad8e2b-4cb7-4ad3-acd2-c0409d9a67aa"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0136189f-9658-45b9-9867-463db734dc48",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "file--e2ad8e2b-4cb7-4ad3-acd2-c0409d9a67aa"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ddc006c8-c3e7-498c-9d52-a9ef26d7490e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "user-account--f455ba61-8b48-4dba-8345-35a2fab61097"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47b34933-1318-403b-b9ac-44db903bdf6b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "user-account--f455ba61-8b48-4dba-8345-35a2fab61097"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c3bb851a-73d5-4fa6-9660-3eff1f24c29c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "cryptographic-key--a696ed31-0638-46e7-9304-e0f31e99b52a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c32710c8-9425-4039-9ba1-866015002b16",
+      "relationship_type": "subtechnique-of",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--11238d9e-5950-4785-8985-7f68ac2f5605",
+      "relationship_type": "subtechnique-of",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b3120ae-c669-49f7-bbc7-ebbfd19da588",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "file--e2ad8e2b-4cb7-4ad3-acd2-c0409d9a67aa"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bcc58fc4-562e-4bc4-ab5d-efdbcd7a1e5d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--0d9d0a75-4067-418c-944f-f131441a0ead",
+      "target_ref": "cryptographic-key--a696ed31-0638-46e7-9304-e0f31e99b52a"
+    }
+  ]
+}

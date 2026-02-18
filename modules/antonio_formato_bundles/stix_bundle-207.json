@@ -1,0 +1,270 @@
+{
+  "type": "bundle",
+  "id": "bundle--d36a2a35-ebb1-4ce2-9675-73d725152c3e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--2b1077e5-7d80-4874-a8a3-f11cab6b0653",
+      "value": "172.17.XX.XX"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1b193d5b-03a3-4213-8ef2-b8e8f9107021",
+      "value": "external Kali Linux machine"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b7ddba7d-5bec-465c-88c6-be0cad780fd3",
+      "value": "external IP address"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--e02cb07f-5456-4c01-8f3e-f689199d32ab",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\Spooler"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--adbc02c4-3a18-48cc-875b-1df636c87a6c",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\EFSRPC"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--62a7c558-0c2e-4853-8f90-03ec729a4563",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\FssagentRpc"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--49b07691-d858-43a0-833d-4b7a6747b1dc",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\EventLog"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--14f5fdbc-2d28-44ab-a38a-d0b4cc6f3a08",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\netdfs"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--76b8e2aa-9d8c-437e-9fb5-f979cf61c892",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\samr"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--0af4b786-1ad1-466a-9bbd-0acdf71058ba",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\lsarpc"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--cfde53e8-93a9-439a-b076-c23eaf4c265e",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\lsass"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--be761b00-cbb9-4e9a-b477-042d7d714207",
+      "key": "HKLM\\SYSTEM\\CurrentControlSet\\Services\\netlogon"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--4426e855-4338-406a-9dc6-fc304596e651",
+      "account_login": "compromised user account"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--8cb18ab8-fab7-4a38-8495-4affc9081dcd",
+      "account_login": "machine account hash of Citrix server"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--c1e365fe-1b9b-4ee4-815b-1d0c3f0a76b9",
+      "account_login": "machine account hash of RODC server"
+    },
+    {
+      "type": "user-account",
+      "id": "user-account--03b12875-afa6-4a47-90dc-27dd20bfe546",
+      "account_login": "DC machine account"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--639331a3-708c-4736-b17d-24da22cc9d88",
+      "value": "Domain Controllers"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d1d427ac-03ab-4f9d-86c8-31acc81a9ae7",
+      "value": "Read-Only Domain Controllers"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--df4f78d4-8ea4-4e65-9136-fa38cf3beee7",
+      "value": "RADIUS servers"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6156623d-c5d3-401b-a52c-13061da182e2",
+      "value": "Citrix servers"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c66ae8a9-54ea-47a7-a87e-3f6845463a84",
+      "value": "certificate authority (CA) servers"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--aecd0944-f15e-4a89-bb49-aab670cdd7b7",
+      "value": "command and control (C2) servers"
+    },
+    {
+      "type": "software",
+      "id": "software--566077f7-4597-456a-8ccc-e5e9e6882820",
+      "name": "Mimikatz",
+      "cpe": "cpe:2.3:a:mimikatz:mimikatz:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--9dc561fa-6e8d-4e7c-a8bb-36447d5e8cb8",
+      "name": "PetitPotam",
+      "cpe": "cpe:2.3:a:petitpotam:petitpotam:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--8d819582-ad87-4d3c-9e02-c4d56bacd6cc",
+      "name": "Metasploit",
+      "cpe": "cpe:2.3:a:rapid7:metasploit:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--a7d44e6d-616b-4cbc-9e91-6a1b0f2fed6c",
+      "name": "CheeseOunce"
+    },
+    {
+      "type": "software",
+      "id": "software--743e457c-a8b3-4c0a-ab77-b238d4b24231",
+      "name": "Cortex XDR"
+    },
+    {
+      "type": "software",
+      "id": "software--8a630f43-12c7-477b-85bb-81fb735bb53a",
+      "name": "Cortex XSIAM"
+    },
+    {
+      "type": "software",
+      "id": "software--751a45fb-dfb2-40c8-8eae-ab1b5310c24f",
+      "name": "Unit 42 Managed Detection and Response Service"
+    },
+    {
+      "type": "software",
+      "id": "software--1c5028b9-0858-4a7f-a0d9-e5429820e525",
+      "name": "Windows"
+    },
+    {
+      "type": "software",
+      "id": "software--c69816a5-a098-4913-855b-5397a8194f80",
+      "name": "Active Directory"
+    },
+    {
+      "type": "software",
+      "id": "software--3137dec8-e1a5-4602-9872-e79a9d48bfcd",
+      "name": "Citrix"
+    },
+    {
+      "type": "software",
+      "id": "software--b5d2d0a2-3571-47e2-b51f-69feb2ebbddb",
+      "name": "RADIUS"
+    },
+    {
+      "type": "software",
+      "id": "software--be269224-2871-4e8d-ad77-b8f7b89e4ec1",
+      "name": "Event Viewer"
+    },
+    {
+      "type": "file",
+      "id": "file--7bf5558e-dfaa-426f-8825-9ee270f45852",
+      "name": "NTLM hash"
+    },
+    {
+      "type": "file",
+      "id": "file--91793c5e-cb7c-4bd5-a467-c03bc29ebfa2",
+      "name": "EfsRpcOpenFileRaw"
+    },
+    {
+      "type": "file",
+      "id": "file--a80f1b54-7591-4f75-80fa-859e8c4db511",
+      "name": "EfsRpcEncryptFileSrv"
+    },
+    {
+      "type": "file",
+      "id": "file--cb0267c1-4ab4-4927-863a-8d9cbb876cd8",
+      "name": "EfsRpcDecryptFileSrv"
+    },
+    {
+      "type": "file",
+      "id": "file--fb53839d-b36e-4f3e-b411-904491ce1820",
+      "name": "EfsRpcQueryUsersOnFile"
+    },
+    {
+      "type": "file",
+      "id": "file--90e0ab02-8808-4da8-81b6-72f1e85dfc7e",
+      "name": "EfsRpcQueryRecoveryAgents"
+    },
+    {
+      "type": "file",
+      "id": "file--a92f47c6-8789-4676-9d27-1d946c707fcb",
+      "name": "EfsRpcFileKeyInfo"
+    },
+    {
+      "type": "file",
+      "id": "file--55b5ae6f-a979-4cfc-bcec-d69a531b4114",
+      "name": "EfsRpcDuplicateEncryptionInfoFile"
+    },
+    {
+      "type": "file",
+      "id": "file--8075a96d-2bef-4863-a0ae-1ff646c83a18",
+      "name": "EfsRpcAddUsersToFileEx"
+    },
+    {
+      "type": "file",
+      "id": "file--6101eff6-f2e4-46be-87ef-577a8c35dfd3",
+      "name": "EfsRpcFileKeyInfoEx"
+    },
+    {
+      "type": "file",
+      "id": "file--cfb9374d-b96d-418c-a856-ed6019697aef",
+      "name": "NetrDfsAddStdRoot"
+    },
+    {
+      "type": "file",
+      "id": "file--f8fd74be-b8db-4f19-abb9-20d728ab879a",
+      "name": "NetrDfsRemoveStdRoot"
+    },
+    {
+      "type": "file",
+      "id": "file--686c878d-c1d2-47ac-a9d3-fb263da30757",
+      "name": "IsPathSupported"
+    },
+    {
+      "type": "file",
+      "id": "file--e82d9b42-38ab-42a8-9f08-eee73b2c7898",
+      "name": "IsPathShadowCopied"
+    },
+    {
+      "type": "file",
+      "id": "file--634e73b1-0f15-41f1-98de-ffc3ea0eb5d1",
+      "name": "RpcRemoteFindFirstPrinterChangeNotification"
+    },
+    {
+      "type": "file",
+      "id": "file--28ef3e0a-2afb-4821-a832-d17710ba1607",
+      "name": "RpcRemoteFindFirstPrinterChangeNotificationEx"
+    },
+    {
+      "type": "file",
+      "id": "file--bddc111d-8fac-443d-b0f1-396f931a5ddd",
+      "name": "RpcAsyncOpenPrinter"
+    },
+    {
+      "type": "file",
+      "id": "file--26f535d9-c0e6-4823-a93e-adf03952c01b",
+      "name": "ElfrOpenBELW"
+    }
+  ]
+}

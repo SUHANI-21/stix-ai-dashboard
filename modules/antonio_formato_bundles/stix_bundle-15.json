@@ -1,0 +1,1927 @@
+{
+  "type": "bundle",
+  "id": "bundle--89672f36-8ccb-4d41-afe9-8b6d135886b3",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "created": "2026-01-17T16:24:52.125929Z",
+      "modified": "2026-01-17T16:24:52.125929Z",
+      "name": "Darktrace",
+      "description": "Darktrace is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--c8384a3b-1160-aaea-5d44-b360ff69bde7",
+      "created": "2026-01-17T16:24:52.125929Z",
+      "modified": "2026-01-17T16:24:52.125929Z",
+      "name": "Signe Zaharka",
+      "description": "Signe Zaharka is the primary author of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-17T16:24:52.125929Z",
+      "modified": "2026-01-17T16:24:52.125929Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-17T16:24:52.125929Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "created": "2026-01-17T16:25:12.322442Z",
+      "modified": "2026-01-17T16:25:12.322442Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Initial Access via Exploitation of RMM Vulnerabilities",
+      "description": "Medusa ransomware actors frequently gain initial access to victim environments by exploiting vulnerabilities in remote monitoring and management (RMM) tools. Specifically, they target unpatched or misconfigured SimpleHelp RMM servers (CVE-2024-57726, CVE-2024-57727, CVE-2024-57728), ConnectWise ScreenConnect (CVE-2024-1709), and other RMM platforms. By leveraging these flaws, the attackers bypass authentication or gain elevated privileges, allowing them to infiltrate the network without needing to rely on phishing or stolen credentials. This approach is highly effective due to the widespread deployment of RMM tools and the critical access they provide to IT infrastructure.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1190/",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+      "created": "2026-01-17T16:25:12.322561Z",
+      "modified": "2026-01-17T16:25:12.322561Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Abuse of Purchased Access from Initial Access Brokers",
+      "description": "Medusa actors often collaborate with initial access brokers (IABs) who sell access to compromised devices or accounts. These brokers typically obtain access through phishing, credential stuffing, or brute-force attacks. Medusa leverages this purchased access to bypass traditional perimeter defenses and immediately begin post-compromise activities. This outsourcing of initial compromise enables rapid scaling and diversification of targets, as the ransomware operators do not need to conduct the initial intrusion themselves.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+      "created": "2026-01-17T16:25:12.323153Z",
+      "modified": "2026-01-17T16:25:12.323153Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Persistence via RMM Agent Reconfiguration",
+      "description": "After gaining access to SimpleHelp management servers, Medusa threat actors edit server configuration files to redirect existing SimpleHelp RMM agents to communicate with unauthorized servers under their control. This technique allows the attackers to maintain persistent access to compromised endpoints, even if the initial infection vector is remediated. By hijacking legitimate RMM infrastructure, they blend in with normal administrative activity and evade detection, ensuring long-term access for further malicious operations.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "created": "2026-01-17T16:25:12.323308Z",
+      "modified": "2026-01-17T16:25:12.323308Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Command and Control via Legitimate RMM Tools",
+      "description": "Medusa utilizes legitimate RMM tools such as SimpleHelp and Atera for command and control (C2) operations. By leveraging these platforms, the attackers can issue commands, transfer files, and control compromised systems remotely. The use of legitimate software allows them to evade network-based detection mechanisms, as traffic to RMM servers is typically permitted and considered benign. This technique is particularly effective in environments where RMM tools are widely used for IT support and maintenance.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1219/",
+          "external_id": "T1219"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+      "created": "2026-01-17T16:25:12.323453Z",
+      "modified": "2026-01-17T16:25:12.323453Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Lateral Movement Using RMM Functionality",
+      "description": "Once inside a network, Medusa actors use RMM tools to move laterally between systems. By exploiting the administrative capabilities of platforms like SimpleHelp, they can access additional endpoints, deploy ransomware payloads, and expand their foothold within the organization. This method allows for stealthy lateral movement, as actions performed via RMM tools often mimic legitimate IT operations and are less likely to trigger security alerts.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "lateral-movement"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1021/004/",
+          "external_id": "T1021.004"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+      "created": "2026-01-17T16:25:12.323749Z",
+      "modified": "2026-01-17T16:25:12.323749Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Data Exfiltration via RMM Channels",
+      "description": "Medusa ransomware operators use RMM tools not only for persistence and control but also for data exfiltration. By leveraging the file transfer capabilities of SimpleHelp and similar platforms, they can extract sensitive data from victim networks without raising suspicion. This technique exploits the trusted nature of RMM traffic and allows attackers to bypass traditional data loss prevention controls.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+      "created": "2026-01-17T16:25:12.328528Z",
+      "modified": "2026-01-17T16:25:12.328528Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Triple Extortion: Encryption, Data Leak Threats, and DDoS/Customer Contact",
+      "description": "Medusa employs a triple extortion model, going beyond traditional ransomware tactics. After encrypting data, they threaten victims with public data leaks and apply additional pressure through distributed denial-of-service (DDoS) attacks or by contacting the victim’s customers directly. This multi-pronged approach increases the likelihood of ransom payment by targeting both the organization’s operations and reputation, as well as its relationships with external stakeholders.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+      "created": "2026-01-17T16:25:12.329105Z",
+      "modified": "2026-01-17T16:25:12.329105Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "File Encryption with Distinctive Ransom Note and Extension",
+      "description": "Medusa ransomware encrypts files on compromised systems, appending the .MEDUSA extension to affected files and dropping a ransom note named !!!READ_ME_MEDUSA!!!.txt. This technique ensures victims are aware of the compromise and provides clear instructions for ransom payment. The distinctive file extension and ransom note differentiate Medusa from other ransomware variants and serve as a recognizable signature for incident responders.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "impact"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1486/",
+          "external_id": "T1486"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "created": "2026-01-17T16:25:12.329820Z",
+      "modified": "2026-01-17T16:25:12.329820Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Exploitation of Vulnerabilities in Enterprise Management Servers",
+      "description": "Beyond RMM tools, Medusa actors exploit vulnerabilities in other enterprise management platforms, such as Fortra’s GoAnywhere MFT License Servlet (CVE-2025-10035), Microsoft Exchange Server (CVE-2021-34473/ProxyShell), and Fortinet Enterprise Management Servers (CVE-2023-48788). By targeting these systems, which often have elevated privileges and access to sensitive data, attackers can rapidly escalate their privileges and deploy ransomware across large portions of the network.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1190/",
+          "external_id": "T1190"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "created": "2026-01-17T16:25:17.947708Z",
+      "modified": "2026-01-17T16:25:17.947708Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Medusa",
+      "description": "Medusa is a Ransomware-as-a-Service (RaaS) family that exploits remote monitoring and management (RMM) tools for persistence, lateral movement, and data exfiltration. It is known for triple extortion tactics and indiscriminate targeting across sectors.",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Storm-1175",
+        "Spearwing"
+      ],
+      "x_capabilities": [
+        "encryption",
+        "data-exfiltration",
+        "lateral-movement",
+        "persistence",
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "created": "2026-01-17T16:25:17.947791Z",
+      "modified": "2026-01-17T16:25:17.947791Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "MedusaLocker",
+      "description": "MedusaLocker is a ransomware family mentioned as distinct from Medusa. It encrypts files and demands ransom but is not the focus of the described attacks.",
+      "malware_types": [
+        "ransomware"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "encryption"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "created": "2026-01-17T16:25:17.947843Z",
+      "modified": "2026-01-17T16:25:17.947843Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Medusa Android Banking Trojan",
+      "description": "Medusa Android Banking Trojan is referenced as a similarly named but separate malware, primarily targeting mobile banking credentials. It is not involved in the described campaign.",
+      "malware_types": [
+        "trojan"
+      ],
+      "is_family": true,
+      "x_capabilities": [
+        "credential-theft"
+      ]
+    },
+    {
+      "type": "malware",
+      "spec_version": "2.1",
+      "id": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "created": "2026-01-17T16:25:17.947896Z",
+      "modified": "2026-01-17T16:25:17.947896Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Medusa Botnet",
+      "description": "Medusa Botnet/Medusa Stealer is mentioned as a distinct malware family, unrelated to the ransomware campaign, typically used for stealing information and botnet activity.",
+      "malware_types": [
+        "botnet",
+        "stealer"
+      ],
+      "is_family": true,
+      "aliases": [
+        "Medusa Stealer"
+      ],
+      "x_capabilities": [
+        "data-exfiltration",
+        "command-and-control"
+      ]
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "created": "2026-01-17T16:25:24.247376Z",
+      "modified": "2026-01-17T16:25:24.247376Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Medusa",
+      "description": "Medusa is a ransomware group operating a Ransomware-as-a-Service (RaaS) model, responsible for attacks exploiting RMM tools for persistence, lateral movement, and data exfiltration. The group is attributed with over 500 victim organizations and is known for collaborating with initial access brokers and employing triple extortion tactics.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "aliases": [
+        "Storm-1175",
+        "Spearwing"
+      ],
+      "goals": [
+        "File encryption for ransom",
+        "Data exfiltration",
+        "Triple extortion (encryption, data leak threats, DDoS/customer pressure)",
+        "Abuse of RMM tools for persistence and lateral movement"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "created": "2026-01-17T16:25:24.247458Z",
+      "modified": "2026-01-17T16:25:24.247458Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Frozen Spider",
+      "description": "Frozen Spider is referenced as a Big Game Hunting (BGH) group affiliated with Medusa, suggesting collaboration in ransomware operations and targeting large organizations for high-value extortion.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Big Game Hunting ransomware operations",
+        "Collaboration with Medusa for large-scale attacks"
+      ],
+      "sophistication": "advanced",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "created": "2026-01-17T16:25:24.247512Z",
+      "modified": "2026-01-17T16:25:24.247512Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "UNC7885",
+      "description": "UNC7885 is mentioned as a cybercriminal group affiliated with Medusa, indicating involvement in ransomware campaigns and possibly providing operational support or resources.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "goals": [
+        "Support Medusa ransomware operations",
+        "Cybercriminal collaboration"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "threat-actor",
+      "spec_version": "2.1",
+      "id": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "created": "2026-01-17T16:25:24.247565Z",
+      "modified": "2026-01-17T16:25:24.247565Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Initial Access Brokers",
+      "description": "Initial Access Brokers are criminal actors who provide compromised access to networks and accounts to ransomware groups like Medusa, typically via phishing, credential stuffing, or exploiting vulnerabilities.",
+      "threat_actor_types": [
+        "criminal"
+      ],
+      "aliases": [
+        "IABs"
+      ],
+      "goals": [
+        "Sell compromised access to Medusa and affiliates",
+        "Enable initial access for ransomware deployment"
+      ],
+      "sophistication": "intermediate",
+      "primary_motivation": "financial"
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "created": "2026-01-17T16:25:34.845990Z",
+      "modified": "2026-01-17T16:25:34.845990Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "SimpleHelp",
+      "description": "Medusa actors exploit vulnerabilities and misconfigurations in SimpleHelp, a legitimate remote monitoring and management (RMM) tool, to gain initial access, establish persistence, and perform lateral movement by redirecting RMM agents to attacker-controlled servers.",
+      "tool_types": [
+        "remote-access",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "created": "2026-01-17T16:25:34.846071Z",
+      "modified": "2026-01-17T16:25:34.846071Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "JWrapper",
+      "description": "JWrapper, a legitimate Java application packaging and distribution tool, is observed in Medusa ransomware attacks making unusual external HTTP connections, likely used to facilitate cross-platform payload delivery and management of malicious executables.",
+      "tool_types": [
+        "remote-access",
+        "execution"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "command-and-control"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "created": "2026-01-17T16:25:34.846121Z",
+      "modified": "2026-01-17T16:25:34.846121Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Atera",
+      "description": "Atera, a legitimate RMM platform, is abused by Medusa actors for remote access and control over compromised systems, enabling persistence and facilitating further malicious activities within victim environments.",
+      "tool_types": [
+        "remote-access"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "created": "2026-01-17T16:25:34.846170Z",
+      "modified": "2026-01-17T16:25:34.846170Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "ConnectWise ScreenConnect",
+      "description": "Medusa actors exploit vulnerabilities in ConnectWise ScreenConnect, a legitimate RMM tool, to gain unauthorized access to victim infrastructure and deploy ransomware payloads.",
+      "tool_types": [
+        "remote-access",
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "created": "2026-01-17T16:25:34.846216Z",
+      "modified": "2026-01-17T16:25:34.846216Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "GoAnywhere MFT",
+      "description": "Medusa actors exploit vulnerabilities in GoAnywhere MFT, a legitimate managed file transfer solution, to gain initial access and move laterally within victim networks.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "created": "2026-01-17T16:25:34.846262Z",
+      "modified": "2026-01-17T16:25:34.846262Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Microsoft Exchange Server",
+      "description": "Medusa actors exploit vulnerabilities in Microsoft Exchange Server, a legitimate email and collaboration platform, to gain initial access and potentially escalate privileges within target organizations.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "created": "2026-01-17T16:25:34.846306Z",
+      "modified": "2026-01-17T16:25:34.846306Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Fortinet Enterprise Management Server (EMS)",
+      "description": "Medusa actors exploit vulnerabilities in Fortinet EMS, a legitimate enterprise security management platform, to gain unauthorized access and facilitate further compromise within victim environments.",
+      "tool_types": [
+        "exploitation"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a4e31cb6-745b-ad47-b726-f5fc64e4117d",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "description": "Medusa uses Medusa malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--371697f5-eb39-dcfd-f2d0-5a3036735984",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "description": "Medusa uses MedusaLocker malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b8a339c1-3e49-6d09-107e-6840f48f4198",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "description": "Medusa uses Medusa Android Banking Trojan malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--78123a29-7cee-7b5a-2210-fd58e36c6bf2",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "description": "Medusa uses Medusa Botnet malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f99463d3-8ec3-70bc-59ee-646ac8701819",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "description": "Frozen Spider uses Medusa malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ec7d3678-bb3a-bed6-b17f-36a09f1d4a7a",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "description": "Frozen Spider uses MedusaLocker malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7427a0a6-f611-ee08-0730-dbdacd64f5e0",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "description": "Frozen Spider uses Medusa Android Banking Trojan malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d5c02e69-5b1d-8bba-ce9c-7800b10a7901",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "description": "Frozen Spider uses Medusa Botnet malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a3bef6a0-b032-5ca2-5c59-f52655cd9ec7",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "description": "UNC7885 uses Medusa malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7aad4aa3-eec4-135c-de29-469942244cb5",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "description": "UNC7885 uses MedusaLocker malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1200f4b6-3c50-f727-5b89-e36dc76fe641",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "description": "UNC7885 uses Medusa Android Banking Trojan malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bde07e6a-f68a-b846-2860-e6c344bc0d27",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "description": "UNC7885 uses Medusa Botnet malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3c5a7f38-dd74-c957-a9b3-f598f86112f0",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "description": "Initial Access Brokers uses Medusa malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--60314616-5701-bcf2-98b9-3c855eb9153e",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "description": "Initial Access Brokers uses MedusaLocker malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d0e4947b-e527-68ff-c37c-82241381a275",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "description": "Initial Access Brokers uses Medusa Android Banking Trojan malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--73688c40-90c0-33ca-cbfc-211dca3de505",
+      "created": "2026-01-17T16:25:34.846706Z",
+      "modified": "2026-01-17T16:25:34.846706Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "description": "Initial Access Brokers uses Medusa Botnet malware in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--63a0f50a-a140-07e9-c62e-1c87bbe5934c",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "description": "Medusa employs 'Initial Access via Exploitation of RMM Vulnerabilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a55b5f63-5ee3-0ee6-d560-4cb064baddba",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+      "description": "Medusa employs 'Abuse of Purchased Access from Initial Access Brokers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--54a8c772-b18b-2494-6cd6-14d50415d861",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+      "description": "Medusa employs 'Persistence via RMM Agent Reconfiguration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--66a09251-e6e1-e285-210c-1bb7111541a0",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "Medusa employs 'Command and Control via Legitimate RMM Tools' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0bc2dba3-1078-6d78-f0db-de0962b554c9",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+      "description": "Medusa employs 'Lateral Movement Using RMM Functionality' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7085fcf5-8c21-ef48-48fa-ed3a4500ab88",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+      "description": "Medusa employs 'Data Exfiltration via RMM Channels' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1f2deaa4-ee93-209d-90ee-1fb08b8961b6",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+      "description": "Medusa employs 'Triple Extortion: Encryption, Data Leak Threats, and DDoS/Customer Contact' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1dec2b03-0fef-8414-468a-2859422e8a4c",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+      "description": "Medusa employs 'File Encryption with Distinctive Ransom Note and Extension' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e6aa2645-7829-8668-d177-1628b93c9719",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "description": "Frozen Spider employs 'Initial Access via Exploitation of RMM Vulnerabilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9502ff99-642e-9150-1502-0cb95ff5f4da",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+      "description": "Frozen Spider employs 'Abuse of Purchased Access from Initial Access Brokers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--216f4386-649e-4aba-ba14-f1689c403ccd",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+      "description": "Frozen Spider employs 'Persistence via RMM Agent Reconfiguration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b703afe8-7539-8302-c96d-adabf1766b7a",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "Frozen Spider employs 'Command and Control via Legitimate RMM Tools' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--edeb15cc-ead5-49a0-4b5a-24e678d71504",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+      "description": "Frozen Spider employs 'Lateral Movement Using RMM Functionality' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b875e75b-a1fd-5d7e-3012-96c037ce8841",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+      "description": "Frozen Spider employs 'Data Exfiltration via RMM Channels' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4fb4e6c1-f160-9740-af20-4cd6bd184eb2",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+      "description": "Frozen Spider employs 'Triple Extortion: Encryption, Data Leak Threats, and DDoS/Customer Contact' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4c994988-8a74-9ceb-304a-324814944e62",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+      "description": "Frozen Spider employs 'File Encryption with Distinctive Ransom Note and Extension' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1897c776-13dd-293e-85e6-83cbca068e6d",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "description": "UNC7885 employs 'Initial Access via Exploitation of RMM Vulnerabilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--55e13e29-bee9-88ca-9325-52d6c630e3f8",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+      "description": "UNC7885 employs 'Abuse of Purchased Access from Initial Access Brokers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--28d35156-dbc7-058f-110b-3eeb0b2461f8",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+      "description": "UNC7885 employs 'Persistence via RMM Agent Reconfiguration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2587da5f-0311-9bb6-21b0-bb98bb6dfd5a",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "UNC7885 employs 'Command and Control via Legitimate RMM Tools' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3d65fdce-95df-fc33-4900-b002dc9bcfdb",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+      "description": "UNC7885 employs 'Lateral Movement Using RMM Functionality' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f737e791-35a7-ffda-4a19-a9f0a8ec97bf",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+      "description": "UNC7885 employs 'Data Exfiltration via RMM Channels' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--91c6ca48-f028-99af-7bf5-96295a4e67d8",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+      "description": "UNC7885 employs 'Triple Extortion: Encryption, Data Leak Threats, and DDoS/Customer Contact' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4615fcc8-b189-8d97-0860-bc1ed0437b40",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+      "description": "UNC7885 employs 'File Encryption with Distinctive Ransom Note and Extension' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6dc63ca0-8a15-cf23-f602-89fbb883cc5d",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+      "description": "Initial Access Brokers employs 'Initial Access via Exploitation of RMM Vulnerabilities' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0bedc58b-4598-90bd-220e-72c939e9262c",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+      "description": "Initial Access Brokers employs 'Abuse of Purchased Access from Initial Access Brokers' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--86f01b57-65df-f661-42d9-2ff0006a271d",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+      "description": "Initial Access Brokers employs 'Persistence via RMM Agent Reconfiguration' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--558c3c92-f390-dd02-93be-e13a1b4cfb17",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+      "description": "Initial Access Brokers employs 'Command and Control via Legitimate RMM Tools' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cdae968e-ff5c-0bb0-20ea-20c39436f71b",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+      "description": "Initial Access Brokers employs 'Lateral Movement Using RMM Functionality' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--4beb045d-e460-1d43-3abc-afee289322aa",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+      "description": "Initial Access Brokers employs 'Data Exfiltration via RMM Channels' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c547195b-858f-325d-0174-4be36c555080",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+      "description": "Initial Access Brokers employs 'Triple Extortion: Encryption, Data Leak Threats, and DDoS/Customer Contact' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--57fea786-94bb-ab2d-721a-7820f900713a",
+      "created": "2026-01-17T16:25:34.846853Z",
+      "modified": "2026-01-17T16:25:34.846853Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+      "description": "Initial Access Brokers employs 'File Encryption with Distinctive Ransom Note and Extension' technique"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c02dba3c-a115-3500-5c2d-f4a2f940e1a9",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Medusa uses SimpleHelp tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a7ee80a3-41f3-e6b8-5b6f-6c4893bbbfa5",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Medusa uses JWrapper tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--954d3de8-f7e0-1f2c-c44a-d0ddb0374770",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Medusa uses Atera tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b527f3fc-18c8-9e65-1806-fec1a1b3fc82",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Medusa uses ConnectWise ScreenConnect tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f73a8979-21fb-d739-86a3-0d8fc337fdef",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Medusa uses GoAnywhere MFT tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d7ac0bb2-2ae8-9d6f-5735-27bc04b0802b",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Medusa uses Microsoft Exchange Server tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--407def4b-54bc-8690-8884-a3fbebbce80a",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Medusa uses Fortinet Enterprise Management Server (EMS) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5a02d9b0-c1d1-9131-8fad-609d7b20e39d",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Frozen Spider uses SimpleHelp tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--22192845-8229-2bdc-9e14-67066fe17e4d",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Frozen Spider uses JWrapper tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3ef72ee7-5d4f-327a-d570-56caaa553418",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Frozen Spider uses Atera tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--cf2cfa43-ade0-b9de-eb1b-ce112feccddb",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Frozen Spider uses ConnectWise ScreenConnect tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--a8f38ec1-51c1-b186-608f-d98757b41634",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Frozen Spider uses GoAnywhere MFT tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--613f8059-a7dd-3973-fbd6-aba406e15891",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Frozen Spider uses Microsoft Exchange Server tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--022dc3cd-9062-84f2-f349-1adb1f979b29",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Frozen Spider uses Fortinet Enterprise Management Server (EMS) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--815c2ac5-479f-76e8-2463-310eec7cb152",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "UNC7885 uses SimpleHelp tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--c76afe2d-c328-3a53-991b-a3549b8eaaf3",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "UNC7885 uses JWrapper tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ca5795c4-2f34-0ba0-90d7-25dc53c5410b",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "UNC7885 uses Atera tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2a08000d-6013-9d96-aac7-223275693947",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "UNC7885 uses ConnectWise ScreenConnect tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--85903cbf-2757-91a2-11ce-f543f6fb35f1",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "UNC7885 uses GoAnywhere MFT tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--fd41419a-3c33-7697-6a43-e75a65ad0f75",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "UNC7885 uses Microsoft Exchange Server tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--92a9631f-ce96-9089-ac7a-503a413d044b",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "UNC7885 uses Fortinet Enterprise Management Server (EMS) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--eddd356e-8a52-215e-7cbe-324b21e5f659",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Initial Access Brokers uses SimpleHelp tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--00b1a4d8-202b-36c2-c8ae-41504e947876",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Initial Access Brokers uses JWrapper tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--359a87e6-b673-aed9-8f18-6a5a6b409249",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Initial Access Brokers uses Atera tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--d5674b09-9c9a-9309-cf3a-1a3d15d7b86b",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Initial Access Brokers uses ConnectWise ScreenConnect tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ba4ccd0c-64e1-88c7-fad0-0604e8e5366e",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Initial Access Brokers uses GoAnywhere MFT tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--93e734bb-c713-d4dd-1c13-70a73aa23b49",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Initial Access Brokers uses Microsoft Exchange Server tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1d6e11dc-d796-eec8-75e6-ca4573e9b736",
+      "created": "2026-01-17T16:25:34.847245Z",
+      "modified": "2026-01-17T16:25:34.847245Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Initial Access Brokers uses Fortinet Enterprise Management Server (EMS) tool in their operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--95dd5a9b-09eb-8f31-4321-a4748d25b904",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Medusa uses SimpleHelp for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--86b5c5cb-4ddb-8d7b-abaa-a1b5ff20a435",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Medusa uses JWrapper for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--2ba587ad-893e-d64b-0712-55d33922463e",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Medusa uses Atera for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6991b361-02b0-17a9-ef67-328c742eb64b",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Medusa uses ConnectWise ScreenConnect for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--3c4859a9-b563-cc71-0d18-d4208c2860cb",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Medusa uses GoAnywhere MFT for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--b2e73621-2a70-8eec-479a-5cd2eb60969b",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Medusa uses Microsoft Exchange Server for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1b8769ca-2d97-d2a3-1f4d-521d6ca28c11",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Medusa uses Fortinet Enterprise Management Server (EMS) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--99aa6893-c857-6e9c-a766-f75c5592bcab",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "MedusaLocker uses SimpleHelp for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--e8413f5e-30f0-c03f-d88a-8d1e42658b2d",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "MedusaLocker uses JWrapper for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--f031c93a-f4cd-b9ac-afa8-d8327519cf83",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "MedusaLocker uses Atera for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5842e7f0-16f3-ea5f-6def-bbfd885a01b8",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "MedusaLocker uses ConnectWise ScreenConnect for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--ac6b426a-139c-2429-3a28-05bef38197bf",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "MedusaLocker uses GoAnywhere MFT for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--953e8aa6-c3ad-67a5-60a8-3b21b15f0e0f",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "MedusaLocker uses Microsoft Exchange Server for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--1fefc45f-c136-b225-c44d-a43e9b993fcf",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "MedusaLocker uses Fortinet Enterprise Management Server (EMS) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--678463bb-3527-a502-8b23-911c21e817b3",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Medusa Android Banking Trojan uses SimpleHelp for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--884821d0-f5d8-3676-5983-00c2c6fd1c5d",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Medusa Android Banking Trojan uses JWrapper for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--0ec15f91-42e3-3126-2332-d79a4e21d37f",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Medusa Android Banking Trojan uses Atera for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--5135c6cc-c526-5056-eb94-af66e7a0bb3f",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Medusa Android Banking Trojan uses ConnectWise ScreenConnect for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--df6d9b9e-a243-eda5-d0d8-6ed1f5b5943a",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Medusa Android Banking Trojan uses GoAnywhere MFT for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--6179d0b5-c44e-b22d-13a2-830256b0fb93",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Medusa Android Banking Trojan uses Microsoft Exchange Server for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--efd86897-4e57-791a-b497-eb2fd4cb27e4",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Medusa Android Banking Trojan uses Fortinet Enterprise Management Server (EMS) for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--326c6a2d-c098-285c-fe65-a5555e1a7dc5",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+      "description": "Medusa Botnet uses SimpleHelp for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--afb41464-dd94-7857-c5be-1d585e92cca3",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+      "description": "Medusa Botnet uses JWrapper for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--bf03db2c-2d54-6e1b-b6b3-1ba2850dd20a",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+      "description": "Medusa Botnet uses Atera for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--9f119468-1d74-89c8-01ad-6d2569b13462",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+      "description": "Medusa Botnet uses ConnectWise ScreenConnect for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--7e0e052d-64c4-e40f-cc34-ac97bfbb1340",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+      "description": "Medusa Botnet uses GoAnywhere MFT for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--57136216-b772-44cd-63e8-e8972ff5b866",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+      "description": "Medusa Botnet uses Microsoft Exchange Server for its operations"
+    },
+    {
+      "type": "relationship",
+      "spec_version": "2.1",
+      "id": "relationship--96cc8b17-92bb-09f2-1bd0-811355e920b3",
+      "created": "2026-01-17T16:25:34.847412Z",
+      "modified": "2026-01-17T16:25:34.847412Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "relationship_type": "uses",
+      "source_ref": "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+      "target_ref": "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+      "description": "Medusa Botnet uses Fortinet Enterprise Management Server (EMS) for its operations"
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--4e4d7e8b-b121-dfdb-f828-1c497b7922bf",
+      "created": "2026-01-17T16:25:34.849094Z",
+      "modified": "2026-01-17T16:25:34.849094Z",
+      "created_by_ref": "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+      "name": "Madusa Ransomware 2025: RMM Abuse in Ransomware Campaigns",
+      "description": "This report contains technical analysis and indicators from: https://www.darktrace.com/blog/under-medusas-gaze-how-darktrace-uncovers-rmm-abuse-in-ransomware-campaigns",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-17T16:25:34.849094Z",
+      "object_refs": [
+        "identity--012332b1-72ac-6bf3-46d9-fe661901fcd2",
+        "identity--c8384a3b-1160-aaea-5d44-b360ff69bde7",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+        "attack-pattern--c6f83e59-cef6-fc08-c04b-4dc95475d887",
+        "attack-pattern--db6fd45c-82b0-2e1e-d367-40076ee9cf0f",
+        "attack-pattern--1d74e0bd-50d8-89e8-14a9-2cfac7644e3d",
+        "attack-pattern--4618cdb0-d3d1-18d0-cadd-bd7e25fb16c0",
+        "attack-pattern--e207fb08-e390-62d1-f725-96d8419ad08d",
+        "attack-pattern--b87fdd7b-fff7-ffe0-8539-2965d3d79cf4",
+        "attack-pattern--03eb5569-c605-44ab-0b86-ab7fadb680f8",
+        "attack-pattern--53349efe-ad07-8c98-465a-1735036d8de8",
+        "malware--1068f877-f9f5-087d-dcc6-02f68870d534",
+        "malware--fed39969-cbc6-aa71-af77-edfc7bb5fbdb",
+        "malware--f2bf44f1-d499-98d0-a3f3-3b8998f1ee96",
+        "malware--f0f7f86c-7155-cd28-ad5f-e4d43a58fdd8",
+        "threat-actor--1068f877-f9f5-087d-dcc6-02f68870d534",
+        "threat-actor--21c83884-d8a3-056a-bf36-40e1e6f3f460",
+        "threat-actor--d3c7b4bf-2d08-e9ed-883f-d97a1c2abb07",
+        "threat-actor--8c1b600f-f14a-7e34-0ba0-865e528cedf1",
+        "tool--9742c6fe-8ffb-df63-7e88-3229c6655528",
+        "tool--46da6933-57a9-a6ea-3a17-1b8281ea8628",
+        "tool--cb018b85-29b4-6472-3bcf-6cf2460a8a00",
+        "tool--9ff5d71e-3dc5-daea-f1cc-571838b44274",
+        "tool--c682e3b7-c356-4a91-cb4b-e18e1f3e04b3",
+        "tool--1a56db45-0fb5-b457-e47e-d3afdc79be62",
+        "tool--04056aae-5a2f-505d-6541-b49ff06fbbd3",
+        "relationship--a4e31cb6-745b-ad47-b726-f5fc64e4117d",
+        "relationship--371697f5-eb39-dcfd-f2d0-5a3036735984",
+        "relationship--b8a339c1-3e49-6d09-107e-6840f48f4198",
+        "relationship--78123a29-7cee-7b5a-2210-fd58e36c6bf2",
+        "relationship--f99463d3-8ec3-70bc-59ee-646ac8701819",
+        "relationship--ec7d3678-bb3a-bed6-b17f-36a09f1d4a7a",
+        "relationship--7427a0a6-f611-ee08-0730-dbdacd64f5e0",
+        "relationship--d5c02e69-5b1d-8bba-ce9c-7800b10a7901",
+        "relationship--a3bef6a0-b032-5ca2-5c59-f52655cd9ec7",
+        "relationship--7aad4aa3-eec4-135c-de29-469942244cb5",
+        "relationship--1200f4b6-3c50-f727-5b89-e36dc76fe641",
+        "relationship--bde07e6a-f68a-b846-2860-e6c344bc0d27",
+        "relationship--3c5a7f38-dd74-c957-a9b3-f598f86112f0",
+        "relationship--60314616-5701-bcf2-98b9-3c855eb9153e",
+        "relationship--d0e4947b-e527-68ff-c37c-82241381a275",
+        "relationship--73688c40-90c0-33ca-cbfc-211dca3de505",
+        "relationship--63a0f50a-a140-07e9-c62e-1c87bbe5934c",
+        "relationship--a55b5f63-5ee3-0ee6-d560-4cb064baddba",
+        "relationship--54a8c772-b18b-2494-6cd6-14d50415d861",
+        "relationship--66a09251-e6e1-e285-210c-1bb7111541a0",
+        "relationship--0bc2dba3-1078-6d78-f0db-de0962b554c9",
+        "relationship--7085fcf5-8c21-ef48-48fa-ed3a4500ab88",
+        "relationship--1f2deaa4-ee93-209d-90ee-1fb08b8961b6",
+        "relationship--1dec2b03-0fef-8414-468a-2859422e8a4c",
+        "relationship--e6aa2645-7829-8668-d177-1628b93c9719",
+        "relationship--9502ff99-642e-9150-1502-0cb95ff5f4da",
+        "relationship--216f4386-649e-4aba-ba14-f1689c403ccd",
+        "relationship--b703afe8-7539-8302-c96d-adabf1766b7a",
+        "relationship--edeb15cc-ead5-49a0-4b5a-24e678d71504",
+        "relationship--b875e75b-a1fd-5d7e-3012-96c037ce8841",
+        "relationship--4fb4e6c1-f160-9740-af20-4cd6bd184eb2",
+        "relationship--4c994988-8a74-9ceb-304a-324814944e62",
+        "relationship--1897c776-13dd-293e-85e6-83cbca068e6d",
+        "relationship--55e13e29-bee9-88ca-9325-52d6c630e3f8",
+        "relationship--28d35156-dbc7-058f-110b-3eeb0b2461f8",
+        "relationship--2587da5f-0311-9bb6-21b0-bb98bb6dfd5a",
+        "relationship--3d65fdce-95df-fc33-4900-b002dc9bcfdb",
+        "relationship--f737e791-35a7-ffda-4a19-a9f0a8ec97bf",
+        "relationship--91c6ca48-f028-99af-7bf5-96295a4e67d8",
+        "relationship--4615fcc8-b189-8d97-0860-bc1ed0437b40",
+        "relationship--6dc63ca0-8a15-cf23-f602-89fbb883cc5d",
+        "relationship--0bedc58b-4598-90bd-220e-72c939e9262c",
+        "relationship--86f01b57-65df-f661-42d9-2ff0006a271d",
+        "relationship--558c3c92-f390-dd02-93be-e13a1b4cfb17",
+        "relationship--cdae968e-ff5c-0bb0-20ea-20c39436f71b",
+        "relationship--4beb045d-e460-1d43-3abc-afee289322aa",
+        "relationship--c547195b-858f-325d-0174-4be36c555080",
+        "relationship--57fea786-94bb-ab2d-721a-7820f900713a",
+        "relationship--c02dba3c-a115-3500-5c2d-f4a2f940e1a9",
+        "relationship--a7ee80a3-41f3-e6b8-5b6f-6c4893bbbfa5",
+        "relationship--954d3de8-f7e0-1f2c-c44a-d0ddb0374770",
+        "relationship--b527f3fc-18c8-9e65-1806-fec1a1b3fc82",
+        "relationship--f73a8979-21fb-d739-86a3-0d8fc337fdef",
+        "relationship--d7ac0bb2-2ae8-9d6f-5735-27bc04b0802b",
+        "relationship--407def4b-54bc-8690-8884-a3fbebbce80a",
+        "relationship--5a02d9b0-c1d1-9131-8fad-609d7b20e39d",
+        "relationship--22192845-8229-2bdc-9e14-67066fe17e4d",
+        "relationship--3ef72ee7-5d4f-327a-d570-56caaa553418",
+        "relationship--cf2cfa43-ade0-b9de-eb1b-ce112feccddb",
+        "relationship--a8f38ec1-51c1-b186-608f-d98757b41634",
+        "relationship--613f8059-a7dd-3973-fbd6-aba406e15891",
+        "relationship--022dc3cd-9062-84f2-f349-1adb1f979b29",
+        "relationship--815c2ac5-479f-76e8-2463-310eec7cb152",
+        "relationship--c76afe2d-c328-3a53-991b-a3549b8eaaf3",
+        "relationship--ca5795c4-2f34-0ba0-90d7-25dc53c5410b",
+        "relationship--2a08000d-6013-9d96-aac7-223275693947",
+        "relationship--85903cbf-2757-91a2-11ce-f543f6fb35f1",
+        "relationship--fd41419a-3c33-7697-6a43-e75a65ad0f75",
+        "relationship--92a9631f-ce96-9089-ac7a-503a413d044b",
+        "relationship--eddd356e-8a52-215e-7cbe-324b21e5f659",
+        "relationship--00b1a4d8-202b-36c2-c8ae-41504e947876",
+        "relationship--359a87e6-b673-aed9-8f18-6a5a6b409249",
+        "relationship--d5674b09-9c9a-9309-cf3a-1a3d15d7b86b",
+        "relationship--ba4ccd0c-64e1-88c7-fad0-0604e8e5366e",
+        "relationship--93e734bb-c713-d4dd-1c13-70a73aa23b49",
+        "relationship--1d6e11dc-d796-eec8-75e6-ca4573e9b736",
+        "relationship--95dd5a9b-09eb-8f31-4321-a4748d25b904",
+        "relationship--86b5c5cb-4ddb-8d7b-abaa-a1b5ff20a435",
+        "relationship--2ba587ad-893e-d64b-0712-55d33922463e",
+        "relationship--6991b361-02b0-17a9-ef67-328c742eb64b",
+        "relationship--3c4859a9-b563-cc71-0d18-d4208c2860cb",
+        "relationship--b2e73621-2a70-8eec-479a-5cd2eb60969b",
+        "relationship--1b8769ca-2d97-d2a3-1f4d-521d6ca28c11",
+        "relationship--99aa6893-c857-6e9c-a766-f75c5592bcab",
+        "relationship--e8413f5e-30f0-c03f-d88a-8d1e42658b2d",
+        "relationship--f031c93a-f4cd-b9ac-afa8-d8327519cf83",
+        "relationship--5842e7f0-16f3-ea5f-6def-bbfd885a01b8",
+        "relationship--ac6b426a-139c-2429-3a28-05bef38197bf",
+        "relationship--953e8aa6-c3ad-67a5-60a8-3b21b15f0e0f",
+        "relationship--1fefc45f-c136-b225-c44d-a43e9b993fcf",
+        "relationship--678463bb-3527-a502-8b23-911c21e817b3",
+        "relationship--884821d0-f5d8-3676-5983-00c2c6fd1c5d",
+        "relationship--0ec15f91-42e3-3126-2332-d79a4e21d37f",
+        "relationship--5135c6cc-c526-5056-eb94-af66e7a0bb3f",
+        "relationship--df6d9b9e-a243-eda5-d0d8-6ed1f5b5943a",
+        "relationship--6179d0b5-c44e-b22d-13a2-830256b0fb93",
+        "relationship--efd86897-4e57-791a-b497-eb2fd4cb27e4",
+        "relationship--326c6a2d-c098-285c-fe65-a5555e1a7dc5",
+        "relationship--afb41464-dd94-7857-c5be-1d585e92cca3",
+        "relationship--bf03db2c-2d54-6e1b-b6b3-1ba2850dd20a",
+        "relationship--9f119468-1d74-89c8-01ad-6d2569b13462",
+        "relationship--7e0e052d-64c4-e40f-cc34-ac97bfbb1340",
+        "relationship--57136216-b772-44cd-63e8-e8972ff5b866",
+        "relationship--96cc8b17-92bb-09f2-1bd0-811355e920b3"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

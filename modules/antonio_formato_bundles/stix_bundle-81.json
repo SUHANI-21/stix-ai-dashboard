@@ -1,0 +1,421 @@
+{
+  "type": "bundle",
+  "id": "bundle--2f38e866-2a6d-4409-9860-1a2c33305657",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "name": "Sandworm",
+      "aliases": [
+        "APT44",
+        "Seashell Blizzard",
+        "Curly COMrades"
+      ],
+      "description": "Sandworm is a Russian state-sponsored threat group assessed to be associated with Russia\u2019s Main Intelligence Directorate (GRU). The group has demonstrated sustained focus on Western critical infrastructure, particularly the energy sector, with operations spanning 2021 through 2025. The campaign involves a tactical pivot to targeting misconfigured customer network edge devices for initial access, credential harvesting, and lateral movement, while reducing vulnerability exploitation activity.",
+      "first_seen": "2021-01-01T00:00:00Z",
+      "last_seen": "2025-12-31T23:59:59Z",
+      "goals": [
+        "Persistent access to critical infrastructure networks",
+        "Credential harvesting for accessing victim organizations\u2019 online services",
+        "Lateral movement within victim environments"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "disruption"
+      ],
+      "external_references": [
+        {
+          "source_name": "Amazon Threat Intelligence",
+          "url": "https://aws.amazon.com/security/"
+        },
+        {
+          "source_name": "Bitdefender",
+          "description": "Tracks Sandworm subcluster as 'Curly COMrades' with host-based tradecraft (Hyper-V abuse, CurlyShell/CurlCat implants)"
+        }
+      ],
+      "threat_actor_types": [
+        "nation-state"
+      ],
+      "roles": [
+        "initial access",
+        "credential harvesting",
+        "lateral movement"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c70cbc44-d508-43b1-abda-71b00d2e940c",
+      "name": "Compromise of Misconfigured Network Edge Devices",
+      "description": "The threat actor targets misconfigured customer network edge devices (routers, VPN concentrators, remote access gateways, network management appliances) with exposed management interfaces to achieve persistent access and credential harvesting. This technique reduces exposure compared to vulnerability exploitation.",
+      "x_mitre_platforms": [
+        "Network",
+        "Cloud"
+      ],
+      "x_mitre_tactic_type": [
+        "Initial Access",
+        "Credential Access",
+        "Persistence"
+      ],
+      "external_references": [
+        {
+          "source_name": "Amazon Threat Intelligence",
+          "url": "https://aws.amazon.com/security/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "name": "Exploitation of Known Vulnerabilities in Network Appliances",
+      "description": "The actor has exploited vulnerabilities such as CVE-2022-26318 (WatchGuard), CVE-2021-26084 and CVE-2023-22518 (Confluence), and CVE-2023-27532 (Veeam) for initial access, although reliance on vulnerability exploitation has declined in favor of misconfiguration targeting.",
+      "x_mitre_platforms": [
+        "Network",
+        "Cloud"
+      ],
+      "x_mitre_tactic_type": [
+        "Initial Access"
+      ],
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/",
+          "external_id": "CVE-2022-26318"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/",
+          "external_id": "CVE-2021-26084"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/",
+          "external_id": "CVE-2023-22518"
+        },
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/",
+          "external_id": "CVE-2023-27532"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "name": "Compromised Proxy and Staging Servers",
+      "description": "Compromised legitimate servers used by Sandworm for proxying traffic, exfiltrating data, and reconnaissance. These IPs were observed accessing router management interfaces and attempting authentication to online services.",
+      "infrastructure_types": [
+        "server"
+      ],
+      "first_seen": "2021-08-12T00:00:00Z",
+      "last_seen": "2025-12-08T23:59:59Z",
+      "external_references": [
+        {
+          "source_name": "Amazon Threat Intelligence"
+        }
+      ],
+      "x_infrastructure_ips": [
+        {
+          "ip": "91.99.25.54",
+          "first_seen": "2025-07-02",
+          "last_seen": "present",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "185.66.141.145",
+          "first_seen": "2025-01-10",
+          "last_seen": "2025-08-22",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "51.91.101.177",
+          "first_seen": "2024-02-01",
+          "last_seen": "2024-08-28",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "212.47.226.64",
+          "first_seen": "2024-10-10",
+          "last_seen": "2024-11-06",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "213.152.3.110",
+          "first_seen": "2023-05-31",
+          "last_seen": "2024-09-23",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "145.239.195.220",
+          "first_seen": "2021-08-12",
+          "last_seen": "2023-05-29",
+          "annotation": "Compromised legitimate server used to proxy threat actor traffic"
+        },
+        {
+          "ip": "103.11.190.99",
+          "first_seen": "2021-10-21",
+          "last_seen": "2023-04-02",
+          "annotation": "Compromised legitimate staging server used to exfiltrate WatchGuard configuration files"
+        },
+        {
+          "ip": "217.153.191.190",
+          "first_seen": "2023-06-10",
+          "last_seen": "2025-12-08",
+          "annotation": "Long-term infrastructure used for reconnaissance and targeting"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0b9184f8-6944-47b2-994d-84c2cc9ac4a0",
+      "name": "CVE-2022-26318",
+      "description": "WatchGuard vulnerability exploited by Sandworm in 2021-2022 for initial access to network appliances. Payload involved encrypting configuration data, exfiltrating via TFTP to a compromised staging server, and removing forensic evidence.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2022-26318",
+          "external_id": "CVE-2022-26318"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1dd83cea-ebaf-4313-b8e5-e8388e823012",
+      "name": "CVE-2021-26084",
+      "description": "Confluence vulnerability exploited by Sandworm in 2022-2023 for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2021-26084",
+          "external_id": "CVE-2021-26084"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--bca86567-5d5b-4de4-9dea-e11080944550",
+      "name": "CVE-2023-22518",
+      "description": "Confluence vulnerability exploited by Sandworm in 2022-2023 for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-22518",
+          "external_id": "CVE-2023-22518"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--67f5aaa2-0421-424d-a2ae-a6e2f129a510",
+      "name": "CVE-2023-27532",
+      "description": "Veeam vulnerability exploited by Sandworm in 2024 for initial access.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "url": "https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2023-27532",
+          "external_id": "CVE-2023-27532"
+        }
+      ]
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4f6802b1-5a44-426d-b095-0605b3a075c9",
+      "value": "91.99.25.54"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--ec8911ab-5390-4b03-957b-1986858adcf2",
+      "value": "185.66.141.145"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3629a8d8-7e46-450b-b432-5c9520d1435c",
+      "value": "51.91.101.177"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--3d1eef13-0755-492e-909e-8434c952308c",
+      "value": "212.47.226.64"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--5b881b01-6cf5-41ca-91c0-d4ef8c70b86f",
+      "value": "213.152.3.110"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--436706a3-ea5c-45c0-a2c4-38cf1b6299c4",
+      "value": "145.239.195.220"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--4dd53757-0834-4d4f-a5c4-3f54ed34b768",
+      "value": "103.11.190.99"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e",
+      "value": "217.153.191.190"
+    },
+    {
+      "type": "file",
+      "id": "file--4d44396b-9ea8-4cae-950b-77a3e0331008",
+      "name": "config.xml",
+      "parent_directory": "/etc/wg"
+    },
+    {
+      "type": "file",
+      "id": "file--0d84873f-0b3a-45cd-a7c5-008cba1d81d6",
+      "name": "enc_config.xml",
+      "parent_directory": "/tmp"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--140ce5ef-d85e-48ef-9f23-5587d9cf2071",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--2f74951f-ca7c-4a92-a523-2ffc1c71f3a4",
+      "target_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77d878af-6035-4ea1-b25a-2c5673caf969",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1575f6a8-0d08-4cb3-a4fe-34473f829ad1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2f67d414-bc14-4a94-9b52-77f64e0a66da",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97ea14db-007c-47e3-83f0-344564498ab5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e69e3785-a083-4030-afe2-608331be3c45",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "malware--b735b471-6787-4821-af56-ddb8290c53ed"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f7a76073-69af-4779-8f47-7d0f71faaf59",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--56b9df70-81c9-4703-b87e-6135553a92d2",
+      "target_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fc2eb094-2e0c-4e87-8f92-e1f3fee00f1e",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "vulnerability--67f5aaa2-0421-424d-a2ae-a6e2f129a510"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0fe96e2d-1f9e-4852-a359-533b44b4d19a",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "vulnerability--67f5aaa2-0421-424d-a2ae-a6e2f129a510"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--63b088cc-8e2b-4fee-b867-abc74fdada20",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "vulnerability--67f5aaa2-0421-424d-a2ae-a6e2f129a510"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--61175d14-b2fd-4d0b-8158-b99ee2f52197",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "vulnerability--67f5aaa2-0421-424d-a2ae-a6e2f129a510"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e07623cd-d0ce-491a-b56b-7299d2e73917",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "file--0d84873f-0b3a-45cd-a7c5-008cba1d81d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fb7cdb6d-3141-474d-a585-69ec57fb9acc",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--7e38b72e-1c88-4b6a-adf7-70fb0f66adb6",
+      "target_ref": "file--0d84873f-0b3a-45cd-a7c5-008cba1d81d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0db408c1-5e4d-4dff-b76d-afb933e3e3cb",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--908083b2-8543-49e2-b6d7-c1e7284b2088",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6076e187-6404-4380-bf1e-bb56d9d89e5d",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5c786ae4-7f30-4135-9f0c-9035f8f26de8",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e63c8554-d54e-4a58-9503-52eb8b48e07a",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--206adafb-c25b-48cc-8c0e-b59991ad6d63",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e9829841-55d4-4945-9746-1e3cf100e49e",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9272bc61-b80e-427b-ab2b-2e5565d13b53",
+      "relationship_type": "communicates-with",
+      "source_ref": "infrastructure--5011409d-b736-48af-b734-0adbbecfa70d",
+      "target_ref": "ipv4-addr--73a5aca7-af39-4692-a11b-f478da68029e"
+    }
+  ]
+}

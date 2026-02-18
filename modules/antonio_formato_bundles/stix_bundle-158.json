@@ -1,0 +1,511 @@
+{
+  "type": "bundle",
+  "id": "bundle--f460aebf-d336-468d-a0e2-291a48edb012",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--e69275ab-a246-40fa-b7fc-6491a9bc5622",
+      "name": "Trojanized npm Package Supply Chain Compromise",
+      "description": "Compromised maintainer accounts are used to publish trojanized versions of legitimate npm packages. These packages execute credential theft and exfiltration code during the installation process, specifically in the preinstall phase using lifecycle scripts.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "execution"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "persistence"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        },
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "exfiltration"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "wiz-shai-hulud-blog",
+          "url": "https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--9b6bc065-73c6-4dd3-88b3-5419e8fa3a71",
+      "name": "setup_bun.js"
+    },
+    {
+      "type": "file",
+      "id": "file--fd883712-0908-4ab7-916a-5e2141c9a661",
+      "name": "bun_environment.js"
+    },
+    {
+      "type": "file",
+      "id": "file--cd351345-9a0b-4c8d-a89e-01c2f48614c7",
+      "name": "cloud.json"
+    },
+    {
+      "type": "file",
+      "id": "file--6edaa3e9-6217-4822-b083-920c450485b6",
+      "name": "contents.json"
+    },
+    {
+      "type": "file",
+      "id": "file--af64a0f3-15c4-4c2c-a973-850cdf67d6fa",
+      "name": "environment.json"
+    },
+    {
+      "type": "file",
+      "id": "file--844df464-14d0-4410-aca0-520b624caf91",
+      "name": "truffleSecrets.json"
+    },
+    {
+      "type": "file",
+      "id": "file--7417f24a-6abc-4115-8b46-b4d2a92b60ff",
+      "name": "discussion.yaml"
+    },
+    {
+      "type": "file",
+      "id": "file--b6d14a66-d834-43da-a5b7-ac43323b9752",
+      "name": "package.json"
+    },
+    {
+      "type": "file",
+      "id": "file--d95e4618-be98-473f-bb8a-8a6cfc4353bf",
+      "name": "shai-hulud-workflow.yml"
+    },
+    {
+      "type": "file",
+      "id": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "name": "data.json"
+    },
+    {
+      "type": "software",
+      "id": "software--cffd7545-a096-401b-bbc9-d07a785c57a7",
+      "name": "@zapier/zapier-sdk",
+      "version": "0.15.5"
+    },
+    {
+      "type": "software",
+      "id": "software--955bf269-d8e9-4622-8e7f-c6deff21ca90",
+      "name": "@zapier/zapier-sdk",
+      "version": "0.15.6"
+    },
+    {
+      "type": "software",
+      "id": "software--29d8748b-a539-47ba-9877-597154702228",
+      "name": "@zapier/zapier-sdk",
+      "version": "0.15.7"
+    },
+    {
+      "type": "software",
+      "id": "software--231fc4fc-1097-4e69-b970-cf18d33b226d",
+      "name": "zapier-platform-core",
+      "version": "18.0.2"
+    },
+    {
+      "type": "software",
+      "id": "software--5d3174a4-6aad-49fa-9722-4be7c44b25a1",
+      "name": "zapier-platform-core",
+      "version": "18.0.3"
+    },
+    {
+      "type": "software",
+      "id": "software--17a89978-5d71-49f9-92dd-43a99271dcfe",
+      "name": "zapier-platform-core",
+      "version": "18.0.4"
+    },
+    {
+      "type": "software",
+      "id": "software--a5bc5685-803d-4426-870a-3808e2ac66f8",
+      "name": "zapier-platform-cli",
+      "version": "18.0.2"
+    },
+    {
+      "type": "software",
+      "id": "software--9be90a74-f480-4793-9b77-e27dc392457d",
+      "name": "zapier-platform-cli",
+      "version": "18.0.3"
+    },
+    {
+      "type": "software",
+      "id": "software--3598407d-a0f7-46d2-a10d-205f3621d526",
+      "name": "zapier-platform-cli",
+      "version": "18.0.4"
+    },
+    {
+      "type": "software",
+      "id": "software--acf44646-07c5-4d41-9193-28c82cf0f3b3",
+      "name": "zapier-platform-schema",
+      "version": "18.0.2"
+    },
+    {
+      "type": "software",
+      "id": "software--b0769cf0-e7f9-4a8d-8cab-1ab03257bd11",
+      "name": "zapier-platform-schema",
+      "version": "18.0.3"
+    },
+    {
+      "type": "software",
+      "id": "software--5fe6caf7-ff87-4162-bd71-1672470792fc",
+      "name": "zapier-platform-schema",
+      "version": "18.0.4"
+    },
+    {
+      "type": "software",
+      "id": "software--2d7411e1-adef-410b-b6b9-a1b2ea59c1d7",
+      "name": "@zapier/mcp-integration",
+      "version": "3.0.1"
+    },
+    {
+      "type": "software",
+      "id": "software--9b13ce6a-ff9a-4ef6-aa5b-5842c81df1bd",
+      "name": "@zapier/mcp-integration",
+      "version": "3.0.2"
+    },
+    {
+      "type": "software",
+      "id": "software--e42f9947-e1b4-487f-bca3-ae3b56c3b28d",
+      "name": "@zapier/mcp-integration",
+      "version": "3.0.3"
+    },
+    {
+      "type": "software",
+      "id": "software--efbd3654-9d7a-4885-bb56-329c5c56dd54",
+      "name": "@zapier/secret-scrubber",
+      "version": "1.1.3"
+    },
+    {
+      "type": "software",
+      "id": "software--d1dcd03e-19bd-4263-8b0f-c8633c0358b2",
+      "name": "@zapier/secret-scrubber",
+      "version": "1.1.4"
+    },
+    {
+      "type": "software",
+      "id": "software--e099ce29-ecc1-42aa-97d0-7b7fc0321a29",
+      "name": "@zapier/secret-scrubber",
+      "version": "1.1.5"
+    },
+    {
+      "type": "software",
+      "id": "software--2e5f4286-1341-448f-abc8-a6a340fce97f",
+      "name": "@zapier/ai-actions-react",
+      "version": "0.1.12"
+    },
+    {
+      "type": "software",
+      "id": "software--a1f64961-d5de-45bd-8b8a-ff91f6f9c060",
+      "name": "@zapier/ai-actions-react",
+      "version": "0.1.13"
+    },
+    {
+      "type": "software",
+      "id": "software--f676e73e-11b9-45c6-b88c-71776e280104",
+      "name": "@zapier/ai-actions-react",
+      "version": "0.1.14"
+    },
+    {
+      "type": "software",
+      "id": "software--b29300a7-9f6a-4e6e-9de3-d0199ba3c7af",
+      "name": "@zapier/stubtree",
+      "version": "0.1.2"
+    },
+    {
+      "type": "software",
+      "id": "software--ce38cce9-99c1-447d-b1c1-299509148acc",
+      "name": "@zapier/stubtree",
+      "version": "0.1.3"
+    },
+    {
+      "type": "software",
+      "id": "software--17d10e1a-fdce-4960-ae11-c791c54a2778",
+      "name": "@zapier/stubtree",
+      "version": "0.1.4"
+    },
+    {
+      "type": "software",
+      "id": "software--dc32da82-61e9-47cd-8610-66f46845778b",
+      "name": "zapier-scripts",
+      "version": "7.8.3"
+    },
+    {
+      "type": "software",
+      "id": "software--ba93a991-358f-42a4-902d-d0bafc4dc84a",
+      "name": "zapier-scripts",
+      "version": "7.8.4"
+    },
+    {
+      "type": "software",
+      "id": "software--a2a61a65-2a25-4692-a55d-2c4aba2734e1",
+      "name": "@ensdomains/ens-validation",
+      "version": "0.1.1"
+    },
+    {
+      "type": "software",
+      "id": "software--fe73f1de-b145-4912-9e6e-ac90cecb9b3a",
+      "name": "@ensdomains/content-hash",
+      "version": "3.0.1"
+    },
+    {
+      "type": "software",
+      "id": "software--8d9341b4-a527-4441-8a85-9297532f9b55",
+      "name": "ethereum-ens",
+      "version": "0.8.1"
+    },
+    {
+      "type": "software",
+      "id": "software--51c771fe-3a26-4dd7-95e1-2201d11427ba",
+      "name": "@ensdomains/react-ens-address",
+      "version": "0.0.32"
+    },
+    {
+      "type": "software",
+      "id": "software--9b9996c2-418f-4306-9924-4d499fadcc62",
+      "name": "@ensdomains/ens-contracts",
+      "version": "1.6.1"
+    },
+    {
+      "type": "software",
+      "id": "software--27fc9077-8e3e-4e75-92b8-0d69a2b49bd4",
+      "name": "@ensdomains/ensjs",
+      "version": "4.0.3"
+    },
+    {
+      "type": "software",
+      "id": "software--a2a0a397-d35e-4b08-85eb-e3d1f147b3f0",
+      "name": "@ensdomains/dnssecoraclejs",
+      "version": "0.2.9"
+    },
+    {
+      "type": "software",
+      "id": "software--1ffc27ed-7123-47e3-9586-f8839697ad2a",
+      "name": "@ensdomains/address-encoder",
+      "version": "0.1.5"
+    },
+    {
+      "type": "software",
+      "id": "software--7c858ed4-fd06-495b-a508-e43fc8276dc8",
+      "name": "@posthog/agent",
+      "version": "1.24.1"
+    },
+    {
+      "type": "software",
+      "id": "software--7951ff07-087f-49cf-b987-4304d1bf0f81",
+      "name": "typeorm-orbit"
+    },
+    {
+      "type": "software",
+      "id": "software--e353188f-9dfc-48f4-9c4f-32ef50dd6025",
+      "name": "orbit-nebula-draw-tools"
+    },
+    {
+      "type": "software",
+      "id": "software--032e7918-3659-494b-86b8-b5fbe48ac982",
+      "name": "atrix-mongoose"
+    },
+    {
+      "type": "software",
+      "id": "software--ab1dfa17-d5d0-4716-95e2-6531656ced02",
+      "name": "orbit-boxicons"
+    },
+    {
+      "type": "software",
+      "id": "software--6927593c-9e00-4950-924b-88cb2b5a60c6",
+      "name": "orbit-soap"
+    },
+    {
+      "type": "software",
+      "id": "software--9b667c93-ce89-4549-91c6-67e038394de1",
+      "name": "redux-forge"
+    },
+    {
+      "type": "url",
+      "id": "url--d8026a06-1380-4a3f-91e5-978a32e30c3a",
+      "value": "https://www.wiz.io/blog/shai-hulud-npm-supply-chain-attack"
+    },
+    {
+      "type": "url",
+      "id": "url--035c21c7-ceb1-472c-ae95-f1cbbea368ec",
+      "value": "https://www.aikido.dev/blog/shai-hulud-strikes-again-hitting-zapier-ensdomains"
+    },
+    {
+      "type": "url",
+      "id": "url--15d40426-ce84-4d11-bda0-b3b5562468bb",
+      "value": "https://www.stepsecurity.io/blog/sha1-hulud-the-second-coming-zapier-ens-domains-and-other-prominent-npm-packages-compromised"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fa1c45aa-c329-4ffd-8018-5c611e39baf2",
+      "value": "webhook.site"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad05c3f3-30c9-4434-a390-9995eeb8bbab",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "tool--63c26a1c-679f-4fa9-8c6b-d37aa26ab5ba",
+      "description": "Shai-Hulud malware creates and executes the malicious payload file setup_bun.js during the preinstall phase."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57705460-f914-4a06-8820-f8d223dd8d82",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "tool--63c26a1c-679f-4fa9-8c6b-d37aa26ab5ba",
+      "description": "Shai-Hulud malware creates and executes the malicious payload file bun_environment.js during the preinstall phase."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--daf29398-56ac-4669-8c68-44c97ddfdf93",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "tool--63c26a1c-679f-4fa9-8c6b-d37aa26ab5ba",
+      "description": "Shai-Hulud malware abuses the preinstall script in package.json to execute malicious code during installation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f1506152-7bf2-4802-818f-2773ccf4dd97",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file setup_bun.js."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7fbbfcb-b6c1-440e-8f55-ca4b8a3bf44b",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file bun_environment.js."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eee1bc7e-e9c6-4820-8b33-4c4db12348ab",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file cloud.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd2fa790-7f61-4794-800e-92f666f6bb4c",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file contents.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba32ae04-774b-4441-94e0-37abdd170481",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file environment.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0a6dafdc-8ecb-48c6-a277-4a4e898ef751",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file truffleSecrets.json."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6aed602-5ffa-4e86-a1bc-ced628068a0f",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Shai-Hulud malware creates the file discussion.yaml."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bb5dad87-9f83-4864-91b7-d8b4f14ae62e",
+      "relationship_type": "uses",
+      "source_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "target_ref": "attack-pattern--e69275ab-a246-40fa-b7fc-6491a9bc5622",
+      "description": "Shai-Hulud malware is delivered via trojanized npm package supply chain compromise."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--39111b9b-35fb-4fcc-b24a-8dbcf2b6ed0e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Detection of compromised Zapier npm packages indicates Shai-Hulud malware infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c1d40287-5230-4130-8b4e-b623cbc2a465",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Detection of compromised ENS Domains npm packages indicates Shai-Hulud malware infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f211b8bb-62ed-4a01-bf40-150b9888fe4b",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Detection of compromised packages from other impacted publishers indicates Shai-Hulud malware infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70b5d052-eb57-461f-ac0d-bc79eb73809d",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Detection of malicious file artifacts indicates Shai-Hulud malware activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c112e329-baaa-4b71-b941-caf68851517f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Outbound connections to webhook[.]site indicate Shai-Hulud malware exfiltration activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e11066ba-22b9-43e4-964c-e5b88bb176ad",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Creation of GitHub repositories titled Shai-Hulud indicates Shai-Hulud malware exfiltration activity."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--64378b57-f3da-4a88-b773-c37f723f758e",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--9ccc019f-72dd-4f18-a5c3-488e00d88e94",
+      "target_ref": "malware--b5061c59-27aa-49b8-ae89-2873ffef917e",
+      "description": "Detection of unauthorized GitHub Actions workflow shai-hulud-workflow.yml indicates Shai-Hulud malware persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--de53b78b-1f57-4a46-8ae0-a41383846f93",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--e69275ab-a246-40fa-b7fc-6491a9bc5622",
+      "target_ref": "tool--63c26a1c-679f-4fa9-8c6b-d37aa26ab5ba",
+      "description": "Trojanized npm package supply chain compromise uses preinstall script in package.json for execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8338a4ba-8d7f-4023-b67c-eb948c6f1fd6",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--e69275ab-a246-40fa-b7fc-6491a9bc5622",
+      "target_ref": "file--bb0152d7-de2b-42bd-85ad-86e5b15fc85c",
+      "description": "Trojanized npm package supply chain compromise abuses package.json for lifecycle scripts."
+    }
+  ]
+}

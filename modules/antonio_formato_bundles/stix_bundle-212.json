@@ -1,0 +1,349 @@
+{
+  "type": "bundle",
+  "id": "bundle--b165f079-0e72-48bf-b790-f8c70ee94e71",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--f7b0240d-1320-43ea-aa37-872d44dca9f9",
+      "name": "Provision of Information for Sectoral for AJK.rar",
+      "hashes": {
+        "MD5": "f6f2fdc38cd61d8d9e8cd35244585967"
+      },
+      "size": 52674,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "file",
+      "id": "file--ce10522e-0ce9-4f9a-9579-99384ce069d6",
+      "name": "Normal.dotm",
+      "hashes": {
+        "MD5": "4bedd8e2b66cc7d64b293493ef5b8942"
+      },
+      "size": 20403,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "file",
+      "id": "file--1906115a-42a7-428e-933c-eee87b1396f5",
+      "name": "Weekly AI Article.rar",
+      "hashes": {
+        "MD5": "84128d40db28e8ee16215877d4c4b64a"
+      },
+      "size": 610436,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "file",
+      "id": "file--681fb412-8dae-4c7e-95f7-dd50795e8a0b",
+      "name": "Normal.dotm",
+      "hashes": {
+        "MD5": "f8b237ca925daa3db8699faa05007f12"
+      },
+      "size": 20480,
+      "created_by_ref": "identity--"
+    },
+    {
+      "type": "identity",
+      "id": "identity--a3c5444b-9a6d-48e5-b46a-20a81bc6c8d9",
+      "name": "360\u9ad8\u7ea7\u5a01\u80c1\u7814\u7a76\u9662",
+      "description": "360 Advanced Threat Research Institute, a core capability support department of 360 Enterprise Security Group, specializing in discovery, defense, handling, and research of advanced threats.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "file",
+      "id": "file--5d3ecba8-fc2b-41bf-ba98-7e2622620c68",
+      "hashes": {
+        "MD5": "f6f2fdc38cd61d8d9e8cd35244585967"
+      },
+      "name": "Provision of Information for Sectoral for AJK.rar",
+      "size": 52674
+    },
+    {
+      "type": "file",
+      "id": "file--0a392bc9-3f3b-46f5-8edb-bf65cd8da17c",
+      "hashes": {
+        "MD5": "4bedd8e2b66cc7d64b293493ef5b8942"
+      },
+      "name": "Normal.dotm",
+      "size": 20403
+    },
+    {
+      "type": "file",
+      "id": "file--4b82f9cb-ed31-4a00-9f6c-9a54dfd86c0f",
+      "hashes": {
+        "MD5": "84128d40db28e8ee16215877d4c4b64a"
+      },
+      "name": "Weekly AI Article.rar",
+      "size": 610436
+    },
+    {
+      "type": "file",
+      "id": "file--69ffc921-225c-48c3-a492-4d13c511f6ae",
+      "hashes": {
+        "MD5": "f8b237ca925daa3db8699faa05007f12"
+      },
+      "name": "Normal.dotm",
+      "size": 20480
+    },
+    {
+      "type": "file",
+      "id": "file--dbdbe3be-a60c-4808-9c85-5e86d0180bac",
+      "hashes": {
+        "MD5": "f16f2e4317c37085cad630d41001f7c3"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7b26f8cd-0bc6-4df2-8b9e-9546832edd5a",
+      "hashes": {
+        "MD5": "418d73efd622ebec29759c081768db16"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--87db9a91-27ea-44f5-aa62-ca91c711538e",
+      "hashes": {
+        "MD5": "5d677781d6c7d4ddee967c1cc7e869ce"
+      }
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--675212e3-f53e-48f9-b11a-6d4ca5c2c940",
+      "value": "koliwooclients.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e50e6e34-5bfc-4361-b835-9ff19cbf2fb6",
+      "value": "teamlogin.esanojinjasvc.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--582ce099-7cbc-4343-9c5a-bf9aa060570d",
+      "value": "tapeqcqoptions.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--54090326-af9d-4b1d-9e37-c0899eec424f",
+      "value": "johnfashionaccess.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6",
+      "value": "wmiapcservice.com"
+    },
+    {
+      "type": "url",
+      "id": "url--39256e01-0485-42b5-bd6f-b9b4bab685cf",
+      "value": "https://teamlogin.esanojinjasvc.com/teamesano/drivers/teamzid.php"
+    },
+    {
+      "type": "url",
+      "id": "url--0229c1c2-d594-411d-bdc8-d718f9b22188",
+      "value": "https://www.tapeqcqoptions.com/d6Z2.php?rz=%computername%"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c224a73d-24a2-4af9-9fd2-7fbbed1c8d37",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--acdfe51d-e7d9-4889-aae2-17b81ec78f19",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b8b6f0b-64b9-4fe6-9308-cfe7a9034852",
+      "relationship_type": "attributed-to",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--605f497b-29b4-4193-9ba5-95d67adeecca",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "attack-pattern--81c6edcd-c2fa-4fde-8d08-e30e318a67d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b40621b5-0707-4654-9fca-7d9d27cc9741",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3665e4c-9fd3-4844-afe1-d06da57602d8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--31fb8bea-a8e3-43dd-87bc-f173b44b6cc9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1e268697-5c50-4134-aa69-8b5bcf248fe8",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "file--f7b0240d-1320-43ea-aa37-872d44dca9f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--017b30ef-1433-469c-9b52-ae133cf26100",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "file--1906115a-42a7-428e-933c-eee87b1396f5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ef0dc14-d383-4955-a84d-f6928eef7089",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "file--ce10522e-0ce9-4f9a-9579-99384ce069d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--130d2396-ecd0-4ab9-a75f-9930b49720ba",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "file--681fb412-8dae-4c7e-95f7-dd50795e8a0b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--79983b41-ecdf-4b0f-8017-573d3a6286b5",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3c48ae57-4382-4cef-8730-c1ed3c60b707",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--c3bc6797-890f-47c1-a07b-b1a3f62af8c3",
+      "target_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9dec6f20-aca5-494e-a24e-79d43403bf71",
+      "relationship_type": "targets",
+      "source_ref": "attack-pattern--81c6edcd-c2fa-4fde-8d08-e30e318a67d6",
+      "target_ref": "vulnerability--5082b5ee-dfb8-4856-ae9d-5302faf46b73"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--dce25e46-6de6-4498-b3f5-59fc1edeec9a",
+      "relationship_type": "delivers",
+      "source_ref": "file--f7b0240d-1320-43ea-aa37-872d44dca9f9",
+      "target_ref": "file--ce10522e-0ce9-4f9a-9579-99384ce069d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6edf3723-fe62-4922-b6b6-986021da85b2",
+      "relationship_type": "delivers",
+      "source_ref": "file--1906115a-42a7-428e-933c-eee87b1396f5",
+      "target_ref": "file--681fb412-8dae-4c7e-95f7-dd50795e8a0b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2d3984ab-5dfa-4c81-881c-fba36e866604",
+      "relationship_type": "drops",
+      "source_ref": "file--f7b0240d-1320-43ea-aa37-872d44dca9f9",
+      "target_ref": "file--ce10522e-0ce9-4f9a-9579-99384ce069d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--98defb74-8f98-4a2e-bb0a-13f1b65c323a",
+      "relationship_type": "drops",
+      "source_ref": "file--1906115a-42a7-428e-933c-eee87b1396f5",
+      "target_ref": "file--681fb412-8dae-4c7e-95f7-dd50795e8a0b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--59a0a274-292b-40d5-97ea-bae609f0c02c",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a",
+      "target_ref": "file--ce10522e-0ce9-4f9a-9579-99384ce069d6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77705c88-9b1b-453d-a16d-157f3fe1fb85",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a",
+      "target_ref": "file--f7b0240d-1320-43ea-aa37-872d44dca9f9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2728c5e9-17da-4232-8644-abe08bccf1e2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a",
+      "target_ref": "file--1906115a-42a7-428e-933c-eee87b1396f5"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88b322b5-6570-4334-980e-f588ad9cf8c6",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--f52fb603-773f-4892-b706-26b87fc5208a",
+      "target_ref": "file--681fb412-8dae-4c7e-95f7-dd50795e8a0b"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe7db089-def8-45a9-80e3-42e9451f1422",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2b6f9516-6e82-4db7-8d9c-1b77de92b395",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9321748c-5d70-480e-97fa-038a6e6b6489",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--eb268be7-6a03-4acf-a205-3a0d4af80698",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--581dcff6-9ab6-48a2-8d43-0deef9ec06ba",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "domain-name--900678d1-0f3b-4e80-bd8e-4bb35004c9b6"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--221e96a2-fed9-4001-9aa6-6a968f95d898",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "url--0229c1c2-d594-411d-bdc8-d718f9b22188"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1ab48dc6-8bad-40c3-95d3-3dd4c04c055d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--eacae711-b18a-40b8-bb50-048206dc5060",
+      "target_ref": "url--0229c1c2-d594-411d-bdc8-d718f9b22188"
+    }
+  ]
+}

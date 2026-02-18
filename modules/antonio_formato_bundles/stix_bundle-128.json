@@ -1,0 +1,295 @@
+{
+  "type": "bundle",
+  "id": "bundle--1cb9677b-e84b-4c54-b27f-96840093fbf9",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--6bc58bf7-0f5a-42f1-963c-b72d8692a4a7",
+      "name": "CVE-2025-55182",
+      "description": "Critical deserialization vulnerability (CWE-502) in React Server Components (RSC) affecting react-server-dom-webpack, react-server-dom-parcel, and react-server-dom-turbopack (versions 19.0.0 to 19.2.0). Allows attackers to execute commands and read/write files with server process privileges. Unofficially dubbed React4Shell.",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2025-55182"
+        },
+        {
+          "source_name": "React Server Components",
+          "url": "https://react.dev/blog/2020/12/21/data-fetching-with-react-server-components"
+        },
+        {
+          "source_name": "PoC",
+          "url": "https://github.com/ejpir/CVE-2025-55182-poc"
+        }
+      ],
+      "created": "2025-12-04T00:00:00Z"
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--7ffd7650-e08e-40bb-8849-75e8fae918da",
+      "labels": [
+        "malicious-url"
+      ],
+      "pattern": "[url:value = 'http://172.237.55.180/b'] OR [url:value = 'http://172.237.55.180/c'] OR [url:value = 'http://176.117.107.154/bot'] OR [url:value = 'http://193.34.213.150/nuts/bolts'] OR [url:value = 'http://193.34.213.150/nuts/x86'] OR [url:value = 'http://23.132.164.54/bot'] OR [url:value = 'http://31.56.27.76/n2/x86'] OR [url:value = 'http://31.56.27.97/scripts/4thepool_miner.sh'] OR [url:value = 'http://41.231.37.153/rondo.aqu.sh'] OR [url:value = 'http://41.231.37.153/rondo.arc700'] OR [url:value = 'http://41.231.37.153/rondo.armeb'] OR [url:value = 'http://41.231.37.153/rondo.armebhf'] OR [url:value = 'http://41.231.37.153/rondo.armv4l'] OR [url:value = 'http://41.231.37.153/rondo.armv5l'] OR [url:value = 'http://41.231.37.153/rondo.armv6l'] OR [url:value = 'http://41.231.37.153/rondo.armv7l'] OR [url:value = 'http://41.231.37.153/rondo.i486'] OR [url:value = 'http://41.231.37.153/rondo.i586'] OR [url:value = 'http://41.231.37.153/rondo.i686'] OR [url:value = 'http://41.231.37.153/rondo.m68k'] OR [url:value = 'http://41.231.37.153/rondo.mips'] OR [url:value = 'http://41.231.37.153/rondo.mipsel'] OR [url:value = 'http://41.231.37.153/rondo.powerpc'] OR [url:value = 'http://41.231.37.153/rondo.powerpc-440fp'] OR [url:value = 'http://41.231.37.153/rondo.sh4'] OR [url:value = 'http://41.231.37.153/rondo.sparc'] OR [url:value = 'http://41.231.37.153/rondo.x86_64'] OR [url:value = 'http://51.81.104.115/nuts/bolts'] OR [url:value = 'http://51.81.104.115/nuts/x86'] OR [url:value = 'http://51.91.77.94:13339/termite/51.91.77.94:13337'] OR [url:value = 'http://59.7.217.245:7070/app2'] OR [url:value = 'http://59.7.217.245:7070/c.sh'] OR [url:value = 'http://68.142.129.4:8277/download/c.sh'] OR [url:value = 'http://89.144.31.18/nuts/bolts'] OR [url:value = 'http://89.144.31.18/nuts/x86'] OR [url:value = 'http://gfxnick.emerald.usbx.me/bot'] OR [url:value = 'http://meomeoli.mooo.com:8820/CLoadPXP/lix.exe?pass=PXPa9682775lckbitXPRopGIXPIL'] OR [url:value = 'https://api.hellknight.xyz/js'] OR [url:value = 'https://gist.githubusercontent.com/demonic-agents/39e943f4de855e2aef12f34324cbf150/raw/e767e1cef1c35738689ba4df9c6f7f29a6afba1a/setup_c3pool_miner.sh']",
+      "description": "Malware delivery URLs observed in campaigns exploiting CVE-2025-55182."
+    },
+    {
+      "type": "indicator",
+      "id": "indicator--7dab6c64-f0b0-4c78-b2f1-fb9a8209824b",
+      "labels": [
+        "file-hash-md5"
+      ],
+      "pattern": "[file:hashes.'MD5' = '0450fe19cfb91660e9874c0ce7a121e0'] OR [file:hashes.'MD5' = '3ba4d5e0cf0557f03ee5a97a2de56511'] OR [file:hashes.'MD5' = '622f904bb82c8118da2966a957526a2b'] OR [file:hashes.'MD5' = '791f123b3aaff1b92873bd4b7a969387'] OR [file:hashes.'MD5' = 'c6381ebf8f0349b8d47c5e623bbcef6b'] OR [file:hashes.'MD5' = 'e82057e481a2d07b177d9d94463a7441']",
+      "description": "MD5 file hashes associated with malware delivered via CVE-2025-55182."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--02ba37e8-d13f-4cf4-8835-68c346e1ff98",
+      "name": "Deserialization of Untrusted Data",
+      "description": "Attackers exploit CVE-2025-55182 by sending crafted POST requests containing serialized data to vulnerable React Server Components, leading to command execution and file access.",
+      "external_references": [
+        {
+          "source_name": "CWE",
+          "external_id": "CWE-502"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--74f79747-0cac-4bdc-8086-aff6947d959a",
+      "hashes": {
+        "MD5": "0450fe19cfb91660e9874c0ce7a121e0"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--d6145886-e554-4c5c-8577-60c4f16ad9d9",
+      "hashes": {
+        "MD5": "3ba4d5e0cf0557f03ee5a97a2de56511"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--dff24dc1-41d3-4484-bece-f6b928d2ec5a",
+      "hashes": {
+        "MD5": "622f904bb82c8118da2966a957526a2b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--8d71792f-a029-41d1-8d51-6eac35abb1db",
+      "hashes": {
+        "MD5": "791f123b3aaff1b92873bd4b7a969387"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a28d791c-73ce-45f2-aed1-c71c3be28089",
+      "hashes": {
+        "MD5": "c6381ebf8f0349b8d47c5e623bbcef6b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f5341010-40a9-4e32-990b-100ad3f6414a",
+      "hashes": {
+        "MD5": "e82057e481a2d07b177d9d94463a7441"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--9ec7d091-7101-4486-9e22-e4ea8d8c291b",
+      "value": "http://172.237.55.180/b"
+    },
+    {
+      "type": "url",
+      "id": "url--f46dc0ae-9ce0-45ee-a78c-0e040eefcf08",
+      "value": "http://172.237.55.180/c"
+    },
+    {
+      "type": "url",
+      "id": "url--499870e3-dac7-42fa-8198-ad0b611c03c8",
+      "value": "http://176.117.107.154/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--28d33c59-b563-4135-8afb-1bfc8e95c7b3",
+      "value": "http://193.34.213.150/nuts/bolts"
+    },
+    {
+      "type": "url",
+      "id": "url--fa220c44-1d14-476b-8e3b-5fd3d65d2283",
+      "value": "http://193.34.213.150/nuts/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--c765c4a4-5bd2-43e7-91ad-de54fed5229c",
+      "value": "http://23.132.164.54/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--126971b2-db62-4126-b292-470931a7527f",
+      "value": "http://31.56.27.76/n2/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--a1f5127e-21e9-4e8f-b842-168a8f6760a2",
+      "value": "http://31.56.27.97/scripts/4thepool_miner.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--e4259ee6-8d89-4490-a43d-89c0786f7b33",
+      "value": "http://41.231.37.153/rondo.aqu.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--1af8b0cd-2f71-4bea-ade8-6f1888e4cebb",
+      "value": "http://41.231.37.153/rondo.arc700"
+    },
+    {
+      "type": "url",
+      "id": "url--536e4917-efa1-4952-85a2-6bbf9b60f237",
+      "value": "http://41.231.37.153/rondo.armeb"
+    },
+    {
+      "type": "url",
+      "id": "url--723388cd-0e97-4039-bc06-708cb7f21ac2",
+      "value": "http://41.231.37.153/rondo.armebhf"
+    },
+    {
+      "type": "url",
+      "id": "url--7f262f02-68b4-4442-87a7-c7c1cc5e762d",
+      "value": "http://41.231.37.153/rondo.armv4l"
+    },
+    {
+      "type": "url",
+      "id": "url--d9511ddc-fe88-4a59-8553-aa2869a6148e",
+      "value": "http://41.231.37.153/rondo.armv5l"
+    },
+    {
+      "type": "url",
+      "id": "url--21ba9ecd-e195-4e13-8685-6f6156367a55",
+      "value": "http://41.231.37.153/rondo.armv6l"
+    },
+    {
+      "type": "url",
+      "id": "url--c710c398-ffbb-4f06-80b5-4219b979694a",
+      "value": "http://41.231.37.153/rondo.armv7l"
+    },
+    {
+      "type": "url",
+      "id": "url--e8200d55-1f1b-49df-904e-4b762c3b2e19",
+      "value": "http://41.231.37.153/rondo.i486"
+    },
+    {
+      "type": "url",
+      "id": "url--1106fc0b-c0ed-4f45-b2c4-93b0bd92d73e",
+      "value": "http://41.231.37.153/rondo.i586"
+    },
+    {
+      "type": "url",
+      "id": "url--d797800e-d888-4ccc-96ab-da1ca002a5b3",
+      "value": "http://41.231.37.153/rondo.i686"
+    },
+    {
+      "type": "url",
+      "id": "url--20625254-3205-4cda-9d8a-0d135059198c",
+      "value": "http://41.231.37.153/rondo.m68k"
+    },
+    {
+      "type": "url",
+      "id": "url--e26a46f7-3ae8-4701-b1f7-7c19e9e407bf",
+      "value": "http://41.231.37.153/rondo.mips"
+    },
+    {
+      "type": "url",
+      "id": "url--72757c81-804c-4eb9-9b11-58538d3596d4",
+      "value": "http://41.231.37.153/rondo.mipsel"
+    },
+    {
+      "type": "url",
+      "id": "url--6131b335-9da6-47b9-8ebe-c18a93ba28d5",
+      "value": "http://41.231.37.153/rondo.powerpc"
+    },
+    {
+      "type": "url",
+      "id": "url--37599caf-12b2-4d9e-a28f-311799baefc7",
+      "value": "http://41.231.37.153/rondo.powerpc-440fp"
+    },
+    {
+      "type": "url",
+      "id": "url--f7532a39-17b7-4221-9387-ddd1580cb293",
+      "value": "http://41.231.37.153/rondo.sh4"
+    },
+    {
+      "type": "url",
+      "id": "url--0c1b84b9-6d24-43ac-82ab-d8b5d8628626",
+      "value": "http://41.231.37.153/rondo.sparc"
+    },
+    {
+      "type": "url",
+      "id": "url--c6bf6e69-cd7f-4678-a77d-1e6863164665",
+      "value": "http://41.231.37.153/rondo.x86_64"
+    },
+    {
+      "type": "url",
+      "id": "url--f8ab2216-c437-4d5a-af6a-feaa8f3c65ba",
+      "value": "http://51.81.104.115/nuts/bolts"
+    },
+    {
+      "type": "url",
+      "id": "url--cb1fcae0-6cd3-42fa-ad0c-d5bf77d255a6",
+      "value": "http://51.81.104.115/nuts/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--cc678d55-0a15-4c60-b55d-864ef0d9f8f4",
+      "value": "http://51.91.77.94:13339/termite/51.91.77.94:13337"
+    },
+    {
+      "type": "url",
+      "id": "url--824ddd51-a84a-49f9-b14d-5e0962f47895",
+      "value": "http://59.7.217.245:7070/app2"
+    },
+    {
+      "type": "url",
+      "id": "url--93a8bf15-7e18-42d4-9652-4fc660d6fc7f",
+      "value": "http://59.7.217.245:7070/c.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--ab5796fe-f1c2-449a-b8aa-a7b936bef36e",
+      "value": "http://68.142.129.4:8277/download/c.sh"
+    },
+    {
+      "type": "url",
+      "id": "url--9db20987-e237-4076-b351-1709d80133af",
+      "value": "http://89.144.31.18/nuts/bolts"
+    },
+    {
+      "type": "url",
+      "id": "url--c2366b2b-967e-48ec-a1fb-2a84045c8c13",
+      "value": "http://89.144.31.18/nuts/x86"
+    },
+    {
+      "type": "url",
+      "id": "url--08a53731-97dc-4c31-8302-7694e91500c5",
+      "value": "http://gfxnick.emerald.usbx.me/bot"
+    },
+    {
+      "type": "url",
+      "id": "url--d9e2bae3-ec0c-4173-8fe9-2a1572977203",
+      "value": "http://meomeoli.mooo.com:8820/CLoadPXP/lix.exe?pass=PXPa9682775lckbitXPRopGIXPIL"
+    },
+    {
+      "type": "url",
+      "id": "url--ad490380-e701-44e0-9439-fd3a601ce1d0",
+      "value": "https://api.hellknight.xyz/js"
+    },
+    {
+      "type": "url",
+      "id": "url--68f4701f-ef20-44a1-9f17-78624cd8ec6f",
+      "value": "https://gist.githubusercontent.com/demonic-agents/39e943f4de855e2aef12f34324cbf150/raw/e767e1cef1c35738689ba4df9c6f7f29a6afba1a/setup_c3pool_miner.sh"
+    }
+  ]
+}

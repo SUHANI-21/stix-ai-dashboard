@@ -1,0 +1,432 @@
+{
+  "type": "bundle",
+  "id": "bundle--d0df0f4d-19c3-4d86-a630-befe755d6c9f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "name": "ForumTroll",
+      "aliases": [
+        "ForumTroll APT"
+      ],
+      "description": "ForumTroll is an advanced persistent threat (APT) group active since at least 2022, targeting organizations and individuals in Russia and Belarus. The group has conducted campaigns using spear phishing, malicious archives, and both custom and commercial malware implants. Notable tools include LeetAgent, Dante spyware, and the Tuoni framework. ForumTroll has exploited vulnerabilities such as CVE-2025-2783 in Google Chrome and used techniques like COM Hijacking for persistence.",
+      "first_seen": "2022-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Data theft",
+        "Compromise of targeted individuals and organizations"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8a45d877-6dab-4c10-aa7f-30d125928a30",
+      "name": "COM Hijacking",
+      "description": "Persistence technique involving modification of registry keys (e.g., HKCR\\CLSID\\{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}\\InProcServer32) to execute malicious DLLs.",
+      "external_references": [
+        {
+          "source_name": "MITRE ATT&CK",
+          "url": "https://attack.mitre.org/techniques/T1546/015/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6e9dbafd-a418-42f8-b2dc-497533eaccc4",
+      "name": "Spear Phishing via Email",
+      "description": "Targeted phishing emails sent to scholars and professionals, impersonating a legitimate scientific library and containing malicious links leading to malware infection.",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--3008afd6-f76b-4536-9241-df9d6bf3f5ea",
+      "name": "Malicious Shortcut File",
+      "description": "Delivery of malware via a personalized shortcut file (.lnk) that executes a PowerShell script to download and run further payloads.",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2ebd9c46-7fdb-4543-81d1-78232aeb6020",
+      "name": "PowerShell-based Payload Delivery",
+      "description": "Execution of PowerShell scripts to download and execute additional payloads from attacker-controlled servers.",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "name": "Decoy Document Delivery",
+      "description": "Downloading and opening a blurred PDF report as a decoy to distract victims and reduce suspicion during malware infection.",
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--282476d3-375c-4395-b03a-a783a2badf0e",
+      "name": "CVE-2025-2783",
+      "description": "A vulnerability in Google Chrome exploited by the ForumTroll APT group during their spring 2025 campaign.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-2783"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--e7feb639-3cb4-4393-b24f-8543048cbe65",
+      "name": "e-library[.]wiki",
+      "description": "Malicious domain registered and used by ForumTroll for phishing campaigns, payload delivery, and hosting decoy documents.",
+      "infrastructure_types": [
+        "hosting",
+        "phishing",
+        "command-and-control"
+      ],
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "infrastructure",
+      "id": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "name": "fastly.net",
+      "description": "C2 servers used by ForumTroll for remote access and payload delivery, including subdomains such as perf-service-clients2.global.ssl.fastly.net, bus-pod-tenant.global.ssl.fastly.net, and status-portal-api.global.ssl.fastly.net.",
+      "infrastructure_types": [
+        "command-and-control"
+      ],
+      "external_references": [
+        {
+          "source_name": "Securelist",
+          "url": "https://securelist.com/operation-forumtroll/115989/"
+        }
+      ]
+    },
+    {
+      "type": "email-addr",
+      "id": "email-addr--3053bfc6-3ec3-4eaf-a653-69ff37b51800",
+      "value": "support@e-library[.]wiki"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f33eabe3-0394-448f-9788-cf12d81c9b53",
+      "value": "e-library[.]wiki"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c12badeb-9f30-4ed9-83a8-da88fa0730e5",
+      "value": "elibrary.ru"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b4e532ad-c5eb-4e2c-b5b9-4e3a937847e0",
+      "value": "perf-service-clients2.global.ssl.fastly[.]net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e1dcf21b-f909-4ca3-91e8-3d9d8c3dbd05",
+      "value": "bus-pod-tenant.global.ssl.fastly[.]net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6b9f4099-b1f9-4fa3-b7d7-2bd80612a764",
+      "value": "status-portal-api.global.ssl.fastly[.]net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5f504585-2fc2-42c9-b569-ec955dd555ae",
+      "value": "fastly.net"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8240f027-5b15-45ec-96c3-4ffc8c3a7dd8",
+      "value": "193.65.18[.]14"
+    },
+    {
+      "type": "url",
+      "id": "url--37a847f9-3b61-419a-b201-0be5df752fa8",
+      "value": "https://e-library[.]wiki/elib/wiki.php?id=<8 pseudorandom letters and digits>"
+    },
+    {
+      "type": "file",
+      "id": "file--03b5774f-1736-495b-9bc5-8871f707809b",
+      "name": "<LastName>_<FirstName>_<Patronymic>.zip",
+      "extensions": {
+        "zip": {}
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--449a62de-23d9-4638-9e42-40523f760e64",
+      "name": "<LastName>_<FirstName>_<Patronymic>.lnk",
+      "extensions": {
+        "lnk": {}
+      }
+    },
+    {
+      "type": "directory",
+      "id": "directory--e5b8722b-9806-4947-a79f-a4ded03f390c",
+      "path": ".Thumbs"
+    },
+    {
+      "type": "file",
+      "id": "file--bab7d298-0887-4dd4-b2b9-b2a703bca89b",
+      "name": "iconcache_<4 pseudorandom digits>.dll",
+      "path": "%localappdata%\\Microsoft\\Windows\\Explorer\\iconcache_<4 pseudorandom digits>.dll",
+      "extensions": {
+        "dll": {}
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--889f3c8a-29e6-4d6d-accd-a3b22ea281f2",
+      "value": "https://e-library[.]wiki/elib/query.php?id=<8 pseudorandom letters and digits>&key=<32 hexadecimal characters>"
+    },
+    {
+      "type": "url",
+      "id": "url--c28080a0-99bc-4a2c-b9d8-0080ab2d8669",
+      "value": "https://e-library[.]wiki/pdf/<8 pseudorandom letters and digits>.pdf"
+    },
+    {
+      "type": "windows-registry-key",
+      "id": "windows-registry-key--a45abb36-aab7-48f6-a594-a6ab49ccfbfc",
+      "key": "HKCR\\CLSID\\{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}\\InProcServer32"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4495fca1-d8d9-459a-8f5d-f7e8b3b83f27",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "malware--487edbbf-7b5d-4a24-8f69-d97693d090a7",
+      "description": "ForumTroll APT group used Tuoni framework as a payload in their campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b66871a9-03b8-46be-bab2-3938e654badb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "malware--487edbbf-7b5d-4a24-8f69-d97693d090a7",
+      "description": "ForumTroll APT group used LeetAgent backdoor in previous campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ea9593ae-08b2-4945-a421-09a67dea1cf9",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "malware--487edbbf-7b5d-4a24-8f69-d97693d090a7",
+      "description": "ForumTroll APT group used Dante spyware in previous campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96262bc0-28f5-49f2-9556-a33911bf1ad2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "ForumTroll used COM Hijacking for persistence of malware implants."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--25140f37-b7be-47ea-90b7-b79eaa0d5d6c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "ForumTroll used spear phishing via email to deliver malicious links."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9dd7d416-a23a-45c7-b40d-28b698dcd61c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "ForumTroll delivered malware via malicious shortcut files (.lnk)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa8290bc-e7d4-4a69-87f9-968a006fa64c",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "ForumTroll used PowerShell-based payload delivery for malware infection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--29d15037-3c0b-4622-a6df-02fddbd1c4a0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "ForumTroll delivered decoy documents to victims to distract and reduce suspicion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8e8eb02-02f3-49a8-9508-541907808b64",
+      "relationship_type": "targets",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "vulnerability--282476d3-375c-4395-b03a-a783a2badf0e",
+      "description": "ForumTroll exploited CVE-2025-2783 vulnerability in Google Chrome."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d1233238-27d2-4681-8cce-91c5d3e28fff",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "description": "ForumTroll used e-library[.]wiki for phishing, payload delivery, and hosting decoy documents."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebf495c9-578c-4aae-8ebe-d52e80c56af1",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "description": "ForumTroll used fastly.net and its subdomains as C2 servers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9e17a8a5-fdf7-4ea2-93fd-5a17261dfe68",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "target_ref": "domain-name--5f504585-2fc2-42c9-b569-ec955dd555ae",
+      "description": "e-library[.]wiki domain is hosted on the e-library[.]wiki infrastructure."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b4047a9-f2e4-4a29-bb2f-0d5c2f69cda7",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "target_ref": "domain-name--5f504585-2fc2-42c9-b569-ec955dd555ae",
+      "description": "fastly.net infrastructure hosts perf-service-clients2.global.ssl.fastly[.]net."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--183aa19e-f154-469c-9cc6-4f0f6f56e10a",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "target_ref": "domain-name--5f504585-2fc2-42c9-b569-ec955dd555ae",
+      "description": "fastly.net infrastructure hosts bus-pod-tenant.global.ssl.fastly[.]net."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77a8b85f-b936-45ed-a954-b8971325a743",
+      "relationship_type": "hosts",
+      "source_ref": "infrastructure--82d28b8e-5385-48fb-b75d-097f26aa0015",
+      "target_ref": "domain-name--5f504585-2fc2-42c9-b569-ec955dd555ae",
+      "description": "fastly.net infrastructure hosts status-portal-api.global.ssl.fastly[.]net."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--af56fa41-8957-4e06-af41-62618bd1bf2b",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--2a929ec0-0ea2-40ea-a0e0-26f52ec4215b",
+      "target_ref": "email-addr--3053bfc6-3ec3-4eaf-a653-69ff37b51800",
+      "description": "ForumTroll used the email address support@e-library[.]wiki for phishing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--883d0fd2-86b8-48f3-befe-374a181c4467",
+      "relationship_type": "delivers",
+      "source_ref": "url--c28080a0-99bc-4a2c-b9d8-0080ab2d8669",
+      "target_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "description": "Malicious URL delivered a personalized ZIP archive to victims."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a11aab27-a10e-4f72-915b-c27914d4b403",
+      "relationship_type": "contains",
+      "source_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "target_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "description": "The malicious ZIP archive contained a personalized shortcut file (.lnk)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--96b425e5-c0d2-4bb3-a526-c8c73e355b0b",
+      "relationship_type": "contains",
+      "source_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "target_ref": "directory--e5b8722b-9806-4947-a79f-a4ded03f390c",
+      "description": "The malicious ZIP archive contained a .Thumbs directory with image files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--821553b2-fa93-4156-bad6-d0355aa009a6",
+      "relationship_type": "executes",
+      "source_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "The malicious shortcut file executes a PowerShell script for payload delivery."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f0874ee-396f-42a7-ac94-9c14181643cf",
+      "relationship_type": "downloads",
+      "source_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "target_ref": "url--c28080a0-99bc-4a2c-b9d8-0080ab2d8669",
+      "description": "PowerShell-based payload delivery downloads the DLL payload from a malicious URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--36cb79ce-6d61-4941-8adf-17e08ed63333",
+      "relationship_type": "drops",
+      "source_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "target_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "description": "PowerShell-based payload delivery drops the DLL file to the local system."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d6e44362-5826-4ceb-b2b7-2bf293c0a88c",
+      "relationship_type": "uses",
+      "source_ref": "malware--487edbbf-7b5d-4a24-8f69-d97693d090a7",
+      "target_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "description": "Tuoni framework establishes persistence using COM Hijacking."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bd8a1143-95d6-4797-a635-f23ed5b6845d",
+      "relationship_type": "modifies",
+      "source_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "target_ref": "windows-registry-key--a45abb36-aab7-48f6-a594-a6ab49ccfbfc",
+      "description": "COM Hijacking modifies the registry key HKCR\\CLSID\\{1f486a52-3cb1-48fd-8f50-b8dc300d9f9d}\\InProcServer32."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27ee0033-b943-4a64-b2fb-2aef5b7aee0f",
+      "relationship_type": "downloads",
+      "source_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "target_ref": "url--c28080a0-99bc-4a2c-b9d8-0080ab2d8669",
+      "description": "Decoy Document Delivery downloads a PDF decoy from a malicious URL."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--874ebe8a-4b57-4cff-a11b-34cfe8d292c2",
+      "relationship_type": "drops",
+      "source_ref": "attack-pattern--4d518a36-e343-4994-a681-e2020ab30b60",
+      "target_ref": "file--b634d101-2722-4e32-ba32-302e311f55d7",
+      "description": "Decoy Document Delivery drops the PDF decoy file to the user's Downloads folder."
+    }
+  ]
+}

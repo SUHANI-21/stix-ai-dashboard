@@ -1,0 +1,443 @@
+{
+  "type": "bundle",
+  "id": "bundle--722a32fb-76c7-4832-aa38-871c8797eb3b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "software",
+      "id": "software--9022e460-99db-49f6-8b93-8de578c1ca1e",
+      "name": "iOS",
+      "cpe": "cpe:2.3:o:apple:ios",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--6033004c-002d-4aa9-a400-525fd8038e11",
+      "name": "iPadOS",
+      "cpe": "cpe:2.3:o:apple:ipados",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--c80b4dfb-24f0-46d0-bf4f-a08647098f35",
+      "name": "iOS",
+      "cpe": "cpe:2.3:o:apple:ios",
+      "version": "18.7.3"
+    },
+    {
+      "type": "software",
+      "id": "software--960bfbe0-f535-42d7-b646-5dc6a0ce549c",
+      "name": "iPadOS",
+      "cpe": "cpe:2.3:o:apple:ipados",
+      "version": "18.7.3"
+    },
+    {
+      "type": "software",
+      "id": "software--e489397b-03dc-44e3-953f-111fa5b2b99d",
+      "name": "macOS Tahoe",
+      "cpe": "cpe:2.3:o:apple:macos_tahoe",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--d049bf8b-3db9-4832-96d0-ccca58d99fda",
+      "name": "macOS Sequoia",
+      "cpe": "cpe:2.3:o:apple:macos_sequoia",
+      "version": "15.7.3"
+    },
+    {
+      "type": "software",
+      "id": "software--35a0ef73-46fd-4aa3-829f-3df76235c088",
+      "name": "macOS Sonoma",
+      "cpe": "cpe:2.3:o:apple:macos_sonoma",
+      "version": "14.8.3"
+    },
+    {
+      "type": "software",
+      "id": "software--9c1a6f65-8127-4f85-9013-8dfa2fff09b9",
+      "name": "tvOS",
+      "cpe": "cpe:2.3:o:apple:tvos",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--56a0c41b-0d87-466f-913a-66e226aff8f2",
+      "name": "watchOS",
+      "cpe": "cpe:2.3:o:apple:watchos",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--d0c5fded-a789-4da1-9c03-b55c0bb17ba0",
+      "name": "visionOS",
+      "cpe": "cpe:2.3:o:apple:visionos",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--c137c1f1-f4e6-49e2-882c-ffabb01c3bf5",
+      "name": "Safari",
+      "cpe": "cpe:2.3:a:apple:safari",
+      "version": "26.2"
+    },
+    {
+      "type": "software",
+      "id": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "name": "curl",
+      "cpe": "cpe:2.3:a:haxx:curl"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--b9584deb-d824-484d-9f8e-27bb546d2b9b",
+      "name": "CVE-2025-43529"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--cdd62fa9-ac7e-498a-be43-eed4587be52b",
+      "name": "CVE-2025-14174"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--50b08fde-5557-4551-af89-23a4998e3409",
+      "name": "CVE-2025-43512"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--8900b4ed-a4ed-4efa-a51e-1cdb0ee1925d",
+      "name": "CVE-2025-46288"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--6c4b61e5-0fe3-46b4-9dc3-94b02b8fc594",
+      "name": "CVE-2025-43539"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--9a4da459-c184-45b6-aefe-5d4ecf102917",
+      "name": "CVE-2025-5918"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f7541d31-b936-479e-a091-74b92178c208",
+      "name": "CVE-2025-46287"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ea9d0802-abc5-480b-bf2d-a4413376aa69",
+      "name": "CVE-2024-7264"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f373d2d6-fe73-4da8-ac0d-dbda0566047e",
+      "name": "CVE-2025-9086"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2b9604b2-ba8a-47db-8aad-b0eb00a2e923",
+      "name": "CVE-2025-43542"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a51ae7f1-600d-4e8c-b088-2dfd30b9ecd6",
+      "name": "CVE-2025-43518"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fd5c385b-bf18-4e92-b094-e34c1abcc920",
+      "name": "CVE-2025-43532"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--efd5c024-f56f-416b-9816-9100b55027b5",
+      "name": "CVE-2025-46279"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a1c73f6b-6fc5-4f0a-b536-f63b0cca3c5f",
+      "name": "CVE-2025-46285"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fff46939-159a-4fcf-819f-768e9699c787",
+      "name": "CVE-2025-43527"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--82551d0b-6865-4093-a4ad-298c1e2a518f",
+      "name": "CVE-2025-43475"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--7f273f47-c1fc-4412-badb-f6037ca79d12",
+      "name": "CVE-2025-46292"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--c081956c-7e68-42c4-b5e7-0e6af8e8538f",
+      "name": "CVE-2025-43522"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3214d191-2d1d-4467-b6c2-9ee918e7718a",
+      "name": "CVE-2025-46276"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3ef3402e-e4f6-4a80-8236-cb67149636b5",
+      "name": "CVE-2025-43538"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--114441ca-ef6f-47cd-bbc7-df65c5aab744",
+      "name": "CVE-2025-43530"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--211a8504-82db-4474-8679-0455932cdb7f",
+      "name": "CVE-2025-43523"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a5048736-1c96-431f-9cb7-5e3862ad62c7",
+      "name": "CVE-2025-43519"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--529cbd68-3ca9-47fd-8122-fe5df9dd583f",
+      "name": "CVE-2025-43521"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--466e5245-98f2-4813-af5b-a15a1fa666de",
+      "name": "CVE-2025-46283"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--72e75f48-69d8-4b52-82f2-7d266926d24f",
+      "name": "CVE-2025-43509"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a71e1f27-2958-4485-8024-072d1c9f36be",
+      "name": "CVE-2025-46282"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--aeed9a73-0136-4e6b-9022-377b1e46ed89",
+      "name": "CVE-2025-43463"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0e443d40-1032-4bb2-a4ec-e0f13a62aad0",
+      "name": "CVE-2025-43533"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2cf91e24-6ee9-4fa9-bc09-e4ffc0465ba7",
+      "name": "CVE-2025-43428"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--679d1b00-64df-4105-a473-345637b31e67",
+      "name": "CVE-2025-46277"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1f4f69de-6842-4cdb-804c-f8c2cd22d5fb",
+      "name": "CVE-2025-43541"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2b4f1e78-112d-4a42-86c2-eb8ee08db654",
+      "name": "CVE-2025-43536"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--108706e8-2e24-4a4f-ade6-155322d3c010",
+      "name": "CVE-2025-43535"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e1ec0035-825c-4b97-adae-872ff942619d",
+      "name": "CVE-2025-43501"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f64b9888-d2e1-477a-aadd-4023ddfa7d0e",
+      "name": "CVE-2025-43531"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--f102db84-1a1b-4345-ba51-26b9e66c8b5f",
+      "name": "CVE-2025-43511"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--27f387da-110e-40c7-97b1-4d434b641e9d",
+      "name": "CVE-2025-46289"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--52071581-b7f6-46ee-8018-c7e63e06e753",
+      "name": "CVE-2025-43517"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--4baed5e2-a36c-43b1-aab5-7edb4d9ea0fd",
+      "name": "CVE-2025-46278"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--26181028-8559-42bb-818e-99a87f0c7ee4",
+      "name": "CVE-2025-43514"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--24d20ff5-44a0-4631-ac03-6451ec765cc3",
+      "name": "CVE-2025-43416"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0b594c55-f1c6-47d2-949b-db01edea4e5f",
+      "name": "CVE-2025-43482"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--1c9c7e23-0abf-4fb9-b340-a287099c1193",
+      "name": "CVE-2025-46281"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--2f308f00-d6fe-48a5-8f3f-0a9fae8c4db0",
+      "name": "CVE-2025-46291"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d9254d76-c2d9-4e68-aa6f-f5285cbaecdc",
+      "name": "CVE-2025-43513"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--5d8e5c86-a249-4b7d-9cba-adef785c2ecd",
+      "name": "CVE-2025-43410"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--3bab9b13-3415-4f89-9406-a2404b56dc26",
+      "name": "CVE-2025-43526"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--ca2c17ae-6b45-498e-b340-4d39736f21dc",
+      "name": "CVE-2024-8906"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--79bbbab5-4b24-4dd8-821b-05a8b153ee77",
+      "name": "CVE-2025-43516"
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad",
+      "name": "CVE-2025-43320"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8fc8b66b-993c-4c67-8381-67f6247a679e",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cb4808ea-f0bb-485a-92b6-98f788e0e3ce",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da71cb9d-c55a-435c-82a8-83379d8b4c56",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b6b66ef2-b537-4ce1-bb6f-69fd6e00a1e6",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6098a0af-be45-43c8-b47c-a0587e3dac9d",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ee1d21d5-e51b-4387-a809-c3da94da6c87",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2365f18c-6b05-4a1a-8bd6-89c15c6fa1be",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e000b2e7-06ce-4f07-97ad-8ba98df2e27d",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10a50477-1811-4023-a420-a9a1ab3fc7a9",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--42e447f4-543d-43a9-9682-7d3c39c3d614",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--731021f7-1014-413a-9fb9-09ba1da41ae8",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b7cec577-e877-4766-bffc-41595368358b",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c74fb1d6-8d3f-4e71-a7c5-2153b2529eb9",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5cbca11e-c066-454c-8301-b65c5d1946c2",
+      "relationship_type": "has",
+      "source_ref": "software--6f4fe7d5-fcfb-4689-a42b-c98456f549cf",
+      "target_ref": "vulnerability--0468e24c-7aed-4258-a0b6-594f038d76ad"
+    }
+  ]
+}

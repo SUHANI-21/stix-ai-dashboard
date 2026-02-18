@@ -1,0 +1,311 @@
+{
+  "type": "bundle",
+  "id": "bundle--ed36f6c1-8c59-46ce-a25b-04861cfc581c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "name": "UAT-7290",
+      "aliases": [
+        "Red Foxtrot"
+      ],
+      "description": "UAT-7290 is a China-nexus Advanced Persistent Threat (APT) group active since at least 2022, primarily targeting telecommunications and critical infrastructure in South Asia and Southeastern Europe. The group conducts espionage, initial access operations, and establishes Operational Relay Box (ORB) nodes for use by other China-nexus actors. UAT-7290 shares TTPs, victimology, infrastructure, and tooling with other China-nexus adversaries, including APT10.",
+      "first_seen": "2022-01-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Initial Access",
+        "Establishing ORB nodes"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "initial-access"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cisco Talos",
+          "url": "https://blog.talosintelligence.com/"
+        },
+        {
+          "source_name": "Recorded Future",
+          "url": "https://go.recordedfuture.com/hubfs/reports/cta-2021-0616.pdf",
+          "description": "Red Foxtrot linked to Chinese PLA Unit 69010"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--a4e38183-8a94-4c6a-88cb-fe25b266db05",
+      "name": "RushDrop",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "RushDrop",
+          "aliases": [
+            "ChronosRAT"
+          ]
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--7bdf1e71-c710-4c4a-9fd2-465583a79f03",
+      "name": "DriveSwitch",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "DriveSwitch"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4dee4502-f9e7-4125-bb59-14978eba0ae1",
+      "name": "SilentRaid",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "SilentRaid",
+          "aliases": [
+            "MystRodX"
+          ]
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--52ef17ee-bce4-418a-9f62-5f3dd9bfe231",
+      "name": "Bulbature",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "Bulbature"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--18a17310-8b5c-4af7-b9c2-f48a63424c32",
+      "name": "daytime",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "daytime"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--43d144f2-22cc-483c-9a8b-ba44aa884551",
+      "name": "chargen",
+      "extensions": {
+        "malware-ext": {
+          "family_name": "SilentRaid"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--f12a6bc8-bd04-4195-bac3-81ded39106ae",
+      "name": "busybox"
+    },
+    {
+      "type": "directory",
+      "id": "directory--760c4a62-69e4-4585-99ca-c1470cb4c256",
+      "path": ".pkgdb"
+    },
+    {
+      "type": "directory",
+      "id": "directory--7c57aaae-1967-4150-92a1-76d820b7951f",
+      "path": "/tmp"
+    },
+    {
+      "type": "file",
+      "id": "file--32d1b588-170d-4ea0-8170-424fdd4ad641",
+      "name": "/etc/passwd"
+    },
+    {
+      "type": "x509-certificate",
+      "id": "x509-certificate--a8a68ec3-cb65-46fe-b53c-c2ce89a03294",
+      "serial_number": "81bab2934ee32534",
+      "issuer": "O=Internet Widgits Pty Ltd, S=Some-State, C=AU",
+      "subject": "O=Internet Widgits Pty Ltd, S=Some-State, C=AU",
+      "validity_not_before": "2019-08-08T03:33:00Z",
+      "validity_not_after": "2046-12-24T03:33:00Z",
+      "hashes": {
+        "SHA-1": "d398f76c7ba0bbf79b1cac0620cdf4b42e505195",
+        "MD5": "4a963519b4950845a8d76668d4d7dd29",
+        "SHA-256": "918fb8af4998393f5195bafaead7c9ba28d8f9fb0853d5c2d75f10e35be8015a"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--78a97177-e7ec-4c92-9da2-cc472b1d6439",
+      "hashes": {
+        "SHA-256": "723c1e59accbb781856a8407f1e64f36038e324d3f0bdb606d35c359ade08200"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--93e2f721-6a05-4061-823b-c1d78cf2f627",
+      "hashes": {
+        "SHA-256": "59568d0e2da98bad46f0e3165bcf8adadbf724d617ccebcfdaeafbb097b81596"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "hashes": {
+        "SHA-256": "961ac6942c41c959be471bd7eea6e708f3222a8a607b51d59063d5c58c54a38d"
+      }
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2965a331-713a-4d81-92e7-66aa0017792e",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 uses RushDrop in its operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--052ba0f8-77b4-48e1-9e0f-0023b28cde29",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 uses DriveSwitch in its operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--19b1e273-a6cd-489c-a443-1255afbdc1f4",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 uses SilentRaid in its operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70ca38a9-e5af-40d2-955c-2573006f3ddb",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 uses Bulbature in its operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e89317ab-116f-4e19-b935-5e970f94f253",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 leverages RedLeaves in some operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ad9d870-69e8-4275-a46b-3ee09d55c98a",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--b9f953dd-0eac-4cc6-8aa5-c0ddf998dca8",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "UAT-7290 leverages ShadowPad in some operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8a7f93c4-9366-4801-8002-3a27362a7561",
+      "relationship_type": "drops",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "RushDrop drops DriveSwitch binary (daytime) to disk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f693bf8f-a6a5-4b27-bd80-e4cdaa7602c9",
+      "relationship_type": "drops",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "RushDrop drops SilentRaid binary (chargen) to disk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--deb51866-0d67-4449-8963-c9b35f668949",
+      "relationship_type": "drops",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "RushDrop drops Busybox binary to disk."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6d173c68-356d-424f-b1bb-de9ca7830c1a",
+      "relationship_type": "drops",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "directory--7c57aaae-1967-4150-92a1-76d820b7951f",
+      "description": "RushDrop creates the .pkgdb directory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c628efb3-c100-4d80-aeba-ab53d4e051aa",
+      "relationship_type": "executes",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "description": "DriveSwitch executes SilentRaid on infected systems."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f07c16d0-dbbd-441f-9339-c9d0757d8b58",
+      "relationship_type": "uses",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "tool--0b7585d9-fd26-4c3b-bdc8-d8e6bed26276",
+      "description": "RushDrop uses Busybox to execute commands."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1678bc65-a747-4564-9499-7f5b0479afdf",
+      "relationship_type": "uses",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "tool--0b7585d9-fd26-4c3b-bdc8-d8e6bed26276",
+      "description": "SilentRaid uses Busybox to execute commands, archive directories, and remove files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--efdc317b-1883-465c-81ec-fbd71b1f1d85",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--66b9243f-1aea-49c6-b054-c46a934e98f6",
+      "target_ref": "x509-certificate--a8a68ec3-cb65-46fe-b53c-c2ce89a03294",
+      "description": "Bulbature uses an embedded self-signed certificate for C2 communication."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e5407302-2c19-4ec0-9fd0-2274726c6bd7",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2fd7a120-2d67-4fc8-90b7-6b7c35b1760c",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "File hash 723c1e59accbb781856a8407f1e64f36038e324d3f0bdb606d35c359ade08200 indicates a file associated with UAT-7290 malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b065c6a-0056-41fa-841b-d37672de6305",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2fd7a120-2d67-4fc8-90b7-6b7c35b1760c",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "File hash 59568d0e2da98bad46f0e3165bcf8adadbf724d617ccebcfdaeafbb097b81596 indicates a file associated with UAT-7290 malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--10ca83fb-1f69-456d-91ad-b20acb2e82ae",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2fd7a120-2d67-4fc8-90b7-6b7c35b1760c",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "File hash 961ac6942c41c959be471bd7eea6e708f3222a8a607b51d59063d5c58c54a38d indicates a file associated with UAT-7290 malware."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67eb78fb-cac7-4bdc-afeb-925d22ee0a2f",
+      "relationship_type": "contains",
+      "source_ref": "directory--7c57aaae-1967-4150-92a1-76d820b7951f",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": ".pkgdb directory contains dropped malware binaries."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34687160-e4da-4bb1-aca2-7a086ce959f2",
+      "relationship_type": "contains",
+      "source_ref": "directory--7c57aaae-1967-4150-92a1-76d820b7951f",
+      "target_ref": "file--6fa49375-afa0-4a04-9713-da26efa95f9a",
+      "description": "/tmp directory contains Bulbature config files (*.cfg)."
+    }
+  ]
+}

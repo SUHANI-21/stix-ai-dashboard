@@ -1,0 +1,463 @@
+{
+  "type": "bundle",
+  "id": "bundle--32c9f2e4-ce8b-4b79-9e08-8783abdc5af7",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--22077c0a-f82e-4dae-9446-6d13817e4fb5",
+      "name": "Lazarus Group",
+      "aliases": [
+        "Lazarus",
+        "APT38",
+        "Hidden Cobra"
+      ],
+      "description": "Lazarus Group is a North Korean government-aligned advanced persistent threat (APT) group known for cyberespionage, financial theft, and disruptive attacks. In October 2025, Lazarus targeted companies supplying UAV technology to Ukraine as part of the Operation DreamJob campaign, using the ScoringMathTea RAT.",
+      "goals": [
+        "Espionage",
+        "Theft of UAV technology know-how"
+      ],
+      "resource_level": "government",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "financial gain"
+      ],
+      "external_references": [
+        {
+          "source_name": "ESET Research",
+          "url": "https://www.welivesecurity.com/en/eset-research/gotta-fly-lazarus-targets-uav-sector/"
+        }
+      ]
+    },
+    {
+      "type": "campaign",
+      "id": "campaign--0492b8c2-2a97-4344-a5e1-35db7a243dd5",
+      "name": "Operation DreamJob - Gotta Fly",
+      "description": "Operation DreamJob - Gotta Fly is a cyberespionage campaign attributed to the Lazarus APT group, targeting companies involved in the production of Unmanned Aerial Vehicles (UAVs) for Ukraine. The campaign leverages the ScoringMathTea RAT for espionage and theft of sensitive technology.",
+      "aliases": [
+        "Gotta Fly"
+      ],
+      "first_seen": "2025-10-01T00:00:00Z",
+      "objective": "Steal UAV production know-how from companies supplying Ukraine",
+      "external_references": [
+        {
+          "source_name": "ESET Research",
+          "url": "https://www.welivesecurity.com/en/eset-research/gotta-fly-lazarus-targets-uav-sector/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--39adb348-64aa-42ea-8092-8d5ba8d306e7",
+      "name": "Reflective Code Loading",
+      "description": "ScoringMathTea loads plugins (DLLs) directly from memory without writing them to disk, using reflective DLL injection.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1620",
+          "url": "https://attack.mitre.org/techniques/T1620/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--9c819977-1d94-4def-b725-3d3ed8f7189c",
+      "name": "Native API",
+      "description": "Implements PEB Walking to locate kernel32.dll and its own version of GetProcAddress to bypass API hooking.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1106",
+          "url": "https://attack.mitre.org/techniques/T1106/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--8ed7b910-7886-4c64-9206-7afbaf4ba6e1",
+      "name": "Obfuscated Files or Information: Dynamic API Resolution",
+      "description": "ScoringMathTea manually implements Dynamic API Resolution through API Hashing.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1027.007",
+          "url": "https://attack.mitre.org/techniques/T1027/007/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d8334eaf-fcc8-4105-92e3-0dba53936152",
+      "name": "Masquerading: Browser Fingerprint",
+      "description": "Spoofs a legitimate Microsoft Edge User-Agent string to make its C&C traffic blend in with normal network activity.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1036.012",
+          "url": "https://attack.mitre.org/techniques/T1036/012/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2feb96b7-0c84-42c5-a68e-afba0e2d1619",
+      "name": "Virtualization/Sandbox Evasion",
+      "description": "Actively filters HTML tags (like <!DOCTYPE html>) from C&C responses, possibly to defeat captive portals and automated sandbox analysis.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1497",
+          "url": "https://attack.mitre.org/techniques/T1497/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--b5a33db7-bb31-4098-9fb0-3f9ae0cfb1e8",
+      "name": "Debug Evasion",
+      "description": "Calculates a CRC32 checksum of its own in-memory module after loading to detect if an analyst has applied patches or tampered with it.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1622",
+          "url": "https://attack.mitre.org/techniques/T1622/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--299b89bb-655f-4fba-bef5-fd3f745e4eeb",
+      "name": "Hide Artifacts: Suppress System Error Dialogs",
+      "description": "Suppresses all system error dialogs to ensure the malware fails silently without alerting the user.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1564.004",
+          "url": "https://attack.mitre.org/techniques/T1564/004/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--14985ecf-a3c8-454b-8d1d-f0f65fd0db3b",
+      "name": "Application Layer Protocol: Web Protocols",
+      "description": "Uses standard HTTP/S POST requests for all C&C communications and bypasses SSL/TLS certificate validation.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1071.001",
+          "url": "https://attack.mitre.org/techniques/T1071/001/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "name": "Encrypted Channel: Symmetric Cryptography",
+      "description": "C&C payloads are protected in multiple layers: compressed, then encrypted with a symmetric algorithm (TEA/XTEA), and finally Base64 encoded.",
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "external_id": "T1573.001",
+          "url": "https://attack.mitre.org/techniques/T1573/001/"
+        }
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--113f665d-7f88-494d-989a-b83a155d8931",
+      "name": "ESET Research Team",
+      "identity_class": "organization",
+      "description": "ESET Research Team is a cybersecurity research organization that published analysis on the Lazarus Group's Operation DreamJob - Gotta Fly campaign and the ScoringMathTea RAT.",
+      "sectors": [
+        "technology",
+        "cybersecurity"
+      ],
+      "external_references": [
+        {
+          "source_name": "ESET Research",
+          "url": "https://www.welivesecurity.com/en/eset-research/gotta-fly-lazarus-targets-uav-sector/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--6ed63c47-21a4-46bd-b148-d5f21454f206",
+      "name": "ScoringMathTea.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "description": "DLL format sample of ScoringMathTea RAT, capable of reflective injection and plugin loading."
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2381dd69-4de5-49d8-896e-bfe03bfc97b3",
+      "value": "scoringmathtea[.]com"
+    },
+    {
+      "type": "url",
+      "id": "url--33bb8386-ccd3-4199-b3ae-0f5bd0e07a0e",
+      "value": "https://scoringmathtea.com"
+    },
+    {
+      "type": "software",
+      "id": "software--f8a3ad7f-baa0-4a82-8ff2-dcc24174d92b",
+      "name": "IDA Pro",
+      "description": "Interactive Disassembler used for reverse engineering ScoringMathTea."
+    },
+    {
+      "type": "software",
+      "id": "software--ee4ba8c5-2f84-423d-8fcf-9517180f1f85",
+      "name": "WinHttpConnect",
+      "description": "Windows API used by ScoringMathTea for initial connection to C&C server."
+    },
+    {
+      "type": "software",
+      "id": "software--00875891-bcce-45f5-a31c-b122a5fb7058",
+      "name": "WinHttpOpenRequest",
+      "description": "Windows API used by ScoringMathTea to create HTTP POST requests for C2 communication."
+    },
+    {
+      "type": "software",
+      "id": "software--9b7fe60a-4230-41c6-b34a-29c255673358",
+      "name": "WinHttpSetTimeouts",
+      "description": "Windows API used by ScoringMathTea to set connection timeouts for HTTP requests."
+    },
+    {
+      "type": "user-agent",
+      "id": "user-agent--1f10bd3b-03e4-415e-82a0-57f43041368e",
+      "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36 Edg/107.0.1418.42"
+    },
+    {
+      "type": "cryptographic-key",
+      "id": "cryptographic-key--c812b78a-5ba1-4e51-95e5-e73cbb1dd381",
+      "description": "TEA/XTEA symmetric key used for C2 payload encryption in CBC mode."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--76898c3f-0843-4632-bd3b-1a018db08f29",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--22077c0a-f82e-4dae-9446-6d13817e4fb5",
+      "target_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "description": "Lazarus Group uses ScoringMathTea RAT in their operations."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7207cd35-a7db-4a6d-82bf-770124c7afc2",
+      "relationship_type": "attributed-to",
+      "source_ref": "campaign--0492b8c2-2a97-4344-a5e1-35db7a243dd5",
+      "target_ref": "intrusion-set--22077c0a-f82e-4dae-9446-6d13817e4fb5",
+      "description": "Operation DreamJob - Gotta Fly is attributed to the Lazarus Group."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5f331c04-645a-4de2-98ea-5e0869c67c05",
+      "relationship_type": "uses",
+      "source_ref": "campaign--0492b8c2-2a97-4344-a5e1-35db7a243dd5",
+      "target_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "description": "Operation DreamJob - Gotta Fly used ScoringMathTea RAT."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b577a0cb-cb31-44fc-8db3-1270c75542a0",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "file--6ed63c47-21a4-46bd-b148-d5f21454f206",
+      "description": "ScoringMathTea is deployed as a DLL file (ScoringMathTea.dll)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a7675fec-8341-41f9-b23b-d0f3c0dc608c",
+      "relationship_type": "controls",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "domain-name--2381dd69-4de5-49d8-896e-bfe03bfc97b3",
+      "description": "ScoringMathTea communicates with its C2 domain scoringmathtea[.]com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c9adda1d-ba51-4c8d-9327-b08e0232d825",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "url--33bb8386-ccd3-4199-b3ae-0f5bd0e07a0e",
+      "description": "ScoringMathTea communicates with its C2 URL https://scoringmathtea.com."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41dd1a4a-8223-459a-a2a7-2d3cc088cbc2",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "user-agent--1f10bd3b-03e4-415e-82a0-57f43041368e",
+      "description": "ScoringMathTea spoofs a Microsoft Edge User-Agent string for C2 communications."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ffa83d01-8916-452c-aa62-41737c77f32f",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "cryptographic-key--c812b78a-5ba1-4e51-95e5-e73cbb1dd381",
+      "description": "ScoringMathTea uses a TEA/XTEA symmetric key for encrypting C2 payloads."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--053fa01d-1b37-42e2-b793-ac2c8c9a7c60",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "software--9b7fe60a-4230-41c6-b34a-29c255673358",
+      "description": "ScoringMathTea is analyzed using IDA Pro."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8b60bb5e-b4da-4bad-8ee4-2e1f6de2e8c0",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "software--9b7fe60a-4230-41c6-b34a-29c255673358",
+      "description": "ScoringMathTea uses the WinHttpConnect API for initial C2 connection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--622cf8e3-42ff-470e-8d7f-c0fe23754ff9",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "software--9b7fe60a-4230-41c6-b34a-29c255673358",
+      "description": "ScoringMathTea uses the WinHttpOpenRequest API for HTTP POST requests."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4f17a85-ae21-480c-9ed2-c6a3823aed9e",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "software--9b7fe60a-4230-41c6-b34a-29c255673358",
+      "description": "ScoringMathTea uses the WinHttpSetTimeouts API to set HTTP connection timeouts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef15e8f1-cdec-43c2-8bc9-a0cc0f32f540",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "description": "ScoringMathTea's string decryption can be automated using the ScoringMathTea String Decryption Script."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--41eb256a-38ad-4bd8-8e36-33cd4b82504d",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "description": "ScoringMathTea's API hashing can be analyzed using the ScoringMathTea API Hash Algorithm Script."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6f1838ed-85d1-4891-9e29-4f7a0bb26435",
+      "relationship_type": "has",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "description": "ScoringMathTea can be detected using the ScoringMathTea Yara Rule."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4416d521-7566-46a1-b0fb-39773ca80207",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea uses Reflective Code Loading to load plugins in memory (T1620)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ef0ef2c8-c311-45ff-ac2d-d10a5fa88ab5",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea uses Native API via PEB Walking and GetProcAddress (T1106)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebb6b6a2-491a-46ce-9d4b-172dc3d39f22",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea uses Dynamic API Resolution via hashing (T1027.007)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--09bac199-bb6e-4a28-89dc-fc281391cde2",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea spoofs a browser fingerprint by using a legitimate User-Agent (T1036.012)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--515b9d7f-b90c-47ce-bc1f-a9baeecfb827",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea performs virtualization/sandbox evasion by filtering HTML tags from C2 responses (T1497)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2676a234-fffb-436f-a5da-c0f482587fe7",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea uses debug evasion by calculating CRC32 checksums of its own module (T1622)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0778e650-f128-4e4c-9734-f3ac22c1a701",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea hides artifacts by suppressing system error dialogs (T1564.004)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e7e1a910-124c-43e5-aa26-1e2f953f460e",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea uses HTTP/S POST requests and bypasses SSL/TLS validation for C2 (T1071.001)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b10a7cbd-70bf-47e7-bd35-36e281449383",
+      "relationship_type": "uses",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "attack-pattern--05cadf70-7c57-485c-9b27-0a39d89ca5d0",
+      "description": "ScoringMathTea encrypts C2 payloads with symmetric cryptography (TEA/XTEA) and encodes them (T1573.001)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1741d790-1b09-4841-bfa4-439c050e7152",
+      "relationship_type": "authored-by",
+      "source_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "target_ref": "identity--113f665d-7f88-494d-989a-b83a155d8931",
+      "description": "The ScoringMathTea String Decryption Script was authored by ESET Research Team."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b16683c8-9118-449b-94a2-1630a5d08b5f",
+      "relationship_type": "authored-by",
+      "source_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "target_ref": "identity--113f665d-7f88-494d-989a-b83a155d8931",
+      "description": "The ScoringMathTea API Hash Algorithm Script was authored by ESET Research Team."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a331cfa6-9ce4-4d7d-bfa4-2d881585b597",
+      "relationship_type": "authored-by",
+      "source_ref": "tool--6b6d30b0-a84d-4ff7-86bd-a0d52f5cadf9",
+      "target_ref": "identity--113f665d-7f88-494d-989a-b83a155d8931",
+      "description": "The ScoringMathTea Yara Rule was authored by ESET Research Team."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--15a6129f-1752-4172-9263-b63d9f795744",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--655e09a6-fa0b-41f0-9af4-8f29d65331c0",
+      "target_ref": "identity--113f665d-7f88-494d-989a-b83a155d8931",
+      "description": "ScoringMathTea was developed and operated by Lazarus Group."
+    }
+  ]
+}

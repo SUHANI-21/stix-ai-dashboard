@@ -1,0 +1,221 @@
+{
+  "type": "bundle",
+  "id": "bundle--a6769bf9-2597-4e95-b0d9-05a951ec4d1c",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--56768a97-3ba5-4f74-9c52-38c06f37855f",
+      "name": "Volume Shadow Copy Deletion via WMI",
+      "description": "VanHelsing ransomware deletes Windows Volume Shadow Copies using WMI queries and cmd.exe spawning wmic.exe with a delete command, sabotaging recovery efforts.",
+      "external_references": [
+        {
+          "source_name": "picussecurity",
+          "url": "https://www.picussecurity.com/resource/multi-platform-vanhelsing-ransomware-raas-analysis"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c1366019-3f00-43bf-a859-870969b6bc03",
+      "name": "SMB Lateral Movement and Propagation",
+      "description": "VanHelsing scans local networks for SMB servers, enumerates shares, and propagates by copying itself to writable shares and executing via embedded psexec.exe, excluding NETLOGON and sysvol shares.",
+      "external_references": [
+        {
+          "source_name": "picussecurity",
+          "url": "https://www.picussecurity.com/resource/multi-platform-vanhelsing-ransomware-raas-analysis"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cb357d53-6c10-4d56-9fc9-94d34a3c027d",
+      "name": "Silent Two-Stage Encryption and Renaming",
+      "description": "VanHelsing ransomware can operate in a silent mode, performing encryption and file renaming in two separate stages to evade endpoint detection and response (EDR) behavioral analysis.",
+      "external_references": [
+        {
+          "source_name": "picussecurity",
+          "url": "https://www.picussecurity.com/resource/multi-platform-vanhelsing-ransomware-raas-analysis"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--fe638205-9b48-4c21-941f-46493cd1c4a0",
+      "name": "Hybrid File Encryption Scheme",
+      "description": "VanHelsing uses a hybrid encryption scheme with ChaCha20 for file content and Curve25519 for key exchange, storing encrypted keys and nonces in file headers.",
+      "external_references": [
+        {
+          "source_name": "picussecurity",
+          "url": "https://www.picussecurity.com/resource/multi-platform-vanhelsing-ransomware-raas-analysis"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "name": "Mutex Creation for Single Instance Execution",
+      "description": "VanHelsing creates a named mutex (Global\\VanHelsing) to ensure only a single instance runs on a system, which can be bypassed via command-line argument.",
+      "external_references": [
+        {
+          "source_name": "picussecurity",
+          "url": "https://www.picussecurity.com/resource/multi-platform-vanhelsing-ransomware-raas-analysis"
+        }
+      ]
+    },
+    {
+      "type": "mutex",
+      "id": "mutex--7d4eb11a-0d24-4215-82af-d86582144e37",
+      "name": "Global\\VanHelsing"
+    },
+    {
+      "type": "file",
+      "id": "file--a393883f-7c70-4ee8-b771-8ce82caacb98",
+      "name": "1-locker.pdb",
+      "path": "C:\\Users\\ADMINI~1\\AppData\\Local\\Temp\\2\\cd9563b4cbc415b3920633b93c0d351b\\1-locker\\Release\\1-locker.pdb"
+    },
+    {
+      "type": "file",
+      "id": "file--4348ff17-3eb7-477d-9ad7-e7337bf143cc",
+      "name": "vanlocker.exe",
+      "path": "$SHARE\\vanlocker.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--5cb350b9-68d9-4a32-b0a2-60c937233891",
+      "name": "psexec.exe",
+      "path": "$TEMP/psexec.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--47aa426b-29ef-457b-b48f-9912e8737a07",
+      "name": "WMIC.exe",
+      "path": "C:\\Windows\\System32\\wbem\\WMIC.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--c90d4709-67a3-4974-ac4f-f1c02cded376",
+      "name": "cmd.exe",
+      "path": "cmd.exe"
+    },
+    {
+      "type": "process",
+      "id": "process--019abc96-6593-4e1e-8170-4e3c3089149b",
+      "command_line": "cmd.exe /c C:\\Windows\\System32\\wbem\\WMIC.exe shadowcopy where \"ID='%s'\" delete"
+    },
+    {
+      "type": "process",
+      "id": "process--ebfca605-36ec-4bfe-87cc-bea3c6260b99",
+      "command_line": "cmd.exe /c $TEMP/psexec.exe -accepteula \\\\$SHARE -c -f $SHARE\\vanlocker.exe -d --no-mounted --no-network < NUL"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--8445667b-0f5e-4156-a826-276e03a73220",
+      "value": "local network range (1-255)"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ae959fa8-c88b-4e5c-93ee-0a5a581d957d",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "description": "VanHelsing ransomware deletes Volume Shadow Copies via WMI to sabotage recovery efforts."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0038997b-273d-4d2b-8c0f-57facf03d2b8",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "description": "VanHelsing propagates via SMB lateral movement, copying itself to network shares and executing via psexec.exe."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--83a378e0-d210-4680-959d-d1dd0e1c7436",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "description": "VanHelsing operates in silent two-stage mode to evade endpoint detection and response."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23d5970a-b136-487c-bcd0-d8c43d144137",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "description": "VanHelsing uses a hybrid file encryption scheme with ChaCha20 and Curve25519."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--23d5c1ee-3780-4423-9c3f-85439381ed6a",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "attack-pattern--1aa5ad10-6ad3-4d9d-b4d4-76def7d18b0b",
+      "description": "VanHelsing creates a named mutex to ensure single instance execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e2a6900-269d-40c5-81e4-8d36ddff9505",
+      "relationship_type": "creates",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "mutex--7d4eb11a-0d24-4215-82af-d86582144e37",
+      "description": "VanHelsing creates the mutex Global\\VanHelsing to ensure only a single instance runs."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b23b4a3-eeaf-4f0a-99db-b36f7a668a8e",
+      "relationship_type": "drops",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "file--c90d4709-67a3-4974-ac4f-f1c02cded376",
+      "description": "VanHelsing drops vanlocker.exe to writable SMB shares for lateral propagation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e942b29c-580a-4e3b-ad9d-d1adfb16fc65",
+      "relationship_type": "drops",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "file--c90d4709-67a3-4974-ac4f-f1c02cded376",
+      "description": "VanHelsing drops psexec.exe to the Temp folder for remote execution on SMB shares."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--88048df2-19ec-4641-94e3-64d47c6b742b",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "file--c90d4709-67a3-4974-ac4f-f1c02cded376",
+      "description": "VanHelsing uses WMIC.exe via WMI for shadow copy deletion."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3c1bb65-a3f9-4776-a04e-1d190efd89fb",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "file--c90d4709-67a3-4974-ac4f-f1c02cded376",
+      "description": "VanHelsing uses cmd.exe to execute commands for shadow copy deletion and remote execution."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ba05c46c-17f8-4e10-b5ed-26934d64a8a5",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "network-traffic--b610b1ab-e1b8-4b05-a1a5-8786bc27a4a0",
+      "description": "VanHelsing scans and connects to SMB servers over TCP port 445 for lateral movement."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9a4d4d19-1fcc-42c6-9798-22bf93e0693b",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "process--ebfca605-36ec-4bfe-87cc-bea3c6260b99",
+      "description": "VanHelsing executes cmd.exe spawning WMIC.exe to delete shadow copies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--07f6d627-ad81-4b23-9112-da63f4dabb46",
+      "relationship_type": "uses",
+      "source_ref": "malware--24c4040c-0c1e-4870-ad84-012971594546",
+      "target_ref": "process--ebfca605-36ec-4bfe-87cc-bea3c6260b99",
+      "description": "VanHelsing executes cmd.exe with psexec.exe to remotely launch vanlocker.exe on SMB shares."
+    }
+  ]
+}

@@ -1,0 +1,152 @@
+{
+  "type": "bundle",
+  "id": "bundle--2121e1b0-6f06-4192-94f7-ecf14e63f56f",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "id": "identity--fe3c6940-21c9-4ff6-af1f-2f7e3ab8c0ea",
+      "name": "Silas Cutler",
+      "description": "Principal Security Researcher at Censys, focused on investigating organized cyber-crime groups and state-sponsored attacks.",
+      "identity_class": "individual",
+      "sectors": [
+        "technology"
+      ],
+      "contact_information": "https://censys.com/resources/hub"
+    },
+    {
+      "type": "file",
+      "id": "file--26815760-b305-4dcb-b78e-9f45b9d4e181",
+      "hashes": {
+        "SHA-256": "8ba11c9e3d3f38a2473620579f61119be9ada9bc0e4dc37fc045017f56248473"
+      },
+      "name": "d_freebsd_arm"
+    },
+    {
+      "type": "file",
+      "id": "file--fec12ece-bacb-4ebe-b383-740dd676cadc",
+      "hashes": {
+        "SHA-256": "0e19deac3d64a33495d237ed4cdb3581813b88b6ed2afe84b8c2908201feaf91"
+      },
+      "name": "d_freebsd_x32"
+    },
+    {
+      "type": "file",
+      "id": "file--8b45683e-7c3a-4b81-bed0-84f6674b98f9",
+      "hashes": {
+        "SHA-256": "95375dac86bf8daf101cb8120d78f0340e6b1cdbea16b859d96d7aef946be983"
+      },
+      "name": "d_freebsd_x64"
+    },
+    {
+      "type": "file",
+      "id": "file--2acb24df-bff9-4e03-be38-adf2f04fbdb2",
+      "hashes": {
+        "SHA-256": "e3f229dc71ce65c1f2de05e2cfbd7ae848d330661d9b9b3fa00d594bf84f4d93"
+      },
+      "name": "d_lin_arm"
+    },
+    {
+      "type": "file",
+      "id": "file--1cde7cfb-de57-4cec-91e1-3b6ace542c67",
+      "hashes": {
+        "SHA-256": "48e9d5b0f8a2d56d31b4e845597789a81e3733c03751139a22f55ceebd15b75a"
+      },
+      "name": "d_lin_arm_wr"
+    },
+    {
+      "type": "file",
+      "id": "file--d62815b6-75e9-4b30-9fbd-b488da2d796d",
+      "hashes": {
+        "SHA-256": "307e3ea1cb140f375443ef3c9b62028dd5c6449c1bf242b83d6db5d730bd2121"
+      },
+      "name": "d_lin_x32"
+    },
+    {
+      "type": "file",
+      "id": "file--69dd3770-4c35-4d77-a4eb-15b612d3bf7e",
+      "hashes": {
+        "SHA-256": "2aaf3c08da86d5d0f6f9c00d4011991fd2cd50fa0777d51d5552b98365b15774"
+      },
+      "name": "d_lin_x64"
+    },
+    {
+      "type": "file",
+      "id": "file--777c34d9-ae97-4d83-904b-ea0cc863369d",
+      "hashes": {
+        "SHA-256": "7ee3574b0693e78060d863a5794437960aec0614af6c1909dd075daec0bcaf92"
+      },
+      "name": "d_mac_arm64"
+    },
+    {
+      "type": "file",
+      "id": "file--6db7215e-fb87-4825-9d57-236b8c31e31e",
+      "hashes": {
+        "SHA-256": "87cd40fbf9f363c212a8402cc8350f624fd6760799c013a0cdd301707a5bd083"
+      },
+      "name": "d_mac_x64"
+    },
+    {
+      "type": "file",
+      "id": "file--02f6f600-74bf-4b96-a1c7-3aa546fafd8c",
+      "hashes": {
+        "SHA-256": "0eae66824c65efe6b69937bf8427b7f28df591f2788b8088fbe9a05e8c26e077"
+      },
+      "name": "d_win_arm64.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--813d65aa-dd1f-47c4-a670-642f2642e5d4",
+      "hashes": {
+        "SHA-256": "b81734717f36d3cea59e5690b984333c5a6908a15883a0463d77cb20dadcec0c"
+      },
+      "name": "d_win_x32.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4de9ece8-4f79-440e-afc5-70c4836936ca",
+      "hashes": {
+        "SHA-256": "532edcad0f1637b4cb6fe2638c84c9cee2a52786b89f8d155c910bf60f43da9c"
+      },
+      "name": "d_win_x64.exe"
+    },
+    {
+      "type": "software",
+      "id": "software--34d15483-4be0-4674-bb5b-e24bf0fa6a7c",
+      "name": "DDoSia",
+      "cpe": "cpe:2.3:a:ddosia:ddosia:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--973e02d8-3e0d-4956-a02b-d3fd9969ae03",
+      "name": "Go-Stresser"
+    },
+    {
+      "type": "software",
+      "id": "software--ac2567d6-1dd9-4f2b-8a37-8767318d2e52",
+      "name": "Bobik"
+    },
+    {
+      "type": "software",
+      "id": "software--6ceab46d-4f28-4df6-8593-9a28d455d49a",
+      "name": "Low Orbit Ion Cannon",
+      "cpe": "cpe:2.3:a:low_orbit_ion_cannon:loic:*:*:*:*:*:*:*:*"
+    },
+    {
+      "type": "software",
+      "id": "software--27268f7d-e915-4404-8e43-c9c0b336dbe7",
+      "name": "Mirai"
+    },
+    {
+      "type": "software",
+      "id": "software--1a1adfc5-05b6-434a-8901-e8368f09dd73",
+      "name": "CyberBerkut DDoS Tooling"
+    },
+    {
+      "type": "autonomous-system",
+      "id": "autonomous-system--c9ae8ecd-d604-45e2-9e66-df6086ee8ed6",
+      "number": 56971,
+      "name": "HostVDS"
+    }
+  ]
+}

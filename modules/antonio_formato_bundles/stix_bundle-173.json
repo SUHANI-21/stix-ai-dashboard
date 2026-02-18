@@ -1,0 +1,456 @@
+{
+  "type": "bundle",
+  "id": "bundle--02833993-9b8b-448c-a88e-43a3456d045b",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--98190234-fadb-4859-bfe3-e2018d753ee6",
+      "name": "CVE-2014-4114",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2014-4114"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--20a0c4fd-9cda-4f13-a8d5-1979a76597b5",
+      "name": "\u041d\u0430\u0432\u0447\u0430\u043b\u044c\u043d\u0430-\u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430-\u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0438.zip",
+      "extensions": {
+        "zip": {}
+      },
+      "description": "Malicious ZIP archive exploiting CVE-2023-38831, delivered via spearphishing."
+    },
+    {
+      "type": "file",
+      "id": "file--f8b11b5d-1a49-4c87-af23-8e24c6c6745d",
+      "name": "\u041d\u0430\u0432\u0447\u0430\u043b\u044c\u043d\u0430-\u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430-\u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0438.pdf",
+      "extensions": {
+        "pdf": {}
+      },
+      "description": "Benign-looking PDF used alongside malicious ZIP in spearphishing campaign."
+    },
+    {
+      "type": "file",
+      "id": "file--e1b10e8b-1524-4ffa-83ed-5729dffffc40",
+      "name": "\u041d\u0430\u0432\u0447\u0430\u043b\u044c\u043d\u0430-\u043f\u0440\u043e\u0433\u0440\u0430\u043c\u0430-\u041e\u043f\u0435\u0440\u0430\u0442\u043e\u0440\u0438.pdf\\_.bat",
+      "extensions": {
+        "bat": {}
+      },
+      "description": "Batch file payload used to deploy Rhadamanthys infostealer."
+    },
+    {
+      "type": "file",
+      "id": "file--c58d70e9-66d3-497b-8ddf-e85e638443fd",
+      "name": "script.vbs",
+      "extensions": {
+        "vbs": {}
+      },
+      "description": "VBScript backdoor used for persistence and reentry."
+    },
+    {
+      "type": "file",
+      "id": "file--291e6a10-e965-4083-be7e-9603f2ba9800",
+      "name": "/usr/bin/cloud-online",
+      "description": "GOGETTER Golang-based tunneler executable configured as a systemd service."
+    },
+    {
+      "type": "file",
+      "id": "file--fb727537-be74-49a4-8172-9c816bfc45b8",
+      "name": "/bin/install_upgrade",
+      "description": "Legitimate firmware installer overwritten by Cyclops Blink malware."
+    },
+    {
+      "type": "file",
+      "id": "file--421dd066-4178-48e9-8bc6-d934cec71caa",
+      "name": "/usr/bin/cpd",
+      "description": "Cyclops Blink binary copied to maintain persistence."
+    },
+    {
+      "type": "file",
+      "id": "file--fcee5a89-d3cc-465a-8fd8-d70bc2b8205b",
+      "name": "/etc/runlevel/4/S51armled",
+      "description": "RC startup script used by Cyclops Blink for persistence."
+    },
+    {
+      "type": "file",
+      "id": "file--6ffc728d-83b2-4c63-bc3c-84c1a7487bcd",
+      "name": "/proc/self/exe",
+      "description": "Linux process executable, used by Cyclops Blink for masquerading."
+    },
+    {
+      "type": "file",
+      "id": "file--72984f2e-86ec-417a-a94f-82e435bc0925",
+      "name": "C:\\Users\\Public\\README",
+      "description": "Ransom note file created by Prestige ransomware."
+    },
+    {
+      "type": "file",
+      "id": "file--8f4ea75f-c69e-49a6-8775-5e10aa0278eb",
+      "name": "C:\\Windows\\System32\\reg.exe",
+      "description": "Windows registry editor used to set custom file handler for .enc files."
+    },
+    {
+      "type": "file",
+      "id": "file--6eeb5c1c-3f47-47f9-a84e-01abd0cfc8e4",
+      "name": "C:\\Windows\\Notepad.exe",
+      "description": "Application used to open ransom note for .enc files."
+    },
+    {
+      "type": "file",
+      "id": "file--d8bad328-b126-49b6-b7f7-ef0bf17c06b2",
+      "name": "C:\\Windows\\System32\\wbadmin.exe",
+      "description": "Windows backup management utility used for deleting backup catalog."
+    },
+    {
+      "type": "file",
+      "id": "file--71026983-90c5-48ba-a47a-9a1aaf5803d6",
+      "name": "C:\\Windows\\System32\\vssadmin.exe",
+      "description": "Windows utility used for deleting Volume Shadow Copies."
+    },
+    {
+      "type": "file",
+      "id": "file--abee884c-55fc-4549-91b3-e9636856617d",
+      "name": ".enc",
+      "description": "Custom file extension appended by Prestige ransomware after encryption."
+    },
+    {
+      "type": "file",
+      "id": "file--d1025d0f-060c-49c2-a146-02501ef06ce7",
+      "name": "D:\\Projects\\GetPAI Release\\Credraptor\\Out\\CredRaptor_Win32_Release.pdb",
+      "description": "PDB path string indicating CredRaptor credential harvesting tool."
+    },
+    {
+      "type": "file",
+      "id": "file--2a4d7f9d-1a4e-4d21-aebb-f1f2ed56692c",
+      "name": "/etc/issue",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "file",
+      "id": "file--738936ac-5022-49e7-bdd3-7fbaa104e8f8",
+      "name": "/etc/passwd",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "file",
+      "id": "file--86fd733c-b13a-40fd-9e79-e76d2bb5969f",
+      "name": "/etc/group",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "file",
+      "id": "file--bcad7bda-6b3d-485e-81b4-9ece6551c1be",
+      "name": "/proc/mounts",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "file",
+      "id": "file--6224bb25-e063-4d3c-9833-cf5c15c346bb",
+      "name": "/proc/partitions",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "file",
+      "id": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "name": "/proc/net/arp",
+      "description": "Linux system file gathered by Cyclops Blink for reconnaissance."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e71fa248-68c0-4892-afa3-725a67f296b7",
+      "name": "CVE-2017-0144",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2017-0144"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--6a55aa2b-b343-4692-a7b0-12f1df2fccd9",
+      "name": "CVE-2017-0145",
+      "external_references": [
+        {
+          "source_name": "cve",
+          "external_id": "CVE-2017-0145"
+        }
+      ]
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5a687c8e-557f-4ce3-9ec1-3dde31490cb8",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "vulnerability--6a55aa2b-b343-4692-a7b0-12f1df2fccd9",
+      "description": "Sandworm exploited CVE-2014-4114 in Microsoft Office via spearphishing."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--42c6ca36-6c1c-4d24-ac6b-df7822a1ef8b",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm used BlackEnergy3 malware to attack Ukrainian energy companies in 2015."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--340a449f-c65d-4cf0-a020-1b8f51f8ac81",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm deployed NotPetya malware in 2017 for destructive attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--edc96224-4706-4cdf-bbc5-33eb7fe07b04",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm used Olympic Destroyer malware to disrupt the 2018 Winter Olympics."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--80338b36-f60b-40db-9ac6-4427b11578c1",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm deployed Cyclops Blink malware in 2022, replacing VPNFilter."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fa09ea6f-5248-4d73-9eba-959b5a3922a8",
+      "relationship_type": "replaces",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Cyclops Blink replaced VPNFilter as Sandworm's botnet malware platform."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bdca6f9-be3d-4903-a2da-1a679cde09c1",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm deployed SwiftSlicer wiper malware in Ukraine in 2023."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ed1d018f-aab8-4634-8142-1f256e014d1b",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm deployed Infamous Chisel malware against Ukrainian military Android devices."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e48a7c70-2209-4bb0-a7f7-512256bc1bb8",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Sandworm deployed ZEROLOT wiper malware against Ukrainian energy companies in 2024-2025."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1f43eee-78a7-4634-8b53-f74699b80e84",
+      "relationship_type": "delivers",
+      "source_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Malicious ZIP archive delivered alongside a benign-looking PDF in spearphishing campaign."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5b9cc533-76b8-4819-883a-9557526d777e",
+      "relationship_type": "drops",
+      "source_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Malicious ZIP archive contains a batch file payload used to deploy Rhadamanthys infostealer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e4c4f79-9832-4ba4-a8c6-35ae9ff35edb",
+      "relationship_type": "drops",
+      "source_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "Batch file payload deploys a packed version of Rhadamanthys infostealer."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--550009f3-95e5-466a-84c5-5c2440512bac",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Sandworm deployed VBScript backdoor for persistence and reentry."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--29f3a3ea-3536-4154-aab2-4fe442c901fb",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Sandworm maintained persistence by configuring GOGETTER executable as a systemd service."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--60a0feb0-bdb1-4740-ba86-657f667f50f8",
+      "relationship_type": "modifies",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink overwrites the legitimate firmware installer to maintain persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e3966a43-4648-4e14-b7d5-0c86304f4b5f",
+      "relationship_type": "copies",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink copies its binary to maintain persistence."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--618df465-e6ff-4083-827b-e04d5b38019c",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink uses RC startup script for persistence after reboot."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f6189893-61ed-43e8-b4e0-4e5a216dfe99",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink uses Linux process executable for masquerading."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f0f85407-175b-4378-b38f-8585a3c45d6b",
+      "relationship_type": "creates",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware creates a ransom note file after encrypting files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--95c05089-e72d-4d71-8edb-374841bad805",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware uses reg.exe to set custom file handler for .enc files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2dc02e1a-9052-4de6-88d3-069364daa2c0",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware uses Notepad.exe to open ransom note for .enc files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d62bb4e-22b0-4257-9f91-7b714495c3b8",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware uses wbadmin.exe to delete backup catalog."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1bf7e58c-843d-4355-b7c1-fc758f843e01",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware uses vssadmin.exe to delete Volume Shadow Copies."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ccd83eaf-5e6b-4fc7-bdfc-24ea71216869",
+      "relationship_type": "appends-to",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Prestige ransomware appends .enc extension to files after encryption."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2a39e5d8-6513-43f2-b13f-cdb1f63a6d42",
+      "relationship_type": "indicates",
+      "source_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "target_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "description": "PDB path string indicates the presence of CredRaptor credential harvesting tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6e2e070f-6746-48dc-bc34-f5375330dd76",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "CredRaptor utility harvests credentials from web browsers."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1356454c-d641-46f2-a394-f4e5cbba7b53",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /etc/issue for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7078ac71-d12e-4fe0-abf7-05d61bba7259",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /etc/passwd for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--544675a6-b391-494b-8f6a-c47bdc118902",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /etc/group for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--635ec1e9-8c51-4c84-a60a-b1fa5c0f6f8c",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /proc/mounts for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f842648b-a3b1-4f18-be4e-4d26561da3c2",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /proc/partitions for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f25bbd47-bcb9-4670-bb44-16d1cfe279ae",
+      "relationship_type": "collects",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "file--f0d0a451-2fc6-4cbc-ac49-6aad5c83ca56",
+      "description": "Cyclops Blink gathers /proc/net/arp for system reconnaissance."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1f7b8f6c-40b4-4315-95f3-dc0f62bdc19a",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "vulnerability--6a55aa2b-b343-4692-a7b0-12f1df2fccd9",
+      "description": "NotPetya integrated EternalBlue exploit targeting CVE-2017-0144."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8e54276d-4960-43e3-98bb-94da94fb695b",
+      "relationship_type": "uses",
+      "source_ref": "malware--ddd0292c-fcf7-4f50-9711-7277f12ba606",
+      "target_ref": "vulnerability--6a55aa2b-b343-4692-a7b0-12f1df2fccd9",
+      "description": "NotPetya integrated EternalRomance exploit targeting CVE-2017-0145."
+    }
+  ]
+}

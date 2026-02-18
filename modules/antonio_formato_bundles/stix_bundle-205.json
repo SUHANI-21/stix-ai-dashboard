@@ -1,0 +1,18 @@
+{
+  "type": "bundle",
+  "id": "bundle--bf9e5d66-7812-4b46-b331-99d164f5f928",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "campaign",
+      "id": "campaign--b0171bea-1da6-4db4-b8cb-a2413541a761",
+      "name": "Erudite Mogwai phishing campaign in Russia",
+      "description": "Phishing campaign attributed to Erudite Mogwai targeting Russia.",
+      "first_seen": "2025-11-05T00:00:00Z",
+      "aliases": [
+        "Erudite Mogwai"
+      ],
+      "objective": "Phishing"
+    }
+  ]
+}

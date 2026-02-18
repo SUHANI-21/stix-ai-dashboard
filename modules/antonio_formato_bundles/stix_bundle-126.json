@@ -1,0 +1,305 @@
+{
+  "type": "bundle",
+  "id": "bundle--afaf1196-9cfc-4d5b-92cf-141987ff644e",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--c6dc22f0-66a4-4cfd-a2b5-c7b51a3532d4",
+      "name": "4BID",
+      "description": "4BID is a pro-Ukrainian hacktivist group active since early 2025. The group publicly claims attacks against Russian organizations in various sectors including manufacturing, healthcare, and government. 4BID operates mainly via Telegram and has demonstrated collaboration with other hacktivist groups such as BO Team and Red Likho.",
+      "aliases": [
+        "4BID"
+      ],
+      "goals": [
+        "Disruption of Russian organizations",
+        "Data encryption and destruction",
+        "Public disclosure of compromised information"
+      ],
+      "primary_motivation": "Ideological",
+      "secondary_motivation": "Political"
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--83a2cb67-383b-4e4d-95d9-35704d9e0098",
+      "name": "BO Team",
+      "description": "BO Team is a hacktivist group known for large-scale operations against Russian targets. They are associated with the ZeronetKit backdoor and have used ransomware such as Babuk. BO Team has demonstrated collaboration with other hacktivist clusters.",
+      "aliases": [
+        "BO Team"
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--5cd406df-7087-4ed7-86f9-ce539239edf1",
+      "name": "Red Likho",
+      "description": "Red Likho is a hacktivist group known for large-scale operations against Russian targets and is associated with the GoRed backdoor. Red Likho has collaborated with other hacktivist groups such as 4BID and BO Team.",
+      "aliases": [
+        "Red Likho"
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--c9f26da7-64f9-43de-944e-6313facf2297",
+      "name": "T1003.001 OS Credential Dumping: LSASS Memory",
+      "description": "Dumping LSASS process memory using rundll32.exe and comsvcs.dll to extract credentials."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--56a158de-a163-4718-85a2-5212d0c46641",
+      "name": "T1003.003 OS Credential Dumping: NTDS",
+      "description": "Dumping NTDS.dit database using ntdsutil.exe for Active Directory credential extraction."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--ec4a2cd3-8d95-42bb-8f33-1c9175e3a2b6",
+      "name": "T1003.002 OS Credential Dumping: Security Account Manager",
+      "description": "Exporting the Security registry hive to extract credentials."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--cbb515e9-05f5-4a37-82f9-525e48826cf3",
+      "name": "T1112 Modify Registry",
+      "description": "Modifying registry keys to disable RDP NLA authentication and facilitate unauthorized access."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--bae356c4-5c32-4b6e-9059-5147c628d726",
+      "name": "T1562 Impair Defenses",
+      "description": "Disabling Windows Defender real-time protection and related modules using PowerShell commands."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--2aa5d581-f0a2-4313-af63-88412a1442b2",
+      "name": "T1546.008 Event Triggered Execution: Accessibility Features",
+      "description": "Hijacking utilman.exe via IFEO registry keys to launch cmd.exe with SYSTEM privileges from the login screen."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--de6aa278-6c9c-4d7d-ad14-f178aa9bc3ff",
+      "name": "T1053.005 Scheduled Task/Job: Scheduled Task",
+      "description": "Using scheduled tasks and GPO to distribute and execute ransomware across domain hosts."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--956f2394-cbcd-42bd-ae33-83481198cec0",
+      "name": "T1070.001 Indicator Removal: Clear Windows Event Logs",
+      "description": "Clearing Windows event logs using wevtutil.exe to remove evidence of malicious activity."
+    },
+    {
+      "type": "file",
+      "id": "file--4f201bed-f901-433c-80fa-b3caaf2d6cb0",
+      "name": "Edgeupdate.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--73de0b9c-5b92-485a-95f8-56c8616d8b54",
+      "name": "UpdateCheck.log"
+    },
+    {
+      "type": "file",
+      "id": "file--cfc71b78-9811-4a41-b931-c555ff83d473",
+      "name": "NPLogon.dll",
+      "parent_directory": "C:\\Windows\\System32"
+    },
+    {
+      "type": "file",
+      "id": "file--32f99db5-3d24-43c4-badf-3576fc224042",
+      "name": "nplsvc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--0b383f5a-1e3f-4184-8633-4a48e1d758f4",
+      "name": "update.dat"
+    },
+    {
+      "type": "file",
+      "id": "file--d2f9d3d7-625e-41dd-a310-d65734932ecd",
+      "name": "e_win.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d1a88ce7-0b65-4e1f-b9bc-a7c3d96ae730",
+      "name": "blackout.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--bbf5564f-3439-469f-a0e3-f199ea993659",
+      "name": "1.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--d58bf827-e11a-4c62-81b0-b6902a4601de",
+      "name": "MicrosoftUpdate.ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--4a17985b-cad4-4925-882f-3927bd336103",
+      "name": "fontdrv.exe",
+      "parent_directory": "c:\\windows\\system32"
+    },
+    {
+      "type": "file",
+      "id": "file--abe54735-a261-4620-9369-aa71feea236f",
+      "name": "diagsrv.exe",
+      "parent_directory": "c:\\windows\\system32"
+    },
+    {
+      "type": "file",
+      "id": "file--5f34ee9b-6e8c-4046-af82-428b02a4cba5",
+      "name": "adrecon.ps1",
+      "parent_directory": "c:\\ps1"
+    },
+    {
+      "type": "file",
+      "id": "file--13b0f26b-d782-451e-9bc2-ffd6be68b821",
+      "name": "veeam.exe",
+      "parent_directory": "c:\\veeam"
+    },
+    {
+      "type": "file",
+      "id": "file--51d5f91a-27c8-46d2-beab-62f598116dc6",
+      "name": "PsExec64.exe",
+      "parent_directory": "C:\\Windows\\Temp"
+    },
+    {
+      "type": "file",
+      "id": "file--b8455439-9a17-4adf-9b75-f71d2bcc1d67",
+      "name": "hosts.txt",
+      "parent_directory": "C:\\Windows\\Temp"
+    },
+    {
+      "type": "file",
+      "id": "file--4232c838-b02a-4394-b84f-da29e0bf6a4d",
+      "name": "AnyDesk.exe",
+      "parent_directory": "C:\\ProgramData\\AnyDesk"
+    },
+    {
+      "type": "file",
+      "id": "file--2198ceac-41c6-4827-bddf-c94f3e765545",
+      "name": "e_win.zip",
+      "parent_directory": "C:\\ProgramData\\e_win"
+    },
+    {
+      "type": "file",
+      "id": "file--a4d88202-d6db-4e25-b57d-fb0732beb5e6",
+      "name": "J0FARaY.db",
+      "parent_directory": "\\Windows\\Temp"
+    },
+    {
+      "type": "file",
+      "id": "file--ede772d2-cfe3-4b14-bf6d-dce102ddf54a",
+      "name": "brcioyzn.tmp"
+    },
+    {
+      "type": "file",
+      "id": "file--3e77007a-9e0f-4245-9ad0-f07d7a3c0e69",
+      "name": "procexp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--271f3a5f-9edc-423f-8f44-30b17851facc",
+      "name": "systcp.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7e787e7b-3119-4a7e-9f7f-5e10ca2035cc",
+      "name": "msdtsr.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--f579f610-fa0c-423a-899e-e224b556edc9",
+      "name": "mstdpool.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--9e036fc3-40ae-4dba-982a-ef4103d2f15e",
+      "name": "msbtsc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--240fe7df-077e-49b8-910a-245a40d30c2a",
+      "name": "msdtsc.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--1b2cd27a-2587-4831-9be3-32d6e73ea178",
+      "name": "fontdrv.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2115883a-3fe7-4186-ae98-79e7de47fb7e",
+      "name": "diagsrv.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--2f930ffd-adca-4137-9e17-b1708ef3f97b",
+      "name": "adrecon.ps1"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4a090687-bd94-4a7e-a9af-c6a96b2082d8",
+      "value": "op2a.beemooshka-v1.art"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c8c0ccf1-c19e-4411-820e-d908c5cafcd4",
+      "value": "urbantvpn.online"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--25985cee-1bd7-4fd2-9e4e-27fb9b0b493b",
+      "value": "wholewell.online"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--0da24f9b-d70e-4373-9d41-f012feaadf53",
+      "value": "82.202.173.167"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--a47ecbbb-70cb-48f3-9419-d7954ce2e3fa",
+      "value": "144.172.112.179"
+    },
+    {
+      "type": "file",
+      "id": "file--58d8a51d-acc2-476c-83ab-88fd2024d651",
+      "name": "comsvcs.dll",
+      "parent_directory": "C:\\windows\\System32"
+    },
+    {
+      "type": "file",
+      "id": "file--0218e916-051c-4e81-b721-04c7f2130932",
+      "name": "ntdsutil.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--4a76277e-f90a-4a5c-b0f8-c27b472d59b2",
+      "name": "ntds.dit"
+    },
+    {
+      "type": "file",
+      "id": "file--e084ff65-b025-4d3f-97e5-338d8f624d0d",
+      "name": "wevtutil.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--42b20234-4dab-4d58-8037-4b637cad2288",
+      "name": "reg.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--aa9a64d6-dd93-40bf-912a-c31896d893e4",
+      "name": "rundll32.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--7e04b450-caab-40a1-b1bd-db8884a91402",
+      "name": "utilman.exe"
+    },
+    {
+      "type": "file",
+      "id": "file--ee6fa3e9-a830-4504-b4aa-ab90ddf8bb80",
+      "name": "cmd.exe"
+    }
+  ]
+}

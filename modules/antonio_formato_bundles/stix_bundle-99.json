@@ -1,0 +1,609 @@
+{
+  "type": "bundle",
+  "id": "bundle--3e0a9bbf-0044-4c47-a430-25afe3ede714",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--044d9912-c369-450b-949a-bf622885cead",
+      "name": "Stack-based buffer overflow in Unisoc UIS7862A modem RLC protocol (CVE-2024-39432)",
+      "description": "A stack-based buffer overflow vulnerability exists in the 3G RLC protocol implementation of the Unisoc UIS7862A modem, allowing remote code execution at the early stages of connection before protection mechanisms are activated.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2024-39432",
+          "url": "https://nvd.nist.gov/vuln/detail/CVE-2024-39432"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c",
+      "name": "Remote access vulnerability in Unisoc UIS7862A modem (CVE-2024-39431)",
+      "description": "A vulnerability in the Unisoc UIS7862A modem enables remote access and code execution via manipulation of the RLC protocol stack, bypassing 3G communication protection mechanisms.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2024-39431"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a59f935b-e835-4089-b158-1e4b2068c7bd",
+      "name": "ROP Chain Exploitation for Remote Code Execution",
+      "description": "Attackers use Return Oriented Programming (ROP) chains to exploit a stack-based buffer overflow in the modem firmware, enabling remote code execution and persistence by manipulating AT command handlers and memory protection unit (MPU) tables."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d00e0db2-9722-47b2-baf9-1852bace6370",
+      "name": "Lateral Movement via Direct Memory Access (DMA)",
+      "description": "Attackers leverage a hidden DMA peripheral on the modem to perform lateral movement within the System-on-Chip (SoC), enabling modification and code execution on the Application Processor (AP) from the Communication Processor (CP)."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--4d6b665c-e10a-4847-8454-799b8d436719",
+      "name": "Kernel Symbol Table Manipulation and System Call Hooking",
+      "description": "Attackers locate and manipulate the Linux kernel symbol table (kallsyms) and system call table (sys_call_table) to inject shellcode and hook system calls, achieving persistence and arbitrary code execution in the AP kernel."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--267dfed0-e570-42cf-b2e7-64ee2e1060f8",
+      "name": "SELinux Policy Bypass",
+      "description": "Attackers disable SELinux enforcement by modifying the selinux_enforcing global variable in kernel memory, allowing unauthorized user-mode process launches and further exploitation."
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "name": "NAS Protocol Handler Patching",
+      "description": "Attackers patch the NAS protocol handler on the modem to enable two-way communication and facilitate the delivery of exploit payloads using MM information and MM status commands."
+    },
+    {
+      "type": "software",
+      "id": "software--2e867dd0-eb94-4845-b724-35edbe750cf8",
+      "name": "Unisoc UIS7862A",
+      "description": "A System-on-Chip (SoC) featuring an integrated 2G/3G/4G modem used in various mobile devices and vehicle head units. Vulnerabilities in its modem component enable remote code execution and full compromise of the device.",
+      "cpe": "cpe:2.3:o:unisoc:uis7862a"
+    },
+    {
+      "type": "identity",
+      "id": "identity--73d76344-cd88-4834-aba7-13a3f94aae95",
+      "name": "Kaspersky ICS CERT",
+      "description": "Kaspersky Industrial Control Systems Cyber Emergency Response Team (ICS CERT) is a security research group specializing in industrial cybersecurity.",
+      "identity_class": "organization",
+      "sectors": [
+        "technology",
+        "industrial"
+      ]
+    },
+    {
+      "type": "identity",
+      "id": "identity--bfb378bf-b3d9-4884-92f8-01089580826d",
+      "name": "Alexander Kozlov",
+      "description": "Principal Security Researcher, Kaspersky ICS CERT",
+      "identity_class": "individual"
+    },
+    {
+      "type": "identity",
+      "id": "identity--8b0cae9e-4991-40da-a846-9f941ed50183",
+      "name": "Sergey Anufrienko",
+      "description": "Vulnerability Research Group Manager, Kaspersky ICS CERT",
+      "identity_class": "individual"
+    },
+    {
+      "type": "software",
+      "id": "software--686e4327-d914-487a-989f-9ba2281cb9e2",
+      "name": "Unisoc UIS7862A modem firmware",
+      "vendor": "Unisoc",
+      "description": "Firmware for the integrated 2G/3G/4G modem found in Unisoc UIS7862A SoC, used in head units of modern Chinese vehicles and mobile devices."
+    },
+    {
+      "type": "software",
+      "id": "software--1fec5eba-92be-494f-854a-38838cc72c60",
+      "name": "Android",
+      "description": "General-purpose operating system running on the Application Processor (AP) within the Unisoc UIS7862A SoC."
+    },
+    {
+      "type": "software",
+      "id": "software--31051ee1-4370-4e6a-a592-9c3522e29eef",
+      "name": "Linux kernel",
+      "description": "Operating system kernel used by the AP in the Unisoc UIS7862A SoC, targeted for code injection and exploitation."
+    },
+    {
+      "type": "software",
+      "id": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "name": "DOOM",
+      "description": "Iconic 3D shooter game used as a demonstration payload for remote code execution on the vehicle's head unit."
+    },
+    {
+      "type": "file",
+      "id": "file--f944cd00-8d5d-4030-98e1-338978909a20",
+      "name": "DOOM APK",
+      "description": "Android application package for the DOOM game, installed and launched on the AP as part of the exploit chain."
+    },
+    {
+      "type": "file",
+      "id": "file--d8cd3f8c-0022-41a6-a461-8de006d3a982",
+      "name": "modem firmware image",
+      "description": "Complete image of the modem's operating system, extracted from the embedded multimedia memory card for analysis."
+    },
+    {
+      "type": "file",
+      "id": "file--c7268e79-9401-4fc7-921f-e43d06aba846",
+      "name": "embedded multimedia memory card dump",
+      "description": "Dump of the EMMC 128G/JEDEC memory card containing the modem firmware and operating system image."
+    },
+    {
+      "type": "file",
+      "id": "file--2f0a22ee-2d26-46ad-9820-af0d2b2f9a66",
+      "name": "Linux kernel shellcode",
+      "description": "Position-independent ARM64 machine code injected into the kernel code section for privilege escalation and persistence."
+    },
+    {
+      "type": "file",
+      "id": "file--576e879b-f7bd-4720-a08f-c4f0df17ba33",
+      "name": "NAS protocol handler patch",
+      "description": "Patch to the NAS protocol handler in the modem firmware, enabling arbitrary code execution."
+    },
+    {
+      "type": "file",
+      "id": "file--0f88e593-e39a-4aed-93a0-a07d41d52368",
+      "name": "system call table (sys_call_table)",
+      "description": "Array of pointers to system call handler functions in the Linux kernel, modified to hook getpriority and execute injected shellcode."
+    },
+    {
+      "type": "file",
+      "id": "file--58a5ba65-d8ed-4306-b041-5fb1457b3a65",
+      "name": "kallsyms table",
+      "description": "Kernel symbol table containing addresses of exported kernel functions and variables, used to locate attack targets."
+    },
+    {
+      "type": "file",
+      "id": "file--88003b0f-1d23-492e-abab-c5841d07e14d",
+      "name": "MPU table",
+      "description": "Memory Protection Unit table in the modem, reconfigured to allow write access to code sections and shared AP/CP memory."
+    },
+    {
+      "type": "file",
+      "id": "file--5fedb848-b375-4982-97fd-5c8cf2acfda0",
+      "name": "DMA controller code fragments",
+      "description": "Unused code fragments in the modem OS enabling access to the DMA controller for lateral movement within the SoC."
+    },
+    {
+      "type": "file",
+      "id": "file--1050e757-bba4-438e-8a52-28fd03cfaf4d",
+      "name": "SDU packet",
+      "description": "Service Data Unit packet crafted to exploit stack-based buffer overflow in the 3G RLC protocol implementation."
+    },
+    {
+      "type": "file",
+      "id": "file--5b02cf16-dc77-4bec-9ae1-9113c196a13c",
+      "name": "MM Information NAS protocol command",
+      "description": "NAS protocol command used to send large amounts of data and receive responses for two-way communication with the modem."
+    },
+    {
+      "type": "file",
+      "id": "file--043e13da-4ee3-4437-a39e-aec1681febac",
+      "name": "MM Status NAS protocol command",
+      "description": "NAS protocol command used to receive single-byte responses from the modem, facilitating exploit communication."
+    },
+    {
+      "type": "directory",
+      "id": "directory--a6b594d6-0522-4ad0-b49e-9f9f7f3f9080",
+      "path": "/system/bin/",
+      "description": "Directory containing system binaries such as am (Activity Manager) used to launch the DOOM APK."
+    },
+    {
+      "type": "process",
+      "id": "process--de7bca72-c725-4da9-bb5c-cfc0ab0cfe32",
+      "command_line": "am start -n com.eltechs.originaldoom/.doomDemo.DoomDemo",
+      "description": "Process launched by injected shellcode to start the DOOM application on the AP."
+    },
+    {
+      "type": "process",
+      "id": "process--27a03922-4606-413c-80d4-5bd8004d2f7a",
+      "command_line": "getpriority",
+      "description": "System call hooked in the Linux kernel to trigger execution of injected shellcode."
+    },
+    {
+      "type": "memory",
+      "id": "memory--fc15e1d2-396d-4e59-8077-0edcf29fe5ae",
+      "memory_region": "0x809cb000",
+      "description": "Free region in the Linux kernel code section used for shellcode injection."
+    },
+    {
+      "type": "memory",
+      "id": "memory--142fdfce-dc63-4ccb-aeb2-cf5b468db6ae",
+      "memory_region": "0x80080800-0x809d0000",
+      "description": "Region occupied by the Linux kernel code section in AP memory."
+    },
+    {
+      "type": "memory",
+      "id": "memory--59db0cc4-b340-460e-8af9-33c150309fff",
+      "memory_region": "0x809D2468",
+      "description": "Address of the getpriority system call handler in the sys_call_table."
+    },
+    {
+      "type": "memory",
+      "id": "memory--5bc6cbb5-a60b-48d2-ad0f-326288447e9c",
+      "memory_region": "0xffffff80080bfe00",
+      "description": "Address of the call_usermodehelper function in the Linux kernel."
+    },
+    {
+      "type": "memory",
+      "id": "memory--5b00d6db-f49a-4c47-8404-67b4615bd5b6",
+      "memory_region": "0x80080000",
+      "description": "Physical base address of the Linux kernel in AP memory."
+    },
+    {
+      "type": "memory",
+      "id": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a",
+      "memory_region": "0x80000000",
+      "description": "Start address for AP memory mapped into CP address space."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7dc7f9ac-fd97-401f-bb37-1d82a6b01538",
+      "relationship_type": "has",
+      "source_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--53dc3e77-549f-444f-aa5a-1d50e4758343",
+      "relationship_type": "has",
+      "source_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1c0a2635-705a-4ec3-9f61-0d762f1b00dd",
+      "relationship_type": "has",
+      "source_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a1dbd9e1-b3e0-4d77-a7c7-31f2eb499c02",
+      "relationship_type": "has",
+      "source_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--766d80e8-f07c-4894-a0b0-87e4e9fc947d",
+      "relationship_type": "has",
+      "source_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f63f721c-6231-4466-b292-b79bfe3992fb",
+      "relationship_type": "has",
+      "source_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1cc22c40-7412-4850-89c5-658537e35cc1",
+      "relationship_type": "contains",
+      "source_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d272cb2e-df3b-49ab-82fc-ba1f4348a877",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd3ecfc1-1c38-4efb-8e3b-db1f75a1f0d2",
+      "relationship_type": "exploits",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--26d9c177-e979-4c17-8f7a-37afd0fd5998",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cdfb7b98-6b20-4862-a15c-ba128f38db95",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a6c58ae4-608c-4a57-ba4d-8466de028cd9",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--81794736-9eb1-45eb-bae9-23fc5e18833b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e0833cf5-49c9-4320-ab73-ba957307fc8f",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7d3048e6-9cd1-43d2-bf8b-c0836018fdf2",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c5c6aba-a703-4ce2-8fbf-dadfec52b34b",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2c72e00e-45fa-4811-a048-a714c2f64f0c",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a3288957-2dc3-4a3c-8e48-f25f198d57ef",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2fcc5c05-7ed9-4498-b9fb-f49d2ea262f5",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8f2aad3-b45d-4a66-a6f8-bf3c6e80de26",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f26d854-2c4d-4f0a-b982-f33ebe00d9a7",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--063b919f-ac5e-4f7a-93ad-7129fba983da",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--762b72a1-332d-4e0c-85d5-a5bc59a4bea4",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c92f78bf-faf2-4953-8ff0-8aabb978cd14",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0c15ab5b-79b4-4afa-939c-a828d046b996",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d4b055de-d9be-40b2-9662-2d4215ef85cb",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a88b9f4b-70bd-4e84-af9b-d6c434c28412",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cd32c668-9d6b-499c-955c-270b03f47338",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "memory--b07ee0ad-1b81-414f-a6fb-7f5dc689202a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f4943352-7b66-45a2-91dd-1df867b32d25",
+      "relationship_type": "delivers",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--510f3f3a-fe0f-48e5-80ea-cf92b1daa5c7",
+      "relationship_type": "drops",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c996a4d5-9079-4774-8dfd-cf28f5a2b2c7",
+      "relationship_type": "drops",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47155957-15fd-44ff-850b-cb52f4f5a104",
+      "relationship_type": "uses",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "process--27a03922-4606-413c-80d4-5bd8004d2f7a"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bfb98b8f-80be-40d5-9346-95d0a5c69312",
+      "relationship_type": "uses",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "directory--a6b594d6-0522-4ad0-b49e-9f9f7f3f9080"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ad59673c-cd63-4108-b341-36a32fb3c7de",
+      "relationship_type": "uses",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "file--043e13da-4ee3-4437-a39e-aec1681febac"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a69cfae3-f3e3-46c2-8e4b-289fba0f4856",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--cc54703a-2a90-44ef-971f-5e0f19ef239b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7277b49-a6cf-448a-aac5-a966c8ebac4b",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--178fae7f-0c4b-4fcd-bada-c820484237c3",
+      "relationship_type": "targets",
+      "source_ref": "vulnerability--a028d31d-2701-48ec-8769-4fea92865b2c",
+      "target_ref": "software--8f2a0459-4e12-466a-a067-7f31e80675d9"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3d77cfc3-fff3-4ed1-a4ce-d5da114ceb29",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--331c6cd4-aad5-48d6-91d3-51349ad39df7",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ebe37fb4-d12b-48cb-ac13-5c4bfe9a03ed",
+      "relationship_type": "authored-by",
+      "source_ref": "malware--2763d83d-ec4c-43a2-a9c9-436ff67879ff",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--516e2654-5279-4301-a134-94eaa18cac88",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3b33028b-1572-4fc0-8ea5-d491fc23509a",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db59180d-d418-4276-81f9-6f734837022f",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--91fc8279-fbf8-4e30-9b1c-7710dfc23731",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9f16f6ee-d823-4eee-8498-9d42fa335517",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4ad129bc-b001-45a7-b08a-c5d07501c3b8",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--65ae17c6-8d10-4d76-953e-b27f76977f07",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--1b4054a5-5340-47a8-814b-dc6420c6e06e",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52a543ab-da67-45d5-983b-1d3b549441ca",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4a5b6381-a6e7-4e34-b6cf-0819f1f0e4a9",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--486878f5-52fe-4884-ac9e-b5dd1bb7cf72",
+      "relationship_type": "authored-by",
+      "source_ref": "attack-pattern--10fad069-04a3-47a6-9115-d0ffb9e7cc7d",
+      "target_ref": "identity--8b0cae9e-4991-40da-a846-9f941ed50183"
+    }
+  ]
+}

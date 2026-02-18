@@ -1,0 +1,142 @@
+{
+  "type": "bundle",
+  "id": "bundle--92231bad-b4de-4167-9488-e547fbf65b32",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "created": "2026-01-14T06:19:43.036423Z",
+      "modified": "2026-01-14T06:19:43.036423Z",
+      "name": "Palo Alto Networks Unit 42",
+      "description": "Palo Alto Networks Unit 42 is the publisher of this threat intelligence report. STIXed by TI Mindmap HUB.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "identity",
+      "spec_version": "2.1",
+      "id": "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+      "created": "2026-01-14T06:19:43.036423Z",
+      "modified": "2026-01-14T06:19:43.036423Z",
+      "name": "TI Mindmap HUB",
+      "description": "TI Mindmap HUB is an AI-powered threat intelligence platform that generates STIX bundles from OSINT sources.",
+      "identity_class": "organization"
+    },
+    {
+      "type": "marking-definition",
+      "spec_version": "2.1",
+      "id": "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487",
+      "created": "2026-01-14T06:19:43.036423Z",
+      "definition_type": "tlp",
+      "name": "TLP:CLEAR",
+      "definition": {
+        "tlp": "clear"
+      }
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--790ce11e-4745-fda5-e44a-5c107045f832",
+      "created": "2026-01-14T06:19:52.352111Z",
+      "modified": "2026-01-14T06:19:52.352111Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Exploitation of Unauthenticated Memory Disclosure via zlib-compressed Messages",
+      "description": "Attackers exploit CVE-2025-14847, a critical vulnerability in MongoDB Server's handling of zlib-compressed network messages. This flaw allows unauthenticated users to trigger memory disclosure simply by sending specially crafted compressed messages to the database's default port. The vulnerability occurs before any authentication is required, meaning that anyone with network access can exploit it without valid credentials. The exposed memory can contain highly sensitive information, such as cleartext credentials, API keys, session tokens, and personally identifiable information (PII). The exploitation is trivial due to the availability of a public proof-of-concept (PoC) and has been confirmed as actively used in the wild, putting over 146,000 internet-exposed MongoDB instances at risk.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "spec_version": "2.1",
+      "id": "attack-pattern--583bf174-7836-8d75-fad9-b51f43d5d35a",
+      "created": "2026-01-14T06:19:52.352229Z",
+      "modified": "2026-01-14T06:19:52.352229Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Sensitive Data Collection from Heap Memory",
+      "description": "Once the attacker successfully exploits the MongoDB vulnerability, they are able to collect sensitive data directly from the server's heap memory. The leaked memory fragments may contain cleartext credentials, API keys, session tokens, and PII, which attackers can harvest without any authentication. This technique leverages the unintended exposure of in-memory data, allowing attackers to bypass typical access controls and directly gather information that would otherwise require privilege escalation or credential theft. The attackers can automate the extraction process to maximize the amount of sensitive information collected from vulnerable servers.",
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "collection"
+        }
+      ],
+      "external_references": [
+        {
+          "source_name": "mitre-attack",
+          "url": "https://attack.mitre.org/techniques/T1005/",
+          "external_id": "T1005"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--7a990d40-5d2c-6fb9-3aa8-fbb0ec1a3b23",
+      "created": "2026-01-14T06:20:00.230329Z",
+      "modified": "2026-01-14T06:20:00.230329Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "zlib",
+      "description": "zlib, a legitimate compression library, is abused in this attack due to a flaw in MongoDB Server's handling of zlib-compressed network messages, allowing attackers to trigger memory disclosure and leak sensitive information prior to authentication.",
+      "tool_types": [
+        "exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "tool",
+      "spec_version": "2.1",
+      "id": "tool--0fb0f889-ce77-87be-4c60-8db3fbd6cb27",
+      "created": "2026-01-14T06:20:00.230417Z",
+      "modified": "2026-01-14T06:20:00.230417Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "MongoDB Server",
+      "description": "MongoDB Server, a legitimate database platform, is exploited via its default network port and vulnerable zlib message handling, allowing attackers to leak sensitive heap memory without authentication.",
+      "tool_types": [
+        "exploitation",
+        "information-gathering"
+      ],
+      "kill_chain_phases": [
+        {
+          "kill_chain_name": "mitre-attack",
+          "phase_name": "initial-access"
+        }
+      ]
+    },
+    {
+      "type": "report",
+      "spec_version": "2.1",
+      "id": "report--b79c3b81-3248-413d-ff1c-cd6ab3d2053f",
+      "created": "2026-01-14T06:20:00.230679Z",
+      "modified": "2026-01-14T06:20:00.230679Z",
+      "created_by_ref": "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+      "name": "Threat Brief: MongoDB Vulnerability (CVE-2025-14847)",
+      "description": "This report contains technical analysis and indicators from: https://unit42.paloaltonetworks.com/mongobleed-cve-2025-14847/",
+      "report_types": [
+        "threat-report"
+      ],
+      "published": "2026-01-14T06:20:00.230679Z",
+      "object_refs": [
+        "identity--2eea17fb-acdd-306b-fa6b-85864c3dbc41",
+        "identity--fbd192cb-0ab2-33e3-92cc-c2456bf8d439",
+        "attack-pattern--790ce11e-4745-fda5-e44a-5c107045f832",
+        "attack-pattern--583bf174-7836-8d75-fad9-b51f43d5d35a",
+        "tool--7a990d40-5d2c-6fb9-3aa8-fbb0ec1a3b23",
+        "tool--0fb0f889-ce77-87be-4c60-8db3fbd6cb27"
+      ],
+      "object_marking_refs": [
+        "marking-definition--94868c89-83c2-464b-929b-a1a8aa3c8487"
+      ]
+    }
+  ]
+}

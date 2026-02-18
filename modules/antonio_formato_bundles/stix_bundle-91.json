@@ -1,0 +1,292 @@
+{
+  "type": "bundle",
+  "id": "bundle--bb40c12a-e5c5-47d3-ab32-b0361ac804f5",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--7bd79330-8304-461e-8ec5-1d813672cd1e",
+      "name": "Qilin",
+      "description": "Qilin is one of the more aggressive cartels in the ransomware space in 2025, with a very active dark web presence and is considered one of the more lucrative criminal cartels.",
+      "aliases": [
+        "Quilin"
+      ],
+      "labels": [
+        "ransomware",
+        "criminal cartel"
+      ],
+      "external_references": [
+        {
+          "source_name": "Talos Blog",
+          "url": "https://blog.talosintelligence.com/uncovering-qilin-attack-methods-exposed-through-multiple-cases/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--38a9f64e-bce6-4e0b-b4e1-74a3c63b0495",
+      "name": "AI-Orchestrated Cyber Espionage",
+      "description": "State-sponsored adversary used Claude (an AI platform) to launch a full kill chain campaign against victims, as reported by Anthropic.",
+      "labels": [
+        "cyber espionage",
+        "AI-enabled attack",
+        "state-sponsored"
+      ],
+      "external_references": [
+        {
+          "source_name": "Anthropic",
+          "url": "https://www.anthropic.com/news/disrupting-AI-espionage"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--7d2158c7-48b4-4153-8aed-93bf0bf78a49",
+      "name": "Win.Worm.Coinminer",
+      "description": "A Windows worm and coinminer malware detected by Talos telemetry.",
+      "malware_types": [
+        "worm",
+        "coinminer"
+      ],
+      "labels": [
+        "malware"
+      ],
+      "hashes": {
+        "SHA256": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+        "MD5": "2915b3f8b703eb744fc54c81f4a9c67f"
+      },
+      "external_references": [
+        {
+          "source_name": "Talos File Reputation",
+          "url": "https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--7ddfa377-9ed0-454b-9e1e-325fdd631ed2",
+      "name": "Win.Dropper.Miner",
+      "description": "A Windows dropper malware associated with cryptocurrency mining.",
+      "malware_types": [
+        "dropper",
+        "miner"
+      ],
+      "labels": [
+        "malware"
+      ],
+      "hashes": {
+        "SHA256": "a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91",
+        "MD5": "7bdbd180c081fa63ca94f9c22c457376"
+      },
+      "external_references": [
+        {
+          "source_name": "Talos File Reputation",
+          "url": "https://talosintelligence.com/talos_file_reputation?s=a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--6b49e3d7-1e43-4705-94b3-4948912c9332",
+      "name": "W32.Injector:Gen.21ie.1201",
+      "description": "A generic Windows injector malware detected by Talos telemetry.",
+      "malware_types": [
+        "injector"
+      ],
+      "labels": [
+        "malware"
+      ],
+      "hashes": {
+        "SHA256": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+        "MD5": "aac3165ece2959f39ff98334618d10d9"
+      },
+      "external_references": [
+        {
+          "source_name": "Talos File Reputation",
+          "url": "https://talosintelligence.com/talos_file_reputation?s=96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--60f1b0f6-bc0c-43b2-a4e6-aba060dfa179",
+      "name": "Auto.90B145.282358.in02",
+      "description": "Malware sample detected by Talos telemetry, associated with DLL files.",
+      "malware_types": [
+        "unknown"
+      ],
+      "labels": [
+        "malware"
+      ],
+      "hashes": {
+        "SHA256": "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+        "MD5": "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+      },
+      "external_references": [
+        {
+          "source_name": "Talos File Reputation",
+          "url": "https://talosintelligence.com/talos_file_reputation?s=90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59"
+        }
+      ]
+    },
+    {
+      "type": "malware",
+      "id": "malware--8d94339e-32ee-499f-a91e-2627171f1c7a",
+      "name": "W32.1AA70D7DE0-95.SBX.TG",
+      "description": "Malware sample detected by Talos telemetry.",
+      "malware_types": [
+        "unknown"
+      ],
+      "labels": [
+        "malware"
+      ],
+      "hashes": {
+        "SHA256": "1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b",
+        "MD5": "a8fd606be87a6f175e4cfe0146dc55b2"
+      },
+      "external_references": [
+        {
+          "source_name": "Talos File Reputation",
+          "url": "https://talosintelligence.com/talos_file_reputation?s=1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--2547b7cd-443f-4511-bb30-2359094e115d",
+      "name": "UAT-9686",
+      "description": "UAT-9686 actively targets Cisco Secure Email Gateway and Secure Email and Web Manager appliances, primarily those with non-standard configurations.",
+      "labels": [
+        "intrusion-set",
+        "targeting Cisco"
+      ],
+      "external_references": [
+        {
+          "source_name": "Cisco Security Advisory",
+          "url": "https://sec.cloudapps.cisco.com/security/center/content/CiscoSecurityAdvisory/cisco-sa-sma-attack-N9bf4"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d4b4692b-f602-44b0-914d-7df9e312d133",
+      "name": "CVE-2025-59718",
+      "description": "Improper verification of cryptographic signature issue impacting FortiOS, FortiWeb, FortiProxy, and FortiSwitchManager.",
+      "labels": [
+        "cryptographic signature",
+        "Fortinet"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/in-the-wild-exploitation-of-fresh-fortinet-flaws-begins/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--bffc0f45-c9d5-440e-9149-343229c98e51",
+      "name": "CVE-2025-59719",
+      "description": "Improper verification of cryptographic signature issue impacting FortiOS, FortiWeb, FortiProxy, and FortiSwitchManager.",
+      "labels": [
+        "cryptographic signature",
+        "Fortinet"
+      ],
+      "external_references": [
+        {
+          "source_name": "SecurityWeek",
+          "url": "https://www.securityweek.com/in-the-wild-exploitation-of-fresh-fortinet-flaws-begins/"
+        }
+      ]
+    },
+    {
+      "type": "incident",
+      "id": "incident--a089ef2e-9dba-422b-9e98-575242689843",
+      "name": "Jaguar Land Rover Cyber Attack",
+      "description": "Jaguar Land Rover posted a heavy financial loss after a cyber attack, highlighting the fragility of manufacturing environments and the financial impacts of cyber attacks on this vertical.",
+      "labels": [
+        "manufacturing",
+        "ransomware",
+        "financial impact"
+      ],
+      "external_references": [
+        {
+          "source_name": "BBC",
+          "url": "https://www.bbc.com/news/articles/ckg1w255gy1o"
+        }
+      ]
+    },
+    {
+      "type": "incident",
+      "id": "incident--06e77dcb-c46d-4501-b8d3-ec30447c86c7",
+      "name": "French Interior Ministry Email Server Cyber Attack",
+      "description": "Cyber attack detected overnight between December 11 and 12, 2025, allowed threat actors to gain access to some document files on the French Interior Ministry's email servers.",
+      "labels": [
+        "government",
+        "email server",
+        "data access"
+      ],
+      "external_references": [
+        {
+          "source_name": "Bleeping Computer",
+          "url": "https://www.bleepingcomputer.com/news/security/france-interior-ministry-confirms-cyberattack-on-email-servers/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--f305a44d-311f-4730-9893-a6585a317383",
+      "hashes": {
+        "SHA-256": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+        "MD5": "2915b3f8b703eb744fc54c81f4a9c67f"
+      },
+      "name": "9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507.exe",
+      "x_talos_file_reputation": "https://talosintelligence.com/talos_file_reputation?s=9f1f11a708d393e0a4109ae189bc64f1f3e312653dcf317a2bd406f18ffcc507",
+      "x_detection_name": "Win.Worm.Coinminer::1201"
+    },
+    {
+      "type": "file",
+      "id": "file--c37cff42-7231-4e5f-ac2d-a14d2a696dc1",
+      "hashes": {
+        "SHA-256": "a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91",
+        "MD5": "7bdbd180c081fa63ca94f9c22c457376"
+      },
+      "name": "e74d9994a37b2b4c693a76a580c3e8fe_3_Exe.exe",
+      "x_talos_file_reputation": "https://talosintelligence.com/talos_file_reputation?s=a31f222fc283227f5e7988d1ad9c0aecd66d58bb7b4d8518ae23e110308dbf91",
+      "x_detection_name": "Win.Dropper.Miner::95.sbx.tg"
+    },
+    {
+      "type": "file",
+      "id": "file--fbebbb0d-1145-4183-a52a-0bc32190812d",
+      "hashes": {
+        "SHA-256": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+        "MD5": "aac3165ece2959f39ff98334618d10d9"
+      },
+      "name": "96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974.exe",
+      "x_talos_file_reputation": "https://talosintelligence.com/talos_file_reputation?s=96fa6a7714670823c83099ea01d24d6d3ae8fef027f01a4ddac14f123b1c9974",
+      "x_detection_name": "W32.Injector:Gen.21ie.1201"
+    },
+    {
+      "type": "file",
+      "id": "file--b4defbfd-1c54-41b9-8fa9-23906eebc0d4",
+      "hashes": {
+        "SHA-256": "90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+        "MD5": "c2efb2dcacba6d3ccc175b6ce1b7ed0a"
+      },
+      "name": "ck8yh2og.dll",
+      "x_talos_file_reputation": "https://talosintelligence.com/talos_file_reputation?s=90b1456cdbe6bc2779ea0b4736ed9a998a71ae37390331b6ba87e389a49d3d59",
+      "x_detection_name": "Auto.90B145.282358.in02"
+    },
+    {
+      "type": "file",
+      "id": "file--97065b9b-f37c-490b-acec-1f39bc9bc002",
+      "hashes": {
+        "SHA-256": "1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b",
+        "MD5": "a8fd606be87a6f175e4cfe0146dc55b2"
+      },
+      "name": "1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b.exe",
+      "x_talos_file_reputation": "https://talosintelligence.com/talos_file_reputation?s=1aa70d7de04ecf0793bdbbffbfd17b434616f8de808ebda008f1f27e80a2171b",
+      "x_detection_name": "W32.1AA70D7DE0-95.SBX.TG"
+    }
+  ]
+}

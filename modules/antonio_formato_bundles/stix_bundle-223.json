@@ -1,0 +1,294 @@
+{
+  "type": "bundle",
+  "id": "bundle--18856cf2-c6d1-470b-8a10-c32e2e387753",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--75101c24-1e78-412a-ab9d-14e40f35e8b6",
+      "name": "CVE-2025-21042",
+      "description": "A zero-day vulnerability in Samsung\u2019s Android image processing library exploited by LANDFALL malware. The flaw allowed attackers to deliver spyware via malformed DNG image files sent through WhatsApp. The vulnerability affected Samsung Galaxy S22, S23, S24, Z Fold4, and Z Flip4 models and was patched in April 2025.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-21042"
+        },
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/landfall-is-new-commercial-grade-android-spyware/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--671f0e06-d16c-458b-8f43-041881545b30",
+      "name": "CVE-2025-21043",
+      "description": "A related vulnerability in Samsung\u2019s image processing library, patched in September 2025, further protecting users from similar attack vectors as those used by LANDFALL.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-21043"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--58d07eea-ddde-45f0-ac80-7e29c7e49062",
+      "name": "Malicious Image File Delivery via Messaging Platform",
+      "description": "Attackers embedded spyware within malformed DNG image files and delivered them to targets through WhatsApp messages, exploiting vulnerabilities in Samsung\u2019s image processing library.",
+      "external_references": [
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/landfall-is-new-commercial-grade-android-spyware/"
+        }
+      ]
+    },
+    {
+      "type": "intrusion-set",
+      "id": "intrusion-set--4e5c3c3d-968c-42b0-aa3b-6439a8e97992",
+      "name": "CL-UNK-1054",
+      "description": "Unit 42 tracks the LANDFALL Android spyware activity as CL-UNK-1054. The campaign shares infrastructure and tradecraft patterns with commercial spyware operations associated with private sector offensive actors (PSOAs), with possible links to Stealth Falcon and the Variston spyware framework.",
+      "aliases": [
+        "CL-UNK-1054"
+      ],
+      "external_references": [
+        {
+          "source_name": "Unit 42",
+          "url": "https://unit42.paloaltonetworks.com/landfall-is-new-commercial-grade-android-spyware/"
+        }
+      ]
+    },
+    {
+      "type": "file",
+      "id": "file--c8ee3f33-84dd-45bb-8592-2c28ce380b20",
+      "hashes": {
+        "SHA-256": "b06dec10e8ad0005ebb9da24204c96cb2e297bd8d418bc1c8983d066c0997756"
+      },
+      "name": "img-20250120-wa0005.jpg",
+      "size": 6660000,
+      "mime_type": "image/jpeg"
+    },
+    {
+      "type": "file",
+      "id": "file--bc16d17a-a15b-48d1-9762-cab669050de5",
+      "hashes": {
+        "SHA-256": "c0f30c2a2d6f95b57128e78dc0b7180e69315057e62809de1926b75f86516b2e"
+      },
+      "name": "2.tiff",
+      "size": 6580000,
+      "mime_type": "image/tiff"
+    },
+    {
+      "type": "file",
+      "id": "file--732ab14c-58f9-4b41-a989-75b799465aa4",
+      "hashes": {
+        "SHA-256": "9297888746158e38d320b05b27b0032b2cc29231be8990d87bc46f1e06456f93"
+      },
+      "name": "whatsapp image 2025-02-10 at 4.54.17 pm.jpeg",
+      "size": 6660000,
+      "mime_type": "image/jpeg"
+    },
+    {
+      "type": "file",
+      "id": "file--75ef45fe-bfa3-4cbe-af14-1c82a4d2a0c1",
+      "hashes": {
+        "SHA-256": "d2fafc7100f33a11089e98b660a85bd479eab761b137cca83b1f6d19629dd3b0"
+      },
+      "name": "b.so",
+      "size": 103310,
+      "mime_type": "application/x-sharedlib"
+    },
+    {
+      "type": "file",
+      "id": "file--75fc54a1-f141-4f6f-9305-b4833ac93871",
+      "hashes": {
+        "SHA-256": "384f073d3d51e0f2e1586b6050af62de886ff448735d963dfc026580096d81bd"
+      },
+      "size": 103310
+    },
+    {
+      "type": "file",
+      "id": "file--897e5085-9b1b-41c2-9f6c-c5dc8b36348f",
+      "hashes": {
+        "SHA-256": "b975b499baa3119ac5c2b3379306d4e50b9610e9bba3e56de7dfd3927a96032d"
+      },
+      "name": "1.jpeg",
+      "size": 5660000,
+      "mime_type": "image/jpeg"
+    },
+    {
+      "type": "file",
+      "id": "file--e590b071-a04b-4b34-ace5-812cb1a46414",
+      "hashes": {
+        "SHA-256": "a62a2400bf93ed84ebadf22b441924f904d3fcda7d1507ba309a4b1801d44495"
+      },
+      "size": 103310
+    },
+    {
+      "type": "file",
+      "id": "file--ed8c9b0d-c0ae-44f3-bf99-0843636efc96",
+      "hashes": {
+        "SHA-256": "29882a3c426273a7302e852aa77662e168b6d44dcebfca53757e29a9cdf02483"
+      },
+      "name": "img-20240723-wa0001.jpg",
+      "size": 6580000,
+      "mime_type": "image/jpeg"
+    },
+    {
+      "type": "file",
+      "id": "file--0390ad61-7928-4fd6-94dc-ae4d4b0be69f",
+      "hashes": {
+        "SHA-256": "2425f15eb542fca82892fd107ac19d63d4d112ddbfe698650f0c25acf6f8d78a"
+      },
+      "name": "6357fc.zip",
+      "size": 380710,
+      "mime_type": "application/zip"
+    },
+    {
+      "type": "file",
+      "id": "file--a69da8fb-198c-43f1-8479-b8820f5bea9e",
+      "hashes": {
+        "SHA-256": "b45817ffb0355badcc89f2d7d48eecf00ebdf2b966ac986514f9d971f6c57d18"
+      },
+      "name": "img-20240723-wa0000.jpg",
+      "size": 5650000,
+      "mime_type": "image/jpeg"
+    },
+    {
+      "type": "file",
+      "id": "file--20047bad-aecc-40b1-8b10-91e9d7f52def",
+      "hashes": {
+        "SHA-256": "69cf56ac6f3888efa7a1306977f431fd1edb369a5fd4591ce37b72b7e01955ee"
+      },
+      "name": "localfile~",
+      "size": 1420000
+    },
+    {
+      "type": "file",
+      "id": "file--fb50106b-207d-44ab-a14b-e3dae58d831f",
+      "hashes": {
+        "SHA-256": "211311468f3673f005031d5f77d4d716e80cbf3c1f0bb1f148f2200920513261"
+      },
+      "name": "l",
+      "size": 332880
+    },
+    {
+      "type": "file",
+      "id": "file--35caa67c-4a23-4b2b-85eb-43d684d5810d",
+      "hashes": {
+        "SHA-256": "ffeeb0356abb56c5084756a5ab0a39002832403bca5290bb6d794d14b642ffe2"
+      },
+      "size": 103310
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--fc412ebd-64aa-4414-abec-f7f3481f9d0f",
+      "name": "CVE-2025-21042",
+      "description": "Zero-day vulnerability in Samsung's Android image processing library exploited by LANDFALL spyware."
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--0f1c7734-bf44-4ae7-ab08-c88bf7f71a83",
+      "name": "CVE-2025-21043",
+      "description": "Related vulnerability in Samsung's Android image processing library patched in September 2025."
+    },
+    {
+      "type": "software",
+      "id": "software--7098e8ef-ae19-4d62-9d11-a523a6407c85",
+      "name": "LANDFALL",
+      "description": "Android spyware exploiting Samsung image processing vulnerabilities, delivered via malicious image files."
+    },
+    {
+      "type": "software",
+      "id": "software--2e9fba97-2c60-497b-b5d9-53d93fc177b2",
+      "name": "WhatsApp",
+      "description": "Messaging application used as delivery mechanism for LANDFALL malware."
+    },
+    {
+      "type": "software",
+      "id": "software--8de6a1b7-2ba6-435c-a959-34ea43e002c3",
+      "name": "b.so",
+      "description": "LANDFALL spyware component that communicates with C2 server and manages configuration via hard-coded values and encrypted JSON."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e1f254f-e61d-4861-beae-f64e478a2cac",
+      "relationship_type": "uses",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "vulnerability--0f1c7734-bf44-4ae7-ab08-c88bf7f71a83",
+      "description": "LANDFALL malware exploited CVE-2025-21042, a zero-day vulnerability in Samsung\u2019s image processing library."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--67e3c3d1-c148-40c3-b35e-d6344ff81227",
+      "relationship_type": "uses",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "vulnerability--0f1c7734-bf44-4ae7-ab08-c88bf7f71a83",
+      "description": "LANDFALL malware used CVE-2025-21043, a related vulnerability in Samsung\u2019s image processing library, as part of its attack chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--439b7ed6-aac9-4537-94ab-66187e720e57",
+      "relationship_type": "uses",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "attack-pattern--58d07eea-ddde-45f0-ac80-7e29c7e49062",
+      "description": "LANDFALL malware was delivered via malicious DNG image files sent through WhatsApp, exploiting vulnerabilities in Samsung\u2019s image processing library."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9296cacd-ee6e-4881-b5b2-07d5cb77eec1",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--2be49bf5-c854-4c39-af22-21fa7687f05f",
+      "target_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "description": "The listed SHA256 file hashes are indicators of compromise for LANDFALL malware and related malicious files."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--29dbb2b7-529c-4116-89ec-667c44caaac9",
+      "relationship_type": "attributed-to",
+      "source_ref": "intrusion-set--4e5c3c3d-968c-42b0-aa3b-6439a8e97992",
+      "target_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "description": "Unit 42 tracks LANDFALL activity as CL-UNK-1054."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a95499a-cddc-476f-a044-f39383262448",
+      "relationship_type": "attributed-to",
+      "source_ref": "intrusion-set--4e5c3c3d-968c-42b0-aa3b-6439a8e97992",
+      "target_ref": "threat-actor--2cf853a0-ee62-4733-8f47-dd1e0720b100",
+      "description": "CL-UNK-1054 activity shares tradecraft and infrastructure patterns with Stealth Falcon."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7714ecd-7f99-4412-a948-d8583ba4bdef",
+      "relationship_type": "uses",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "tool--a6fc3920-1d62-4597-ab5b-ed8c79356f6a",
+      "description": "LANDFALL campaign shares links and tradecraft similarities with the Variston spyware framework."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--87c2e47a-4bd7-4a00-b7c4-eed423e91e60",
+      "relationship_type": "delivers",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "software--8de6a1b7-2ba6-435c-a959-34ea43e002c3",
+      "description": "LANDFALL malware is delivered via malicious image files sent through WhatsApp."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--27ecc162-0562-4701-bc19-a16dd27039f6",
+      "relationship_type": "uses",
+      "source_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "target_ref": "software--8de6a1b7-2ba6-435c-a959-34ea43e002c3",
+      "description": "LANDFALL malware uses the b.so component for C2 communication and configuration management."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5ee3d91e-6b75-454a-a761-9dc556b3de46",
+      "relationship_type": "delivers",
+      "source_ref": "attack-pattern--58d07eea-ddde-45f0-ac80-7e29c7e49062",
+      "target_ref": "malware--d1bd8831-e62e-4d94-8e6e-c5c2e16c3f36",
+      "description": "Malicious image file delivery via WhatsApp is the attack pattern used to distribute LANDFALL malware."
+    }
+  ]
+}

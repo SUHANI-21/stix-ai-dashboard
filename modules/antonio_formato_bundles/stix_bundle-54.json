@@ -1,0 +1,732 @@
+{
+  "type": "bundle",
+  "id": "bundle--efec4b8e-1187-40ee-bff3-59c7a7491478",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--6349ccb7-ff64-4257-b644-70aa1ad8c4f2",
+      "name": "CVE-2025-20700",
+      "description": "Missing Authentication for GATT Services in Airoha-based Bluetooth headphones and earbuds. Attackers in proximity can connect via BLE and access exposed services, including the RACE protocol, without prior pairing or authentication.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-20700"
+        },
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--e75d4cc5-1eda-4f9a-9f33-3cc932e780f9",
+      "name": "CVE-2025-20701",
+      "description": "Missing Authentication for Bluetooth BR/EDR (Classic) in Airoha-based Bluetooth headphones and earbuds. Attackers in proximity can connect via Bluetooth Classic and access exposed services, including audio and RACE protocol, without prior pairing or authentication.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-20701"
+        },
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "vulnerability",
+      "id": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "name": "CVE-2025-20702",
+      "description": "Critical Capabilities in Custom Protocol (RACE) in Airoha-based Bluetooth headphones and earbuds. The RACE protocol, exposed over BLE and Bluetooth Classic, allows unauthenticated attackers to read and write arbitrary locations in flash and RAM, retrieve device addresses, and potentially extract sensitive data or execute arbitrary code.",
+      "external_references": [
+        {
+          "source_name": "CVE",
+          "external_id": "CVE-2025-20702"
+        },
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--a15c1c12-2215-4bc0-9f7b-a4bc05c4b2b7",
+      "name": "Unauthenticated Bluetooth Connection",
+      "description": "Attackers connect to vulnerable Bluetooth headphones or earbuds without prior pairing, leveraging missing authentication in BLE (GATT) or Bluetooth Classic (BR/EDR) to access services and protocols.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--f5a72014-ade6-4989-905d-2c692644590b",
+      "name": "RACE Protocol Abuse",
+      "description": "Attackers exploit the RACE protocol exposed on Bluetooth devices to read and write arbitrary memory, extract firmware, configuration, and cryptographic keys, and potentially execute arbitrary code.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--28478bca-fcc3-468c-ac64-4b60369b12a8",
+      "name": "Bluetooth Peripheral Impersonation",
+      "description": "Attackers extract Bluetooth Link Keys and device addresses from vulnerable headphones, then impersonate trusted peripherals to connect to victim phones and access privileged Bluetooth profiles and data.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--d8302ccf-f793-43eb-8e0d-f566903bb9f6",
+      "name": "Eavesdropping via Hands-Free Profile (HfP)",
+      "description": "Attackers establish unauthorized audio connections to headphones using the Bluetooth Hands-Free Profile, enabling microphone access and eavesdropping.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--acd7e601-a74a-4f36-9201-63cbf41db2af",
+      "name": "Remote Control of Phone via HfP",
+      "description": "Attackers impersonate headphones to connect to victim phones and use HfP commands (e.g., AT+CNUM, AT+BVRA) to extract phone numbers, access contacts, trigger voice assistants, make or accept calls, and perform other actions.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "attack-pattern",
+      "id": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "name": "Firmware Extraction and Modification",
+      "description": "Attackers use the RACE protocol to read device firmware and cryptographic keys, and write malicious firmware to the update partition, enabling persistent compromise of Bluetooth headphones.",
+      "external_references": [
+        {
+          "source_name": "ERNW Advisory",
+          "url": "https://insinuator.net/2025/06/airoha-bluetooth-security-vulnerabilities/"
+        }
+      ]
+    },
+    {
+      "type": "note",
+      "id": "note--b89639ba-8db3-4107-8861-673965313a28",
+      "abstract": "List of confirmed vulnerable devices (Airoha-based headphones and earbuds)",
+      "content": "Beyerdynamic Amiron 300, Bose QuietComfort Earbuds, EarisMax Bluetooth Auracast Sender, Jabra Elite 8 Active, JBL Endurance Race 2, JBL Live Buds 3, Jlab Epic Air Sport ANC, Marshall ACTON III, Marshall MAJOR V, Marshall MINOR IV, Marshall MOTIF II, Marshall STANMORE III, Marshall WOBURN III, MoerLabs EchoBeatz, Sony Link Buds S, Sony ULT Wear, Sony WF-1000XM3, Sony WF-1000XM4, Sony WF-1000XM5, Sony WF-C500, Sony WF-C510-GFP, Sony WH-1000XM4, Sony WH-1000XM5, Sony WH-1000XM6, Sony WH-CH520, Sony WH-CH720N, Sony WH-XB910N, Sony WI-C100, Teufel Tatws2. This list is not exhaustive."
+    },
+    {
+      "type": "software",
+      "id": "software--14f2531a-8d5d-4846-8630-2fe11855c966",
+      "name": "Airoha Bluetooth SDK",
+      "vendor": "Airoha",
+      "description": "SDK for Bluetooth SoCs used in headphones and earbuds; vulnerable to CVE-2025-20700, CVE-2025-20701, CVE-2025-20702 prior to patched release."
+    },
+    {
+      "type": "software",
+      "id": "software--ca69662b-7408-4b1c-86dc-2959587fb01d",
+      "name": "RACE Protocol",
+      "description": "Custom protocol used in Airoha-based Bluetooth devices, exposed over USB HID, Bluetooth Classic (RFCOMM), and BLE (GATT). Allows reading/writing RAM and flash, and retrieving device info."
+    },
+    {
+      "type": "software",
+      "id": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "name": "BTstack",
+      "description": "Bluetooth host stack used for proof-of-concept attacks and HfP exploitation."
+    },
+    {
+      "type": "tool",
+      "id": "tool--acfa9f71-2ca7-48a2-804f-defedcb98b78",
+      "name": "RACE Toolkit",
+      "description": "Tool for researchers and users to check whether Bluetooth devices are vulnerable to RACE protocol attacks.",
+      "tool_types": [
+        "vulnerability scanner"
+      ],
+      "labels": [
+        "bluetooth",
+        "race-protocol"
+      ]
+    },
+    {
+      "type": "tool",
+      "id": "tool--05d79b49-0380-4e67-b119-aa37ed262db9",
+      "name": "airoha-firmware-parser",
+      "description": "Tool to unpack Airoha firmware update files (FOTA images).",
+      "tool_types": [
+        "firmware analysis"
+      ],
+      "labels": [
+        "bluetooth",
+        "firmware"
+      ]
+    },
+    {
+      "type": "device",
+      "id": "device--4ace29e4-02f7-4f51-a49d-6ce604efcb11",
+      "name": "Beyerdynamic Amiron 300",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--9f9cf809-7e26-4c62-9a10-804dfe086160",
+      "name": "Bose QuietComfort Earbuds",
+      "description": "Bluetooth earbuds; Classic pairing vulnerability present but unreliably exploitable; no GATT exposed."
+    },
+    {
+      "type": "device",
+      "id": "device--8fff906f-959c-4851-811e-6e8537cd80c9",
+      "name": "EarisMax Bluetooth Auracast Sender",
+      "description": "Bluetooth audio sender confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--f3de1b39-99b4-4a3e-acad-1d066df26ab9",
+      "name": "Jabra Elite 8 Active",
+      "description": "Bluetooth earbuds; not vulnerable to Classic pairing flaw due to enforced pairing; no GATT exposed."
+    },
+    {
+      "type": "device",
+      "id": "device--12b0c58d-e198-4758-ad22-aadbfe51e3a9",
+      "name": "JBL Endurance Race 2",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--aced309c-f882-4a8d-911c-8c1a498a91c3",
+      "name": "JBL Live Buds 3",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--dbf403f4-232e-4ad0-b821-1c4094c1bb3d",
+      "name": "Jlab Epic Air Sport ANC",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--d20572db-f570-4f8c-80df-fe1c616a6ef1",
+      "name": "Marshall ACTON III",
+      "description": "Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--d3ec1c30-4ca1-43e3-a97b-979cdf732f67",
+      "name": "Marshall MAJOR V",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--3d96146f-2825-4ba5-a660-3345f3e3fadd",
+      "name": "Marshall MINOR IV",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--1a166ce3-b7b6-44a4-9a1d-03fe2e14a887",
+      "name": "Marshall MOTIF II",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--dac2b539-3d74-4ee2-bf80-01ce11f213dc",
+      "name": "Marshall STANMORE III",
+      "description": "Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--10b0b90b-1f6b-4cd5-ab6f-191e8fa7f342",
+      "name": "Marshall WOBURN III",
+      "description": "Bluetooth speaker confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--ff217d12-5e2e-4981-8484-972a2b53e122",
+      "name": "MoerLabs EchoBeatz",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--bc441140-58ea-412e-9e5c-63d0cf850b25",
+      "name": "Sony Link Buds S",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--67e53570-1b63-402b-badd-d245060643e9",
+      "name": "Sony ULT Wear",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--35d45993-963c-4d7e-89fa-6e25314903c1",
+      "name": "Sony WF-1000XM3",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--5a0eaeed-96e4-4c94-9cd3-3a3eb9d52108",
+      "name": "Sony WF-1000XM4",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--08919e17-dd94-46c5-bdd3-2e46521370b6",
+      "name": "Sony WF-1000XM5",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--70110c87-eebe-4b03-8e0e-817a811c1f9b",
+      "name": "Sony WF-C500",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--c7525e0f-1149-40d3-a3d4-b9db922aeee7",
+      "name": "Sony WF-C510-GFP",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--8975a041-29d9-4383-99e6-9267b3332396",
+      "name": "Sony WH-1000XM4",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--6c52a1e1-9838-4f6b-a61f-bb26a01f9e04",
+      "name": "Sony WH-1000XM5",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--f9283741-4ee3-440e-8f75-81a5fb02570b",
+      "name": "Sony WH-1000XM6",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--971d7407-41c7-426d-bdc4-11dcd07fb0dc",
+      "name": "Sony WH-CH520",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--41ea2845-8d6f-4aa7-a689-6c8265a83c8c",
+      "name": "Sony WH-CH720N",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--761decac-3439-4971-a50e-7e883251ec79",
+      "name": "Sony WH-XB910N",
+      "description": "Bluetooth headphones confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--87079a11-9b39-4601-970f-496a6d70e84b",
+      "name": "Sony WI-C100",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--a5100c10-19be-429e-ac50-ce3e5274cde5",
+      "name": "Teufel Tatws2",
+      "description": "Bluetooth earbuds confirmed vulnerable to Airoha Bluetooth vulnerabilities."
+    },
+    {
+      "type": "device",
+      "id": "device--9399aa88-b716-4874-ac33-7bfb39ef16f2",
+      "name": "MoerLab Auracast transmitter",
+      "description": "Bluetooth Auracast transmitter used in research; vulnerable to RACE protocol issues."
+    },
+    {
+      "type": "device",
+      "id": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "name": "Ubertooth One",
+      "description": "Bluetooth monitoring hardware used to discover Bluetooth Classic addresses for attack setup."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--863c12cd-6344-47bf-b382-7cf42417dfff",
+      "relationship_type": "has",
+      "source_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Airoha Bluetooth SDK includes the RACE Protocol implementation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0bfabf22-cb72-403f-9afd-d7f4803931fd",
+      "relationship_type": "has",
+      "source_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "target_ref": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "description": "Airoha Bluetooth SDK is vulnerable to CVE-2025-20700 (Missing Authentication for GATT Services)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--430d8afa-d1bd-4982-b9c8-8d18006c4122",
+      "relationship_type": "has",
+      "source_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "target_ref": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "description": "Airoha Bluetooth SDK is vulnerable to CVE-2025-20701 (Missing Authentication for Bluetooth Classic BR/EDR)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a4847bbd-fc9b-4d45-a48f-dcd85b55794b",
+      "relationship_type": "has",
+      "source_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "target_ref": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "description": "Airoha Bluetooth SDK is vulnerable to CVE-2025-20702 (Critical Capabilities in Custom Protocol RACE)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b8fd6ea-350a-4421-a4c2-c87541cec556",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "description": "Unauthenticated Bluetooth Connection attack exploits CVE-2025-20700 (GATT) and CVE-2025-20701 (Classic)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--90813090-c086-4464-a7df-4de2136187c2",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "vulnerability--d2c36803-38a1-4fd8-a8a8-c4c3c58e1937",
+      "description": "RACE Protocol Abuse attack exploits CVE-2025-20702 (Critical Capabilities in RACE Protocol)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--333bafb5-bda0-4e37-a58e-477b76e32164",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "Bluetooth Peripheral Impersonation is enabled by RACE Protocol Abuse, as attackers extract keys via RACE."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7e204c0e-137b-439a-bce2-1b1a39299227",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "Remote Control of Phone via HfP is enabled by Bluetooth Peripheral Impersonation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--47ad625e-1fc2-4887-97d1-6dce4866f83d",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "Eavesdropping via Hands-Free Profile (HfP) is enabled by Unauthenticated Bluetooth Connection."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e37e92c2-1950-4d16-b8aa-4e5810865301",
+      "relationship_type": "uses",
+      "source_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "Firmware Extraction and Modification is enabled by RACE Protocol Abuse."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--74267b78-a32a-437c-852a-805973b0e2ba",
+      "relationship_type": "uses",
+      "source_ref": "malware--81c41ce2-e80b-41cb-b35a-e72b0612f604",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "RACE Protocol Exploitation Toolkit interacts with RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--036b16ff-a9a3-4d5e-a617-3d71c84105a2",
+      "relationship_type": "uses",
+      "source_ref": "malware--81c41ce2-e80b-41cb-b35a-e72b0612f604",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "RACE Protocol Exploitation Toolkit enables RACE Protocol Abuse."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--068d5bb8-7674-4e65-8d81-c45fa479559c",
+      "relationship_type": "uses",
+      "source_ref": "tool--05d79b49-0380-4e67-b119-aa37ed262db9",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "airoha-firmware-parser analyzes Airoha firmware update files for RACE Protocol reverse engineering."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5af6aff-760a-4eca-bea4-f41a25e0cc71",
+      "relationship_type": "uses",
+      "source_ref": "tool--05d79b49-0380-4e67-b119-aa37ed262db9",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "BTstack is used to implement Bluetooth profiles for attack research, including HfP exploitation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a03419c0-244b-4711-8d40-26e2ee9c8941",
+      "relationship_type": "uses",
+      "source_ref": "tool--05d79b49-0380-4e67-b119-aa37ed262db9",
+      "target_ref": "attack-pattern--6a5dd1c6-ce44-4c26-b204-42d9dfbbdd19",
+      "description": "Ubertooth One is used to discover Bluetooth Classic addresses, facilitating Unauthenticated Bluetooth Connection and attacks."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f33444fb-fc1b-4faa-a120-bcefd43877eb",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Beyerdynamic Amiron 300 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--49c631bc-97c1-4abb-85e8-337b1c36b672",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Bose QuietComfort Earbuds uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--70cbf659-e24c-445f-9a87-ad9e361831ea",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "EarisMax Bluetooth Auracast Sender uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0e1d3661-ef0d-441d-8df9-ea44f34412ff",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Jabra Elite 8 Active uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5c10a4d-3a69-4ec7-9aa3-0c832527240f",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "JBL Endurance Race 2 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--998f86f0-7219-4d7f-b6f2-6d7d34a4a570",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "JBL Live Buds 3 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2138416f-99dd-499f-b551-dd0a2f186bea",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Jlab Epic Air Sport ANC uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6a7f138b-3ff3-4b86-a0f4-199e61d69bb2",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall ACTON III uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--049ff7c7-c44b-44d1-9cdf-97a6d856c23f",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall MAJOR V uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--fe3f53c5-602b-493a-b9d6-112e546abcf8",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall MINOR IV uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--7b6e9b11-7e26-4e2b-9d59-c55be6725ae5",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall MOTIF II uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9c06ded-877e-4c3e-a612-8bed04dff15d",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall STANMORE III uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--45804c2e-1f6f-43ce-906e-89c411e12442",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Marshall WOBURN III uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--57aa746b-b4d6-4d59-a561-9f9fc28726d5",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "MoerLabs EchoBeatz uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6cf52f5e-71a5-4675-909f-43509566b2da",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony Link Buds S uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--77f043de-b063-4222-aebd-44c322affec3",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony ULT Wear uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--d9172d23-1a6b-4095-925f-374eb9c287d0",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WF-1000XM3 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4fec4974-afe5-4da5-9d97-d9280673a420",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WF-1000XM4 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff29508e-1bb9-45db-9f77-5a30e1c2a17e",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WF-1000XM5 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34fedfe8-f622-4823-b814-8d5c4daed342",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WF-C500 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9c6c3d29-8a53-4fbb-9eb4-4781a2166f45",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WF-C510-GFP uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--da8f8b9f-2f99-487f-b38c-3d2663c1ffbc",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-1000XM4 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--e14351e3-bdd8-47f3-b84a-0c4fba23a684",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-1000XM5 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9ba4e71c-816c-4c69-9862-05cdd51ddcc4",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-1000XM6 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f8d33222-af10-4916-9df5-dccc3948abbd",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-CH520 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f83dd228-df6e-45ac-9170-852c32be72e6",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-CH720N uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f168e96c-65bd-4526-bf91-ebbb7e5322f2",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WH-XB910N uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0f97fd1c-15b2-4c71-841d-b2e678ee6a73",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Sony WI-C100 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--741419bd-7247-45cf-b060-1a9f435604e3",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "Teufel Tatws2 uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4238359e-4ae6-46fd-ab4d-4da718389cee",
+      "relationship_type": "has",
+      "source_ref": "device--72671148-8268-435a-b397-e27b9cfcb72a",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "MoerLab Auracast transmitter uses Airoha Bluetooth SDK and RACE Protocol."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a71dff00-7d67-4c77-ae1d-c7d4dbf50868",
+      "relationship_type": "uses",
+      "source_ref": "network-traffic--3487d310-5568-437b-8e94-e8846b26c4da",
+      "target_ref": "software--af3862f3-6bd0-498f-96e7-ed258218ef14",
+      "description": "RACE protocol network traffic is generated by RACE Protocol software over RFCOMM, GATT, and USB HID."
+    }
+  ]
+}

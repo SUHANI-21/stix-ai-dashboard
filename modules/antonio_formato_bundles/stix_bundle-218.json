@@ -1,0 +1,370 @@
+{
+  "type": "bundle",
+  "id": "bundle--b386c6a9-c4ff-48ac-82e6-f0a7c371002a",
+  "spec_version": "2.1",
+  "objects": [
+    {
+      "type": "file",
+      "id": "file--efdbe3aa-5092-42a0-ad6c-f2042e87f8fb",
+      "name": "250908_A_HK\uc774\ub178\uc158_SecuwaySSL VPN Manager U100S 100user_\uac1c\uc778\uc801\uc11c",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      },
+      "hashes": {
+        "SHA-256": "e19ce3bd1cbd980082d3c55a4ac1eb3af4d9e7adf108afb1861372f9c7fe0b76"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--c0ee49e4-1025-4a47-a9a2-4593cab17ff4",
+      "name": "Memload_V3.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "hashes": {
+        "SHA-256": "20e0db1d2ad90bc46c7074c2cc116c2c08a8183f3ac6f357e7ebee0c7cc02596"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--e572dcb9-daae-4823-8bd1-6442c49542e1",
+      "name": "httptroy_dll.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "hashes": {
+        "SHA-256": "10c3b3ab2e9cb618fc938028c9295ad5bdb1d836b8f07d65c0d3036dbc18bbb4"
+      }
+    },
+    {
+      "type": "mutex",
+      "id": "mutex--677feefb-cc4b-4925-94b2-7234721e3b3e",
+      "name": "fnjiuygredfgbbgfcvhutrv"
+    },
+    {
+      "type": "url",
+      "id": "url--ec03861c-f6d5-48af-8dfb-f0f459dbcd6e",
+      "value": "http://load.auraria.org/index.php"
+    },
+    {
+      "type": "user-agent",
+      "id": "user-agent--91987d81-7c39-4f31-a56c-cdaa206663c7",
+      "value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/79.0.3945.130 Safari/537.36"
+    },
+    {
+      "type": "file",
+      "id": "file--921a8f4e-a743-4391-ab29-19135d40cce2",
+      "name": "C:\\ProgramData\\comms.bin",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--924919c2-52ac-4bf9-b2b7-a39dc2e19b94",
+      "name": "NetSvcInst_v1_Rundll32.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--bb2feb38-6d70-4bf4-bafa-3989cec4f05a",
+      "name": "C:\\ProgramData\\Comms\\ssh.bin",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "exe"
+        }
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--4709fe56-4034-4079-9f6e-efe1001df181",
+      "name": "Compcat_v1.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "hashes": {
+        "SHA-256": "368769df7d319371073f33c29ad0097fbe48e805630cf961b6f00ab2ccddbb4c"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--a46ecfe8-918f-438f-be55-19370d0fb34e",
+      "name": "T_DLL64.dll",
+      "extensions": {
+        "windows-pebinary-ext": {
+          "pe_type": "dll"
+        }
+      },
+      "hashes": {
+        "SHA-256": "c60587964a93b650f3442589b05e9010a262b927d9b60065afd8091ada7799fe"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--25d13603-8346-441a-b340-2b914982a644",
+      "hashes": {
+        "SHA-256": "509fb00b9d6eaa74f54a3d1f092a161a095e5132d80cc9cc95c184d4e258525b"
+      }
+    },
+    {
+      "type": "file",
+      "id": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "hashes": {
+        "SHA-256": "b5eae8de6f5445e06b99eb8b0927f9abb9031519d772969bd13a7a0fb43ec067"
+      }
+    },
+    {
+      "type": "url",
+      "id": "url--3efba19a-0872-4651-8b34-a23a72bfe248",
+      "value": "http://166.88.11.10/upload/check.asp"
+    },
+    {
+      "type": "url",
+      "id": "url--1ffc433d-60fe-480b-a556-6dadea52a07d",
+      "value": "https://tronracing.com/upload/check.asp"
+    },
+    {
+      "type": "url",
+      "id": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "value": "http://23.27.140.49/Onenote/index.asp"
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0727ee9d-2825-41e5-96a5-fa01db357dd2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Kimsuky uses HttpTroy backdoor in its campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--8be5e059-14cb-4923-a665-25e22c0af875",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Kimsuky uses Memload_V3 backdoor as part of its infection chain."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--5937420b-fc01-4a8a-ad00-803d2892eeff",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "Kimsuky uses phishing with invoice-themed ZIP archives for initial access."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--a83c6a63-afcc-4855-b9d6-41b4eac9ef41",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "Kimsuky uses scheduled task persistence via COM interfaces."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--97b5e27a-7452-4221-9f37-a9edb57cbe3e",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Memload_V3 decrypts and loads HttpTroy as the final payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--bf43ab94-00e0-4335-b20d-ed730f6e51e6",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "HttpTroy uses fileless payload execution by loading executables in memory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3ce9c72f-7b71-4211-82cc-9324bd170993",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "HttpTroy communicates with its C2 server via HTTP POST requests to http://load.auraria.org/index.php."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--34cddafc-bf53-4fc3-a160-c9ec694fcddd",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "mutex--677feefb-cc4b-4925-94b2-7234721e3b3e",
+      "description": "HttpTroy creates mutex named fnjiuygredfgbbgfcvhutrv."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b3087559-5972-4837-8de9-f98481f6a78a",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--38fe9573-3e5d-49e3-87cc-fe75af60b054",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Indicator contains hashes for HttpTroy and Memload_V3."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0d77c5c4-8a53-4e5f-adc7-f6eac8caf5e4",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--38fe9573-3e5d-49e3-87cc-fe75af60b054",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "Indicator contains C2 URL for HttpTroy."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4d9319ba-916b-4907-b8e4-9508e4e1e1d9",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--38fe9573-3e5d-49e3-87cc-fe75af60b054",
+      "target_ref": "mutex--677feefb-cc4b-4925-94b2-7234721e3b3e",
+      "description": "Indicator contains mutex for HttpTroy."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--52ce7246-a5c6-48c7-90a2-db852a645b7b",
+      "relationship_type": "drops",
+      "source_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "target_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "description": "Initial .scr file drops Memload_V3.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b46f45f8-a5bf-46ae-9f11-ac7d69d0fef1",
+      "relationship_type": "drops",
+      "source_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "target_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "description": "Memload_V3.dll drops and loads httptroy_dll.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--2923d426-fbe5-4afa-9926-f0a0f3ecacb2",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Lazarus Group uses Comebacker malware in its campaigns."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--0b9a042f-5078-41c9-9c1f-606350ef15a0",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Lazarus Group uses BLINDINGCAN (new variant) remote access tool."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--b726daa3-810c-47b2-9817-908bbcae6755",
+      "relationship_type": "uses",
+      "source_ref": "intrusion-set--9d41f2f4-8706-4999-a5ca-14ba7748efad",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Lazarus Group uses Compcat_v1.dll as a loader for the final payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--4f7033c8-9e27-4dae-a865-f7d85658db6f",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Comebacker drops and executes Compcat_v1.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--f5ed11b4-ae9d-4c65-84d0-ab31d05ae7fa",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Compcat_v1.dll decrypts and loads BLINDINGCAN (new variant) as the final payload."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--6c5eff4b-bce9-4f09-b51d-4c6bae9a26a1",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "Comebacker uses dynamic API resolution and obfuscation."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c5d9f9bb-dda9-4c3a-902d-122d6aec3ff3",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "BLINDINGCAN (new variant) uses registry-based configuration storage."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--9cceb987-92ae-4556-9bd5-eaaded11e9c7",
+      "relationship_type": "uses",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "attack-pattern--afd2d2dd-50d6-4bc6-9189-38be0483732e",
+      "description": "BLINDINGCAN (new variant) uses fileless payload execution by loading PE files in memory."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ff887af1-c475-42bc-baba-7a35988bdc2a",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "BLINDINGCAN (new variant) communicates with C2 server at http://166.88.11.10/upload/check.asp."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--461a7b10-9e8b-4f7b-87ca-8e19d4a76bed",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "BLINDINGCAN (new variant) communicates with C2 server at https://tronracing.com/upload/check.asp."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--c7a1003a-491b-4461-a5ba-53d1e3648e5d",
+      "relationship_type": "communicates-with",
+      "source_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "BLINDINGCAN (new variant) communicates with C2 server at http://23.27.140.49/Onenote/index.asp."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--ab2dd334-a523-4345-beb1-8569adc758a2",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--38fe9573-3e5d-49e3-87cc-fe75af60b054",
+      "target_ref": "malware--4da23fd3-6a8e-4dad-b5be-7534f8fd7649",
+      "description": "Indicator contains hashes for Comebacker, Compcat_v1.dll, and BLINDINGCAN (new variant)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--db72fc6b-8134-48b3-82ae-feb5ea39af8f",
+      "relationship_type": "indicates",
+      "source_ref": "indicator--38fe9573-3e5d-49e3-87cc-fe75af60b054",
+      "target_ref": "url--47a27dc2-cd10-4a00-8491-d957d21c0f24",
+      "description": "Indicator contains C2 URLs for BLINDINGCAN (new variant)."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3eedd9ed-eb13-40c3-8140-b9e511793b5e",
+      "relationship_type": "drops",
+      "source_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "target_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "description": "Comebacker drops Compcat_v1.dll."
+    },
+    {
+      "type": "relationship",
+      "id": "relationship--3290aed9-5ec5-440b-9b34-13faa554a9bd",
+      "relationship_type": "drops",
+      "source_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "target_ref": "file--b904afa8-8461-46bc-9df8-9b5429a25279",
+      "description": "Compcat_v1.dll drops T_DLL64.dll (BLINDINGCAN new variant)."
+    }
+  ]
+}
