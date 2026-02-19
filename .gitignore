@@ -13,7 +13,7 @@ stix_graph.html
 
 # Data files
 .csv
-*.json
+# *.json
 
 # OS files
 .DS_Store
