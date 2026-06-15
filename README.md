@@ -331,87 +331,6 @@ stix-ai-dashboard/
 
 ---
 
-# Getting Started
-
-## 1. Install Dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-### Note
-
-* Malware classification with Mistral-7B requires significant memory (~14GB recommended)
-* GPU acceleration recommended for local inference
-
----
-
-## 2. Start Ollama
-
-```bash
-ollama serve
-ollama pull mistral
-```
-
----
-
-## 3. Run the Dashboard
-
-```bash
-streamlit run app.py
-```
-
-Open:
-
-```text
-http://localhost:8501
-```
-
----
-
-# Key Dependencies
-
-```text
-streamlit
-plotly
-pyvis
-stix2
-stix2-validator
-stix2-elevator
-faiss-cpu
-chromadb
-sentence-transformers
-transformers
-torch
-langchain-community
-networkx
-pandas
-ollama
-```
-
----
-
-# Security & Privacy
-
-* All processing occurs locally
-* No external upload required
-* Uploaded files stored in session-scoped directories
-* Temporary storage cleaned automatically
-* No cross-session data leakage
-* VirusTotal integration optional
-
----
-
-# Research Contributions
-
-* Unified AI-assisted CTI analysis workflow
-* Canonical STIX normalization pipeline
-* ATT&CK-aware malware intelligence analysis
-* Semantic similarity exploration for CTI objects
-* RAG-enhanced cybersecurity querying
-
----
-
 # Future Enhancements
 
 * Real-time TAXII streaming
@@ -421,17 +340,6 @@ ollama
 * SOC/SIEM integrations
 * Automated incident response recommendations
 * Explainable AI threat reasoning
-
----
-
-# Applications
-
-* Security Operations Centers (SOC)
-* Threat Intelligence Platforms (TIP)
-* Malware Analysis Labs
-* Incident Response Teams
-* Threat Hunting Operations
-* Cybersecurity Research
 
 ---
 
